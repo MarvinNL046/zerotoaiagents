@@ -24,15 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles: Record<string, string> = {
-    en: "ZeroToVPN - Best VPN Reviews & Comparisons 2026",
-    nl: "ZeroToVPN - Beste VPN Reviews & Vergelijkingen 2026",
-    de: "ZeroToVPN - Beste VPN Tests & Vergleiche 2026",
-    es: "ZeroToVPN - Mejores Reseñas y Comparaciones de VPN 2026",
-    fr: "ZeroToVPN - Meilleurs Avis et Comparaisons VPN 2026",
-    zh: "ZeroToVPN - 2026年最佳VPN评测与比较",
-    ja: "ZeroToVPN - 2026年ベストVPNレビュー＆比較",
-    ko: "ZeroToVPN - 2026년 최고의 VPN 리뷰 및 비교",
-    th: "ZeroToVPN - รีวิวและเปรียบเทียบ VPN ที่ดีที่สุด 2026",
+    en: "ZeroToAIAgents - Best VPN Reviews & Comparisons 2026",
+    nl: "ZeroToAIAgents - Beste VPN Reviews & Vergelijkingen 2026",
+    de: "ZeroToAIAgents - Beste VPN Tests & Vergleiche 2026",
+    es: "ZeroToAIAgents - Mejores Reseñas y Comparaciones de VPN 2026",
+    fr: "ZeroToAIAgents - Meilleurs Avis et Comparaisons VPN 2026",
+    zh: "ZeroToAIAgents - 2026年最佳VPN评测与比较",
+    ja: "ZeroToAIAgents - 2026年ベストVPNレビュー＆比較",
+    ko: "ZeroToAIAgents - 2026년 최고의 VPN 리뷰 및 비교",
+    th: "ZeroToAIAgents - รีวิวและเปรียบเทียบ VPN ที่ดีที่สุด 2026",
   };
 
   const descriptions: Record<string, string> = {
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     th: "ค้นหา VPN ที่สมบูรณ์แบบสำหรับความต้องการของคุณ รีวิวจากผู้เชี่ยวชาญ เปรียบเทียบอย่างตรงไปตรงมา",
   };
 
-  const baseUrl = "https://zerotovpn.com";
+  const baseUrl = "https://zerotoaiagents.com";
   const canonicalUrl = locale === "en" ? baseUrl : `${baseUrl}/${locale}`;
 
   // Generate alternates for all languages
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: {
       default: titles[locale] || titles.en,
-      template: "%s | ZeroToVPN",
+      template: "%s | ZeroToAIAgents",
     },
     description: descriptions[locale] || descriptions.en,
     keywords: [
@@ -78,8 +78,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "streaming VPN",
       "cheap VPN",
     ],
-    authors: [{ name: "ZeroToVPN" }],
-    creator: "ZeroToVPN",
+    authors: [{ name: "ZeroToAIAgents" }],
+    creator: "ZeroToAIAgents",
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: canonicalUrl,
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: locale,
       url: canonicalUrl,
-      siteName: "ZeroToVPN",
+      siteName: "ZeroToAIAgents",
       title: titles[locale] || titles.en,
       description: descriptions[locale] || descriptions.en,
     },

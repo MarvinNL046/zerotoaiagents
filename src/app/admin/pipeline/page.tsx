@@ -110,7 +110,7 @@ export default function PipelinePage() {
       switch (action) {
         case "scrape-vpn":
           url = "/api/pipeline/scrape";
-          body = JSON.stringify({ type: "vpn-data" });
+          body = JSON.stringify({ type: "agent-data" });
           break;
         case "scrape-news":
           url = "/api/pipeline/scrape";
@@ -264,7 +264,7 @@ export default function PipelinePage() {
                 <RefreshCw className="h-5 w-5 text-blue-500" />
               </div>
               <div>
-                <h3 className="font-semibold text-sm">Scrape VPN Data</h3>
+                <h3 className="font-semibold text-sm">Scrape Agent Data</h3>
                 <p className="text-xs text-muted-foreground">
                   All provider pricing
                 </p>
@@ -295,7 +295,7 @@ export default function PipelinePage() {
               <div>
                 <h3 className="font-semibold text-sm">Scrape News</h3>
                 <p className="text-xs text-muted-foreground">
-                  VPN industry news
+                  AI agent industry news
                 </p>
               </div>
             </div>

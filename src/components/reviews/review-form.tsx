@@ -18,12 +18,12 @@ import { Star, Plus, X, Loader2, CheckCircle } from "lucide-react";
 import { usageTypeLabels, usagePeriodLabels } from "@/lib/user-reviews";
 
 interface ReviewFormProps {
-  vpnSlug: string;
+  agentSlug: string;
   vpnName: string;
   locale: string;
 }
 
-export function ReviewForm({ vpnSlug, vpnName, locale }: ReviewFormProps) {
+export function ReviewForm({ agentSlug, vpnName, locale }: ReviewFormProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -171,7 +171,7 @@ export function ReviewForm({ vpnSlug, vpnName, locale }: ReviewFormProps) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          vpnSlug,
+          agentSlug,
           rating,
           title: title.trim(),
           content: content.trim(),

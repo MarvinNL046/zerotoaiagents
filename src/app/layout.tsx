@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ZeroToVPN",
-  description: "Best VPN Reviews & Comparisons",
+  title: "ZeroToAIAgents",
+  description: "Best AI Agent Reviews & Comparisons",
   manifest: "/manifest.json",
   icons: {
     icon: [

@@ -1,20 +1,20 @@
-import type { VpnProvider } from "@/lib/vpn-data-layer";
+import type { AiAgentProvider } from "@/lib/ai-agent-data";
 
 // Organization Schema for the website
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "ZeroToVPN",
-    url: "https://zerotovpn.com",
-    logo: "https://zerotovpn.com/logo.png",
+    name: "ZeroToAIAgents",
+    url: "https://zerotoaiagents.com",
+    logo: "https://zerotoaiagents.com/logo.png",
     sameAs: [
-      "https://twitter.com/zerotovpn",
-      "https://facebook.com/zerotovpn",
+      "https://twitter.com/zerotoaiagents",
+      "https://facebook.com/zerotoaiagents",
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@zerotovpn.com",
+      email: "hello@zerotoaiagents.com",
       contactType: "customer service",
     },
   };
@@ -32,13 +32,13 @@ export function WebsiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ZeroToVPN",
-    url: "https://zerotovpn.com",
+    name: "ZeroToAIAgents",
+    url: "https://zerotoaiagents.com",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://zerotovpn.com/search?q={search_term_string}",
+        urlTemplate: "https://zerotoaiagents.com/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -52,25 +52,25 @@ export function WebsiteSchema() {
   );
 }
 
-// VPN Review Schema
-export function VpnReviewSchema({ vpn }: { vpn: VpnProvider }) {
+// AI Agent Review Schema
+export function AgentReviewSchema({ agent }: { agent: AiAgentProvider }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    name: `${vpn.name} Review 2026`,
-    reviewBody: vpn.shortDescription,
+    name: `${agent.name} Review 2026`,
+    reviewBody: agent.shortDescription,
     author: {
       "@type": "Organization",
-      name: "ZeroToVPN",
+      name: "ZeroToAIAgents",
     },
     itemReviewed: {
       "@type": "SoftwareApplication",
-      name: vpn.name,
-      applicationCategory: "VPN Service",
-      operatingSystem: "Windows, macOS, iOS, Android, Linux",
+      name: agent.name,
+      applicationCategory: "AI Agent Platform",
+      operatingSystem: "Web, Windows, macOS, iOS, Android, Linux",
       offers: {
         "@type": "Offer",
-        price: vpn.priceTwoYear || vpn.priceYearly,
+        price: agent.annualPrice || agent.monthlyPrice,
         priceCurrency: "USD",
         priceValidUntil: new Date(
           new Date().setFullYear(new Date().getFullYear() + 1)
@@ -79,13 +79,13 @@ export function VpnReviewSchema({ vpn }: { vpn: VpnProvider }) {
     },
     reviewRating: {
       "@type": "Rating",
-      ratingValue: vpn.overallRating,
+      ratingValue: agent.overallRating,
       bestRating: 5,
       worstRating: 1,
     },
     positiveNotes: {
       "@type": "ItemList",
-      itemListElement: vpn.pros.map((pro, index) => ({
+      itemListElement: agent.pros.map((pro, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: pro,
@@ -93,7 +93,7 @@ export function VpnReviewSchema({ vpn }: { vpn: VpnProvider }) {
     },
     negativeNotes: {
       "@type": "ItemList",
-      itemListElement: vpn.cons.map((con, index) => ({
+      itemListElement: agent.cons.map((con, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: con,
@@ -109,20 +109,20 @@ export function VpnReviewSchema({ vpn }: { vpn: VpnProvider }) {
   );
 }
 
-// Product Schema for VPN
-export function VpnProductSchema({ vpn }: { vpn: VpnProvider }) {
+// Product Schema for AI Agent
+export function AgentProductSchema({ agent }: { agent: AiAgentProvider }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: vpn.name,
-    description: vpn.shortDescription,
+    name: agent.name,
+    description: agent.shortDescription,
     brand: {
       "@type": "Brand",
-      name: vpn.name,
+      name: agent.name,
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: vpn.overallRating,
+      ratingValue: agent.overallRating,
       bestRating: 5,
       worstRating: 1,
     },
@@ -130,17 +130,17 @@ export function VpnProductSchema({ vpn }: { vpn: VpnProvider }) {
       "@type": "Review",
       author: {
         "@type": "Organization",
-        name: "ZeroToVPN",
+        name: "ZeroToAIAgents",
       },
       reviewRating: {
         "@type": "Rating",
-        ratingValue: vpn.overallRating,
+        ratingValue: agent.overallRating,
         bestRating: 5,
       },
     },
     offers: {
       "@type": "Offer",
-      price: vpn.priceTwoYear || vpn.priceYearly,
+      price: agent.annualPrice || agent.monthlyPrice,
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       priceValidUntil: new Date(
@@ -157,29 +157,29 @@ export function VpnProductSchema({ vpn }: { vpn: VpnProvider }) {
   );
 }
 
-// Comparison Table Schema
-export function ComparisonTableSchema({ vpns }: { vpns: VpnProvider[] }) {
+// Comparison Table Schema for AI Agents
+export function ComparisonTableSchema({ agents }: { agents: AiAgentProvider[] }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Best VPNs of 2026",
-    description: "Comparison of the best VPN services tested and reviewed by experts",
-    numberOfItems: vpns.length,
-    itemListElement: vpns.map((vpn, index) => ({
+    name: "Best AI Agents of 2026",
+    description: "Comparison of the best AI agent platforms tested and reviewed by experts",
+    numberOfItems: agents.length,
+    itemListElement: agents.map((agent, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "SoftwareApplication",
-        name: vpn.name,
-        applicationCategory: "VPN Service",
+        name: agent.name,
+        applicationCategory: "AI Agent Platform",
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: vpn.overallRating,
+          ratingValue: agent.overallRating,
           bestRating: 5,
         },
         offers: {
           "@type": "Offer",
-          price: vpn.priceTwoYear || vpn.priceYearly,
+          price: agent.annualPrice || agent.monthlyPrice,
           priceCurrency: "USD",
         },
       },
@@ -272,28 +272,28 @@ export function ArticleJsonLd({
     dateModified: dateModified || datePublished,
     author: {
       "@type": "Person",
-      name: "ZeroToVPN Expert Team",
-      url: "https://zerotovpn.com/about",
-      jobTitle: "VPN Security Researchers",
+      name: "ZeroToAIAgents Expert Team",
+      url: "https://zerotoaiagents.com/about",
+      jobTitle: "AI & Automation Researchers",
       description:
-        "Cybersecurity professionals who have tested and reviewed over 50 VPN services since 2024.",
+        "AI professionals who have tested and reviewed over 25 AI agent platforms since 2024.",
       sameAs: [
-        "https://twitter.com/zerotovpn",
-        "https://facebook.com/zerotovpn",
+        "https://twitter.com/zerotoaiagents",
+        "https://facebook.com/zerotoaiagents",
       ],
       worksFor: {
         "@type": "Organization",
-        name: "ZeroToVPN",
-        url: "https://zerotovpn.com",
+        name: "ZeroToAIAgents",
+        url: "https://zerotoaiagents.com",
       },
     },
     publisher: {
       "@type": "Organization",
-      name: "ZeroToVPN",
-      url: "https://zerotovpn.com",
+      name: "ZeroToAIAgents",
+      url: "https://zerotoaiagents.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://zerotovpn.com/logo.png",
+        url: "https://zerotoaiagents.com/logo.png",
       },
     },
     isAccessibleForFree: true,

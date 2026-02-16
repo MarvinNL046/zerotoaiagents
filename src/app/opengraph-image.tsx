@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "ZeroToVPN - Best VPN Reviews & Comparisons";
+export const alt = "ZeroToAIAgents - Best AI Agent Reviews & Comparisons";
 export const size = {
   width: 1200,
   height: 630,
@@ -42,24 +42,25 @@ export default async function OgImage() {
             style={{ marginRight: 20 }}
           >
             <path
-              d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"
-              fill="#3b82f6"
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              fill="#8b5cf6"
             />
             <path
-              d="M12 6l-5 3v4c0 3.67 2.53 7.1 5.96 7.96.3.08.61.08.91 0C17.3 20.1 19.83 16.67 19.83 13V9l-5-3z"
-              fill="#1d4ed8"
+              d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+              fill="#6366f1"
             />
+            <circle cx="12" cy="12" r="2" fill="#8b5cf6" />
           </svg>
           <span
             style={{
               fontSize: 72,
               fontWeight: 800,
-              background: "linear-gradient(to right, #3b82f6, #60a5fa)",
+              background: "linear-gradient(to right, #8b5cf6, #a78bfa)",
               backgroundClip: "text",
               color: "transparent",
             }}
           >
-            ZeroToVPN
+            ZeroToAIAgents
           </span>
         </div>
         <div
@@ -76,7 +77,7 @@ export default async function OgImage() {
               marginBottom: 16,
             }}
           >
-            Best VPN Reviews & Comparisons 2026
+            Best AI Agent Reviews & Comparisons 2026
           </span>
           <span
             style={{
@@ -86,7 +87,7 @@ export default async function OgImage() {
               maxWidth: 800,
             }}
           >
-            Expert reviews • Honest comparisons • Exclusive deals
+            Expert reviews • Honest comparisons • AI-powered automation
           </span>
         </div>
         <div
@@ -99,7 +100,7 @@ export default async function OgImage() {
           }}
         >
           <span style={{ fontSize: 18, color: "#64748b" }}>
-            zerotovpn.com
+            zerotoaiagents.com
           </span>
         </div>
       </div>

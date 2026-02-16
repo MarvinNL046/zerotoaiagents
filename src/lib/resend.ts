@@ -4,7 +4,7 @@ import { Resend } from "resend";
 export const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email sender configuration
-export const EMAIL_FROM = "ZeroToVPN <hello@zerotovpn.com>";
+export const EMAIL_FROM = "ZeroToAIAgents <hello@zerotoaiagents.com>";
 
 // Email types
 export type NewsletterWelcomeEmailProps = {
@@ -25,8 +25,8 @@ const welcomeEmailTranslations: Record<string, {
   unsubscribe: string;
 }> = {
   en: {
-    subject: "Welcome to ZeroToVPN! 🔒",
-    title: "Welcome to ZeroToVPN",
+    subject: "Welcome to ZeroToAIAgents! 🔒",
+    title: "Welcome to ZeroToAIAgents",
     greeting: "Hey there!",
     thankYou: "Thank you for subscribing to our newsletter. You're now part of a community that cares about online privacy and security.",
     whatToExpect: "Here's what you can expect from us:",
@@ -41,8 +41,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "If you didn't subscribe to this newsletter, you can safely ignore this email.",
   },
   nl: {
-    subject: "Welkom bij ZeroToVPN! 🔒",
-    title: "Welkom bij ZeroToVPN",
+    subject: "Welkom bij ZeroToAIAgents! 🔒",
+    title: "Welkom bij ZeroToAIAgents",
     greeting: "Hallo!",
     thankYou: "Bedankt voor je aanmelding voor onze nieuwsbrief. Je maakt nu deel uit van een community die geeft om online privacy en veiligheid.",
     whatToExpect: "Dit kun je van ons verwachten:",
@@ -57,8 +57,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "Als je je niet hebt aangemeld voor deze nieuwsbrief, kun je deze e-mail veilig negeren.",
   },
   de: {
-    subject: "Willkommen bei ZeroToVPN! 🔒",
-    title: "Willkommen bei ZeroToVPN",
+    subject: "Willkommen bei ZeroToAIAgents! 🔒",
+    title: "Willkommen bei ZeroToAIAgents",
     greeting: "Hallo!",
     thankYou: "Vielen Dank für Ihre Anmeldung zu unserem Newsletter. Sie sind jetzt Teil einer Community, die sich um Online-Privatsphäre und Sicherheit kümmert.",
     whatToExpect: "Das können Sie von uns erwarten:",
@@ -73,8 +73,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "Wenn Sie sich nicht für diesen Newsletter angemeldet haben, können Sie diese E-Mail ignorieren.",
   },
   es: {
-    subject: "¡Bienvenido a ZeroToVPN! 🔒",
-    title: "Bienvenido a ZeroToVPN",
+    subject: "¡Bienvenido a ZeroToAIAgents! 🔒",
+    title: "Bienvenido a ZeroToAIAgents",
     greeting: "¡Hola!",
     thankYou: "Gracias por suscribirte a nuestro boletín. Ahora eres parte de una comunidad que se preocupa por la privacidad y seguridad en línea.",
     whatToExpect: "Esto es lo que puedes esperar de nosotros:",
@@ -89,8 +89,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "Si no te suscribiste a este boletín, puedes ignorar este correo.",
   },
   fr: {
-    subject: "Bienvenue chez ZeroToVPN ! 🔒",
-    title: "Bienvenue chez ZeroToVPN",
+    subject: "Bienvenue chez ZeroToAIAgents ! 🔒",
+    title: "Bienvenue chez ZeroToAIAgents",
     greeting: "Bonjour !",
     thankYou: "Merci de vous être inscrit à notre newsletter. Vous faites maintenant partie d'une communauté qui se soucie de la confidentialité et de la sécurité en ligne.",
     whatToExpect: "Voici ce que vous pouvez attendre de nous :",
@@ -105,8 +105,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "Si vous ne vous êtes pas inscrit à cette newsletter, vous pouvez ignorer cet e-mail.",
   },
   zh: {
-    subject: "欢迎加入 ZeroToVPN！🔒",
-    title: "欢迎加入 ZeroToVPN",
+    subject: "欢迎加入 ZeroToAIAgents！🔒",
+    title: "欢迎加入 ZeroToAIAgents",
     greeting: "您好！",
     thankYou: "感谢您订阅我们的通讯。您现在是一个关注在线隐私和安全的社区的一员。",
     whatToExpect: "您可以期待我们提供：",
@@ -121,8 +121,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "如果您没有订阅此通讯，可以忽略此邮件。",
   },
   ja: {
-    subject: "ZeroToVPNへようこそ！🔒",
-    title: "ZeroToVPNへようこそ",
+    subject: "ZeroToAIAgentsへようこそ！🔒",
+    title: "ZeroToAIAgentsへようこそ",
     greeting: "こんにちは！",
     thankYou: "ニュースレターにご登録いただきありがとうございます。オンラインプライバシーとセキュリティを大切にするコミュニティの一員になりました。",
     whatToExpect: "私たちから期待できること：",
@@ -137,8 +137,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "このニュースレターに登録していない場合は、このメールを無視してください。",
   },
   ko: {
-    subject: "ZeroToVPN에 오신 것을 환영합니다! 🔒",
-    title: "ZeroToVPN에 오신 것을 환영합니다",
+    subject: "ZeroToAIAgents에 오신 것을 환영합니다! 🔒",
+    title: "ZeroToAIAgents에 오신 것을 환영합니다",
     greeting: "안녕하세요!",
     thankYou: "뉴스레터를 구독해 주셔서 감사합니다. 이제 온라인 개인정보 보호와 보안에 관심을 가진 커뮤니티의 일원이 되셨습니다.",
     whatToExpect: "저희에게 기대할 수 있는 것:",
@@ -153,8 +153,8 @@ const welcomeEmailTranslations: Record<string, {
     unsubscribe: "이 뉴스레터를 구독하지 않으셨다면 이 이메일을 무시하셔도 됩니다.",
   },
   th: {
-    subject: "ยินดีต้อนรับสู่ ZeroToVPN! 🔒",
-    title: "ยินดีต้อนรับสู่ ZeroToVPN",
+    subject: "ยินดีต้อนรับสู่ ZeroToAIAgents! 🔒",
+    title: "ยินดีต้อนรับสู่ ZeroToAIAgents",
     greeting: "สวัสดี!",
     thankYou: "ขอบคุณที่สมัครรับจดหมายข่าวของเรา คุณเป็นส่วนหนึ่งของชุมชนที่ใส่ใจเรื่องความเป็นส่วนตัวและความปลอดภัยออนไลน์",
     whatToExpect: "นี่คือสิ่งที่คุณสามารถคาดหวังจากเรา:",
@@ -173,7 +173,7 @@ const welcomeEmailTranslations: Record<string, {
 // Generate welcome email HTML
 export function generateWelcomeEmailHtml({ language }: NewsletterWelcomeEmailProps): string {
   const t = welcomeEmailTranslations[language] || welcomeEmailTranslations.en;
-  const baseUrl = "https://zerotovpn.com";
+  const baseUrl = "https://zerotoaiagents.com";
   const dealsUrl = `${baseUrl}/${language === 'en' ? '' : language + '/'}deals`;
 
   return `
@@ -323,10 +323,10 @@ export function generateWelcomeEmailHtml({ language }: NewsletterWelcomeEmailPro
                 </tr>
               </table>
               <p style="margin: 0 0 8px; color: #6b7280; font-size: 12px;">
-                © ${new Date().getFullYear()} ZeroToVPN. All rights reserved.
+                © ${new Date().getFullYear()} ZeroToAIAgents. All rights reserved.
               </p>
               <p style="margin: 0; color: #4b5563; font-size: 11px;">
-                <a href="${baseUrl}" style="color: #60a5fa; text-decoration: none;">zerotovpn.com</a>
+                <a href="${baseUrl}" style="color: #60a5fa; text-decoration: none;">zerotoaiagents.com</a>
               </p>
             </td>
           </tr>
@@ -358,7 +358,7 @@ export async function sendPostPublishedNotification({
   excerpt: string;
 }) {
   const adminEmail = "marvinsmit1988@gmail.com";
-  const postUrl = `https://zerotovpn.com/blog/${slug}`;
+  const postUrl = `https://zerotoaiagents.com/blog/${slug}`;
 
   const html = `
 <!DOCTYPE html>
@@ -389,7 +389,7 @@ export async function sendPostPublishedNotification({
           </table>
         </td></tr>
         <tr><td style="padding:24px 0;text-align:center;">
-          <p style="margin:0;color:#6b7280;font-size:11px;">&copy; ${new Date().getFullYear()} ZeroToVPN Pipeline</p>
+          <p style="margin:0;color:#6b7280;font-size:11px;">&copy; ${new Date().getFullYear()} ZeroToAIAgents Pipeline</p>
         </td></tr>
       </table>
     </td></tr>
@@ -401,7 +401,7 @@ export async function sendPostPublishedNotification({
     const { data, error } = await resend.emails.send({
       from: EMAIL_FROM,
       to: adminEmail,
-      subject: `[ZeroToVPN] New post published: ${title}`,
+      subject: `[ZeroToAIAgents] New post published: ${title}`,
       html,
     });
 

@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp } from "lucide-react";
 
 interface PopularComparison {
-  vpn1: string;
-  vpn2: string;
+  agent1: string;
+  agent2: string;
   slug1: string;
   slug2: string;
   badge?: string;
@@ -13,43 +13,46 @@ interface PopularComparison {
 
 const popularComparisons: PopularComparison[] = [
   {
-    vpn1: "NordVPN",
-    vpn2: "Surfshark",
-    slug1: "nordvpn",
-    slug2: "surfshark",
+    agent1: "Cursor",
+    agent2: "GitHub Copilot",
+    slug1: "cursor",
+    slug2: "github-copilot",
     badge: "Most Popular",
   },
   {
-    vpn1: "ExpressVPN",
-    vpn2: "NordVPN",
-    slug1: "expressvpn",
-    slug2: "nordvpn",
-    badge: "Premium Showdown",
+    agent1: "ChatGPT",
+    agent2: "Claude",
+    slug1: "chatgpt",
+    slug2: "claude",
+    badge: "AI Assistant Showdown",
   },
   {
-    vpn1: "CyberGhost",
-    vpn2: "NordVPN",
-    slug1: "cyberghost",
-    slug2: "nordvpn",
+    agent1: "Claude Code",
+    agent2: "Cursor",
+    slug1: "claude-code",
+    slug2: "cursor",
+    badge: "Coding Powerhouses",
   },
   {
-    vpn1: "ProtonVPN",
-    vpn2: "Mullvad",
-    slug1: "protonvpn",
-    slug2: "mullvad",
-    badge: "Privacy Focus",
+    agent1: "n8n AI",
+    agent2: "Flowise",
+    slug1: "n8n-ai",
+    slug2: "flowise",
+    badge: "Open Source",
   },
   {
-    vpn1: "Surfshark",
-    vpn2: "ExpressVPN",
-    slug1: "surfshark",
-    slug2: "expressvpn",
+    agent1: "CrewAI",
+    agent2: "AutoGen",
+    slug1: "crewai",
+    slug2: "autogen",
+    badge: "Multi-Agent Frameworks",
   },
   {
-    vpn1: "NordVPN",
-    vpn2: "ProtonVPN",
-    slug1: "nordvpn",
-    slug2: "protonvpn",
+    agent1: "Intercom Fin",
+    agent2: "Zendesk AI",
+    slug1: "intercom-fin",
+    slug2: "zendesk-ai",
+    badge: "Customer Support",
   },
 ];
 
@@ -63,9 +66,9 @@ export function PopularComparisons() {
               <TrendingUp className="h-5 w-5 text-primary" />
               <Badge variant="secondary">Popular Comparisons</Badge>
             </div>
-            <h2 className="text-3xl font-bold mb-2">Compare Top VPNs</h2>
+            <h2 className="text-3xl font-bold mb-2">Compare Top AI Agents</h2>
             <p className="text-muted-foreground">
-              See how the most popular VPN services stack up against each other
+              See how the most popular AI agent platforms stack up against each other
             </p>
           </div>
 
@@ -84,11 +87,11 @@ export function PopularComparisons() {
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="font-bold text-lg mb-1">
-                          {comparison.vpn1}
+                          {comparison.agent1}
                         </div>
                         <div className="text-xs text-muted-foreground">vs</div>
                         <div className="font-bold text-lg mt-1">
-                          {comparison.vpn2}
+                          {comparison.agent2}
                         </div>
                       </div>
                       <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />

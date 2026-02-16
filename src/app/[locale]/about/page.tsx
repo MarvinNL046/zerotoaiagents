@@ -32,14 +32,14 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "About ZeroToVPN | Our Testing Methodology",
+    title: "About ZeroToAIAgents | Our Testing Methodology",
     description:
-      "Learn about ZeroToVPN's independent VPN testing methodology, our expert team, and our commitment to honest, unbiased reviews. No sponsored rankings.",
+      "Learn about ZeroToAIAgents's independent AI agent testing methodology, our expert team, and our commitment to honest, unbiased reviews. No sponsored rankings.",
     robots: {
       index: true,
       follow: true,
@@ -48,11 +48,11 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: `${baseUrl}/about`,
     },
     openGraph: {
-      title: "About ZeroToVPN | Our Testing Methodology",
+      title: "About ZeroToAIAgents | Our Testing Methodology",
       description:
-        "Discover how we independently test and review VPN services. Our rigorous methodology covers speed, security, privacy, and streaming performance.",
+        "Discover how we independently test and review AI agent platforms. Our rigorous methodology covers features, performance, pricing, and integration capabilities.",
       url: `${baseUrl}/about`,
-      siteName: "ZeroToVPN",
+      siteName: "ZeroToAIAgents",
       type: "website",
     },
   };
@@ -74,14 +74,14 @@ export default async function AboutPage({ params }: Props) {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <Badge variant="secondary" className="px-4 py-1">
-              Established 2024 &middot; Independent VPN Testing
+              Established 2024 &middot; Independent AI Agent Testing
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              About ZeroToVPN
+              About ZeroToAIAgents
             </h1>
             <p className="text-xl text-muted-foreground">
-              We are an independent VPN review platform dedicated to helping
-              people make informed decisions about their online privacy. Every
+              We are an independent AI agent review platform dedicated to helping
+              people make informed decisions about AI automation tools. Every
               rating is earned through rigorous, hands-on testing &mdash; never
               paid for.
             </p>
@@ -108,21 +108,21 @@ export default async function AboutPage({ params }: Props) {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">50+</div>
+              <div className="text-3xl font-bold text-primary">25+</div>
               <div className="text-sm text-muted-foreground">
-                VPNs Independently Tested
+                AI Agents Independently Tested
               </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">500+</div>
               <div className="text-sm text-muted-foreground">
-                Speed Tests Conducted
+                Performance Tests Conducted
               </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">200+</div>
               <div className="text-sm text-muted-foreground">
-                Security Audits Performed
+                Feature Evaluations Performed
               </div>
             </div>
             <div className="text-center">
@@ -146,23 +146,23 @@ export default async function AboutPage({ params }: Props) {
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                 </div>
                 <p className="text-lg text-muted-foreground">
-                  In an age where online privacy is under constant threat,
-                  finding the right VPN should not require a cybersecurity
-                  degree. With hundreds of providers making bold claims, it is
-                  nearly impossible to separate genuine protection from
+                  In an age where AI automation is transforming work,
+                  finding the right AI agent should not require extensive
+                  technical knowledge. With hundreds of platforms making bold claims, it is
+                  nearly impossible to separate genuine capabilities from
                   marketing hype.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  ZeroToVPN exists to solve that problem.{" "}
+                  ZeroToAIAgents exists to solve that problem.{" "}
                   <strong>
-                    We provide honest, independent VPN reviews based on
+                    We provide honest, independent AI agent reviews based on
                     real-world testing &mdash; not press releases, not vendor
                     claims, and not sponsored placements.
                   </strong>
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  Every VPN we review is purchased with our own funds, installed
-                  on real devices, and put through weeks of rigorous testing
+                  Every AI agent we review is tested with our own accounts,
+                  evaluated in real workflows, and put through weeks of rigorous testing
                   before we publish a single word.
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default async function AboutPage({ params }: Props) {
                           Independence First
                         </span>
                         <p className="text-sm text-muted-foreground">
-                          No VPN provider can pay for a higher ranking. Our
+                          No AI agent provider can pay for a higher ranking. Our
                           editorial team operates independently from our
                           business team.
                         </p>
@@ -243,9 +243,9 @@ export default async function AboutPage({ params }: Props) {
                 Our Testing Methodology
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Every VPN review follows a standardized, multi-phase testing
-                protocol. We test on real devices, under real-world conditions,
-                across multiple geographic locations.
+                Every AI agent review follows a standardized, multi-phase testing
+                protocol. We test with real projects, under real-world conditions,
+                across multiple use cases and workflows.
               </p>
             </div>
 
@@ -277,7 +277,7 @@ export default async function AboutPage({ params }: Props) {
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          WireGuard, OpenVPN, and IKEv2 protocol comparison
+                          WireGuard, OpenAI agent, and IKEv2 protocol comparison
                         </li>
                       </ul>
                     </div>
@@ -298,7 +298,7 @@ export default async function AboutPage({ params }: Props) {
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
                         We perform comprehensive leak tests and evaluate
-                        encryption implementation to verify each VPN truly
+                        encryption implementation to verify each AI agent truly
                         protects your data.
                       </p>
                       <ul className="space-y-1.5">
@@ -336,7 +336,7 @@ export default async function AboutPage({ params }: Props) {
                         Streaming Tests
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        We test each VPN against 15+ major streaming platforms
+                        We test each AI agent against 15+ major streaming platforms
                         to verify geo-unblocking claims with real subscriptions.
                       </p>
                       <ul className="space-y-1.5">
@@ -434,7 +434,7 @@ export default async function AboutPage({ params }: Props) {
                   How We Calculate Scores
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Each VPN receives a weighted composite score out of 10 based
+                  Each AI agent receives a weighted composite score out of 10 based
                   on the following categories:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -488,7 +488,7 @@ export default async function AboutPage({ params }: Props) {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Team</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                ZeroToVPN is built by a team of cybersecurity professionals,
+                ZeroToAIAgents is built by a team of cybersecurity professionals,
                 tech journalists, and privacy advocates with decades of
                 combined experience.
               </p>
@@ -504,7 +504,7 @@ export default async function AboutPage({ params }: Props) {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <h3 className="font-bold text-xl">
-                        ZeroToVPN Expert Team
+                        ZeroToAIAgents Expert Team
                       </h3>
                       <span className="inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-50 dark:bg-green-950/30 px-2.5 py-0.5 rounded-full">
                         <BadgeCheck className="h-3.5 w-3.5" />
@@ -512,14 +512,14 @@ export default async function AboutPage({ params }: Props) {
                       </span>
                     </div>
                     <p className="text-sm text-muted-foreground mt-1">
-                      VPN Security Researchers & Privacy Analysts
+                      AI agent Security Researchers & Privacy Analysts
                     </p>
 
                     <p className="text-muted-foreground mt-4 leading-relaxed">
                       Our team of cybersecurity professionals has tested and
-                      reviewed over 50 VPN services since 2024. We combine
+                      reviewed over 50 AI agent services since 2024. We combine
                       hands-on technical testing with in-depth data analysis to
-                      provide unbiased VPN recommendations you can trust.
+                      provide unbiased AI agent recommendations you can trust.
                     </p>
 
                     <div className="mt-4 space-y-2">
@@ -528,7 +528,7 @@ export default async function AboutPage({ params }: Props) {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "50+ VPN services tested",
+                          "50+ AI agent services tested",
                           "Independent speed & security audits",
                           "No sponsored rankings",
                           "Active since 2024",
@@ -582,10 +582,10 @@ export default async function AboutPage({ params }: Props) {
                 </div>
                 <h3 className="text-lg font-semibold mb-1">Research Team</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  VPN Testing & Analysis
+                  AI agent Testing & Analysis
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Our researchers conduct hands-on testing of every VPN across
+                  Our researchers conduct hands-on testing of every AI agent across
                   multiple devices, running speed tests, security audits, and
                   usability assessments under standardized conditions.
                 </p>
@@ -734,7 +734,7 @@ export default async function AboutPage({ params }: Props) {
                           Primary sources preferred
                         </span>
                         <p className="text-xs text-muted-foreground">
-                          We rely on our own testing data, official VPN
+                          We rely on our own testing data, official AI agent
                           documentation, court records, and published audit
                           reports.
                         </p>
@@ -747,7 +747,7 @@ export default async function AboutPage({ params }: Props) {
                           Cross-reference verification
                         </span>
                         <p className="text-xs text-muted-foreground">
-                          Claims from VPN providers are cross-referenced with
+                          Claims from AI agent providers are cross-referenced with
                           independent third-party sources before inclusion.
                         </p>
                       </div>
@@ -789,7 +789,7 @@ export default async function AboutPage({ params }: Props) {
                     Update Frequency
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    VPN services evolve rapidly. We maintain the accuracy of our
+                    AI agent services evolve rapidly. We maintain the accuracy of our
                     content through a structured update schedule:
                   </p>
                   <div className="grid gap-4 md:grid-cols-2">
@@ -801,7 +801,7 @@ export default async function AboutPage({ params }: Props) {
                         </h4>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Every reviewed VPN is re-tested at minimum once every 3
+                        Every reviewed AI agent is re-tested at minimum once every 3
                         months to verify speed, security, and streaming
                         performance remain consistent.
                       </p>
@@ -814,7 +814,7 @@ export default async function AboutPage({ params }: Props) {
                         </h4>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        When a VPN announces significant changes (pricing
+                        When a AI agent announces significant changes (pricing
                         updates, security incidents, feature additions), we
                         update our reviews within 48 hours.
                       </p>
@@ -827,7 +827,7 @@ export default async function AboutPage({ params }: Props) {
                         </h4>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Once a year, every VPN review receives a complete
+                        Once a year, every AI agent review receives a complete
                         re-evaluation with fresh testing across all categories.
                       </p>
                     </div>
@@ -879,11 +879,11 @@ export default async function AboutPage({ params }: Props) {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">
-                Why Trust ZeroToVPN?
+                Why Trust ZeroToAIAgents?
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Trust is earned, not claimed. Here is what sets us apart from
-                other VPN review sites.
+                other AI agent review sites.
               </p>
             </div>
 
@@ -896,7 +896,7 @@ export default async function AboutPage({ params }: Props) {
                   <h3 className="text-lg font-semibold">Experience</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  We have personally tested over 50 VPN services since 2024,
+                  We have personally tested over 50 AI agent services since 2024,
                   accumulating thousands of hours of real-world usage across
                   Windows, macOS, Linux, iOS, and Android platforms.
                 </p>
@@ -925,7 +925,7 @@ export default async function AboutPage({ params }: Props) {
                 </div>
                 <p className="text-sm text-muted-foreground">
                   With 100,000+ monthly readers and content published in 9
-                  languages, ZeroToVPN is a trusted resource for VPN information
+                  languages, ZeroToAIAgents is a trusted resource for AI agent information
                   worldwide. Our reviews are cited by privacy advocates and tech
                   publications.
                 </p>
@@ -955,7 +955,7 @@ export default async function AboutPage({ params }: Props) {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold">Get in Touch</h2>
             <p className="text-lg text-muted-foreground">
-              Have questions about our methodology, want to suggest a VPN for
+              Have questions about our methodology, want to suggest a AI agent for
               review, or found an error in our content? We welcome your
               feedback.
             </p>
@@ -972,28 +972,28 @@ export default async function AboutPage({ params }: Props) {
               <p className="text-sm text-muted-foreground">
                 <strong>General inquiries:</strong>{" "}
                 <a
-                  href="mailto:hello@zerotovpn.com"
+                  href="mailto:hello@zerotoaiagents.com"
                   className="text-primary hover:underline"
                 >
-                  hello@zerotovpn.com
+                  hello@zerotoaiagents.com
                 </a>
               </p>
               <p className="text-sm text-muted-foreground">
                 <strong>Press & partnerships:</strong>{" "}
                 <a
-                  href="mailto:hello@zerotovpn.com"
+                  href="mailto:hello@zerotoaiagents.com"
                   className="text-primary hover:underline"
                 >
-                  hello@zerotovpn.com
+                  hello@zerotoaiagents.com
                 </a>
               </p>
               <p className="text-sm text-muted-foreground">
                 <strong>Privacy matters:</strong>{" "}
                 <a
-                  href="mailto:hello@zerotovpn.com"
+                  href="mailto:hello@zerotoaiagents.com"
                   className="text-primary hover:underline"
                 >
-                  hello@zerotovpn.com
+                  hello@zerotoaiagents.com
                 </a>
               </p>
             </div>
@@ -1013,7 +1013,7 @@ export default async function AboutPage({ params }: Props) {
                   className="text-primary hover:underline flex items-center gap-1"
                 >
                   <BookOpen className="h-4 w-4" />
-                  VPN Reviews
+                  AI agent Reviews
                 </Link>
                 <Link
                   href="/affiliate-disclosure"

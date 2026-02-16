@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { Shield } from "lucide-react";
+import { Bot } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { NewsletterFooter } from "@/components/newsletter/newsletter-footer";
 
@@ -14,9 +14,9 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Shield className="h-6 w-6 text-primary" />
+              <Bot className="h-6 w-6 text-primary" />
               <span className="font-bold text-xl">
-                Zero<span className="text-primary">To</span>VPN
+                Zero<span className="text-primary">To</span>AIAgents
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">{t("aboutText")}</p>
@@ -36,10 +36,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/best/best-vpn"
+                  href="/best/coding-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("bestVpns")}
+                  {t("bestAgents")}
                 </Link>
               </li>
               <li>
@@ -52,18 +52,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/best/free-vpn"
+                  href="/best/free-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("freeVpn")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/best/vpn-gaming"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("gamingVpn")}
+                  {t("freeAgents")}
                 </Link>
               </li>
               <li>
@@ -76,26 +68,18 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/countries"
+                  href="/use-cases"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("countries")}
+                  {t("useCases")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/speed-test"
+                  href="/guides/what-is-ai-agent"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("speedTest")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/what-is-vpn"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("whatIsVpn")}
+                  {t("whatIsAgent")}
                 </Link>
               </li>
               <li>
@@ -109,48 +93,56 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Devices */}
+          {/* Categories */}
           <div>
-            <h4 className="font-semibold mb-4">{t("devices")}</h4>
+            <h4 className="font-semibold mb-4">{t("categories")}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/best/vpn-laptops"
+                  href="/best/coding-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("vpnLaptops")}
+                  {t("codingAgents")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/vpn-windows"
+                  href="/best/no-code-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("vpnWindows")}
+                  {t("noCodeAgents")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/vpn-macos"
+                  href="/best/enterprise-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("vpnMacos")}
+                  {t("enterpriseAgents")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/vpn-chromebook"
+                  href="/best/customer-support-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("vpnChromebook")}
+                  {t("supportAgents")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/vpn-linux"
+                  href="/best/ai-frameworks"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("vpnLinux")}
+                  {t("aiFrameworks")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/best/general-purpose"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  {t("generalPurpose")}
                 </Link>
               </li>
             </ul>
@@ -207,7 +199,7 @@ export function Footer() {
                   {t("contactPage")}
                 </Link>
               </li>
-              <li className="text-muted-foreground">hello@zerotovpn.com</li>
+              <li className="text-muted-foreground">hello@zerotoaiagents.com</li>
             </ul>
           </div>
 

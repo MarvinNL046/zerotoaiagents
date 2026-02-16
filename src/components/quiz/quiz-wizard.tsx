@@ -5,24 +5,23 @@ import { Card } from "@/components/ui/card";
 import { QuizQuestion } from "./quiz-question";
 import { QuizResults } from "./quiz-results";
 import { Progress } from "@/components/ui/progress";
-import type { VpnProvider } from "@/lib/vpn-data";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentProvider } from "@/lib/ai-agent-data";
 import { useTranslations } from "next-intl";
 
 export type QuizAnswers = {
-  primaryUse?: string;
+  useCase?: string;
   budget?: string;
-  devices?: string;
-  speedPriority?: string;
-  location?: string;
+  technicalLevel?: string;
+  freeTier?: string;
+  teamSize?: string;
 };
 
 type QuizWizardProps = {
-  vpns: (VpnProvider | VpnData)[];
+  agents: AiAgentProvider[];
   locale: string;
 };
 
-export function QuizWizard({ vpns, locale }: QuizWizardProps) {
+export function QuizWizard({ agents, locale }: QuizWizardProps) {
   const t = useTranslations("quiz");
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswers>({});
@@ -62,7 +61,7 @@ export function QuizWizard({ vpns, locale }: QuizWizardProps) {
     return (
       <QuizResults
         answers={answers}
-        vpns={vpns}
+        agents={agents}
         onBack={handleBack}
         onReset={handleReset}
         locale={locale}
@@ -72,54 +71,55 @@ export function QuizWizard({ vpns, locale }: QuizWizardProps) {
 
   const questions = [
     {
-      id: "primaryUse",
-      title: t("questions.primaryUse.title"),
+      id: "useCase",
+      title: "What do you primarily need an AI agent for?",
       options: [
-        { value: "streaming", label: t("questions.primaryUse.options.streaming") },
-        { value: "privacy", label: t("questions.primaryUse.options.privacy") },
-        { value: "gaming", label: t("questions.primaryUse.options.gaming") },
-        { value: "torrenting", label: t("questions.primaryUse.options.torrenting") },
-        { value: "work", label: t("questions.primaryUse.options.work") },
+        { value: "coding", label: "Writing code" },
+        { value: "automation", label: "Automating workflows" },
+        { value: "support", label: "Customer support" },
+        { value: "research", label: "Research & analysis" },
+        { value: "content", label: "Content creation" },
+        { value: "general", label: "General tasks" },
       ],
     },
     {
       id: "budget",
-      title: t("questions.budget.title"),
+      title: "What's your monthly budget?",
       options: [
-        { value: "free", label: t("questions.budget.options.free") },
-        { value: "budget", label: t("questions.budget.options.budget") },
-        { value: "midrange", label: t("questions.budget.options.midrange") },
-        { value: "premium", label: t("questions.budget.options.premium") },
+        { value: "free", label: "Free only" },
+        { value: "low", label: "Under $20/month" },
+        { value: "medium", label: "$20-50/month" },
+        { value: "high", label: "$50-200/month" },
+        { value: "unlimited", label: "No budget limit" },
       ],
     },
     {
-      id: "devices",
-      title: t("questions.devices.title"),
+      id: "technicalLevel",
+      title: "What's your technical skill level?",
       options: [
-        { value: "1-2", label: t("questions.devices.options.few") },
-        { value: "3-5", label: t("questions.devices.options.several") },
-        { value: "6-10", label: t("questions.devices.options.many") },
-        { value: "unlimited", label: t("questions.devices.options.unlimited") },
+        { value: "non-technical", label: "Non-technical" },
+        { value: "some", label: "Some technical knowledge" },
+        { value: "developer", label: "Developer" },
+        { value: "advanced", label: "Advanced/Enterprise" },
       ],
     },
     {
-      id: "speedPriority",
-      title: t("questions.speedPriority.title"),
+      id: "freeTier",
+      title: "How important is a free tier?",
       options: [
-        { value: "critical", label: t("questions.speedPriority.options.critical") },
-        { value: "important", label: t("questions.speedPriority.options.important") },
-        { value: "notPriority", label: t("questions.speedPriority.options.notPriority") },
+        { value: "essential", label: "Essential (must have)" },
+        { value: "nice", label: "Nice to have" },
+        { value: "not-important", label: "Not important" },
       ],
     },
     {
-      id: "location",
-      title: t("questions.location.title"),
+      id: "teamSize",
+      title: "What size is your team?",
       options: [
-        { value: "europe", label: t("questions.location.options.europe") },
-        { value: "northAmerica", label: t("questions.location.options.northAmerica") },
-        { value: "asia", label: t("questions.location.options.asia") },
-        { value: "middleEast", label: t("questions.location.options.middleEast") },
-        { value: "other", label: t("questions.location.options.other") },
+        { value: "solo", label: "Just me" },
+        { value: "small", label: "2-10 people" },
+        { value: "medium", label: "11-50 people" },
+        { value: "large", label: "50+ people" },
       ],
     },
   ];
@@ -133,7 +133,7 @@ export function QuizWizard({ vpns, locale }: QuizWizardProps) {
       <div className="space-y-2">
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>
-            {t("progress.step")} {currentStep + 1} {t("progress.of")} {totalSteps}
+            Step {currentStep + 1} of {totalSteps}
           </span>
           <span>{Math.round(progress)}%</span>
         </div>
@@ -155,7 +155,7 @@ export function QuizWizard({ vpns, locale }: QuizWizardProps) {
 
       {/* Help Text */}
       <p className="text-center text-sm text-muted-foreground">
-        {t("helpText")}
+        Answer these questions to get personalized AI agent recommendations
       </p>
     </div>
   );

@@ -11,20 +11,20 @@ import {
   ExternalLink,
   Scale,
 } from "lucide-react";
-import { getAllVpns } from "@/lib/vpn-data-layer";
+import { getAllAgents } from "@/lib/agent-data-layer";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Affiliate Disclosure - ZeroToVPN",
+    title: "Affiliate Disclosure - ZeroToAIAgents",
     description:
-      "Learn how ZeroToVPN earns money through affiliate partnerships. We believe in full transparency about our business relationships.",
+      "Learn how ZeroToAIAgents earns money through affiliate partnerships. We believe in full transparency about our business relationships.",
     robots: {
       index: true,
       follow: true,
@@ -36,7 +36,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const vpnProviders = await getAllVpns();
+  const vpnProviders = await getAllAgents();
   const lastUpdated = "February 15, 2026";
 
   return (
@@ -99,7 +99,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <span>
-                    We test every VPN ourselves before recommending it
+                    We test every AI agent ourselves before recommending it
                   </span>
                 </li>
               </ul>
@@ -120,8 +120,8 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                   How We Make Money
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  ZeroToVPN is a free resource that earns revenue through affiliate
-                  marketing. This means we have partnerships with some of the VPN
+                  ZeroToAIAgents is a free resource that earns revenue through affiliate
+                  marketing. This means we have partnerships with some of the AI agent
                   providers we review, and we receive a commission when you sign up
                   for their services through our links.
                 </p>
@@ -130,16 +130,16 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                 </p>
                 <ol className="list-decimal list-inside text-muted-foreground space-y-2 mb-4">
                   <li>You read our reviews and comparisons</li>
-                  <li>You click on a link to a VPN provider</li>
+                  <li>You click on a link to a AI agent provider</li>
                   <li>You purchase a subscription</li>
-                  <li>We receive a commission from the VPN provider</li>
+                  <li>We receive a commission from the AI agent provider</li>
                 </ol>
                 <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
                   <p className="text-sm font-medium flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-500 flex-shrink-0 mt-0.5" />
                     <span>
                       <strong>Important:</strong> Using our affiliate links costs you
-                      nothing extra. The VPN provider pays us from their marketing
+                      nothing extra. The AI agent provider pays us from their marketing
                       budget, not from your purchase.
                     </span>
                   </p>
@@ -162,7 +162,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                   <div className="bg-muted/50 rounded-lg p-4">
                     <h4 className="font-semibold mb-2">Testing Before Recommending</h4>
                     <p className="text-sm text-muted-foreground">
-                      We personally test every VPN we review, including speed tests,
+                      We personally test every AI agent we review, including speed tests,
                       security audits, streaming compatibility, and customer support
                       responsiveness.
                     </p>
@@ -174,7 +174,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                     </h4>
                     <p className="text-sm text-muted-foreground">
                       Our ratings are based solely on our testing methodology, not on
-                      commission rates. A VPN with a lower commission can still rank
+                      commission rates. A AI agent with a lower commission can still rank
                       higher if it performs better.
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                   <div className="bg-muted/50 rounded-lg p-4">
                     <h4 className="font-semibold mb-2">Including Non-Partners</h4>
                     <p className="text-sm text-muted-foreground">
-                      We include VPNs in our reviews even if they don&apos;t have affiliate
+                      We include AI agents in our reviews even if they don&apos;t have affiliate
                       programs. Our goal is to provide comprehensive information, not
                       just promote partners.
                     </p>
@@ -192,7 +192,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                     <h4 className="font-semibold mb-2">Highlighting Cons</h4>
                     <p className="text-sm text-muted-foreground">
                       Every review includes pros AND cons. We don&apos;t hide the
-                      weaknesses of VPNs just because they&apos;re our affiliate partners.
+                      weaknesses of AI agents just because they&apos;re our affiliate partners.
                     </p>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                   Our Affiliate Partners
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  We currently have affiliate relationships with the following VPN
+                  We currently have affiliate relationships with the following AI agent
                   providers. When you click links to these services on our site, we
                   may earn a commission:
                 </p>
@@ -231,7 +231,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
 
                 <p className="text-sm text-muted-foreground mt-4">
                   This list is subject to change as we add or remove affiliate
-                  partnerships. Not all VPNs we review may be affiliate partners.
+                  partnerships. Not all AI agents we review may be affiliate partners.
                 </p>
               </div>
 
@@ -239,7 +239,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
               <div className="bg-card border rounded-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">What This Means for You</h2>
                 <p className="text-muted-foreground mb-4">
-                  As a reader of ZeroToVPN, here&apos;s what you should know:
+                  As a reader of ZeroToAIAgents, here&apos;s what you should know:
                 </p>
 
                 <div className="space-y-4">
@@ -251,7 +251,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                       <h4 className="font-semibold">No Extra Cost</h4>
                       <p className="text-sm text-muted-foreground">
                         You never pay more by using our affiliate links. Prices are
-                        the same as if you went directly to the VPN website.
+                        the same as if you went directly to the AI agent website.
                       </p>
                     </div>
                   </div>
@@ -263,8 +263,8 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                     <div>
                       <h4 className="font-semibold">Support Our Work</h4>
                       <p className="text-sm text-muted-foreground">
-                        Using our links helps support ZeroToVPN and allows us to
-                        continue providing free, in-depth VPN reviews and guides.
+                        Using our links helps support ZeroToAIAgents and allows us to
+                        continue providing free, in-depth AI agent reviews and guides.
                       </p>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                       <h4 className="font-semibold">Honest Recommendations</h4>
                       <p className="text-sm text-muted-foreground">
                         Our reviews are based on real testing and honest opinions.
-                        We recommend VPNs we genuinely believe are good products.
+                        We recommend AI agents we genuinely believe are good products.
                       </p>
                     </div>
                   </div>
@@ -290,7 +290,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                       <h4 className="font-semibold">Your Choice</h4>
                       <p className="text-sm text-muted-foreground">
                         You&apos;re never obligated to use our affiliate links. If you
-                        prefer, you can search for the VPN directly in your browser.
+                        prefer, you can search for the AI agent directly in your browser.
                       </p>
                     </div>
                   </div>
@@ -307,7 +307,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   <li>
-                    ZeroToVPN may receive monetary compensation when you click on
+                    ZeroToAIAgents may receive monetary compensation when you click on
                     links and make purchases on partner websites
                   </li>
                   <li>
@@ -329,7 +329,7 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
               <div className="bg-card border rounded-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">Advertising Disclosure</h2>
                 <p className="text-muted-foreground mb-4">
-                  In addition to affiliate links, ZeroToVPN displays advertisements
+                  In addition to affiliate links, ZeroToAIAgents displays advertisements
                   through Google AdSense. These ads:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
@@ -363,14 +363,14 @@ export default async function AffiliateDisclosurePage({ params }: Props) {
                   how we make money, please don&apos;t hesitate to contact us:
                 </p>
                 <div className="bg-muted/50 rounded-lg p-4">
-                  <p className="font-semibold">ZeroToVPN</p>
+                  <p className="font-semibold">ZeroToAIAgents</p>
                   <p className="text-muted-foreground">
                     Email:{" "}
                     <a
-                      href="mailto:hello@zerotovpn.com"
+                      href="mailto:hello@zerotoaiagents.com"
                       className="text-primary hover:underline"
                     >
-                      hello@zerotovpn.com
+                      hello@zerotoaiagents.com
                     </a>
                   </p>
                 </div>

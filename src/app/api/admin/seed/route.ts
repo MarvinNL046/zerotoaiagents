@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { getDb, vpnProviders as vpnProvidersTable } from "@/lib/db";
-import { vpnProviders } from "@/lib/vpn-data";
+import { getDb, aiAgentProviders as aiAgentProvidersTable } from "@/lib/db";
+import { aiAgentProviders } from "@/lib/ai-agent-data";
 import { count } from "drizzle-orm";
 
-// POST /api/admin/seed - Seed the database with VPN data
+// POST /api/admin/seed - Seed the database with AI agent data
 export async function POST() {
   try {
     const db = getDb();
@@ -11,13 +11,13 @@ export async function POST() {
     // Check if we already have data
     const existingResult = await db
       .select({ count: count() })
-      .from(vpnProvidersTable);
+      .from(aiAgentProvidersTable);
     const existingCount = existingResult[0]?.count ?? 0;
 
     if (existingCount > 0) {
       return NextResponse.json(
         {
-          message: "Database already has VPN data",
+          message: "Database already has AI agent data",
           count: existingCount,
           seeded: false,
         },
@@ -25,45 +25,40 @@ export async function POST() {
       );
     }
 
-    // Seed VPN providers
+    // Seed AI agent providers
     const results = [];
-    for (const vpn of vpnProviders) {
+    for (const agent of aiAgentProviders) {
       const created = await db
-        .insert(vpnProvidersTable)
+        .insert(aiAgentProvidersTable)
         .values({
-          name: vpn.name,
-          slug: vpn.slug,
-          logo: vpn.logo,
-          screenshot: vpn.screenshot,
-          thumbnailImage: vpn.thumbnailImage,
-          cardImage: vpn.cardImage,
-          ogImage: vpn.ogImage,
-          website: vpn.website,
-          affiliateUrl: vpn.affiliateUrl,
-          priceMonthly: String(vpn.priceMonthly),
-          priceYearly: String(vpn.priceYearly),
-          priceTwoYear: vpn.priceTwoYear ? String(vpn.priceTwoYear) : null,
-          moneyBackDays: vpn.moneyBackDays,
-          freeTier: vpn.freeTier,
-          servers: vpn.servers,
-          countries: vpn.countries,
-          maxDevices: vpn.maxDevices,
-          speedScore: vpn.speedScore,
-          securityScore: vpn.securityScore,
-          streamingScore: vpn.streamingScore,
-          protocols: vpn.protocols,
-          encryption: vpn.encryption,
-          killSwitch: vpn.killSwitch,
-          noLogs: vpn.noLogs,
-          netflixSupport: vpn.netflixSupport,
-          torrentSupport: vpn.torrentSupport,
-          overallRating: String(vpn.overallRating),
-          editorChoice: vpn.editorChoice,
-          shortDescription: vpn.shortDescription,
-          pros: vpn.pros,
-          cons: vpn.cons,
-          featured: vpn.featured,
-          sortOrder: vpn.sortOrder,
+          id: agent.id,
+          name: agent.name,
+          slug: agent.slug,
+          logo: agent.logo,
+          website: agent.website,
+          affiliateUrl: agent.affiliateUrl,
+          monthlyPrice: String(agent.monthlyPrice),
+          annualPrice: String(agent.annualPrice),
+          hasFreeTier: agent.hasFreeTier,
+          freeTierLimits: agent.freeTierLimits,
+          category: agent.category,
+          subcategory: agent.subcategory,
+          modelsSupported: agent.modelsSupported,
+          integrations: agent.integrations,
+          maxUsers: agent.maxUsers,
+          apiAccess: agent.apiAccess,
+          overallRating: String(agent.overallRating),
+          easeOfUse: String(agent.easeOfUse),
+          performance: String(agent.performance),
+          valueForMoney: String(agent.valueForMoney),
+          shortDescription: agent.shortDescription,
+          pros: agent.pros,
+          cons: agent.cons,
+          features: agent.features,
+          bestFor: agent.bestFor,
+          editorChoice: agent.editorChoice,
+          featured: agent.featured,
+          sortOrder: agent.sortOrder,
         })
         .returning();
       results.push(created[0].name);
@@ -73,7 +68,7 @@ export async function POST() {
       message: "Database seeded successfully",
       count: results.length,
       seeded: true,
-      vpns: results,
+      agents: results,
     });
   } catch (error) {
     console.error("Error seeding database:", error);
@@ -90,13 +85,13 @@ export async function GET() {
     const db = getDb();
     const result = await db
       .select({ count: count() })
-      .from(vpnProvidersTable);
+      .from(aiAgentProvidersTable);
     const dbCount = result[0]?.count ?? 0;
 
     return NextResponse.json({
       count: dbCount,
       isEmpty: dbCount === 0,
-      staticDataCount: vpnProviders.length,
+      staticDataCount: aiAgentProviders.length,
       databaseAvailable: true,
     });
   } catch (error) {
@@ -104,7 +99,7 @@ export async function GET() {
     return NextResponse.json({
       count: 0,
       isEmpty: true,
-      staticDataCount: vpnProviders.length,
+      staticDataCount: aiAgentProviders.length,
       databaseAvailable: false,
       error: String(error),
     });

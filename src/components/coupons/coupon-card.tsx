@@ -26,14 +26,14 @@ export function CouponCard({ coupon, vpnName, affiliateUrl }: CouponCardProps) {
 
     // Track copy event (can be used for analytics)
     if (typeof window !== "undefined") {
-      console.log(`Coupon copied: ${coupon.code} for ${coupon.vpnSlug}`);
+      console.log(`Coupon copied: ${coupon.code} for ${coupon.agentSlug}`);
     }
   };
 
   const handleGetDeal = () => {
     // Track click event
     if (typeof window !== "undefined") {
-      console.log(`Coupon deal clicked: ${coupon.code} for ${coupon.vpnSlug}`);
+      console.log(`Coupon deal clicked: ${coupon.code} for ${coupon.agentSlug}`);
     }
 
     // Open affiliate link

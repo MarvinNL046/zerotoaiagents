@@ -79,79 +79,71 @@ const blogPosts = pgTable(
   ]
 );
 
-// --- Country Data (inline, since Netlify functions can't import from src/) ---
+// --- Use Case Data (inline, since Netlify functions can't import from src/) ---
 
-interface CountryInfo {
+interface UseCaseInfo {
   slug: string;
   name: string;
-  status: "legal" | "legal-restricted" | "restricted";
-  internetFreedomScore: number;
-  population: string;
-  blockedServices: string[];
-  recommendedVpns: string[];
+  icon: string;
+  category: string;
+  description: string;
+  keyFeatures: string[];
+  recommendedAgents: string[];
 }
 
-// High-priority countries for country-specific blog posts (restricted + high-traffic)
-const COUNTRY_DATA: CountryInfo[] = [
-  { slug: "iran", name: "Iran", status: "restricted", internetFreedomScore: 16, population: "87.9M", blockedServices: ["Social media", "News sites", "Messaging apps", "VPN websites", "Streaming platforms"], recommendedVpns: ["NordVPN (obfuscated servers)", "ExpressVPN", "Mullvad", "Astrill", "Windscribe"] },
-  { slug: "china", name: "China", status: "restricted", internetFreedomScore: 9, population: "1.4B", blockedServices: ["Google", "Facebook", "Twitter/X", "YouTube", "WhatsApp", "Instagram", "Wikipedia", "Most Western news"], recommendedVpns: ["ExpressVPN", "Astrill", "NordVPN (obfuscated)", "Surfshark", "VyprVPN"] },
-  { slug: "russia", name: "Russia", status: "restricted", internetFreedomScore: 21, population: "144M", blockedServices: ["Facebook", "Instagram", "Twitter/X", "Independent news", "VPN websites"], recommendedVpns: ["NordVPN (obfuscated)", "ExpressVPN", "ProtonVPN", "Windscribe", "Mullvad"] },
-  { slug: "uae", name: "United Arab Emirates", status: "restricted", internetFreedomScore: 30, population: "10M", blockedServices: ["VoIP (Skype, FaceTime)", "Dating apps", "Gambling sites", "Some news sites"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark", "PureVPN", "CyberGhost"] },
-  { slug: "turkey", name: "Turkey", status: "legal-restricted", internetFreedomScore: 32, population: "85M", blockedServices: ["Wikipedia (intermittent)", "Social media (during events)", "Some news sites", "VPN websites"], recommendedVpns: ["ExpressVPN", "NordVPN", "ProtonVPN", "Windscribe", "Hotspot Shield"] },
-  { slug: "saudi-arabia", name: "Saudi Arabia", status: "restricted", internetFreedomScore: 24, population: "36M", blockedServices: ["VoIP services", "Dating sites", "Gambling", "Political opposition sites", "LGBTQ+ content"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "egypt", name: "Egypt", status: "restricted", internetFreedomScore: 25, population: "106M", blockedServices: ["News websites", "Human rights sites", "VPN websites", "VoIP services"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "vietnam", name: "Vietnam", status: "restricted", internetFreedomScore: 22, population: "100M", blockedServices: ["Facebook (intermittent)", "Political content", "Independent news", "Some blogs"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "pakistan", name: "Pakistan", status: "legal-restricted", internetFreedomScore: 26, population: "230M", blockedServices: ["YouTube (historically)", "Social media (during unrest)", "Blasphemous content", "Some news sites"], recommendedVpns: ["NordVPN", "ExpressVPN", "Surfshark"] },
-  { slug: "myanmar", name: "Myanmar", status: "restricted", internetFreedomScore: 12, population: "55M", blockedServices: ["Facebook", "Twitter/X", "Instagram", "Wikipedia", "Independent news", "VPN websites"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "indonesia", name: "Indonesia", status: "legal-restricted", internetFreedomScore: 47, population: "277M", blockedServices: ["Adult content", "Gambling sites", "Some LGBTQ+ content", "Radical content"], recommendedVpns: ["NordVPN", "ExpressVPN", "Surfshark"] },
-  { slug: "thailand", name: "Thailand", status: "legal-restricted", internetFreedomScore: 36, population: "72M", blockedServices: ["Gambling sites", "Some news outlets", "Political content", "Lese-majeste content"], recommendedVpns: ["NordVPN", "ExpressVPN", "Surfshark"] },
-  { slug: "india", name: "India", status: "legal-restricted", internetFreedomScore: 50, population: "1.4B", blockedServices: ["Social media (during shutdowns)", "TikTok", "Some Chinese apps", "VPN apps (some)"], recommendedVpns: ["NordVPN", "ExpressVPN", "Surfshark"] },
-  { slug: "bangladesh", name: "Bangladesh", status: "legal-restricted", internetFreedomScore: 40, population: "172M", blockedServices: ["Social media (during unrest)", "Some news websites", "VoIP services"], recommendedVpns: ["NordVPN", "ExpressVPN", "Surfshark"] },
-  { slug: "uzbekistan", name: "Uzbekistan", status: "restricted", internetFreedomScore: 27, population: "35M", blockedServices: ["News websites", "Social media (during unrest)", "Messaging apps", "VPN websites"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "kazakhstan", name: "Kazakhstan", status: "restricted", internetFreedomScore: 29, population: "20M", blockedServices: ["Social media (during protests)", "Opposition news", "Messaging apps", "VPN websites"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "hong-kong", name: "Hong Kong", status: "legal-restricted", internetFreedomScore: 45, population: "7.5M", blockedServices: ["Some pro-democracy websites (intermittent)"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "malaysia", name: "Malaysia", status: "legal-restricted", internetFreedomScore: 39, population: "33M", blockedServices: ["Gambling sites", "Adult content", "Some political websites", "Some news outlets"], recommendedVpns: ["NordVPN", "ExpressVPN", "Surfshark"] },
-  { slug: "cuba", name: "Cuba", status: "restricted", internetFreedomScore: 20, population: "11M", blockedServices: ["Independent news", "Opposition websites", "Social media (during protests)"], recommendedVpns: ["ExpressVPN", "NordVPN", "Surfshark"] },
-  { slug: "belarus", name: "Belarus", status: "restricted", internetFreedomScore: 18, population: "9.4M", blockedServices: ["Independent news", "Opposition websites", "Social media (during protests)", "VPN websites"], recommendedVpns: ["ExpressVPN", "NordVPN", "ProtonVPN"] },
+// High-priority use cases for use-case-specific blog posts
+const USE_CASE_DATA: UseCaseInfo[] = [
+  { slug: "coding", name: "Software Development", icon: "💻", category: "Technical", description: "AI coding agents for software development with code completion, debugging, refactoring, and test generation.", keyFeatures: ["Multi-file editing", "Real-time error detection", "IDE integration", "40+ languages", "Git integration", "Code review"], recommendedAgents: ["Claude Code", "Cursor", "GitHub Copilot", "Windsurf", "Devin", "Amazon Q Developer"] },
+  { slug: "marketing", name: "Marketing & Advertising", icon: "📈", category: "Business", description: "AI marketing agents for content creation, SEO optimization, social media management, and campaign automation.", keyFeatures: ["Content generation", "SEO optimization", "Social scheduling", "A/B testing", "Marketing platform integration", "Brand voice"], recommendedAgents: ["ChatGPT", "Claude", "Zapier Central", "Make AI", "Relevance AI", "n8n AI"] },
+  { slug: "writing", name: "Writing & Content Creation", icon: "✍️", category: "Creative", description: "AI writing agents for blogs, copywriting, editing, translation, and research.", keyFeatures: ["Long-form content", "Grammar/style editing", "Translation", "Plagiarism detection", "SEO optimization", "Multiple writing styles"], recommendedAgents: ["ChatGPT", "Claude", "Gemini", "Perplexity"] },
+  { slug: "research", name: "Research & Analysis", icon: "🔍", category: "Technical", description: "AI research agents for web research, data synthesis, fact-checking, summarization, and citation management.", keyFeatures: ["Web search", "Paper analysis", "Document summarization", "Citation generation", "Multi-source synthesis", "Fact-checking"], recommendedAgents: ["Perplexity", "Claude", "ChatGPT", "Gemini"] },
+  { slug: "customer-support", name: "Customer Support", icon: "💬", category: "Business", description: "AI customer support agents for ticket routing, automated responses, knowledge bases, and multilingual support.", keyFeatures: ["Ticket routing", "Instant responses", "Multilingual support", "Sentiment analysis", "CRM integration", "Continuous learning"], recommendedAgents: ["Intercom Fin", "Zendesk AI", "Ada", "Salesforce Agentforce"] },
+  { slug: "sales", name: "Sales & Lead Generation", icon: "🎯", category: "Business", description: "AI sales agents for lead scoring, outreach automation, CRM management, and proposal generation.", keyFeatures: ["Lead scoring", "Email sequences", "CRM integration", "Proposal generation", "Call analysis", "Sales forecasting"], recommendedAgents: ["Salesforce Agentforce", "ChatGPT", "Claude", "Microsoft Copilot Studio"] },
+  { slug: "data-analysis", name: "Data Analysis & Business Intelligence", icon: "📊", category: "Technical", description: "AI data analysis agents for SQL generation, data visualization, report creation, and pattern detection.", keyFeatures: ["SQL generation", "Data visualization", "Pattern detection", "Predictive analytics", "Report generation", "Data warehouse integration"], recommendedAgents: ["ChatGPT", "Claude", "Gemini", "Google Vertex AI Agent Builder"] },
+  { slug: "hr-recruitment", name: "HR & Recruitment", icon: "👥", category: "Business", description: "AI HR agents for resume screening, interview scheduling, onboarding automation, and employee Q&A.", keyFeatures: ["Resume screening", "Interview scheduling", "Employee chatbot", "Onboarding automation", "Sentiment analysis", "HRIS integration"], recommendedAgents: ["Microsoft Copilot Studio", "ChatGPT", "Claude", "Zapier Central"] },
 ];
 
-// Countries prioritized for blog post generation (most restricted first)
-const HIGH_PRIORITY_COUNTRY_SLUGS = COUNTRY_DATA
-  .filter((c) => c.status === "restricted" || c.status === "legal-restricted")
-  .sort((a, b) => a.internetFreedomScore - b.internetFreedomScore)
-  .map((c) => c.slug);
+// Use cases prioritized for blog post generation (most popular first)
+const HIGH_PRIORITY_USE_CASE_SLUGS = USE_CASE_DATA.map((c) => c.slug);
 
-function detectCountry(topic: string): CountryInfo | null {
+function detectUseCase(topic: string): UseCaseInfo | null {
   const lower = topic.toLowerCase();
-  // Check exact name matches first, longest first to avoid "India" matching before "Indonesia"
-  const sorted = [...COUNTRY_DATA].sort((a, b) => b.name.length - a.name.length);
-  for (const country of sorted) {
-    if (lower.includes(country.name.toLowerCase())) return country;
-    if (lower.includes(country.slug.replace(/-/g, " "))) return country;
+  // Check exact name matches first, longest first
+  const sorted = [...USE_CASE_DATA].sort((a, b) => b.name.length - a.name.length);
+  for (const useCase of sorted) {
+    if (lower.includes(useCase.name.toLowerCase())) return useCase;
+    if (lower.includes(useCase.slug.replace(/-/g, " "))) return useCase;
   }
   return null;
 }
 
-// Scrape country data from multiple sources (can't import from src/ in Netlify functions)
-async function scrapeCountryDataForBlog(
-  country: CountryInfo
+// Stub for country detection (legacy VPN feature, not used for AI agents)
+function detectCountry(_topic: string): null {
+  return null;
+}
+
+// Stub for country data scraping (legacy VPN feature, not used for AI agents)
+async function scrapeCountryDataForBlog(_country: never): Promise<null> {
+  return null;
+}
+
+// Scrape use case data from multiple sources (can't import from src/ in Netlify functions)
+async function scrapeUseCaseDataForBlog(
+  useCase: UseCaseInfo
 ): Promise<string | null> {
   const jinaKey = process.env.JINA_API_KEY;
-  const jinaReaderUrl = "https://r.jina.ai";
   const year = new Date().getFullYear();
 
   const headers: Record<string, string> = { Accept: "application/json" };
-  const readerHeaders: Record<string, string> = { Accept: "text/markdown" };
   if (jinaKey) {
     headers["Authorization"] = `Bearer ${jinaKey}`;
-    readerHeaders["Authorization"] = `Bearer ${jinaKey}`;
   }
 
   // Scrape multiple sources in parallel
   const sources = await Promise.allSettled([
-    // 1. Jina search: country + VPN news
+    // 1. Jina search: use case + AI agent news
     (async () => {
-      const query = `${country.name} VPN censorship internet ${year}`;
+      const query = `${useCase.name} AI agents automation ${year}`;
       const res = await fetch(`https://s.jina.ai/${encodeURIComponent(query)}`, {
         method: "GET", headers, signal: AbortSignal.timeout(15000),
       });
@@ -159,30 +151,16 @@ async function scrapeCountryDataForBlog(
       const data = await res.json();
       const results = (data.data || data.results || []).slice(0, 4);
       return results.length > 0
-        ? "RECENT VPN/CENSORSHIP NEWS:\n" + results
+        ? "RECENT AI AGENT NEWS:\n" + results
             .map((r: { title?: string; description?: string; content?: string; url?: string }) =>
               `- ${r.title || "Untitled"}: ${(r.description || r.content || "").slice(0, 250)}${r.url ? ` (Source: ${r.url})` : ""}`)
             .join("\n")
         : null;
     })(),
 
-    // 2. Freedom House country report via Jina reader
+    // 2. Jina search: best AI agents for [use case] reviews
     (async () => {
-      const slug = country.slug === "uae" ? "united-arab-emirates" : country.slug;
-      const url = `https://freedomhouse.org/country/${slug}/freedom-net`;
-      const res = await fetch(`${jinaReaderUrl}/${url}`, {
-        method: "GET", headers: readerHeaders, signal: AbortSignal.timeout(15000),
-      });
-      if (!res.ok) return null;
-      const text = await res.text();
-      return text && text.length > 100
-        ? `FREEDOM HOUSE REPORT (${url}):\n${text.slice(0, 1500)}`
-        : null;
-    })(),
-
-    // 3. Jina search: best VPN for [country] reviews
-    (async () => {
-      const query = `best VPN for ${country.name} ${year} review`;
+      const query = `best AI agents for ${useCase.name} ${year} review`;
       const res = await fetch(`https://s.jina.ai/${encodeURIComponent(query)}`, {
         method: "GET", headers, signal: AbortSignal.timeout(15000),
       });
@@ -190,16 +168,16 @@ async function scrapeCountryDataForBlog(
       const data = await res.json();
       const results = (data.data || data.results || []).slice(0, 3);
       return results.length > 0
-        ? "VPN REVIEW SOURCES:\n" + results
+        ? "AI AGENT REVIEW SOURCES:\n" + results
             .map((r: { title?: string; description?: string; content?: string; url?: string }) =>
               `- ${r.title || "Untitled"}: ${(r.description || r.content || "").slice(0, 250)}${r.url ? ` (Source: ${r.url})` : ""}`)
             .join("\n")
         : null;
     })(),
 
-    // 4. Jina search: internet censorship / VPN legality
+    // 3. Jina search: how to use AI for [use case]
     (async () => {
-      const query = `is VPN legal in ${country.name} ${year} internet censorship laws`;
+      const query = `how to use AI agents ${useCase.name} ${year} guide tutorial`;
       const res = await fetch(`https://s.jina.ai/${encodeURIComponent(query)}`, {
         method: "GET", headers, signal: AbortSignal.timeout(15000),
       });
@@ -207,7 +185,7 @@ async function scrapeCountryDataForBlog(
       const data = await res.json();
       const results = (data.data || data.results || []).slice(0, 3);
       return results.length > 0
-        ? "VPN LEGALITY & CENSORSHIP SOURCES:\n" + results
+        ? "USE CASE GUIDES & TUTORIALS:\n" + results
             .map((r: { title?: string; description?: string; content?: string; url?: string }) =>
               `- ${r.title || "Untitled"}: ${(r.description || r.content || "").slice(0, 250)}${r.url ? ` (Source: ${r.url})` : ""}`)
             .join("\n")
@@ -222,67 +200,55 @@ async function scrapeCountryDataForBlog(
     }
   }
 
-  console.log(`[bg-generate] Country scrape for ${country.name}: ${parts.length}/${sources.length} sources succeeded`);
+  console.log(`[bg-generate] Use case scrape for ${useCase.name}: ${parts.length}/${sources.length} sources succeeded`);
 
   return parts.length > 0 ? parts.join("\n\n") : null;
 }
 
-// --- VPN Logo mapping (public/logos/ contains official SVGs from provider websites) ---
+// --- AI Agent Logo mapping (public/logos/ contains official SVGs/PNGs from provider websites) ---
 
-const VPN_LOGOS: Record<string, { file: string; displayName: string }> = {
-  nordvpn: { file: "/logos/nordvpn.svg", displayName: "NordVPN" },
-  expressvpn: { file: "/logos/expressvpn.svg", displayName: "ExpressVPN" },
-  surfshark: { file: "/logos/surfshark.svg", displayName: "Surfshark" },
-  cyberghost: { file: "/logos/cyberghost.svg", displayName: "CyberGhost" },
-  protonvpn: { file: "/logos/protonvpn.svg", displayName: "ProtonVPN" },
-  mullvad: { file: "/logos/mullvad.svg", displayName: "Mullvad" },
-  ipvanish: { file: "/logos/ipvanish.svg", displayName: "IPVanish" },
-  "private-internet-access": { file: "/logos/private-internet-access.svg", displayName: "Private Internet Access" },
-  vyprvpn: { file: "/logos/vyprvpn.svg", displayName: "VyprVPN" },
-  tunnelbear: { file: "/logos/tunnelbear.svg", displayName: "TunnelBear" },
-  windscribe: { file: "/logos/windscribe.svg", displayName: "Windscribe" },
-  "hotspot-shield": { file: "/logos/hotspot-shield.svg", displayName: "Hotspot Shield" },
-  strongvpn: { file: "/logos/strongvpn.png", displayName: "StrongVPN" },
-  purevpn: { file: "/logos/purevpn.png", displayName: "PureVPN" },
-  "atlas-vpn": { file: "/logos/atlas-vpn.svg", displayName: "Atlas VPN" },
-  privatevpn: { file: "/logos/privatevpn.svg", displayName: "PrivateVPN" },
-  torguard: { file: "/logos/torguard.svg", displayName: "TorGuard" },
-  airvpn: { file: "/logos/airvpn.png", displayName: "AirVPN" },
-  ivpn: { file: "/logos/ivpn.svg", displayName: "IVPN" },
-  "mozilla-vpn": { file: "/logos/mozilla-vpn.svg", displayName: "Mozilla VPN" },
-  "hide-me": { file: "/logos/hide-me.svg", displayName: "Hide.me" },
-  zenmate: { file: "/logos/zenmate.svg", displayName: "ZenMate" },
-  privadovpn: { file: "/logos/privadovpn.svg", displayName: "PrivadoVPN" },
-  hma: { file: "/logos/hma.svg", displayName: "HMA" },
-  astrill: { file: "/logos/astrill.svg", displayName: "Astrill" },
-  "perfect-privacy": { file: "/logos/perfect-privacy.svg", displayName: "Perfect Privacy" },
-  "goose-vpn": { file: "/logos/goose-vpn.png", displayName: "Goose VPN" },
-  "trust-zone": { file: "/logos/trust-zone.png", displayName: "Trust.Zone" },
-  fastestvpn: { file: "/logos/fastestvpn.svg", displayName: "FastestVPN" },
-  ovpn: { file: "/logos/ovpn.svg", displayName: "OVPN" },
-  cactusvpn: { file: "/logos/cactusvpn.png", displayName: "CactusVPN" },
-  betternet: { file: "/logos/betternet.svg", displayName: "Betternet" },
-  speedify: { file: "/logos/speedify.png", displayName: "Speedify" },
-  "vpn-unlimited": { file: "/logos/vpn-unlimited.png", displayName: "VPN Unlimited" },
-  nordlayer: { file: "/logos/nordlayer.svg", displayName: "NordLayer" },
-  "perimeter-81": { file: "/logos/perimeter-81.svg", displayName: "Perimeter 81" },
-  "urban-vpn": { file: "/logos/urban-vpn.svg", displayName: "Urban VPN" },
-  "x-vpn": { file: "/logos/x-vpn.png", displayName: "X-VPN" },
+const AGENT_LOGOS: Record<string, { file: string; displayName: string }> = {
+  "claude-code": { file: "/logos/claude-code.svg", displayName: "Claude Code" },
+  "cursor": { file: "/logos/cursor.svg", displayName: "Cursor" },
+  "github-copilot": { file: "/logos/github-copilot.svg", displayName: "GitHub Copilot" },
+  "windsurf": { file: "/logos/windsurf.svg", displayName: "Windsurf (Codeium)" },
+  "replit-agent": { file: "/logos/replit-agent.svg", displayName: "Replit Agent" },
+  "devin": { file: "/logos/devin.svg", displayName: "Devin" },
+  "amazon-q-developer": { file: "/logos/amazon-q-developer.svg", displayName: "Amazon Q Developer" },
+  "n8n-ai": { file: "/logos/n8n-ai.svg", displayName: "n8n AI" },
+  "flowise": { file: "/logos/flowise.svg", displayName: "Flowise" },
+  "relevance-ai": { file: "/logos/relevance-ai.svg", displayName: "Relevance AI" },
+  "make-ai": { file: "/logos/make-ai.svg", displayName: "Make (with AI)" },
+  "zapier-central": { file: "/logos/zapier-central.svg", displayName: "Zapier AI (Central)" },
+  "crewai": { file: "/logos/crewai.svg", displayName: "CrewAI" },
+  "autogen": { file: "/logos/autogen.svg", displayName: "AutoGen (Microsoft)" },
+  "langgraph": { file: "/logos/langgraph.svg", displayName: "LangGraph" },
+  "agentgpt": { file: "/logos/agentgpt.svg", displayName: "AgentGPT" },
+  "salesforce-agentforce": { file: "/logos/salesforce-agentforce.svg", displayName: "Salesforce Agentforce" },
+  "microsoft-copilot-studio": { file: "/logos/microsoft-copilot-studio.svg", displayName: "Microsoft Copilot Studio" },
+  "google-vertex-ai-agent-builder": { file: "/logos/google-vertex-ai-agent-builder.svg", displayName: "Google Vertex AI Agent Builder" },
+  "intercom-fin": { file: "/logos/intercom-fin.svg", displayName: "Intercom Fin" },
+  "zendesk-ai": { file: "/logos/zendesk-ai.svg", displayName: "Zendesk AI" },
+  "ada-ai": { file: "/logos/ada-ai.svg", displayName: "Ada" },
+  "chatgpt": { file: "/logos/chatgpt.svg", displayName: "ChatGPT (OpenAI)" },
+  "claude": { file: "/logos/claude.svg", displayName: "Claude (Anthropic)" },
+  "gemini": { file: "/logos/gemini.svg", displayName: "Gemini (Google)" },
+  "perplexity": { file: "/logos/perplexity.svg", displayName: "Perplexity" },
 };
 
-// Inject VPN logos into blog content HTML.
-// Finds the first <h2> or <h3> heading that mentions each VPN name
+// Inject AI agent logos into blog content HTML.
+// Finds the first <h2> or <h3> heading that mentions each agent name
 // and prepends the logo image to that heading.
-function injectVpnLogos(content: string, siteUrl: string): string {
+function injectAgentLogos(content: string, siteUrl: string): string {
   let updated = content;
   const injected = new Set<string>();
 
-  for (const [slug, { file, displayName }] of Object.entries(VPN_LOGOS)) {
-    // Skip if VPN not mentioned in content (word boundary match to avoid "OVPN" matching inside "NordVPN" etc.)
+  for (const [slug, { file, displayName }] of Object.entries(AGENT_LOGOS)) {
+    // Skip if agent not mentioned in content (word boundary match)
     const namePattern = new RegExp(`(?<![a-zA-Z])${displayName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![a-zA-Z])`, "i");
     if (!namePattern.test(content)) continue;
 
-    // Find the first <h2> or <h3> that contains this VPN name
+    // Find the first <h2> or <h3> that contains this agent name
     const headingRegex = new RegExp(
       `(<h[23][^>]*>)((?:(?!</h[23]>).)*?${displayName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:(?!</h[23]>).)*)(<\/h[23]>)`,
       "i"
@@ -298,7 +264,7 @@ function injectVpnLogos(content: string, siteUrl: string): string {
       injected.add(slug);
     }
 
-    // Also inject into comparison table cells: find <td><strong>VPN Name</strong></td>
+    // Also inject into comparison table cells: find <td><strong>Agent Name</strong></td>
     const tableCellPattern = `(<td[^>]*>\\s*<strong>)(${displayName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})(</strong>)`;
 
     if (!injected.has(`${slug}-table`) && new RegExp(tableCellPattern, "i").test(updated)) {
@@ -311,27 +277,27 @@ function injectVpnLogos(content: string, siteUrl: string): string {
     }
   }
 
-  console.log(`[bg-generate] Injected ${injected.size} VPN logos into content`);
+  console.log(`[bg-generate] Injected ${injected.size} AI agent logos into content`);
   return updated;
 }
 
 // Inject Short.io affiliate links into blog content HTML.
-// For each VPN mentioned, wraps the first <strong>VPNName</strong> (outside of headings/tables that already have logos)
-// in an affiliate link, and also adds a CTA link after each VPN's H2/H3 section heading.
+// For each AI agent mentioned, wraps the first <strong>AgentName</strong> (outside of headings/tables that already have logos)
+// in an affiliate link, and also adds a CTA link after each agent's H2/H3 section heading.
 function injectAffiliateLinks(content: string): string {
-  const VPN_AFFILIATE: Record<string, string> = {};
-  for (const [slug, { displayName }] of Object.entries(VPN_LOGOS)) {
-    VPN_AFFILIATE[displayName] = `https://go.zerotovpn.com/${slug}`;
+  const AGENT_AFFILIATE: Record<string, string> = {};
+  for (const [slug, { displayName }] of Object.entries(AGENT_LOGOS)) {
+    AGENT_AFFILIATE[displayName] = `https://go.zerotoaiagents.com/${slug}`;
   }
 
   let updated = content;
   const linked = new Set<string>();
 
-  for (const [displayName, affiliateUrl] of Object.entries(VPN_AFFILIATE)) {
+  for (const [displayName, affiliateUrl] of Object.entries(AGENT_AFFILIATE)) {
     const escaped = displayName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-    // Strategy 1: Wrap first <strong>VPNName</strong> that isn't already inside an <a> tag
-    // Match <strong>VPNName</strong> not preceded by <a (to avoid double-wrapping)
+    // Strategy 1: Wrap first <strong>AgentName</strong> that isn't already inside an <a> tag
+    // Match <strong>AgentName</strong> not preceded by <a (to avoid double-wrapping)
     const strongPattern = new RegExp(
       `(?<!<a[^>]*>\\s*)(<strong>)(${escaped})(</strong>)(?!\\s*</a>)`,
       "i"
@@ -345,7 +311,7 @@ function injectAffiliateLinks(content: string): string {
       linked.add(displayName);
     }
 
-    // Strategy 2: Find "check the provider's website" or "Check website" near this VPN and replace with actual link
+    // Strategy 2: Find "check the provider's website" or "Check website" near this agent and replace with actual link
     // Look for patterns like "Check website for current pricing" or "check the provider's website"
     const checkWebsitePattern = new RegExp(
       `(${escaped}[^<]{0,200}?)([Cc]heck (?:the provider'?s? website|their website|website) for (?:current |latest )?pricing(?:[^<]*?)\\.?)`,
@@ -465,99 +431,99 @@ async function autoSelectTopic(
   const month = now.toLocaleString("en", { month: "long" });
   const year = now.getFullYear();
 
-  // Determine if this should be a country-specific post (~every 3rd post)
+  // Determine if this should be a use-case-specific post (~every 3rd post)
   const totalPosts = existingPosts.length;
-  const countryPostCount = existingTitles.filter((t) => {
+  const useCasePostCount = existingTitles.filter((t) => {
     const lower = t.toLowerCase();
-    return COUNTRY_DATA.some(
-      (c) => lower.includes(c.name.toLowerCase()) && (lower.includes("vpn") || lower.includes("bypass") || lower.includes("internet"))
+    return USE_CASE_DATA.some(
+      (c) => lower.includes(c.name.toLowerCase()) || lower.includes(c.slug.replace(/-/g, " "))
     );
   }).length;
 
-  const shouldBeCountryPost = totalPosts > 0 && countryPostCount < Math.ceil(totalPosts / 3);
+  const shouldBeUseCasePost = totalPosts > 0 && useCasePostCount < Math.ceil(totalPosts / 3);
 
-  if (shouldBeCountryPost) {
-    // Find countries that don't have recent blog posts yet
-    const countriesWithoutPosts = HIGH_PRIORITY_COUNTRY_SLUGS.filter((slug) => {
-      const country = COUNTRY_DATA.find((c) => c.slug === slug);
-      if (!country) return false;
+  if (shouldBeUseCasePost) {
+    // Find use cases that don't have recent blog posts yet
+    const useCasesWithoutPosts = HIGH_PRIORITY_USE_CASE_SLUGS.filter((slug) => {
+      const useCase = USE_CASE_DATA.find((c) => c.slug === slug);
+      if (!useCase) return false;
       return !existingTitlesLower.some(
-        (t) => t.includes(country.name.toLowerCase()) && (t.includes("vpn") || t.includes("bypass") || t.includes("internet"))
+        (t) => t.includes(useCase.name.toLowerCase()) || t.includes(useCase.slug.replace(/-/g, " "))
       );
     });
 
-    if (countriesWithoutPosts.length > 0) {
-      // Pick the highest-priority country without a post
-      const countrySlug = countriesWithoutPosts[0];
-      const country = COUNTRY_DATA.find((c) => c.slug === countrySlug)!;
+    if (useCasesWithoutPosts.length > 0) {
+      // Pick the highest-priority use case without a post
+      const useCaseSlug = useCasesWithoutPosts[0];
+      const useCase = USE_CASE_DATA.find((c) => c.slug === useCaseSlug)!;
 
-      // Let AI pick the best angle for this country
-      const countryTopicPrompt = `You are a senior VPN content strategist for ZeroToVPN.com.
+      // Let AI pick the best angle for this use case
+      const useCaseTopicPrompt = `You are a senior AI agent content strategist for ZeroToAIAgents.com.
 
-Pick ONE compelling blog post title about using VPNs in ${country.name} that will rank well on Google.
+Pick ONE compelling blog post title about using AI agents for ${useCase.name} that will rank well on Google.
 
-Country context:
-- Internet Freedom Score: ${country.internetFreedomScore}/100 (${country.status === "restricted" ? "Not Free" : "Partly Free"})
-- Blocked services: ${country.blockedServices.join(", ")}
-- Population: ${country.population}
+Use case context:
+- Category: ${useCase.category}
+- Description: ${useCase.description}
+- Recommended agents: ${useCase.recommendedAgents.join(", ")}
 
 The title should be:
-- Specific to ${country.name} and VPN usage there
+- Specific to ${useCase.name} and AI agent use there
 - Timely for ${year}
 - Searchable (target keywords people actually search for)
 - Different from these existing titles:
 ${existingTitles.slice(-20).map((t) => `  - ${t}`).join("\n")}
 
 Example formats (vary these, don't always use the same pattern):
-- "Best VPN for ${country.name} in ${year}: Bypass Blocks Safely"
-- "How to Use a VPN in ${country.name}: Complete ${year} Guide"
-- "Is VPN Legal in ${country.name}? What You Need to Know in ${year}"
-- "${country.name} Internet Censorship: How to Stay Connected with a VPN"
+- "Best AI Agents for ${useCase.name} in ${year}: Complete Guide"
+- "How to Automate ${useCase.name} with AI Agents: ${year} Tutorial"
+- "${useCase.recommendedAgents[0]} vs ${useCase.recommendedAgents[1]}: Which AI Agent is Better for ${useCase.name}?"
+- "Top ${useCase.name} AI Agents: Features, Pricing, and Use Cases"
 
 Respond with ONLY the blog post title — nothing else. No quotes, no explanation.`;
 
       try {
-        const topicResponse = await generateAI(countryTopicPrompt, model);
+        const topicResponse = await generateAI(useCaseTopicPrompt, model);
         const topic = topicResponse.trim().replace(/^["']|["']$/g, "");
         if (topic && topic.length > 10 && topic.length < 120) {
-          console.log(`[bg-generate] AI selected country topic (${country.name}):`, topic);
+          console.log(`[bg-generate] AI selected use case topic (${useCase.name}):`, topic);
           return topic;
         }
       } catch (err) {
-        console.warn("[bg-generate] AI country topic selection failed:", err);
+        console.warn("[bg-generate] AI use case topic selection failed:", err);
       }
 
-      // Fallback: deterministic country topic
-      return `Best VPN for ${country.name} in ${year}: Complete Guide to Bypass Internet Restrictions`;
+      // Fallback: deterministic use case topic
+      return `Best AI Agents for ${useCase.name} in ${year}: Complete Guide`;
     }
   }
 
-  // All VPN names for topic generation variety
-  const allVpnNames = Object.values(VPN_LOGOS).map((v) => v.displayName);
+  // All AI agent names for topic generation variety
+  const allAgentNames = Object.values(AGENT_LOGOS).map((v) => v.displayName);
 
-  const topicPrompt = `You are a senior VPN content strategist for ZeroToVPN.com, a VPN comparison and review website that covers 38+ VPN providers.
+  const topicPrompt = `You are a senior AI agent content strategist for ZeroToAIAgents.com, an AI agent comparison and review website that covers 26+ AI agent platforms.
 
 Pick ONE compelling blog post topic that will rank well on Google and drive organic traffic.
 
 The topic should be:
-- About VPNs, online privacy, cybersecurity, or related subjects
+- About AI agents, automation, LLMs, AI coding tools, or related subjects
 - Specific and searchable (not too broad, not too niche)
 - Timely for ${month} ${year}
 - Different from ALL of these already-published titles:
 ${existingTitles.map((t) => `  - ${t}`).join("\n")}
 
-${scrapeContext ? `Recent VPN industry data for inspiration:\n${scrapeContext}\n` : ""}
+${scrapeContext ? `Recent AI agent industry data for inspiration:\n${scrapeContext}\n` : ""}
 
-IMPORTANT: We cover ALL of these VPN providers, not just the top 5. Include lesser-known VPNs in your topics too:
-${allVpnNames.join(", ")}
+IMPORTANT: We cover ALL of these AI agent platforms, not just the top 5. Include lesser-known agents in your topics too:
+${allAgentNames.join(", ")}
 
 Topic categories to rotate between:
-- Individual VPN reviews (especially lesser-known ones like Windscribe, TunnelBear, IVPN, Astrill, TorGuard)
-- Head-to-head comparisons (VPN vs VPN — e.g., "Mullvad vs IVPN", "Windscribe vs ProtonVPN")
-- "Best VPN for X" guides (streaming, gaming, travel, torrenting, privacy, business)
-- How-to guides, protocol deep-dives, security news analysis
-- Budget VPN roundups, free VPN alternatives, myth-busting, deal roundups
-- Niche use cases: best VPN for students, for small business, for Kodi, for Linux
+- Individual agent reviews (especially coding agents like Claude Code, Cursor, Windsurf, Devin)
+- Head-to-head comparisons (Agent vs Agent — e.g., "Claude Code vs Cursor", "ChatGPT vs Claude")
+- "Best AI agent for X" guides (coding, marketing, writing, customer support, data analysis, research)
+- How-to guides, framework deep-dives (CrewAI, LangGraph, AutoGen), integration tutorials
+- Budget agent roundups, free agent alternatives, myth-busting, pricing comparisons
+- Niche use cases: best agent for startups, for enterprises, for students, for specific programming languages
 
 Respond with ONLY the blog post title — nothing else. No quotes, no explanation.`;
 
@@ -574,11 +540,11 @@ Respond with ONLY the blog post title — nothing else. No quotes, no explanatio
 
   // Fallback: simple rotation with date uniqueness
   const fallbackTopics = [
-    "Best VPN Deals and Discounts",
-    "VPN Speed Comparison: Real-World Test Results",
-    "Complete Guide to VPN Privacy and Security",
-    "Top VPNs for Streaming: Netflix, Disney+, and More",
-    "VPN Protocols Compared: Which One Should You Use?",
+    "Best AI Coding Agents: Features and Pricing Comparison",
+    "AI Agent Automation: Complete Guide for Beginners",
+    "Claude Code vs Cursor: Which AI Coding Agent is Better?",
+    "Top AI Agents for Marketing and Content Creation",
+    "How to Build Multi-Agent AI Systems with CrewAI and LangGraph",
   ];
   const week = Math.floor((Date.now() - new Date(year, 0, 1).getTime()) / (7 * 24 * 60 * 60 * 1000));
   return `${fallbackTopics[week % fallbackTopics.length]} - ${month} ${year}`;
@@ -586,17 +552,17 @@ Respond with ONLY the blog post title — nothing else. No quotes, no explanatio
 
 function detectPostType(topic: string): "news" | "comparison" | "deal" | "guide" {
   const lower = topic.toLowerCase();
-  if (lower.includes("deal") || lower.includes("price") || lower.includes("discount")) return "deal";
-  if (lower.includes("vs") || lower.includes("comparison")) return "comparison";
+  if (lower.includes("deal") || lower.includes("price") || lower.includes("discount") || lower.includes("pricing")) return "deal";
+  if (lower.includes("vs") || lower.includes("comparison") || lower.includes("compare")) return "comparison";
   if (lower.includes("news") || lower.includes("update") || lower.includes("week in")) return "news";
-  // Country-specific posts are always guides
-  if (detectCountry(topic)) return "guide";
+  // Use-case-specific posts are always guides
+  if (detectUseCase(topic)) return "guide";
   return "guide";
 }
 
 // Fetch sitemap and extract English-only internal links grouped by category
 async function fetchSitemapLinks(): Promise<string> {
-  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotovpn.com";
+  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotoaiagents.com";
   try {
     const response = await fetch(`${siteUrl}/sitemap.xml`, { signal: AbortSignal.timeout(10000) });
     if (!response.ok) return "";
@@ -656,7 +622,7 @@ async function fetchSitemapLinks(): Promise<string> {
 }
 
 async function buildPrompt(topic: string, postType: string, scrapeData: string | null): Promise<string> {
-  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotovpn.com";
+  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotoaiagents.com";
   const siteName = new URL(siteUrl).hostname.replace("www.", "").split(".")[0];
 
   const typeInstructions: Record<string, string> = {
@@ -666,52 +632,9 @@ async function buildPrompt(topic: string, postType: string, scrapeData: string |
     guide: "Write an in-depth guide article. Start with fundamentals, progress to advanced tips. Include step-by-step instructions with numbered lists. Add practical examples and real-world scenarios.",
   };
 
-  // Detect country and build country-specific context
-  const country = detectCountry(topic);
+  // Legacy VPN country detection (not used for AI agents)
+  // const country = detectCountry(topic);
   let countryContext = "";
-
-  if (country) {
-    console.log(`[bg-generate] Country detected: ${country.name}, enriching prompt...`);
-
-    // Scrape fresh news for this country
-    const freshNews = await scrapeCountryDataForBlog(country);
-
-    // Also check if we have scraped data from the ScrapeJob table for this country
-    const countryStatusLabel =
-      country.status === "restricted"
-        ? "Not Free"
-        : country.status === "legal-restricted"
-          ? "Partly Free"
-          : "Free";
-
-    countryContext = `
-COUNTRY REFERENCE DATA (use this data throughout the article — cite real numbers):
-Country: ${country.name}
-Internet Freedom Score: ${country.internetFreedomScore}/100 (${countryStatusLabel}) — Source: Freedom House
-VPN Status: ${country.status === "restricted" ? "Heavily restricted or blocked" : country.status === "legal-restricted" ? "Legal but monitored/restricted" : "Fully legal"}
-Blocked Services: ${country.blockedServices.join(", ")}
-Recommended VPNs: ${country.recommendedVpns.join(", ")}
-Population: ${country.population}
-Country page on site: ${siteUrl}/countries/${country.slug}
-${freshNews ? `\nRecent news and developments:\n${freshNews}` : ""}
-
-COUNTRY-SPECIFIC INSTRUCTIONS:
-- Reference the Internet Freedom Score and cite Freedom House as the source
-- List specific blocked services and explain WHY they are blocked
-- For each recommended VPN, explain WHY it works well in ${country.name} (e.g., obfuscated servers, specific protocol support)
-- Include practical setup tips specific to ${country.name} (e.g., "install VPN before arriving" for travelers)
-- Mention legal implications honestly — don't downplay risks but don't fear-monger either
-- Link to the country page: ${siteUrl}/countries/${country.slug}
-- Include a section about which VPN protocols work best in ${country.name}
-
-CRITICAL DATA ACCURACY RULES FOR COUNTRY POSTS:
-- Use ONLY the pricing data from REFERENCE DATA / VPN PRICING DATA sections below. If pricing data is provided, use those exact numbers.
-- Do NOT invent speed test results (e.g., "45 Mbps", "95% uptime"). Instead, describe features qualitatively ("fast speeds", "reliable connection").
-- Do NOT invent feature names (e.g., "bridge servers", "stealth mode") — only mention features that are documented in the reference data or are well-known (obfuscated servers, Secure Core, etc.)
-- Do NOT claim "we tested in ${country.name}" unless test data is provided in the reference data. Instead say "based on user reports" or "according to independent reviews".
-- If you don't have a specific data point, be honest — say "check [provider]'s website for latest pricing" rather than guessing.
-`;
-  }
 
   const ctx = scrapeData
     ? `\nREFERENCE DATA (use ONLY this data for prices, features, and specs — do NOT invent numbers):\n${scrapeData.slice(0, 5000)}\n`
@@ -779,7 +702,7 @@ E-E-A-T SIGNALS (critical for Google rankings — weave throughout):
 - TRUSTWORTHINESS: Be balanced — mention downsides too. Be honest about limitations.
 - CRITICAL: Only use prices, speeds, and specs from the REFERENCE DATA provided. If no data is provided for a specific number, say "check the provider's website for current pricing" instead of making up a number. NEVER fabricate test results, percentages, or performance metrics.
 
-VPN LOGOS: Official VPN provider logos are available and will be automatically inserted into headings and comparison tables. When writing about specific VPNs, use their EXACT full names (${Object.values(VPN_LOGOS).map(v => v.displayName).join(", ")}) in H2/H3 headings so logos appear correctly. Give each recommended VPN its own H2 or H3 section when appropriate.
+VPN LOGOS: Official VPN provider logos are available and will be automatically inserted into headings and comparison tables. When writing about specific VPNs, use their EXACT full names (${Object.values(AGENT_LOGOS).map(v => v.displayName).join(", ")}) in H2/H3 headings so logos appear correctly. Give each recommended VPN its own H2 or H3 section when appropriate.
 
 FORMATTING RULES:
 - Bold key terms on first mention in each section
@@ -1092,110 +1015,47 @@ const handler: Handler = async (event) => {
     const topic = !rawTopic || rawTopic === "auto" ? await autoSelectTopic(db, recentScrapes, model) : rawTopic;
     console.log("[bg-generate] Topic:", topic, "Model:", model);
 
-    // Build scrape context — for country posts, fetch relevant pricing + country data
-    const detectedCountry = detectCountry(topic);
+    // Build scrape context — for use case posts, fetch relevant agent data
+    // Legacy VPN country detection disabled for AI agents site
     let scrapeContext: string;
 
-    if (detectedCountry) {
-      // Fetch country-specific scrape data
-      const countryScrapesPromise = db
-        .select()
-        .from(scrapeJobs)
-        .where(and(eq(scrapeJobs.status, "completed"), eq(scrapeJobs.source, `country-vpn:${detectedCountry.slug}`)))
-        .orderBy(desc(scrapeJobs.createdAt))
-        .limit(1);
+    // For AI agent posts, try to find relevant pricing data based on agent names in topic
+    const topicLower = topic.toLowerCase();
+    const allAgentSlugs = Object.keys(AGENT_LOGOS);
+    const agentSlugsInTopic = allAgentSlugs
+      .filter((slug) => topicLower.includes(slug.replace(/-/g, " ")) || topicLower.includes(slug));
 
-      // Fetch pricing data for the VPNs recommended for this country
-      // Map recommended VPN display names back to slugs
-      const vpnNameToSlug: Record<string, string> = {
-        "nordvpn": "nordvpn", "expressvpn": "expressvpn", "surfshark": "surfshark",
-        "cyberghost": "cyberghost", "protonvpn": "protonvpn", "mullvad": "mullvad",
-        "ipvanish": "ipvanish", "private internet access": "private-internet-access",
-        "vyprvpn": "vyprvpn", "tunnelbear": "tunnelbear", "windscribe": "windscribe",
-        "hotspot shield": "hotspot-shield", "strongvpn": "strongvpn", "purevpn": "purevpn",
-        "atlas vpn": "atlas-vpn", "privatevpn": "privatevpn", "torguard": "torguard",
-        "airvpn": "airvpn", "ivpn": "ivpn", "mozilla vpn": "mozilla-vpn",
-        "hide.me": "hide-me", "zenmate": "zenmate", "privadovpn": "privadovpn",
-        "hma": "hma", "hide my ass": "hma", "astrill": "astrill",
-        "perfect privacy": "perfect-privacy", "goose vpn": "goose-vpn",
-        "trust.zone": "trust-zone", "fastestvpn": "fastestvpn", "ovpn": "ovpn",
-        "cactusvpn": "cactusvpn", "betternet": "betternet", "speedify": "speedify",
-        "vpn unlimited": "vpn-unlimited", "nordlayer": "nordlayer",
-        "perimeter 81": "perimeter-81", "urban vpn": "urban-vpn", "x-vpn": "x-vpn",
-      };
-      const recommendedSlugs = detectedCountry.recommendedVpns
-        .map((name) => {
-          const lower = name.toLowerCase().replace(/\s*\(.*\)/, "").trim();
-          return vpnNameToSlug[lower] || lower.replace(/\s+/g, "");
-        })
-        .filter(Boolean);
-
-      const pricingScrapesPromise = db
+    if (agentSlugsInTopic.length > 0) {
+      // Topic mentions specific agents — fetch their pricing data
+      const allPricing = await db
         .select()
         .from(scrapeJobs)
         .where(and(eq(scrapeJobs.status, "completed"), eq(scrapeJobs.type, "pricing")))
         .orderBy(desc(scrapeJobs.createdAt))
         .limit(20);
 
-      const [countryScrapes, pricingScrapes] = await Promise.all([countryScrapesPromise, pricingScrapesPromise]);
-
-      // Filter pricing scrapes to only recommended VPNs (most recent per VPN)
-      const seenVpns = new Set<string>();
-      const relevantPricing = pricingScrapes.filter((s) => {
+      const seenAgents = new Set<string>();
+      const relevantPricing = allPricing.filter((s) => {
         const slug = s.vpnSlug;
-        if (!slug || seenVpns.has(slug) || !recommendedSlugs.includes(slug)) return false;
-        seenVpns.add(slug);
+        if (!slug || seenAgents.has(slug) || !agentSlugsInTopic.includes(slug)) return false;
+        seenAgents.add(slug);
         return true;
       });
 
-      const parts: string[] = [];
-      if (countryScrapes.length > 0 && countryScrapes[0].result) {
-        parts.push(`COUNTRY SCRAPE DATA:\n${countryScrapes[0].result.slice(0, 2000)}`);
-      }
       if (relevantPricing.length > 0) {
-        parts.push(`VPN PRICING DATA (scraped from official websites — use these exact prices):\n${relevantPricing.map((s) => `${s.vpnSlug}: ${(s.result || "").slice(0, 800)}`).join("\n\n")}`);
-      }
-      scrapeContext = parts.join("\n\n").slice(0, 6000);
-      console.log(`[bg-generate] Country context: ${countryScrapes.length} country scrapes, ${relevantPricing.length} pricing scrapes for ${recommendedSlugs.join(", ")}`);
-    } else {
-      // For non-country posts, try to find relevant pricing data based on VPN names in topic
-      const topicLower = topic.toLowerCase();
-      const allVpnSlugs = Object.keys(VPN_LOGOS);
-      const vpnSlugsInTopic = allVpnSlugs
-        .filter((slug) => topicLower.includes(slug.replace(/-/g, " ")) || topicLower.includes(slug));
-
-      if (vpnSlugsInTopic.length > 0) {
-        // Topic mentions specific VPNs — fetch their pricing data
-        const allPricing = await db
-          .select()
-          .from(scrapeJobs)
-          .where(and(eq(scrapeJobs.status, "completed"), eq(scrapeJobs.type, "pricing")))
-          .orderBy(desc(scrapeJobs.createdAt))
-          .limit(20);
-
-        const seenVpns = new Set<string>();
-        const relevantPricing = allPricing.filter((s) => {
-          const slug = s.vpnSlug;
-          if (!slug || seenVpns.has(slug) || !vpnSlugsInTopic.includes(slug)) return false;
-          seenVpns.add(slug);
-          return true;
-        });
-
-        if (relevantPricing.length > 0) {
-          scrapeContext = `VPN PRICING DATA (scraped from official websites — use these exact prices):\n${relevantPricing.map((s) => `${s.vpnSlug}: ${(s.result || "").slice(0, 800)}`).join("\n\n")}`.slice(0, 5000);
-        } else {
-          scrapeContext = recentScrapes.map((s) => s.result).filter(Boolean).join("\n\n").slice(0, 4000);
-        }
+        scrapeContext = `AGENT PRICING DATA (scraped from official websites — use these exact prices):\n${relevantPricing.map((s) => `${s.vpnSlug}: ${(s.result || "").slice(0, 800)}`).join("\n\n")}`.slice(0, 5000);
       } else {
-        // General topic — include recent news + pricing mix
-        const newsData = recentScrapes.filter((s) => s.type === "news").map((s) => s.result).filter(Boolean);
-        const pricingData = recentScrapes.filter((s) => s.type === "pricing").map((s) => `${s.vpnSlug}: ${(s.result || "").slice(0, 500)}`).filter(Boolean);
-
-        const parts: string[] = [];
-        if (newsData.length > 0) parts.push(`RECENT VPN NEWS:\n${newsData.join("\n").slice(0, 2000)}`);
-        if (pricingData.length > 0) parts.push(`VPN PRICING DATA (use these exact prices):\n${pricingData.join("\n\n").slice(0, 2000)}`);
-        scrapeContext = parts.join("\n\n") || recentScrapes.map((s) => s.result).filter(Boolean).join("\n\n").slice(0, 4000);
+        scrapeContext = recentScrapes.map((s) => s.result).filter(Boolean).join("\n\n").slice(0, 4000);
       }
+    } else {
+      // General topic — include recent news + pricing mix
+      const newsData = recentScrapes.filter((s) => s.type === "news").map((s) => s.result).filter(Boolean);
+      const pricingData = recentScrapes.filter((s) => s.type === "pricing").map((s) => `${s.vpnSlug}: ${(s.result || "").slice(0, 500)}`).filter(Boolean);
+
+      const parts: string[] = [];
+      if (newsData.length > 0) parts.push(`RECENT AGENT NEWS:\n${newsData.join("\n").slice(0, 2000)}`);
+      if (pricingData.length > 0) parts.push(`AGENT PRICING DATA (use these exact prices):\n${pricingData.join("\n\n").slice(0, 2000)}`);
+      scrapeContext = parts.join("\n\n") || recentScrapes.map((s) => s.result).filter(Boolean).join("\n\n").slice(0, 4000);
     }
 
     // Generate text
@@ -1207,9 +1067,9 @@ const handler: Handler = async (event) => {
 
     const parsed = parsePost(rawResponse, postType);
 
-    // Inject VPN logos and affiliate links into the content
-    const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotovpn.com";
-    parsed.content = injectVpnLogos(parsed.content, siteUrl);
+    // Inject AI agent logos and affiliate links into the content
+    const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotoaiagents.com";
+    parsed.content = injectAgentLogos(parsed.content, siteUrl);
     parsed.content = injectAffiliateLinks(parsed.content);
 
     // Ensure slug is unique (append date suffix if needed)

@@ -4,20 +4,20 @@ export function OrganizationJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "ZeroToVPN",
-    url: "https://zerotovpn.com",
-    logo: "https://zerotovpn.com/logo.png",
+    name: "ZeroToAIAgents",
+    url: "https://zerotoaiagents.com",
+    logo: "https://zerotoaiagents.com/logo.png",
     description:
-      "Expert VPN reviews, honest comparisons, and exclusive deals on top VPN services.",
+      "Expert AI agent reviews, honest comparisons, and exclusive deals on top AI automation platforms.",
     sameAs: [
       // Add social media links when available
-      // "https://twitter.com/zerotovpn",
-      // "https://facebook.com/zerotovpn",
+      // "https://twitter.com/zerotoaiagents",
+      // "https://facebook.com/zerotoaiagents",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      url: "https://zerotovpn.com/contact",
+      url: "https://zerotoaiagents.com/contact",
     },
   };
 
@@ -33,15 +33,15 @@ export function WebsiteJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ZeroToVPN",
-    url: "https://zerotovpn.com",
+    name: "ZeroToAIAgents",
+    url: "https://zerotoaiagents.com",
     description:
-      "Find the perfect VPN for your needs. Expert reviews, honest comparisons, and exclusive deals.",
+      "Find the perfect AI agent for your needs. Expert reviews, honest comparisons, and exclusive deals.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://zerotovpn.com/reviews?q={search_term_string}",
+        urlTemplate: "https://zerotoaiagents.com/reviews?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -70,7 +70,7 @@ export function ArticleJsonLd({
   url,
   datePublished = "2026-01-01",
   dateModified,
-  image = "https://zerotovpn.com/og-image.png",
+  image = "https://zerotoaiagents.com/og-image.png",
 }: ArticleJsonLdProps) {
   const schema = {
     "@context": "https://schema.org",
@@ -83,16 +83,16 @@ export function ArticleJsonLd({
     dateModified: dateModified || datePublished,
     author: {
       "@type": "Organization",
-      name: "ZeroToVPN",
-      url: "https://zerotovpn.com",
+      name: "ZeroToAIAgents",
+      url: "https://zerotoaiagents.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "ZeroToVPN",
-      url: "https://zerotovpn.com",
+      name: "ZeroToAIAgents",
+      url: "https://zerotoaiagents.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://zerotovpn.com/logo.png",
+        url: "https://zerotoaiagents.com/logo.png",
       },
     },
     mainEntityOfPage: {
@@ -214,7 +214,7 @@ export function ProductReviewJsonLd({
       },
       author: {
         "@type": "Organization",
-        name: "ZeroToVPN",
+        name: "ZeroToAIAgents",
       },
     },
     ...(price && {
@@ -257,8 +257,8 @@ export function SoftwareApplicationJsonLd({
   reviewCount = 1,
   price,
   priceCurrency = "USD",
-  operatingSystem = "Windows, macOS, iOS, Android, Linux",
-  category = "SecurityApplication",
+  operatingSystem = "Web, Windows, macOS, iOS, Android, Linux",
+  category = "AI Agent Platform",
 }: SoftwareApplicationJsonLdProps) {
   const schema = {
     "@context": "https://schema.org",
@@ -286,7 +286,7 @@ export function SoftwareApplicationJsonLd({
       },
       author: {
         "@type": "Organization",
-        name: "ZeroToVPN",
+        name: "ZeroToAIAgents",
       },
     },
     ...(price && {

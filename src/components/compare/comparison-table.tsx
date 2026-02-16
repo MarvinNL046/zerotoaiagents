@@ -1,27 +1,25 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { AffiliateButton } from "@/components/vpn/affiliate-button";
+import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { Link } from "@/i18n/navigation";
 import {
   Check,
   X,
   Trophy,
   DollarSign,
-  Clock,
-  Server,
-  Globe,
-  Monitor,
+  Star,
+  Gauge,
+  Users,
   Zap,
-  Lock,
-  Shield,
-  Tv,
-  Download,
+  Code,
+  Tag,
+  Plug,
 } from "lucide-react";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentData } from "@/lib/db/agent-service";
 
 interface ComparisonTableProps {
-  vpn1: VpnData;
-  vpn2: VpnData;
+  vpn1: AiAgentData;
+  vpn2: AiAgentData;
 }
 
 type FeatureValue = string | number | boolean | string[];
@@ -29,7 +27,7 @@ type FeatureValue = string | number | boolean | string[];
 interface FeatureRow {
   label: string;
   icon: React.ComponentType<{ className?: string }>;
-  getValue: (vpn: VpnData) => FeatureValue;
+  getValue: (agent: AiAgentData) => FeatureValue;
   format?: (value: FeatureValue) => React.ReactNode;
   determineWinner?: (val1: FeatureValue, val2: FeatureValue) => "vpn1" | "vpn2" | "tie";
 }
@@ -38,8 +36,8 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
   const features: FeatureRow[] = [
     {
       label: "Overall Rating",
-      icon: Shield,
-      getValue: (vpn) => vpn.overallRating,
+      icon: Star,
+      getValue: (agent) => agent.overallRating,
       format: (val) => (
         <div className="flex items-center justify-center gap-2">
           <span className="text-2xl font-bold text-primary">{val}</span>
@@ -51,30 +49,23 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
     {
       label: "Monthly Price",
       icon: DollarSign,
-      getValue: (vpn) => vpn.priceMonthly,
+      getValue: (agent) => agent.monthlyPrice,
       format: (val) => <span className="font-semibold">${val}/mo</span>,
       determineWinner: (v1, v2) => ((v1 as number) < (v2 as number) ? "vpn1" : (v1 as number) > (v2 as number) ? "vpn2" : "tie"),
     },
     {
-      label: "Best Price (2yr plan)",
+      label: "Annual Price",
       icon: DollarSign,
-      getValue: (vpn) => vpn.priceTwoYear || vpn.priceYearly,
+      getValue: (agent) => agent.annualPrice,
       format: (val) => (
         <span className="text-xl font-bold text-green-600">${val}/mo</span>
       ),
       determineWinner: (v1, v2) => ((v1 as number) < (v2 as number) ? "vpn1" : (v1 as number) > (v2 as number) ? "vpn2" : "tie"),
     },
     {
-      label: "Money-Back Guarantee",
-      icon: Clock,
-      getValue: (vpn) => vpn.moneyBackDays,
-      format: (val) => <span className="font-semibold">{val} days</span>,
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
-    },
-    {
       label: "Free Tier",
       icon: DollarSign,
-      getValue: (vpn) => vpn.freeTier,
+      getValue: (agent) => agent.hasFreeTier,
       format: (val) =>
         val ? (
           <Check className="h-6 w-6 text-green-500 mx-auto" />
@@ -84,142 +75,117 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
       determineWinner: (v1, v2) => ((v1 as boolean) && !(v2 as boolean) ? "vpn1" : !(v1 as boolean) && (v2 as boolean) ? "vpn2" : "tie"),
     },
     {
-      label: "Total Servers",
-      icon: Server,
-      getValue: (vpn) => vpn.servers,
-      format: (val) => <span className="font-semibold">{(val as number).toLocaleString()}+</span>,
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+      label: "Category",
+      icon: Tag,
+      getValue: (agent) => agent.category,
+      format: (val) => <Badge variant="secondary">{val}</Badge>,
     },
     {
-      label: "Countries",
-      icon: Globe,
-      getValue: (vpn) => vpn.countries,
+      label: "Max Users",
+      icon: Users,
+      getValue: (agent) => agent.maxUsers,
       format: (val) => <span className="font-semibold">{val}</span>,
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
     },
     {
-      label: "Simultaneous Devices",
-      icon: Monitor,
-      getValue: (vpn) => vpn.maxDevices,
-      format: (val) => (
-        <span className="font-semibold">{(val as number) >= 999 ? "Unlimited" : val}</span>
-      ),
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+      label: "API Access",
+      icon: Code,
+      getValue: (agent) => agent.apiAccess,
+      format: (val) =>
+        val ? (
+          <Check className="h-6 w-6 text-green-500 mx-auto" />
+        ) : (
+          <X className="h-6 w-6 text-red-400 mx-auto" />
+        ),
+      determineWinner: (v1, v2) => ((v1 as boolean) && !(v2 as boolean) ? "vpn1" : !(v1 as boolean) && (v2 as boolean) ? "vpn2" : "tie"),
     },
     {
-      label: "Speed Score",
-      icon: Zap,
-      getValue: (vpn) => vpn.speedScore,
-      format: (val) => (
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-green-500 rounded-full"
-              style={{ width: `${val}%` }}
-            />
-          </div>
-          <span className="font-semibold text-sm">{val}%</span>
-        </div>
-      ),
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
-    },
-    {
-      label: "Security Score",
-      icon: Lock,
-      getValue: (vpn) => vpn.securityScore,
+      label: "Ease of Use",
+      icon: Gauge,
+      getValue: (agent) => agent.easeOfUse,
       format: (val) => (
         <div className="flex items-center justify-center gap-2">
           <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
             <div
               className="h-full bg-blue-500 rounded-full"
-              style={{ width: `${val}%` }}
+              style={{ width: `${(val as number) * 20}%` }}
             />
           </div>
-          <span className="font-semibold text-sm">{val}%</span>
+          <span className="font-semibold text-sm">{val}/5</span>
         </div>
       ),
       determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
     },
     {
-      label: "Streaming Score",
-      icon: Tv,
-      getValue: (vpn) => vpn.streamingScore,
+      label: "Performance",
+      icon: Zap,
+      getValue: (agent) => agent.performance,
+      format: (val) => (
+        <div className="flex items-center justify-center gap-2">
+          <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-green-500 rounded-full"
+              style={{ width: `${(val as number) * 20}%` }}
+            />
+          </div>
+          <span className="font-semibold text-sm">{val}/5</span>
+        </div>
+      ),
+      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+    },
+    {
+      label: "Value for Money",
+      icon: DollarSign,
+      getValue: (agent) => agent.valueForMoney,
       format: (val) => (
         <div className="flex items-center justify-center gap-2">
           <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
             <div
               className="h-full bg-purple-500 rounded-full"
-              style={{ width: `${val}%` }}
+              style={{ width: `${(val as number) * 20}%` }}
             />
           </div>
-          <span className="font-semibold text-sm">{val}%</span>
+          <span className="font-semibold text-sm">{val}/5</span>
         </div>
       ),
       determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
     },
     {
-      label: "Protocols",
-      icon: Shield,
-      getValue: (vpn) => vpn.protocols,
+      label: "Models Supported",
+      icon: Code,
+      getValue: (agent) => agent.modelsSupported,
       format: (val) => (
         <div className="flex flex-wrap justify-center gap-1">
-          {(val as string[]).map((protocol) => (
-            <Badge key={protocol} variant="outline" className="text-xs">
-              {protocol}
+          {(val as string[]).slice(0, 3).map((model) => (
+            <Badge key={model} variant="outline" className="text-xs">
+              {model}
             </Badge>
           ))}
+          {(val as string[]).length > 3 && (
+            <Badge variant="outline" className="text-xs">
+              +{(val as string[]).length - 3}
+            </Badge>
+          )}
         </div>
       ),
     },
     {
-      label: "Encryption",
-      icon: Lock,
-      getValue: (vpn) => vpn.encryption,
-      format: (val) => <Badge variant="secondary">{val}</Badge>,
-    },
-    {
-      label: "Kill Switch",
-      icon: Shield,
-      getValue: (vpn) => vpn.killSwitch,
-      format: (val) =>
-        val ? (
-          <Check className="h-6 w-6 text-green-500 mx-auto" />
-        ) : (
-          <X className="h-6 w-6 text-red-400 mx-auto" />
-        ),
-    },
-    {
-      label: "No-Logs Policy",
-      icon: Shield,
-      getValue: (vpn) => vpn.noLogs,
-      format: (val) =>
-        val ? (
-          <Check className="h-6 w-6 text-green-500 mx-auto" />
-        ) : (
-          <X className="h-6 w-6 text-red-400 mx-auto" />
-        ),
-    },
-    {
-      label: "Netflix Support",
-      icon: Tv,
-      getValue: (vpn) => vpn.netflixSupport,
-      format: (val) =>
-        val ? (
-          <Check className="h-6 w-6 text-green-500 mx-auto" />
-        ) : (
-          <X className="h-6 w-6 text-red-400 mx-auto" />
-        ),
-    },
-    {
-      label: "Torrenting Support",
-      icon: Download,
-      getValue: (vpn) => vpn.torrentSupport,
-      format: (val) =>
-        val ? (
-          <Check className="h-6 w-6 text-green-500 mx-auto" />
-        ) : (
-          <X className="h-6 w-6 text-red-400 mx-auto" />
-        ),
+      label: "Integrations",
+      icon: Plug,
+      getValue: (agent) => agent.integrations,
+      format: (val) => (
+        <div className="flex flex-wrap justify-center gap-1">
+          {(val as string[]).slice(0, 3).map((integration) => (
+            <Badge key={integration} variant="outline" className="text-xs">
+              {integration}
+            </Badge>
+          ))}
+          {(val as string[]).length > 3 && (
+            <Badge variant="outline" className="text-xs">
+              +{(val as string[]).length - 3}
+            </Badge>
+          )}
+        </div>
+      ),
     },
   ];
 
@@ -291,8 +257,8 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
                 <td className="p-4">
                   <div className="flex flex-col gap-2">
                     <AffiliateButton
-                      vpnId={vpn1.id}
-                      vpnName={vpn1.name}
+                      agentId={vpn1.id}
+                      agentName={vpn1.name}
                       affiliateUrl={vpn1.affiliateUrl}
                       className="w-full"
                     >
@@ -306,8 +272,8 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
                 <td className="p-4">
                   <div className="flex flex-col gap-2">
                     <AffiliateButton
-                      vpnId={vpn2.id}
-                      vpnName={vpn2.name}
+                      agentId={vpn2.id}
+                      agentName={vpn2.name}
                       affiliateUrl={vpn2.affiliateUrl}
                       className="w-full"
                     >

@@ -1,5346 +1,1718 @@
 {
   "metadata": {
-    "title": "ZeroToVPN - 2026年最佳VPN评测与比较",
-    "description": "找到适合您需求的完美VPN。专家评测、诚实比较和独家优惠。"
+    "title": "ZeroToAIAgents - 2026年最佳AI代理评测与比较",
+    "description": "找到最适合您需求的AI代理。专家评测、诚实比较和顶级AI代理平台的独家优惠。"
   },
   "nav": {
     "home": "首页",
     "reviews": "评测",
-    "best": "最佳VPN",
-    "bestVpn": "2026年最佳VPN",
-    "vpnChina": "中国最佳VPN",
-    "vpnRussia": "俄罗斯最佳VPN",
-    "vpnUae": "阿联酋最佳VPN",
-    "vpnIran": "伊朗最佳VPN",
-    "vpnGaming": "游戏最佳VPN",
-    "vpnMobile": "最佳移动VPN",
-    "vpnTablet": "最佳平板VPN",
-    "freeVpn": "最佳免费VPN",
+    "best": "最佳AI代理",
+    "codingAgents": "编码代理",
+    "noCodeAgents": "无代码构建器",
+    "supportAgents": "客户支持",
+    "enterpriseAgents": "企业级",
+    "freeAgents": "免费代理",
+    "aiFrameworks": "AI框架",
+    "generalPurpose": "通用型",
+    "useCases": "使用场景",
     "deals": "优惠",
     "compare": "比较",
     "guides": "指南",
     "blog": "博客",
-    "about": "关于我们",
-    "speedTest": "速度测试",
-    "countries": "国家",
-    "devices": "设备",
-    "vpnLaptops": "笔记本电脑VPN",
-    "vpnWindows": "Windows VPN",
-    "vpnMacos": "macOS VPN",
-    "vpnChromebook": "Chromebook VPN",
-    "vpnLinux": "Linux VPN"
+    "about": "关于"
   },
   "hero": {
-    "title": "找到您的完美VPN",
-    "subtitle": "几分钟内从零到安全。专家评测、诚实比较和独家优惠。",
-    "cta": "比较VPN",
-    "trusted": "超过100,000读者信赖"
+    "title": "找到您完美的AI代理",
+    "subtitle": "从零到AI驱动只需几分钟。专家评测、诚实比较和最佳AI代理平台的独家优惠。",
+    "cta": "比较AI代理",
+    "trusted": "受到超过50,000名开发者和企业的信赖"
   },
   "comparison": {
-    "title": "2026年最佳VPN",
-    "subtitle": "独立测试和评估",
+    "title": "2026年最佳AI代理",
+    "subtitle": "独立测试和评测",
     "visitSite": "访问网站",
     "readReview": "阅读评测",
     "price": "价格",
     "perMonth": "/月",
-    "servers": "服务器",
-    "countries": "国家",
-    "devices": "设备",
-    "speed": "速度",
+    "models": "AI模型",
+    "integrations": "集成",
+    "freeSlot": "免费套餐",
     "rating": "评分",
     "features": "功能",
+    "easeOfUse": "易用性",
+    "performance": "性能",
+    "valueForMoney": "性价比",
     "editorChoice": "编辑推荐",
-    "bestValue": "最佳性价比",
-    "bestSpeed": "最快速度",
-    "moneyBack": "{days}天退款保证"
+    "bestValue": "最佳价值",
+    "mostPopular": "最受欢迎",
+    "freeTrial": "{days}天免费试用"
   },
   "features": {
-    "killSwitch": "终止开关",
-    "noLogs": "无日志政策",
-    "netflix": "Netflix",
-    "torrenting": "种子下载",
-    "encryption": "{type}加密"
+    "apiAccess": "API访问",
+    "freeTier": "免费套餐",
+    "customModels": "自定义模型",
+    "integrations": "集成",
+    "teamCollaboration": "团队协作",
+    "noCode": "无代码",
+    "codeExecution": "代码执行",
+    "multiModal": "多模态",
+    "realTimeData": "实时数据",
+    "workflows": "工作流"
   },
   "review": {
     "pros": "优点",
     "cons": "缺点",
-    "verdict": "我们的评价",
+    "verdict": "我们的结论",
     "visitSite": "访问{name}",
     "specifications": "规格",
-    "pricing": "价格",
-    "security": "安全性",
-    "streaming": "流媒体",
-    "lastUpdated": "最后更新：{date}"
+    "pricing": "定价",
+    "capabilities": "功能",
+    "integrations": "集成",
+    "useCases": "使用场景",
+    "lastUpdated": "最后更新: {date}"
   },
   "cta": {
     "getDeal": "获取优惠",
     "tryFree": "免费试用",
     "visitSite": "访问网站",
     "learnMore": "了解更多",
-    "compare": "比较"
+    "compare": "比较",
+    "getStarted": "开始使用"
+  },
+  "exitIntent": {
+    "headline": "等等!不要错过这个独家AI代理优惠!",
+    "subheadline": "以无与伦比的价格获得我们排名第一的AI代理平台",
+    "off": "折扣",
+    "specialDeal": "限时特别优惠",
+    "feature1": "访问{models}个先进的AI模型",
+    "feature2": "{integrations}个可用集成",
+    "feature3": "包含{days}天免费试用",
+    "claimDeal": "立即领取优惠",
+    "dontShowAgain": "不再显示"
   },
   "footer": {
-    "aboutText": "我们通过独立测试和诚实评测帮助您找到最佳VPN。",
+    "aboutText": "我们通过独立测试和诚实评测,帮助您找到最适合您需求的AI代理。",
     "links": "快速链接",
-    "legal": "法律信息",
+    "legal": "法律",
     "privacy": "隐私政策",
     "terms": "服务条款",
     "disclosure": "联盟披露",
     "company": "公司",
     "about": "关于我们",
-    "contactPage": "联系我们",
-    "copyright": "© {year} ZeroToVPN。保留所有权利。",
-    "disclaimer": "我们可能通过链接获得佣金，不会增加您的额外费用。",
-    "deals": "VPN优惠",
-    "freeVpn": "免费VPN",
-    "gamingVpn": "游戏VPN",
+    "contactPage": "联系",
+    "copyright": "© {year} ZeroToAIAgents. 保留所有权利。",
+    "disclaimer": "当您通过我们的链接购买时,我们可能赚取佣金,您无需支付额外费用。",
+    "deals": "AI代理优惠",
+    "freeAgents": "免费AI代理",
     "blog": "博客",
-    "reviews": "VPN评测",
-    "bestVpns": "2026年最佳VPN",
-    "compare": "比较VPN",
-    "whatIsVpn": "什么是VPN？",
-    "speedTest": "速度测试",
-    "countries": "国家",
-    "devices": "设备",
-    "vpnLaptops": "笔记本电脑VPN",
-    "vpnWindows": "Windows VPN",
-    "vpnMacos": "macOS VPN",
-    "vpnChromebook": "Chromebook VPN",
-    "vpnLinux": "Linux VPN"
-  },
-  "exitIntent": {
-    "headline": "等等！不要错过这个独家优惠！",
-    "subheadline": "以超值价格获取我们排名第一的VPN",
-    "off": "折扣",
-    "specialDeal": "限时特惠",
-    "feature1": "全球{servers}台超高速服务器",
-    "feature2": "覆盖{countries}个国家",
-    "feature3": "{days}天退款保证",
-    "claimDeal": "立即领取",
-    "dontShowAgain": "不再显示"
+    "reviews": "AI代理评测",
+    "bestAgents": "2026年最佳AI代理",
+    "compare": "比较AI代理",
+    "whatIsAiAgent": "什么是AI代理?",
+    "useCases": "使用场景",
+    "categories": "分类",
+    "codingAgents": "编码代理",
+    "noCodeBuilders": "无代码构建器",
+    "enterprise": "企业级AI",
+    "customerSupport": "客户支持",
+    "aiFrameworks": "AI框架",
+    "generalPurpose": "通用型"
   },
   "newsletter": {
-    "title": "获取最新资讯",
-    "subtitle": "将最新的VPN优惠和安全提示直接发送到您的收件箱。",
+    "title": "保持更新",
+    "subtitle": "获取最新的AI代理优惠、技巧和教程,直接发送到您的收件箱。",
     "placeholder": "输入您的邮箱",
     "emailLabel": "邮箱地址",
     "button": "订阅",
     "subscribe": "订阅",
-    "subscribing": "正在订阅...",
-    "success": "感谢您的订阅！",
-    "checkEmail": "请检查您的邮箱以确认订阅",
-    "error": "发生错误，请重试。",
-    "consent": "我同意接收邮件，并可随时取消订阅",
+    "subscribing": "订阅中...",
+    "success": "感谢订阅!",
+    "checkEmail": "查看您的邮箱以确认订阅",
+    "error": "出错了。请重试。",
+    "consent": "我同意接收邮件,并可随时取消订阅",
     "consentRequired": "请同意接收邮件",
-    "privacy": "我们尊重您的隐私，您可以随时取消订阅。",
-    "popupTitle": "获取独家VPN优惠！ 🔒",
-    "popupSubtitle": "加入数千名用户，获取最优惠的VPN交易和安全提示。",
-    "popupDescription": "将最新的VPN优惠和安全提示直接发送到您的收件箱。",
+    "privacy": "我们尊重您的隐私。随时取消订阅。",
+    "popupTitle": "获取独家AI代理优惠! 🤖",
+    "popupSubtitle": "加入成千上万的开发者和企业,获取最佳AI代理优惠和技巧。",
     "dontShowAgain": "不再显示",
-    "footerTitle": "订阅通讯",
-    "footerSubtitle": "获取独家VPN优惠和安全提示",
-    "blogCtaTitle": "不错过任何VPN优惠",
-    "blogCtaSubtitle": "每周获取VPN评测、安全提示和独家优惠。",
-    "privacyNote": "我们尊重您的隐私，您可以随时取消订阅。"
-  },
-  "home": {
-    "hero": {
-      "badge": "2026年更新",
-      "title": "找到您的",
-      "titleHighlight": "完美VPN",
-      "titleAccent": "今天",
-      "subtitle": "几分钟内从零到安全。专家评测、诚实比较和顶级VPN服务的独家优惠。",
-      "primaryCta": "比较VPN",
-      "secondaryCta": "什么是VPN？",
-      "trusted": "全球超过100,000名读者信赖"
-    },
-    "trustIndicators": {
-      "vpnsTested": {
-        "value": "50+",
-        "label": "VPN测试数"
-      },
-      "monthlyReaders": {
-        "value": "100K+",
-        "label": "月度读者"
-      },
-      "speedTests": {
-        "value": "500+",
-        "label": "速度测试"
-      },
-      "updated": {
-        "value": "24/7",
-        "label": "更新"
-      }
-    },
-    "comparison": {
-      "title": "2026年最佳VPN",
-      "subtitle": "独立测试和评估。我们对每个VPN的速度、安全性、流媒体和性价比进行测试。"
-    },
-    "topPicks": {
-      "title": "顶级VPN推荐",
-      "subtitle": "我们专家的首选推荐"
-    },
-    "whyVpn": {
-      "title": "为什么您需要VPN",
-      "subtitle": "保护您的隐私，访问全球内容，保持在线安全。",
-      "features": [
-        {
-          "title": "隐私保护",
-          "description": "隐藏您的IP地址并加密您的互联网流量，使您的在线活动对黑客、ISP和广告商保持私密。",
-          "icon": "Shield"
-        },
-        {
-          "title": "访问全球内容",
-          "description": "绕过地理限制，从世界任何地方访问流媒体服务、网站和内容。",
-          "icon": "Globe"
-        },
-        {
-          "title": "保护公共WiFi",
-          "description": "在咖啡馆、机场和酒店的公共WiFi网络上使用军用级加密保持安全。",
-          "icon": "Zap"
-        }
-      ]
-    },
-    "howWeTest": {
-      "title": "我们如何测试VPN",
-      "subtitle": "我们严格的测试方法确保诚实、公正的评测。",
-      "items": [
-        "50多个服务器位置的速度测试",
-        "安全审计和泄漏测试",
-        "流媒体平台兼容性检查",
-        "隐私政策和管辖权分析",
-        "客户支持响应能力",
-        "性价比评估"
-      ]
-    },
-    "ctaSection": {
-      "title": "准备好开始了吗？",
-      "subtitle": "比较最佳VPN，找到最适合您需求的那一个。",
-      "button": "查看所有VPN"
-    },
-    "faq": [
-      {
-        "question": "什么是VPN？",
-        "answer": "VPN（虚拟专用网络）加密您的互联网连接并隐藏您的IP地址，保护您的在线隐私并允许您访问地理限制的内容。"
-      },
-      {
-        "question": "2026年哪个VPN最好？",
-        "answer": "根据我们的测试，NordVPN是2026年最佳综合VPN，提供出色的速度、强大的安全性和超高的性价比。Surfshark是最佳预算选择，支持无限设备。"
-      },
-      {
-        "question": "免费VPN安全吗？",
-        "answer": "大多数免费VPN不推荐使用，因为它们可能会记录您的数据、显示广告或存在安全漏洞。ProtonVPN提供值得信赖的免费套餐，没有数据限制。"
-      },
-      {
-        "question": "VPN可以被追踪吗？",
-        "answer": "具有无日志政策的优质VPN无法追溯到您。VPN提供商不会存储任何关于您在线活动的信息。"
-      }
-    ],
-    "faqSection": {
-      "title": "常见问题"
-    }
+    "footerTitle": "新闻通讯",
+    "footerSubtitle": "获取独家AI代理优惠和生产力技巧",
+    "blogCtaTitle": "不要错过任何AI代理更新",
+    "blogCtaSubtitle": "每周获取AI代理评测、使用场景和独家优惠。"
   },
   "guides": {
-    "whatIsVpn": {
+    "whatIsAiAgent": {
       "meta": {
-        "title": "什么是VPN?2026年完整初学者指南 - ZeroToVPN",
-        "description": "了解什么是VPN、它如何工作以及为什么你需要它。我们的综合初学者指南用简单的语言解释VPN技术。"
+        "title": "什么是AI代理?2026年初学者完整指南 - ZeroToAIAgents",
+        "description": "了解什么是AI代理,它如何工作,以及为什么您需要一个。我们的综合初学者指南以简单的术语解释AI代理技术。"
       },
       "hero": {
         "badge": "初学者指南",
-        "readTime": "8分钟阅读",
-        "title": "什么是VPN?",
-        "subtitle": "虚拟专用网络(VPN)是一种强大的工具,它可以加密您的互联网连接并隐藏您的IP地址,保护您的在线隐私和安全。在本指南中,我们将用简单的语言解释您需要了解的关于VPN的所有内容。",
-        "updated": "更新于2026年11月",
-        "level": "初学者友好"
+        "readTime": "10分钟阅读",
+        "title": "什么是AI代理?",
+        "subtitle": "AI代理是由人工智能驱动的自主软件系统,可以理解上下文、做出决策并代表您采取行动。在本指南中,我们将以简单的术语解释您需要了解的关于AI代理的一切。",
+        "updated": "更新于2026年2月",
+        "level": "适合初学者"
       },
       "toc": {
         "title": "本指南内容:",
         "items": [
-          "1. 什么是VPN?",
-          "2. VPN如何工作?",
-          "3. 为什么使用VPN?",
-          "4. 使用VPN的好处",
-          "5. VPN的局限性",
-          "6. 选择合适的VPN"
+          "1. 什么是AI代理?",
+          "2. AI代理与AI聊天机器人",
+          "3. AI代理的类型",
+          "4. AI代理如何工作",
+          "5. 实际应用",
+          "6. AI代理的好处",
+          "7. 选择合适的AI代理"
         ]
       },
       "sections": {
-        "whatIsVpn": {
-          "title": "什么是VPN?",
+        "whatIsAiAgent": {
+          "title": "什么是AI代理?",
           "intro": [
-            "虚拟专用网络(VPN)是一种在您的设备和互联网之间创建安全加密连接的服务。可以把它想象成一条私人隧道,保护您的在线活动免受窥探。",
-            "当您正常连接到互联网时,您的数据会通过您的互联网服务提供商(ISP)传输,他们可以看到您在线做的一切。使用VPN时,您的数据在离开设备之前就会被加密,使得任何可能拦截它的人都无法读取——包括您的ISP、黑客,甚至政府。"
+            "AI代理是一个智能软件系统,可以感知其环境、做出决策并采取行动来实现特定目标 - 所有这些都只需最少的人工干预。与传统的仅响应查询的聊天机器人不同,AI代理可以主动朝着目标努力,使用工具、访问数据,甚至与其他系统交互。",
+            "将AI代理想象成增强版的虚拟助手。它不仅仅回答问题 - 它可以编写代码、管理您的日历、分析数据、处理客户支持、自动化工作流程等等。关键区别在于自主性:AI代理可以独立工作,在过程中做出明智的决策。"
           ],
-          "withoutVpn": {
-            "title": "不使用VPN",
+          "traditionalAi": {
+            "title": "传统AI聊天机器人",
             "items": [
-              "您的ISP可以看到您的所有在线活动",
-              "网站可以追踪您的真实IP地址和位置",
-              "公共WiFi上的黑客可以拦截您的数据",
-              "您的浏览历史可能被出售给广告商"
+              "仅响应直接查询",
+              "限于基于文本的对话",
+              "无法在聊天之外执行操作",
+              "需要持续的人工提示",
+              "无法访问外部工具或数据"
             ]
           },
-          "withVpn": {
-            "title": "使用VPN",
+          "aiAgent": {
+            "title": "现代AI代理",
             "items": [
-              "您的连接使用军用级加密进行保护",
-              "您的真实IP地址对网站隐藏",
-              "您的数据在任何网络上都受到保护,包括公共WiFi",
-              "您的在线活动保持私密"
+              "主动朝着目标努力",
+              "可以使用工具和API",
+              "访问实时数据和系统",
+              "做出自主决策",
+              "独立完成多步骤工作流"
             ]
           }
         },
-        "howVpnWorks": {
-          "title": "VPN如何工作?",
-          "intro": "了解VPN的工作原理有助于您理解为什么它是如此有效的隐私工具。以下是分解为简单步骤的过程:",
+        "agentsVsChatbots": {
+          "title": "AI代理与AI聊天机器人",
+          "intro": "虽然两者都在核心使用大型语言模型(LLM),但AI代理在功能上比传统聊天机器人强大得多。以下是它们的不同之处:",
+          "differences": [
+            {
+              "aspect": "自主性",
+              "chatbot": "每个操作都需要人工输入",
+              "agent": "可以自主处理复杂任务"
+            },
+            {
+              "aspect": "工具使用",
+              "chatbot": "限于预定义功能",
+              "agent": "可以使用API、数据库和外部工具"
+            },
+            {
+              "aspect": "决策",
+              "chatbot": "遵循简单的脚本和规则",
+              "agent": "使用推理做出上下文感知的决策"
+            },
+            {
+              "aspect": "记忆",
+              "chatbot": "仅限短对话上下文",
+              "agent": "跨会话的长期记忆"
+            },
+            {
+              "aspect": "行动",
+              "chatbot": "仅提供信息",
+              "agent": "可以执行操作并修改系统"
+            }
+          ]
+        },
+        "typesOfAgents": {
+          "title": "AI代理的类型",
+          "intro": "AI代理有多种形式,每种都针对不同的使用场景进行了优化:",
+          "types": [
+            {
+              "title": "编码代理",
+              "description": "自主编写、调试和部署代码。例如:Cursor、GitHub Copilot、Replit Agent。",
+              "useCases": "软件开发、代码审查、调试、测试生成"
+            },
+            {
+              "title": "客户支持代理",
+              "description": "处理客户查询、解决问题,并在需要时升级。例如:Intercom Fin、Ada、Zendesk AI。",
+              "useCases": "24/7客户服务、工单管理、常见问题解答"
+            },
+            {
+              "title": "研究代理",
+              "description": "浏览网络、收集信息并综合见解。例如:Perplexity AI、You.com。",
+              "useCases": "市场研究、竞争分析、数据收集"
+            },
+            {
+              "title": "工作流自动化代理",
+              "description": "跨多个系统自动化业务流程。例如:Zapier AI、Make、n8n。",
+              "useCases": "邮件自动化、数据录入、报告生成"
+            },
+            {
+              "title": "个人助理代理",
+              "description": "管理日程、邮件、任务和提醒。例如:Microsoft Copilot、Google Assistant。",
+              "useCases": "日历管理、邮件起草、任务优先级排序"
+            },
+            {
+              "title": "数据分析代理",
+              "description": "分析数据集、创建可视化并生成见解。例如:Julius AI、DataRobot。",
+              "useCases": "商业智能、数据可视化、趋势分析"
+            }
+          ]
+        },
+        "howAgentsWork": {
+          "title": "AI代理如何工作",
+          "intro": "了解AI代理的内部工作原理有助于您欣赏它们的能力。以下是过程:",
           "steps": [
             {
               "number": 1,
-              "title": "您连接到VPN服务器",
-              "description": "当您激活VPN时,您的设备会与VPN提供商的某个服务器建立连接。"
+              "title": "感知",
+              "description": "代理接收输入 - 这可能是用户查询、预定触发器或来自连接系统的数据。它分析上下文并确定需要做什么。"
             },
             {
               "number": 2,
-              "title": "您的数据被加密",
-              "description": "离开您设备的所有数据都使用AES-256等协议进行加密——这与政府和银行使用的加密相同。"
+              "title": "推理",
+              "description": "使用大型语言模型(如GPT-4、Claude或Gemini),代理制定策略。它将复杂任务分解为较小的步骤,并决定使用哪些工具或操作。"
             },
             {
               "number": 3,
-              "title": "您的IP地址改变",
-              "description": "网站看到的是VPN服务器的IP地址而不是您的,掩盖了您的真实位置和身份。"
+              "title": "行动",
+              "description": "代理通过调用API、访问数据库、运行代码或与外部系统交互来执行其计划。它可以使用数十种不同的工具。"
             },
             {
               "number": 4,
-              "title": "建立安全隧道",
-              "description": "在您和VPN服务器之间创建一条安全的「隧道」,保护通过它的所有数据。"
+              "title": "学习",
+              "description": "代理评估其操作的结果。如果未实现目标,它会调整方法并重试。一些代理还会从反馈中学习以随时间改进。"
+            },
+            {
+              "number": 5,
+              "title": "响应",
+              "description": "最后,代理提供结果 - 无论是完成的任务、生成的报告,还是向用户总结其完成的消息。"
             }
           ]
         },
-        "whyUseVpn": {
-          "title": "为什么使用VPN?",
-          "intro": "数百万人每天使用VPN有很多原因。以下是最常见的使用场景:",
-          "useCases": [
+        "realWorldApplications": {
+          "title": "实际应用",
+          "intro": "AI代理已经在改变行业。以下是一些具体例子:",
+          "applications": [
             {
-              "title": "隐私保护",
-              "description": "让您的浏览历史对想要追踪和利用您在线行为的ISP、雇主和广告商保持私密。",
-              "icon": "Lock"
+              "industry": "电子商务",
+              "title": "自动化客户服务",
+              "description": "AI代理处理产品查询、处理退货、跟踪货运并解决投诉,24/7无需人工干预。它们可以访问订单数据库、货运API和支付系统。",
+              "impact": "需要人工代理的支持工单减少60-80%"
             },
             {
-              "title": "公共WiFi安全",
-              "description": "在咖啡馆、机场、酒店和其他黑客经常出没的公共场所使用WiFi时保护自己。",
-              "icon": "Wifi"
+              "industry": "软件开发",
+              "title": "自主代码生成",
+              "description": "编码代理可以根据自然语言描述构建整个功能。它们编写代码、运行测试、修复错误,甚至部署到生产环境。",
+              "impact": "常规开发任务的生产力提高5-10倍"
             },
             {
-              "title": "访问流媒体内容",
-              "description": "通过连接到不同国家的服务器,从世界任何地方观看您喜爱的Netflix、Disney+、BBC iPlayer等节目。",
-              "icon": "Tv"
+              "industry": "金融",
+              "title": "财务分析与报告",
+              "description": "AI代理分析财务数据、生成报告、识别异常并提供投资见解。它们可以访问实时市场数据和历史趋势。",
+              "impact": "报告在几分钟而不是几小时内生成"
             },
             {
-              "title": "安全下载",
-              "description": "安全且私密地下载文件。VPN在想要保护其P2P活动的用户中很受欢迎。",
-              "icon": "Download"
+              "industry": "医疗保健",
+              "title": "管理自动化",
+              "description": "AI代理处理预约安排、保险验证、医疗记录更新和患者沟通,使医疗工作者专注于患者护理。",
+              "impact": "管理开销减少30-40%"
             },
             {
-              "title": "远程工作安全",
-              "description": "从任何地方安全访问您的公司网络和敏感工作文件,保护业务数据。",
-              "icon": "Building"
+              "industry": "营销",
+              "title": "内容创建与优化",
+              "description": "营销代理研究主题、编写内容、优化SEO、安排发布并跨渠道分析性能。",
+              "impact": "内容生产能力提高10倍"
             },
             {
-              "title": "移动隐私",
-              "description": "在使用移动数据或连接到不熟悉的WiFi网络时保护您的智能手机或平板电脑。",
-              "icon": "Smartphone"
+              "industry": "销售",
+              "title": "潜在客户资格认证与外联",
+              "description": "销售代理认证潜在客户、个性化外联、安排会议、更新CRM系统,并根据潜在客户行为自动跟进。",
+              "impact": "相同团队规模下合格潜在客户增加50%"
             }
           ]
         },
-        "vpnBenefits": {
-          "title": "使用VPN的好处",
+        "benefits": {
+          "title": "使用AI代理的好处",
+          "intro": "采用AI代理的组织正在看到变革性的好处:",
           "benefits": [
-            "加密您的所有互联网流量",
-            "隐藏您的IP地址和位置",
-            "防止ISP追踪和限速",
-            "保护免受公共网络上的黑客攻击",
-            "绕过地理限制",
-            "节省机票和酒店费用(价格因地区而异)",
-            "防止ISP带宽限制",
-            "增加在线匿名性"
-          ]
-        },
-        "vpnLimitations": {
-          "title": "VPN的局限性",
-          "intro": "虽然VPN是强大的隐私工具,但它们并不是解决所有在线安全问题的魔法方案。以下是VPN无法做到的:",
-          "limitations": [
             {
-              "title": "VPN不能让您完全匿名",
-              "description": "网站仍然可以通过cookie、浏览器指纹和登录账户追踪您。"
+              "title": "24/7可用性",
+              "description": "AI代理全天候工作,无需休息,无论时区如何都能立即处理任务。",
+              "icon": "Clock"
             },
             {
-              "title": "VPN无法防范恶意软件",
-              "description": "您仍然需要杀毒软件来防范病毒和恶意下载。"
+              "title": "大规模扩展",
+              "description": "单个AI代理可以同时处理数千个任务,无限扩展而不会成比例增加成本。",
+              "icon": "TrendingUp"
             },
             {
-              "title": "VPN可能会降低您的连接速度",
-              "description": "加密会增加开销,尽管高级VPN会最小化这种影响。"
+              "title": "一致性",
+              "description": "代理每次都完美遵循流程,消除人为错误并确保质量标准。",
+              "icon": "CheckCircle"
             },
             {
-              "title": "某些服务会屏蔽VPN",
-              "description": "某些网站和流媒体平台会主动尝试屏蔽VPN用户。"
+              "title": "成本效益",
+              "description": "自动化重复任务的成本仅为人工劳动成本的一小部分,同时将人才重新定向到更高价值的工作。",
+              "icon": "DollarSign"
             },
             {
-              "title": "免费VPN通常有陷阱",
-              "description": "许多免费VPN会记录您的数据、显示广告或存在严重的安全漏洞。"
+              "title": "更快执行",
+              "description": "人类需要几小时的任务可以由AI代理在几秒或几分钟内完成。",
+              "icon": "Zap"
+            },
+            {
+              "title": "集成能力",
+              "description": "AI代理无缝连接您的所有工具和系统,消除数据孤岛和手动数据输入。",
+              "icon": "Link"
             }
           ]
         },
-        "choosingVpn": {
-          "title": "选择合适的VPN",
-          "intro": "并非所有VPN都是平等的。以下是选择VPN服务时需要注意的事项:",
-          "features": [
+        "choosingAgent": {
+          "title": "选择合适的AI代理",
+          "intro": "并非所有AI代理都是平等的。以下是选择AI代理平台时要考虑的因素:",
+          "factors": [
             {
-              "title": "强大的加密",
-              "description": "寻找AES-256加密和现代协议,如WireGuard、OpenVPN或IKEv2。一些提供商还提供针对速度优化的专有协议。"
+              "title": "使用场景对齐",
+              "description": "不同的代理擅长不同的任务。编码代理不适合客户支持,反之亦然。首先明确定义您需要代理做什么。",
+              "questions": [
+                "您想自动化哪些具体任务?",
+                "代理需要访问哪些工具和系统?",
+                "涉及的工作流有多复杂?"
+              ]
             },
             {
-              "title": "无日志政策",
-              "description": "选择不存储您活动日志的VPN。寻找经过独立审计的无日志声明。"
+              "title": "集成能力",
+              "description": "如果最好的代理无法连接到您现有的工具,那就没用了。检查哪些集成是开箱即用的。",
+              "lookFor": [
+                "与您的CRM、数据库等的原生集成",
+                "用于自定义集成的API访问",
+                "用于实时触发的Webhook支持"
+              ]
             },
             {
-              "title": "快速速度",
-              "description": "好的VPN应该最小化速度损失。寻找拥有大型服务器网络和现代协议的VPN。"
+              "title": "易用性",
+              "description": "一些代理需要编码专业知识,而另一些使用无代码可视化构建器。根据您团队的技术能力选择。",
+              "options": [
+                "无代码平台:非常适合业务用户",
+                "低代码平台:灵活性和易用性的平衡",
+                "基于代码的平台:开发人员的最大定制"
+              ]
             },
             {
-              "title": "终止开关",
-              "description": "如果VPN断开连接,终止开关会切断您的互联网,防止意外的数据泄露。"
+              "title": "AI模型质量",
+              "description": "底层AI模型决定代理的智能程度和能力。顶级代理使用GPT-4、Claude 3或同等模型。",
+              "evaluate": [
+                "该平台使用哪些AI模型?",
+                "您可以在不同模型之间切换吗?",
+                "它如何处理上下文和记忆?"
+              ]
             },
             {
-              "title": "服务器位置",
-              "description": "更多的服务器位置意味着更好的速度和更多访问地理限制内容的选项。"
+              "title": "定价结构",
+              "description": "AI代理定价差异很大。了解成本模型以避免意外。",
+              "models": [
+                "按用户定价:适合团队工具",
+                "按执行定价:按使用付费",
+                "基于令牌的定价:基于AI模型使用",
+                "固定费率定价:固定成本无限使用"
+              ]
+            },
+            {
+              "title": "安全与合规",
+              "description": "如果处理敏感数据,请确保代理平台满足您的安全要求。",
+              "checkFor": [
+                "传输和静态数据加密",
+                "合规认证(SOC 2、GDPR、HIPAA)",
+                "数据驻留选项",
+                "访问控制和审计日志"
+              ]
             }
           ]
         }
       },
       "cta": {
-        "title": "准备好获得保护了吗?",
-        "description": "现在您已经了解了什么是VPN以及为什么需要它,请查看我们对最佳VPN服务的比较,找到适合您的那一个。",
-        "primaryButton": "比较VPN",
-        "secondaryButton": "查看2026年最佳VPN"
+        "title": "准备好开始使用AI代理了吗?",
+        "description": "现在您了解了什么是AI代理以及它们如何工作,探索我们对最佳AI代理平台的比较,找到适合您需求的那一个。",
+        "primaryButton": "比较AI代理",
+        "secondaryButton": "查看2026年最佳AI代理"
       },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
+      "faq": {
+        "title": "常见问题",
+        "questions": [
           {
-            "title": "VPN如何工作?",
-            "description": "深入了解VPN技术",
-            "url": "/guides/how-vpn-works"
+            "question": "AI代理与聊天机器人是一样的吗?",
+            "answer": "不。虽然两者都使用AI,但聊天机器人仅限于对话,而AI代理可以采取行动、使用工具并自主工作以完成复杂任务。"
           },
           {
-            "title": "最佳流媒体VPN",
-            "description": "访问Netflix、Disney+等",
-            "url": "/guides/vpn-for-streaming"
+            "question": "我需要编码技能才能使用AI代理吗?",
+            "answer": "这取决于平台。像Zapier AI和Make这样的无代码AI代理构建器不需要编程,而像Cursor这样专注于编码的代理则是为开发人员设计的。"
+          },
+          {
+            "question": "AI代理的成本是多少?",
+            "answer": "定价差异很大。一些平台提供免费套餐,而企业解决方案每月可能花费数百美元。大多数使用按用户或按执行定价模型。"
+          },
+          {
+            "question": "AI代理可以取代人类员工吗?",
+            "answer": "AI代理擅长自动化重复任务,但与人类一起工作效果最佳。它们处理常规工作,让人类专注于创意、战略和人际任务。"
+          },
+          {
+            "question": "AI代理安全吗?",
+            "answer": "信誉良好的AI代理平台实施强大的安全措施,包括加密、访问控制和合规认证。在使用前务必查看平台的安全文档。"
+          },
+          {
+            "question": "AI代理和RPA有什么区别?",
+            "answer": "RPA(机器人流程自动化)遵循严格的规则和脚本,而AI代理使用智能来适应新情况并做出决策。AI代理更加灵活。"
           }
         ]
       }
     },
-    "howVpnWorks": {
+    "howAiAgentsWork": {
       "meta": {
-        "title": "VPN如何工作?2026年技术指南 - ZeroToVPN",
-        "description": "了解VPN技术背后的技术细节。逐步学习加密、隧道协议以及VPN如何保护您的数据。"
+        "title": "AI代理如何工作?2026年技术指南 - ZeroToAIAgents",
+        "description": "了解AI代理技术背后的技术细节。了解LLM、推理引擎、工具使用以及AI代理如何自主完成复杂任务。"
       },
       "hero": {
         "badge": "技术指南",
-        "readTime": "10分钟阅读",
-        "title": "VPN如何工作?",
-        "subtitle": "曾经想知道当您在VPN上点击「连接」时会发生什么吗?本指南分解了VPN技术背后的技术魔法,用清晰易懂的语言解释加密、隧道协议和数据保护。",
-        "updated": "更新于2026年11月",
+        "readTime": "12分钟阅读",
+        "title": "AI代理如何工作?",
+        "subtitle": "想知道AI代理完成任务时幕后发生了什么吗?本指南分解了为现代AI代理提供动力的架构、推理过程和技术组件。",
+        "updated": "更新于2026年2月",
         "level": "中级水平"
       },
       "toc": {
         "title": "本指南内容:",
         "items": [
-          "1. VPN连接概述",
-          "2. 加密解释",
-          "3. VPN隧道",
-          "4. VPN协议比较",
-          "5. 分步过程",
-          "6. 安全功能"
+          "1. AI代理架构",
+          "2. 大型语言模型(LLM)",
+          "3. 推理循环",
+          "4. 工具使用与函数调用",
+          "5. 记忆系统",
+          "6. 代理编排",
+          "7. 错误处理与自我纠正"
         ]
-      },
-      "sections": {
-        "overview": {
-          "title": "VPN连接概述",
-          "intro": "VPN在您的设备和VPN服务器之间创建一个安全的加密连接。这个连接充当一条「隧道」,保护您的数据不被第三方看到或拦截。",
-          "diagram": {
-            "title": "您的数据如何传输",
-            "steps": [
-              {
-                "label": "您的设备",
-                "icon": "Wifi"
-              },
-              {
-                "label": "已加密",
-                "status": "protected"
-              },
-              {
-                "label": "VPN服务器",
-                "icon": "Server"
-              },
-              {
-                "label": "互联网",
-                "icon": "Globe"
-              }
-            ]
-          },
-          "note": "关键概念是,在您的设备和VPN服务器之间,所有数据都是加密且不可读的。只有在到达VPN服务器后才会被解密并发送到目的地。"
-        },
-        "encryption": {
-          "title": "加密解释",
-          "intro": "加密是使用数学算法将可读数据(明文)转换为不可读格式(密文)的过程。只有拥有正确解密密钥的人才能将其转换回来。",
-          "aes256": {
-            "title": "AES-256加密",
-            "description": "大多数现代VPN使用AES-256(高级加密标准,256位密钥),这与全球政府和军事组织使用的加密相同。",
-            "specs": [
-              {
-                "title": "密钥长度",
-                "description": "256位 = 2^256种可能的组合。这比可观测宇宙中的原子数量还要多!"
-              },
-              {
-                "title": "破解时间",
-                "description": "使用当前技术,通过暴力破解AES-256加密需要数十亿年。"
-              }
-            ]
-          },
-          "keyTypes": {
-            "title": "加密密钥类型",
-            "items": [
-              {
-                "type": "对称加密",
-                "description": "加密和解密使用相同的密钥。速度快但需要安全的密钥交换。"
-              },
-              {
-                "type": "非对称加密",
-                "description": "公钥加密,私钥解密。用于初始握手和密钥交换。"
-              }
-            ]
-          }
-        },
-        "tunneling": {
-          "title": "VPN隧道",
-          "intro": "VPN隧道是将您的数据包封装在另一个数据包内的过程。可以把它想象成把一封信放进另一个信封——外层信封隐藏了里面的内容。",
-          "process": {
-            "title": "封装过程",
-            "steps": [
-              {
-                "number": 1,
-                "title": "原始数据",
-                "description": "您的实际数据包带有目标地址"
-              },
-              {
-                "number": 2,
-                "title": "加密",
-                "description": "数据使用VPN协议进行加密"
-              },
-              {
-                "number": 3,
-                "title": "封装",
-                "description": "加密数据包装在新数据包中,地址指向VPN服务器"
-              },
-              {
-                "number": 4,
-                "title": "传输",
-                "description": "数据包通过ISP传输到VPN服务器(ISP只能看到加密的数据块)"
-              }
-            ]
-          }
-        },
-        "protocols": {
-          "title": "VPN协议比较",
-          "intro": "VPN协议决定了您的数据如何被加密和传输。每个协议在速度、安全性和兼容性之间都有自己的平衡。",
-          "list": [
-            {
-              "name": "WireGuard",
-              "badge": "推荐",
-              "description": "最新且最快的协议。使用最先进的加密技术,只有4,000行代码(相比之下OpenVPN有400,000多行)。",
-              "ratings": {
-                "speed": "优秀",
-                "security": "优秀",
-                "compatibility": "良好"
-              }
-            },
-            {
-              "name": "OpenVPN",
-              "badge": "行业标准",
-              "description": "使用最广泛的协议。开源且经过20多年的实战测试。几乎可以在任何设备和网络上工作。",
-              "ratings": {
-                "speed": "良好",
-                "security": "优秀",
-                "compatibility": "优秀"
-              }
-            },
-            {
-              "name": "IKEv2/IPSec",
-              "badge": "移动优化",
-              "description": "非常适合移动设备。在WiFi和蜂窝网络之间切换时快速重新连接。内置于大多数操作系统。",
-              "ratings": {
-                "speed": "优秀",
-                "security": "优秀",
-                "compatibility": "优秀"
-              }
-            }
-          ]
-        },
-        "stepByStep": {
-          "title": "分步说明:连接时会发生什么",
-          "steps": [
-            {
-              "number": 1,
-              "title": "VPN应用程序启动连接",
-              "description": "当您点击「连接」时,您的VPN应用程序会联系VPN服务器并开始身份验证过程。"
-            },
-            {
-              "number": 2,
-              "title": "握手与身份验证",
-              "description": "您的设备和VPN服务器交换加密密钥,并通过证书验证彼此的身份。"
-            },
-            {
-              "number": 3,
-              "title": "建立隧道",
-              "description": "创建一条安全的加密隧道。您的所有互联网流量现在都将通过这条隧道流动。"
-            },
-            {
-              "number": 4,
-              "title": "IP地址被掩盖",
-              "description": "您的真实IP地址被VPN服务器的IP替换。网站现在看到的是服务器的位置,而不是您的。"
-            },
-            {
-              "number": 5,
-              "title": "数据安全流动",
-              "description": "您发送的每个数据包都会被加密,通过隧道传输到VPN服务器,解密,然后转发到目的地。响应遵循相反的路径。"
-            }
-          ]
-        },
-        "securityFeatures": {
-          "title": "关键安全功能",
-          "features": [
-            {
-              "name": "终止开关",
-              "icon": "EyeOff",
-              "description": "如果VPN连接断开,自动阻止所有互联网流量,防止数据泄露。"
-            },
-            {
-              "name": "DNS泄漏保护",
-              "icon": "Cloud",
-              "description": "确保DNS查询通过VPN隧道,而不是可能暴露您浏览历史的ISP DNS服务器。"
-            },
-            {
-              "name": "完全前向保密",
-              "icon": "Lock",
-              "description": "为每个会话生成唯一的加密密钥。即使一个密钥被泄露,过去的会话仍然安全。"
-            },
-            {
-              "name": "仅RAM服务器",
-              "icon": "Server",
-              "description": "一些VPN完全在RAM内存中运行。断电时,所有数据会自动清除,不留痕迹。"
-            }
-          ]
-        },
-        "keyTakeaways": {
-          "title": "要点总结",
-          "items": [
-            "VPN使用军用级AES-256加密您的数据",
-            "隧道通过将数据封装在加密数据包中来隐藏您的数据",
-            "WireGuard是最快的现代协议;OpenVPN兼容性最好",
-            "终止开关和DNS泄漏保护等功能增加了额外的安全层"
-          ]
-        }
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "什么是VPN?",
-            "description": "如果您是VPN新手,请从基础开始。",
-            "url": "/guides/what-is-vpn"
-          },
-          {
-            "title": "流媒体VPN",
-            "description": "了解如何使用VPN访问流媒体内容。",
-            "url": "/guides/vpn-for-streaming"
-          }
-        ]
-      },
-      "cta": {
-        "title": "准备好试用VPN了吗?",
-        "description": "现在您已经了解了VPN的工作原理,请查看我们评分最高的VPN提供商,找到最适合您需求的那一个。",
-        "button": "查看最佳VPN"
       }
     },
-    "vpnForStreaming": {
+    "aiAgentSecurity": {
       "meta": {
-        "title": "最佳流媒体VPN - Netflix、Disney+等（2026指南）- ZeroToVPN",
-        "description": "了解如何使用VPN从任何地方访问Netflix、Disney+、BBC iPlayer等流媒体服务。找到最适合流媒体的VPN。"
-      },
-      "hero": {
-        "badge": "流媒体指南",
-        "readTime": "7分钟阅读",
-        "title": "最佳流媒体VPN",
-        "subtitle": "想从欧洲观看美国Netflix？想在国外访问BBC iPlayer？VPN可以解锁全球各地的流媒体内容。本指南涵盖了关于VPN和流媒体的一切知识。",
-        "updated": "更新于2026年11月",
-        "level": "实用指南"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 为什么使用VPN观看流媒体？",
-          "2. VPN流媒体工作原理",
-          "3. 热门流媒体服务",
-          "4. 最佳流媒体VPN",
-          "5. 更好的流媒体观看技巧",
-          "6. 常见问题"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "VPN如何工作？",
-            "description": "了解VPN技术背后的技术细节。",
-            "url": "/guides/how-vpn-works"
-          },
-          {
-            "title": "什么是VPN？",
-            "description": "如果您是VPN新手，请从基础开始。",
-            "url": "/guides/what-is-vpn"
-          }
-        ]
-      },
-      "cta": {
-        "title": "准备好开始流媒体观看了吗？",
-        "description": "选择一个专为流媒体优化的VPN，立即解锁全球内容。",
-        "button": "查找最佳流媒体VPN"
-      },
-      "sections": {
-        "whyUseVpn": {
-          "title": "为什么使用VPN观看流媒体?",
-          "intro": "Netflix、Disney+和Amazon Prime Video等流媒体服务在不同国家拥有不同的内容库。这是由于与内容创作者和发行商的许可协议所致。",
-          "geoRestrictionTitle": "地理限制问题",
-          "regions": [
-            {
-              "name": "Netflix美国",
-              "description": "约5,800多部作品,包括其他地方没有的独家节目和电影。",
-              "color": "red"
-            },
-            {
-              "name": "Netflix英国",
-              "description": "约5,500多部作品,内容组合不同,包括BBC联合制作。",
-              "color": "orange"
-            },
-            {
-              "name": "Netflix日本",
-              "description": "约6,000多部作品,包括大量动漫收藏和日本原创作品。",
-              "color": "yellow"
-            },
-            {
-              "name": "Netflix德国",
-              "description": "约4,500多部作品,包含德语配音内容和本地制作。",
-              "color": "blue"
-            }
-          ],
-          "benefitsTitle": "VPN流媒体的主要好处",
-          "benefits": [
-            {
-              "title": "访问更多内容:",
-              "description": "观看您所在国家无法访问的节目和电影。"
-            },
-            {
-              "title": "旅行时观看:",
-              "description": "在国外保持访问您本国的内容库。"
-            },
-            {
-              "title": "提前发布:",
-              "description": "某些内容在特定地区提前发布。"
-            },
-            {
-              "title": "避免ISP限速:",
-              "description": "一些ISP会降低流媒体速度 - VPN可以绕过这一限制。"
-            }
-          ]
-        },
-        "howItWorks": {
-          "title": "VPN流媒体如何工作",
-          "steps": [
-            {
-              "number": 1,
-              "title": "连接到VPN服务器",
-              "description": "选择您想访问其内容的国家的服务器(例如,选择美国服务器访问美国Netflix)。"
-            },
-            {
-              "number": 2,
-              "title": "获取新的IP地址",
-              "description": "您的真实IP被隐藏,替换为VPN服务器所在位置的IP。"
-            },
-            {
-              "number": 3,
-              "title": "打开流媒体应用",
-              "description": "流媒体服务看到您的VPN IP,并向您显示该地区的内容库。"
-            },
-            {
-              "number": 4,
-              "title": "享受无限制流媒体",
-              "description": "观看在您实际位置之前无法访问的内容。"
-            }
-          ],
-          "warningTitle": "VPN封锁",
-          "warningText": "流媒体服务会主动尝试检测和封锁VPN连接。这就是为什么选择专门支持流媒体的VPN很重要 - 它们不断更新服务器以保持领先。"
-        },
-        "streamingServices": {
-          "title": "热门流媒体服务",
-          "services": [
-            {
-              "name": "Netflix",
-              "badge": "运行良好",
-              "badgeColor": "green",
-              "icon": "N",
-              "iconColor": "red-600",
-              "description": "在190多个国家拥有不同的内容库。美国、英国、日本和加拿大拥有最大的选择。",
-              "features": [
-                "全球15,000多部作品",
-                "4K超高清",
-                "多个配置文件"
-              ]
-            },
-            {
-              "name": "Disney+",
-              "badge": "运行良好",
-              "badgeColor": "green",
-              "icon": "D+",
-              "iconColor": "blue-700",
-              "description": "内容因地区而异。美国拥有星球大战、漫威等内容。一些国家包含Star内容(成人作品)。",
-              "features": [
-                "迪士尼、漫威、星球大战",
-                "IMAX增强",
-                "可下载"
-              ]
-            },
-            {
-              "name": "BBC iPlayer",
-              "badge": "仅限英国",
-              "badgeColor": "yellow",
-              "icon": "BBC",
-              "iconColor": "pink-600",
-              "description": "需要英国电视许可证免费观看。访问需要英国IP地址。适合观看英国电视节目、纪录片和直播电视。",
-              "features": [
-                "免费(需英国许可证)",
-                "直播电视",
-                "BBC原创作品"
-              ]
-            },
-            {
-              "name": "Amazon Prime Video",
-              "badge": "运行良好",
-              "badgeColor": "green",
-              "icon": "P",
-              "iconColor": "sky-500",
-              "description": "每个国家的内容库不同。一些内容包含在Prime会员中,其他内容可以租赁或购买。",
-              "features": [
-                "Prime原创作品",
-                "X-Ray功能",
-                "租赁选项"
-              ]
-            },
-            {
-              "name": "Hulu",
-              "badge": "仅限美国",
-              "badgeColor": "yellow",
-              "icon": "H",
-              "iconColor": "green-500",
-              "description": "美国独家服务,提供次日电视剧集、原创内容和直播电视选项。需要美国支付方式。",
-              "features": [
-                "次日电视",
-                "直播电视选项",
-                "FX内容"
-              ]
-            }
-          ]
-        },
-        "bestVpns": {
-          "title": "最佳流媒体VPN",
-          "intro": "并非所有VPN都能很好地支持流媒体服务。以下是我们持续解锁热门平台的首选:",
-          "vpns": [
-            {
-              "name": "ExpressVPN",
-              "badge": "最佳整体",
-              "rating": "9.8/10",
-              "description": "支持Netflix(15个以上的库)、Disney+、Hulu、BBC iPlayer、Amazon Prime等。快速的速度非常适合4K流媒体。",
-              "supportedServices": [
-                "Netflix美国",
-                "Disney+",
-                "BBC iPlayer",
-                "Hulu"
-              ]
-            },
-            {
-              "name": "NordVPN",
-              "badge": "最佳性价比",
-              "rating": "9.6/10",
-              "description": "出色的流媒体支持,配备SmartPlay技术,自动优化流媒体服务。",
-              "supportedServices": [
-                "Netflix美国",
-                "Disney+",
-                "BBC iPlayer",
-                "Amazon Prime"
-              ]
-            },
-            {
-              "name": "Surfshark",
-              "badge": "预算之选",
-              "rating": "9.2/10",
-              "description": "无限设备连接,价格实惠。可靠地解锁主要流媒体平台。",
-              "supportedServices": [
-                "Netflix美国",
-                "Disney+",
-                "BBC iPlayer",
-                "Amazon Prime"
-              ]
-            }
-          ],
-          "viewFullComparison": "查看完整的VPN比较"
-        },
-        "tips": {
-          "title": "更好的流媒体观看技巧",
-          "items": [
-            {
-              "icon": "Server",
-              "iconColor": "blue",
-              "title": "选择附近的服务器",
-              "description": "连接到物理距离更近的VPN服务器以获得更快的速度。在美国访问英国内容的用户应选择美国东海岸的英国服务器。"
-            },
-            {
-              "icon": "Zap",
-              "iconColor": "green",
-              "title": "使用WireGuard协议",
-              "description": "WireGuard为流媒体提供最佳速度。大多数VPN应用允许您在设置中选择它。"
-            },
-            {
-              "icon": "Monitor",
-              "iconColor": "purple",
-              "title": "清除缓存和Cookie",
-              "description": "如果流媒体服务仍显示错误的内容,请清除浏览器缓存和cookie,然后重新连接。"
-            },
-            {
-              "icon": "Smartphone",
-              "iconColor": "orange",
-              "title": "尝试不同的服务器",
-              "description": "如果一个服务器被封锁,请尝试同一国家的另一个服务器。高级VPN在每个位置都有多个服务器。"
-            },
-            {
-              "icon": "Shield",
-              "iconColor": "red",
-              "title": "使用智能DNS(可选)",
-              "description": "一些VPN为不支持VPN应用的设备(如智能电视)提供智能DNS。更快但安全性较低。"
-            }
-          ]
-        },
-        "faq": {
-          "title": "常见问题",
-          "items": [
-            {
-              "question": "使用VPN观看流媒体合法吗？",
-              "answer": "VPN在大多数国家是合法的。但是，绕过地理限制可能违反流媒体服务的服务条款。通常最坏的情况是账户暂时被封锁。"
-            },
-            {
-              "question": "VPN会降低我的流媒体速度吗？",
-              "answer": "高级VPN通常将速度降低10-20%，这对于4K流媒体来说仍然足够快。选择靠近您的服务器并使用WireGuard等快速协议以获得最佳效果。"
-            },
-            {
-              "question": "为什么Netflix能检测到我的VPN？",
-              "answer": "Netflix封锁已知的VPN IP地址。免费或便宜的VPN很容易被检测到。高级VPN定期轮换其IP以保持领先于封锁。"
-            },
-            {
-              "question": "我可以使用免费VPN观看流媒体吗？",
-              "answer": "免费VPN很少支持流媒体服务。它们的服务器有限，很快被封锁，速度慢，并且有数据上限，使流媒体不切实际。"
-            }
-          ]
-        },
-        "keyTakeaways": {
-          "title": "要点总结",
-          "items": [
-            "VPN通过更改您的IP地址来解锁地理限制内容",
-            "并非所有VPN都能支持流媒体 - 坚持使用经过验证的提供商",
-            "ExpressVPN、NordVPN和Surfshark是流媒体的最佳选择",
-            "连接到您想访问其内容的国家的服务器",
-            "如果一个服务器被封锁,请尝试同一国家的另一个服务器"
-          ]
-        }
-      }
-    },
-    "vpnForTorrenting": {
-      "meta": {
-        "title": "种子下载VPN：下载时保持安全（2026指南）- ZeroToVPN",
-        "description": "学习如何使用VPN进行安全的种子下载。了解支持P2P的VPN、终止开关和泄漏保护，以便安全和匿名地下载。"
-      },
-      "hero": {
-        "badge": "隐私指南",
-        "readTime": "8分钟阅读",
-        "title": "种子下载VPN",
-        "subtitle": "在没有保护的情况下使用种子下载会将您的IP地址暴露给数千个对等节点。了解VPN如何在您下载时保护您的安全，以及在支持P2P的VPN中应该寻找哪些功能。",
-        "updated": "更新于2026年11月",
-        "level": "隐私指南"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 为什么使用VPN进行种子下载？",
-          "2. 不使用VPN下载种子的风险",
-          "3. 必备VPN功能",
-          "4. 最佳种子下载VPN",
-          "5. 如何设置",
-          "6. 法律考虑因素"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "VPN隐私指南",
-            "description": "深入了解无日志政策以及VPN真正的隐私性。",
-            "url": "/guides/vpn-privacy-guide"
-          },
-          {
-            "title": "VPN速度指南",
-            "description": "优化您的VPN以获得更快的下载速度。",
-            "url": "/guides/vpn-speed-guide"
-          }
-        ]
-      },
-      "cta": {
-        "title": "寻找安全的种子下载VPN",
-        "description": "比较支持P2P、具有终止开关和经过验证的无日志政策的VPN，以便在下载时保持安全。",
-        "button": "查找最佳P2P VPN"
-      },
-      "sections": {
-        "disclaimer": {
-          "intro": "免责声明：",
-          "text": "本指南仅用于教育目的。我们不纵容非法下载。许多种子包含合法内容，如开源软件、公共领域媒体和知识共享材料。请始终遵守您所在司法管辖区的版权法。"
-        },
-        "whyVpn": {
-          "title": "为什么使用VPN进行种子下载?",
-          "intro": [
-            "BitTorrent是一种点对点(P2P)协议,您的计算机直接连接到其他用户。这意味着您的IP地址对种子下载群中的每个人都是可见的 - 这可能是数百或数千人。"
-          ],
-          "exposureBox": {
-            "title": "种子下载如何暴露您",
-            "you": "您",
-            "yourIp": "IP: 192.168.x.x",
-            "exposed": "已暴露",
-            "swarm": "种子下载群",
-            "peers": "数百至数千个对等节点"
-          },
-          "whoCanSee": {
-            "title": "谁能看到您的IP?",
-            "items": [
-              {
-                "title": "其他种子下载用户:",
-                "description": "群中的每个对等节点都可以看到您的IP地址。有些会记录这些数据。"
-              },
-              {
-                "title": "版权巨魔:",
-                "description": "公司加入群以收集IP地址并发送法律通知。"
-              },
-              {
-                "title": "您的ISP:",
-                "description": "可以看到您正在使用BitTorrent,并可能限制您的连接或发送警告。"
-              },
-              {
-                "title": "政府机构:",
-                "description": "在某些国家,当局监控种子下载活动。"
-              }
-            ]
-          }
-        },
-        "risks": {
-          "title": "不使用VPN下载种子的风险",
-          "items": [
-            {
-              "title": "法律通知和罚款",
-              "description": "版权持有者可以追踪您的IP并通过您的ISP发送DMCA通知。和解金额可能从数百美元到数千美元不等。",
-              "color": "red"
-            },
-            {
-              "title": "ISP限速",
-              "description": "许多ISP故意降低P2P流量的速度。有些在检测到种子下载活动时会将速度降低50-90%。",
-              "color": "orange"
-            },
-            {
-              "title": "账户终止",
-              "description": "在多次警告后,您的ISP可能会终止您的互联网服务。这因国家和提供商而异。",
-              "color": "yellow"
-            },
-            {
-              "title": "隐私侵犯",
-              "description": "您的IP会揭示您的大致位置和ISP。恶意行为者可能会利用这些信息进行针对性攻击。",
-              "color": "purple"
-            }
-          ]
-        },
-        "features": {
-          "title": "种子下载VPN的必备功能",
-          "items": [
-            {
-              "title": "终止开关",
-              "badge": "关键",
-              "description": "如果VPN连接断开,会自动阻止所有互联网流量。如果没有这个功能,您的真实IP可能会在您注意到之前暴露几秒钟。",
-              "whyItMatters": "为什么重要:",
-              "note": "VPN连接可能会意外断开。终止开关确保零暴露。",
-              "critical": true
-            },
-            {
-              "title": "无日志政策",
-              "badge": "关键",
-              "description": "VPN提供商不存储您的任何活动日志。如果他们没有任何记录,就无法交出任何东西。",
-              "lookFor": "寻找:",
-              "note": "由独立机构(如PwC、Deloitte或Cure53)验证无日志政策的审计。",
-              "critical": true
-            },
-            {
-              "title": "P2P优化服务器",
-              "badge": "重要",
-              "description": "专为种子下载流量配置的专用服务器,具有高带宽和端口转发支持。",
-              "whyItMatters": "为什么重要:",
-              "note": "一些VPN会在某些服务器上阻止或限制P2P。P2P服务器针对速度进行了优化。",
-              "critical": false
-            },
-            {
-              "title": "DNS泄漏保护",
-              "badge": "重要",
-              "description": "确保DNS查询通过VPN隧道,而不是可能记录您访问网站的ISP服务器。",
-              "testIt": "测试方法:",
-              "note": "在连接时使用ipleak.net或dnsleaktest.com验证没有泄漏。",
-              "critical": false
-            },
-            {
-              "title": "快速下载速度",
-              "badge": "锦上添花",
-              "description": "种子下载涉及传输大文件。您需要一个能将速度损失降到最低的VPN(寻找80%以上的速度保持率)。",
-              "tip": "提示:",
-              "note": "使用WireGuard协议以获得最快的种子下载速度。",
-              "critical": false
-            }
-          ]
-        },
-        "bestVpns": {
-          "title": "最佳种子下载VPN",
-          "vpns": [
-            {
-              "name": "NordVPN",
-              "badge": "最佳P2P",
-              "rating": "9.7/10",
-              "description": "在45个以上国家拥有专用P2P服务器。经过审计的无日志政策。双重VPN提供额外安全性。快速的WireGuard速度。",
-              "features": [
-                "终止开关",
-                "无日志",
-                "P2P服务器",
-                "WireGuard"
-              ],
-              "visitLink": "访问NordVPN"
-            },
-            {
-              "name": "ExpressVPN",
-              "badge": "最快",
-              "rating": "9.6/10",
-              "description": "所有服务器上允许P2P。TrustedServer技术(仅RAM)。Lightway协议实现快速下载。经过验证的无日志。",
-              "features": [
-                "终止开关",
-                "无日志",
-                "所有服务器P2P",
-                "仅RAM"
-              ],
-              "visitLink": "访问ExpressVPN"
-            },
-            {
-              "name": "Mullvad",
-              "badge": "最隐私",
-              "rating": "9.2/10",
-              "description": "匿名账号编号(不需要电子邮件)。接受现金或加密货币支付。支持端口转发。开源应用程序。",
-              "features": [
-                "终止开关",
-                "匿名",
-                "端口转发",
-                "WireGuard"
-              ]
-            }
-          ],
-          "viewFullComparison": "查看完整VPN比较"
-        },
-        "setup": {
-          "title": "如何设置VPN进行种子下载",
-          "steps": [
-            {
-              "number": 1,
-              "title": "选择支持P2P的VPN",
-              "description": "确保VPN明确允许种子下载并拥有P2P优化服务器。"
-            },
-            {
-              "number": 2,
-              "title": "安装和配置",
-              "description": "下载VPN应用程序并在设置中启用终止开关。这很关键 - 不要跳过!"
-            },
-            {
-              "number": 3,
-              "title": "连接到P2P服务器",
-              "description": "选择针对P2P流量优化的服务器。选择地理位置接近您的服务器以获得更好的速度。"
-            },
-            {
-              "number": 4,
-              "title": "测试泄漏",
-              "description": "访问ipleak.net验证您的真实IP不可见。同时检查DNS泄漏测试。"
-            },
-            {
-              "number": 5,
-              "title": "配置种子下载客户端",
-              "description": "将您的种子下载客户端绑定到VPN接口。如果VPN断开连接,这会增加另一层保护。"
-            },
-            {
-              "number": 6,
-              "title": "开始下载",
-              "description": "您现在受到保护了!您的真实IP已从种子下载群中隐藏。"
-            }
-          ],
-          "proTip": {
-            "title": "专业提示:绑定您的种子下载客户端",
-            "description": "在qBittorrent中:设置→高级→网络接口→选择您的VPN适配器。在Deluge中:首选项→网络→接口。这确保种子下载仅在VPN连接时工作。"
-          }
-        },
-        "legal": {
-          "title": "法律考虑因素",
-          "question": "种子下载合法吗?",
-          "intro": "种子下载本身是完全合法的 - 它只是一种文件共享技术。重要的是您下载的内容:",
-          "legalTitle": "合法种子下载",
-          "legalItems": [
-            "Linux发行版",
-            "开源软件",
-            "公共域书籍/电影",
-            "知识共享内容",
-            "个人文件共享",
-            "游戏补丁/模组(经授权)"
-          ],
-          "illegalTitle": "非法种子下载",
-          "illegalItems": [
-            "受版权保护的电影/电视节目",
-            "商业软件",
-            "付费音乐专辑",
-            "仍受版权保护的电子书",
-            "盗版游戏",
-            "任何您无权访问的内容"
-          ],
-          "warning": {
-            "title": "VPN不会使非法活动合法化",
-            "description": "VPN保护您的隐私,但不会改变法律。未经许可下载受版权保护的材料是非法的,无论您是否使用VPN。"
-          }
-        },
-        "keyTakeaways": {
-          "title": "要点总结",
-          "items": [
-            "种子下载时始终使用带有终止开关的VPN",
-            "选择具有经过验证的无日志政策和P2P服务器的VPN",
-            "在开始任何下载之前测试IP和DNS泄漏",
-            "将您的种子下载客户端绑定到VPN接口以获得额外保护"
-          ]
-        }
-      }
-    },
-    "vpnForTravel": {
-      "meta": {
-        "title": "旅行VPN：国外保持连接的必备指南（2026）- ZeroToVPN",
-        "description": "了解为什么旅行时需要VPN。访问家乡内容、绕过审查、保护酒店WiFi安全并找到优惠。完整的旅行VPN指南。"
-      },
-      "hero": {
-        "badge": "旅行指南",
-        "readTime": "10分钟阅读",
-        "title": "旅行VPN指南",
-        "subtitle": "出国旅行？VPN与护照一样重要。学习如何访问家乡内容、在酒店WiFi上保持安全、绕过审查，甚至在预订时省钱。",
-        "updated": "更新于2026年11月",
-        "level": "旅行必备"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 为什么旅行时需要VPN",
-          "2. 访问家乡内容",
-          "3. 绕过审查",
-          "4. 旅行安全提示",
-          "5. 使用VPN省钱",
-          "6. 最佳旅行VPN"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "公共WiFi安全",
-            "description": "公共网络的基本安全提示。",
-            "url": "/guides/public-wifi-safety"
-          },
-          {
-            "title": "移动设备VPN",
-            "description": "在智能手机或平板电脑上设置VPN。",
-            "url": "/guides/vpn-on-mobile"
-          }
-        ]
-      },
-      "cta": {
-        "title": "为您的下一次冒险做好准备了吗？",
-        "description": "不要在没有VPN保护的情况下离开家。比较最佳国际旅行VPN，随时随地保持连接。",
-        "button": "查看最佳VPN"
-      },
-      "sections": {
-        "whyNeedVpn": {
-          "title": "为什么旅行时需要VPN",
-          "intro": "在没有VPN的情况下旅行意味着接受不必要的风险和限制。无论您是商务旅行还是度假,VPN对于在国外维护您的数字自由和安全至关重要。",
-          "reasons": [
-            {
-              "title": "访问家乡内容",
-              "description": "从世界任何地方观看您喜爱的节目和体育赛事",
-              "icon": "Tv"
-            },
-            {
-              "title": "保持安全",
-              "description": "在酒店和机场的公共WiFi网络上保护您的数据",
-              "icon": "Shield"
-            },
-            {
-              "title": "绕过审查",
-              "description": "在限制性国家访问被封锁的网站和服务",
-              "icon": "Globe"
-            },
-            {
-              "title": "省钱",
-              "description": "通过比较不同国家的价格找到更好的优惠",
-              "icon": "DollarSign"
-            }
-          ],
-          "proTip": "专业提示:在出发前设置并测试您的VPN。不要等到您已经在国外并面临连接问题或被封锁的服务时才设置。"
-        },
-        "accessHomeContent": {
-          "title": "访问家乡内容",
-          "intro": "旅行最令人沮丧的部分之一是发现您喜爱的流媒体服务、银行应用程序或本地网站由于地理限制而在国外无法使用。",
-          "services": [
-            {
-              "title": "流媒体服务",
-              "description": "Netflix、Hulu、BBC iPlayer和其他流媒体平台通常根据您的位置限制内容。",
-              "solution": "连接到您本国的VPN服务器以访问您平常的内容库。",
-              "icon": "Tv"
-            },
-            {
-              "title": "银行和金融服务",
-              "description": "一些银行作为安全措施会封锁来自外国的访问。",
-              "solution": "使用VPN使其看起来您是从本国访问的。",
-              "icon": "CreditCard"
-            },
-            {
-              "title": "体育和直播活动",
-              "description": "体育直播通常根据转播权进行地理限制。",
-              "solution": "连接到拥有转播权的国家的服务器进行观看。",
-              "icon": "MapPin"
-            }
-          ],
-          "legalNote": {
-            "title": "重要法律说明",
-            "text": "虽然在大多数国家使用VPN是合法的,但访问内容可能违反服务条款。在使用VPN访问地理限制内容之前,请查看您的流媒体服务条款。"
-          }
-        },
-        "bypassCensorship": {
-          "title": "绕过审查和限制",
-          "intro": "许多国家实施严格的互联网审查,封锁社交媒体、新闻网站、消息应用程序和其他在线服务的访问。VPN帮助您保持对开放互联网的访问。",
-          "tableHeaders": {
-            "country": "国家",
-            "blocked": "常见封锁",
-            "status": "VPN状态"
-          },
-          "countries": [
-            {
-              "country": "中国",
-              "blocked": "Facebook、Google、YouTube、WhatsApp",
-              "status": "需要VPN",
-              "statusVariant": "destructive",
-              "icon": "red"
-            },
-            {
-              "country": "阿联酋",
-              "blocked": "VoIP服务(Skype、WhatsApp通话)",
-              "status": "受限",
-              "statusVariant": "secondary",
-              "icon": "orange"
-            },
-            {
-              "country": "俄罗斯",
-              "blocked": "各种社交媒体和新闻网站",
-              "status": "受限",
-              "statusVariant": "secondary",
-              "icon": "blue"
-            },
-            {
-              "country": "伊朗",
-              "blocked": "社交媒体、消息应用",
-              "status": "需要VPN",
-              "statusVariant": "destructive",
-              "icon": "purple"
-            },
-            {
-              "country": "土耳其",
-              "blocked": "维基百科、部分社交媒体",
-              "status": "受限",
-              "statusVariant": "secondary",
-              "icon": "green"
-            }
-          ],
-          "tips": {
-            "title": "在限制性国家使用VPN的技巧",
-            "items": [
-              "在前往有限制的国家之前下载并设置您的VPN",
-              "在您迫切需要之前测试您的VPN连接",
-              "配置多个VPN服务器作为备份",
-              "使用旨在绕过深度包检测的混淆服务器",
-              "检查您的VPN提供商是否在您的目的地国家可用"
-            ]
-          },
-          "legalWarning": {
-            "title": "法律警告",
-            "text": "VPN在某些国家受到限制或非法。在旅行前研究当地法律并负责任地使用VPN。本指南仅供参考。"
-          }
-        },
-        "travelSecurity": {
-          "title": "旅行安全提示",
-          "intro": "公共WiFi网络很方便但很危险。黑客经常在酒店和机场WiFi上针对旅行者窃取个人信息、密码和信用卡详细信息。",
-          "networks": [
-            {
-              "title": "酒店WiFi",
-              "description": "通常不安全且容易被监控。连接到酒店网络时始终使用VPN。",
-              "icon": "Hotel"
-            },
-            {
-              "title": "机场WiFi",
-              "description": "机场的公共网络是黑客的主要目标。连接前启用您的VPN。",
-              "icon": "Plane"
-            },
-            {
-              "title": "咖啡馆和餐厅WiFi",
-              "description": "免费公共WiFi很方便但不安全。使用VPN连接保护您的数据。",
-              "icon": "Car"
-            },
-            {
-              "title": "邮轮WiFi",
-              "description": "昂贵且通常不安全。VPN可以帮助保护您的数据并可能省钱。",
-              "icon": "Ship"
-            }
-          ],
-          "dos": {
-            "title": "安全要做的事",
-            "items": [
-              "连接到公共WiFi之前启用VPN",
-              "在重要账户上使用双因素身份验证",
-              "保持VPN应用程序更新",
-              "使用强大的、独特的密码",
-              "启用自动VPN连接"
-            ]
-          },
-          "donts": {
-            "title": "安全不要做的事",
-            "items": [
-              "在公共WiFi上不使用VPN访问银行",
-              "在不安全的网络上让VPN断开连接",
-              "共享您的VPN凭据",
-              "使用免费VPN服务(它们经常出售您的数据)",
-              "忽略VPN连接失败"
-            ]
-          }
-        },
-        "saveMoney": {
-          "title": "使用VPN省钱",
-          "intro": "许多旅行服务根据您的位置使用动态定价。航空公司、酒店和租车公司经常向来自不同国家的用户显示不同的价格。",
-          "howItWorks": {
-            "title": "基于位置的定价如何运作",
-            "description": "公司根据您的IP地址位置、浏览历史和感知购买力调整价格。同一航班在一个国家可能比另一个国家贵数百美元。",
-            "examples": [
-              {
-                "price": "$450",
-                "location": "来自美国",
-                "color": "red"
-              },
-              {
-                "price": "$380",
-                "location": "来自英国",
-                "color": "orange"
-              },
-              {
-                "price": "$320",
-                "location": "来自印度",
-                "color": "green"
-              }
-            ]
-          },
-          "services": [
-            {
-              "title": "航班预订",
-              "description": "航空公司和预订网站通常根据您的位置显示不同的价格。",
-              "tip": "尝试不同国家的服务器并使用无痕模式比较价格。",
-              "icon": "Plane"
-            },
-            {
-              "title": "酒店预订",
-              "description": "酒店预订网站可能为不同地区提供不同的价格。",
-              "tip": "在预订前检查来自各个国家的价格。",
-              "icon": "Building"
-            },
-            {
-              "title": "租车",
-              "description": "租赁公司有时会有特定地区的定价。",
-              "tip": "比较您的本国与目的地国家的价格。",
-              "icon": "Car"
-            }
-          ],
-          "realityCheck": {
-            "title": "现实检查",
-            "text": "节省不是保证的。价格基于许多因素波动。将VPN位置切换作为寻找最佳优惠的众多策略之一。"
-          }
-        },
-        "bestVpns": {
-          "title": "最佳旅行VPN",
-          "intro": "并非所有VPN都同样适合旅行。您需要可靠的连接、广泛的服务器覆盖范围以及专为旅行者设计的功能。",
-          "vpns": [
-            {
-              "name": "ExpressVPN",
-              "badge": "编辑推荐",
-              "badgeVariant": "default",
-              "description": "最佳整体旅行VPN,在105多个国家拥有服务器和可靠的连接。",
-              "features": [
-                "在中国和限制性国家可用",
-                "24/7客户支持",
-                "快速的流媒体速度",
-                "所有设备的易用应用",
-                "30天退款保证"
-              ],
-              "link": "expressvpn"
-            },
-            {
-              "name": "NordVPN",
-              "badge": "最佳性价比",
-              "badgeVariant": "secondary",
-              "description": "出色的安全功能和混淆服务器的超值选择。",
-              "features": [
-                "混淆服务器用于绕过审查",
-                "双重VPN提供额外安全性",
-                "大型服务器网络",
-                "实惠的长期套餐",
-                "30天退款保证"
-              ],
-              "link": "nordvpn"
-            },
-            {
-              "name": "Surfshark",
-              "badge": "预算之选",
-              "badgeVariant": "secondary",
-              "description": "预算友好的选择,无限设备连接。",
-              "features": [
-                "无限同时连接",
-                "NoBorders模式用于限制性国家",
-                "CleanWeb广告拦截器",
-                "非常实惠的价格",
-                "30天退款保证"
-              ],
-              "link": "surfshark"
-            }
-          ],
-          "featureChecklist": {
-            "title": "旅行VPN功能检查清单",
-            "features": [
-              "在您的本国和旅行目的地的服务器位置",
-              "iOS和Android的移动应用",
-              "24/7客户支持",
-              "终止开关以在VPN断开连接时保护",
-              "用于绕过审查的混淆技术",
-              "隐私的无日志政策",
-              "多设备支持"
-            ]
-          }
-        },
-        "preTravel": {
-          "title": "旅行前VPN检查清单",
-          "beforeDeparture": {
-            "title": "出发前",
-            "items": [
-              "订阅可靠的VPN服务",
-              "在所有设备上下载并安装VPN应用",
-              "在家测试VPN连接",
-              "保存您目的地的VPN服务器列表",
-              "研究您目的地的互联网限制",
-              "启用自动连接功能",
-              "下载离线地图和内容"
-            ]
-          },
-          "uponArrival": {
-            "title": "抵达时",
-            "items": [
-              "在访问WiFi之前连接到VPN",
-              "测试您的VPN在该国家是否可用",
-              "配置自动连接",
-              "检查您的IP地址是否被掩盖",
-              "测试对被封锁服务的访问",
-              "保存本地紧急联系信息",
-              "随身携带VPN客户支持详细信息"
-            ]
-          }
-        }
-      }
-    },
-    "vpnOnMobile": {
-      "meta": {
-        "title": "移动设备VPN：iOS和Android完整设置指南（2026）- ZeroToVPN",
-        "description": "学习如何在iPhone或Android设备上设置和使用VPN。分步指南、最佳实践和移动VPN安全提示。"
-      },
-      "hero": {
-        "badge": "移动指南",
-        "readTime": "9分钟阅读",
-        "title": "移动设备VPN",
-        "subtitle": "您的智能手机随处可见——您的VPN保护也应该如此。学习如何在iOS和Android上设置和优化VPN，以实现最大的安全性和便利性。",
-        "updated": "更新于2026年11月",
-        "level": "移动设置指南"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 为什么在移动设备上使用VPN？",
-          "2. iPhone/iPad VPN设置",
-          "3. Android VPN设置",
-          "4. 最佳移动VPN设置",
-          "5. 电池和性能提示",
-          "6. 最佳移动VPN"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "公共WiFi安全",
-            "description": "在公共网络上保持安全。",
-            "url": "/guides/public-wifi-safety"
-          },
-          {
-            "title": "旅行VPN",
-            "description": "旅行者必备的VPN指南。",
-            "url": "/guides/vpn-for-travel"
-          }
-        ]
-      },
-      "cta": {
-        "title": "准备好保护您的移动设备了吗？",
-        "description": "比较最适合移动设备的VPN，为您的智能手机或平板电脑找到完美的保护。",
-        "button": "查看最佳VPN"
-      },
-      "sections": {
-        "whyMobileVpn": {
-          "title": "为什么在移动设备上使用VPN?",
-          "intro": "您的智能手机始终连接 - 无论您是在咖啡店使用WiFi、使用移动数据,还是连接到家庭网络。这种持续的连接为隐私泄露和安全威胁创造了多个机会。",
-          "benefits": [
-            {
-              "title": "公共WiFi保护",
-              "description": "在不安全的公共网络上加密您的连接,以防止中间人攻击和数据窥探。",
-              "icon": "Wifi"
-            },
-            {
-              "title": "访问地理封锁内容",
-              "description": "在国外旅行时流式传输您喜爱的节目并访问地区锁定的应用。",
-              "icon": "Globe"
-            },
-            {
-              "title": "隐藏您的位置",
-              "description": "防止应用和网站追踪您的真实IP地址和位置以进行定向广告。",
-              "icon": "Shield"
-            },
-            {
-              "title": "安全银行和购物",
-              "description": "在移动中访问敏感金融应用时添加额外的加密层。",
-              "icon": "Lock"
-            }
-          ],
-          "didYouKnow": "移动设备经常自动在网络之间切换,使它们更容易受到攻击。具有自动连接功能的VPN可确保您始终受到保护。"
-        },
-        "iosSetup": {
-          "title": "在iPhone/iPad上设置VPN",
-          "intro": "iOS使VPN设置变得简单。以下是如何在您的Apple设备上开始使用VPN:",
-          "steps": [
-            {
-              "number": 1,
-              "title": "从App Store下载",
-              "description": "在App Store中搜索您的VPN提供商并下载其官方应用。避免第三方或非官方应用。"
-            },
-            {
-              "number": 2,
-              "title": "登录或创建账户",
-              "description": "打开应用并使用您现有的账户登录,或者如果需要创建新订阅。"
-            },
-            {
-              "number": 3,
-              "title": "允许VPN配置",
-              "description": "出现提示时,点击「允许」以让应用添加VPN配置。您需要使用Face ID或Touch ID进行身份验证。"
-            },
-            {
-              "number": 4,
-              "title": "连接到服务器",
-              "description": "选择服务器位置并点击连接。连接时,您将在状态栏中看到VPN图标。"
-            }
-          ],
-          "iosSettings": {
-            "title": "iOS特定设置",
-            "settings": [
-              "启用「按需连接」以自动保护",
-              "使用IKEv2或WireGuard以获得最佳iOS集成",
-              "允许连接状态警报的通知"
-            ]
-          }
-        },
-        "androidSetup": {
-          "title": "在Android上设置VPN",
-          "intro": "Android为VPN配置提供了更多灵活性。以下是设置过程:",
-          "steps": [
-            {
-              "number": 1,
-              "title": "从Google Play下载",
-              "description": "从Google Play商店获取您的VPN应用。检查开发者名称以确保这是官方应用。"
-            },
-            {
-              "number": 2,
-              "title": "授予权限",
-              "description": "出现提示时接受VPN连接请求。Android会显示有关网络监控的警告 - 这是正常的。"
-            },
-            {
-              "number": 3,
-              "title": "配置始终开启VPN",
-              "description": "转到设置→网络→VPN→您的VPN应用→切换「始终开启VPN」以持续保护。"
-            },
-            {
-              "number": 4,
-              "title": "启用终止开关",
-              "description": "在Android设置中查找「没有VPN时阻止连接」或应用的终止开关功能。"
-            }
-          ],
-          "androidFeatures": {
-            "title": "Android特定功能",
-            "features": [
-              "分离隧道以从VPN中排除特定应用",
-              "每个应用的VPN设置(Android 7.0+)",
-              "小部件支持快速连接/断开连接"
-            ]
-          }
-        },
-        "bestSettings": {
-          "title": "最佳移动VPN设置",
-          "intro": "配置这些设置以在移动设备上获得安全性、速度和电池寿命的最佳平衡:",
-          "settings": [
-            {
-              "setting": "协议",
-              "recommended": "WireGuard",
-              "why": "最适合移动设备 - 快速、轻量级、节能"
-            },
-            {
-              "setting": "自动连接",
-              "recommended": "已启用",
-              "why": "加入不受信任的网络时自动连接"
-            },
-            {
-              "setting": "终止开关",
-              "recommended": "已启用",
-              "why": "如果VPN连接断开则防止数据泄漏"
-            },
-            {
-              "setting": "分离隧道",
-              "recommended": "根据需要",
-              "why": "排除可能封锁VPN连接的银行应用"
-            },
-            {
-              "setting": "DNS",
-              "recommended": "VPN的DNS",
-              "why": "防止DNS泄漏并确保隐私"
-            }
-          ],
-          "iosWarning": {
-            "title": "iOS用户重要提示",
-            "text": "iOS可能偶尔会绕过Apple服务的VPN。检查您的VPN应用以获取包含所有流量的选项或使用防火墙应用。"
-          }
-        },
-        "batteryTips": {
-          "title": "电池和性能提示",
-          "intro": "一个常见的担忧是VPN对电池寿命的影响。以下是如何在保持保护的同时最小化电池消耗:",
-          "doThis": {
-            "title": "这样做",
-            "items": [
-              "使用WireGuard协议(最高效)",
-              "连接到附近的服务器",
-              "仅在WiFi时启用自动连接",
-              "明智地使用分离隧道",
-              "保持应用更新"
-            ]
-          },
-          "avoidThis": {
-            "title": "避免这样做",
-            "items": [
-              "不断切换服务器",
-              "除非需要否则使用双重VPN",
-              "连接到远距离服务器",
-              "运行多个安全应用",
-              "使用PPTP等较旧协议"
-            ]
-          },
-          "protocolImpact": {
-            "title": "按协议划分的电池影响",
-            "protocols": [
-              {
-                "name": "WireGuard",
-                "impact": "低影响",
-                "percentage": 20
-              },
-              {
-                "name": "IKEv2",
-                "impact": "低影响",
-                "percentage": 25
-              },
-              {
-                "name": "OpenVPN",
-                "impact": "中等影响",
-                "percentage": 50
-              }
-            ]
-          }
-        },
-        "bestVpns": {
-          "title": "最佳移动VPN",
-          "intro": "并非所有VPN在移动设备上的表现都一样。以下是我们根据应用质量、电池效率和移动特定功能的首选:",
-          "vpns": [
-            {
-              "name": "ExpressVPN",
-              "badge": "编辑推荐",
-              "description": "最佳整体移动体验",
-              "features": [
-                "为移动设备优化的Lightway协议",
-                "出色的iOS和Android应用",
-                "Network Lock终止开关"
-              ]
-            },
-            {
-              "name": "NordVPN",
-              "badge": "首选",
-              "description": "最适合注重安全的用户",
-              "features": [
-                "NordLynx(基于WireGuard)提供速度",
-                "移动设备上的威胁保护",
-                "包含暗网监控"
-              ]
-            },
-            {
-              "name": "Surfshark",
-              "badge": "最佳性价比",
-              "description": "无限设备的最佳性价比",
-              "features": [
-                "无限同时连接",
-                "内置CleanWeb广告拦截器",
-                "Android上的GPS欺骗"
-              ]
-            }
-          ],
-          "proTip": "在前往互联网受限的国家旅行前下载您的VPN应用。某些应用商店在某些地区可能不提供VPN应用。"
-        },
-        "quickTips": {
-          "title": "移动VPN快速提示",
-          "tips": [
-            {
-              "title": "使用生物识别锁",
-              "description": "启用Face ID/指纹以防止未经授权的VPN访问",
-              "icon": "Key"
-            },
-            {
-              "title": "保持应用更新",
-              "description": "更新通常包含安全补丁和性能修复",
-              "icon": "RefreshCw"
-            },
-            {
-              "title": "收藏您的服务器",
-              "description": "保存常用服务器以快速一键连接",
-              "icon": "MapPin"
-            },
-            {
-              "title": "使用小部件",
-              "description": "将VPN小部件添加到主屏幕以快速访问",
-              "icon": "ToggleLeft"
-            }
-          ]
-        }
-      }
-    },
-    "vpnPrivacyGuide": {
-      "meta": {
-        "title": "VPN隐私指南：无日志政策和管辖权解释（2026）- ZeroToVPN",
-        "description": "了解什么使VPN真正私密。学习无日志政策、管辖权、独立审计以及如何评估VPN隐私声明。"
-      },
-      "hero": {
-        "badge": "隐私指南",
-        "readTime": "10分钟阅读",
-        "title": "VPN隐私指南",
-        "subtitle": "并非所有VPN在隐私方面都是平等的。了解「无日志」的真正含义，为什么管辖权很重要，以及如何判断VPN是否真正保护您的隐私。",
-        "updated": "更新于2026年11月",
-        "level": "隐私深度解析"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 什么是VPN隐私？",
-          "2. 无日志政策解释",
-          "3. 为什么管辖权很重要",
-          "4. 独立审计",
-          "5. 隐私危险信号",
-          "6. 隐私检查清单"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "种子下载VPN",
-            "description": "将隐私知识应用于安全的P2P下载。",
-            "url": "/guides/vpn-for-torrenting"
-          },
-          {
-            "title": "VPN如何工作？",
-            "description": "了解VPN保护的技术细节。",
-            "url": "/guides/how-vpn-works"
-          }
-        ]
-      },
-      "cta": {
-        "title": "找到真正私密的VPN",
-        "description": "根据隐私功能、无日志政策和独立审计比较VPN。",
-        "button": "比较私密VPN"
-      },
-      "sections": {
-        "whatIsPrivacy": {
-          "title": "什么是VPN隐私?",
-          "intro1": "VPN隐私是指VPN服务如何保护您的身份、浏览活动和个人数据不被追踪、记录或暴露给第三方,包括您的ISP、政府机构和VPN提供商本身。",
-          "intro2": "基本的隐私悖论:您必须信任您的VPN提供商处理您的互联网流量。如果没有适当的隐私保护,您只是将监视从您的ISP转移到VPN公司。",
-          "trustShiftTitle": "信任转移悖论",
-          "trustShiftIntro": "使用VPN会转移谁可以看到您的互联网活动,但不会完全消除信任要求。",
-          "withoutVpn": {
-            "title": "不使用VPN",
-            "description": "您的ISP可以看到您访问的每个网站,记录您的活动,将您的数据出售给广告商,并且在法律上必须遵守政府监视请求。"
-          },
-          "withVpn": {
-            "title": "使用VPN",
-            "description": "您的ISP只能看到加密的VPN流量。VPN提供商会看到您的活动。隐私完全取决于VPN提供商的日志政策、管辖权和完整性。"
-          },
-          "keyElementsTitle": "关键隐私要素",
-          "keyElements": [
-            {
-              "title": "无日志政策:",
-              "description": "VPN不记录您的浏览活动、连接时间、IP地址或带宽使用情况。"
-            },
-            {
-              "title": "隐私友好的管辖权:",
-              "description": "公司在具有强大隐私法和没有强制数据保留要求的国家运营。"
-            },
-            {
-              "title": "独立审计:",
-              "description": "第三方安全公司已验证VPN的无日志声明和基础设施安全性。"
-            },
-            {
-              "title": "透明的所有权:",
-              "description": "公司清楚地披露谁拥有和运营该服务、他们的总部在哪里以及他们的隐私记录。"
-            }
-          ]
-        },
-        "noLogs": {
-          "title": "了解无日志政策",
-          "intro": "无日志政策意味着VPN提供商不记录可以识别您或您的在线活动的信息。然而,并非所有「无日志」政策都是平等的。一些VPN声称是「无日志」,同时仍在收集大量元数据。",
-          "loggingTypesTitle": "日志政策类型",
-          "loggingTypes": [
-            {
-              "type": "完全记录",
-              "badge": "避免",
-              "badgeColor": "destructive",
-              "description": "记录浏览历史、连接时间戳、IP地址、带宽使用和会话信息。",
-              "warning": "⚠️ 完全违背了使用VPN的隐私目的。"
-            },
-            {
-              "type": "元数据记录",
-              "badge": "谨慎使用",
-              "badgeColor": "orange",
-              "description": "不记录浏览活动,但记录连接时间、会话持续时间和带宽。在营销中通常声称是「无日志」。",
-              "warning": "⚠️ 元数据仍可用于识别用户和追踪模式。"
-            },
-            {
-              "type": "最小记录",
-              "badge": "可接受",
-              "badgeColor": "secondary",
-              "description": "仅记录服务运营所需的最小数据:总带宽使用(不是每个会话)和用于账户管理的电子邮件。",
-              "warning": "✓ 隐私和服务功能之间的合理折衷。"
-            },
-            {
-              "type": "严格无日志",
-              "badge": "最佳",
-              "badgeColor": "green",
-              "description": "不记录IP地址、浏览活动、连接时间戳、会话数据、每个会话的带宽或DNS查询。经过独立审计验证。",
-              "warning": "✓ 最大隐私保护。寻找独立审计验证。"
-            }
-          ],
-          "verificationTitle": "如何验证无日志声明",
-          "verificationItems": [
-            {
-              "title": "阅读隐私政策:",
-              "description": "查找关于什么不被记录的具体声明,而不仅仅是营销声明。"
-            },
-            {
-              "title": "检查独立审计:",
-              "description": "信誉良好的VPN聘请第三方安全公司(PwC、Deloitte、Cure53)来验证他们的声明。"
-            },
-            {
-              "title": "研究真实世界测试:",
-              "description": "寻找VPN被传唤但无法提供日志的案例,因为它们不存在。"
-            },
-            {
-              "title": "检查透明度报告:",
-              "description": "一些VPN发布透明度报告,显示他们收到的政府数据请求及其回应。"
-            }
-          ]
-        },
-        "jurisdiction": {
-          "title": "VPN管辖权很重要",
-          "intro": "管辖权是您的VPN提供商在法律上所在的地方。这决定了他们必须遵守哪些法律,包括强制数据保留要求和政府监视义务。位于错误国家的VPN可能被迫记录您的数据,无论他们的隐私政策如何。",
-          "eyesAlliancesTitle": "「眼睛」联盟",
-          "eyesAlliancesIntro": "国家之间的情报共享联盟。成员相互共享监视数据,即使您的数据不是在您自己的国家收集的,也可能损害VPN隐私。",
-          "eyesAlliances": [
-            {
-              "type": "五眼",
-              "countries": "美国、英国、加拿大、澳大利亚、新西兰",
-              "warning": "⚠️ 最高的监视合作。这里的VPN面临最大压力。",
-              "color": "red"
-            },
-            {
-              "type": "九眼",
-              "countries": "五眼 + 丹麦、法国、荷兰、挪威",
-              "warning": "",
-              "color": "orange"
-            },
-            {
-              "type": "十四眼",
-              "countries": "九眼 + 德国、比利时、意大利、西班牙、瑞典",
-              "warning": "",
-              "color": "yellow"
-            }
-          ],
-          "privacyFriendlyTitle": "隐私友好的管辖权",
-          "bestChoices": [
-            "🇨🇭 瑞士 - 强大的隐私法,中立",
-            "🇵🇦 巴拿马 - 没有数据保留法",
-            "🇻🇬 英属维尔京群岛 - 不受英国管辖",
-            "🇷🇴 罗马尼亚 - 没有强制数据保留",
-            "🇸🇪 瑞典 - GDPR保护,尽管是十四眼成员"
-          ],
-          "vpnLocationsTitle": "顶级VPN所在地",
-          "vpnLocations": [
-            "ExpressVPN - 英属维尔京群岛",
-            "NordVPN - 巴拿马",
-            "Surfshark - 荷兰",
-            "ProtonVPN - 瑞士",
-            "Mullvad - 瑞典"
-          ],
-          "importantNoteTitle": "重要说明",
-          "importantNote": "仅管辖权并不能保证隐私。位于隐私友好国家的VPN如果选择仍然可以记录您的数据。寻找良好管辖权 + 严格无日志政策 + 独立审计的组合。"
-        },
-        "audits": {
-          "title": "独立安全审计",
-          "intro": "独立审计是第三方安全评估,验证VPN的隐私声明。PwC、Deloitte、Cure53和KPMG等信誉良好的公司检查VPN的基础设施、代码和日志实践,以确认它们与营销声明相符。",
-          "whatAuditsCheckTitle": "审计检查内容",
-          "auditChecks": [
-            {
-              "title": "基础设施安全",
-              "description": "服务器配置、加密实施和网络架构,以确保它们不会泄漏数据。"
-            },
-            {
-              "title": "无日志验证",
-              "description": "检查服务器日志、数据库系统和后端基础设施,以确认没有存储可识别数据。"
-            },
-            {
-              "title": "代码审查",
-              "description": "分析VPN应用和服务器软件以识别潜在的隐私漏洞或数据泄漏。"
-            },
-            {
-              "title": "DNS泄漏测试",
-              "description": "测试IP泄漏、DNS泄漏和WebRTC泄漏,这些可能会在连接时暴露您的真实身份。"
-            }
-          ],
-          "auditedVpnsTitle": "经过独立审计的VPN",
-          "auditedVpns": [
-            {
-              "name": "NordVPN",
-              "audits": "由PwC审计(2018、2020、2023)",
-              "badge": "已验证"
-            },
-            {
-              "name": "ExpressVPN",
-              "audits": "由PwC审计(2019、2022)、Cure53(2023)",
-              "badge": "已验证"
-            },
-            {
-              "name": "Surfshark",
-              "audits": "由Cure53审计(2021、2023)",
-              "badge": "已验证"
-            },
-            {
-              "name": "ProtonVPN",
-              "audits": "由SEC Consult审计(2020、2022)",
-              "badge": "已验证"
-            }
-          ]
-        },
-        "redFlags": {
-          "title": "要避免的隐私危险信号",
-          "flags": [
-            {
-              "title": "免费VPN",
-              "description": "「如果您不为产品付费,那您就是产品。」免费VPN通常会记录并向广告商出售您的数据、注入广告或包含恶意软件。商业模式需要货币化您的数据。",
-              "severity": "critical"
-            },
-            {
-              "title": "模糊的隐私政策",
-              "description": "营销说「无日志」,但隐私政策包含诸如「最小记录」、「匿名数据收集」或「汇总统计」等术语,而没有明确定义收集的内容。",
-              "severity": "critical"
-            },
-            {
-              "title": "没有独立审计",
-              "description": "声称无日志但从未经过独立审计。为什么要信任他们?合法的VPN主动寻求第三方验证。",
-              "severity": "critical"
-            },
-            {
-              "title": "未知所有权",
-              "description": "VPN没有清楚地披露谁拥有或运营它。一些VPN秘密由数据挖掘公司拥有或位于监视严重的管辖区,尽管营销声明。",
-              "severity": "warning"
-            },
-            {
-              "title": "矛盾的条款",
-              "description": "隐私政策与营销声明相矛盾。例如:主页说「零日志」,但隐私政策提到「连接时间戳」或「带宽监控」。",
-              "severity": "warning"
-            }
-          ]
-        },
-        "checklist": {
-          "title": "VPN隐私评估检查清单",
-          "intro": "在评估VPN隐私声明时使用此检查清单。您可以勾选的框越多,隐私保护就越好。",
-          "items": [
-            {
-              "title": "明确声明严格的无日志政策",
-              "description": "不记录IP、时间戳、浏览历史、DNS查询。"
-            },
-            {
-              "title": "隐私友好的管辖权",
-              "description": "在5/9/14眼监视联盟之外,拥有强大的隐私法律。"
-            },
-            {
-              "title": "独立审计",
-              "description": "由知名公司(PwC、Deloitte、Cure53等)最近进行的审计并公布结果。"
-            },
-            {
-              "title": "透明的所有权",
-              "description": "清楚地披露公司所有权、领导层和实际地址。"
-            },
-            {
-              "title": "透明的隐私政策",
-              "description": "清晰、详细的隐私政策,没有模糊条款或矛盾。"
-            },
-            {
-              "title": "经过验证的记录",
-              "description": "无日志的真实证据(例如,被传唤时无法提供数据)。"
-            },
-            {
-              "title": "匿名支付选项",
-              "description": "接受加密货币或现金支付以实现真正的匿名性。"
-            },
-            {
-              "title": "高级隐私功能",
-              "description": "纯RAM服务器、完美前向保密、无盘基础设施。"
-            }
-          ]
-        },
-        "keyTakeaways": {
-          "title": "要点总结",
-          "items": [
-            "并非所有「无日志」声明都是平等的。仔细阅读隐私政策并寻找独立验证。",
-            "管辖权非常重要。总部设在监视严重国家的VPN面临记录数据的法律压力。",
-            "独立安全审计是验证隐私声明的黄金标准。寻找知名公司的最近审计。",
-            "免费VPN是隐私噩梦。它们必须以某种方式盈利,通常是通过记录和出售您的数据。",
-            "最佳隐私来自结合:严格的无日志政策 + 隐私友好的管辖权 + 独立审计 + 透明的所有权。"
-          ]
-        }
-      }
-    },
-    "vpnProtocolsExplained": {
-      "meta": {
-        "title": "VPN协议解释：WireGuard vs OpenVPN vs IKEv2（2026）- ZeroToVPN",
-        "description": "了解VPN协议之间的差异。比较WireGuard、OpenVPN、IKEv2等，选择最适合您需求的协议。"
-      },
-      "hero": {
-        "badge": "技术指南",
-        "readTime": "12分钟阅读",
-        "title": "VPN协议解释",
-        "subtitle": "WireGuard、OpenVPN、IKEv2——这些术语是什么意思，您应该使用哪个？本指南用通俗易懂的语言分解了VPN协议，帮助您做出正确的选择。",
-        "updated": "更新于2026年11月",
-        "level": "技术指南"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 什么是VPN协议？",
-          "2. WireGuard",
-          "3. OpenVPN",
-          "4. IKEv2/IPSec",
-          "5. 其他协议",
-          "6. 协议比较"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "VPN如何工作？",
-            "description": "了解VPN技术背后的技术细节。",
-            "url": "/guides/how-vpn-works"
-          },
-          {
-            "title": "VPN速度指南",
-            "description": "了解如何优化VPN以获得最大速度。",
-            "url": "/guides/vpn-speed-guide"
-          }
-        ]
-      },
-      "cta": {
-        "title": "找到支持您首选协议的VPN",
-        "description": "根据协议支持、速度和安全功能比较VPN。",
-        "button": "比较VPN"
-      },
-      "sections": {
-        "whatIsProtocol": {
-          "title": "什么是VPN协议?",
-          "intro": "VPN协议是一套规则,决定了您的数据如何在设备和VPN服务器之间加密、传输和验证。可以把它想象成VPN所说的「语言」。",
-          "determines": {
-            "title": "协议决定什么",
-            "items": [
-              {
-                "title": "加密方法",
-                "description": "如何对您的数据进行加密以防止拦截"
-              },
-              {
-                "title": "身份验证",
-                "description": "如何与VPN服务器验证您的身份"
-              },
-              {
-                "title": "速度和效率",
-                "description": "数据通过VPN隧道的速度"
-              },
-              {
-                "title": "安全级别",
-                "description": "连接对攻击的抵抗力"
-              }
-            ]
-          }
-        },
-        "wireguard": {
-          "title": "WireGuard",
-          "badge": "推荐",
-          "released": "发布于2018年",
-          "intro": "WireGuard是最新的主要VPN协议,已迅速成为速度和现代加密的黄金标准。自2020年起内置于Linux内核。",
-          "stats": [
-            {
-              "value": "约4K",
-              "label": "代码行数"
-            },
-            {
-              "value": "5%",
-              "label": "速度损失"
-            },
-            {
-              "value": "<1ms",
-              "label": "握手"
-            },
-            {
-              "value": "ChaCha20",
-              "label": "加密"
-            }
-          ],
-          "advantages": {
-            "title": "优势",
-            "items": [
-              "可用的最快协议",
-              "现代、经过审计的加密",
-              "简单、最小的代码(更容易审计)",
-              "移动设备优秀(无缝漫游)",
-              "内置于Linux内核"
-            ]
-          },
-          "disadvantages": {
-            "title": "劣势",
-            "items": [
-              "较新(经过实战测试较少)",
-              "默认静态IP(隐私问题)",
-              "并非所有VPN都支持",
-              "仅UDP(可能被封锁)"
-            ]
-          },
-          "bestFor": {
-            "title": "最适合",
-            "description": "通用用途、流媒体、游戏、移动用户、任何想要最快速度和现代安全性的人。"
-          }
-        },
-        "openvpn": {
-          "title": "OpenVPN",
-          "badge": "行业标准",
-          "released": "发布于2001年",
-          "intro": "OpenVPN已经成为行业标准超过20年。它是开源的、高度可配置的,并且几乎可以在每个平台和网络上工作。",
-          "stats": [
-            {
-              "value": "约400K",
-              "label": "代码行数"
-            },
-            {
-              "value": "20%",
-              "label": "速度损失"
-            },
-            {
-              "value": "AES-256",
-              "label": "加密"
-            },
-            {
-              "value": "TCP/UDP",
-              "label": "传输"
-            }
-          ],
-          "advantages": {
-            "title": "优势",
-            "items": [
-              "经过20多年的实战测试",
-              "高度可配置",
-              "可在任何端口上工作(难以封锁)",
-              "TCP模式适用于不稳定的网络",
-              "几乎可在任何设备上运行"
-            ]
-          },
-          "disadvantages": {
-            "title": "劣势",
-            "items": [
-              "比WireGuard慢",
-              "复杂的代码库",
-              "移动设备电池消耗更高",
-              "大多数设备需要第三方应用"
-            ]
-          },
-          "tcpVsUdp": {
-            "title": "OpenVPN TCP vs UDP",
-            "udp": {
-              "title": "UDP(推荐)",
-              "description": "更快,更适合流媒体和一般使用。大多数VPN的默认选择。"
-            },
-            "tcp": {
-              "title": "TCP",
-              "description": "在不稳定的网络上更可靠。更好地绕过防火墙(端口443)。"
-            }
-          },
-          "bestFor": {
-            "title": "最适合",
-            "description": "需要最大兼容性、绕过严格防火墙或在限制性网络(学校、工作场所、有审查的国家)中工作的用户。"
-          }
-        },
-        "ikev2": {
-          "title": "IKEv2/IPSec",
-          "badge": "移动优化",
-          "released": "发布于2005年",
-          "intro": "IKEv2(互联网密钥交换版本2)与IPSec结合,非常适合移动设备。它内置于大多数操作系统,并在切换网络时快速重新连接。",
-          "stats": [
-            {
-              "value": "快速",
-              "label": "重新连接"
-            },
-            {
-              "value": "10%",
-              "label": "速度损失"
-            },
-            {
-              "value": "AES-256",
-              "label": "加密"
-            },
-            {
-              "value": "原生",
-              "label": "操作系统支持"
-            }
-          ],
-          "advantages": {
-            "title": "优势",
-            "items": [
-              "移动设备优秀(MOBIKE支持)",
-              "网络变化后快速重新连接",
-              "内置于iOS、macOS、Windows",
-              "速度和安全性的良好平衡",
-              "低电池消耗"
-            ]
-          },
-          "disadvantages": {
-            "title": "劣势",
-            "items": [
-              "非开源(Microsoft/Cisco)",
-              "UDP端口500可能被封锁",
-              "配置选项有限",
-              "潜在的NSA问题(传闻)"
-            ]
-          },
-          "bestFor": {
-            "title": "最适合",
-            "description": "经常在WiFi和蜂窝网络之间切换的移动用户,iPhone/iPad用户(原生支持),Windows用户。"
-          }
-        },
-        "others": {
-          "title": "其他协议",
-          "protocols": [
-            {
-              "name": "L2TP/IPSec",
-              "badge": "过时",
-              "description": "结合L2TP隧道和IPSec加密的较旧协议。仍然广泛支持但速度较慢,可能被NSA破坏。",
-              "verdict": "如果有更好的选择请避免。"
-            },
-            {
-              "name": "PPTP",
-              "badge": "不安全",
-              "description": "最古老的VPN协议(1999年)。快速但有已知的安全漏洞。NSA可以实时破解。",
-              "verdict": "绝不用于安全。仅用于绕过简单的地理封锁。"
-            },
-            {
-              "name": "SSTP",
-              "badge": "仅Windows",
-              "description": "Microsoft的专有协议,在端口443上使用SSL/TLS。非常有效地绕过防火墙,但仅限Windows。",
-              "verdict": "适合在限制性网络中使用Windows,但是闭源。"
-            },
-            {
-              "name": "专有协议",
-              "badge": "各不相同",
-              "description": "一些VPN提供商创建自己的协议:Lightway(ExpressVPN)、NordLynx(NordVPN的WireGuard实现)、Chameleon(VyprVPN)。",
-              "verdict": "通常是现有协议的优化版本。使用信誉良好的提供商通常是安全的。"
-            }
-          ]
-        },
-        "comparison": {
-          "title": "协议比较图表",
-          "table": {
-            "headers": [
-              "协议",
-              "速度",
-              "安全性",
-              "稳定性",
-              "移动"
-            ],
-            "rows": [
-              {
-                "protocol": "WireGuard",
-                "speed": "优秀",
-                "security": "优秀",
-                "stability": "优秀",
-                "mobile": "优秀"
-              },
-              {
-                "protocol": "OpenVPN UDP",
-                "speed": "良好",
-                "security": "优秀",
-                "stability": "良好",
-                "mobile": "良好"
-              },
-              {
-                "protocol": "OpenVPN TCP",
-                "speed": "中等",
-                "security": "优秀",
-                "stability": "优秀",
-                "mobile": "良好"
-              },
-              {
-                "protocol": "IKEv2/IPSec",
-                "speed": "优秀",
-                "security": "良好",
-                "stability": "优秀",
-                "mobile": "优秀"
-              },
-              {
-                "protocol": "PPTP",
-                "speed": "优秀",
-                "security": "差",
-                "stability": "良好",
-                "mobile": "良好"
-              }
-            ]
-          },
-          "recommendations": {
-            "title": "快速推荐",
-            "items": [
-              {
-                "title": "最佳综合",
-                "description": "WireGuard - 最快且最安全"
-              },
-              {
-                "title": "最佳兼容性",
-                "description": "OpenVPN - 可在任何地方工作"
-              },
-              {
-                "title": "最适合移动",
-                "description": "IKEv2或WireGuard"
-              },
-              {
-                "title": "绕过防火墙",
-                "description": "OpenVPN TCP(端口443)"
-              }
-            ]
-          }
-        },
-        "summary": {
-          "title": "关键要点",
-          "items": [
-            "WireGuard是大多数用户的最佳选择(快速、安全、现代)",
-            "当您需要最大兼容性时,OpenVPN是备选方案",
-            "IKEv2在移动设备上表现出色,具有快速重新连接功能",
-            "避免PPTP - 虽然快速但完全不安全"
-          ]
-        }
-      }
-    },
-    "vpnSpeedGuide": {
-      "meta": {
-        "title": "VPN速度指南：如何获得最快的VPN连接（2026）- ZeroToVPN",
-        "description": "了解影响VPN速度的因素以及如何优化您的连接。获取最大化VPN性能的提示，用于流媒体、游戏和下载。"
-      },
-      "hero": {
-        "badge": "性能指南",
-        "readTime": "6分钟阅读",
-        "title": "VPN速度指南",
-        "subtitle": "您的VPN拖慢了您的互联网速度吗？了解影响VPN速度的因素，发现经过验证的技巧，优化您的连接以用于流媒体、游戏和日常浏览。",
-        "updated": "更新于2026年11月",
-        "level": "实用指南"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 了解VPN速度",
-          "2. 影响速度的因素",
-          "3. 预期速度损失",
-          "4. 速度优化提示",
-          "5. 最快的VPN协议",
-          "6. 如何测试VPN速度"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "VPN如何工作？",
-            "description": "了解VPN技术背后的技术细节。",
-            "url": "/guides/how-vpn-works"
-          },
-          {
-            "title": "流媒体VPN",
-            "description": "了解如何使用VPN观看Netflix、Disney+等。",
-            "url": "/guides/vpn-for-streaming"
-          }
-        ]
-      },
-      "cta": {
-        "title": "找到最快的VPN",
-        "description": "比较VPN速度，找到最适合您需求的最快提供商。我们测试所有VPN的真实性能。",
-        "button": "比较VPN速度"
-      },
-      "sections": {
-        "understandingVpnSpeed": {
-          "intro": "VPN速度指的是数据通过加密VPN连接传输的速度。由于VPN在您的互联网连接中增加了额外步骤(加密和通过服务器路由),一些速度降低是正常的。",
-          "keyMetrics": {
-            "title": "关键速度指标",
-            "download": {
-              "title": "下载速度",
-              "description": "您接收数据的速度(流媒体、浏览、下载)"
-            },
-            "upload": {
-              "title": "上传速度",
-              "description": "您发送数据的速度(视频通话、文件上传)"
-            },
-            "ping": {
-              "title": "Ping/延迟",
-              "description": "以毫秒为单位的响应时间(对游戏至关重要)"
-            }
-          },
-          "speedRequirements": {
-            "title": "速度要求",
-            "items": [
-              "高清流媒体:5-10 Mbps",
-              "4K流媒体:25+ Mbps",
-              "在线游戏:3-6 Mbps(低ping更重要)",
-              "视频通话:1.5-4 Mbps"
-            ]
-          }
-        },
-        "factorsThatAffectSpeed": {
-          "serverDistance": {
-            "title": "服务器距离",
-            "impact": "高影响",
-            "description": "VPN服务器越远,数据传输所需时间就越长。从纽约连接到东京服务器会增加200+毫秒的延迟。",
-            "tip": "除非您需要特定国家,否则请始终选择距离您实际位置最近的服务器。"
-          },
-          "serverLoad": {
-            "title": "服务器负载",
-            "impact": "中等影响",
-            "description": "过载的服务器会拖慢所有人的速度。主要城市的热门服务器在高峰时段通常负载较高。",
-            "tip": "许多VPN应用显示服务器负载百分比。选择负载低于70%的服务器。"
-          },
-          "vpnProtocol": {
-            "title": "VPN协议",
-            "impact": "中等影响",
-            "description": "不同的协议具有不同的速度特性。WireGuard最快,OpenVPN最兼容但较慢。",
-            "tip": "切换到WireGuard以获得最佳速度。大多数现代VPN应用都支持它。"
-          },
-          "encryptionLevel": {
-            "title": "加密级别",
-            "impact": "低影响",
-            "description": "更高的加密更安全但需要更多处理。AES-256是标准,在现代设备上对速度的影响很小。",
-            "tip": "保持AES-256加密。安全优势远超过最小的速度成本。"
-          },
-          "baseInternetSpeed": {
-            "title": "您的基础互联网速度",
-            "impact": "高影响",
-            "description": "VPN无法使您的互联网速度超过基础连接。如果您有50 Mbps,您的VPN速度上限是50 Mbps(减去VPN开销)。",
-            "tip": "在不使用VPN的情况下先测试您的基础速度,以设定现实预期。"
-          }
-        },
-        "expectedSpeedLoss": {
-          "intro": "所有VPN都会在某种程度上降低您的速度。以下是您可以从高级VPN提供商那里实际期望的:",
-          "typicalRetention": {
-            "title": "典型速度保留",
-            "nearbySameCountry": {
-              "label": "附近服务器(同一国家)",
-              "percentage": "85-95%"
-            },
-            "regionalNearbyCountry": {
-              "label": "区域服务器(邻近国家)",
-              "percentage": "75-85%"
-            },
-            "sameContinent": {
-              "label": "同一大陆",
-              "percentage": "60-75%"
-            },
-            "crossContinental": {
-              "label": "跨大陆",
-              "percentage": "40-60%"
-            }
-          },
-          "premiumVpns": {
-            "title": "高级VPN",
-            "items": [
-              "10-25%的速度损失是典型的",
-              "优化的服务器基础设施",
-              "支持WireGuard",
-              "定期服务器升级"
-            ]
-          },
-          "freeVpns": {
-            "title": "免费VPN",
-            "items": [
-              "50-80%的速度损失很常见",
-              "拥挤的服务器",
-              "有限的服务器位置",
-              "带宽限制"
-            ]
-          }
-        },
-        "speedOptimizationTips": {
-          "tips": [
-            {
-              "number": 1,
-              "title": "选择最近的服务器",
-              "description": "距离是最大的速度杀手。如果您只需要隐私而不需要特定位置,请连接到最近的服务器。"
-            },
-            {
-              "number": 2,
-              "title": "使用WireGuard协议",
-              "description": "在大多数测试中,WireGuard比OpenVPN快3-4倍。检查您的VPN应用设置并在可用时切换。"
-            },
-            {
-              "number": 3,
-              "title": "避开高峰时段",
-              "description": "服务器负载在晚间时段(当地时间晚上7-11点)最高。尝试在非高峰时段连接以获得更好的速度。"
-            },
-            {
-              "number": 4,
-              "title": "使用有线连接",
-              "description": "以太网比WiFi更稳定、更快。如果速度至关重要,请直接插入路由器。"
-            },
-            {
-              "number": 5,
-              "title": "尝试分离隧道",
-              "description": "仅通过VPN路由敏感流量。让流媒体和游戏使用常规连接以获得最大速度。"
-            },
-            {
-              "number": 6,
-              "title": "重启您的连接",
-              "description": "有时重新连接会将您分配到负载较低的服务器。如果速度不佳,请尝试断开连接并重新连接。"
-            }
-          ]
-        },
-        "fastestVpnProtocols": {
-          "wireGuard": {
-            "title": "WireGuard",
-            "badge": "最快",
-            "speedLoss": "~5%",
-            "linesOfCode": "4,000",
-            "latency": "优秀",
-            "compatibility": "良好"
-          },
-          "ikev2": {
-            "title": "IKEv2/IPSec",
-            "badge": "非常快",
-            "speedLoss": "~10%",
-            "linesOfCode": "~15,000",
-            "latency": "优秀",
-            "compatibility": "优秀"
-          },
-          "openVpn": {
-            "title": "OpenVPN",
-            "badge": "最兼容",
-            "speedLoss": "~20%",
-            "linesOfCode": "~400,000",
-            "latency": "良好",
-            "compatibility": "优秀"
-          },
-          "recommendation": {
-            "title": "协议建议",
-            "description": "使用WireGuard以获得最佳速度和现代安全性。在移动设备上回退到IKEv2,如果需要最大兼容性则使用OpenVPN。"
-          }
-        },
-        "howToTestVpnSpeed": {
-          "testingProcess": {
-            "title": "速度测试过程",
-            "steps": [
-              {
-                "number": 1,
-                "title": "首先在不使用VPN的情况下测试",
-                "description": "访问speedtest.net或fast.com,在断开VPN的情况下运行测试。记录您的下载、上传和ping。"
-              },
-              {
-                "number": 2,
-                "title": "连接到VPN",
-                "description": "连接到您首选的服务器,等待几秒钟让连接稳定。"
-              },
-              {
-                "number": 3,
-                "title": "再次运行速度测试",
-                "description": "使用相同的速度测试网站。比较结果以计算您的速度保留百分比。"
-              },
-              {
-                "number": 4,
-                "title": "测试多个服务器",
-                "description": "尝试不同的服务器和协议,找到最适合您需求的最快组合。"
-              }
-            ]
-          },
-          "popularTools": {
-            "title": "流行的速度测试工具",
-            "tools": [
-              {
-                "name": "Speedtest.net",
-                "description": "最准确"
-              },
-              {
-                "name": "Fast.com",
-                "description": "Netflix支持"
-              },
-              {
-                "name": "Cloudflare速度测试",
-                "description": "详细指标"
-              }
-            ]
-          }
-        },
-        "keyTakeaways": {
-          "title": "关键要点",
-          "items": [
-            "高级VPN通常保留75-95%的原始速度",
-            "服务器距离和负载是最大的速度因素",
-            "WireGuard协议提供最佳速度性能",
-            "在使用VPN前后始终测试速度以了解实际影响"
-          ]
-        }
-      }
-    },
-    "publicWifiSafety": {
-      "meta": {
-        "title": "公共WiFi安全：如何在开放网络上保持安全（2026）- ZeroToVPN",
-        "description": "了解公共WiFi风险以及如何保护自己。发现在咖啡馆、机场、酒店和其他公共场所使用WiFi的基本安全提示。"
+        "title": "AI代理安全与隐私指南2026 - ZeroToAIAgents",
+        "description": "了解AI代理安全、隐私问题、最佳实践以及使用AI代理时如何保护您的数据。"
       },
       "hero": {
         "badge": "安全指南",
         "readTime": "8分钟阅读",
-        "title": "公共WiFi安全指南",
-        "subtitle": "免费WiFi很方便，但也伴随着严重的风险。了解黑客如何利用公共网络，以及在咖啡店、机场、酒店等场所保护您数据的基本步骤。",
-        "updated": "更新于2026年11月",
-        "level": "安全必备"
-      },
-      "toc": {
-        "title": "本指南内容：",
-        "items": [
-          "1. 公共WiFi风险解释",
-          "2. 常见WiFi攻击类型",
-          "3. 基本保护提示",
-          "4. VPN如何保护您",
-          "5. 按位置分类的安全",
-          "6. 快速安全检查清单"
-        ]
-      },
-      "relatedGuides": {
-        "title": "继续学习",
-        "guides": [
-          {
-            "title": "旅行VPN",
-            "description": "国际旅行者必备的VPN指南。",
-            "url": "/guides/vpn-for-travel"
-          },
-          {
-            "title": "移动设备VPN",
-            "description": "在智能手机上设置VPN保护。",
-            "url": "/guides/vpn-on-mobile"
-          }
-        ]
-      },
-      "cta": {
-        "title": "在任何WiFi网络上保持安全",
-        "description": "不要在公共网络上冒您的个人数据风险。获取VPN，在全球任何地方都能自信地浏览。",
-        "button": "查看最佳VPN"
-      },
-      "sections": {
-        "wifiRisks": {
-          "title": "为什么公共WiFi危险",
-          "intro": [
-            "您最喜欢的咖啡店的免费WiFi看起来很方便,但它带来了严重的安全风险。公共WiFi网络设计为易于访问,这意味着它们通常缺乏适当的加密和安全措施。",
-            "当您连接到公共WiFi时,您的数据在空中传输时未加密。这使得网络犯罪分子很容易拦截敏感信息,如密码、信用卡号和个人消息。"
-          ],
-          "scaryTruth": {
-            "title": "可怕的真相",
-            "description": "根据网络安全专家的说法,43%的公共WiFi用户的数据已被泄露。如果您不采取预防措施,您可能是下一个。"
-          },
-          "risks": [
-            {
-              "title": "无加密",
-              "description": "大多数公共WiFi网络不加密您的数据,使任何具有基本黑客工具的人都可以轻松看到您在线做什么。"
-            },
-            {
-              "title": "共享网络",
-              "description": "同一WiFi网络上的每个人都可能看到彼此未加密的流量。这就像在拥挤的房间里大声说出您的密码。"
-            },
-            {
-              "title": "恶意热点",
-              "description": "黑客经常设置看起来合法的虚假WiFi网络。一旦您连接,他们就可以监控您所做的一切。"
-            }
-          ]
-        },
-        "attackTypes": {
-          "title": "公共WiFi上的常见攻击",
-          "intro": "了解黑客如何利用公共WiFi可以帮助您识别和避免这些威胁。以下是最常见的攻击方法:",
-          "attacks": [
-            {
-              "title": "中间人(MITM)攻击",
-              "description": "黑客将自己定位在您和连接点之间。您的数据不是直接与WiFi热点通信,而是首先通过攻击者,攻击者可以读取、修改或窃取它。",
-              "protection": "始终使用VPN对您的连接进行端到端加密。"
-            },
-            {
-              "title": "邪恶双胞胎攻击",
-              "description": "网络犯罪分子创建名称与合法热点相似的虚假WiFi热点(例如,'星巴克免费WiFi')。当您连接时,他们控制整个网络并可以监控您的所有活动。",
-              "protection": "在连接之前向工作人员确认官方网络名称。"
-            },
-            {
-              "title": "数据包嗅探",
-              "description": "使用易于获得的软件,黑客可以捕获通过WiFi网络传输的数据包。这包括用户名、密码和任何未加密的信息。",
-              "protection": "仅访问HTTPS网站,并对所有连接使用VPN。"
-            },
-            {
-              "title": "会话劫持",
-              "description": "攻击者窃取您的会话cookie以在网站上冒充您。这可以让他们访问您的帐户而无需您的密码。",
-              "protection": "完成后注销帐户并启用双因素身份验证。"
-            }
-          ]
-        },
-        "protectionTips": {
-          "title": "基本保护提示",
-          "intro": "虽然公共WiFi总是存在一些风险,但遵循这些最佳实践可以显著降低您对攻击的脆弱性:",
-          "doThis": {
-            "title": "这样做",
-            "items": [
-              "在每个公共WiFi连接上使用VPN",
-              "在所有帐户上启用双因素身份验证",
-              "仅访问HTTPS网站(查找挂锁图标)",
-              "关闭文件共享和AirDrop",
-              "离开后忘记网络"
-            ]
-          },
-          "neverDoThis": {
-            "title": "永远不要这样做",
-            "items": [
-              "在没有VPN的情况下访问在线银行",
-              "在线购物或输入信用卡信息",
-              "登录工作帐户或敏感应用",
-              "启用自动WiFi连接",
-              "将公共WiFi用于机密工作"
-            ]
-          },
-          "deviceSettings": {
-            "title": "要启用的设备设置",
-            "items": [
-              "防火墙保护(内置于大多数操作系统)",
-              "禁用自动连接到未知网络的WiFi",
-              "关闭网络发现和文件共享",
-              "在浏览器设置中启用「始终使用HTTPS」"
-            ]
-          }
-        },
-        "vpnProtection": {
-          "title": "为什么VPN对公共WiFi至关重要",
-          "intro": "VPN(虚拟专用网络)是您抵御公共WiFi威胁的最佳防御。它在您的设备和互联网之间创建了一个加密隧道,使任何试图拦截它的人都无法读取您的数据。",
-          "benefits": [
-            {
-              "title": "军用级加密",
-              "description": "VPN使用AES-256加密,与银行和政府使用的级别相同。即使有人拦截了您的数据,他们也无法读取它。"
-            },
-            {
-              "title": "隐藏您的活动",
-              "description": "您的互联网服务提供商、WiFi所有者和潜在的黑客无法看到您访问的网站或发送的数据。"
-            },
-            {
-              "title": "保护所有设备",
-              "description": "一个VPN订阅通常涵盖您的所有设备 - 手机、平板电脑和笔记本电脑 - 无论您在哪里连接都能保护您。"
-            }
-          ],
-          "comparison": {
-            "title": "公共WiFi:有VPN与无VPN",
-            "withoutVpn": {
-              "label": "无VPN:",
-              "description": "您的数据对网络上的任何人都可见。黑客可以看到密码、电子邮件、消息和浏览历史。"
-            },
-            "withVpn": {
-              "label": "有VPN:",
-              "description": "您的所有数据都被加密。即使黑客拦截了您的连接,他们也只能看到乱码。"
-            }
-          },
-          "proTip": "在加入任何公共WiFi网络之前,请始终连接到您的VPN。将其设置为自动连接,这样您就不会忘记。"
-        },
-        "locationGuide": {
-          "title": "按位置分类的安全指南",
-          "intro": "不同的公共场所有不同的风险级别。以下是您需要了解的常见位置:",
-          "locations": [
-            {
-              "name": "咖啡店和咖啡馆",
-              "riskLevel": "高风险",
-              "description": "由于长时间停留和宽松的安全性,成为黑客的热门目标。许多人在这里工作,使其成为数据盗窃的主要场所。",
-              "tips": "始终使用VPN。向工作人员确认网络名称。避免金融交易。"
-            },
-            {
-              "name": "机场",
-              "riskLevel": "高风险",
-              "description": "人流量极高,许多商务旅行者处理敏感数据。这里经常出现虚假热点。",
-              "tips": "尽可能使用您的移动热点。如果使用机场WiFi,VPN是强制性的。"
-            },
-            {
-              "name": "酒店",
-              "riskLevel": "中等风险",
-              "description": "酒店网络通常比咖啡馆更安全,但它们仍然是许多客人的共享网络。",
-              "tips": "使用受密码保护的网络。启用VPN。小心房间里的智能电视应用。"
-            },
-            {
-              "name": "公共图书馆",
-              "riskLevel": "中等风险",
-              "description": "由于更好的IT管理,通常比咖啡馆更安全,但仍然是公共网络。",
-              "tips": "建议使用VPN。避免敏感任务。注意肩窥者。"
-            }
-          ]
-        },
-        "checklist": {
-          "title": "快速安全检查清单",
-          "intro": "每次连接到公共WiFi时使用此检查清单以确保您受到保护:",
-          "beforeConnecting": {
-            "title": "连接前",
-            "items": [
-              "启用您的VPN",
-              "关闭文件共享和AirDrop",
-              "向工作人员确认官方网络名称",
-              "检查防火墙是否已启用"
-            ]
-          },
-          "whileConnected": {
-            "title": "连接时",
-            "items": [
-              "始终保持VPN运行",
-              "仅访问HTTPS网站",
-              "如果可能,不要访问银行或金融帐户",
-              "注意您的周围环境(肩窥者)",
-              "完成后注销帐户"
-            ]
-          },
-          "beforeLeaving": {
-            "title": "离开前",
-            "items": [
-              "从网络断开连接",
-              "在您的设置中忘记网络",
-              "再次需要之前禁用WiFi"
-            ]
-          }
-        },
-        "summary": {
-          "title": "底线",
-          "content": "公共WiFi虽然方便,但如果没有适当的保护,它是危险的。您可以采取的最重要的一步是每次连接到任何公共网络时使用可靠的VPN。这是一项小投资,可以保护您的密码、财务数据和个人隐私免受网络犯罪分子的侵害。",
-          "costBenefit": "VPN每月花费不到一杯咖啡的钱,但可以保护价值数千美元的数据"
-        }
+        "title": "AI代理安全与隐私",
+        "subtitle": "在生产环境中部署AI代理之前,了解安全影响至关重要。本指南涵盖风险、最佳实践以及如何选择安全的AI代理平台。",
+        "updated": "更新于2026年2月",
+        "level": "中级水平"
       }
-    }
-  },
-  "vpnTable": {
-    "headers": {
-      "rank": "#",
-      "vpn": "VPN",
-      "rating": "评分",
-      "speed": "速度",
-      "security": "安全性",
-      "servers": "服务器",
-      "netflix": "Netflix",
-      "price": "价格",
-      "action": "操作"
     },
-    "editorChoice": "编辑推荐",
-    "countries": "国家",
-    "devices": "设备",
-    "unlimited": "无限制",
-    "perMonth": "/月",
-    "visit": "访问"
-  },
-  "vpnCard": {
-    "editorChoice": "编辑推荐",
-    "from": "起价",
-    "perMonth": "/月",
-    "servers": "服务器",
-    "countries": "国家",
-    "devices": "设备",
-    "speed": "速度",
-    "security": "安全性",
-    "netflix": "Netflix",
-    "torrenting": "种子下载",
-    "noLogs": "无日志",
-    "freeTier": "免费套餐",
-    "getVpn": "获取{name}",
-    "review": "评测",
-    "hasCoupon": "优惠券"
-  },
-  "vpnReview": {
-    "backToReviews": "返回评测",
-    "editorChoice": "编辑推荐",
-    "freeTierAvailable": "提供免费套餐",
-    "reviewTitle": "{name} 2026年评测",
-    "basedOnTesting": "基于我们的综合测试",
-    "getVpnPrice": "获取{name} - ${price}/月",
-    "quickStats": {
-      "title": "快速统计",
-      "servers": "服务器",
-      "countries": "国家",
-      "devices": "设备",
-      "moneyBack": "退款保证",
-      "days": "{count}天",
-      "startingAt": "起价",
-      "perMonth": "/月",
-      "unlimited": "无限制"
+    "choosingAiAgent": {
+      "meta": {
+        "title": "如何选择合适的AI代理 - 2026年完整指南",
+        "description": "选择最适合您特定需求的AI代理平台的综合指南。比较功能、定价和使用场景。"
+      },
+      "hero": {
+        "badge": "购买指南",
+        "readTime": "9分钟阅读",
+        "title": "如何选择合适的AI代理",
+        "subtitle": "有数百个AI代理平台可供选择,选择合适的可能会让人不知所措。本指南逐步引导您完成决策过程。",
+        "updated": "更新于2026年2月",
+        "level": "所有级别"
+      }
     },
-    "scores": {
-      "speed": "速度",
-      "security": "安全性",
-      "streaming": "流媒体"
+    "aiAgentsForBusiness": {
+      "meta": {
+        "title": "企业AI代理 - 2026年完整指南",
+        "description": "企业如何利用AI代理提高效率、降低成本和扩展运营。"
+      },
+      "hero": {
+        "badge": "商业指南",
+        "readTime": "11分钟阅读",
+        "title": "企业AI代理",
+        "subtitle": "发现企业如何使用AI代理来自动化工作流、改善客户服务并推动增长。",
+        "updated": "更新于2026年2月",
+        "level": "商业领袖"
+      }
     },
-    "prosAndCons": {
-      "pros": "优点",
-      "cons": "缺点"
+    "aiAgentPricing": {
+      "meta": {
+        "title": "了解AI代理定价 - 2026年完整指南",
+        "description": "导航AI代理定价模型,了解成本并计算您组织的投资回报率。"
+      },
+      "hero": {
+        "badge": "定价指南",
+        "readTime": "7分钟阅读",
+        "title": "了解AI代理定价",
+        "subtitle": "AI代理定价差异很大。了解定价模型、隐藏成本以及如何计算投资回报率。",
+        "updated": "更新于2026年2月",
+        "level": "所有级别"
+      }
     },
-    "tabs": {
-      "overview": "概述",
-      "pricing": "价格",
-      "security": "安全性",
-      "streaming": "流媒体"
+    "aiAgentIntegrations": {
+      "meta": {
+        "title": "AI代理集成指南2026",
+        "description": "您需要了解的关于将AI代理连接到现有工具和系统的一切。"
+      },
+      "hero": {
+        "badge": "集成指南",
+        "readTime": "9分钟阅读",
+        "title": "AI代理集成指南",
+        "subtitle": "了解如何将AI代理连接到您的CRM、数据库、通信工具等。",
+        "updated": "更新于2026年2月",
+        "level": "技术"
+      }
     },
-    "overview": {
-      "about": "关于{name}",
-      "description": "{name}是市场上领先的VPN提供商之一，在{countries}个国家提供{servers}台服务器。支持最多{devices}个设备同时连接，适合个人和家庭使用。",
-      "keyFeatures": "主要功能",
-      "serverNetwork": "服务器网络：",
-      "serversInCountries": "{countries}个国家的{servers}台服务器",
-      "protocols": "协议：",
-      "encryption": "加密：",
-      "killSwitch": "终止开关：",
-      "noLogsPolicy": "无日志政策：",
-      "yes": "是",
-      "no": "否",
-      "yesAudited": "是（已审计）",
-      "limited": "有限"
-    },
-    "pricing": {
-      "title": "{name}价格方案",
-      "monthly": "月付",
-      "yearly": "年付",
-      "twoYears": "2年",
-      "mostPopular": "最受欢迎",
-      "bestValue": "最佳性价比",
-      "moneyBackGuarantee": "所有套餐均提供{days}天退款保证"
-    },
-    "securityFeatures": {
-      "title": "安全与隐私功能",
-      "noLogsPolicy": "无日志政策",
-      "killSwitch": "终止开关",
-      "encryption": "{type}加密",
-      "supportedProtocols": "支持的协议"
-    },
-    "streamingSection": {
-      "title": "流媒体兼容性",
-      "netflix": "Netflix",
-      "disneyPlus": "Disney+",
-      "amazonPrime": "Amazon Prime",
-      "bbcIplayer": "BBC iPlayer",
-      "p2pSupported": "支持P2P/种子下载",
-      "torrentDescription": "{name}允许在专用服务器上进行种子下载，并提供优化的速度。"
-    },
-    "verdict": {
-      "title": "我们的评价",
-      "description": "在我们的综合测试中，{name}获得了{rating}/5分。凭借{countries}个国家的{servers}台服务器，它提供了出色的覆盖范围和可靠的性能。",
-      "editorChoiceNote": " 它以出色的速度、安全性和性价比组合赢得了我们的编辑推荐奖。",
-      "getVpnNow": "立即获取{name} - ${price}/月"
-    },
-    "userReviews": {
-      "title": "用户评测"
-    },
-    "coupons": {
-      "title": "{name}有效优惠券和折扣",
-      "subtitle": "使用这些验证过的折扣码省钱"
+    "buildingAiWorkflows": {
+      "meta": {
+        "title": "构建AI代理工作流 - 2026年完整指南",
+        "description": "设计和构建有效的AI代理自动化工作流的分步指南。"
+      },
+      "hero": {
+        "badge": "工作流指南",
+        "readTime": "10分钟阅读",
+        "title": "构建AI代理工作流",
+        "subtitle": "掌握设计真正有效的AI代理工作流的艺术。从简单的自动化到复杂的多代理系统。",
+        "updated": "更新于2026年2月",
+        "level": "中级"
+      }
     }
   },
   "guidesIndex": {
     "meta": {
-      "title": "VPN指南和教程 - ZeroToVPN",
-      "description": "通过我们全面的指南学习关于VPN的一切。从基础到高级主题，成为VPN专家就在ZeroToVPN。"
+      "title": "AI代理指南与教程 - ZeroToAIAgents",
+      "description": "综合指南,帮助您理解、选择和实施适合您业务的AI代理。"
     },
     "hero": {
-      "title": "VPN指南和教程",
-      "subtitle": "从初学者基础到高级主题 - 学习关于VPN和在线隐私您需要知道的一切。"
+      "title": "AI代理指南",
+      "subtitle": "您需要了解的关于AI代理的一切"
     },
     "categories": {
-      "all": "全部",
-      "basics": "基础",
-      "useCases": "使用场景",
-      "security": "安全",
-      "technical": "技术",
-      "performance": "性能",
-      "setup": "设置",
-      "privacy": "隐私"
+      "gettingStarted": "入门",
+      "technical": "技术指南",
+      "business": "商业指南",
+      "security": "安全与隐私"
     },
-    "sections": {
-      "startHere": {
-        "title": "从这里开始",
-        "subtitle": "VPN初学者必备指南"
-      },
-      "allGuides": {
-        "title": "所有指南",
-        "subtitle": "浏览我们完整的VPN指南集合"
-      },
-      "topics": {
-        "title": "我们涵盖的主题",
-        "subtitle": "成为VPN专家所需的一切"
-      },
-      "cta": {
-        "title": "准备开始了吗？",
-        "subtitle": "阅读我们的初学者指南以了解VPN基础，然后比较最佳VPN服务以找到您的完美匹配。"
-      }
-    },
-    "guides": {
-      "whatIsVpn": {
-        "title": "什么是VPN？",
-        "description": "学习虚拟专用网络的基础知识、工作原理以及为什么您可能需要一个。",
-        "readTime": "8分钟阅读"
-      },
-      "howVpnWorks": {
-        "title": "VPN如何工作？",
-        "description": "了解VPN加密、隧道协议和数据保护背后的技术细节。",
-        "readTime": "10分钟阅读"
-      },
-      "vpnForStreaming": {
-        "title": "最佳流媒体VPN",
-        "description": "了解如何使用VPN从任何地方访问Netflix、Disney+、BBC iPlayer等。",
-        "readTime": "7分钟阅读"
-      },
-      "vpnSpeedGuide": {
-        "title": "VPN速度指南",
-        "description": "了解影响VPN速度的因素以及如何优化连接以获得最佳性能。",
-        "readTime": "6分钟阅读"
-      },
-      "vpnProtocolsExplained": {
-        "title": "VPN协议解释",
-        "description": "WireGuard、OpenVPN、IKEv2 - 了解VPN协议之间的差异以及如何选择。",
-        "readTime": "12分钟阅读"
-      },
-      "vpnForTorrenting": {
-        "title": "种子下载VPN",
-        "description": "使用支持P2P的VPN在下载时保持安全。了解kill switches和泄漏保护。",
-        "readTime": "8分钟阅读"
-      },
-      "vpnOnMobile": {
-        "title": "移动设备上的VPN",
-        "description": "如何在您的iPhone或Android设备上设置和使用VPN以实现移动隐私。",
-        "readTime": "5分钟阅读"
-      },
-      "vpnForTravel": {
-        "title": "旅行VPN",
-        "description": "在国外旅行时使用VPN、访问本地内容以及在公共WiFi上保持安全的重要提示。",
-        "readTime": "7分钟阅读"
-      },
-      "publicWifiSafety": {
-        "title": "公共WiFi安全",
-        "description": "为什么公共WiFi危险以及VPN如何在咖啡馆、机场和酒店保护您。",
-        "readTime": "6分钟阅读"
-      },
-      "vpnPrivacyGuide": {
-        "title": "VPN隐私指南",
-        "description": "了解无日志政策、管辖权以及使VPN真正私密的因素。",
-        "readTime": "10分钟阅读"
-      }
-    },
-    "topicCards": {
-      "basics": {
-        "title": "VPN基础",
-        "description": "了解VPN是什么、如何工作以及为什么重要"
-      },
-      "securityPrivacy": {
-        "title": "安全和隐私",
-        "description": "深入分析加密、协议和保持匿名"
-      },
-      "streaming": {
-        "title": "流媒体和内容",
-        "description": "解锁Netflix，访问全球内容，安全流媒体"
-      },
-      "setup": {
-        "title": "设置和操作指南",
-        "description": "适用于所有设备和平台的分步指南"
-      }
-    },
-    "buttons": {
-      "startLearning": "开始学习",
-      "compareVpns": "比较VPN",
-      "readGuide": "阅读指南"
-    }
-  },
-  "freeVpn": {
-    "meta": {
-      "title": "最佳免费VPN 2026年11月：测试的前4名（含真实数据限制）- ZeroToVPN",
-      "description": "正在寻找真正免费的VPN？我们测试了20多个免费VPN。ProtonVPN提供无限数据，Windscribe提供10GB/月。了解哪些免费VPN是安全的。"
-    },
-    "hero": {
-      "badge": "2026年11月更新",
-      "title": "最佳免费VPN服务2026",
-      "subtitle": "我们测试了20多个免费VPN，以找到具有最佳数据限制的最安全选项。这是真正有效的（和无效的）。"
-    },
-    "comparison": {
-      "title": "快速比较",
-      "vpn": "VPN",
-      "dataLimit": "数据限制",
-      "servers": "服务器",
-      "devices": "设备",
-      "streaming": "流媒体",
-      "unlimited": "无限",
-      "countries": "国家",
-      "locations": "位置",
-      "month": "月"
-    },
-    "reviews": {
-      "title": "顶级免费VPN排名",
-      "subtitle": "我们对2026年最佳免费VPN服务的详细分析",
-      "dataLimit": "数据限制",
-      "servers": "服务器",
-      "devices": "设备",
-      "logs": "日志",
-      "adBlocker": "广告拦截器",
-      "audited": "已审计",
-      "unlimited": "无限",
-      "noLogs": "无日志",
-      "included": "包含",
-      "yes": "是",
-      "countries": "国家",
-      "locations": "位置",
-      "month": "月",
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取",
-      "protonvpn": {
-        "badge": "最佳免费VPN",
-        "unlimitedData": "无限数据",
-        "description": "ProtonVPN是唯一真正提供无限数据的免费VPN。总部位于瑞士，提供经过独立审计的无日志政策、开源应用程序，甚至可以解锁美国Netflix。",
-        "pros": [
-          "无限数据（免费VPN中独一无二）",
-          "经独立审计的无日志政策",
-          "瑞士基地提供强大隐私保护",
-          "开源应用程序确保透明度",
-          "可解锁美国Netflix",
-          "无广告或速度限制"
-        ],
-        "cons": [
-          "免费版限制1台设备",
-          "仅5个服务器位置可用",
-          "速度比付费版慢",
-          "免费服务器不支持P2P/种子下载"
-        ]
-      },
-      "windscribe": {
-        "description": "Windscribe提供慷慨的10GB/月（可扩展至15GB），非常适合中等浏览。它包括10个国家位置、无限设备连接和名为R.O.B.E.R.T.的内置广告拦截器。",
-        "pros": [
-          "10GB/月（可扩展至15GB）",
-          "无限设备连接",
-          "内置广告和恶意软件拦截器",
-          "可解锁BBC iPlayer、Hulu、HBO Max",
-          "多跳连接可用",
-          "10个国家包括英国、加拿大、法国"
-        ],
-        "cons": [
-          "限制为每月10GB数据",
-          "仅3天退款保证",
-          "总部位于加拿大（5眼联盟）",
-          "免费版速度较慢"
-        ]
-      },
-      "hideme": {
-        "description": "Hide.me提供10GB/月，严格的无日志政策。总部位于马来西亚（在5/9/14眼联盟之外），提供5个服务器位置的良好安全性。",
-        "pros": [
-          "每月10GB数据",
-          "严格的无日志政策",
-          "总部位于马来西亚",
-          "多种协议选项",
-          "独立安全审计"
-        ],
-        "cons": [
-          "仅限1台设备",
-          "仅5个服务器位置",
-          "无流媒体优化",
-          "速度可能不一致"
-        ]
-      },
-      "tunnelbear": {
-        "description": "TunnelBear凭借其友好的熊主题界面非常适合VPN初学者。虽然只提供2GB/月，但提供49个国家的访问和无限设备连接。",
-        "pros": [
-          "非常适合初学者的界面",
-          "49个国家可用",
-          "无限设备连接",
-          "每年独立审计",
-          "无日志政策"
-        ],
-        "cons": [
-          "仅2GB/月（非常有限）",
-          "无退款保证",
-          "不适用于Netflix",
-          "不支持P2P/种子下载",
-          "由McAfee拥有"
-        ]
-      }
-    },
-    "warning": {
-      "title": "警告：免费VPN风险",
-      "intro": "虽然上述免费VPN值得信赖，但大多数免费VPN都很危险。可疑免费VPN的做法：",
-      "risks": [
-        "向广告商出售您的浏览数据",
-        "在浏览器中注入广告",
-        "包含恶意软件或间谍软件",
-        "存在严重的安全漏洞",
-        "将速度限制到无法使用的水平",
-        "尽管声称不会，但仍记录活动"
-      ]
-    },
-    "upgrade": {
-      "badge": "更好的价值",
-      "title": "为什么付费VPN值得",
-      "subtitle": "每月仅需$1.99-2.99，您就能获得无限数据、更快速度、更好安全性和可靠的流媒体。",
-      "month": "月",
-      "getButton": "获取",
-      "viewAll": "查看所有VPN",
-      "nordvpn": {
-        "features": [
-          "无限数据和带宽",
-          "118个国家的7,400多台服务器",
-          "10个同时连接",
-          "适用于所有流媒体服务",
-          "30天退款保证"
-        ]
-      },
-      "surfshark": {
-        "features": [
-          "无限数据和设备",
-          "100个国家的4,500多台服务器",
-          "最佳价值$1.99/月",
-          "广告拦截器和恶意软件保护",
-          "30天退款保证"
-        ]
-      }
-    }
-  },
-  "blog": {
-    "hero": {
-      "badge": "最新文章",
-      "title": "VPN 博客",
-      "subtitle": "了解最新的VPN新闻、安全提示和深入指南，保护您的在线隐私。"
-    },
-    "categories": {
-      "all": "所有文章",
-      "deals": "优惠",
-      "security": "安全",
-      "tips": "技巧",
-      "news": "新闻"
-    },
-    "featured": {
-      "title": "特色文章"
-    },
-    "recent": {
-      "title": "最新文章"
-    },
-    "readMore": "阅读更多",
-    "cta": {
-      "title": "准备好保护您的在线隐私了吗？",
-      "subtitle": "探索我们的专家VPN评论，找到最适合您需求的解决方案。"
-    },
-    "posts": {
-      "vpn-black-friday-2026": {
-        "title": "2026黑色星期五VPN优惠：最高折扣88%",
-        "excerpt": "不要错过今年最大的VPN优惠！Surfshark、NordVPN、ExpressVPN等顶级VPN服务现在提供超大折扣。",
-        "category": "优惠",
-        "readTime": "阅读5分钟",
-        "author": "ZeroToVPN团队",
-        "intro": {
-          "paragraph1": "2026年黑色星期五来了，VPN提供商正在推出年度最佳优惠。无论您是寻求在线隐私保护、流媒体访问，还是公共Wi-Fi安全，现在都是以超低价格获得高级VPN的最佳时机。",
-          "paragraph2": "我们汇总了2026年所有最佳黑色星期五VPN优惠，折扣高达88%。这些限时优惠不会持续太久，赶快抢购吧！"
-        },
-        "deals": {
-          "title": "2026年最佳黑色星期五VPN优惠",
-          "subtitle": "比较所有优惠，选择最适合您的"
-        },
-        "tips": {
-          "title": "黑色星期五VPN购物技巧",
-          "tip1": "选择2年套餐 - 它们提供最佳价值和最大折扣",
-          "tip2": "检查退款保证 - 所有信誉良好的VPN都提供至少30天退款保证",
-          "tip3": "比较功能，而不仅仅是价格 - 确保VPN满足您的特定需求",
-          "tip4": "快速行动 - 最佳优惠经常售罄或提前结束"
-        },
-        "conclusion": {
-          "title": "不要错过这些黑色星期五VPN优惠",
-          "paragraph1": "黑色星期五是一年中以最优惠价格获得高级VPN订阅的最佳时机。无论您选择性价比高的Surfshark、功能丰富的NordVPN，还是速度快的ExpressVPN，任何这些优惠都不会让您失望。",
-          "paragraph2": "请记住，这些优惠有时间限制，可能随时结束。不要等待 - 立即保护您的在线隐私并大幅节省！",
-          "cta1": "查看所有VPN评测",
-          "cta2": "比较VPN"
-        },
-        "related": {
-          "title": "相关文章",
-          "post1": {
-            "title": "使用VPN合法吗？",
-            "excerpt": "了解全球VPN合法性以及在哪些地方可以安全使用。"
-          },
-          "post2": {
-            "title": "VPN与代理：有什么区别？",
-            "excerpt": "了解关键区别以及哪种更适合您的需求。"
-          }
-        }
-      },
-      "is-vpn-legal": {
-        "title": "使用VPN合法吗？各国法律指南",
-        "excerpt": "了解全球VPN合法性。找出哪些国家禁止或限制VPN，以及在哪里可以安全使用。",
-        "category": "安全",
-        "readTime": "阅读8分钟",
-        "author": "ZeroToVPN团队",
-        "quickAnswer": {
-          "title": "快速解答",
-          "answer": "是的，VPN在大多数国家都是合法的，包括美国、英国、加拿大和大部分欧洲国家。但是，一些国家如中国、俄罗斯和阿联酋限制或禁止使用VPN。合法性取决于您所在的位置以及如何使用VPN。"
-        },
-        "intro": {
-          "paragraph1": "关于VPN最常见的问题之一是它们是否合法使用。简短的答案是肯定的 - VPN在世界上绝大多数国家都是合法的。但是，合法性可能因您所在的位置和使用方式而异。",
-          "paragraph2": "在这份综合指南中，我们将逐国探讨VPN的合法性，解释何时使用VPN可能是非法的，并帮助您了解在线隐私工具的法律环境。"
-        },
-        "countries": {
-          "title": "各国VPN法律状态",
-          "fullyLegal": "完全合法",
-          "restricted": "受限制",
-          "banned": "禁止或非法"
-        },
-        "disclaimer": {
-          "title": "重要免责声明",
-          "text": "法律经常变化。在使用VPN之前，请务必检查当前的当地法规。此信息仅用于教育目的，不应被视为法律建议。"
-        },
-        "illegal": {
-          "title": "何时使用VPN是非法的？",
-          "intro": "即使在VPN合法的国家，将其用于非法活动仍然是违法的：",
-          "point1": "非法文件共享或盗版",
-          "point2": "黑客攻击、欺诈或网络犯罪",
-          "point3": "购买或销售非法商品",
-          "point4": "骚扰、跟踪或其他非法在线活动"
-        },
-        "safeUse": {
-          "title": "如何安全合法地使用VPN",
-          "tip1": "在使用VPN之前研究当地法律，尤其是在旅行时",
-          "tip2": "选择信誉良好的、有无日志政策的VPN提供商",
-          "tip3": "不要使用VPN从事非法活动",
-          "tip4": "了解网站和流媒体平台的服务条款",
-          "cta": "寻找值得信赖的VPN提供商"
-        },
-        "conclusion": {
-          "title": "VPN合法性的底线",
-          "paragraph1": "对于大多数国家的大多数人来说，使用VPN是完全合法的，也是保护在线隐私和安全的明智方式。企业、记者、活动家和日常互联网用户都广泛使用VPN。",
-          "paragraph2": "但是，重要的是要了解当地法规，尤其是在旅行时。当负责任和合法地使用时，VPN是保护您的数字权利和维护在线隐私的强大工具。"
-        },
-        "related": {
-          "title": "相关文章",
-          "post1": {
-            "title": "2026黑色星期五VPN优惠",
-            "excerpt": "顶级VPN服务最高折扣88%。限时优惠！"
-          },
-          "post2": {
-            "title": "VPN与代理：有什么区别？",
-            "excerpt": "了解关键区别以及哪种更适合您的需求。"
-          }
-        }
-      },
-      "vpn-vs-proxy": {
-        "title": "VPN与代理：有什么区别？",
-        "excerpt": "了解VPN和代理之间的关键区别。了解哪种更适合隐私、安全和速度。",
-        "category": "技巧",
-        "readTime": "阅读6分钟",
-        "author": "ZeroToVPN团队",
-        "intro": {
-          "paragraph1": "VPN和代理都可以隐藏您的IP地址并帮助您访问受地理限制的内容，但它们的工作方式截然不同，并提供不同级别的安全性和隐私保护。",
-          "paragraph2": "在这份综合指南中，我们将详细介绍VPN和代理之间的区别，解释何时使用每种工具，并帮助您根据自己的需求做出正确的选择。"
-        },
-        "whatIsVpn": {
-          "title": "什么是VPN？",
-          "description": "虚拟私人网络（VPN）在您的设备和远程服务器之间创建一个加密隧道，保护您的所有互联网流量。",
-          "feature1": "使用军事级加密对您的所有互联网流量进行加密",
-          "feature2": "保护您的整个设备，而不仅仅是浏览器",
-          "feature3": "对网站和ISP隐藏您的IP地址和位置"
-        },
-        "whatIsProxy": {
-          "title": "什么是代理？",
-          "description": "代理服务器充当您的设备和互联网之间的中介，通过不同的IP地址路由您的流量。",
-          "feature1": "通过不同的IP地址路由流量",
-          "feature2": "通常比VPN更快（无加密开销）",
-          "feature3": "无加密 - 您的数据对代理服务器可见"
-        },
-        "comparison": {
-          "title": "VPN与代理：并列比较",
-          "subtitle": "查看VPN和代理在关键功能方面的对比"
-        },
-        "whenToUse": {
-          "title": "何时应该使用每种工具？",
-          "vpnTitle": "在以下情况下使用VPN：",
-          "vpn1": "您需要最大的安全性和隐私保护",
-          "vpn2": "您正在使用公共Wi-Fi网络",
-          "vpn3": "您想要加密所有设备流量",
-          "vpn4": "您担心ISP跟踪",
-          "proxyTitle": "在以下情况下使用代理：",
-          "proxy1": "您需要快速访问受地理限制的内容",
-          "proxy2": "您希望简单任务获得更快的速度",
-          "proxy3": "您只需要路由浏览器流量",
-          "proxy4": "安全性不是您的主要考虑因素"
-        },
-        "conclusion": {
-          "title": "您应该选择哪个？",
-          "paragraph1": "对于大多数人来说，VPN是更好的选择。它提供全面的安全性，加密您的所有流量，并保护所有应用程序的隐私。虽然代理更快且通常免费，但它们不提供相同级别的保护。",
-          "paragraph2": "如果您认真对待在线隐私和安全，请投资一个信誉良好的VPN服务。这笔小投资非常值得，因为它让您安心，知道您的数据已加密，您的在线活动是私密的。",
-          "cta1": "寻找最佳VPN",
-          "cta2": "了解更多关于VPN的信息"
-        },
-        "related": {
-          "title": "相关文章",
-          "post1": {
-            "title": "2026黑色星期五VPN优惠",
-            "excerpt": "顶级VPN服务最高折扣88%。限时优惠！"
-          },
-          "post2": {
-            "title": "使用VPN合法吗？",
-            "excerpt": "了解全球VPN合法性以及在哪里可以安全使用。"
-          }
-        }
-      }
-    }
-  },
-  "exitPopup": {
-    "close": "关闭",
-    "waitTitle": "等等！先别走！",
-    "specialOffer": "我们为您准备了特别优惠",
-    "limitedTime": "限时优惠",
-    "useCode": "结账时使用代码：",
-    "claimDeal": "领取此优惠",
-    "moneyBack": "30天退款保证",
-    "noThanks": "不用了，我付全价"
-  },
-  "stickyBar": {
-    "getExclusive": "以独家折扣获取{vpn}！",
-    "limitedOffer": "限时优惠 - 不要错过！",
-    "claimDeal": "领取优惠",
-    "getDeal": "获取优惠",
-    "dismiss": "关闭"
-  },
-  "comparisonTool": {
-    "title": "VPN对比工具",
-    "subtitle": "选择VPN进行并排比较",
-    "selected": "已选择",
-    "addVpn": "添加VPN",
-    "remove": "移除",
-    "feature": "功能",
-    "pricing": "价格",
-    "monthlyPrice": "月费",
-    "yearlyPrice": "年费",
-    "moneyBack": "退款(天)",
-    "performance": "性能",
-    "speedScore": "速度评分",
-    "securityScore": "安全评分",
-    "streamingScore": "流媒体评分",
-    "network": "网络",
-    "servers": "服务器",
-    "countries": "国家",
-    "devices": "最大设备数",
-    "features": "功能",
-    "netflix": "Netflix支持",
-    "torrenting": "种子下载",
-    "killSwitch": "终止开关",
-    "noLogs": "无日志政策",
-    "protocols": "协议",
-    "getStarted": "开始",
-    "visitSite": "访问网站",
-    "noVpnsSelected": "未选择VPN",
-    "selectToCompare": "选择2-4个VPN进行功能比较",
-    "addFirstVpn": "添加第一个VPN"
-  },
-  "comparePage": {
-    "badge": "2026年11月更新",
-    "title": "并排比较VPN",
-    "subtitle": "了解顶级VPN服务如何相互比较。比较速度、安全功能、价格等。",
-    "fullComparisonTable": "完整比较表",
-    "vpnProvider": "VPN提供商",
-    "editorsChoice": "编辑推荐",
-    "overallRating": "综合评分",
-    "monthlyPrice": "月费",
-    "perMonth": "/月",
-    "bestPrice": "最佳价格（2年计划）",
-    "moneyBackGuarantee": "退款保证",
-    "days": "天",
-    "freeTier": "免费版",
-    "totalServers": "服务器总数",
-    "countries": "国家",
-    "simultaneousDevices": "同时连接设备",
-    "unlimited": "无限",
-    "speedScore": "速度评分",
-    "securityScore": "安全评分",
-    "streamingScore": "流媒体评分",
-    "protocols": "协议",
-    "encryption": "加密",
-    "killSwitch": "终止开关",
-    "noLogsPolicy": "无日志政策",
-    "netflixSupport": "Netflix支持",
-    "torrentingSupport": "种子下载支持",
-    "getStarted": "开始使用",
-    "visit": "访问",
-    "readReview": "阅读评测",
-    "quickComparison": "快速比较",
-    "quickComparisonSubtitle": "以下是顶级VPN在关键类别中的比较",
-    "bestOverall": "综合最佳",
-    "winner": "获胜者",
-    "bestOverallDesc": "速度、安全性和功能的完美平衡。我们为大多数用户的首选。",
-    "bestValue": "最佳性价比",
-    "bestValueDesc": "最低价格无限设备。非常适合家庭和注重预算的用户。",
-    "fastestVpn": "最快VPN",
-    "speed": "速度",
-    "fastestVpnDesc": "在我们的测试中始终是最快的VPN。最适合流媒体和游戏。",
-    "bestSecurity": "最佳安全性",
-    "security": "安全",
-    "bestSecurityDesc": "总部位于瑞士，拥有安全核心服务器。开源且经过审计，确保最大隐私。",
-    "mostServers": "最多服务器",
-    "mostServersDesc": "庞大的服务器网络，已证实的无日志政策。包含无限连接。",
-    "bestFreeOption": "最佳免费选择",
-    "freeTierBadge": "免费版",
-    "bestFreeDesc": "唯一可信赖的免费VPN，无数据限制或广告。服务器有限但完全安全。",
-    "tryFree": "免费试用",
-    "howWeCompare": "我们如何比较VPN",
-    "speedTesting": "速度测试",
-    "speedTestingDesc": "我们在标准化条件下测试50多个服务器位置的下载和上传速度。速度多次测量并取平均值。",
-    "securityAnalysis": "安全分析",
-    "securityAnalysisDesc": "我们评估加密协议，检查DNS/WebRTC泄漏，审查隐私政策，并考虑每个提供商的管辖权。",
-    "streamingTests": "流媒体测试",
-    "streamingTestsDesc": "我们使用Netflix、Disney+、BBC iPlayer和其他流行流媒体服务在多个地区测试每个VPN。",
-    "valueAssessment": "价值评估",
-    "valueAssessmentDesc": "我们比较价格、功能和性能，以确定哪些VPN提供最佳性价比。",
-    "needHelpDeciding": "需要帮助决定？",
-    "needHelpDesc": "查看我们的详细评测，深入分析每个VPN，或阅读我们的指南，了解选择VPN时应该注意什么。",
-    "viewBestVpns": "查看最佳VPN",
-    "whatIsVpn": "什么是VPN？",
-    "faqSection": {
-      "title": "常见问题"
-    },
-    "faq": [
+    "guides": [
       {
-        "question": "你们如何比较VPN？",
-        "answer": "我们使用全面的方法比较VPN，包括在50多个服务器位置进行速度测试、安全分析（加密、泄漏测试、隐私政策）、Netflix和其他服务的流媒体测试，以及价值评估。每个VPN都在速度、安全性、流媒体和整体价值方面进行评分。"
+        "slug": "what-is-ai-agent",
+        "title": "什么是AI代理?",
+        "description": "理解AI代理的完整初学者指南",
+        "category": "gettingStarted",
+        "readTime": "10分钟",
+        "level": "初学者"
       },
       {
-        "question": "比较VPN时哪些功能最重要？",
-        "answer": "最重要的功能包括：强加密（AES-256）、经审计验证的无日志政策、终止开关功能、快速连接速度、大型服务器网络、Netflix/Disney+流媒体支持以及响应迅速的客户支持。价格和同时连接设备数量也是关键考虑因素。"
+        "slug": "how-ai-agents-work",
+        "title": "AI代理如何工作?",
+        "description": "AI代理架构的技术深度探讨",
+        "category": "technical",
+        "readTime": "12分钟",
+        "level": "中级"
       },
       {
-        "question": "哪个VPN最适合流媒体？",
-        "answer": "ExpressVPN在我们的测试中始终是最快的VPN，速度保持率达96%，非常适合4K流媒体。NordVPN紧随其后，速度出色且性价比更高。两者都能可靠地解锁Netflix、Disney+和其他流媒体平台。"
+        "slug": "choosing-ai-agent",
+        "title": "如何选择合适的AI代理",
+        "description": "选择完美平台的分步指南",
+        "category": "gettingStarted",
+        "readTime": "9分钟",
+        "level": "所有级别"
       },
       {
-        "question": "我可以信任免费VPN吗？",
-        "answer": "大多数免费VPN不值得信任，因为它们经常记录和出售您的数据、注入广告或存在安全漏洞。ProtonVPN是我们唯一推荐的免费VPN - 它来自一家信誉良好的公司，没有数据限制，并保持高隐私标准。"
+        "slug": "ai-agent-security",
+        "title": "AI代理安全与隐私",
+        "description": "安全部署AI代理的最佳实践",
+        "category": "security",
+        "readTime": "8分钟",
+        "level": "中级"
       },
       {
-        "question": "月付和长期VPN套餐有什么区别？",
-        "answer": "长期套餐（1-2年）提供显著折扣 - 通常比月付价格便宜60-80%。例如，NordVPN月付12.99美元，但2年套餐只需2.99美元/月。所有顶级VPN都提供30天退款保证。"
+        "slug": "ai-agents-for-business",
+        "title": "企业AI代理",
+        "description": "企业如何利用AI代理实现增长",
+        "category": "business",
+        "readTime": "11分钟",
+        "level": "商业"
+      },
+      {
+        "slug": "ai-agent-pricing",
+        "title": "了解AI代理定价",
+        "description": "导航定价模型并计算投资回报率",
+        "category": "business",
+        "readTime": "7分钟",
+        "level": "所有级别"
+      },
+      {
+        "slug": "ai-agent-integrations",
+        "title": "AI代理集成指南",
+        "description": "将代理连接到您现有的工具",
+        "category": "technical",
+        "readTime": "9分钟",
+        "level": "技术"
+      },
+      {
+        "slug": "building-ai-workflows",
+        "title": "构建AI代理工作流",
+        "description": "设计有效的自动化工作流",
+        "category": "technical",
+        "readTime": "10分钟",
+        "level": "中级"
       }
     ]
   },
-  "speedTest": {
-    "title": "网络速度测试",
-    "subtitle": "测试连接VPN前后的网络速度",
-    "startTest": "开始速度测试",
-    "testing": "正在测试您的连接...",
-    "testingPing": "正在测量延迟...",
-    "testingDownload": "正在测试下载速度...",
-    "testingUpload": "正在测试上传速度...",
-    "download": "下载",
-    "upload": "上传",
-    "ping": "延迟",
-    "latency": "网络延迟",
-    "results": "您的结果",
-    "slow": "慢",
-    "medium": "中等",
-    "fast": "快",
-    "mbps": "Mbps",
-    "ms": "毫秒",
-    "tipSlow": "您的连接似乎较慢。VPN可能有助于优化您的路由！",
-    "tipFast": "速度很棒！VPN可以帮助保持您的连接私密和安全。",
-    "testAgain": "重新测试",
-    "history": "测试历史",
-    "noHistory": "没有之前的测试",
-    "share": "分享结果",
-    "copied": "结果已复制！",
-    "clearHistory": "清除历史",
-    "speedScore": "速度评分",
-    "testComplete": "测试完成",
-    "compareWithVpn": "与VPN比较",
-    "pageTitle": "免费网络速度测试",
-    "pageSubtitle": "检查您的下载速度、上传速度和延迟。比较使用VPN前后的结果。",
-    "whyTest": "为什么要测试速度？",
-    "whyTestDesc": "了解您的网络速度有助于选择合适的VPN，并验证它不会显著降低您的连接速度。",
-    "vpnImpact": "VPN速度影响",
-    "vpnImpactDesc": "好的VPN通常只会降低10-20%的速度。如果速度下降更多，请尝试其他服务器或协议。",
-    "recommendedVpns": "推荐的高速VPN"
-  },
-  "androidVpn": {
+  "home": {
     "meta": {
-      "title": "2026年11月最佳Android VPN：前3名测试应用 – ZeroToVPN",
-      "description": "寻找最佳Android VPN？我们测试了15+款Android VPN应用。NordVPN（95%）、Surfshark（94%）和ExpressVPN（93%）是速度、安全性和分流隧道等功能的首选。"
+      "title": "ZeroToAIAgents - 找到最适合您需求的AI代理",
+      "description": "比较顶级AI代理平台:编码代理、无代码构建器、客户支持和企业解决方案。专家评测和诚实比较。"
     },
     "hero": {
-      "badge": "2026年11月更新",
-      "title": "最佳Android VPN – 2026年指南",
-      "subtitle": "我们测试了15+款Android VPN应用，找到了速度、安全性和Android特定功能的最佳选择。以下是在您的Android手机或平板电脑上效果最好的选项。"
+      "badge": "2026年最佳AI代理",
+      "title": "找到您完美的AI代理",
+      "subtitle": "从零到AI驱动只需几分钟。通过专家评测、诚实比较和独家优惠比较顶级AI代理平台。",
+      "cta": "比较AI代理",
+      "secondaryCta": "查看所有评测"
     },
-    "whyAndroid": {
-      "title": "为什么Android需要VPN",
-      "tracking": {
-        "title": "Google跟踪",
-        "description": "Android与Google的深度集成意味着您的浏览、位置和应用使用情况会被持续跟踪。VPN可以隐藏您的IP并加密流量。"
-      },
-      "ecosystem": {
-        "title": "开放生态系统",
-        "description": "Android的开放性使其更容易受到恶意应用和数据收集的攻击。VPN添加了必不可少的安全层。"
-      },
-      "wifi": {
-        "title": "公共WiFi",
-        "description": "在Android手机上使用公共WiFi？黑客可以拦截未加密的数据。VPN可以在咖啡店和酒店网络上保护您。"
-      }
+    "stats": {
+      "agents": "50+",
+      "agentsLabel": "AI代理评测",
+      "reviews": "10,000+",
+      "reviewsLabel": "用户评论",
+      "readers": "50,000+",
+      "readersLabel": "月度读者"
     },
-    "comparison": {
-      "title": "快速比较",
-      "vpn": "VPN",
-      "rating": "评分",
-      "protocol": "协议",
-      "splitTunneling": "分流隧道",
-      "price": "价格",
-      "month": "月",
-      "recommended": "推荐"
-    },
-    "reviews": {
-      "title": "Android前3名VPN排名",
-      "subtitle": "我们对2026年最佳Android VPN应用的详细分析",
-      "protocol": "协议",
-      "servers": "服务器",
-      "splitTunnel": "分流隧道",
-      "killSwitch": "终止开关",
-      "devices": "设备",
-      "gpsSpoofing": "GPS欺骗",
-      "camouflage": "伪装模式",
-      "countries": "国家",
-      "reliability": "可靠性",
-      "yes": "是",
-      "unlimited": "无限",
-      "excellent": "优秀",
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取",
-      "nordvpn": {
-        "badge": "最适合Android",
-        "description": "NordVPN的Android应用是我们测试过的功能最完整的VPN。它包括NordLynx（他们的WireGuard实现）以实现极快的速度，分流隧道可排除特定应用，以及真正有效的可靠终止开关。",
-        "pros": [
-          "NordLynx协议在Android上提供最快速度",
-          "分流隧道让您排除银行应用",
-          "始终开启VPN支持自动保护",
-          "7,000+台服务器提供一致性能",
-          "简洁直观的Android界面",
-          "支持Android 5.0+（Lollipop及更高版本）"
-        ],
-        "cons": [
-          "比Surfshark略贵",
-          "6台设备限制（相比Surfshark的无限）",
-          "某些功能需要Android 7.0+",
-          "无GPS欺骗功能"
-        ]
-      },
-      "surfshark": {
-        "description": "Surfshark因无限设备连接和Android独有功能而脱颖而出。GPS欺骗让基于位置的应用认为您在其他地方，而伪装模式可以向ISP隐藏VPN使用情况。",
-        "pros": [
-          "无限同时设备连接",
-          "基于位置的应用GPS欺骗",
-          "伪装模式隐藏VPN使用",
-          "CleanWeb拦截广告和恶意软件",
-          "最优价格$2.19/月",
-          "支持Android TV和Fire TV"
-        ],
-        "cons": [
-          "速度略慢于NordVPN",
-          "服务器网络较小（3,200 vs 7,000）",
-          "GPS欺骗需要Android 6.0+",
-          "流媒体一致性较差"
-        ]
-      },
-      "expressvpn": {
-        "description": "ExpressVPN的Lightway协议专为移动设备构建，在Android上提供最稳定的连接。在WiFi和移动数据之间切换时可即时重新连接，非常适合移动使用。",
-        "pros": [
-          "Lightway协议针对移动设备优化",
-          "切换网络时连接最稳定",
-          "94个国家实现最大全球访问",
-          "出色的24/7客户支持",
-          "智能位置选择最快服务器",
-          "网络保护 = 始终开启VPN"
-        ],
-        "cons": [
-          "价格最贵$6.67/月",
-          "5台设备限制",
-          "应用体积较大（50MB vs 竞争对手的30MB）",
-          "无GPS欺骗或伪装模式"
-        ]
-      }
-    },
-    "features": {
-      "title": "Android特定VPN功能",
-      "splitTunneling": {
-        "title": "分流隧道",
-        "description": "选择哪些应用使用VPN，哪些不使用。排除阻止VPN的银行应用，同时保护您的浏览。",
-        "availability": "可用：NordVPN、Surfshark、ExpressVPN"
-      },
-      "alwaysOn": {
-        "title": "始终开启VPN",
-        "description": "Android的内置功能，当设备启动时自动连接到您的VPN。如果VPN失败则阻止互联网。",
-        "availability": "所有主流VPN都支持"
-      },
-      "killSwitch": {
-        "title": "终止开关",
-        "description": "如果VPN连接断开，则阻止所有互联网流量，防止数据泄露。对公共WiFi至关重要。",
-        "availability": "所有顶级VPN都包含此功能"
-      },
-      "apkSideloading": {
-        "title": "APK侧载",
-        "description": "在Google Play阻止VPN的国家（中国、伊朗、俄罗斯）直接通过APK安装VPN应用。",
-        "availability": "NordVPN、ExpressVPN、Surfshark提供APK"
-      },
-      "widgets": {
-        "title": "主屏幕小部件",
-        "description": "快速连接小部件让您无需打开应用即可直接从主屏幕启用VPN保护。",
-        "availability": "NordVPN、Surfshark"
-      },
-      "gpsSpoofing": {
-        "title": "GPS欺骗",
-        "description": "让基于位置的应用认为您在不同的位置。对地理限制的应用和服务很有用。",
-        "availability": "仅Surfshark"
-      }
-    },
-    "setup": {
-      "title": "如何在Android上设置VPN（分步指南）",
-      "steps": [
-        "从Google Play商店下载VPN应用（NordVPN、Surfshark或ExpressVPN）",
-        "创建帐户并选择订阅计划（所有都提供30天退款保证）",
-        "打开应用并使用您的凭据登录",
-        "当Android询问时授予VPN权限（这允许应用创建安全隧道）",
-        "点击「连接」或选择特定服务器位置",
-        "您受保护了！VPN图标将出现在状态栏中",
-        "可选：在Android设置→网络和互联网→VPN→设置中启用「始终开启VPN」"
+    "categories": {
+      "title": "按使用场景查找AI代理",
+      "subtitle": "不同的代理擅长不同的任务。选择您的类别:",
+      "items": [
+        {
+          "title": "编码代理",
+          "description": "在AI辅助下编写、调试和部署代码",
+          "icon": "Code",
+          "href": "/best/coding-agents",
+          "popular": true
+        },
+        {
+          "title": "无代码构建器",
+          "description": "无需编写代码即可构建AI工作流",
+          "icon": "Blocks",
+          "href": "/best/no-code-agents"
+        },
+        {
+          "title": "客户支持",
+          "description": "使用AI代理自动化客户服务",
+          "icon": "Headphones",
+          "href": "/best/support-agents"
+        },
+        {
+          "title": "企业级AI",
+          "description": "企业级AI代理平台",
+          "icon": "Building",
+          "href": "/best/enterprise-agents"
+        },
+        {
+          "title": "免费AI代理",
+          "description": "从免费AI代理平台开始",
+          "icon": "Gift",
+          "href": "/best/free-agents"
+        },
+        {
+          "title": "AI框架",
+          "description": "使用框架构建自定义代理",
+          "icon": "Wrench",
+          "href": "/best/ai-frameworks"
+        }
       ]
     },
-    "apk": {
-      "title": "受审查国家的APK安装",
-      "subtitle": "在中国、伊朗、俄罗斯和其他Google Play阻止VPN应用的国家，您可以通过APK安装：",
-      "warning": {
-        "title": "重要安全警告",
-        "description": "仅从VPN提供商的官方网站直接下载APK。第三方APK网站可能包含恶意软件。"
-      },
-      "instructions": {
-        "title": "如何安装VPN APK：",
-        "steps": [
-          "访问VPN的网站（如果被阻止，请使用其他VPN或代理）",
-          "从官方下载页面下载Android APK文件",
-          "转到Android设置→安全→启用「未知来源」或「安装未知应用」",
-          "打开文件管理器并点击下载的APK文件",
-          "点击「安装」并等待安装完成",
-          "打开VPN应用并登录（您可能需要先创建帐户）",
-          "安装后为了安全起见禁用「未知来源」"
-        ]
-      }
-    },
-    "avoid": {
-      "title": "应避免的免费Android VPN",
-      "subtitle": "这些常见风险使免费Android VPN变得危险：",
-      "reasons": [
-        "将您的浏览数据出售给广告商和数据经纪人",
-        "在您的浏览器和应用中注入广告",
-        "包含隐藏的恶意软件、间谍软件或跟踪库",
-        "存在严重的安全漏洞会暴露您的数据",
-        "严重限制速度使其无法使用",
-        "尽管声称不记录日志仍记录您的活动",
-        "通过激进的后台进程耗尽电池",
-        "请求他们不需要的过多Android权限"
-      ]
-    },
-    "conclusion": {
-      "title": "立即获取最佳Android VPN",
-      "description": "NordVPN提供最佳的Android整体体验，具有快速速度、分流隧道和出色的安全性。我们推荐的所有VPN都提供30天退款保证，因此您可以无风险试用。",
-      "tryNordvpn": "无风险试用NordVPN",
-      "compareAll": "比较所有VPN"
-    }
-  },
-  "mobileVpn": {
-    "meta": {
-      "title": "最佳移动VPN（iPhone和Android）2026年11月 – ZeroToVPN",
-      "description": "为您的iPhone或Android找到最佳移动VPN。我们测试了15+款VPN应用。Surfshark、NordVPN和ExpressVPN是移动安全的首选。"
-    },
-    "hero": {
-      "badge": "📱 2026年移动VPN指南",
-      "title": "最佳移动VPN（iPhone和Android）",
-      "subtitle": "使用适用于iOS和Android的最佳VPN应用，在公共WiFi上保护您的智能手机，绕过地理限制，保护您的移动数据。"
-    },
-    "why": {
-      "title": "为什么需要移动VPN",
-      "publicWifi": {
-        "title": "公共WiFi保护",
-        "description": "在咖啡店、机场和酒店WiFi网络上保持安全，这些网络是黑客最喜欢利用的目标。"
-      },
-      "dataProtection": {
-        "title": "4G/5G数据保护",
-        "description": "防止您的移动运营商跟踪和出售您的浏览数据。"
-      },
-      "travel": {
-        "title": "旅行自由",
-        "description": "在国外旅行时访问您的本地流媒体服务并绕过审查。"
-      },
-      "streaming": {
-        "title": "移动流媒体",
-        "description": "在手机上观看Netflix、YouTube和其他服务，无需ISP限速。"
-      }
-    },
-    "reviews": {
-      "title": "前3名移动VPN（2026年）",
-      "subtitle": "我们的专家在iPhone和Android设备上测试了这些VPN",
-      "surfshark": {
-        "badge": "最佳综合",
-        "description": "Surfshark为移动用户提供最佳价值，支持无限设备连接、轻量级应用程序，在iOS和Android上都有出色的速度。",
-        "pros": [
-          "无限设备",
-          "轻量级应用",
-          "最优价格",
-          "GPS欺骗（Android）"
-        ],
-        "cons": [
-          "服务器较少",
-          "较新公司"
-        ]
-      },
-      "nordvpn": {
-        "description": "NordVPN的专有NordLynx协议在移动设备上提供最快的速度。该应用在App Store和Google Play上均获得高评分。",
-        "pros": [
-          "NordLynx - 最快速度",
-          "高评分应用",
-          "分流隧道（Android）",
-          "威胁保护"
-        ],
-        "cons": [
-          "对初学者复杂",
-          "无GPS欺骗"
-        ]
-      },
-      "expressvpn": {
-        "description": "ExpressVPN是旅行者最可靠的选择。它在中国、阿联酋和土耳其可用，在4G/5G上连接极其稳定。",
-        "pros": [
-          "在中国、阿联酋、土耳其可用",
-          "4G/5G超稳定",
-          "Lightway协议",
-          "最适合旅行"
-        ],
-        "cons": [
-          "价格较贵",
-          "8台设备限制"
-        ]
-      },
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取VPN",
-      "speed": "速度",
-      "security": "安全性",
-      "servers": "服务器",
-      "countries": "国家",
-      "devices": "设备",
-      "unlimited": "无限",
-      "battery": "电池影响",
-      "low": "低",
-      "moderate": "中等"
-    },
-    "platforms": {
-      "title": "平台特定功能",
-      "ios": {
-        "title": "最适合iPhone",
-        "description": "原生iOS集成、Siri快捷方式、App Store评分4.5+、优化的电池使用和Apple Watch应用。",
-        "features": [
-          "4.5+ App Store评分",
-          "原生IKEv2支持",
-          "Siri快捷方式",
-          "Apple Watch应用",
-          "优化的电池使用"
-        ],
-        "readMore": "iPhone最佳VPN →"
-      },
-      "android": {
-        "title": "最适合Android",
-        "description": "分流隧道、APK侧载（用于受审查国家）、小部件、自定义DNS和GPS欺骗（Surfshark）。",
-        "features": [
-          "分流隧道",
-          "APK侧载",
-          "始终开启VPN",
-          "自定义DNS",
-          "终止开关",
-          "小部件",
-          "GPS欺骗（Surfshark）"
-        ],
-        "readMore": "Android最佳VPN →"
-      }
+    "featured": {
+      "title": "评分最高的AI代理",
+      "subtitle": "我们对2026年最佳AI代理的专家精选"
     },
     "useCases": {
-      "title": "按移动使用场景分类的VPN",
-      "cases": [
-        {
-          "title": "旅行",
-          "vpns": "ExpressVPN、Surfshark",
-          "description": "在国外访问本地内容"
-        },
-        {
-          "title": "公共WiFi",
-          "vpns": "NordVPN、Surfshark",
-          "description": "保护咖啡店和酒店网络"
-        },
-        {
-          "title": "流媒体",
-          "vpns": "NordVPN、ExpressVPN",
-          "description": "解锁Netflix和YouTube"
-        },
-        {
-          "title": "社交媒体",
-          "vpns": "ExpressVPN、Surfshark",
-          "description": "绕过中国、阿联酋的封锁"
-        },
-        {
-          "title": "游戏",
-          "vpns": "NordVPN、ExpressVPN",
-          "description": "PUBG、CoD Mobile低延迟"
-        }
-      ]
-    },
-    "performance": {
-      "title": "移动VPN性能",
-      "vpn": "VPN",
-      "speed": "速度",
-      "battery": "电池",
-      "protocol": "协议",
-      "fastest": "最快",
-      "fast": "快速",
-      "lowest": "最低",
-      "moderate": "中等"
-    },
-    "setup": {
-      "title": "如何设置移动VPN",
-      "ios": {
-        "title": "iPhone设置",
-        "steps": [
-          "打开App Store",
-          "搜索VPN应用",
-          "点击「获取」以安装",
-          "打开应用并登录",
-          "允许VPN配置",
-          "点击「快速连接」"
-        ]
-      },
-      "android": {
-        "title": "Android设置",
-        "steps": [
-          "打开Google Play商店",
-          "搜索VPN应用",
-          "点击「安装」",
-          "打开应用并登录",
-          "授予VPN权限",
-          "在设置中启用终止开关",
-          "点击「快速连接」"
-        ]
-      }
-    },
-    "safety": {
-      "title": "移动VPN安全吗？",
-      "description": "是的，当您使用信誉良好的高级提供商时，移动VPN是安全的。高级VPN服务使用军事级加密，并有严格的无日志政策。但是，免费VPN实际上可能会危及您的隐私。",
-      "premium": {
-        "title": "高级VPN安全的原因：",
-        "features": [
-          "军事级AES-256加密",
-          "严格的无日志政策（经独立审计）",
-          "安全的VPN协议（WireGuard、NordLynx、Lightway）",
-          "防止数据泄露的终止开关",
-          "第三方定期安全审计",
-          "透明的隐私政策"
-        ]
-      },
-      "free": {
-        "title": "免费VPN危险的原因：",
-        "dangers": [
-          "收集并出售您的浏览数据",
-          "在您的网络流量中注入广告",
-          "加密薄弱或没有加密",
-          "可能包含恶意软件或间谍软件",
-          "严重限制带宽和速度",
-          "出现问题时缺乏客户支持"
-        ]
-      }
-    },
-    "avoid": {
-      "title": "应避免的免费移动VPN",
-      "description": "免费VPN通常会收集您的数据、注入广告、提供慢速度并使用弱加密。避免使用TurboVPN、HolaVPN、Betternet、SuperVPN和ThunderVPN。",
-      "vpns": [
-        {
-          "name": "TurboVPN",
-          "reason": "收集用户数据"
-        },
-        {
-          "name": "HolaVPN",
-          "reason": "将您用作出口节点"
-        },
-        {
-          "name": "Betternet",
-          "reason": "恶意软件问题"
-        },
-        {
-          "name": "SuperVPN",
-          "reason": "安全漏洞"
-        },
-        {
-          "name": "ThunderVPN",
-          "reason": "缺乏透明度"
-        }
-      ]
-    },
-    "conclusion": {
-      "title": "我们的结论",
-      "description": "经过广泛测试，以下是我们2026年移动VPN的首选：",
-      "best": {
-        "title": "最佳综合",
-        "description": "Surfshark提供最佳价值，支持无限设备和出色的移动应用。"
-      },
-      "fastest": {
-        "title": "最快移动VPN",
-        "description": "NordVPN配合NordLynx在4G/5G网络上提供无与伦比的速度。"
-      },
-      "travel": {
-        "title": "最适合旅行",
-        "description": "ExpressVPN在中国和阿联酋等限制性国家可靠运行。"
-      },
-      "getBest": "获取Surfshark – 82%折扣",
-      "getFastest": "试用NordVPN – 30天免费",
-      "getTravel": "获取ExpressVPN – 49%折扣"
-    }
-  },
-  "iphoneVpn": {
-    "meta": {
-      "title": "2026年11月最佳iPhone和iOS VPN – ZeroToVPN",
-      "description": "找到最佳iPhone和iOS VPN。我们测试了15+款VPN应用。ExpressVPN、NordVPN和Surfshark是iOS安全和隐私的首选。"
-    },
-    "hero": {
-      "badge": "📱 2026年iOS VPN指南",
-      "title": "最佳iPhone和iOS VPN",
-      "subtitle": "使用针对iOS优化的最佳VPN应用保护您的iPhone。原生集成、出色的App Store评分和省电性能。"
-    },
-    "comparison": {
-      "title": "快速比较",
-      "vpn": "VPN",
-      "rating": "App Store",
-      "protocol": "协议",
-      "battery": "电池",
-      "price": "价格",
-      "excellent": "优秀",
-      "good": "良好"
-    },
-    "whyIos": {
-      "title": "为什么iPhone需要VPN",
-      "appStore": {
-        "title": "仅App Store",
-        "description": "iOS限制VPN只能从App Store应用安装，确保质量和安全验证。"
-      },
-      "privacy": {
-        "title": "Apple隐私",
-        "description": "通过端到端加密增强Apple的隐私功能，保护您的所有互联网流量。"
-      },
-      "publicWifi": {
-        "title": "公共WiFi保护",
-        "description": "在黑客经常攻击的咖啡店、机场和酒店网络上保护您的iPhone。"
-      }
-    },
-    "reviews": {
-      "title": "iPhone前3名VPN",
-      "subtitle": "在iOS 17+和最新iPhone型号上测试",
-      "expressvpn": {
-        "badge": "最佳iOS应用",
-        "description": "ExpressVPN凭借其Lightway协议、直观的UI和出色的App Store评分，提供最佳的iOS整体体验。",
-        "appStoreRating": "4.7★（200K+评论）",
-        "pros": [
-          "最佳iOS应用体验",
-          "Lightway协议 - 快速安全",
-          "直观界面",
-          "24/7客户支持"
-        ],
-        "cons": [
-          "价格较高",
-          "限制8台设备"
-        ]
-      },
-      "nordvpn": {
-        "description": "NordVPN的iOS应用具有NordLynx协议以实现最快速度、Siri快捷方式和Apple Watch集成。",
-        "appStoreRating": "4.6★（150K+评论）",
-        "pros": [
-          "NordLynx - 最快协议",
-          "支持Siri快捷方式",
-          "Apple Watch应用",
-          "威胁保护"
-        ],
-        "cons": [
-          "iOS上无分流隧道",
-          "应用可能复杂"
-        ]
-      },
-      "surfshark": {
-        "description": "Surfshark在一个订阅中提供无限设备，具有简洁的iOS界面和出色的性价比。",
-        "appStoreRating": "4.5★（100K+评论）",
-        "pros": [
-          "无限设备",
-          "最优价格",
-          "CleanWeb广告拦截器",
-          "GPS欺骗"
-        ],
-        "cons": [
-          "服务器网络较小",
-          "无Apple Watch应用"
-        ]
-      },
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取iPhone版",
-      "servers": "服务器",
-      "devices": "设备",
-      "unlimited": "无限",
-      "protocol": "协议",
-      "battery": "电池",
-      "excellent": "优秀",
-      "good": "良好"
-    },
-    "iosFeatures": {
-      "title": "iOS特定功能",
-      "appStore": {
-        "title": "App Store评分",
-        "description": "所有推荐的VPN都有4.5+星评分，拥有数十万条评论。",
-        "ratings": [
-          "ExpressVPN：4.7★（200K+评论）",
-          "NordVPN：4.6★（150K+评论）",
-          "Surfshark：4.5★（100K+评论）"
-        ]
-      },
-      "protocols": {
-        "title": "协议支持",
-        "description": "原生IKEv2支持加上WireGuard和Lightway，实现最佳iOS性能。",
-        "list": [
-          "IKEv2（原生iOS）",
-          "WireGuard",
-          "Lightway（ExpressVPN）",
-          "NordLynx（NordVPN）",
-          "OpenVPN"
-        ]
-      },
-      "battery": {
-        "title": "电池优化",
-        "description": "现代协议在保持安全的同时最大限度地减少电池消耗。",
-        "tips": [
-          "使用WireGuard获得最佳电池寿命",
-          "仅在需要时启用自动连接",
-          "禁用VPN的后台应用刷新"
-        ]
-      },
-      "integration": {
-        "title": "iOS集成",
-        "description": "Siri快捷方式、小部件和Apple Watch应用实现无缝控制。",
-        "features": [
-          "Siri快捷方式（NordVPN、Surfshark）",
-          "iOS小部件",
-          "Apple Watch应用（ExpressVPN、NordVPN）",
-          "钥匙串集成"
-        ]
-      }
-    },
-    "setupGuide": {
-      "title": "如何在iPhone上设置VPN",
-      "steps": [
-        "在iPhone上打开App Store",
-        "搜索您的VPN（ExpressVPN、NordVPN或Surfshark）",
-        "点击「获取」以下载并安装",
-        "打开应用并登录或创建帐户",
-        "出现提示时允许VPN配置",
-        "点击「快速连接」以保护您的连接"
-      ]
-    },
-    "limitations": {
-      "title": "iOS VPN限制",
+      "title": "AI代理可以做什么?",
+      "subtitle": "AI代理技术的实际应用",
       "items": [
-        "iOS上无分流隧道（Apple限制）",
-        "VPN必须仅来自App Store",
-        "某些协议可能无法在所有网络上工作",
-        "低电量模式下后台VPN可能断开连接"
-      ]
-    },
-    "avoidFree": {
-      "title": "应避免的免费iPhone VPN",
-      "recommendation": {
-        "title": "我们的建议",
-        "description": "免费VPN通常会收集数据并显示广告。高级VPN提供更好的安全性和无日志政策。"
-      },
-      "reasons": [
-        "收集并出售您的数据",
-        "在您的浏览中注入广告",
-        "严重限制带宽",
-        "弱加密标准",
-        "无客户支持"
-      ]
-    },
-    "conclusion": {
-      "title": "我们的结论",
-      "description": "对于2026年的iPhone用户，这些是我们的首选推荐：",
-      "tryButton": "试用VPN",
-      "cards": {
-        "best": {
-          "badge": "最佳iOS应用",
-          "description": "ExpressVPN凭借Lightway协议提供最佳的iOS整体体验。"
+        {
+          "title": "软件开发",
+          "description": "自主生成代码、修复错误、编写测试和部署应用程序",
+          "icon": "Code"
         },
-        "value": {
-          "badge": "最快iOS VPN",
-          "description": "NordVPN的NordLynx提供无与伦比的速度和iOS集成。"
+        {
+          "title": "客户支持",
+          "description": "24/7处理查询、解决问题并升级复杂案例",
+          "icon": "MessageSquare"
         },
-        "budget": {
-          "badge": "最佳性价比",
-          "description": "Surfshark为iPhone用户提供最优价格的无限设备。"
+        {
+          "title": "数据分析",
+          "description": "查询数据库、创建可视化并自动生成见解",
+          "icon": "BarChart"
+        },
+        {
+          "title": "内容创作",
+          "description": "撰写博客文章、创建社交媒体内容并优化SEO",
+          "icon": "FileText"
+        },
+        {
+          "title": "业务自动化",
+          "description": "自动化工作流、数据录入、邮件回复和报告",
+          "icon": "Zap"
+        },
+        {
+          "title": "研究与情报",
+          "description": "浏览网络、收集信息并综合见解",
+          "icon": "Search"
         }
-      }
-    }
-  },
-  "ipadVpn": {
-    "meta": {
-      "title": "最佳iPad VPN（iPadOS）2026 - 专家测试",
-      "description": "寻找最佳iPad VPN应用。在iPadOS上测试，专注于界面、性能、家庭共享和流媒体功能。"
-    },
-    "hero": {
-      "badge": "iPad VPN指南2026",
-      "title": "最佳iPad VPN",
-      "subtitle": "针对iPadOS优化的专家测试VPN应用。大屏幕界面、家庭共享支持和无缝Apple生态系统集成。"
-    },
-    "why": {
-      "title": "为什么您的iPad需要VPN",
-      "largeScreen": {
-        "title": "大屏幕流媒体",
-        "description": "非常适合在iPad的精美显示屏上观看Netflix、Disney+等"
-      },
-      "publicWifi": {
-        "title": "公共WiFi保护",
-        "description": "在咖啡馆、酒店和机场WiFi网络上保持安全"
-      },
-      "familySharing": {
-        "title": "家庭共享就绪",
-        "description": "通过Apple家庭共享与整个家庭共享VPN保护"
-      }
+      ]
     },
     "comparison": {
-      "title": "快速比较",
-      "vpn": "VPN",
-      "rating": "评分",
-      "interface": "iPad界面",
-      "splitTunnel": "分离隧道",
-      "multitasking": "多任务处理",
-      "price": "价格",
-      "excellent": "优秀",
-      "good": "良好",
-      "inApp": "应用内",
-      "native": "原生",
-      "full": "完整"
+      "title": "比较顶级AI代理",
+      "subtitle": "最受欢迎的AI代理平台并排比较"
     },
-    "reviews": {
-      "title": "最佳iPad VPN（2026）",
-      "subtitle": "针对iPadOS性能测试和排名",
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取",
-      "nordvpn": {
-        "badge": "最佳iPad",
-        "description": "NordVPN凭借精美设计的界面、NordLynx协议带来的极速速度和应用内分离隧道，提供最佳iPad体验。",
-        "pros": [
-          "最佳iPad界面设计",
-          "NordLynx协议 - 最快速度",
-          "应用内分离隧道",
-          "出色的流媒体支持",
-          "Siri快捷指令集成"
-        ],
-        "cons": [
-          "无系统级分离隧道",
-          "高级定价"
-        ]
-      },
-      "surfshark": {
-        "badge": "最佳家庭",
-        "description": "Surfshark的无限设备政策和家庭共享兼容性使其成为拥有多台iPad的家庭的完美选择。",
-        "pros": [
-          "无限设备",
-          "家庭共享兼容",
-          "最优价格（82%折扣）",
-          "CleanWeb广告拦截器",
-          "轻量级应用"
-        ],
-        "cons": [
-          "服务器网络较小",
-          "无Siri快捷指令"
-        ]
-      },
-      "expressvpn": {
-        "badge": "最佳旅行",
-        "description": "ExpressVPN在受限国家可靠运行，并在全球酒店和机场WiFi上提供稳定连接。",
-        "pros": [
-          "在中国、阿联酋、土耳其可用",
-          "最稳定的连接",
-          "Lightway协议",
-          "全天候支持",
-          "MediaStreamer用于Apple TV"
-        ],
-        "cons": [
-          "价格较高",
-          "仅8台设备"
-        ]
-      }
-    },
-    "features": {
-      "title": "iPadOS特定功能",
-      "profiles": {
-        "title": "VPN配置文件",
-        "description": "直接在iPadOS设置中配置VPN配置文件以实现始终在线保护"
-      },
-      "familySharing": {
-        "title": "家庭共享",
-        "description": "通过Apple家庭共享与最多6名家庭成员共享您的VPN订阅"
-      },
-      "privacyLabels": {
-        "title": "Apple隐私标签",
-        "description": "所有推荐的VPN在App Store中都有透明的Apple隐私标签"
-      },
-      "multitasking": {
-        "title": "多任务处理支持",
-        "description": "VPN在分屏视图、侧拉和台前调度期间保持连接"
-      }
-    },
-    "setup": {
-      "title": "如何在iPad上设置VPN",
-      "steps": [
-        "在iPad上打开App Store",
-        "搜索您选择的VPN（NordVPN、Surfshark或ExpressVPN）",
-        "点击「获取」下载并安装",
-        "打开VPN应用并登录或创建账户",
-        "在提示时允许VPN配置",
-        "点击「快速连接」以保护您的连接"
-      ]
-    },
-    "streaming": {
-      "title": "在iPad上使用VPN流媒体",
-      "description": "您的iPad大屏幕非常适合流媒体。使用VPN，您可以从任何地方访问内容。",
-      "services": [
-        "Netflix（所有地区）",
-        "Disney+（美国、英国等）",
-        "BBC iPlayer（英国）",
-        "Hulu（美国）",
-        "Amazon Prime Video"
-      ]
-    },
-    "safety": {
-      "title": "iPad VPN安全吗？",
-      "description": "是的，高级iPad VPN完全安全。它们使用与银行相同的加密，并经过独立审计。",
-      "premium": {
-        "title": "高级VPN保护您的iPad：",
-        "features": [
-          "AES-256加密",
-          "无日志政策",
-          "终止开关保护",
-          "安全协议",
-          "定期安全审计"
-        ]
-      },
-      "free": {
-        "title": "避免在iPad上使用免费VPN：",
-        "dangers": [
-          "数据收集和出售",
-          "广告注入",
-          "弱加密",
-          "恶意软件风险",
-          "带宽限制"
-        ]
-      }
-    },
-    "avoid": {
-      "title": "要避免的免费iPad VPN",
-      "description": "不要用这些危险的免费VPN危害您iPad的安全。",
-      "vpns": [
-        {
-          "name": "HolaVPN",
-          "reason": "使用您的iPad作为出口节点"
-        },
-        {
-          "name": "TurboVPN",
-          "reason": "出售用户数据"
-        },
-        {
-          "name": "SuperVPN",
-          "reason": "安全漏洞"
-        },
-        {
-          "name": "Betternet",
-          "reason": "包含恶意软件"
-        }
-      ]
-    },
-    "conclusion": {
-      "title": "为您的iPad获取最佳VPN",
-      "description": "使用这些顶级VPN保护您的iPad并解锁全球内容。",
-      "getBest": "获取NordVPN用于iPad",
-      "getValue": "获取Surfshark - 82%折扣",
-      "getTravel": "获取ExpressVPN"
-    }
-  },
-  "androidTabletVpn": {
-    "meta": {
-      "title": "最佳Android平板VPN（三星、联想、小米）2026",
-      "description": "寻找最佳Android平板VPN。在三星Galaxy Tab、联想Tab和小米平板上测试，支持分离隧道和APK。"
-    },
-    "hero": {
-      "badge": "Android平板VPN指南2026",
-      "title": "最佳Android平板VPN",
-      "subtitle": "针对三星Galaxy Tab、联想Tab、小米平板等的专家测试VPN应用。完整分离隧道、APK侧载和自定义。"
-    },
-    "why": {
-      "title": "为什么您的Android平板需要VPN",
+    "guides": {
+      "title": "了解AI代理",
+      "subtitle": "帮助您入门的综合指南",
       "items": [
-        "在平板的大屏幕上安全流媒体",
-        "保护公共WiFi网络上的数据",
-        "在审查国家侧载APK",
-        "完整分离隧道支持",
-        "降低延迟的游戏",
-        "比iOS更多自定义"
+        {
+          "title": "什么是AI代理?",
+          "description": "理解AI代理的完整初学者指南",
+          "icon": "BookOpen",
+          "href": "/guides/what-is-ai-agent",
+          "readTime": "10分钟"
+        },
+        {
+          "title": "AI代理如何工作",
+          "description": "AI代理架构的技术深度探讨",
+          "icon": "Cpu",
+          "href": "/guides/how-ai-agents-work",
+          "readTime": "12分钟"
+        },
+        {
+          "title": "选择AI代理",
+          "description": "选择合适平台的分步指南",
+          "icon": "CheckCircle",
+          "href": "/guides/choosing-ai-agent",
+          "readTime": "9分钟"
+        }
       ]
     },
-    "comparison": {
-      "title": "快速比较",
-      "vpn": "VPN",
+    "cta": {
+      "title": "准备好开始使用AI代理了吗?",
+      "subtitle": "比较平台、阅读评测并找到适合您需求的完美AI代理",
+      "primaryButton": "比较AI代理",
+      "secondaryButton": "查看所有评测"
+    }
+  },
+  "agentTable": {
+    "columns": {
+      "rank": "#",
+      "name": "AI代理",
       "rating": "评分",
-      "protocol": "协议",
-      "tabletOptimized": "平板优化",
-      "price": "价格"
+      "price": "价格",
+      "models": "AI模型",
+      "integrations": "集成",
+      "freeTier": "免费套餐",
+      "bestFor": "最适合",
+      "actions": "操作"
     },
-    "reviews": {
-      "title": "最佳Android平板VPN（2026）",
-      "subtitle": "在三星Galaxy Tab、联想Tab和小米平板上测试",
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取",
-      "appSize": "应用大小",
-      "nordvpn": {
-        "badge": "最快",
-        "description": "NordVPN是Android平板最快的VPN，采用NordLynx协议、完整终止开关支持和平板优化UI。",
-        "pros": [
-          "NordLynx最快速度",
-          "完整终止开关支持",
-          "平板优化界面",
-          "7,400+服务器",
-          "分离隧道"
-        ],
-        "cons": [
-          "应用体积较大",
-          "无GPS欺骗"
-        ]
-      },
-      "surfshark": {
-        "badge": "最轻应用",
-        "description": "Surfshark拥有最轻的Android应用（45MB），非常适合存储空间有限的平板。包括GPS欺骗和无限设备。",
-        "pros": [
-          "最轻应用（45MB）",
-          "GPS欺骗功能",
-          "无限设备",
-          "最优价格",
-          "CleanWeb广告拦截器"
-        ],
-        "cons": [
-          "服务器少于Nord",
-          "稍慢一些"
-        ]
-      },
-      "expressvpn": {
-        "badge": "最佳旅行",
-        "description": "ExpressVPN为Android平板提供最佳稳定性，尤其是旅行时。在全球4G/5G网络上可靠运行。",
-        "pros": [
-          "4G/5G最稳定",
-          "在受限国家可用",
-          "Lightway协议",
-          "出色支持",
-          "易于使用"
-        ],
-        "cons": [
-          "价格较高",
-          "限制8台设备"
-        ]
-      }
+    "filters": {
+      "all": "所有代理",
+      "coding": "编码",
+      "noCode": "无代码",
+      "support": "支持",
+      "enterprise": "企业级",
+      "free": "免费套餐"
     },
-    "features": {
-      "title": "Android平板特定功能",
-      "splitTunneling": {
-        "title": "完整分离隧道",
-        "description": "选择哪些应用使用VPN，哪些使用常规连接"
-      },
-      "apkSideload": {
-        "title": "APK侧载",
-        "description": "在Play商店被屏蔽的国家直接安装VPN APK"
-      },
-      "customDns": {
-        "title": "自定义DNS和终止开关",
-        "description": "高级DNS设置和自动终止开关保护"
-      },
-      "alwaysOn": {
-        "title": "始终在线VPN",
-        "description": "Android的原生始终在线VPN自动保护您"
-      },
-      "widgets": {
-        "title": "主屏幕小部件",
-        "description": "快速连接小部件实现即时VPN保护"
-      },
-      "gpsSpoofing": {
-        "title": "GPS欺骗",
-        "description": "Surfshark可以在Android平板上欺骗您的GPS位置"
-      }
-    },
-    "tablets": {
-      "title": "流行的Android平板",
-      "samsung": {
-        "title": "三星Galaxy Tab",
-        "models": "Galaxy Tab S9、S8、S7、A8、A7",
-        "status": "完全兼容"
-      },
-      "lenovo": {
-        "title": "联想Tab",
-        "models": "Tab P12、P11、M10、M8",
-        "status": "完全兼容"
-      },
-      "xiaomi": {
-        "title": "小米平板",
-        "models": "Pad 6、Pad 5、Redmi Pad",
-        "status": "完全兼容"
-      }
-    },
-    "setup": {
-      "title": "如何在Android平板上设置VPN",
-      "steps": [
-        "在平板上打开Google Play商店",
-        "搜索您选择的VPN",
-        "点击「安装」下载",
-        "打开应用并登录",
-        "授予VPN权限",
-        "在设置中启用终止开关",
-        "点击「快速连接」"
-      ]
-    },
-    "streaming": {
-      "title": "在Android平板上流媒体",
-      "description": "在Android平板的大屏幕上享受带VPN保护的流媒体。",
-      "services": [
-        "Netflix全球",
-        "Disney+所有地区",
-        "YouTube Premium",
-        "Hulu（美国）",
-        "区域内容"
-      ]
-    },
-    "gaming": {
-      "title": "Android平板游戏VPN",
-      "description": "在Android平板上降低延迟并访问地理限制游戏。",
-      "games": [
-        "PUBG Mobile",
-        "Call of Duty Mobile",
-        "原神",
-        "Free Fire"
-      ]
-    },
-    "torrenting": {
-      "title": "在Android平板上下载种子",
-      "warning": "下载种子可能有风险。仅下载合法内容。",
-      "requirements": [
-        "启用终止开关",
-        "DNS泄漏保护",
-        "P2P优化服务器",
-        "无日志政策"
-      ]
-    },
-    "safety": {
-      "title": "Android平板VPN安全吗？",
-      "tips": [
-        "仅从Play商店或官方APK下载",
-        "启用终止开关",
-        "使用安全协议",
-        "保持应用更新"
-      ]
-    },
-    "avoid": {
-      "title": "要避免的免费Android VPN",
-      "description": "这些免费VPN对您的Android平板危险。",
-      "reasons": [
-        "数据收集",
-        "广告注入",
-        "恶意软件风险",
-        "无加密",
-        "带宽限制"
-      ]
-    },
-    "conclusion": {
-      "title": "选择您的Android平板VPN",
-      "description": "立即为您的Android平板获取最佳保护。",
-      "getBest": "获取NordVPN",
-      "getValue": "获取Surfshark - 82%折扣",
-      "getTravel": "获取ExpressVPN"
+    "sort": {
+      "rating": "按评分排序",
+      "price": "按价格排序",
+      "popular": "最受欢迎"
     }
   },
-  "tabletVpn": {
+  "agentCard": {
+    "starting": "起价",
+    "perMonth": "/月",
+    "free": "免费",
+    "models": "AI模型",
+    "integrations": "集成",
+    "freeTier": "提供免费套餐",
+    "getDeal": "获取优惠",
+    "viewReview": "查看评测",
+    "compare": "比较",
+    "editorChoice": "编辑推荐",
+    "bestValue": "最佳价值",
+    "mostPopular": "最受欢迎"
+  },
+  "agentReview": {
     "meta": {
-      "title": "最佳平板VPN（iPad、Android、Windows）2026",
-      "description": "比较最佳平板VPN应用。在iPad、Android平板和Surface Pro上测试。快速、安全且针对大屏幕优化。"
+      "titleTemplate": "{name}评测2026 - 值得吗? | ZeroToAIAgents",
+      "descriptionTemplate": "诚实的{name}评测,包括优缺点、定价和实际测试。了解{name}是否是适合您需求的AI代理。"
     },
     "hero": {
-      "badge": "平板VPN指南2026",
-      "title": "最佳平板VPN",
-      "subtitle": "针对iPad、Android平板和Windows平板的专家测试VPN应用。保护您的数据、解锁流媒体，在任何平板上保持安全。"
+      "review": "评测",
+      "updated": "更新于{date}"
     },
-    "intro": {
-      "title": "为什么平板需要特别的VPN关注",
-      "description": "平板占据智能手机和笔记本电脑之间的独特空间。无论您是在度假时观看Netflix、在酒店远程工作，还是让孩子安全浏览，平板VPN都提供必要的保护。凭借非常适合流媒体和多任务处理的大屏幕，平板极大地受益于针对更大显示屏优化的VPN功能。"
+    "quickFacts": {
+      "title": "快速事实",
+      "rating": "我们的评分",
+      "price": "起始价格",
+      "freeTier": "免费套餐",
+      "models": "AI模型",
+      "bestFor": "最适合"
     },
-    "why": {
-      "title": "为什么在平板上使用VPN？",
-      "publicWifi": {
-        "title": "公共WiFi安全",
-        "description": "在酒店、机场和咖啡馆WiFi网络上保护您的数据"
-      },
-      "tracking": {
-        "title": "防止跟踪",
-        "description": "阻止应用和网站跟踪您的在线活动"
-      },
-      "streaming": {
-        "title": "解锁流媒体",
-        "description": "从任何地方访问Netflix、Disney+、BBC iPlayer等"
-      },
-      "largeScreen": {
-        "title": "大屏幕优化",
-        "description": "专为平板界面和多任务处理设计的VPN应用"
-      },
-      "travel": {
-        "title": "完美旅行",
-        "description": "非常适合学习、远程工作或移动娱乐"
-      },
-      "throttling": {
-        "title": "防止限速",
-        "description": "阻止ISP降低您的流媒体和下载速度"
-      }
+    "toc": {
+      "title": "本评测内容"
     },
-    "reviews": {
-      "title": "前3名最佳平板VPN（2026）",
-      "subtitle": "在iPad、Android平板和Windows平板上测试",
-      "devices": "设备",
-      "unlimited": "无限",
-      "battery": "电池",
-      "low": "低",
-      "moderate": "中等",
-      "speed": "速度",
-      "servers": "服务器",
-      "countries": "国家",
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取",
-      "nordvpn": {
-        "badge": "最佳整体",
-        "description": "NordVPN凭借NordLynx协议、iPad和Android优化应用以及出色的流媒体性能，提供最快的平板体验。",
-        "pros": [
-          "NordLynx最快平板速度",
-          "出色的iPad和Android应用",
-          "Android平板分离隧道",
-          "118个国家的7,400+服务器",
-          "完美流媒体"
-        ],
-        "cons": [
-          "iPad无分离隧道",
-          "价格稍高"
-        ]
-      },
-      "surfshark": {
-        "badge": "最佳性价比",
-        "description": "Surfshark提供无限设备连接，非常适合拥有多台平板的家庭。轻量级应用即使在旧平板上也能很好地工作。",
-        "pros": [
-          "无限设备 - 非常适合家庭",
-          "最轻应用 - 完美适合旧平板",
-          "82%折扣的最优价格",
-          "CleanWeb拦截广告和恶意软件",
-          "Android上的GPS欺骗"
-        ],
-        "cons": [
-          "服务器网络较小",
-          "比NordVPN稍慢"
-        ]
-      },
-      "expressvpn": {
-        "badge": "最佳旅行",
-        "description": "ExpressVPN是旅行者最可靠的选择，在中国、阿联酋和土耳其稳定运行。在酒店和机场WiFi上稳定性出色。",
-        "pros": [
-          "在中国、阿联酋、土耳其可用",
-          "酒店WiFi最稳定",
-          "Lightway协议 - 快速高效",
-          "全天候客户支持",
-          "覆盖105个国家"
-        ],
-        "cons": [
-          "更贵",
-          "限制8台设备"
-        ]
-      }
+    "verdict": {
+      "title": "我们的结论",
+      "rating": "总体评分"
     },
-    "platforms": {
-      "title": "按平板类型分类的最佳VPN",
-      "ipad": {
-        "title": "最佳iPad VPN",
-        "description": "iPadOS优化应用，大屏幕界面、家庭共享支持和Apple隐私合规。",
-        "features": [
-          "iPadOS优化界面",
-          "家庭共享兼容",
-          "Apple隐私标签",
-          "多任务处理支持",
-          "iCloud钥匙串集成"
-        ],
-        "readMore": "最佳iPad VPN →"
-      },
-      "android": {
-        "title": "最佳Android平板VPN",
-        "description": "完整分离隧道、审查国家的APK侧载以及快速连接的小部件。",
-        "features": [
-          "完整分离隧道支持",
-          "可用APK侧载",
-          "自定义DNS设置",
-          "主屏幕小部件",
-          "始终在线VPN"
-        ],
-        "readMore": "最佳Android平板VPN →"
-      },
-      "windows": {
-        "title": "最佳Windows平板VPN",
-        "description": "Surface Pro和Surface Go上的完整Windows VPN支持。非常适合远程工作和企业安全。",
-        "features": [
-          "完整Windows应用支持",
-          "触控优化UI",
-          "企业安全功能",
-          "分离隧道",
-          "原生协议支持"
-        ],
-        "readMore": "最佳Windows平板VPN →"
-      }
+    "pros": "优点",
+    "cons": "缺点",
+    "pricing": {
+      "title": "定价与计划"
     },
-    "streaming": {
-      "title": "平板VPN流媒体",
-      "subtitle": "在平板的大屏幕上解锁您喜欢的内容",
-      "uk": {
-        "title": "英国",
-        "services": "BBC iPlayer、ITV Hub、Channel 4",
-        "recommended": "NordVPN、ExpressVPN"
-      },
-      "usa": {
-        "title": "美国",
-        "services": "Hulu、ESPN+、HBO Max、Peacock",
-        "recommended": "NordVPN、Surfshark"
-      },
-      "netherlands": {
-        "title": "荷兰",
-        "services": "Ziggo GO、NPO、Videoland",
-        "recommended": "NordVPN、Surfshark"
-      },
-      "germany": {
-        "title": "德国",
-        "services": "DAZN、RTL+、ZDF Mediathek",
-        "recommended": "NordVPN、ExpressVPN"
-      }
+    "features": {
+      "title": "主要功能"
     },
-    "travel": {
-      "title": "旅行时最佳平板VPN",
-      "subtitle": "在移动中保持保护和连接",
-      "airport": {
-        "title": "机场WiFi",
-        "description": "在臭名昭著的不安全机场网络上保护您的连接"
-      },
-      "hotel": {
-        "title": "酒店WiFi",
-        "description": "在全球共享酒店网络上保护您的数据"
-      },
-      "regionLocks": {
-        "title": "区域锁定",
-        "description": "在国外访问您的家庭流媒体服务"
-      },
-      "socialMedia": {
-        "title": "社交媒体禁令",
-        "description": "在土耳其、阿联酋、埃及和中国访问被屏蔽的应用"
-      }
+    "useCases": {
+      "title": "最佳使用场景"
     },
-    "safety": {
-      "title": "平板VPN安全吗？",
-      "description": "是的，当您使用信誉良好的高级提供商时，平板VPN是安全的。高级VPN服务使用军事级加密和严格的无日志政策。然而，免费VPN实际上可能会使您平板的数据面临风险。",
-      "premium": {
-        "title": "高级VPN安全是因为：",
-        "features": [
-          "军事级AES-256加密",
-          "严格的无日志政策（经审计）",
-          "安全协议（WireGuard、NordLynx）",
-          "终止开关防止数据泄漏",
-          "定期第三方安全审计",
-          "透明的隐私政策"
-        ]
-      },
-      "free": {
-        "title": "免费VPN危险是因为：",
-        "dangers": [
-          "收集和出售您的数据",
-          "在浏览中注入广告",
-          "弱或无加密",
-          "可能包含恶意软件或间谍软件",
-          "严重限制速度",
-          "无客户支持"
-        ]
-      }
+    "integrations": {
+      "title": "集成"
     },
-    "avoid": {
-      "title": "要避免的免费平板VPN",
-      "description": "这些免费VPN被发现收集用户数据、注入广告或存在安全漏洞。不要冒险危害您平板的安全。",
-      "vpns": [
+    "alternatives": {
+      "title": "{name}的替代方案"
+    },
+    "cta": {
+      "title": "今天试用{name}",
+      "description": "准备好开始了吗?点击下面访问{name},看看它是否适合您。",
+      "button": "访问{name}",
+      "moneyBack": "{days}天免费试用"
+    }
+  },
+  "codingAgents": {
+    "meta": {
+      "title": "2026年最佳AI编码代理 - 专家评测与比较",
+      "description": "比较最佳AI编码代理:Cursor、GitHub Copilot、Replit Agent等。找到适合您工作流程的完美AI配对编程器。"
+    },
+    "hero": {
+      "badge": "编码代理",
+      "title": "最佳AI编码代理",
+      "subtitle": "AI编码代理与您一起编写、调试和部署代码。比较顶级编码助手,找到您完美的AI配对编程器。"
+    },
+    "intro": "AI编码代理彻底改变了软件开发,使开发人员能够更快地编写代码、更高效地调试并以创纪录的时间交付功能。与简单的自动完成工具不同,现代编码代理理解上下文,可以重构整个代码库,甚至可以自主部署应用程序。无论您是独立开发者还是企业团队的一员,都有适合您工作流程的编码代理。",
+    "comparison": {
+      "title": "比较顶级编码代理",
+      "description": "最受欢迎的AI编码助手并排比较"
+    },
+    "features": {
+      "title": "在编码代理中寻找什么",
+      "items": [
         {
-          "name": "HolaVPN",
-          "reason": "将您的设备用作其他用户的出口节点"
+          "title": "IDE集成",
+          "description": "与VS Code、JetBrains或您首选的编辑器无缝集成",
+          "icon": "Code"
         },
         {
-          "name": "TurboVPN",
-          "reason": "收集和出售用户浏览数据"
+          "title": "上下文感知",
+          "description": "理解您的整个代码库,而不仅仅是当前文件",
+          "icon": "Brain"
         },
         {
-          "name": "SuperVPN",
-          "reason": "发现多个安全漏洞"
+          "title": "多语言支持",
+          "description": "支持您使用的所有语言:JavaScript、Python、Go等",
+          "icon": "FileCode"
         },
         {
-          "name": "Betternet",
-          "reason": "包含跟踪库和恶意软件"
+          "title": "代码执行",
+          "description": "自动运行和测试生成的代码",
+          "icon": "Play"
         },
         {
-          "name": "Free VPN Unlimited",
-          "reason": "记录用户活动并注入广告"
+          "title": "重构",
+          "description": "智能代码重构和优化建议",
+          "icon": "RefreshCw"
+        },
+        {
+          "title": "调试",
+          "description": "自动识别错误并建议修复",
+          "icon": "Bug"
         }
       ]
     },
-    "conclusion": {
-      "title": "为您的平板选择最佳VPN",
-      "description": "无论您拥有iPad、Android平板还是Windows平板，这些VPN都将保护您的安全并让您享受无限制的内容。",
-      "best": {
-        "title": "NordVPN",
-        "subtitle": "最佳平板整体",
-        "description": "最快速度、最佳应用、随处可用"
-      },
-      "value": {
-        "title": "Surfshark",
-        "subtitle": "最佳家庭性价比",
-        "description": "无限设备、最优价格、非常适合家庭"
-      },
-      "travel": {
-        "title": "ExpressVPN",
-        "subtitle": "最佳旅行者",
-        "description": "在中国、阿联酋可用，最可靠"
-      },
-      "getBest": "获取NordVPN",
-      "getValue": "获取Surfshark - 82%折扣",
-      "getTravel": "获取ExpressVPN"
+    "faq": {
+      "title": "编码代理常见问题",
+      "questions": [
+        {
+          "question": "AI编码代理值得吗?",
+          "answer": "绝对值得。研究表明,使用AI编码助手的开发人员在常规任务上的生产力提高了5-10倍,使他们能够专注于复杂的问题解决和架构。"
+        },
+        {
+          "question": "AI代理可以编写生产质量的代码吗?",
+          "answer": "对于许多任务,可以。AI代理擅长样板代码、CRUD操作和常见模式。然而,复杂的架构和关键系统仍然受益于人工监督。"
+        },
+        {
+          "question": "哪个更好:GitHub Copilot还是Cursor?",
+          "answer": "Cursor提供更高级的功能,如代码库范围的理解和代理能力,而Copilot具有更广泛的IDE支持。Cursor通常更适合复杂项目。"
+        },
+        {
+          "question": "我还需要知道如何编码吗?",
+          "answer": "是的。AI编码代理是助手,而不是替代品。您需要理解代码才能审查、调试和架构解决方案。它们放大您的技能而不是替代它们。"
+        }
+      ]
     }
   },
-  "windowsTabletVpn": {
+  "noCodeAgents": {
     "meta": {
-      "title": "最佳Windows平板VPN（Surface Pro、Surface Go）2026",
-      "description": "寻找最佳Windows平板VPN。在Surface Pro和Surface Go上测试，完整Windows应用支持和企业安全。"
+      "title": "2026年最佳无代码AI代理构建器 - 无需编码即可构建",
+      "description": "比较最佳无代码AI代理构建器。无需编写代码即可创建强大的AI工作流。非常适合业务用户和营销人员。"
     },
     "hero": {
-      "badge": "Windows平板VPN指南2026",
-      "title": "最佳Windows平板VPN",
-      "subtitle": "针对Surface Pro、Surface Go和Windows平板的专家测试VPN应用。便携包装中的完整桌面VPN功能。"
+      "badge": "无代码构建器",
+      "title": "最佳无代码AI代理构建器",
+      "subtitle": "无需编写一行代码即可构建强大的AI代理。非常适合业务用户、营销人员和非技术团队。"
     },
-    "why": {
-      "title": "为什么您的Windows平板需要VPN",
-      "remoteWork": {
-        "title": "远程工作安全",
-        "description": "使用企业级加密从任何地方安全访问公司"
-      },
-      "fullWindows": {
-        "title": "完整Windows功能",
-        "description": "访问具有所有桌面功能的完整Windows VPN应用"
-      },
-      "travel": {
-        "title": "旅行就绪",
-        "description": "非常适合商务旅行，全球连接可靠"
-      },
-      "enterprise": {
-        "title": "企业安全",
-        "description": "通过审计就绪的VPN满足公司安全要求"
-      }
-    },
-    "reviews": {
-      "title": "最佳Windows平板VPN（2026）",
-      "subtitle": "在Surface Pro和Surface Go上测试",
-      "pros": "优点",
-      "cons": "缺点",
-      "getButton": "获取",
-      "nordvpn": {
-        "badge": "最佳整体",
-        "description": "NordVPN的原生Windows应用在Surface平板上提供最佳体验，采用NordLynx协议和完整终止开关支持。",
-        "pros": [
-          "原生Windows应用",
-          "NordLynx协议",
-          "完整终止开关",
-          "触控友好UI",
-          "商业功能"
-        ],
-        "cons": [
-          "价格较高",
-          "资源使用"
-        ]
-      },
-      "surfshark": {
-        "badge": "最佳性价比",
-        "description": "Surfshark以最优价格提供无限设备，非常适合拥有多台Windows设备的专业人士。",
-        "pros": [
-          "无限设备",
-          "轻量级应用",
-          "最优价格",
-          "CleanWeb功能",
-          "良好速度"
-        ],
-        "cons": [
-          "功能较少",
-          "网络较小"
-        ]
-      },
-      "expressvpn": {
-        "badge": "最佳稳定性",
-        "description": "ExpressVPN为Windows平板提供最稳定的连接，Lightway协议针对移动使用进行了优化。",
-        "pros": [
-          "最稳定",
-          "Lightway协议",
-          "非常适合旅行",
-          "全天候支持",
-          "易于设置"
-        ],
-        "cons": [
-          "最贵",
-          "8台设备限制"
-        ]
-      }
+    "intro": "无代码AI代理构建器使AI自动化民主化,使任何人都能通过可视化界面和预构建模板创建复杂的AI工作流。无论您是自动化营销活动、简化客户服务还是构建数据管道,这些平台都使非开发人员也能访问AI。拖放界面、预构建集成和模板让您在几小时而不是几周内从想法到生产。",
+    "comparison": {
+      "title": "比较无代码平台",
+      "description": "找到最适合您使用场景的AI代理构建器"
     },
     "features": {
-      "title": "Windows平板特定功能",
-      "killSwitch": {
-        "title": "完整终止开关",
-        "description": "Windows原生终止开关在VPN断开时防止数据泄漏"
-      },
-      "splitTunneling": {
-        "title": "应用级分离隧道",
-        "description": "选择Surface平板上哪些应用通过VPN路由"
-      },
-      "protocols": {
-        "title": "原生协议支持",
-        "description": "Windows上支持WireGuard、OpenVPN和IKEv2"
-      },
-      "touchUi": {
-        "title": "触控优化UI",
-        "description": "专为触摸屏使用设计界面的VPN应用"
-      },
-      "security": {
-        "title": "Windows安全集成",
-        "description": "与Windows Defender和安全功能无缝协作"
-      }
-    },
-    "surface": {
-      "title": "Surface Pro和Surface Go",
-      "description": "所有推荐的VPN在Microsoft Surface平板上完美运行。",
-      "pro": {
-        "title": "Surface Pro",
-        "description": "完整Windows 11支持，所有VPN功能"
-      },
-      "go": {
-        "title": "Surface Go",
-        "description": "针对Surface Go硬件优化的轻量级VPN应用"
-      }
-    },
-    "setup": {
-      "title": "如何在Windows平板上设置VPN",
-      "steps": [
-        "访问VPN提供商的网站",
-        "下载Windows应用",
-        "安装并运行应用",
-        "登录您的账户",
-        "在设置中启用终止开关",
-        "选择服务器并连接"
-      ]
-    },
-    "remoteWork": {
-      "title": "使用Windows平板VPN远程工作",
-      "description": "使用Surface平板远程工作时保护您的公司访问。",
-      "benefits": [
-        "加密公司访问",
-        "安全文件传输",
-        "受保护的视频通话",
-        "符合政策",
-        "在任何网络上工作"
-      ]
-    },
-    "safety": {
-      "title": "Windows平板VPN安全吗？",
-      "description": "是的，Windows平板上的高级VPN提供与台式电脑相同的安全性。",
-      "premium": {
-        "title": "高级VPN优势：",
-        "features": [
-          "军事级加密",
-          "无日志政策",
-          "终止开关保护",
-          "DNS泄漏防护",
-          "定期审计"
-        ]
-      },
-      "free": {
-        "title": "避免免费VPN：",
-        "dangers": [
-          "数据记录",
-          "弱加密",
-          "广告注入",
-          "恶意软件风险",
-          "功能有限"
-        ]
-      }
-    },
-    "avoid": {
-      "title": "要避免的免费Windows VPN",
-      "description": "不要用免费VPN危害您Surface平板的安全。",
-      "vpns": [
+      "title": "在无代码平台中寻找什么",
+      "items": [
         {
-          "name": "Hola VPN",
-          "reason": "将您的设备用作代理"
+          "title": "可视化构建器",
+          "description": "无需代码即可构建工作流的拖放界面",
+          "icon": "Layout"
         },
         {
-          "name": "Hotspot Shield Free",
-          "reason": "记录和出售数据"
+          "title": "预构建模板",
+          "description": "用于常见用例的现成模板,快速入门",
+          "icon": "FileText"
         },
         {
-          "name": "Betternet",
-          "reason": "包含恶意软件"
+          "title": "集成",
+          "description": "数百个与流行工具的预构建集成",
+          "icon": "Link"
         },
         {
-          "name": "SuperVPN",
-          "reason": "安全漏洞"
+          "title": "AI模型",
+          "description": "访问强大的AI模型,如GPT-4,无需API设置",
+          "icon": "Brain"
+        },
+        {
+          "title": "调度",
+          "description": "根据时间表、webhook或事件触发代理",
+          "icon": "Clock"
+        },
+        {
+          "title": "协作",
+          "description": "与您的团队共享和协作代理",
+          "icon": "Users"
         }
       ]
     },
-    "conclusion": {
-      "title": "为您的Windows平板选择最佳VPN",
-      "description": "使用这些顶级VPN保护您的Surface Pro或Surface Go。",
-      "getBest": "获取NordVPN",
-      "getValue": "获取Surfshark - 82%折扣",
-      "getTravel": "获取ExpressVPN"
+    "faq": {
+      "title": "无代码代理常见问题",
+      "questions": [
+        {
+          "question": "我真的可以在没有编码的情况下构建AI代理吗?",
+          "answer": "是的!无代码平台提供可视化界面,您可以在其中连接块、配置设置和测试 - 无需编程。您可以完全通过拖放构建复杂的工作流。"
+        },
+        {
+          "question": "无代码代理和编码代理一样强大吗?",
+          "answer": "对于大多数业务使用场景,绝对是。无代码平台提供与编码解决方案相同的AI模型和集成。您可能会在高度自定义或复杂的逻辑上遇到限制。"
+        },
+        {
+          "question": "哪个无代码平台最适合初学者?",
+          "answer": "Zapier AI最适合初学者,拥有出色的文档和预构建模板。Make提供更多功能,但学习曲线更陡峭。"
+        },
+        {
+          "question": "如果需要,我可以稍后切换到代码吗?",
+          "answer": "一些平台(如n8n)允许将工作流导出为代码或为自定义扩展提供API访问。如果代码灵活性很重要,请检查平台功能。"
+        }
+      ]
+    }
+  },
+  "supportAgents": {
+    "meta": {
+      "title": "2026年最佳AI客户支持代理 - 自动化支持",
+      "description": "比较最佳AI客户支持代理。提供24/7自动化支持,更快解决工单并提高客户满意度。"
+    },
+    "hero": {
+      "badge": "客户支持",
+      "title": "最佳AI客户支持代理",
+      "subtitle": "使用AI代理提供24/7自动化客户支持。立即解决常见问题,减少工单量并提高满意度。"
+    },
+    "intro": "AI客户支持代理正在改变企业为客户提供服务的方式,通过类似人类的对话全天候处理查询。现代支持代理可以回答常见问题、解决问题、处理退货并无缝升级复杂案例到人工代理。它们与您的知识库、CRM和帮助台软件集成,以提供大规模的上下文化、个性化支持。对于在支持工单中挣扎的企业,AI代理提供了以更低成本提供更好服务的途径。",
+    "comparison": {
+      "title": "比较支持代理",
+      "description": "找到最适合您客户支持需求的AI代理"
+    },
+    "features": {
+      "title": "必备支持代理功能",
+      "items": [
+        {
+          "title": "知识库集成",
+          "description": "连接到您的帮助文档、常见问题解答和内部知识",
+          "icon": "BookOpen"
+        },
+        {
+          "title": "多渠道支持",
+          "description": "通过聊天、电子邮件、短信和社交媒体提供支持",
+          "icon": "MessageSquare"
+        },
+        {
+          "title": "人工交接",
+          "description": "无缝升级复杂问题到人工代理",
+          "icon": "Users"
+        },
+        {
+          "title": "工单管理",
+          "description": "自动创建、更新和解决工单",
+          "icon": "Ticket"
+        },
+        {
+          "title": "情感分析",
+          "description": "检测沮丧的客户并适当优先处理",
+          "icon": "Heart"
+        },
+        {
+          "title": "多语言",
+          "description": "自动提供数十种语言的支持",
+          "icon": "Globe"
+        }
+      ]
+    },
+    "faq": {
+      "title": "支持代理常见问题",
+      "questions": [
+        {
+          "question": "AI代理会取代人工支持人员吗?",
+          "answer": "不会,它们是对人工代理的补充。AI处理常规查询(60-80%的工单),使人类专注于需要同理心和判断力的复杂问题。"
+        },
+        {
+          "question": "AI支持代理有多准确?",
+          "answer": "通过适当的设置和知识库集成,AI代理在常见问题上达到85-95%的准确率。随着它们从交互中学习,它们会随着时间的推移而改进。"
+        },
+        {
+          "question": "AI代理可以处理愤怒的客户吗?",
+          "answer": "AI代理可以检测情绪并以同理心回应。然而,它们通常配置为将沮丧的客户升级到人工代理以获得更好的结果。"
+        },
+        {
+          "question": "实施需要多长时间?",
+          "answer": "大多数平台可以在1-2周内部署。初始设置包括连接您的知识库、配置工作流和培训。持续优化是持续进行的。"
+        }
+      ]
+    }
+  },
+  "enterpriseAgents": {
+    "meta": {
+      "title": "2026年最佳企业级AI代理平台 - 可扩展且安全",
+      "description": "比较具有先进安全性、合规性和可扩展性的企业级AI代理平台,适用于大型组织。"
+    },
+    "hero": {
+      "badge": "企业级AI",
+      "title": "最佳企业级AI代理平台",
+      "subtitle": "具有先进安全性、合规性、可扩展性和大型组织专用支持的企业级AI代理。"
+    },
+    "intro": "企业级AI代理平台是为大型组织的需求而构建的:安全性、合规性、可扩展性以及与复杂技术堆栈的集成。这些平台提供SSO、RBAC、SOC 2合规性、专用支持和SLA等功能。它们与Salesforce、SAP、Oracle和ServiceNow等企业系统集成。如果您要在数百或数千个用户中部署AI代理,或处理敏感数据,企业平台提供您需要的稳健性和安全性。",
+    "comparison": {
+      "title": "比较企业平台",
+      "description": "为您的组织找到合适的企业级AI解决方案"
+    },
+    "features": {
+      "title": "企业平台要求",
+      "items": [
+        {
+          "title": "安全与合规",
+          "description": "符合SOC 2、GDPR、HIPAA的审计日志",
+          "icon": "Shield"
+        },
+        {
+          "title": "SSO与RBAC",
+          "description": "单点登录和基于角色的访问控制",
+          "icon": "Key"
+        },
+        {
+          "title": "可扩展性",
+          "description": "处理数千个并发用户和工作流",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "企业集成",
+          "description": "连接到Salesforce、SAP、Oracle、ServiceNow等",
+          "icon": "Plug"
+        },
+        {
+          "title": "专用支持",
+          "description": "24/7支持、专用客户经理、SLA",
+          "icon": "Headphones"
+        },
+        {
+          "title": "部署选项",
+          "description": "云、本地或混合部署",
+          "icon": "Server"
+        }
+      ]
+    },
+    "faq": {
+      "title": "企业级AI常见问题",
+      "questions": [
+        {
+          "question": "什么使AI平台\"企业就绪\"?",
+          "answer": "企业平台提供先进的安全性(SOC 2、SSO、RBAC)、合规认证、数千用户的可扩展性、具有SLA的专用支持以及与企业系统的集成。"
+        },
+        {
+          "question": "企业级AI平台的成本是多少?",
+          "answer": "企业计划通常从每月1,000-5,000美元起,适用于团队,根据使用情况、用户和支持级别扩展。大型部署通常采用自定义定价。"
+        },
+        {
+          "question": "我们可以在本地部署AI代理吗?",
+          "answer": "一些平台(如Microsoft、IBM和开源解决方案)提供本地或私有云部署。这对于高度监管的行业至关重要。"
+        },
+        {
+          "question": "我们如何确保企业级AI投资的投资回报率?",
+          "answer": "从高影响力的使用场景(客户支持、数据分析、工作流自动化)开始,衡量节省的时间和效率提升,并逐步扩展。大多数企业在6-12个月内看到正投资回报率。"
+        }
+      ]
+    }
+  },
+  "freeAgents": {
+    "meta": {
+      "title": "2026年最佳免费AI代理 - 无需付费即可开始",
+      "description": "比较最佳免费AI代理平台。无需信用卡即可开始构建AI工作流。非常适合个人和小型团队。"
+    },
+    "hero": {
+      "badge": "免费AI代理",
+      "title": "最佳免费AI代理",
+      "subtitle": "从免费AI代理平台开始 - 无需信用卡。非常适合个人、学生和探索AI自动化的小型团队。"
+    },
+    "intro": "免费AI代理平台让您在没有财务承诺的情况下探索AI自动化。虽然免费套餐有限制(使用上限、较少的集成、较小的上下文窗口),但它们非常适合学习、个人项目和概念验证。许多成功的企业在升级之前从免费套餐开始。我们测试了数十个免费AI代理,以找到那些在没有付款的情况下提供最大价值的。",
+    "comparison": {
+      "title": "比较免费AI代理",
+      "description": "找到最适合您需求的免费套餐"
+    },
+    "features": {
+      "title": "免费套餐通常包括什么",
+      "items": [
+        {
+          "title": "限制使用",
+          "description": "请求、令牌或执行的月度上限",
+          "icon": "Activity"
+        },
+        {
+          "title": "核心功能",
+          "description": "访问主要功能,通常限制较低",
+          "icon": "CheckCircle"
+        },
+        {
+          "title": "社区支持",
+          "description": "论坛或社区支持,而不是专用帮助",
+          "icon": "Users"
+        },
+        {
+          "title": "基本集成",
+          "description": "提供流行的集成,高级集成在付费套餐中",
+          "icon": "Link"
+        },
+        {
+          "title": "较旧的AI模型",
+          "description": "访问GPT-3.5或Claude 2,而不是最新模型",
+          "icon": "Zap"
+        },
+        {
+          "title": "公共项目",
+          "description": "项目可能是公开的或有导出限制",
+          "icon": "Eye"
+        }
+      ]
+    },
+    "tips": {
+      "title": "免费套餐用户的提示",
+      "items": [
+        "从一个平台开始,深入学习,然后再探索其他平台",
+        "监控您的使用情况,以避免意外达到限制",
+        "使用免费套餐进行学习和概念验证,升级到生产环境",
+        "结合多个免费套餐以最大化功能",
+        "检查是否有教育或非营利折扣",
+        "仔细阅读条款 - 一些免费套餐是限时试用"
+      ]
+    },
+    "faq": {
+      "title": "免费AI代理常见问题",
+      "questions": [
+        {
+          "question": "免费AI代理真的永久免费吗?",
+          "answer": "大多数有限制地免费(使用上限、较少功能)。有些是免费试用(例如,14-30天),之后需要付款。务必查看平台的条款。"
+        },
+        {
+          "question": "我可以将免费AI代理用于商业项目吗?",
+          "answer": "条款因平台而异。许多允许在免费套餐上进行商业使用,但有些将其限制为个人或非商业使用。务必验证许可证。"
+        },
+        {
+          "question": "当我达到免费套餐限制时会发生什么?",
+          "answer": "通常,代理会停止工作,直到下一个计费周期,或者提示您升级。一些平台为超额提供按使用付费选项。"
+        },
+        {
+          "question": "哪个免费AI代理最适合初学者?",
+          "answer": "ChatGPT(免费套餐)最适合初学者进行一般AI聊天。对于自动化,Zapier AI有慷慨的免费套餐和出色的文档。"
+        }
+      ]
+    }
+  },
+  "aiFrameworks": {
+    "meta": {
+      "title": "2026年最佳AI代理框架 - 构建自定义代理",
+      "description": "比较开发人员的最佳AI代理框架:LangChain、crewAI、AutoGPT等。从头开始构建自定义代理。"
+    },
+    "hero": {
+      "badge": "AI框架",
+      "title": "最佳AI代理框架",
+      "subtitle": "使用强大的开源框架从头开始构建自定义AI代理。非常适合需要完全控制和定制的开发人员。"
+    },
+    "intro": "AI代理框架是提供创建自定义代理的构建块的库和工具。您不是使用预构建的平台,而是编写代码来编排LLM、管理内存、调用工具和处理错误。像LangChain、LlamaIndex和crewAI这样的框架抽象掉了低级细节,同时给您完全的灵活性。这种方法非常适合构建独特应用程序的开发人员、实验代理架构的研究人员或需要专有解决方案的公司。",
+    "comparison": {
+      "title": "比较AI框架",
+      "description": "找到最适合您开发需求的框架"
+    },
+    "features": {
+      "title": "AI框架提供什么",
+      "items": [
+        {
+          "title": "LLM编排",
+          "description": "调用多个LLM提供商的抽象接口",
+          "icon": "Cpu"
+        },
+        {
+          "title": "工具管理",
+          "description": "定义和管理代理可以使用的工具",
+          "icon": "Wrench"
+        },
+        {
+          "title": "记忆系统",
+          "description": "内置记忆类型:对话、语义、情节",
+          "icon": "Database"
+        },
+        {
+          "title": "代理模板",
+          "description": "预构建的代理模式和工作流",
+          "icon": "Layout"
+        },
+        {
+          "title": "评估工具",
+          "description": "测试和基准代理性能",
+          "icon": "BarChart"
+        },
+        {
+          "title": "开源",
+          "description": "完全透明、社区贡献、无供应商锁定",
+          "icon": "Github"
+        }
+      ]
+    },
+    "faq": {
+      "title": "AI框架常见问题",
+      "questions": [
+        {
+          "question": "我应该使用框架还是平台?",
+          "answer": "如果您想要快速设置和托管基础设施,请使用平台(如Cursor、Zapier AI)。如果您需要完全定制、想要构建专有技术或是研究人员/开发人员,请使用框架。"
+        },
+        {
+          "question": "我应该首先学习哪个框架?",
+          "answer": "LangChain是最受欢迎的,拥有最好的文档。从那里开始,然后根据您的需求探索LlamaIndex(用于数据密集型应用)或crewAI(用于多代理系统)。"
+        },
+        {
+          "question": "我可以一起使用多个框架吗?",
+          "answer": "是的,许多开发人员组合框架。例如,使用LlamaIndex进行检索,使用LangChain进行代理编排。框架通常是可组合的。"
+        },
+        {
+          "question": "我需要成为专家编码员才能使用框架吗?",
+          "answer": "您需要扎实的编程技能(Python或JavaScript)以及对异步编程、API和数据结构的理解。框架的学习曲线比无代码平台更陡峭。"
+        }
+      ]
+    }
+  },
+  "generalPurpose": {
+    "meta": {
+      "title": "2026年最佳通用AI助手 - ChatGPT、Claude等",
+      "description": "比较日常任务的最佳通用AI助手:ChatGPT、Claude、Gemini等。"
+    },
+    "hero": {
+      "badge": "通用型",
+      "title": "最佳通用AI助手",
+      "subtitle": "用于日常任务的多功能AI助手:写作、研究、头脑风暴、学习等。比较ChatGPT、Claude、Gemini和其他流行的AI聊天机器人。"
+    },
+    "intro": "通用AI助手是AI的瑞士军刀 - 能够在没有专业化的情况下帮助完成各种各样的任务。这些是每个人都听说过的AI聊天机器人:ChatGPT、Claude、Gemini等。它们擅长写作、研究、编码帮助、头脑风暴、学习和一般问答。虽然专业代理在特定领域表现优于它们,但通用助手对于日常知识工作和创意任务来说是无价的。",
+    "comparison": {
+      "title": "比较AI助手",
+      "description": "找到最适合您需求的通用AI"
+    },
+    "features": {
+      "title": "通用AI助手可以做什么",
+      "items": [
+        {
+          "title": "写作与编辑",
+          "description": "起草电子邮件、论文、报告和创意内容",
+          "icon": "FileText"
+        },
+        {
+          "title": "研究与学习",
+          "description": "回答问题、解释概念、总结文章",
+          "icon": "BookOpen"
+        },
+        {
+          "title": "头脑风暴",
+          "description": "生成想法、探索可能性、创意思考",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "编码帮助",
+          "description": "编写代码片段、调试、解释编程概念",
+          "icon": "Code"
+        },
+        {
+          "title": "分析",
+          "description": "分析数据、比较选项、提供建议",
+          "icon": "BarChart"
+        },
+        {
+          "title": "对话",
+          "description": "就几乎任何主题进行自然对话",
+          "icon": "MessageSquare"
+        }
+      ]
+    },
+    "faq": {
+      "title": "通用AI常见问题",
+      "questions": [
+        {
+          "question": "哪个更好:ChatGPT还是Claude?",
+          "answer": "两者都很出色。ChatGPT(GPT-4)在编码和数学方面略好。Claude在更长的上下文、分析和创意写作方面表现出色。尝试两者,看看您更喜欢哪种风格。"
+        },
+        {
+          "question": "通用AI助手准确吗?",
+          "answer": "它们非常有能力但并不完美。它们可能会犯错,特别是在最近事件、小众主题或计算方面。始终从权威来源验证重要信息。"
+        },
+        {
+          "question": "我可以将AI助手用于工作吗?",
+          "answer": "是的,数百万人这样做。它们非常适合起草、研究和头脑风暴。然而,仔细审查输出,不要共享机密信息(除非使用企业计划),并遵循公司的AI政策。"
+        },
+        {
+          "question": "我需要为ChatGPT Plus或Claude Pro付费吗?",
+          "answer": "免费套餐非常适合偶尔使用。付费计划(每月20美元)为您提供更快的响应、访问最新模型(GPT-4、Claude 3)和更高的使用限制。值得每天使用。"
+        }
+      ]
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "AI代理博客 - 新闻、指南与教程 | ZeroToAIAgents",
+      "description": "关于AI代理的最新新闻、指南和教程。了解新平台、使用场景和最佳实践的最新信息。"
+    },
+    "hero": {
+      "title": "AI代理博客",
+      "subtitle": "关于AI代理的最新新闻、指南和教程"
+    },
+    "categories": {
+      "all": "所有文章",
+      "news": "新闻",
+      "guides": "指南",
+      "tutorials": "教程",
+      "reviews": "评测",
+      "comparisons": "比较"
+    },
+    "filters": {
+      "latest": "最新",
+      "popular": "最受欢迎",
+      "trending": "热门"
+    },
+    "readMore": "阅读更多",
+    "minRead": "分钟阅读",
+    "share": "分享",
+    "relatedPosts": "相关文章",
+    "newsletter": {
+      "title": "不要错过任何更新",
+      "description": "每周获取最新的AI代理新闻、评测和教程。"
+    }
+  },
+  "comparePage": {
+    "meta": {
+      "title": "并排比较AI代理 - ZeroToAIAgents",
+      "description": "并排比较AI代理平台。在一个视图中查看功能、定价、集成和评分。"
+    },
+    "hero": {
+      "title": "比较AI代理",
+      "subtitle": "选择要并排比较的代理"
+    },
+    "selectAgents": "选择要比较的代理",
+    "search": "搜索AI代理...",
+    "selected": "已选择",
+    "compare": "比较",
+    "clearAll": "清除全部",
+    "addAgent": "添加代理",
+    "columns": {
+      "overview": "概述",
+      "pricing": "定价",
+      "features": "功能",
+      "integrations": "集成",
+      "ratings": "评分",
+      "pros": "优点",
+      "cons": "缺点"
+    },
+    "labels": {
+      "startingPrice": "起始价格",
+      "freeTier": "免费套餐",
+      "models": "AI模型",
+      "rating": "我们的评分",
+      "userRating": "用户评分",
+      "bestFor": "最适合",
+      "available": "可用",
+      "notAvailable": "不可用"
     }
   },
   "coupons": {
-    "code": "优惠券代码",
-    "copy": "复制代码",
-    "copied": "已复制！",
-    "verified": "已验证",
-    "expiringSoon": "即将到期",
-    "expires": "到期",
+    "title": "独家优惠",
+    "description": "通过我们的独家优惠节省AI代理平台费用",
+    "active": "活跃优惠",
+    "expired": "已过期",
+    "expiresSoon": "即将过期",
+    "expiresIn": "{days}天后过期",
+    "unlimited": "持续进行",
     "getDeal": "获取优惠",
-    "noCoupons": "暂无可用优惠券"
+    "revealCode": "显示代码",
+    "copied": "已复制!",
+    "copyCode": "复制代码"
   },
   "couponsPage": {
-    "title": "VPN优惠券和折扣码",
-    "subtitle": "使用验证过的优惠券代码节省高达83%。每日更新独家优惠。",
-    "coupons": "优惠券",
-    "activeCoupon": "有效优惠券",
-    "activeCoupons": "有效优惠券",
-    "editorChoice": "编辑推荐",
-    "features": {
-      "verified": "已验证代码",
-      "verifiedDesc": "所有优惠券均已测试并可用",
-      "savings": "大幅节省",
-      "savingsDesc": "节省高达83%",
-      "updated": "每日更新",
-      "updatedDesc": "每天都有新优惠",
-      "exclusive": "独家优惠",
-      "exclusiveDesc": "为读者提供的特别优惠"
-    },
-    "howToUse": {
-      "title": "如何使用VPN优惠券",
-      "step1": "选择您的VPN",
-      "step1Desc": "从我们验证过的VPN提供商中选择，他们有有效的折扣码。",
-      "step2": "复制代码",
-      "step2Desc": "点击复制按钮将优惠券代码保存到剪贴板。",
-      "step3": "结账时应用",
-      "step3Desc": "在VPN提供商网站结账时粘贴代码以获得折扣。"
-    }
-  }
-,
-  "quiz": {
-    "metadata": {
-      "title": "VPN查找器测验 - 找到您的完美VPN | ZeroToVPN",
-      "description": "回答5个简单问题，找到适合您需求的完美VPN。根据您的预算、使用情况和位置获得个性化VPN推荐。",
-      "ogTitle": "通过5个问题找到您的完美VPN",
-      "ogDescription": "参加我们的快速测验，发现最适合流媒体、游戏、隐私或种子下载的VPN。不到2分钟即可获得个性化推荐。",
-      "ogImageAlt": "VPN查找器测验 - 找到您的完美VPN匹配"
+    "meta": {
+      "title": "2026年AI代理优惠与折扣 - 节省高达90%",
+      "description": "顶级AI代理平台的独家优惠和折扣。通过我们验证的优惠券代码和特别优惠节省高达90%。"
     },
     "hero": {
-      "title": "找到您的完美VPN",
-      "subtitle": "回答5个简单问题，获得为您量身定制的个性化VPN推荐"
+      "badge": "独家优惠",
+      "title": "AI代理优惠与折扣",
+      "subtitle": "通过我们的独家优惠和验证的优惠券代码,在最佳AI代理平台上节省大笔费用"
     },
-    "progress": {
-      "step": "问题",
-      "of": "共"
+    "filters": {
+      "all": "所有优惠",
+      "coding": "编码代理",
+      "noCode": "无代码",
+      "support": "支持",
+      "enterprise": "企业级",
+      "expiringSoon": "即将过期"
     },
-    "questions": {
-      "primaryUse": {
-        "title": "您主要需要VPN做什么？",
-        "options": {
-          "streaming": "流媒体（Netflix、Disney+等）",
-          "privacy": "隐私与安全",
-          "gaming": "游戏",
-          "torrenting": "种子下载/P2P",
-          "work": "工作/商务"
-        }
-      },
-      "budget": {
-        "title": "您的月度预算是多少？",
-        "options": {
-          "free": "免费（€0）",
-          "budget": "预算型（€2-4/月）",
-          "midrange": "中档（€4-8/月）",
-          "premium": "高级（€8+/月）"
-        }
-      },
-      "devices": {
-        "title": "您需要连接多少台设备？",
-        "options": {
-          "few": "1-2台设备",
-          "several": "3-5台设备",
-          "many": "6-10台设备",
-          "unlimited": "无限设备"
-        }
-      },
-      "speedPriority": {
-        "title": "速度对您有多重要？",
-        "options": {
-          "critical": "关键（游戏、4K流媒体）",
-          "important": "重要",
-          "notPriority": "不是优先考虑"
-        }
-      },
-      "location": {
-        "title": "您位于哪里？",
-        "options": {
-          "europe": "欧洲",
-          "northAmerica": "北美",
-          "asia": "亚洲",
-          "middleEast": "中东",
-          "other": "其他"
-        }
-      }
-    },
-    "navigation": {
-      "back": "返回",
-      "next": "下一步",
-      "showResults": "显示结果"
-    },
-    "helpText": "所有答案都是匿名的，仅用于为您匹配最佳VPN。",
-    "results": {
-      "badge": "您的结果",
-      "title": "您的完美VPN匹配",
-      "subtitle": "根据您的答案，这里是最符合您需求的前3名VPN",
-      "topMatch": "最佳匹配",
-      "matchScore": "匹配分数",
-      "save": "保存",
-      "getDeal": "获取优惠",
-      "readReview": "阅读评测",
-      "modifyAnswers": "修改答案",
-      "startOver": "重新开始",
-      "features": {
-        "netflix": "Netflix支持",
-        "torrenting": "种子下载",
-        "killSwitch": "终止开关",
-        "noLogs": "无日志政策"
-      }
-    },
-    "info": {
-      "title": "我们如何为您匹配VPN",
-      "description": "我们的测验算法根据您的具体需求评估VPN提供商，包括速度、安全性、流媒体能力、设备兼容性和价格范围。每个推荐都根据与您要求的匹配程度进行评分。"
+    "sort": {
+      "discount": "最高折扣",
+      "popular": "最受欢迎",
+      "expiring": "即将过期"
     }
+  },
+  "quiz": {
+    "meta": {
+      "title": "AI代理测验 - 找到您的完美匹配 | ZeroToAIAgents",
+      "description": "参加我们的测验,找到适合您需求的完美AI代理。在2分钟内获得个性化推荐。"
+    },
+    "hero": {
+      "badge": "找到您的匹配",
+      "title": "哪个AI代理适合您?",
+      "subtitle": "回答几个问题,获得个性化的AI代理推荐"
+    },
+    "start": "开始测验",
+    "next": "下一个",
+    "previous": "上一个",
+    "finish": "获取推荐",
+    "progress": "第{current}题,共{total}题",
+    "questions": [
+      {
+        "id": "useCase",
+        "question": "您想将AI代理用于什么?",
+        "options": [
+          {
+            "value": "coding",
+            "label": "软件开发",
+            "description": "编写、调试和部署代码"
+          },
+          {
+            "value": "support",
+            "label": "客户支持",
+            "description": "自动化客户服务"
+          },
+          {
+            "value": "automation",
+            "label": "业务自动化",
+            "description": "自动化工作流和任务"
+          },
+          {
+            "value": "content",
+            "label": "内容创作",
+            "description": "写作、营销、SEO"
+          },
+          {
+            "value": "data",
+            "label": "数据分析",
+            "description": "分析和可视化数据"
+          },
+          {
+            "value": "general",
+            "label": "通用助手",
+            "description": "研究、写作、学习"
+          }
+        ]
+      },
+      {
+        "id": "technical",
+        "question": "您的技术技能水平如何?",
+        "options": [
+          {
+            "value": "non-technical",
+            "label": "非技术",
+            "description": "我不写代码"
+          },
+          {
+            "value": "beginner",
+            "label": "初学者",
+            "description": "基本技术知识"
+          },
+          {
+            "value": "intermediate",
+            "label": "中级",
+            "description": "熟悉代码"
+          },
+          {
+            "value": "advanced",
+            "label": "高级开发人员",
+            "description": "经验丰富的程序员"
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "question": "谁将使用这个AI代理?",
+        "options": [
+          {
+            "value": "individual",
+            "label": "只有我",
+            "description": "个人使用"
+          },
+          {
+            "value": "small",
+            "label": "小团队(2-10人)",
+            "description": "小企业或初创公司"
+          },
+          {
+            "value": "medium",
+            "label": "中型团队(11-50人)",
+            "description": "成长中的公司"
+          },
+          {
+            "value": "large",
+            "label": "大型组织(50人以上)",
+            "description": "企业部署"
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "question": "您的月度预算是多少?",
+        "options": [
+          {
+            "value": "free",
+            "label": "仅免费",
+            "description": "$0/月"
+          },
+          {
+            "value": "low",
+            "label": "预算有限",
+            "description": "$0-50/月"
+          },
+          {
+            "value": "medium",
+            "label": "中等预算",
+            "description": "$50-200/月"
+          },
+          {
+            "value": "high",
+            "label": "灵活预算",
+            "description": "$200+/月"
+          }
+        ]
+      },
+      {
+        "id": "priority",
+        "question": "对您来说最重要的是什么?",
+        "options": [
+          {
+            "value": "ease",
+            "label": "易用性",
+            "description": "简单、直观的界面"
+          },
+          {
+            "value": "power",
+            "label": "功能与灵活性",
+            "description": "高级功能和定制"
+          },
+          {
+            "value": "integrations",
+            "label": "集成",
+            "description": "与我现有的工具配合使用"
+          },
+          {
+            "value": "security",
+            "label": "安全与合规",
+            "description": "企业级安全"
+          },
+          {
+            "value": "support",
+            "label": "客户支持",
+            "description": "专用支持团队"
+          }
+        ]
+      }
+    ],
+    "results": {
+      "title": "您推荐的AI代理",
+      "subtitle": "根据您的回答,这些AI代理最适合您的需求:",
+      "perfectMatch": "完美匹配",
+      "goodMatch": "良好匹配",
+      "whyRecommended": "我们为什么推荐这个",
+      "viewFullReview": "查看完整评测",
+      "compareAll": "比较所有推荐",
+      "retakeQuiz": "重新测验",
+      "shareResults": "分享结果"
+    }
+  },
+  "stickyBar": {
+    "message": "限时优惠:获取{discount}折扣的{name}",
+    "cta": "领取优惠",
+    "closeLabel": "关闭"
+  },
+  "exitPopup": {
+    "title": "等等!在您离开之前...",
+    "subtitle": "获取独家AI代理优惠,直接发送到您的收件箱",
+    "features": [
+      "每周AI代理评测和新闻",
+      "独家折扣代码",
+      "提前访问新平台",
+      "随时取消订阅"
+    ],
+    "emailPlaceholder": "输入您的邮箱",
+    "subscribe": "获取免费优惠",
+    "noThanks": "不,谢谢,我会支付全价",
+    "success": "成功!查看您的邮箱以获取独家优惠。"
+  },
+  "comparisonTool": {
+    "title": "AI代理比较工具",
+    "subtitle": "通过比较功能、定价和能力找到完美的AI代理",
+    "filters": {
+      "useCase": "使用场景",
+      "priceRange": "价格范围",
+      "features": "必需功能",
+      "integrations": "集成"
+    },
+    "results": "{count}个代理符合您的标准",
+    "noResults": "没有代理符合您的过滤器。尝试调整您的标准。",
+    "resetFilters": "重置过滤器"
   }
 }

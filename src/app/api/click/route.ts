@@ -4,6 +4,7 @@ import { sql } from "@/lib/neon";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    // vpnId is kept for backward compatibility (now represents agentId)
     const { vpnId, page, referrer } = body;
 
     // Get geo information from headers (Netlify/Vercel provide these)
@@ -13,7 +14,7 @@ export async function POST(request: NextRequest) {
       "unknown";
     const userAgent = request.headers.get("user-agent") || "unknown";
 
-    // First check if VPN exists in database
+    // First check if AI agent exists in database
     const vpn = await sql`
       SELECT id FROM "VpnProvider" WHERE slug = ${vpnId} OR id = ${vpnId}
     `;
@@ -25,8 +26,8 @@ export async function POST(request: NextRequest) {
         VALUES (gen_random_uuid()::text, ${vpn[0].id}, ${page}, ${country}, ${referrer}, ${userAgent}, NOW())
       `;
     } else {
-      // Log click even if VPN not in DB yet
-      console.log("Affiliate click (VPN not in DB):", {
+      // Log click even if agent not in DB yet
+      console.log("Affiliate click (agent not in DB):", {
         vpnId,
         country,
         referrer,

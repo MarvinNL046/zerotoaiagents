@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
-  scrapeVpnPricing,
-  scrapeVpnNews,
-  scrapeAllVpnData,
-  scrapeCountryVpnData,
+  scrapeAgentPricing,
+  scrapeAgentNews,
+  scrapeAllAgentData,
+  scrapeUseCaseAgentData,
   saveScrapeJob,
 } from "@/lib/pipeline/scraper";
 
@@ -21,10 +21,10 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json();
-    const { type, vpnSlug, countrySlug } = body as {
-      type: "vpn-data" | "pricing" | "news" | "country-vpn";
-      vpnSlug?: string;
-      countrySlug?: string;
+    const { type, agentSlug, useCaseSlug } = body as {
+      type: "agent-data" | "pricing" | "news" | "use-case-agent";
+      agentSlug?: string;
+      useCaseSlug?: string;
     };
 
     if (!type) {
@@ -39,36 +39,36 @@ export async function POST(request: NextRequest) {
     let source: string;
 
     switch (type) {
-      case "vpn-data": {
-        source = "all-vpn-pricing-pages";
-        results = await scrapeAllVpnData();
+      case "agent-data": {
+        source = "all-agent-pricing-pages";
+        results = await scrapeAllAgentData();
         break;
       }
       case "pricing": {
-        if (!vpnSlug) {
+        if (!agentSlug) {
           return NextResponse.json(
-            { error: "vpnSlug is required for pricing scrape" },
+            { error: "agentSlug is required for pricing scrape" },
             { status: 400 }
           );
         }
-        source = `pricing:${vpnSlug}`;
-        results = await scrapeVpnPricing(vpnSlug);
+        source = `pricing:${agentSlug}`;
+        results = await scrapeAgentPricing(agentSlug);
         break;
       }
       case "news": {
-        source = "vpn-news-sources";
-        results = await scrapeVpnNews();
+        source = "agent-news-sources";
+        results = await scrapeAgentNews();
         break;
       }
-      case "country-vpn": {
-        if (!countrySlug) {
+      case "use-case-agent": {
+        if (!useCaseSlug) {
           return NextResponse.json(
-            { error: "countrySlug is required for country-vpn scrape" },
+            { error: "useCaseSlug is required for use-case-agent scrape" },
             { status: 400 }
           );
         }
-        source = `country-vpn:${countrySlug}`;
-        results = await scrapeCountryVpnData(countrySlug);
+        source = `use-case-agent:${useCaseSlug}`;
+        results = await scrapeUseCaseAgentData(useCaseSlug);
         break;
       }
       default:
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
     const jobId = await saveScrapeJob({
       type,
       source,
-      vpnSlug: vpnSlug || countrySlug,
+      agentSlug: agentSlug || useCaseSlug,
       status: "completed",
       result: JSON.stringify(results),
       startedAt,

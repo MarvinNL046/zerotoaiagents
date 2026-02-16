@@ -31,18 +31,18 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Plus, Pencil, Trash2, Search, Star, Check, X, Database } from "lucide-react";
 import { VpnForm } from "./vpn-form";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentData } from "@/lib/db/agent-service";
 
 export default function VpnsAdminPage() {
-  const [vpns, setVpns] = useState<VpnData[]>([]);
-  const [filteredVpns, setFilteredVpns] = useState<VpnData[]>([]);
+  const [vpns, setVpns] = useState<AiAgentData[]>([]);
+  const [filteredVpns, setFilteredVpns] = useState<AiAgentData[]>([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [seeding, setSeeding] = useState(false);
-  const [editingVpn, setEditingVpn] = useState<VpnData | null>(null);
+  const [editingVpn, setEditingVpn] = useState<AiAgentData | null>(null);
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   const [isEditOpen, setIsEditOpen] = useState(false);
-  const [deleteVpn, setDeleteVpn] = useState<VpnData | null>(null);
+  const [deleteAgent, setDeleteVpn] = useState<AiAgentData | null>(null);
 
   const fetchVpns = async () => {
     try {
@@ -51,7 +51,7 @@ export default function VpnsAdminPage() {
       setVpns(data.vpns || []);
       setFilteredVpns(data.vpns || []);
     } catch (error) {
-      console.error("Error fetching VPNs:", error);
+      console.error("Error fetching AI agents:", error);
     } finally {
       setLoading(false);
     }
@@ -75,19 +75,19 @@ export default function VpnsAdminPage() {
   }, [search, vpns]);
 
   const handleDelete = async () => {
-    if (!deleteVpn) return;
+    if (!deleteAgent) return;
 
     try {
-      const res = await fetch(`/api/admin/vpns/${deleteVpn.id}`, {
+      const res = await fetch(`/api/admin/vpns/${deleteAgent.id}`, {
         method: "DELETE",
       });
 
       if (res.ok) {
-        setVpns(vpns.filter((v) => v.id !== deleteVpn.id));
+        setVpns(vpns.filter((v) => v.id !== deleteAgent.id));
         setDeleteVpn(null);
       }
     } catch (error) {
-      console.error("Error deleting VPN:", error);
+      console.error("Error deleting AI agent:", error);
     }
   };
 
@@ -111,7 +111,7 @@ export default function VpnsAdminPage() {
       const data = await res.json();
 
       if (data.seeded) {
-        alert(`Successfully seeded ${data.count} VPNs!`);
+        alert(`Successfully seeded ${data.count} AI agents!`);
         fetchVpns();
       } else {
         alert(data.message || "Database already has data");
@@ -137,9 +137,9 @@ export default function VpnsAdminPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">VPN Providers</h1>
+          <h1 className="text-3xl font-bold">AI Agents</h1>
           <p className="text-muted-foreground">
-            Manage VPN providers ({vpns.length} total)
+            Manage AI agent providers ({vpns.length} total)
           </p>
         </div>
         <div className="flex gap-2">
@@ -153,12 +153,12 @@ export default function VpnsAdminPage() {
             <DialogTrigger asChild>
               <Button>
                 <Plus className="h-4 w-4 mr-2" />
-                Add VPN
+                Add AI Agent
               </Button>
             </DialogTrigger>
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle>Add New VPN Provider</DialogTitle>
+              <DialogTitle>Add New AI Agent</DialogTitle>
             </DialogHeader>
             <VpnForm onSuccess={handleCreateSuccess} />
           </DialogContent>
@@ -172,7 +172,7 @@ export default function VpnsAdminPage() {
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search VPNs..."
+              placeholder="Search AI agents..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-10"
@@ -202,8 +202,8 @@ export default function VpnsAdminPage() {
                 <TableRow>
                   <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
                     {vpns.length === 0
-                      ? "No VPNs yet. Click 'Add VPN' to create one."
-                      : "No VPNs match your search."}
+                      ? "No AI agents yet. Click 'Add AI Agent' to create one."
+                      : "No AI agents match your search."}
                   </TableCell>
                 </TableRow>
               ) : (
@@ -237,7 +237,7 @@ export default function VpnsAdminPage() {
                       )}
                     </TableCell>
                     <TableCell className="text-right">
-                      ${vpn.priceMonthly.toFixed(2)}
+                      ${vpn.monthlyPrice.toFixed(2)}
                     </TableCell>
                     <TableCell>
                       <div className="flex items-center gap-2">
@@ -272,7 +272,7 @@ export default function VpnsAdminPage() {
       <Dialog open={isEditOpen} onOpenChange={setIsEditOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Edit VPN: {editingVpn?.name}</DialogTitle>
+            <DialogTitle>Edit AI Agent: {editingVpn?.name}</DialogTitle>
           </DialogHeader>
           {editingVpn && (
             <VpnForm vpn={editingVpn} onSuccess={handleEditSuccess} />
@@ -281,12 +281,12 @@ export default function VpnsAdminPage() {
       </Dialog>
 
       {/* Delete Confirmation */}
-      <AlertDialog open={!!deleteVpn} onOpenChange={() => setDeleteVpn(null)}>
+      <AlertDialog open={!!deleteAgent} onOpenChange={() => setDeleteVpn(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Delete VPN Provider</AlertDialogTitle>
+            <AlertDialogTitle>Delete AI Agent</AlertDialogTitle>
             <AlertDialogDescription>
-              Are you sure you want to delete &quot;{deleteVpn?.name}&quot;? This action
+              Are you sure you want to delete &quot;{deleteAgent?.name}&quot;? This action
               cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>

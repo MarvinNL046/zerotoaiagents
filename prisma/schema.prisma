@@ -8,8 +8,8 @@ datasource db {
   provider = "postgresql"
 }
 
-// VPN Providers - core data for comparisons and reviews
-model VpnProvider {
+// AI Agent Providers - core data for comparisons and reviews
+model AiAgentProvider {
   id              String   @id @default(cuid())
   name            String   @unique
   slug            String   @unique
@@ -22,42 +22,40 @@ model VpnProvider {
   affiliateUrl    String
 
   // Pricing
-  priceMonthly    Decimal  @db.Decimal(10, 2)
-  priceYearly     Decimal  @db.Decimal(10, 2)
-  priceTwoYear    Decimal? @db.Decimal(10, 2)
-  moneyBackDays   Int      @default(30)
-  freeTier        Boolean  @default(false)
+  monthlyPrice    Decimal  @db.Decimal(10, 2)
+  annualPrice     Decimal  @db.Decimal(10, 2)
+  hasFreeTier     Boolean  @default(false)
+  freeTierLimits  String?
 
-  // Features
-  servers         Int
-  countries       Int
-  maxDevices      Int
-  speedScore      Int      // 1-100
-  securityScore   Int      // 1-100
-  streamingScore  Int      // 1-100
+  // Classification
+  category        String
+  subcategory     String?
 
-  // Protocols & Security
-  protocols       String[] // ["WireGuard", "OpenVPN", "IKEv2"]
-  encryption      String   @default("AES-256")
-  killSwitch      Boolean  @default(true)
-  noLogs          Boolean  @default(true)
+  // Capabilities
+  modelsSupported String[]
+  integrations    String[]
+  maxUsers        String
+  apiAccess       Boolean  @default(false)
 
-  // Streaming
-  netflixSupport  Boolean  @default(false)
-  torrentSupport  Boolean  @default(false)
-
-  // Ratings
-  overallRating   Decimal  @db.Decimal(2, 1) // 4.5
-  editorChoice    Boolean  @default(false)
+  // Ratings (1-5 scale, one decimal)
+  overallRating   Decimal  @db.Decimal(2, 1)
+  easeOfUse       Decimal  @db.Decimal(2, 1)
+  performance     Decimal  @db.Decimal(2, 1)
+  valueForMoney   Decimal  @db.Decimal(2, 1)
 
   // Content
   shortDescription String?
   pros            String[]
   cons            String[]
+  features        String[]
+  bestFor         String?
 
-  // Meta
+  // Display
+  editorChoice    Boolean  @default(false)
   featured        Boolean  @default(false)
   sortOrder       Int      @default(0)
+
+  // Meta
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
@@ -69,8 +67,8 @@ model VpnProvider {
 // Reviews - multilingual review content
 model Review {
   id          String   @id @default(cuid())
-  vpnId       String
-  vpn         VpnProvider @relation(fields: [vpnId], references: [id], onDelete: Cascade)
+  agentId     String
+  agent       AiAgentProvider @relation(fields: [agentId], references: [id], onDelete: Cascade)
 
   language    String   @default("en") // en, nl, de, es, fr
   title       String
@@ -88,15 +86,15 @@ model Review {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  @@unique([vpnId, language])
+  @@unique([agentId, language])
   @@index([language, published])
 }
 
 // Click tracking for affiliate links
 model Click {
   id          String   @id @default(cuid())
-  vpnId       String
-  vpn         VpnProvider @relation(fields: [vpnId], references: [id], onDelete: Cascade)
+  agentId     String
+  agent       AiAgentProvider @relation(fields: [agentId], references: [id], onDelete: Cascade)
 
   country     String?
   city        String?
@@ -106,14 +104,14 @@ model Click {
 
   createdAt   DateTime @default(now())
 
-  @@index([vpnId, createdAt])
+  @@index([agentId, createdAt])
   @@index([country])
 }
 
 // User reviews from visitors
 model UserReview {
   id          String   @id @default(cuid())
-  vpnSlug     String   // Reference to VPN by slug
+  agentSlug   String   // Reference to AI Agent by slug
 
   // Reviewer info
   authorName  String
@@ -126,7 +124,7 @@ model UserReview {
   content     String   @db.Text
 
   // Usage context
-  usageType   String?  // streaming, privacy, gaming, torrenting, work
+  usageType   String?  // coding, automation, customer-support, research, general
   usagePeriod String?  // less-than-month, 1-6-months, 6-12-months, more-than-year
 
   // Pros and cons from user perspective
@@ -154,9 +152,9 @@ model UserReview {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  @@index([vpnSlug, approved])
+  @@index([agentSlug, approved])
   @@index([newsletterConsent, authorEmail])
-  @@index([vpnSlug, rating])
+  @@index([agentSlug, rating])
   @@index([createdAt])
 }
 

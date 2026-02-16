@@ -94,20 +94,20 @@ export async function autoSelectTopic(
   const month = now.toLocaleString("en", { month: "long" });
   const year = now.getFullYear();
 
-  const topicPrompt = `You are a senior VPN content strategist for ZeroToVPN.com, a VPN comparison and review website.
+  const topicPrompt = `You are a senior AI agent content strategist for ZeroToAIAgents.com, an AI agent comparison and review website.
 
 Pick ONE compelling blog post topic that will rank well on Google and drive organic traffic.
 
 The topic should be:
-- About VPNs, online privacy, cybersecurity, or related subjects
+- About AI agents, automation, coding assistants, LLMs, or related subjects
 - Specific and searchable (not too broad, not too niche)
 - Timely for ${month} ${year}
 - Different from ALL of these already-published titles:
 ${titles.map((t) => `  - ${t}`).join("\n") || "  (none yet)"}
 
-${scrapeContext ? `Recent industry data for inspiration:\n${scrapeContext}\n` : ""}
+${scrapeContext ? `Recent AI agent industry data for inspiration:\n${scrapeContext}\n` : ""}
 
-Topic categories to rotate between: reviews, comparisons (VPN vs VPN), how-to guides, best-of lists, security news analysis, protocol deep-dives, use-case guides (streaming, gaming, travel, torrenting), myth-busting, deal roundups.
+Topic categories to rotate between: agent reviews, comparisons (Agent vs Agent), how-to guides, best-of lists, framework deep-dives (CrewAI, LangGraph), use-case guides (coding, marketing, customer support, research), pricing comparisons, integration tutorials.
 
 Respond with ONLY the blog post title — nothing else. No quotes, no explanation.`;
 
@@ -188,7 +188,7 @@ function detectPostType(topic: string): PostType {
 
 // Fetch sitemap and extract English-only internal links grouped by category
 async function fetchSitemapLinks(): Promise<string> {
-  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotovpn.com";
+  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotoaiagents.com";
   try {
     const response = await fetch(`${siteUrl}/sitemap.xml`, { signal: AbortSignal.timeout(10000) });
     if (!response.ok) return "";
@@ -236,7 +236,7 @@ async function buildPrompt(
   postType: PostType,
   scrapeData: string | null
 ): Promise<string> {
-  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotovpn.com";
+  const siteUrl = process.env.SITE_URL || process.env.URL || "https://zerotoaiagents.com";
 
   // Dynamically fetch internal links from sitemap
   const sitemapLinks = await fetchSitemapLinks();
@@ -308,14 +308,14 @@ FORMATTING RULES:
     : "";
 
   const typeInstructions: Record<PostType, string> = {
-    news: `Write a VPN news roundup article. Cover 3-4 recent developments with analysis. Each news item gets its own numbered H2 section. Include "Why This Matters" subheadings.`,
-    comparison: `Write a detailed VPN comparison article. The Key Takeaways table should compare the VPNs directly. Include a main comparison table and individual analysis per VPN. End with a clear winner and runner-up.`,
-    deal: `Write a VPN deals roundup article. Each deal gets its own numbered H2 section. Show original price vs deal price with savings percentage. Include urgency with expiration context. Add a "deal score" rating.`,
-    guide: `Write an in-depth VPN guide article. Start with fundamentals, progress to advanced tips. Include step-by-step instructions with numbered lists. Add practical examples and real-world scenarios.`,
+    news: `Write an AI agent news roundup article. Cover 3-4 recent developments with analysis. Each news item gets its own numbered H2 section. Include "Why This Matters" subheadings.`,
+    comparison: `Write a detailed AI agent comparison article. The Key Takeaways table should compare the agents directly. Include a main comparison table and individual analysis per agent. End with a clear winner and runner-up.`,
+    deal: `Write an AI agent pricing and deals roundup article. Each pricing tier gets its own numbered H2 section. Show pricing tiers, free trial info, and value comparison. Include a "value score" rating.`,
+    guide: `Write an in-depth AI agent guide article. Start with fundamentals, progress to advanced tips. Include step-by-step instructions with numbered lists. Add practical examples and real-world scenarios.`,
   };
 
-  return `You are a senior VPN expert writer for ZeroToVPN.com, an independent VPN comparison and review site run by cybersecurity professionals.
-Your team has personally tested 50+ VPN services through rigorous speed tests, security audits, and real-world usage. You write from first-hand experience.
+  return `You are a senior AI automation expert writer for ZeroToAIAgents.com, an independent AI agent comparison and review site run by AI industry professionals.
+Your team has personally tested 26+ AI agent platforms through rigorous benchmarks, real-world usage, and integration testing. You write from first-hand experience.
 
 Write a comprehensive, fact-checked blog post about: "${topic}"
 

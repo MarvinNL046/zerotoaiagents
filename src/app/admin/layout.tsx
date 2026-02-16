@@ -118,7 +118,7 @@ function AdminContent({ children }: { children: React.ReactNode }) {
         >
           {isSidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
-        <span className="font-semibold">ZeroToVPN Admin</span>
+        <span className="font-semibold">ZeroToAIAgents Admin</span>
         <UserButton />
       </div>
 

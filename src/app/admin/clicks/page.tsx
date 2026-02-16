@@ -20,17 +20,17 @@ import {
   AlertCircle,
   Loader2,
 } from "lucide-react";
-import { getAllVpns } from "@/lib/vpn-data";
+import { aiAgentProviders } from "@/lib/ai-agent-data";
 import type { AnalyticsData } from "@/lib/shortio";
 
 export default function ClickAnalyticsPage() {
   const [dateRange, setDateRange] = useState("7");
-  const [vpnFilter, setVpnFilter] = useState("all");
+  const [agentFilter, setAgentFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
 
-  const vpns = getAllVpns();
+  const agents = aiAgentProviders;
 
   // Fetch analytics data
   useEffect(() => {
@@ -61,15 +61,15 @@ export default function ClickAnalyticsPage() {
 
   // Filter link stats by VPN
   const filteredStats = analytics?.linkStats.filter((stat) => {
-    if (vpnFilter === "all") return true;
-    return stat.path.toLowerCase() === vpnFilter.toLowerCase();
+    if (agentFilter === "all") return true;
+    return stat.path.toLowerCase() === agentFilter.toLowerCase();
   }) || [];
 
   // Get VPN name from path
   const getVpnName = (path: string) => {
     const slug = path.replace(/^\//, "");
-    const vpn = vpns.find((v) => v.slug === slug);
-    return vpn?.name || path.replace(/^\//, "").replace(/-/g, " ");
+    const agent = agents.find((v) => v.slug === slug);
+    return agent?.name || path.replace(/^\//, "").replace(/-/g, " ");
   };
 
 
@@ -146,15 +146,15 @@ export default function ClickAnalyticsPage() {
               <SelectItem value="90">All time</SelectItem>
             </SelectContent>
           </Select>
-          <Select value={vpnFilter} onValueChange={setVpnFilter}>
+          <Select value={agentFilter} onValueChange={setAgentFilter}>
             <SelectTrigger className="w-40">
               <SelectValue placeholder="All VPNs" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All VPNs</SelectItem>
-              {vpns.map((vpn) => (
-                <SelectItem key={vpn.slug} value={vpn.slug}>
-                  {vpn.name}
+              {agents.map((agent) => (
+                <SelectItem key={agent.slug} value={agent.slug}>
+                  {agent.name}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -264,7 +264,7 @@ export default function ClickAnalyticsPage() {
                       <span className="text-sm font-medium text-muted-foreground">
                         #{index + 1}
                       </span>
-                      <span className="font-medium">{link.vpnName}</span>
+                      <span className="font-medium">{link.agentName}</span>
                     </div>
                     <span className="text-sm text-muted-foreground">
                       {link.clicks.toLocaleString()} ({percentage.toFixed(1)}%)
@@ -289,9 +289,9 @@ export default function ClickAnalyticsPage() {
           <CardTitle className="flex items-center gap-2">
             <Globe className="h-5 w-5" />
             All Affiliate Links
-            {vpnFilter !== "all" && (
+            {agentFilter !== "all" && (
               <Badge variant="secondary" className="ml-2">
-                Filtered: {getVpnName(vpnFilter)}
+                Filtered: {getVpnName(agentFilter)}
               </Badge>
             )}
           </CardTitle>
@@ -324,12 +324,12 @@ export default function ClickAnalyticsPage() {
                       </td>
                       <td className="py-3 px-4">
                         <a
-                          href={`https://go.zerotovpn.com${stat.path}`}
+                          href={`https://go.zerotoaiagents.com${stat.path}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm text-primary hover:underline flex items-center gap-1"
                         >
-                          go.zerotovpn.com{stat.path}
+                          go.zerotoaiagents.com{stat.path}
                           <ExternalLink className="h-3 w-3" />
                         </a>
                       </td>
@@ -372,7 +372,7 @@ export default function ClickAnalyticsPage() {
         <CardContent className="py-4">
           <p className="text-sm text-muted-foreground">
             <strong>Live Data:</strong> Analytics are powered by Short.io API. Data refreshes every 5 minutes.
-            All links use the format <code className="bg-muted px-1 rounded">https://go.zerotovpn.com/[vpn-slug]</code>
+            All links use the format <code className="bg-muted px-1 rounded">https://go.zerotoaiagents.com/[agent-slug]</code>
           </p>
         </CardContent>
       </Card>

@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     }
 
     const { searchParams } = new URL(request.url);
-    const vpnSlug = searchParams.get("vpnSlug");
+    const agentSlug = searchParams.get("agentSlug");
     const approved = searchParams.get("approved"); // "true", "false", or null for all
     const page = parseInt(searchParams.get("page") || "1", 10);
     const limit = parseInt(searchParams.get("limit") || "20", 10);
@@ -37,28 +37,28 @@ export async function GET(request: NextRequest) {
     let reviews;
     let countResult;
 
-    if (vpnSlug && approved !== null) {
+    if (agentSlug && approved !== null) {
       const isApproved = approved === "true";
       reviews = await sql`
         SELECT * FROM "UserReview"
-        WHERE vpn_slug = ${vpnSlug} AND approved = ${isApproved}
+        WHERE vpn_slug = ${agentSlug} AND approved = ${isApproved}
         ORDER BY created_at DESC
         LIMIT ${limit} OFFSET ${offset}
       `;
       countResult = await sql`
         SELECT COUNT(*) as total FROM "UserReview"
-        WHERE vpn_slug = ${vpnSlug} AND approved = ${isApproved}
+        WHERE vpn_slug = ${agentSlug} AND approved = ${isApproved}
       `;
-    } else if (vpnSlug) {
+    } else if (agentSlug) {
       reviews = await sql`
         SELECT * FROM "UserReview"
-        WHERE vpn_slug = ${vpnSlug}
+        WHERE vpn_slug = ${agentSlug}
         ORDER BY created_at DESC
         LIMIT ${limit} OFFSET ${offset}
       `;
       countResult = await sql`
         SELECT COUNT(*) as total FROM "UserReview"
-        WHERE vpn_slug = ${vpnSlug}
+        WHERE vpn_slug = ${agentSlug}
       `;
     } else if (approved !== null) {
       const isApproved = approved === "true";

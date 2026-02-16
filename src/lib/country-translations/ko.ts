@@ -38,7 +38,7 @@ export const koLabels: CountryPageLabels = {
 
 export const koTranslations: Record<string, TranslatedCountryContent> = {
   thailand: {
-    metaTitle: "2026년 태국 최고의 VPN: 차단 우회 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 태국 최고의 VPN: 차단 우회 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "태국은 도박 사이트, 일부 뉴스 매체를 차단하고 왕실모독법에 따라 소셜 미디어를 감시합니다. 태국에서 안정적으로 작동하는 VPN을 찾아보세요.",
     statusLabel: "합법이나 감시됨",
     heroSubtitle: "태국에서 콘텐츠 차단을 우회하고 개인정보를 보호하세요",
@@ -65,7 +65,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   japan: {
-    metaTitle: "2026년 일본 최고의 VPN: 일본 콘텐츠 스트리밍 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 일본 최고의 VPN: 일본 콘텐츠 스트리밍 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "일본은 인터넷 자유도가 높지만 저작권 집행이 엄격합니다. 애니메이션 스트리밍, 해외에서 일본 콘텐츠 접근, 개인정보 보호를 위한 빠른 일본 서버가 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "전 세계에서 일본 콘텐츠를 스트리밍하고 개인정보를 보호하세요",
@@ -92,7 +92,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-korea": {
-    metaTitle: "2026년 한국 최고의 VPN: 게임, 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 한국 최고의 VPN: 게임, 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "한국은 빠른 인터넷을 보유하고 있지만 온라인 활동을 감시합니다. 게임, 해외에서 한국 콘텐츠 스트리밍, 감시로부터 개인정보 보호를 위한 VPN을 찾아보세요.",
     statusLabel: "합법, 일부 제한",
     heroSubtitle: "한국에서의 빠른 게임, 스트리밍 접근, 개인정보 보호",
@@ -119,7 +119,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hong-kong": {
-    metaTitle: "2026년 홍콩 최고의 VPN: 국가보안법하의 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 홍콩 최고의 VPN: 국가보안법하의 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "홍콩의 국가보안법으로 감시가 강화되었습니다. 홍콩의 변화하는 디지털 환경에서 개인정보를 보호하고 안전을 유지할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법이나 감시 강화 중",
     heroSubtitle: "홍콩의 변화하는 디지털 환경에서 개인정보를 보호하세요",
@@ -146,7 +146,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   taiwan: {
-    metaTitle: "2026년 대만 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 대만 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "대만은 높은 인터넷 자유를 누리고 있습니다. VPN을 사용하여 해외 스트리밍 콘텐츠에 접근하고 개인정보를 보호하며 공용 WiFi 연결을 보안하세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "대만에서 글로벌 콘텐츠에 접근하고 개인정보를 보호하세요",
@@ -171,7 +171,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   singapore: {
-    metaTitle: "2026년 싱가포르 최고의 VPN: 개인정보 보호 및 콘텐츠 접근 | ZeroToVPN",
+    metaTitle: "2026년 싱가포르 최고의 VPN: 개인정보 보호 및 콘텐츠 접근 | ZeroToAIAgents",
     metaDescription: "싱가포르는 엄격한 콘텐츠 규제와 감시법이 있습니다. 싱가포르에서 개인정보를 보호하고 콘텐츠 제한을 우회할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법이나 감시됨",
     heroSubtitle: "싱가포르의 인터넷 규제를 적절한 VPN으로 대처하세요",
@@ -196,7 +196,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   malaysia: {
-    metaTitle: "2026년 말레이시아 최고의 VPN: 사이트 차단 해제 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 말레이시아 최고의 VPN: 사이트 차단 해제 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "말레이시아는 도박, 성인 콘텐츠 및 정치 사이트를 차단합니다. MCMC 차단을 우회하고 말레이시아에서 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법이나 콘텐츠 필터링됨",
     heroSubtitle: "말레이시아에서 MCMC 콘텐츠 차단을 우회하고 개인정보를 보호하세요",
@@ -221,7 +221,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   philippines: {
-    metaTitle: "2026년 필리핀 최고의 VPN: 스트리밍 및 보안 | ZeroToVPN",
+    metaTitle: "2026년 필리핀 최고의 VPN: 스트리밍 및 보안 | ZeroToAIAgents",
     metaDescription: "필리핀은 느린 인터넷과 감시 증가 문제가 있습니다. 속도 개선, 개인정보 보호, 해외 스트리밍 콘텐츠 차단 해제를 위한 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "필리핀에서 속도 개선, 글로벌 콘텐츠 접근, 보안 유지",
@@ -246,7 +246,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   australia: {
-    metaTitle: "2026년 호주 최고의 VPN: 스트리밍, 개인정보 보호 및 토렌트 | ZeroToVPN",
+    metaTitle: "2026년 호주 최고의 VPN: 스트리밍, 개인정보 보호 및 토렌트 | ZeroToAIAgents",
     metaDescription: "호주는 의무적 데이터 보존과 엄격한 저작권 집행이 있습니다. 호주에서 개인정보를 보호하고 해외 스트리밍을 차단 해제할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "데이터 보존으로부터 개인정보를 보호하고 글로벌 콘텐츠에 접근하세요",
@@ -273,7 +273,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "new-zealand": {
-    metaTitle: "2026년 뉴질랜드 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 뉴질랜드 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "뉴질랜드는 훌륭한 인터넷 자유를 누리지만 스트리밍 라이브러리가 제한적입니다. Five Eyes 회원국으로서 글로벌 콘텐츠에 접근하고 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "뉴질랜드에서 글로벌 스트리밍에 접근하고 개인정보를 보호하세요",
@@ -298,7 +298,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-kingdom": {
-    metaTitle: "2026년 영국 최고의 VPN: 개인정보 보호, 스트리밍 및 ISP 차단 | ZeroToVPN",
+    metaTitle: "2026년 영국 최고의 VPN: 개인정보 보호, 스트리밍 및 ISP 차단 | ZeroToAIAgents",
     metaDescription: "영국은 광범위한 감시법과 ISP 수준의 웹사이트 차단이 있습니다. BT, Virgin, Sky 차단을 우회하고 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "ISP 차단을 우회하고 스누퍼 헌장으로부터 개인정보를 보호하세요",
@@ -325,7 +325,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   germany: {
-    metaTitle: "2026년 독일 최고의 VPN: 개인정보 보호, 스트리밍 및 토렌트 | ZeroToVPN",
+    metaTitle: "2026년 독일 최고의 VPN: 개인정보 보호, 스트리밍 및 토렌트 | ZeroToAIAgents",
     metaDescription: "독일은 엄격한 저작권 집행과 개인정보 보호법이 있습니다. Abmahnung 경고장으로부터 보호하고 해외 스트리밍 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "저작권 Abmahnung 경고장을 피하고 디지털 개인정보를 보호하세요",
@@ -352,7 +352,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   france: {
-    metaTitle: "2026년 프랑스 최고의 VPN: 개인정보 보호, 스트리밍 및 HADOPI | ZeroToVPN",
+    metaTitle: "2026년 프랑스 최고의 VPN: 개인정보 보호, 스트리밍 및 HADOPI | ZeroToAIAgents",
     metaDescription: "프랑스는 HADOPI를 통해 토렌트를 감시하고 데이터 보존법이 있습니다. 개인정보를 보호하고 프랑스에서 해외 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "HADOPI 모니터링으로부터 자신을 보호하고 글로벌 콘텐츠에 접근하세요",
@@ -377,7 +377,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   spain: {
-    metaTitle: "2026년 스페인 최고의 VPN: 스트리밍, 개인정보 보호 및 토렌트 | ZeroToVPN",
+    metaTitle: "2026년 스페인 최고의 VPN: 스트리밍, 개인정보 보호 및 토렌트 | ZeroToAIAgents",
     metaDescription: "스페인은 저작권 집행이 강화되고 있으며 EU 데이터 보존법이 적용됩니다. 안전한 토렌트, 해외 스트리밍 접근, 개인정보 보호를 위한 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "스페인에서 글로벌 콘텐츠를 스트리밍하고 개인정보를 보호하세요",
@@ -402,7 +402,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   italy: {
-    metaTitle: "2026년 이탈리아 최고의 VPN: 스트리밍, 개인정보 보호 및 AGCOM 차단 | ZeroToVPN",
+    metaTitle: "2026년 이탈리아 최고의 VPN: 스트리밍, 개인정보 보호 및 AGCOM 차단 | ZeroToAIAgents",
     metaDescription: "이탈리아는 AGCOM을 통해 도박 및 불법 복제 사이트를 차단합니다. 이탈리아 ISP 차단을 우회하고 해외 스트리밍 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "AGCOM 차단을 우회하고 이탈리아에서 글로벌 스트리밍에 접근하세요",
@@ -427,7 +427,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   brazil: {
-    metaTitle: "2026년 브라질 최고의 VPN: 개인정보 보호, 스트리밍 및 WhatsApp 차단 | ZeroToVPN",
+    metaTitle: "2026년 브라질 최고의 VPN: 개인정보 보호, 스트리밍 및 WhatsApp 차단 | ZeroToAIAgents",
     metaDescription: "브라질은 때때로 WhatsApp을 차단하고 감시가 증가하고 있습니다. 연결을 유지하고 브라질에서 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "WhatsApp 차단 시에도 연결을 유지하고 개인정보를 보호하세요",
@@ -452,7 +452,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   mexico: {
-    metaTitle: "2026년 멕시코 최고의 VPN: 개인정보 보호, 스트리밍 및 보안 | ZeroToVPN",
+    metaTitle: "2026년 멕시코 최고의 VPN: 개인정보 보호, 스트리밍 및 보안 | ZeroToAIAgents",
     metaDescription: "멕시코는 감시 증가와 사이버 보안 우려가 있습니다. 개인정보를 보호하고 멕시코에서 미국 스트리밍 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "개인정보를 보호하고 멕시코에서 미국 스트리밍 콘텐츠에 접근하세요",
@@ -477,7 +477,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-states": {
-    metaTitle: "2026년 미국 최고의 VPN: 개인정보 보호, ISP 추적 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 미국 최고의 VPN: 개인정보 보호, ISP 추적 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "미국 ISP는 브라우징 데이터를 판매할 수 있으며 DMCA 집행이 엄격합니다. 개인정보를 보호하고 미국에서 해외 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "ISP 추적을 중단하고 DMCA 통지를 피하며 개인정보를 보호하세요",
@@ -504,7 +504,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   canada: {
-    metaTitle: "2026년 캐나다 최고의 VPN: 개인정보 보호, 스트리밍 및 P2P | ZeroToVPN",
+    metaTitle: "2026년 캐나다 최고의 VPN: 개인정보 보호, 스트리밍 및 P2P | ZeroToAIAgents",
     metaDescription: "캐나다는 Five Eyes 회원국이며 통지 및 통지 저작권 규정이 있습니다. 개인정보를 보호하고 캐나다에서 미국 스트리밍에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "미국 콘텐츠에 접근하고 Five Eyes 회원국으로서 개인정보를 보호하세요",
@@ -529,7 +529,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   poland: {
-    metaTitle: "2026년 폴란드 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 폴란드 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "폴란드는 EU 데이터 보존과 증가하는 감시가 있습니다. 개인정보를 보호하고 폴란드에서 해외 스트리밍 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "폴란드에서 개인정보를 보호하고 글로벌 스트리밍에 접근하세요",
@@ -554,7 +554,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   sweden: {
-    metaTitle: "2026년 스웨덴 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 스웨덴 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "스웨덴은 14 Eyes 회원국이며 저작권 집행이 있습니다. 개인정보를 보호하고 스웨덴에서 해외 스트리밍에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "스웨덴에서 개인정보 보호 및 글로벌 콘텐츠 접근",
@@ -579,7 +579,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   switzerland: {
-    metaTitle: "2026년 스위스 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 스위스 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "스위스는 강력한 개인정보 보호법이 있지만 스트리밍 옵션이 제한적입니다. 글로벌 콘텐츠에 접근하고 스위스에서 개인정보를 유지할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "강력한 개인정보 보호법과 스위스에서의 글로벌 콘텐츠 접근",
@@ -604,7 +604,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   nigeria: {
-    metaTitle: "2026년 나이지리아 최고의 VPN: Twitter 차단 우회 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 나이지리아 최고의 VPN: Twitter 차단 우회 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "나이지리아는 소셜 미디어 차단 이력과 인터넷 제한 증가가 있습니다. 연결을 유지하고 나이지리아에서 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "소셜 미디어 차단 시 연결을 유지하고 개인정보를 보호하세요",
@@ -630,7 +630,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-africa": {
-    metaTitle: "2026년 남아프리카 최고의 VPN: 스트리밍 및 보안 | ZeroToVPN",
+    metaTitle: "2026년 남아프리카 최고의 VPN: 스트리밍 및 보안 | ZeroToAIAgents",
     metaDescription: "남아프리카는 사이버 범죄 증가와 제한된 스트리밍 라이브러리가 있습니다. 보안을 보호하고 남아프리카에서 글로벌 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "사이버 범죄로부터 보호하고 글로벌 스트리밍 콘텐츠에 접근하세요",
@@ -655,7 +655,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   kenya: {
-    metaTitle: "2026년 케냐 최고의 VPN: 개인정보 보호 및 글로벌 콘텐츠 | ZeroToVPN",
+    metaTitle: "2026년 케냐 최고의 VPN: 개인정보 보호 및 글로벌 콘텐츠 | ZeroToAIAgents",
     metaDescription: "케냐는 인터넷 감시와 콘텐츠 제한이 증가하고 있습니다. 개인정보를 보호하고 케냐에서 글로벌 스트리밍 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "케냐에서 개인정보를 보호하고 글로벌 콘텐츠에 접근하세요",
@@ -680,7 +680,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   myanmar: {
-    metaTitle: "2026년 미얀마 최고의 VPN: 군부 검열 우회 | ZeroToVPN",
+    metaTitle: "2026년 미얀마 최고의 VPN: 군부 검열 우회 | ZeroToAIAgents",
     metaDescription: "미얀마의 군사 정권은 2021년 쿠데타 이후 심각한 인터넷 제한을 부과했습니다. 미얀마에서 실제로 작동하는 난독화 기능이 있는 VPN을 찾아보세요.",
     statusLabel: "쿠데타 이후 제한됨",
     heroSubtitle: "군사 정권의 인터넷 검열을 우회하고 연결을 유지하세요",
@@ -707,7 +707,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   bangladesh: {
-    metaTitle: "2026년 방글라데시 최고의 VPN: 사이트 차단 해제 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 방글라데시 최고의 VPN: 사이트 차단 해제 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "방글라데시는 불안 시기에 소셜 미디어와 뉴스 사이트를 차단합니다. 연결을 유지하고 방글라데시에서 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법이나 사이트 차단됨",
     heroSubtitle: "인터넷 차단과 소셜 미디어 차단 시에도 연결을 유지하세요",
@@ -732,7 +732,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   nepal: {
-    metaTitle: "2026년 네팔 최고의 VPN: TikTok 차단 해제 및 콘텐츠 접근 | ZeroToVPN",
+    metaTitle: "2026년 네팔 최고의 VPN: TikTok 차단 해제 및 콘텐츠 접근 | ZeroToAIAgents",
     metaDescription: "네팔은 TikTok을 금지하고 일부 콘텐츠를 차단합니다. 제한된 앱을 차단 해제하고 네팔에서 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법, TikTok 금지",
     heroSubtitle: "네팔에서 TikTok을 차단 해제하고 제한된 콘텐츠에 접근하세요",
@@ -757,7 +757,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sri-lanka": {
-    metaTitle: "2026년 스리랑카 최고의 VPN: 소셜 미디어 접근 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 스리랑카 최고의 VPN: 소셜 미디어 접근 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "스리랑카는 위기 시 소셜 미디어를 차단합니다. 인터넷 제한 시 연결을 유지하고 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법이나 위기 시 소셜 미디어 차단",
     heroSubtitle: "소셜 미디어 차단 시 연결을 유지하고 개인정보를 보호하세요",
@@ -782,7 +782,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   cambodia: {
-    metaTitle: "2026년 캄보디아 최고의 VPN: 개인정보 보호 및 콘텐츠 접근 | ZeroToVPN",
+    metaTitle: "2026년 캄보디아 최고의 VPN: 개인정보 보호 및 콘텐츠 접근 | ZeroToAIAgents",
     metaDescription: "캄보디아는 온라인 활동을 감시하고 독립 미디어를 차단합니다. 개인정보를 보호하고 캄보디아에서 제한 없는 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법이나 감시됨",
     heroSubtitle: "캄보디아에서 개인정보를 보호하고 자유로운 미디어에 접근하세요",
@@ -807,7 +807,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   israel: {
-    metaTitle: "2026년 이스라엘 최고의 VPN: 개인정보 보호 및 해외 콘텐츠 | ZeroToVPN",
+    metaTitle: "2026년 이스라엘 최고의 VPN: 개인정보 보호 및 해외 콘텐츠 | ZeroToAIAgents",
     metaDescription: "이스라엘은 고급 감시 능력과 지역 제한 콘텐츠가 있습니다. 개인정보 보호 및 이스라엘에서 해외 스트리밍에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "이스라엘에서 개인정보 보호 및 글로벌 콘텐츠 접근",
@@ -832,7 +832,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   colombia: {
-    metaTitle: "2026년 콜롬비아 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 콜롬비아 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "콜롬비아는 감시 및 사이버 범죄 우려가 증가하고 있습니다. 개인정보를 보호하고 콜롬비아에서 해외 스트리밍에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "온라인에서 안전을 유지하고 글로벌 스트리밍 콘텐츠에 접근하세요",
@@ -857,7 +857,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   argentina: {
-    metaTitle: "2026년 아르헨티나 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 아르헨티나 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "아르헨티나는 좋은 인터넷 자유를 누리지만 스트리밍이 제한적입니다. 글로벌 콘텐츠에 접근하고 아르헨티나에서 더 저렴한 구독을 받을 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "아르헨티나에서 글로벌 스트리밍에 접근하고 개인정보를 보호하세요",
@@ -882,7 +882,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   uzbekistan: {
-    metaTitle: "2026년 우즈베키스탄 최고의 VPN: 검열 우회 및 안전 유지 | ZeroToVPN",
+    metaTitle: "2026년 우즈베키스탄 최고의 VPN: 검열 우회 및 안전 유지 | ZeroToAIAgents",
     metaDescription: "우즈베키스탄은 인터넷을 심하게 검열하고 VPN 프로토콜을 차단합니다. 우즈베키스탄에서 작동하는 난독화 기능이 있는 VPN을 찾아보세요.",
     statusLabel: "제한됨",
     heroSubtitle: "우즈베키스탄의 심각한 인터넷 검열을 우회하세요",
@@ -908,7 +908,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   kazakhstan: {
-    metaTitle: "2026년 카자흐스탄 최고의 VPN: 검열 및 감시 우회 | ZeroToVPN",
+    metaTitle: "2026년 카자흐스탄 최고의 VPN: 검열 및 감시 우회 | ZeroToAIAgents",
     metaDescription: "카자흐스탄은 인터넷을 검열하고 HTTPS 가로채기를 시도한 바 있습니다. 개인정보를 보호하고 카자흐스탄에서 검열을 우회할 수 있는 VPN을 찾아보세요.",
     statusLabel: "제한되고 감시됨",
     heroSubtitle: "HTTPS 가로채기와 인터넷 검열로부터 자신을 보호하세요",
@@ -934,7 +934,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   ukraine: {
-    metaTitle: "2026년 우크라이나 최고의 VPN: 분쟁 중 개인정보 보호 및 보안 | ZeroToVPN",
+    metaTitle: "2026년 우크라이나 최고의 VPN: 분쟁 중 개인정보 보호 및 보안 | ZeroToAIAgents",
     metaDescription: "우크라이나는 전시 인터넷 장애와 사이버 보안 위협에 직면해 있습니다. 진행 중인 분쟁 중 보안과 안정적인 접근을 제공하는 VPN을 찾아보세요.",
     statusLabel: "합법, 전시 제한",
     heroSubtitle: "진행 중인 분쟁 중 안전하고 연결된 상태를 유지하세요",
@@ -960,7 +960,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   romania: {
-    metaTitle: "2026년 루마니아 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 루마니아 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "루마니아는 데이터 보존법을 위헌으로 폐지했습니다. 개인정보 보호 및 루마니아에서 해외 스트리밍에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "빠른 인터넷 속도를 갖춘 개인정보 친화적 관할권",
@@ -985,7 +985,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "czech-republic": {
-    metaTitle: "2026년 체코 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 체코 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "체코는 높은 인터넷 자유를 누리지만 EU 데이터 보존이 적용됩니다. 개인정보 보호 및 체코에서 해외 스트리밍에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "글로벌 콘텐츠에 접근하고 EU 데이터 보존으로부터 개인정보를 보호하세요",
@@ -1009,7 +1009,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   greece: {
-    metaTitle: "2026년 그리스 최고의 VPN: 여행자를 위한 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 그리스 최고의 VPN: 여행자를 위한 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "그리스는 인기 여행지로 공용 WiFi 위험이 있습니다. 개인정보를 보호하고 자국의 스트리밍 콘텐츠에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "그리스에서 공용 WiFi를 보안하고 자국 스트리밍에 접근하세요",
@@ -1033,7 +1033,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   portugal: {
-    metaTitle: "2026년 포르투갈 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 포르투갈 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "포르투갈은 높은 인터넷 자유를 누리지만 EU 데이터 보존이 적용됩니다. 해외 스트리밍 접근과 포르투갈에서의 개인정보 보호를 위한 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "글로벌 콘텐츠에 접근하고 EU 데이터 보존으로부터 개인정보를 보호하세요",
@@ -1058,7 +1058,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   norway: {
-    metaTitle: "2026년 노르웨이 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 노르웨이 최고의 VPN: 스트리밍 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "노르웨이는 높은 인터넷 자유를 누리지만 스트리밍 카탈로그가 제한적입니다. 글로벌 콘텐츠에 접근하고 NATO 회원국으로서 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "글로벌 스트리밍에 접근하고 디지털 개인정보를 보호하세요",
@@ -1082,7 +1082,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   denmark: {
-    metaTitle: "2026년 덴마크 최고의 VPN: 개인정보 보호 및 콘텐츠 접근 | ZeroToVPN",
+    metaTitle: "2026년 덴마크 최고의 VPN: 개인정보 보호 및 콘텐츠 접근 | ZeroToAIAgents",
     metaDescription: "덴마크는 높은 인터넷 자유를 누리지만 정보 공유에 참여합니다. 개인정보 보호 및 덴마크에서 스트리밍 접근을 위한 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "덴마크에서 개인정보 보호 및 글로벌 콘텐츠",
@@ -1107,7 +1107,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   finland: {
-    metaTitle: "2026년 핀란드 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 핀란드 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "핀란드는 최고의 인터넷 자유를 누리지만 스트리밍이 제한적입니다. 글로벌 콘텐츠에 접근하고 정보 협력으로부터 개인정보를 보호할 수 있는 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "최고의 인터넷 자유와 글로벌 스트리밍 접근",
@@ -1131,7 +1131,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   belgium: {
-    metaTitle: "2026년 벨기에 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 벨기에 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "벨기에는 EU 데이터 보존을 따르며 저작권 집행이 강화되고 있습니다. 개인정보 보호 및 벨기에에서 해외 스트리밍 접근을 위한 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "벨기에에서 개인정보 보호 및 글로벌 스트리밍 접근",
@@ -1155,7 +1155,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   austria: {
-    metaTitle: "2026년 오스트리아 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToVPN",
+    metaTitle: "2026년 오스트리아 최고의 VPN: 개인정보 보호 및 스트리밍 | ZeroToAIAgents",
     metaDescription: "오스트리아는 EU 데이터 보존과 저작권 집행이 있습니다. 개인정보 보호와 오스트리아에서 해외 스트리밍을 위한 VPN을 찾아보세요.",
     statusLabel: "완전 합법",
     heroSubtitle: "오스트리아에서 개인정보 보호 및 글로벌 콘텐츠 접근",
@@ -1179,7 +1179,7 @@ export const koTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   hungary: {
-    metaTitle: "2026년 헝가리 최고의 VPN: 언론 자유 및 개인정보 보호 | ZeroToVPN",
+    metaTitle: "2026년 헝가리 최고의 VPN: 언론 자유 및 개인정보 보호 | ZeroToAIAgents",
     metaDescription: "헝가리는 언론 자유 감소와 감시 증가에 직면해 있습니다. 개인정보를 보호하고 헝가리에서 독립 뉴스에 접근할 수 있는 VPN을 찾아보세요.",
     statusLabel: "합법, 미디어 우려",
     heroSubtitle: "헝가리에서 언론 자유와 개인정보를 보호하세요",

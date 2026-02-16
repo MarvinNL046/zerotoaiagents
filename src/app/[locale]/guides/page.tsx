@@ -8,14 +8,11 @@ import {
   BookOpen,
   Shield,
   Zap,
-  Globe,
-  Tv,
-  Lock,
-  Smartphone,
-  Download,
-  Server,
-  Eye,
-  Wifi,
+  Brain,
+  Building,
+  DollarSign,
+  Plug,
+  Workflow,
   ArrowRight,
 } from "lucide-react";
 
@@ -23,7 +20,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("guidesIndex.meta");
@@ -41,78 +38,64 @@ export async function generateMetadata(): Promise<Metadata> {
 // Guide data - metadata only (text comes from translations)
 const guides = [
   {
-    slug: "what-is-vpn",
-    translationKey: "whatIsVpn",
-    icon: Shield,
+    slug: "what-is-ai-agent",
+    translationKey: "whatIsAiAgent",
+    icon: Brain,
     category: "basics",
     featured: true,
   },
   {
-    slug: "how-vpn-works",
-    translationKey: "howVpnWorks",
-    icon: Lock,
-    category: "basics",
-    featured: true,
-  },
-  {
-    slug: "vpn-for-streaming",
-    translationKey: "vpnForStreaming",
-    icon: Tv,
-    category: "useCases",
-    featured: true,
-  },
-  {
-    slug: "vpn-speed-guide",
-    translationKey: "vpnSpeedGuide",
+    slug: "how-ai-agents-work",
+    translationKey: "howAiAgentsWork",
     icon: Zap,
-    category: "performance",
+    category: "basics",
+    featured: true,
+  },
+  {
+    slug: "ai-agent-security",
+    translationKey: "aiAgentSecurity",
+    icon: Shield,
+    category: "security",
+    featured: true,
+  },
+  {
+    slug: "choosing-ai-agent",
+    translationKey: "choosingAiAgent",
+    icon: BookOpen,
+    category: "basics",
     featured: false,
   },
   {
-    slug: "vpn-protocols-explained",
-    translationKey: "vpnProtocolsExplained",
-    icon: Server,
+    slug: "ai-agents-for-business",
+    translationKey: "aiAgentsForBusiness",
+    icon: Building,
+    category: "useCases",
+    featured: false,
+  },
+  {
+    slug: "ai-agent-pricing",
+    translationKey: "aiAgentPricing",
+    icon: DollarSign,
+    category: "basics",
+    featured: false,
+  },
+  {
+    slug: "ai-agent-integrations",
+    translationKey: "aiAgentIntegrations",
+    icon: Plug,
     category: "technical",
     featured: false,
   },
   {
-    slug: "vpn-for-torrenting",
-    translationKey: "vpnForTorrenting",
-    icon: Download,
-    category: "useCases",
-    featured: false,
-  },
-  {
-    slug: "vpn-on-mobile",
-    translationKey: "vpnOnMobile",
-    icon: Smartphone,
-    category: "setup",
-    featured: false,
-  },
-  {
-    slug: "vpn-for-travel",
-    translationKey: "vpnForTravel",
-    icon: Globe,
-    category: "useCases",
-    featured: false,
-  },
-  {
-    slug: "public-wifi-safety",
-    translationKey: "publicWifiSafety",
-    icon: Wifi,
-    category: "security",
-    featured: false,
-  },
-  {
-    slug: "vpn-privacy-guide",
-    translationKey: "vpnPrivacyGuide",
-    icon: Eye,
-    category: "privacy",
+    slug: "building-ai-workflows",
+    translationKey: "buildingAiWorkflows",
+    icon: Workflow,
+    category: "technical",
     featured: false,
   },
 ];
 
-const categoryKeys = ["all", "basics", "useCases", "security", "technical", "performance", "setup", "privacy"];
+const categoryKeys = ["all", "basics", "useCases", "security", "technical"];
 
 export default async function GuidesPage({ params }: Props) {
   const { locale } = await params;
@@ -282,7 +265,7 @@ export default async function GuidesPage({ params }: Props) {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className="text-center p-6">
               <div className="w-14 h-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-7 w-7 text-blue-600 dark:text-blue-400" />
+                <Brain className="h-7 w-7 text-blue-600 dark:text-blue-400" />
               </div>
               <h3 className="font-bold mb-2">{t("topicCards.basics.title")}</h3>
               <p className="text-sm text-muted-foreground">
@@ -292,7 +275,7 @@ export default async function GuidesPage({ params }: Props) {
 
             <div className="text-center p-6">
               <div className="w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4">
-                <Lock className="h-7 w-7 text-green-600 dark:text-green-400" />
+                <Shield className="h-7 w-7 text-green-600 dark:text-green-400" />
               </div>
               <h3 className="font-bold mb-2">{t("topicCards.securityPrivacy.title")}</h3>
               <p className="text-sm text-muted-foreground">
@@ -302,21 +285,21 @@ export default async function GuidesPage({ params }: Props) {
 
             <div className="text-center p-6">
               <div className="w-14 h-14 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
-                <Tv className="h-7 w-7 text-purple-600 dark:text-purple-400" />
+                <Building className="h-7 w-7 text-purple-600 dark:text-purple-400" />
               </div>
-              <h3 className="font-bold mb-2">{t("topicCards.streaming.title")}</h3>
+              <h3 className="font-bold mb-2">{t("topicCards.business.title")}</h3>
               <p className="text-sm text-muted-foreground">
-                {t("topicCards.streaming.description")}
+                {t("topicCards.business.description")}
               </p>
             </div>
 
             <div className="text-center p-6">
               <div className="w-14 h-14 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
-                <Smartphone className="h-7 w-7 text-orange-600 dark:text-orange-400" />
+                <Workflow className="h-7 w-7 text-orange-600 dark:text-orange-400" />
               </div>
-              <h3 className="font-bold mb-2">{t("topicCards.setup.title")}</h3>
+              <h3 className="font-bold mb-2">{t("topicCards.technical.title")}</h3>
               <p className="text-sm text-muted-foreground">
-                {t("topicCards.setup.description")}
+                {t("topicCards.technical.description")}
               </p>
             </div>
           </div>
@@ -333,7 +316,7 @@ export default async function GuidesPage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/guides/what-is-vpn"
+                href="/guides/what-is-ai-agent"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
               >
                 <BookOpen className="mr-2 h-5 w-5" />
@@ -343,7 +326,7 @@ export default async function GuidesPage({ params }: Props) {
                 href="/compare"
                 className="inline-flex items-center justify-center px-6 py-3 border rounded-lg font-medium hover:bg-muted transition-colors"
               >
-                {t("buttons.compareVpns")}
+                {t("buttons.compareAgents")}
               </Link>
             </div>
           </div>
@@ -356,10 +339,10 @@ export default async function GuidesPage({ params }: Props) {
           <RelatedPages
             title="Top Guides"
             pages={[
-              { title: "What is a VPN?", description: "Complete beginner's guide to VPN technology", href: "/guides/what-is-vpn", icon: "shield" },
-              { title: "How VPNs Work", description: "Technical deep-dive into VPN technology", href: "/guides/how-vpn-works", icon: "lock" },
-              { title: "Best VPNs 2026", description: "Our top-rated VPN recommendations", href: "/best/best-vpn", icon: "trophy" },
-              { title: "VPN for Streaming", description: "Access Netflix, Disney+ and more", href: "/guides/vpn-for-streaming", icon: "play" }
+              { title: "What is an AI Agent?", description: "Complete beginner's guide to AI agents", href: "/guides/what-is-ai-agent", icon: "shield" },
+              { title: "How AI Agents Work", description: "Technical deep-dive into AI agent technology", href: "/guides/how-ai-agents-work", icon: "lock" },
+              { title: "Best AI Agents 2026", description: "Our top-rated AI agent recommendations", href: "/best/best-ai-agent", icon: "trophy" },
+              { title: "AI Agent Security", description: "Security and privacy guide for AI agents", href: "/guides/ai-agent-security", icon: "play" }
             ]}
           />
         </div>

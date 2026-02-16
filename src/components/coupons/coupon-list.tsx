@@ -7,7 +7,7 @@ import type { Coupon } from "@/lib/coupon-data";
 interface CouponListProps {
   coupons: Coupon[];
   vpnName?: string;
-  vpnSlug?: string;
+  agentSlug?: string;
   affiliateUrl?: string;
 }
 

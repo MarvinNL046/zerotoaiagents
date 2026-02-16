@@ -34,9 +34,9 @@ export default function SettingsPage() {
   // Settings state
   const [settings, setSettings] = useState({
     // General
-    siteName: "ZeroToVPN",
-    siteUrl: "https://zerotovpn.com",
-    adminEmail: "hello@zerotovpn.com",
+    siteName: "ZeroToAIAgents",
+    siteUrl: "https://zerotoaiagents.com",
+    adminEmail: "hello@zerotoaiagents.com",
 
     // Reviews
     autoApproveReviews: false,

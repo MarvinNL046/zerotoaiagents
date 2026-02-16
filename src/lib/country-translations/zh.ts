@@ -38,7 +38,7 @@ export const zhLabels: CountryPageLabels = {
 
 export const zhTranslations: Record<string, TranslatedCountryContent> = {
   thailand: {
-    metaTitle: "2026年泰国最佳VPN：绕过封锁，保护隐私 | ZeroToVPN",
+    metaTitle: "2026年泰国最佳VPN：绕过封锁，保护隐私 | ZeroToAIAgents",
     metaDescription: "泰国封锁赌博网站、部分新闻媒体，并依据冒犯君主罪法律监控社交媒体。查找在泰国稳定可用的VPN。",
     statusLabel: "合法但受监控",
     heroSubtitle: "绕过内容封锁，保护您在泰国的隐私",
@@ -65,7 +65,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   japan: {
-    metaTitle: "2026年日本最佳VPN：畅享日本内容，保护隐私 | ZeroToVPN",
+    metaTitle: "2026年日本最佳VPN：畅享日本内容，保护隐私 | ZeroToAIAgents",
     metaDescription: "日本互联网自由度高但版权执法严格。查找拥有高速日本服务器的VPN，用于观看动漫、海外访问日本内容和隐私保护。",
     statusLabel: "完全合法",
     heroSubtitle: "全球畅享日本内容，保护您的隐私",
@@ -92,7 +92,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-korea": {
-    metaTitle: "2026年韩国最佳VPN：游戏、隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年韩国最佳VPN：游戏、隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "韩国拥有高速网络但会监控在线活动。查找适合游戏、海外观看韩国内容和隐私保护的VPN。",
     statusLabel: "合法，有部分限制",
     heroSubtitle: "在韩国享受高速游戏、流媒体访问和隐私保护",
@@ -119,7 +119,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hong-kong": {
-    metaTitle: "2026年香港最佳VPN：国安法下的隐私保护 | ZeroToVPN",
+    metaTitle: "2026年香港最佳VPN：国安法下的隐私保护 | ZeroToAIAgents",
     metaDescription: "香港《国安法》加强了监控力度。查找能保护您隐私的VPN，在香港不断变化的数字环境中保障安全。",
     statusLabel: "合法但监控日益增加",
     heroSubtitle: "在香港不断变化的环境中保护您的数字隐私",
@@ -146,7 +146,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   taiwan: {
-    metaTitle: "2026年台湾最佳VPN：流媒体与隐私 | ZeroToVPN",
+    metaTitle: "2026年台湾最佳VPN：流媒体与隐私 | ZeroToAIAgents",
     metaDescription: "台湾享有高度互联网自由。使用VPN访问国际流媒体内容、保护隐私和保障公共WiFi安全。",
     statusLabel: "完全合法",
     heroSubtitle: "在台湾访问全球内容，保护您的隐私",
@@ -171,7 +171,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   singapore: {
-    metaTitle: "2026年新加坡最佳VPN：隐私与内容访问 | ZeroToVPN",
+    metaTitle: "2026年新加坡最佳VPN：隐私与内容访问 | ZeroToAIAgents",
     metaDescription: "新加坡有严格的内容法规和监控法律。查找能在新加坡保护您隐私和绕过内容限制的VPN。",
     statusLabel: "合法但受监控",
     heroSubtitle: "使用合适的VPN应对新加坡的互联网法规",
@@ -196,7 +196,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   malaysia: {
-    metaTitle: "2026年马来西亚最佳VPN：解锁网站，保护隐私 | ZeroToVPN",
+    metaTitle: "2026年马来西亚最佳VPN：解锁网站，保护隐私 | ZeroToAIAgents",
     metaDescription: "马来西亚封锁赌博、成人内容和政治网站。查找能绕过MCMC封锁并保护您在马来西亚隐私的VPN。",
     statusLabel: "合法但内容受过滤",
     heroSubtitle: "绕过MCMC内容封锁，保护您在马来西亚的隐私",
@@ -221,7 +221,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   philippines: {
-    metaTitle: "2026年菲律宾最佳VPN：流媒体与安全 | ZeroToVPN",
+    metaTitle: "2026年菲律宾最佳VPN：流媒体与安全 | ZeroToAIAgents",
     metaDescription: "菲律宾网速较慢且监控日益增加。查找能提升速度、保护隐私和解锁国际流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "在菲律宾提升网速、访问全球内容并保持安全",
@@ -246,7 +246,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   australia: {
-    metaTitle: "2026年澳大利亚最佳VPN：流媒体、隐私与种子下载 | ZeroToVPN",
+    metaTitle: "2026年澳大利亚最佳VPN：流媒体、隐私与种子下载 | ZeroToAIAgents",
     metaDescription: "澳大利亚有强制数据留存和严格的版权执法。查找能保护您隐私和解锁国际流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "保护隐私免受数据留存影响，访问全球内容",
@@ -273,7 +273,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "new-zealand": {
-    metaTitle: "2026年新西兰最佳VPN：流媒体与隐私 | ZeroToVPN",
+    metaTitle: "2026年新西兰最佳VPN：流媒体与隐私 | ZeroToAIAgents",
     metaDescription: "新西兰互联网自由度高但流媒体片库有限。查找能访问全球内容并作为五眼联盟成员国保护您隐私的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "在新西兰访问全球流媒体，保护您的隐私",
@@ -298,7 +298,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-kingdom": {
-    metaTitle: "2026年英国最佳VPN：隐私、流媒体与ISP封锁 | ZeroToVPN",
+    metaTitle: "2026年英国最佳VPN：隐私、流媒体与ISP封锁 | ZeroToAIAgents",
     metaDescription: "英国有广泛的监控法律和ISP级网站封锁。查找能保护您隐私和绕过BT、Virgin、Sky封锁的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "绕过ISP封锁，保护隐私免受《侦查权力法》影响",
@@ -325,7 +325,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   germany: {
-    metaTitle: "2026年德国最佳VPN：隐私、流媒体与种子下载 | ZeroToVPN",
+    metaTitle: "2026年德国最佳VPN：隐私、流媒体与种子下载 | ZeroToAIAgents",
     metaDescription: "德国版权执法严格且有强隐私法律。查找能保护您免受Abmahnung警告信和访问国际流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "避免版权Abmahnung警告信，保护您的数字隐私",
@@ -352,7 +352,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   france: {
-    metaTitle: "2026年法国最佳VPN：隐私、流媒体与HADOPI | ZeroToVPN",
+    metaTitle: "2026年法国最佳VPN：隐私、流媒体与HADOPI | ZeroToAIAgents",
     metaDescription: "法国通过HADOPI监控种子下载并有数据留存法律。查找能保护您隐私和从法国访问国际内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "保护自己免受HADOPI监控，访问全球内容",
@@ -377,7 +377,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   spain: {
-    metaTitle: "2026年西班牙最佳VPN：流媒体、隐私与种子下载 | ZeroToVPN",
+    metaTitle: "2026年西班牙最佳VPN：流媒体、隐私与种子下载 | ZeroToAIAgents",
     metaDescription: "西班牙版权执法日益加强且有欧盟数据留存。查找适合安全下载种子、访问国际流媒体和隐私保护的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "在西班牙畅享全球内容，保护您的隐私",
@@ -402,7 +402,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   italy: {
-    metaTitle: "2026年意大利最佳VPN：流媒体、隐私与AGCOM封锁 | ZeroToVPN",
+    metaTitle: "2026年意大利最佳VPN：流媒体、隐私与AGCOM封锁 | ZeroToAIAgents",
     metaDescription: "意大利通过AGCOM封锁赌博和盗版网站。查找能绕过意大利ISP封锁和访问国际流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "绕过AGCOM封锁，从意大利访问全球流媒体",
@@ -427,7 +427,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   brazil: {
-    metaTitle: "2026年巴西最佳VPN：隐私、流媒体与WhatsApp封锁 | ZeroToVPN",
+    metaTitle: "2026年巴西最佳VPN：隐私、流媒体与WhatsApp封锁 | ZeroToAIAgents",
     metaDescription: "巴西偶尔封锁WhatsApp且监控日益增长。查找能让您保持连接并保护隐私的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "在WhatsApp封锁期间保持连接，保护您的隐私",
@@ -452,7 +452,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   mexico: {
-    metaTitle: "2026年墨西哥最佳VPN：隐私、流媒体与安全 | ZeroToVPN",
+    metaTitle: "2026年墨西哥最佳VPN：隐私、流媒体与安全 | ZeroToAIAgents",
     metaDescription: "墨西哥监控日益增长且网络安全令人担忧。查找能保护您隐私和从墨西哥访问美国流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "保护您的隐私，从墨西哥访问美国流媒体内容",
@@ -477,7 +477,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-states": {
-    metaTitle: "2026年美国最佳VPN：隐私、ISP追踪与流媒体 | ZeroToVPN",
+    metaTitle: "2026年美国最佳VPN：隐私、ISP追踪与流媒体 | ZeroToAIAgents",
     metaDescription: "美国ISP可以出售您的浏览数据，DMCA执法严格。查找能保护您隐私和从美国访问国际内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "阻止ISP追踪，避免DMCA通知，保护您的隐私",
@@ -504,7 +504,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   canada: {
-    metaTitle: "2026年加拿大最佳VPN：隐私、流媒体与P2P | ZeroToVPN",
+    metaTitle: "2026年加拿大最佳VPN：隐私、流媒体与P2P | ZeroToAIAgents",
     metaDescription: "加拿大是五眼联盟成员国，有通知-通知版权规则。查找能保护您隐私和从加拿大访问美国流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "访问美国内容，作为五眼联盟成员国保护您的隐私",
@@ -529,7 +529,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   poland: {
-    metaTitle: "2026年波兰最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年波兰最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "波兰有欧盟数据留存和日益增长的监控。查找能保护您隐私和从波兰访问国际流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "保护您的隐私，从波兰访问全球流媒体",
@@ -554,7 +554,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   sweden: {
-    metaTitle: "2026年瑞典最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年瑞典最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "瑞典是14眼联盟成员国且有版权执法。查找能保护您隐私和从瑞典访问国际流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "隐私保护和从瑞典访问全球内容",
@@ -579,7 +579,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   switzerland: {
-    metaTitle: "2026年瑞士最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年瑞士最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "瑞士有强大的隐私法律但流媒体选择有限。查找能从瑞士访问全球内容和保持隐私的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "强大的隐私法律和从瑞士访问全球内容",
@@ -604,7 +604,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   nigeria: {
-    metaTitle: "2026年尼日利亚最佳VPN：绕过Twitter封禁，保护隐私 | ZeroToVPN",
+    metaTitle: "2026年尼日利亚最佳VPN：绕过Twitter封禁，保护隐私 | ZeroToAIAgents",
     metaDescription: "尼日利亚有社交媒体封禁历史且互联网限制日益增加。查找能让您保持连接并保护隐私的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "在社交媒体封禁期间保持连接，保护您的隐私",
@@ -630,7 +630,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-africa": {
-    metaTitle: "2026年南非最佳VPN：流媒体与安全 | ZeroToVPN",
+    metaTitle: "2026年南非最佳VPN：流媒体与安全 | ZeroToAIAgents",
     metaDescription: "南非网络犯罪日益增长且流媒体片库有限。查找能保护安全和从南非访问全球内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "防范网络犯罪，访问全球流媒体内容",
@@ -655,7 +655,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   kenya: {
-    metaTitle: "2026年肯尼亚最佳VPN：隐私与全球内容 | ZeroToVPN",
+    metaTitle: "2026年肯尼亚最佳VPN：隐私与全球内容 | ZeroToAIAgents",
     metaDescription: "肯尼亚互联网监控日益增强且有内容限制。查找能保护您隐私和从肯尼亚访问全球流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "保护您的隐私，从肯尼亚访问全球内容",
@@ -680,7 +680,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   myanmar: {
-    metaTitle: "2026年缅甸最佳VPN：绕过军政府审查 | ZeroToVPN",
+    metaTitle: "2026年缅甸最佳VPN：绕过军政府审查 | ZeroToAIAgents",
     metaDescription: "缅甸军政府自2021年政变以来实施了严厉的互联网限制。查找拥有混淆技术、在缅甸实际可用的VPN。",
     statusLabel: "政变后受限制",
     heroSubtitle: "绕过军政府互联网审查，保持连接",
@@ -707,7 +707,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   bangladesh: {
-    metaTitle: "2026年孟加拉国最佳VPN：解锁网站，保护隐私 | ZeroToVPN",
+    metaTitle: "2026年孟加拉国最佳VPN：解锁网站，保护隐私 | ZeroToAIAgents",
     metaDescription: "孟加拉国在骚乱期间封锁社交媒体和新闻网站。查找能让您保持连接并保护隐私的VPN。",
     statusLabel: "合法但网站被封锁",
     heroSubtitle: "在互联网关闭和社交媒体封锁期间保持连接",
@@ -732,7 +732,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   nepal: {
-    metaTitle: "2026年尼泊尔最佳VPN：解锁TikTok与内容访问 | ZeroToVPN",
+    metaTitle: "2026年尼泊尔最佳VPN：解锁TikTok与内容访问 | ZeroToAIAgents",
     metaDescription: "尼泊尔已封禁TikTok并屏蔽部分内容。查找能解锁受限应用并保护您在尼泊尔隐私的VPN。",
     statusLabel: "合法，TikTok已被禁",
     heroSubtitle: "解锁TikTok，访问尼泊尔的受限内容",
@@ -757,7 +757,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sri-lanka": {
-    metaTitle: "2026年斯里兰卡最佳VPN：社交媒体访问与隐私 | ZeroToVPN",
+    metaTitle: "2026年斯里兰卡最佳VPN：社交媒体访问与隐私 | ZeroToAIAgents",
     metaDescription: "斯里兰卡在危机期间封锁社交媒体。查找能让您保持连接并在互联网限制期间保护隐私的VPN。",
     statusLabel: "合法但危机期间社交媒体被封锁",
     heroSubtitle: "在社交媒体封锁期间保持连接，保护您的隐私",
@@ -782,7 +782,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   cambodia: {
-    metaTitle: "2026年柬埔寨最佳VPN：隐私与内容访问 | ZeroToVPN",
+    metaTitle: "2026年柬埔寨最佳VPN：隐私与内容访问 | ZeroToAIAgents",
     metaDescription: "柬埔寨监控在线活动并封锁独立媒体。查找能保护您隐私和在柬埔寨访问不受限制内容的VPN。",
     statusLabel: "合法但受监控",
     heroSubtitle: "保护您的隐私，在柬埔寨访问自由媒体",
@@ -807,7 +807,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   israel: {
-    metaTitle: "2026年以色列最佳VPN：隐私与国际内容 | ZeroToVPN",
+    metaTitle: "2026年以色列最佳VPN：隐私与国际内容 | ZeroToAIAgents",
     metaDescription: "以色列拥有先进的监控能力和受地理限制的内容。查找从以色列进行隐私保护和访问国际流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "隐私保护和从以色列访问全球内容",
@@ -832,7 +832,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   colombia: {
-    metaTitle: "2026年哥伦比亚最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年哥伦比亚最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "哥伦比亚监控和网络犯罪问题日益增长。查找能保护您隐私和从哥伦比亚访问国际流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "在线安全保护，访问全球流媒体内容",
@@ -857,7 +857,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   argentina: {
-    metaTitle: "2026年阿根廷最佳VPN：流媒体与隐私 | ZeroToVPN",
+    metaTitle: "2026年阿根廷最佳VPN：流媒体与隐私 | ZeroToAIAgents",
     metaDescription: "阿根廷互联网自由度良好但流媒体有限。查找能从阿根廷访问全球内容和获得更优惠订阅价格的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "从阿根廷访问全球流媒体，保护您的隐私",
@@ -882,7 +882,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   uzbekistan: {
-    metaTitle: "2026年乌兹别克斯坦最佳VPN：绕过审查，保障安全 | ZeroToVPN",
+    metaTitle: "2026年乌兹别克斯坦最佳VPN：绕过审查，保障安全 | ZeroToAIAgents",
     metaDescription: "乌兹别克斯坦严重审查互联网并封锁VPN协议。查找拥有混淆技术、在乌兹别克斯坦可用的VPN。",
     statusLabel: "受限制",
     heroSubtitle: "绕过乌兹别克斯坦的严重互联网审查",
@@ -908,7 +908,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   kazakhstan: {
-    metaTitle: "2026年哈萨克斯坦最佳VPN：绕过审查与监控 | ZeroToVPN",
+    metaTitle: "2026年哈萨克斯坦最佳VPN：绕过审查与监控 | ZeroToAIAgents",
     metaDescription: "哈萨克斯坦审查互联网并曾尝试HTTPS拦截。查找能保护您隐私和在哈萨克斯坦绕过审查的VPN。",
     statusLabel: "受限制且受监控",
     heroSubtitle: "保护自己免受HTTPS拦截和互联网审查",
@@ -934,7 +934,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   ukraine: {
-    metaTitle: "2026年乌克兰最佳VPN：冲突期间的隐私与安全 | ZeroToVPN",
+    metaTitle: "2026年乌克兰最佳VPN：冲突期间的隐私与安全 | ZeroToAIAgents",
     metaDescription: "乌克兰面临战时互联网中断和网络安全威胁。查找在持续冲突中提供安全和可靠访问的VPN。",
     statusLabel: "合法，有战时限制",
     heroSubtitle: "在持续冲突中保持安全和连接",
@@ -960,7 +960,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   romania: {
-    metaTitle: "2026年罗马尼亚最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年罗马尼亚最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "罗马尼亚裁定数据留存法违宪。查找从罗马尼亚进行隐私保护和访问国际流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "隐私友好的管辖权和超快网速",
@@ -985,7 +985,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "czech-republic": {
-    metaTitle: "2026年捷克共和国最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年捷克共和国最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "捷克共和国互联网自由度高但有欧盟数据留存。查找从捷克进行隐私保护和访问国际流媒体的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "访问全球内容，保护隐私免受欧盟数据留存影响",
@@ -1009,7 +1009,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   greece: {
-    metaTitle: "2026年希腊最佳VPN：旅客隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年希腊最佳VPN：旅客隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "希腊是热门旅游目的地，公共WiFi存在安全风险。查找能保护您隐私和访问本国流媒体内容的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "保护公共WiFi安全，在希腊观看本国流媒体",
@@ -1033,7 +1033,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   portugal: {
-    metaTitle: "2026年葡萄牙最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年葡萄牙最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "葡萄牙互联网自由度高但适用欧盟数据留存。查找从葡萄牙访问国际流媒体和隐私保护的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "访问全球内容，保护隐私免受欧盟数据留存影响",
@@ -1058,7 +1058,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   norway: {
-    metaTitle: "2026年挪威最佳VPN：流媒体与隐私 | ZeroToVPN",
+    metaTitle: "2026年挪威最佳VPN：流媒体与隐私 | ZeroToAIAgents",
     metaDescription: "挪威互联网自由度高但流媒体片库有限。查找能从挪威访问全球内容和作为NATO成员国保护隐私的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "访问全球流媒体，保护您的数字隐私",
@@ -1082,7 +1082,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   denmark: {
-    metaTitle: "2026年丹麦最佳VPN：隐私与内容访问 | ZeroToVPN",
+    metaTitle: "2026年丹麦最佳VPN：隐私与内容访问 | ZeroToAIAgents",
     metaDescription: "丹麦互联网自由度高但参与情报共享。查找从丹麦进行隐私保护和流媒体访问的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "隐私保护和从丹麦访问全球内容",
@@ -1107,7 +1107,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   finland: {
-    metaTitle: "2026年芬兰最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年芬兰最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "芬兰互联网自由度顶级但流媒体有限。查找能从芬兰访问全球内容和保护隐私免受情报合作影响的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "顶级互联网自由和全球流媒体访问",
@@ -1131,7 +1131,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   belgium: {
-    metaTitle: "2026年比利时最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年比利时最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "比利时遵循欧盟数据留存且版权执法日益增强。查找从比利时进行隐私保护和国际流媒体访问的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "隐私保护和从比利时访问全球流媒体",
@@ -1155,7 +1155,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   austria: {
-    metaTitle: "2026年奥地利最佳VPN：隐私与流媒体 | ZeroToVPN",
+    metaTitle: "2026年奥地利最佳VPN：隐私与流媒体 | ZeroToAIAgents",
     metaDescription: "奥地利有欧盟数据留存和版权执法。查找从奥地利进行隐私保护和国际流媒体访问的VPN。",
     statusLabel: "完全合法",
     heroSubtitle: "隐私保护和从奥地利访问全球内容",
@@ -1179,7 +1179,7 @@ export const zhTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   hungary: {
-    metaTitle: "2026年匈牙利最佳VPN：媒体自由与隐私 | ZeroToVPN",
+    metaTitle: "2026年匈牙利最佳VPN：媒体自由与隐私 | ZeroToAIAgents",
     metaDescription: "匈牙利媒体自由下降且监控日益增长。查找能保护您隐私和从匈牙利访问独立新闻的VPN。",
     statusLabel: "合法，存在媒体自由担忧",
     heroSubtitle: "保护匈牙利的媒体自由和隐私",

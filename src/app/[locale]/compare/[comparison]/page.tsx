@@ -1,23 +1,23 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getVpnBySlug } from "@/lib/vpn-data-layer";
+import { getAgentBySlug } from "@/lib/agent-data-layer";
 import { ComparisonHero } from "@/components/compare/comparison-hero";
 import { ComparisonTable } from "@/components/compare/comparison-table";
-import { AffiliateButton } from "@/components/vpn/affiliate-button";
+import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Check, X } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentData } from "@/lib/db/agent-service";
 
 type Props = {
   params: Promise<{ locale: string; comparison: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 export const revalidate = 86400;
 
 // Parse comparison slug (e.g., "nordvpn-vs-surfshark") into two VPN slugs
@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const { slug1, slug2 } = slugs;
-  const vpn1 = await getVpnBySlug(slug1);
-  const vpn2 = await getVpnBySlug(slug2);
+  const vpn1 = await getAgentBySlug(slug1);
+  const vpn2 = await getAgentBySlug(slug2);
 
   if (!vpn1 || !vpn2) {
     return {
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(baseUrl),
-    title: `${vpn1.name} vs ${vpn2.name}: Which is Better in 2026? - ZeroToVPN`,
+    title: `${vpn1.name} vs ${vpn2.name}: Which is Better in 2026? - ZeroToAIAgents`,
     description: `Compare ${vpn1.name} and ${vpn2.name} side by side. See the differences in speed, security, pricing, features, and more to choose the best VPN for your needs.`,
     alternates: {
       canonical: canonicalUrl,
@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 // Comparison Schema for SEO
-function ComparisonSchema({ vpn1, vpn2 }: { vpn1: VpnData; vpn2: VpnData }) {
+function ComparisonSchema({ vpn1, vpn2 }: { vpn1: AiAgentData; vpn2: AiAgentData }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ComparisonPage",
@@ -100,7 +100,7 @@ function ComparisonSchema({ vpn1, vpn2 }: { vpn1: VpnData; vpn2: VpnData }) {
         },
         offers: {
           "@type": "Offer",
-          price: vpn1.priceMonthly,
+          price: vpn1.monthlyPrice,
           priceCurrency: "USD",
         },
       },
@@ -116,7 +116,7 @@ function ComparisonSchema({ vpn1, vpn2 }: { vpn1: VpnData; vpn2: VpnData }) {
         },
         offers: {
           "@type": "Offer",
-          price: vpn2.priceMonthly,
+          price: vpn2.monthlyPrice,
           priceCurrency: "USD",
         },
       },
@@ -144,8 +144,8 @@ export default async function ComparisonPage({ params }: Props) {
   const { slug1, slug2 } = slugs;
 
   // Fetch both VPNs
-  const vpn1 = await getVpnBySlug(slug1);
-  const vpn2 = await getVpnBySlug(slug2);
+  const vpn1 = await getAgentBySlug(slug1);
+  const vpn2 = await getAgentBySlug(slug2);
 
   // If either VPN doesn't exist, show 404
   if (!vpn1 || !vpn2) {
@@ -305,25 +305,23 @@ export default async function ComparisonPage({ params }: Props) {
                     Choose {vpn1.name} if:
                   </h3>
                   <ul className="space-y-2">
-                    {vpn1.speedScore > vpn2.speedScore && (
-                      <li>You prioritize faster speeds ({vpn1.speedScore}%)</li>
+                    {vpn1.performance > vpn2.performance && (
+                      <li>You prioritize better performance ({vpn1.performance}/5)</li>
                     )}
-                    {vpn1.securityScore > vpn2.securityScore && (
+                    {vpn1.easeOfUse > vpn2.easeOfUse && (
                       <li>
-                        You need stronger security ({vpn1.securityScore}%)
+                        You want easier setup and use ({vpn1.easeOfUse}/5)
                       </li>
                     )}
-                    {vpn1.servers > vpn2.servers && (
+                    {vpn1.overallRating > vpn2.overallRating && (
                       <li>
-                        You want more server options ({vpn1.servers.toLocaleString()}+
-                        servers)
+                        You want the higher-rated option ({vpn1.overallRating}/5 rating)
                       </li>
                     )}
-                    {(vpn1.priceTwoYear || vpn1.priceYearly) <
-                      (vpn2.priceTwoYear || vpn2.priceYearly) && (
+                    {vpn1.annualPrice < vpn2.annualPrice && (
                       <li>
                         You&apos;re looking for better value ($
-                        {vpn1.priceTwoYear || vpn1.priceYearly}/mo)
+                        {vpn1.annualPrice}/mo)
                       </li>
                     )}
                   </ul>
@@ -332,25 +330,23 @@ export default async function ComparisonPage({ params }: Props) {
                     Choose {vpn2.name} if:
                   </h3>
                   <ul className="space-y-2">
-                    {vpn2.speedScore > vpn1.speedScore && (
-                      <li>You prioritize faster speeds ({vpn2.speedScore}%)</li>
+                    {vpn2.performance > vpn1.performance && (
+                      <li>You prioritize better performance ({vpn2.performance}/5)</li>
                     )}
-                    {vpn2.securityScore > vpn1.securityScore && (
+                    {vpn2.easeOfUse > vpn1.easeOfUse && (
                       <li>
-                        You need stronger security ({vpn2.securityScore}%)
+                        You want easier setup and use ({vpn2.easeOfUse}/5)
                       </li>
                     )}
-                    {vpn2.servers > vpn1.servers && (
+                    {vpn2.overallRating > vpn1.overallRating && (
                       <li>
-                        You want more server options ({vpn2.servers.toLocaleString()}+
-                        servers)
+                        You want the higher-rated option ({vpn2.overallRating}/5 rating)
                       </li>
                     )}
-                    {(vpn2.priceTwoYear || vpn2.priceYearly) <
-                      (vpn1.priceTwoYear || vpn1.priceYearly) && (
+                    {vpn2.annualPrice < vpn1.annualPrice && (
                       <li>
                         You&apos;re looking for better value ($
-                        {vpn2.priceTwoYear || vpn2.priceYearly}/mo)
+                        {vpn2.annualPrice}/mo)
                       </li>
                     )}
                   </ul>
@@ -368,15 +364,15 @@ export default async function ComparisonPage({ params }: Props) {
                           {vpn1.overallRating}/5 Rating
                         </Badge>
                         <Badge variant="outline">
-                          ${vpn1.priceTwoYear || vpn1.priceYearly}/mo
+                          ${vpn1.annualPrice || vpn1.annualPrice}/mo
                         </Badge>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-2">
                     <AffiliateButton
-                      vpnId={vpn1.id}
-                      vpnName={vpn1.name}
+                      agentId={vpn1.id}
+                      agentName={vpn1.name}
                       affiliateUrl={vpn1.affiliateUrl}
                       className="w-full"
                     >
@@ -397,15 +393,15 @@ export default async function ComparisonPage({ params }: Props) {
                           {vpn2.overallRating}/5 Rating
                         </Badge>
                         <Badge variant="outline">
-                          ${vpn2.priceTwoYear || vpn2.priceYearly}/mo
+                          ${vpn2.annualPrice || vpn2.annualPrice}/mo
                         </Badge>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-2">
                     <AffiliateButton
-                      vpnId={vpn2.id}
-                      vpnName={vpn2.name}
+                      agentId={vpn2.id}
+                      agentName={vpn2.name}
                       affiliateUrl={vpn2.affiliateUrl}
                       className="w-full"
                     >

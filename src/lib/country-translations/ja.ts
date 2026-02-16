@@ -38,7 +38,7 @@ export const jaLabels: CountryPageLabels = {
 
 export const jaTranslations: Record<string, TranslatedCountryContent> = {
   "thailand": {
-    metaTitle: "2026年タイにおすすめのVPN：ブロック解除とプライバシー保護 | ZeroToVPN",
+    metaTitle: "2026年タイにおすすめのVPN：ブロック解除とプライバシー保護 | ZeroToAIAgents",
     metaDescription: "タイではギャンブルサイトや一部のニュースサイトがブロックされ、不敬罪法の下でSNSが監視されています。タイで確実に動作するVPNをご紹介します。",
     statusLabel: "合法だが監視あり",
     heroSubtitle: "タイでコンテンツブロックを回避し、プライバシーを守る",
@@ -65,7 +65,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "japan": {
-    metaTitle: "2026年日本におすすめのVPN：日本のコンテンツ視聴とプライバシー保護 | ZeroToVPN",
+    metaTitle: "2026年日本におすすめのVPN：日本のコンテンツ視聴とプライバシー保護 | ZeroToAIAgents",
     metaDescription: "日本はインターネットの自由度が高いですが、著作権の取り締まりが厳しいです。アニメのストリーミング、海外からの日本コンテンツへのアクセス、プライバシー保護に最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "世界中で日本のコンテンツを視聴し、プライバシーを守る",
@@ -92,7 +92,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-korea": {
-    metaTitle: "2026年韓国におすすめのVPN：ゲーム、プライバシー、ストリーミング | ZeroToVPN",
+    metaTitle: "2026年韓国におすすめのVPN：ゲーム、プライバシー、ストリーミング | ZeroToAIAgents",
     metaDescription: "韓国は高速インターネットを誇りますが、オンライン活動が監視されています。ゲーム、韓国コンテンツの海外視聴、監視からのプライバシー保護に最適なVPNをご紹介します。",
     statusLabel: "合法、一部制限あり",
     heroSubtitle: "韓国での高速ゲーム、ストリーミングアクセス、プライバシー保護",
@@ -119,7 +119,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hong-kong": {
-    metaTitle: "2026年香港におすすめのVPN：国安法下でのプライバシー保護 | ZeroToVPN",
+    metaTitle: "2026年香港におすすめのVPN：国安法下でのプライバシー保護 | ZeroToAIAgents",
     metaDescription: "香港の国家安全維持法により監視が強化されています。香港の変化するデジタル環境でプライバシーを守るVPNをご紹介します。",
     statusLabel: "合法だが監視強化中",
     heroSubtitle: "変化する香港のデジタル環境でプライバシーを守る",
@@ -146,7 +146,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "taiwan": {
-    metaTitle: "2026年台湾におすすめのVPN：ストリーミングとプライバシー | ZeroToVPN",
+    metaTitle: "2026年台湾におすすめのVPN：ストリーミングとプライバシー | ZeroToAIAgents",
     metaDescription: "台湾はインターネットの自由度が高い国です。VPNを使って国際的なストリーミングコンテンツにアクセスし、プライバシーを保護し、公共WiFiを安全に利用しましょう。",
     statusLabel: "完全に合法",
     heroSubtitle: "台湾でグローバルコンテンツにアクセスし、プライバシーを守る",
@@ -171,7 +171,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "singapore": {
-    metaTitle: "2026年シンガポールにおすすめのVPN：プライバシーとコンテンツアクセス | ZeroToVPN",
+    metaTitle: "2026年シンガポールにおすすめのVPN：プライバシーとコンテンツアクセス | ZeroToAIAgents",
     metaDescription: "シンガポールは厳格なコンテンツ規制と監視法があります。シンガポールでプライバシーを守り、コンテンツ制限を回避するVPNをご紹介します。",
     statusLabel: "合法だが監視あり",
     heroSubtitle: "シンガポールのインターネット規制を適切なVPNで乗り越える",
@@ -196,7 +196,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "malaysia": {
-    metaTitle: "2026年マレーシアにおすすめのVPN：サイトブロック解除とプライバシー保護 | ZeroToVPN",
+    metaTitle: "2026年マレーシアにおすすめのVPN：サイトブロック解除とプライバシー保護 | ZeroToAIAgents",
     metaDescription: "マレーシアではギャンブル、アダルトコンテンツ、政治サイトがブロックされています。MCMCのブロックを回避し、プライバシーを保護するVPNをご紹介します。",
     statusLabel: "合法だがコンテンツフィルタリングあり",
     heroSubtitle: "マレーシアでMCMCのコンテンツブロックを回避し、プライバシーを守る",
@@ -221,7 +221,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "philippines": {
-    metaTitle: "2026年フィリピンにおすすめのVPN：ストリーミングとセキュリティ | ZeroToVPN",
+    metaTitle: "2026年フィリピンにおすすめのVPN：ストリーミングとセキュリティ | ZeroToAIAgents",
     metaDescription: "フィリピンはインターネット速度が遅く、監視が増加しています。速度改善、プライバシー保護、国際ストリーミングコンテンツのブロック解除に最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "フィリピンで速度を改善し、グローバルコンテンツにアクセスし、安全を保つ",
@@ -246,7 +246,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "australia": {
-    metaTitle: "2026年オーストラリアにおすすめのVPN：ストリーミング、プライバシー、トレント | ZeroToVPN",
+    metaTitle: "2026年オーストラリアにおすすめのVPN：ストリーミング、プライバシー、トレント | ZeroToAIAgents",
     metaDescription: "オーストラリアには強制的なデータ保持法と厳格な著作権取り締まりがあります。プライバシーを保護し、国際ストリーミングを解除するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "データ保持からプライバシーを守り、グローバルコンテンツにアクセス",
@@ -273,7 +273,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "new-zealand": {
-    metaTitle: "2026年ニュージーランドにおすすめのVPN：ストリーミングとプライバシー | ZeroToVPN",
+    metaTitle: "2026年ニュージーランドにおすすめのVPN：ストリーミングとプライバシー | ZeroToAIAgents",
     metaDescription: "ニュージーランドはインターネットの自由度が高いですが、ストリーミングライブラリが限定的です。ファイブアイズメンバーとしてのプライバシー保護とグローバルコンテンツへのアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "ニュージーランドでグローバルストリーミングにアクセスし、プライバシーを守る",
@@ -298,7 +298,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-kingdom": {
-    metaTitle: "2026年イギリスにおすすめのVPN：プライバシー、ストリーミング、ISPブロック | ZeroToVPN",
+    metaTitle: "2026年イギリスにおすすめのVPN：プライバシー、ストリーミング、ISPブロック | ZeroToAIAgents",
     metaDescription: "イギリスには広範な監視法とISPレベルのウェブサイトブロッキングがあります。プライバシーを守り、BT、Virgin、Skyのブロックを回避するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "ISPブロックを回避し、スヌーパーズ・チャーターからプライバシーを守る",
@@ -325,7 +325,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "germany": {
-    metaTitle: "2026年ドイツにおすすめのVPN：プライバシー、ストリーミング、トレント | ZeroToVPN",
+    metaTitle: "2026年ドイツにおすすめのVPN：プライバシー、ストリーミング、トレント | ZeroToAIAgents",
     metaDescription: "ドイツには厳格な著作権取り締まりとプライバシー法があります。Abmahnung警告書から身を守り、国際ストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "著作権Abmahnung警告書を回避し、デジタルプライバシーを守る",
@@ -352,7 +352,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "france": {
-    metaTitle: "2026年フランスにおすすめのVPN：プライバシー、ストリーミング、HADOPI | ZeroToVPN",
+    metaTitle: "2026年フランスにおすすめのVPN：プライバシー、ストリーミング、HADOPI | ZeroToAIAgents",
     metaDescription: "フランスはHADOPIを通じてトレントを監視し、データ保持法があります。プライバシーを保護し国際コンテンツにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "HADOPI監視から身を守り、グローバルコンテンツにアクセス",
@@ -377,7 +377,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "spain": {
-    metaTitle: "2026年スペインにおすすめのVPN：ストリーミング、プライバシー、トレント | ZeroToVPN",
+    metaTitle: "2026年スペインにおすすめのVPN：ストリーミング、プライバシー、トレント | ZeroToAIAgents",
     metaDescription: "スペインでは著作権取り締まりが強化され、EUデータ保持法が適用されています。安全なトレント、国際ストリーミング、プライバシー保護に最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "スペインでグローバルコンテンツをストリーミングし、プライバシーを守る",
@@ -402,7 +402,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "italy": {
-    metaTitle: "2026年イタリアにおすすめのVPN：ストリーミング、プライバシー、AGCOMブロック | ZeroToVPN",
+    metaTitle: "2026年イタリアにおすすめのVPN：ストリーミング、プライバシー、AGCOMブロック | ZeroToAIAgents",
     metaDescription: "イタリアはAGCOMを通じてギャンブルや海賊版サイトをブロックしています。イタリアのISPブロックを回避し、国際ストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "AGCOMのブロックを回避し、イタリアからグローバルストリーミングにアクセス",
@@ -427,7 +427,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "brazil": {
-    metaTitle: "2026年ブラジルにおすすめのVPN：プライバシー、ストリーミング、WhatsAppブロック | ZeroToVPN",
+    metaTitle: "2026年ブラジルにおすすめのVPN：プライバシー、ストリーミング、WhatsAppブロック | ZeroToAIAgents",
     metaDescription: "ブラジルでは時折WhatsAppがブロックされ、監視が増加しています。接続を維持し、プライバシーを保護するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "WhatsAppブロック中も接続を維持し、プライバシーを守る",
@@ -452,7 +452,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "mexico": {
-    metaTitle: "2026年メキシコにおすすめのVPN：プライバシー、ストリーミング、セキュリティ | ZeroToVPN",
+    metaTitle: "2026年メキシコにおすすめのVPN：プライバシー、ストリーミング、セキュリティ | ZeroToAIAgents",
     metaDescription: "メキシコでは監視やサイバーセキュリティの懸念が高まっています。プライバシーを守り、米国のストリーミングコンテンツにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "メキシコからプライバシーを守り、米国のストリーミングコンテンツにアクセス",
@@ -477,7 +477,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-states": {
-    metaTitle: "2026年アメリカにおすすめのVPN：プライバシー、ISP追跡、ストリーミング | ZeroToVPN",
+    metaTitle: "2026年アメリカにおすすめのVPN：プライバシー、ISP追跡、ストリーミング | ZeroToAIAgents",
     metaDescription: "米国のISPは閲覧データを販売でき、DMCA取り締まりも厳格です。プライバシーを保護し、国際コンテンツにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "ISP追跡を阻止し、DMCA通知を回避し、プライバシーを守る",
@@ -504,7 +504,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "canada": {
-    metaTitle: "2026年カナダにおすすめのVPN：プライバシー、ストリーミング、P2P | ZeroToVPN",
+    metaTitle: "2026年カナダにおすすめのVPN：プライバシー、ストリーミング、P2P | ZeroToAIAgents",
     metaDescription: "カナダはファイブアイズのメンバーで、通知・通知制の著作権ルールがあります。プライバシーを保護し、米国のストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "米国コンテンツにアクセスし、ファイブアイズメンバーとしてプライバシーを守る",
@@ -529,7 +529,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "poland": {
-    metaTitle: "2026年ポーランドにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年ポーランドにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "ポーランドにはEUデータ保持法と増加する監視があります。プライバシーを保護し国際ストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "ポーランドからプライバシーを守り、グローバルストリーミングにアクセス",
@@ -554,7 +554,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sweden": {
-    metaTitle: "2026年スウェーデンにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年スウェーデンにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "スウェーデンは14アイズのメンバーで著作権取り締まりがあります。プライバシーを保護し国際ストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "スウェーデンからのプライバシー保護とグローバルコンテンツアクセス",
@@ -579,7 +579,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "switzerland": {
-    metaTitle: "2026年スイスにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年スイスにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "スイスは強力なプライバシー法がありますが、ストリーミングオプションが限定的です。グローバルコンテンツにアクセスしプライバシーを維持するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "強力なプライバシー法とスイスからのグローバルコンテンツアクセス",
@@ -604,7 +604,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "nigeria": {
-    metaTitle: "2026年ナイジェリアにおすすめのVPN：Twitterブロック回避とプライバシー保護 | ZeroToVPN",
+    metaTitle: "2026年ナイジェリアにおすすめのVPN：Twitterブロック回避とプライバシー保護 | ZeroToAIAgents",
     metaDescription: "ナイジェリアにはSNSブロックの前例とインターネット規制の拡大があります。接続を維持しプライバシーを保護するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "SNSブロック中も接続を維持し、プライバシーを守る",
@@ -630,7 +630,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-africa": {
-    metaTitle: "2026年南アフリカにおすすめのVPN：ストリーミングとセキュリティ | ZeroToVPN",
+    metaTitle: "2026年南アフリカにおすすめのVPN：ストリーミングとセキュリティ | ZeroToAIAgents",
     metaDescription: "南アフリカはサイバー犯罪が増加し、ストリーミングライブラリが限定的です。セキュリティを守りグローバルコンテンツにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "サイバー犯罪から保護し、グローバルストリーミングコンテンツにアクセス",
@@ -655,7 +655,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "kenya": {
-    metaTitle: "2026年ケニアにおすすめのVPN：プライバシーとグローバルコンテンツ | ZeroToVPN",
+    metaTitle: "2026年ケニアにおすすめのVPN：プライバシーとグローバルコンテンツ | ZeroToAIAgents",
     metaDescription: "ケニアではインターネット監視とコンテンツ制限が拡大しています。プライバシーを保護しグローバルストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "ケニアからプライバシーを守り、グローバルコンテンツにアクセス",
@@ -680,7 +680,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "myanmar": {
-    metaTitle: "2026年ミャンマーにおすすめのVPN：軍事検閲を回避 | ZeroToVPN",
+    metaTitle: "2026年ミャンマーにおすすめのVPN：軍事検閲を回避 | ZeroToAIAgents",
     metaDescription: "ミャンマーの軍事政権は2021年のクーデター以降、厳しいインターネット規制を課しています。ミャンマーで実際に動作する難読化機能付きVPNをご紹介します。",
     statusLabel: "クーデター以降制限あり",
     heroSubtitle: "軍事政権のインターネット検閲を回避し、接続を維持する",
@@ -707,7 +707,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "bangladesh": {
-    metaTitle: "2026年バングラデシュにおすすめのVPN：サイトブロック解除とプライバシー保護 | ZeroToVPN",
+    metaTitle: "2026年バングラデシュにおすすめのVPN：サイトブロック解除とプライバシー保護 | ZeroToAIAgents",
     metaDescription: "バングラデシュは混乱時にSNSやニュースサイトをブロックします。接続を維持しプライバシーを保護するVPNをご紹介します。",
     statusLabel: "合法だがサイトブロックあり",
     heroSubtitle: "インターネット遮断やSNSブロック中も接続を維持する",
@@ -732,7 +732,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "nepal": {
-    metaTitle: "2026年ネパールにおすすめのVPN：TikTokブロック解除とコンテンツアクセス | ZeroToVPN",
+    metaTitle: "2026年ネパールにおすすめのVPN：TikTokブロック解除とコンテンツアクセス | ZeroToAIAgents",
     metaDescription: "ネパールはTikTokを禁止し、一部のコンテンツをブロックしています。制限されたアプリのブロック解除とプライバシー保護に最適なVPNをご紹介します。",
     statusLabel: "合法、TikTok禁止",
     heroSubtitle: "TikTokのブロックを解除し、ネパールで制限されたコンテンツにアクセス",
@@ -757,7 +757,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sri-lanka": {
-    metaTitle: "2026年スリランカにおすすめのVPN：SNSアクセスとプライバシー | ZeroToVPN",
+    metaTitle: "2026年スリランカにおすすめのVPN：SNSアクセスとプライバシー | ZeroToAIAgents",
     metaDescription: "スリランカは危機時にSNSをブロックします。インターネット制限中も接続を維持しプライバシーを保護するVPNをご紹介します。",
     statusLabel: "合法だが危機時にSNSブロック",
     heroSubtitle: "SNSブロック中も接続を維持し、プライバシーを守る",
@@ -782,7 +782,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "cambodia": {
-    metaTitle: "2026年カンボジアにおすすめのVPN：プライバシーとコンテンツアクセス | ZeroToVPN",
+    metaTitle: "2026年カンボジアにおすすめのVPN：プライバシーとコンテンツアクセス | ZeroToAIAgents",
     metaDescription: "カンボジアはオンライン活動を監視し、独立系メディアをブロックしています。プライバシーを保護し制限のないコンテンツにアクセスするVPNをご紹介します。",
     statusLabel: "合法だが監視あり",
     heroSubtitle: "カンボジアでプライバシーを守り、自由なメディアにアクセス",
@@ -807,7 +807,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "israel": {
-    metaTitle: "2026年イスラエルにおすすめのVPN：プライバシーと国際コンテンツ | ZeroToVPN",
+    metaTitle: "2026年イスラエルにおすすめのVPN：プライバシーと国際コンテンツ | ZeroToAIAgents",
     metaDescription: "イスラエルは高度な監視能力を持ち、地域制限コンテンツがあります。プライバシー保護と国際ストリーミングアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "イスラエルからのプライバシー保護とグローバルコンテンツアクセス",
@@ -832,7 +832,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "colombia": {
-    metaTitle: "2026年コロンビアにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年コロンビアにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "コロンビアでは監視とサイバー犯罪の懸念が高まっています。プライバシーを保護し国際ストリーミングにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "オンラインの安全を守り、グローバルストリーミングコンテンツにアクセス",
@@ -857,7 +857,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "argentina": {
-    metaTitle: "2026年アルゼンチンにおすすめのVPN：ストリーミングとプライバシー | ZeroToVPN",
+    metaTitle: "2026年アルゼンチンにおすすめのVPN：ストリーミングとプライバシー | ZeroToAIAgents",
     metaDescription: "アルゼンチンはインターネットの自由度が高いですが、ストリーミングが限定的です。グローバルコンテンツにアクセスしお得なサブスクリプションを得るVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "アルゼンチンからグローバルストリーミングにアクセスし、プライバシーを守る",
@@ -882,7 +882,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "uzbekistan": {
-    metaTitle: "2026年ウズベキスタンにおすすめのVPN：検閲回避と安全確保 | ZeroToVPN",
+    metaTitle: "2026年ウズベキスタンにおすすめのVPN：検閲回避と安全確保 | ZeroToAIAgents",
     metaDescription: "ウズベキスタンはインターネットを厳しく検閲し、VPNプロトコルをブロックしています。ウズベキスタンで動作する難読化機能付きVPNをご紹介します。",
     statusLabel: "制限あり",
     heroSubtitle: "ウズベキスタンの厳しいインターネット検閲を回避",
@@ -908,7 +908,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "kazakhstan": {
-    metaTitle: "2026年カザフスタンにおすすめのVPN：検閲と監視を回避 | ZeroToVPN",
+    metaTitle: "2026年カザフスタンにおすすめのVPN：検閲と監視を回避 | ZeroToAIAgents",
     metaDescription: "カザフスタンはインターネットを検閲し、HTTPS傍受を試みています。プライバシーを保護し検閲を回避するVPNをご紹介します。",
     statusLabel: "制限あり、監視下",
     heroSubtitle: "HTTPS傍受とインターネット検閲から身を守る",
@@ -934,7 +934,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "ukraine": {
-    metaTitle: "2026年ウクライナにおすすめのVPN：紛争中のプライバシーとセキュリティ | ZeroToVPN",
+    metaTitle: "2026年ウクライナにおすすめのVPN：紛争中のプライバシーとセキュリティ | ZeroToAIAgents",
     metaDescription: "ウクライナは戦時中のインターネット障害とサイバーセキュリティの脅威に直面しています。紛争中にセキュリティと確実なアクセスを提供するVPNをご紹介します。",
     statusLabel: "合法、戦時制限あり",
     heroSubtitle: "進行中の紛争中も安全に接続を維持する",
@@ -960,7 +960,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "romania": {
-    metaTitle: "2026年ルーマニアにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年ルーマニアにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "ルーマニアはデータ保持法を違憲として退けました。プライバシーと国際ストリーミングアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "プライバシーに優しい法域と高速インターネット",
@@ -985,7 +985,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "czech-republic": {
-    metaTitle: "2026年チェコにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年チェコにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "チェコはインターネットの自由度が高いですが、EUデータ保持法が適用されます。プライバシーと国際ストリーミングアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "グローバルコンテンツにアクセスし、EUデータ保持からプライバシーを守る",
@@ -1009,7 +1009,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "greece": {
-    metaTitle: "2026年ギリシャにおすすめのVPN：旅行者向けプライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年ギリシャにおすすめのVPN：旅行者向けプライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "ギリシャは人気の旅行先で公共WiFiのリスクがあります。プライバシーを保護し母国のストリーミングコンテンツにアクセスするVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "公共WiFiを安全に利用し、ギリシャで母国のストリーミングにアクセス",
@@ -1033,7 +1033,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "portugal": {
-    metaTitle: "2026年ポルトガルにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年ポルトガルにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "ポルトガルはインターネットの自由度が高いですが、EUデータ保持が適用されます。国際ストリーミングへのアクセスとプライバシー保護に最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "グローバルコンテンツにアクセスし、EUデータ保持からプライバシーを守る",
@@ -1058,7 +1058,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "norway": {
-    metaTitle: "2026年ノルウェーにおすすめのVPN：ストリーミングとプライバシー | ZeroToVPN",
+    metaTitle: "2026年ノルウェーにおすすめのVPN：ストリーミングとプライバシー | ZeroToAIAgents",
     metaDescription: "ノルウェーはインターネットの自由度が高いですが、ストリーミングカタログが限定的です。グローバルコンテンツにアクセスしNATOメンバーとしてプライバシーを保護するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "グローバルストリーミングにアクセスし、デジタルプライバシーを守る",
@@ -1082,7 +1082,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "denmark": {
-    metaTitle: "2026年デンマークにおすすめのVPN：プライバシーとコンテンツアクセス | ZeroToVPN",
+    metaTitle: "2026年デンマークにおすすめのVPN：プライバシーとコンテンツアクセス | ZeroToAIAgents",
     metaDescription: "デンマークはインターネットの自由度が高いですが、情報共有に参加しています。プライバシーとストリーミングアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "デンマークからのプライバシー保護とグローバルコンテンツ",
@@ -1107,7 +1107,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "finland": {
-    metaTitle: "2026年フィンランドにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年フィンランドにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "フィンランドはトップクラスのインターネット自由度を持ちますが、ストリーミングが限定的です。グローバルコンテンツにアクセスし情報協力からプライバシーを保護するVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "トップクラスのインターネット自由度とグローバルストリーミングアクセス",
@@ -1131,7 +1131,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "belgium": {
-    metaTitle: "2026年ベルギーにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年ベルギーにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "ベルギーはEUデータ保持に従い、著作権取り締まりが強化されています。プライバシーと国際ストリーミングアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "ベルギーからのプライバシーとグローバルストリーミングアクセス",
@@ -1155,7 +1155,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "austria": {
-    metaTitle: "2026年オーストリアにおすすめのVPN：プライバシーとストリーミング | ZeroToVPN",
+    metaTitle: "2026年オーストリアにおすすめのVPN：プライバシーとストリーミング | ZeroToAIAgents",
     metaDescription: "オーストリアにはEUデータ保持と著作権取り締まりがあります。プライバシー保護と国際ストリーミングアクセスに最適なVPNをご紹介します。",
     statusLabel: "完全に合法",
     heroSubtitle: "オーストリアからのプライバシー保護とグローバルコンテンツアクセス",
@@ -1179,7 +1179,7 @@ export const jaTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hungary": {
-    metaTitle: "2026年ハンガリーにおすすめのVPN：メディアの自由とプライバシー | ZeroToVPN",
+    metaTitle: "2026年ハンガリーにおすすめのVPN：メディアの自由とプライバシー | ZeroToAIAgents",
     metaDescription: "ハンガリーではメディアの自由度が低下し、監視が増加しています。プライバシーを保護し独立系ニュースにアクセスするVPNをご紹介します。",
     statusLabel: "合法、メディアへの懸念あり",
     heroSubtitle: "ハンガリーでメディアの自由とプライバシーを守る",

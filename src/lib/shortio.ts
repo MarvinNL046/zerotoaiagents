@@ -1,7 +1,7 @@
 // Short.io API client for affiliate link analytics
 
 const SHORTIO_API_KEY = process.env.SHORTIO_API_KEY;
-const SHORTIO_DOMAIN = "go.zerotovpn.com";
+const SHORTIO_DOMAIN = "go.zerotoaiagents.com";
 const SHORTIO_API_BASE = "https://api.short.io";
 
 // Types
@@ -38,7 +38,7 @@ export interface AnalyticsData {
   topLinks: Array<{
     path: string;
     clicks: number;
-    vpnName: string;
+    agentName: string;
   }>;
   trendPercentage: number;
   linkStats: LinkStats[];
@@ -154,7 +154,7 @@ export async function getClickAnalytics(
   try {
     const links = await getAllLinks();
 
-    // Filter only VPN links (from go.zerotovpn.com)
+    // Filter only VPN links (from go.zerotoaiagents.com)
     const vpnLinks = links.filter((link) =>
       link.path && !link.path.includes("admin")
     );
@@ -204,7 +204,7 @@ export async function getClickAnalytics(
     const topLinks = linkStats.slice(0, 5).map((stat) => ({
       path: stat.path,
       clicks: stat.clicks,
-      vpnName: formatVpnName(stat.path),
+      agentName: formatVpnName(stat.path),
     }));
 
     // Calculate trend (simple: compare this week vs last week)

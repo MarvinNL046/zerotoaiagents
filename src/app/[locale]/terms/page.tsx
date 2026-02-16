@@ -16,14 +16,14 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Terms of Service - ZeroToVPN",
+    title: "Terms of Service - ZeroToAIAgents",
     description:
-      "Read the terms and conditions for using ZeroToVPN. Understand your rights and responsibilities when using our VPN comparison and review website.",
+      "Read the terms and conditions for using ZeroToAIAgents. Understand your rights and responsibilities when using our AI agent comparison and review website.",
     robots: {
       index: true,
       follow: true,
@@ -51,7 +51,7 @@ export default async function TermsPage({ params }: Props) {
             </h1>
             <p className="text-lg text-muted-foreground">
               Please read these terms carefully before using our website.
-              By accessing ZeroToVPN, you agree to be bound by these terms.
+              By accessing ZeroToAIAgents, you agree to be bound by these terms.
             </p>
             <p className="text-sm text-muted-foreground">
               Last updated: {lastUpdated}
@@ -72,15 +72,15 @@ export default async function TermsPage({ params }: Props) {
                   Agreement to Terms
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  By accessing and using ZeroToVPN (&quot;Website&quot;), you accept and
+                  By accessing and using ZeroToAIAgents (&quot;Website&quot;), you accept and
                   agree to be bound by these Terms of Service (&quot;Terms&quot;). If you
                   disagree with any part of these terms, you may not access the
                   Website.
                 </p>
                 <p className="text-muted-foreground">
                   These Terms constitute a legally binding agreement between you
-                  and ZeroToVPN (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) regarding your use
-                  of our Website located at zerotovpn.com and any related services.
+                  and ZeroToAIAgents (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) regarding your use
+                  of our Website located at zerotoaiagents.com and any related services.
                 </p>
               </div>
 
@@ -91,21 +91,21 @@ export default async function TermsPage({ params }: Props) {
                   Description of Service
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  ZeroToVPN is an informational website that provides:
+                  ZeroToAIAgents is an informational website that provides:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>VPN provider reviews and comparisons</li>
-                  <li>Educational content about VPNs and online privacy</li>
-                  <li>User reviews and ratings of VPN services</li>
-                  <li>Affiliate links to VPN provider websites</li>
+                  <li>AI agent provider reviews and comparisons</li>
+                  <li>Educational content about AI agents and online privacy</li>
+                  <li>User reviews and ratings of AI agent services</li>
+                  <li>Affiliate links to AI agent provider websites</li>
                 </ul>
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
                   <p className="text-sm font-medium flex items-start gap-2">
                     <AlertTriangle className="h-5 w-5 text-yellow-600 dark:text-yellow-500 flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong>Important:</strong> We do not provide VPN services
+                      <strong>Important:</strong> We do not provide AI agent services
                       ourselves. We are an independent review and comparison platform.
-                      All VPN services are provided by third-party companies.
+                      All AI agent services are provided by third-party companies.
                     </span>
                   </p>
                 </div>
@@ -115,11 +115,11 @@ export default async function TermsPage({ params }: Props) {
               <div className="bg-card border rounded-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">Affiliate Relationships</h2>
                 <p className="text-muted-foreground mb-4">
-                  ZeroToVPN participates in affiliate programs. This means:
+                  ZeroToAIAgents participates in affiliate programs. This means:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   <li>
-                    We may earn commissions when you purchase VPN services through
+                    We may earn commissions when you purchase AI agent services through
                     our affiliate links
                   </li>
                   <li>
@@ -178,7 +178,7 @@ export default async function TermsPage({ params }: Props) {
                   Grant Us a License
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  You grant ZeroToVPN a non-exclusive, worldwide, royalty-free,
+                  You grant ZeroToAIAgents a non-exclusive, worldwide, royalty-free,
                   perpetual license to use, display, reproduce, modify, and
                   distribute your submitted content on our Website and related
                   marketing materials.
@@ -261,14 +261,14 @@ export default async function TermsPage({ params }: Props) {
                 </h2>
                 <p className="text-muted-foreground mb-4">
                   The Website and its original content (excluding user-submitted
-                  content), features, and functionality are owned by ZeroToVPN and
+                  content), features, and functionality are owned by ZeroToAIAgents and
                   are protected by international copyright, trademark, and other
                   intellectual property laws.
                 </p>
                 <p className="text-muted-foreground mb-4">
                   Our trademarks and trade dress may not be used without our prior
                   written permission. Third-party trademarks, service marks, and
-                  logos (such as VPN provider logos) are the property of their
+                  logos (such as AI agent provider logos) are the property of their
                   respective owners.
                 </p>
                 <p className="text-muted-foreground">
@@ -292,7 +292,7 @@ export default async function TermsPage({ params }: Props) {
                   The information on this Website is provided for general
                   informational purposes only and does not constitute professional
                   advice. You should not rely solely on our content when making
-                  decisions about VPN services or online security.
+                  decisions about AI agent services or online security.
                 </p>
 
                 <h3 className="text-xl font-semibold mt-4 mb-3">
@@ -310,8 +310,8 @@ export default async function TermsPage({ params }: Props) {
                   Third-Party Services
                 </h3>
                 <p className="text-muted-foreground">
-                  We do not guarantee or warrant any third-party VPN services
-                  featured on our Website. Your use of any VPN service is at your
+                  We do not guarantee or warrant any third-party AI agent services
+                  featured on our Website. Your use of any AI agent service is at your
                   own risk and subject to that provider&apos;s terms of service.
                 </p>
               </div>
@@ -320,7 +320,7 @@ export default async function TermsPage({ params }: Props) {
               <div className="bg-card border rounded-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">Limitation of Liability</h2>
                 <p className="text-muted-foreground mb-4">
-                  TO THE FULLEST EXTENT PERMITTED BY LAW, ZEROTOVPN SHALL NOT BE
+                  TO THE FULLEST EXTENT PERMITTED BY LAW, ZEROTOAIAGENTS SHALL NOT BE
                   LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
                   PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION:
                 </p>
@@ -329,7 +329,7 @@ export default async function TermsPage({ params }: Props) {
                   <li>Interruption of business</li>
                   <li>Cost of substitute services</li>
                   <li>
-                    Any damages resulting from your use of third-party VPN services
+                    Any damages resulting from your use of third-party AI agent services
                   </li>
                   <li>
                     Any damages resulting from unauthorized access to your data
@@ -346,7 +346,7 @@ export default async function TermsPage({ params }: Props) {
               <div className="bg-card border rounded-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">Indemnification</h2>
                 <p className="text-muted-foreground">
-                  You agree to indemnify, defend, and hold harmless ZeroToVPN, its
+                  You agree to indemnify, defend, and hold harmless ZeroToAIAgents, its
                   officers, directors, employees, agents, and affiliates from any
                   claims, liabilities, damages, losses, costs, or expenses
                   (including reasonable attorneys&apos; fees) arising from: (a) your
@@ -360,7 +360,7 @@ export default async function TermsPage({ params }: Props) {
               <div className="bg-card border rounded-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">External Links</h2>
                 <p className="text-muted-foreground mb-4">
-                  Our Website contains links to third-party websites, including VPN
+                  Our Website contains links to third-party websites, including AI agent
                   provider websites. These links are provided for your convenience
                   and do not signify our endorsement of such websites.
                 </p>
@@ -434,14 +434,14 @@ export default async function TermsPage({ params }: Props) {
                   contact us:
                 </p>
                 <div className="bg-muted/50 rounded-lg p-4">
-                  <p className="font-semibold">ZeroToVPN</p>
+                  <p className="font-semibold">ZeroToAIAgents</p>
                   <p className="text-muted-foreground">
                     Email:{" "}
                     <a
-                      href="mailto:hello@zerotovpn.com"
+                      href="mailto:hello@zerotoaiagents.com"
                       className="text-primary hover:underline"
                     >
-                      hello@zerotovpn.com
+                      hello@zerotoaiagents.com
                     </a>
                   </p>
                 </div>

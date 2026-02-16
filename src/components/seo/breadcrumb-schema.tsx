@@ -23,7 +23,7 @@ export function BreadcrumbSchema({ items, className = "" }: BreadcrumbSchemaProp
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://zerotovpn.com${item.href}`
+      "item": `https://zerotoaiagents.com${item.href}`
     }))
   };
 

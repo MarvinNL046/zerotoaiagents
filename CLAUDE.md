@@ -1,10 +1,10 @@
-# CLAUDE.md - ZeroToVPN
+# CLAUDE.md - ZeroToAIAgents
 
-This file provides guidance to Claude Code when working with the ZeroToVPN codebase.
+This file provides guidance to Claude Code when working with the ZeroToAIAgents codebase.
 
 ## Project Overview
 
-ZeroToVPN (zerotovpn.com) is a multilingual VPN affiliate comparison website built with Next.js 16. The site compares VPN providers, displays user reviews, and earns affiliate commissions through Short.io tracked links.
+ZeroToAIAgents (zerotoaiagents.com) is a multilingual VPN affiliate comparison website built with Next.js 16. The site compares VPN providers, displays user reviews, and earns affiliate commissions through Short.io tracked links.
 
 ## Tech Stack
 
@@ -101,7 +101,7 @@ The middleware (`src/middleware.ts`) handles i18n routing with exclusions for:
 
 Static VPN provider data including:
 - Pricing, features, ratings
-- Affiliate URLs (Short.io format: `go.zerotovpn.com/vpnname`)
+- Affiliate URLs (Short.io format: `go.zerotoaiagents.com/vpnname`)
 - Will be migrated to database once Neon is connected
 
 ### Review System
@@ -150,7 +150,7 @@ const t = useTranslations("namespace");
 
 All affiliate URLs use Short.io tracking format:
 ```
-https://go.zerotovpn.com/{vpn-slug}
+https://go.zerotoaiagents.com/{vpn-slug}
 ```
 
 ### Admin Route Protection

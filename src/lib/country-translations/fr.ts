@@ -38,7 +38,7 @@ export const frLabels: CountryPageLabels = {
 
 export const frTranslations: Record<string, TranslatedCountryContent> = {
   "thailand": {
-    metaTitle: "Meilleur VPN pour la Tha\u00eflande 2026 : contourner les blocages et rester anonyme | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Tha\u00eflande 2026 : contourner les blocages et rester anonyme | ZeroToAIAgents",
     metaDescription: "La Tha\u00eflande bloque les sites de jeux d\u2019argent, certains sites d\u2019information et surveille les r\u00e9seaux sociaux en vertu de la loi de l\u00e8se-majest\u00e9. Trouvez des VPN qui fonctionnent de mani\u00e8re fiable en Tha\u00eflande.",
     statusLabel: "L\u00e9gal, mais surveill\u00e9",
     heroSubtitle: "Contourner les blocages de contenu et prot\u00e9ger votre vie priv\u00e9e en Tha\u00eflande",
@@ -65,7 +65,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "japan": {
-    metaTitle: "Meilleur VPN pour le Japon 2026 : streamer du contenu japonais et rester anonyme | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Japon 2026 : streamer du contenu japonais et rester anonyme | ZeroToAIAgents",
     metaDescription: "Le Japon b\u00e9n\u00e9ficie d\u2019une grande libert\u00e9 sur Internet, mais applique strictement les droits d\u2019auteur. Trouvez des VPN avec des serveurs japonais rapides pour streamer des anime, acc\u00e9der aux contenus japonais depuis l\u2019\u00e9tranger et prot\u00e9ger votre vie priv\u00e9e.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Streamer du contenu japonais dans le monde entier et prot\u00e9ger votre vie priv\u00e9e",
@@ -92,7 +92,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-korea": {
-    metaTitle: "Meilleur VPN pour la Cor\u00e9e du Sud 2026 : gaming, vie priv\u00e9e et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Cor\u00e9e du Sud 2026 : gaming, vie priv\u00e9e et streaming | ZeroToAIAgents",
     metaDescription: "La Cor\u00e9e du Sud dispose d\u2019un Internet ultra-rapide mais surveille les activit\u00e9s en ligne. Trouvez des VPN pour le gaming, le streaming de contenus cor\u00e9ens \u00e0 l\u2019\u00e9tranger et la protection de votre vie priv\u00e9e.",
     statusLabel: "L\u00e9gal, certaines restrictions",
     heroSubtitle: "Gaming rapide, acc\u00e8s au streaming et protection de la vie priv\u00e9e en Cor\u00e9e du Sud",
@@ -119,7 +119,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hong-kong": {
-    metaTitle: "Meilleur VPN pour Hong Kong 2026 : vie priv\u00e9e sous la loi sur la s\u00e9curit\u00e9 nationale | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour Hong Kong 2026 : vie priv\u00e9e sous la loi sur la s\u00e9curit\u00e9 nationale | ZeroToAIAgents",
     metaDescription: "La loi sur la s\u00e9curit\u00e9 nationale de Hong Kong a renforc\u00e9 la surveillance. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et vous gardent en s\u00e9curit\u00e9 dans le paysage num\u00e9rique \u00e9volutif de Hong Kong.",
     statusLabel: "L\u00e9gal, mais surveillance croissante",
     heroSubtitle: "Prot\u00e9gez votre vie priv\u00e9e num\u00e9rique dans le paysage \u00e9volutif de Hong Kong",
@@ -146,7 +146,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "taiwan": {
-    metaTitle: "Meilleur VPN pour Ta\u00efwan 2026 : streaming et vie priv\u00e9e | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour Ta\u00efwan 2026 : streaming et vie priv\u00e9e | ZeroToAIAgents",
     metaDescription: "Ta\u00efwan b\u00e9n\u00e9ficie d\u2019une grande libert\u00e9 sur Internet. Utilisez un VPN pour le streaming international, la protection de la vie priv\u00e9e et la s\u00e9curit\u00e9 des connexions Wi-Fi publiques.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e9der aux contenus mondiaux et prot\u00e9ger votre vie priv\u00e9e \u00e0 Ta\u00efwan",
@@ -171,7 +171,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "singapore": {
-    metaTitle: "Meilleur VPN pour Singapour 2026 : vie priv\u00e9e et acc\u00e8s aux contenus | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour Singapour 2026 : vie priv\u00e9e et acc\u00e8s aux contenus | ZeroToAIAgents",
     metaDescription: "Singapour a des r\u00e9glementations strictes sur les contenus et des lois de surveillance. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et contournent les restrictions de contenu \u00e0 Singapour.",
     statusLabel: "L\u00e9gal, mais surveill\u00e9",
     heroSubtitle: "Naviguer dans les r\u00e9glementations Internet de Singapour avec le bon VPN",
@@ -196,7 +196,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "malaysia": {
-    metaTitle: "Meilleur VPN pour la Malaisie 2026 : d\u00e9bloquer des sites et prot\u00e9ger votre vie priv\u00e9e | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Malaisie 2026 : d\u00e9bloquer des sites et prot\u00e9ger votre vie priv\u00e9e | ZeroToAIAgents",
     metaDescription: "La Malaisie bloque les sites de jeux d\u2019argent, les contenus pour adultes et les sites politiques. Trouvez des VPN qui contournent les blocages MCMC et prot\u00e8gent votre vie priv\u00e9e en Malaisie.",
     statusLabel: "L\u00e9gal, mais contenus filtr\u00e9s",
     heroSubtitle: "Contourner les blocages de contenu MCMC et prot\u00e9ger votre vie priv\u00e9e en Malaisie",
@@ -221,7 +221,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "philippines": {
-    metaTitle: "Meilleur VPN pour les Philippines 2026 : streaming et s\u00e9curit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour les Philippines 2026 : streaming et s\u00e9curit\u00e9 | ZeroToAIAgents",
     metaDescription: "Les Philippines ont un Internet lent et une surveillance croissante. Trouvez des VPN qui am\u00e9liorent les vitesses, prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming international.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Am\u00e9liorer les vitesses, acc\u00e9der aux contenus mondiaux et rester en s\u00e9curit\u00e9 aux Philippines",
@@ -246,7 +246,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "australia": {
-    metaTitle: "Meilleur VPN pour l\u2019Australie 2026 : streaming, vie priv\u00e9e et torrenting | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l\u2019Australie 2026 : streaming, vie priv\u00e9e et torrenting | ZeroToAIAgents",
     metaDescription: "L\u2019Australie a une conservation obligatoire des donn\u00e9es et une application stricte des droits d\u2019auteur. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming international en Australie.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Prot\u00e9ger votre vie priv\u00e9e face \u00e0 la conservation des donn\u00e9es et acc\u00e9der aux contenus mondiaux",
@@ -273,7 +273,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "new-zealand": {
-    metaTitle: "Meilleur VPN pour la Nouvelle-Z\u00e9lande 2026 : streaming et vie priv\u00e9e | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Nouvelle-Z\u00e9lande 2026 : streaming et vie priv\u00e9e | ZeroToAIAgents",
     metaDescription: "La Nouvelle-Z\u00e9lande jouit d\u2019une excellente libert\u00e9 sur Internet mais de catalogues de streaming limit\u00e9s. Trouvez des VPN pour acc\u00e9der aux contenus mondiaux et prot\u00e9ger votre vie priv\u00e9e en tant que membre Five Eyes.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e9der au streaming mondial et prot\u00e9ger votre vie priv\u00e9e en Nouvelle-Z\u00e9lande",
@@ -298,7 +298,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-kingdom": {
-    metaTitle: "Meilleur VPN pour le Royaume-Uni 2026 : vie priv\u00e9e, streaming et blocages FAI | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Royaume-Uni 2026 : vie priv\u00e9e, streaming et blocages FAI | ZeroToAIAgents",
     metaDescription: "Le Royaume-Uni dispose de lois de surveillance \u00e9tendues et de blocages de sites au niveau des FAI. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et contournent les blocages de BT, Virgin et Sky.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Contourner les blocages des FAI et prot\u00e9ger votre vie priv\u00e9e face \u00e0 la Charte des fouineurs",
@@ -325,7 +325,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "germany": {
-    metaTitle: "Meilleur VPN pour l\u2019Allemagne 2026 : vie priv\u00e9e, streaming et torrenting | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l\u2019Allemagne 2026 : vie priv\u00e9e, streaming et torrenting | ZeroToAIAgents",
     metaDescription: "L\u2019Allemagne applique strictement les droits d\u2019auteur et la protection des donn\u00e9es. Trouvez des VPN qui vous prot\u00e8gent des mises en demeure et d\u00e9bloquent le streaming international.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "\u00c9viter les mises en demeure pour violation de droits d\u2019auteur et prot\u00e9ger votre vie priv\u00e9e num\u00e9rique",
@@ -352,7 +352,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "france": {
-    metaTitle: "Meilleur VPN pour la France 2026 : vie priv\u00e9e, streaming et HADOPI | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la France 2026 : vie priv\u00e9e, streaming et HADOPI | ZeroToAIAgents",
     metaDescription: "La France surveille le torrenting via HADOPI et a des lois de conservation des donn\u00e9es. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming international depuis la France.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Se prot\u00e9ger de la surveillance HADOPI et acc\u00e9der aux contenus mondiaux",
@@ -377,7 +377,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "spain": {
-    metaTitle: "Meilleur VPN pour l\u2019Espagne 2026 : streaming, vie priv\u00e9e et torrenting | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l\u2019Espagne 2026 : streaming, vie priv\u00e9e et torrenting | ZeroToAIAgents",
     metaDescription: "L\u2019Espagne renforce l\u2019application des droits d\u2019auteur et applique la conservation des donn\u00e9es de l\u2019UE. Trouvez des VPN pour torrenter en s\u00e9curit\u00e9, streamer \u00e0 l\u2019international et prot\u00e9ger votre vie priv\u00e9e.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Streamer des contenus mondiaux et prot\u00e9ger votre vie priv\u00e9e en Espagne",
@@ -402,7 +402,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "italy": {
-    metaTitle: "Meilleur VPN pour l\u2019Italie 2026 : streaming, vie priv\u00e9e et blocages AGCOM | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l\u2019Italie 2026 : streaming, vie priv\u00e9e et blocages AGCOM | ZeroToAIAgents",
     metaDescription: "L\u2019Italie bloque les sites de jeux d\u2019argent et de piratage via AGCOM. Trouvez des VPN qui contournent les blocages des FAI italiens et d\u00e9bloquent le streaming international.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Contourner les blocages AGCOM et profiter du streaming mondial depuis l\u2019Italie",
@@ -427,7 +427,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "brazil": {
-    metaTitle: "Meilleur VPN pour le Br\u00e9sil 2026 : vie priv\u00e9e, streaming et blocages WhatsApp | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Br\u00e9sil 2026 : vie priv\u00e9e, streaming et blocages WhatsApp | ZeroToAIAgents",
     metaDescription: "Le Br\u00e9sil bloque occasionnellement WhatsApp et renforce la surveillance. Trouvez des VPN qui vous maintiennent connect\u00e9 et prot\u00e8gent votre vie priv\u00e9e au Br\u00e9sil.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Rester connect\u00e9 pendant les blocages de WhatsApp et prot\u00e9ger votre vie priv\u00e9e",
@@ -452,7 +452,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "mexico": {
-    metaTitle: "Meilleur VPN pour le Mexique 2026 : vie priv\u00e9e, streaming et s\u00e9curit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Mexique 2026 : vie priv\u00e9e, streaming et s\u00e9curit\u00e9 | ZeroToAIAgents",
     metaDescription: "Le Mexique fait face \u00e0 une surveillance croissante et \u00e0 des pr\u00e9occupations de cybers\u00e9curit\u00e9. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming am\u00e9ricain depuis le Mexique.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Prot\u00e9ger votre vie priv\u00e9e et profiter du streaming am\u00e9ricain depuis le Mexique",
@@ -477,7 +477,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-states": {
-    metaTitle: "Meilleur VPN pour les \u00c9tats-Unis 2026 : vie priv\u00e9e, suivi FAI et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour les \u00c9tats-Unis 2026 : vie priv\u00e9e, suivi FAI et streaming | ZeroToAIAgents",
     metaDescription: "Les FAI am\u00e9ricains peuvent vendre vos donn\u00e9es de navigation et l\u2019application du DMCA est stricte. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming international depuis les \u00c9tats-Unis.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Stopper le suivi des FAI, \u00e9viter les avis DMCA et prot\u00e9ger votre vie priv\u00e9e",
@@ -504,7 +504,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "canada": {
-    metaTitle: "Meilleur VPN pour le Canada 2026 : vie priv\u00e9e, streaming et P2P | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Canada 2026 : vie priv\u00e9e, streaming et P2P | ZeroToAIAgents",
     metaDescription: "Le Canada est membre des Five Eyes avec un syst\u00e8me d\u2019avis de droits d\u2019auteur. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming am\u00e9ricain depuis le Canada.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e9der aux contenus am\u00e9ricains et prot\u00e9ger votre vie priv\u00e9e en tant que membre Five Eyes",
@@ -529,7 +529,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "poland": {
-    metaTitle: "Meilleur VPN pour la Pologne 2026 : vie priv\u00e9e et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Pologne 2026 : vie priv\u00e9e et streaming | ZeroToAIAgents",
     metaDescription: "La Pologne est soumise \u00e0 la conservation des donn\u00e9es de l\u2019UE et \u00e0 une surveillance croissante. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming international depuis la Pologne.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Prot\u00e9ger votre vie priv\u00e9e et profiter du streaming mondial depuis la Pologne",
@@ -554,7 +554,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sweden": {
-    metaTitle: "Meilleur VPN pour la Su\u00e8de 2026 : vie priv\u00e9e et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Su\u00e8de 2026 : vie priv\u00e9e et streaming | ZeroToAIAgents",
     metaDescription: "La Su\u00e8de est membre des 14 Eyes et applique les droits d\u2019auteur. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent le streaming international depuis la Su\u00e8de.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Protection de la vie priv\u00e9e et acc\u00e8s aux contenus mondiaux depuis la Su\u00e8de",
@@ -579,7 +579,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "switzerland": {
-    metaTitle: "Meilleur VPN pour la Suisse 2026 : vie priv\u00e9e et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Suisse 2026 : vie priv\u00e9e et streaming | ZeroToAIAgents",
     metaDescription: "La Suisse a de solides lois sur la protection des donn\u00e9es mais des options de streaming limit\u00e9es. Trouvez des VPN pour acc\u00e9der aux contenus mondiaux et prot\u00e9ger votre vie priv\u00e9e en Suisse.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "De solides lois sur la vie priv\u00e9e et un acc\u00e8s aux contenus mondiaux depuis la Suisse",
@@ -604,7 +604,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "nigeria": {
-    metaTitle: "Meilleur VPN pour le Nig\u00e9ria 2026 : contourner les blocages de Twitter et rester anonyme | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Nig\u00e9ria 2026 : contourner les blocages de Twitter et rester anonyme | ZeroToAIAgents",
     metaDescription: "Le Nig\u00e9ria a un historique de blocages de r\u00e9seaux sociaux et de restrictions Internet croissantes. Trouvez des VPN qui vous maintiennent connect\u00e9 et prot\u00e8gent votre vie priv\u00e9e au Nig\u00e9ria.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Rester connect\u00e9 pendant les blocages de r\u00e9seaux sociaux et prot\u00e9ger votre vie priv\u00e9e",
@@ -630,7 +630,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-africa": {
-    metaTitle: "Meilleur VPN pour l'Afrique du Sud 2026 : Streaming et s\u00e9curit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l'Afrique du Sud 2026 : Streaming et s\u00e9curit\u00e9 | ZeroToAIAgents",
     metaDescription: "L'Afrique du Sud fait face \u00e0 une cybercriminalit\u00e9 croissante et des catalogues de streaming limit\u00e9s. Trouvez les VPN qui prot\u00e8gent votre s\u00e9curit\u00e9 et d\u00e9bloquent les contenus mondiaux.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Protection contre la cybercriminalit\u00e9 et acc\u00e8s au streaming mondial",
@@ -655,7 +655,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "kenya": {
-    metaTitle: "Meilleur VPN pour le Kenya 2026 : Confidentialit\u00e9 et contenus mondiaux | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Kenya 2026 : Confidentialit\u00e9 et contenus mondiaux | ZeroToAIAgents",
     metaDescription: "Le Kenya conna\u00eet une surveillance Internet croissante et des restrictions de contenu. Trouvez les VPN qui prot\u00e8gent votre vie priv\u00e9e et d\u00e9bloquent les contenus de streaming mondiaux.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Prot\u00e9gez votre vie priv\u00e9e et acc\u00e9dez aux contenus mondiaux depuis le Kenya",
@@ -680,7 +680,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "myanmar": {
-    metaTitle: "Meilleur VPN pour le Myanmar 2026 : Contourner la censure militaire | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Myanmar 2026 : Contourner la censure militaire | ZeroToAIAgents",
     metaDescription: "La junte militaire du Myanmar a impos\u00e9 de s\u00e9v\u00e8res restrictions Internet depuis le coup d'\u00c9tat de 2021. Trouvez des VPN avec obfuscation qui fonctionnent r\u00e9ellement au Myanmar.",
     statusLabel: "Restreint depuis le coup d'\u00c9tat",
     heroSubtitle: "Contourner la censure Internet de la junte militaire et rester connect\u00e9",
@@ -707,7 +707,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "bangladesh": {
-    metaTitle: "Meilleur VPN pour le Bangladesh 2026 : D\u00e9bloquer les sites et rester priv\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Bangladesh 2026 : D\u00e9bloquer les sites et rester priv\u00e9 | ZeroToAIAgents",
     metaDescription: "Le Bangladesh bloque les r\u00e9seaux sociaux et les sites d'information pendant les troubles. Trouvez des VPN qui vous maintiennent connect\u00e9 et prot\u00e8gent votre vie priv\u00e9e.",
     statusLabel: "L\u00e9gal mais sites bloqu\u00e9s",
     heroSubtitle: "Restez connect\u00e9 pendant les coupures d'Internet et les blocages de r\u00e9seaux sociaux",
@@ -732,7 +732,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "nepal": {
-    metaTitle: "Meilleur VPN pour le N\u00e9pal 2026 : D\u00e9bloquer TikTok et acc\u00e9der aux contenus | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le N\u00e9pal 2026 : D\u00e9bloquer TikTok et acc\u00e9der aux contenus | ZeroToAIAgents",
     metaDescription: "Le N\u00e9pal a interdit TikTok et bloque certains contenus. Trouvez des VPN qui d\u00e9bloquent les applications restreintes et prot\u00e8gent votre vie priv\u00e9e au N\u00e9pal.",
     statusLabel: "L\u00e9gal, TikTok interdit",
     heroSubtitle: "D\u00e9bloquez TikTok et acc\u00e9dez aux contenus restreints au N\u00e9pal",
@@ -757,7 +757,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sri-lanka": {
-    metaTitle: "Meilleur VPN pour le Sri Lanka 2026 : Acc\u00e8s aux r\u00e9seaux sociaux et confidentialit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Sri Lanka 2026 : Acc\u00e8s aux r\u00e9seaux sociaux et confidentialit\u00e9 | ZeroToAIAgents",
     metaDescription: "Le Sri Lanka bloque les r\u00e9seaux sociaux pendant les crises. Trouvez des VPN qui vous maintiennent connect\u00e9 et prot\u00e8gent votre vie priv\u00e9e pendant les restrictions Internet.",
     statusLabel: "L\u00e9gal mais r\u00e9seaux sociaux bloqu\u00e9s en crise",
     heroSubtitle: "Restez connect\u00e9 pendant les blocages de r\u00e9seaux sociaux et prot\u00e9gez votre vie priv\u00e9e",
@@ -782,7 +782,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "cambodia": {
-    metaTitle: "Meilleur VPN pour le Cambodge 2026 : Confidentialit\u00e9 et acc\u00e8s aux contenus | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Cambodge 2026 : Confidentialit\u00e9 et acc\u00e8s aux contenus | ZeroToAIAgents",
     metaDescription: "Le Cambodge surveille les activit\u00e9s en ligne et bloque les m\u00e9dias ind\u00e9pendants. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et acc\u00e8dent aux contenus non restreints.",
     statusLabel: "L\u00e9gal mais surveill\u00e9",
     heroSubtitle: "Prot\u00e9gez votre vie priv\u00e9e et acc\u00e9dez aux m\u00e9dias libres au Cambodge",
@@ -807,7 +807,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "israel": {
-    metaTitle: "Meilleur VPN pour Isra\u00ebl 2026 : Confidentialit\u00e9 et contenus internationaux | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour Isra\u00ebl 2026 : Confidentialit\u00e9 et contenus internationaux | ZeroToAIAgents",
     metaDescription: "Isra\u00ebl dispose de capacit\u00e9s de surveillance avanc\u00e9es et de contenus g\u00e9o-restreints. Trouvez des VPN pour la protection de la vie priv\u00e9e et le streaming international depuis Isra\u00ebl.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Protection de la vie priv\u00e9e et acc\u00e8s aux contenus mondiaux depuis Isra\u00ebl",
@@ -832,7 +832,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "colombia": {
-    metaTitle: "Meilleur VPN pour la Colombie 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Colombie 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "La Colombie fait face \u00e0 une surveillance croissante et des pr\u00e9occupations de cybercriminalit\u00e9. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et acc\u00e8dent au streaming international.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "S\u00e9curit\u00e9 en ligne et acc\u00e8s aux contenus de streaming mondiaux",
@@ -857,7 +857,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "argentina": {
-    metaTitle: "Meilleur VPN pour l'Argentine 2026 : Streaming et confidentialit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l'Argentine 2026 : Streaming et confidentialit\u00e9 | ZeroToAIAgents",
     metaDescription: "L'Argentine b\u00e9n\u00e9ficie d'une bonne libert\u00e9 Internet mais de catalogues de streaming limit\u00e9s. Trouvez des VPN pour acc\u00e9der aux contenus mondiaux et obtenir de meilleurs prix d'abonnement.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e9dez au streaming mondial et prot\u00e9gez votre vie priv\u00e9e depuis l'Argentine",
@@ -882,7 +882,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "belgium": {
-    metaTitle: "Meilleur VPN pour la Belgique 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Belgique 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "La Belgique suit la conservation des donn\u00e9es de l'UE et renforce l'application du droit d'auteur. Trouvez des VPN pour la confidentialit\u00e9 et le streaming international depuis la Belgique.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Confidentialit\u00e9 et acc\u00e8s au streaming mondial depuis la Belgique",
@@ -906,7 +906,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "austria": {
-    metaTitle: "Meilleur VPN pour l'Autriche 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l'Autriche 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "L'Autriche est soumise \u00e0 la conservation des donn\u00e9es de l'UE et \u00e0 l'application du droit d'auteur. Trouvez des VPN pour la confidentialit\u00e9 et le streaming international depuis l'Autriche.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Protection de la vie priv\u00e9e et acc\u00e8s aux contenus mondiaux depuis l'Autriche",
@@ -930,7 +930,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hungary": {
-    metaTitle: "Meilleur VPN pour la Hongrie 2026 : Libert\u00e9 des m\u00e9dias et confidentialit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Hongrie 2026 : Libert\u00e9 des m\u00e9dias et confidentialit\u00e9 | ZeroToAIAgents",
     metaDescription: "La Hongrie fait face \u00e0 un d\u00e9clin de la libert\u00e9 des m\u00e9dias et une surveillance croissante. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et garantissent l'acc\u00e8s aux m\u00e9dias ind\u00e9pendants.",
     statusLabel: "L\u00e9gal, pr\u00e9occupations m\u00e9diatiques",
     heroSubtitle: "Prot\u00e9ger la libert\u00e9 des m\u00e9dias et la vie priv\u00e9e en Hongrie",
@@ -955,7 +955,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "czech-republic": {
-    metaTitle: "Meilleur VPN pour la R\u00e9publique tch\u00e8que 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la R\u00e9publique tch\u00e8que 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "La R\u00e9publique tch\u00e8que b\u00e9n\u00e9ficie d'une haute libert\u00e9 Internet mais est soumise \u00e0 la conservation des donn\u00e9es UE. Trouvez des VPN pour la confidentialit\u00e9 et le streaming international.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e8s aux contenus mondiaux et protection de la vie priv\u00e9e face \u00e0 la conservation des donn\u00e9es UE",
@@ -979,7 +979,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "denmark": {
-    metaTitle: "Meilleur VPN pour le Danemark 2026 : Confidentialit\u00e9 et acc\u00e8s aux contenus | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Danemark 2026 : Confidentialit\u00e9 et acc\u00e8s aux contenus | ZeroToAIAgents",
     metaDescription: "Le Danemark b\u00e9n\u00e9ficie d'une haute libert\u00e9 Internet mais participe aux alliances de renseignement. Trouvez des VPN pour la confidentialit\u00e9 et le streaming depuis le Danemark.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Protection de la vie priv\u00e9e et contenus mondiaux depuis le Danemark",
@@ -1004,7 +1004,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "finland": {
-    metaTitle: "Meilleur VPN pour la Finlande 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Finlande 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "La Finlande a une excellente libert\u00e9 Internet mais un catalogue de streaming limit\u00e9. Trouvez des VPN pour les contenus mondiaux et la confidentialit\u00e9 malgr\u00e9 la coop\u00e9ration de renseignement.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Excellente libert\u00e9 Internet avec acc\u00e8s au streaming mondial",
@@ -1028,7 +1028,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "greece": {
-    metaTitle: "Meilleur VPN pour la Gr\u00e8ce 2026 : Confidentialit\u00e9 et streaming pour voyageurs | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Gr\u00e8ce 2026 : Confidentialit\u00e9 et streaming pour voyageurs | ZeroToAIAgents",
     metaDescription: "La Gr\u00e8ce est une destination touristique populaire avec des risques li\u00e9s au Wi-Fi public. Trouvez des VPN pour prot\u00e9ger votre vie priv\u00e9e et acc\u00e9der \u00e0 vos contenus de streaming habituels.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "S\u00e9curiser le Wi-Fi public et profiter du streaming de votre pays en Gr\u00e8ce",
@@ -1052,7 +1052,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "norway": {
-    metaTitle: "Meilleur VPN pour la Norv\u00e8ge 2026 : Streaming et confidentialit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Norv\u00e8ge 2026 : Streaming et confidentialit\u00e9 | ZeroToAIAgents",
     metaDescription: "La Norv\u00e8ge a une haute libert\u00e9 Internet mais des catalogues de streaming limit\u00e9s. Trouvez des VPN pour les contenus mondiaux et la confidentialit\u00e9 en tant que membre de l'OTAN.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e8s au streaming mondial et protection de votre vie priv\u00e9e num\u00e9rique",
@@ -1076,7 +1076,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "portugal": {
-    metaTitle: "Meilleur VPN pour le Portugal 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Portugal 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "Le Portugal b\u00e9n\u00e9ficie d'une haute libert\u00e9 Internet mais est soumis \u00e0 la conservation des donn\u00e9es UE. Trouvez des VPN pour le streaming international et la confidentialit\u00e9 depuis le Portugal.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Acc\u00e8s aux contenus mondiaux et protection de la vie priv\u00e9e face \u00e0 la conservation des donn\u00e9es UE",
@@ -1101,7 +1101,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "romania": {
-    metaTitle: "Meilleur VPN pour la Roumanie 2026 : Confidentialit\u00e9 et streaming | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour la Roumanie 2026 : Confidentialit\u00e9 et streaming | ZeroToAIAgents",
     metaDescription: "La Roumanie a d\u00e9clar\u00e9 la conservation des donn\u00e9es inconstitutionnelle. Trouvez des VPN pour la confidentialit\u00e9 et le streaming international depuis la Roumanie.",
     statusLabel: "Enti\u00e8rement l\u00e9gal",
     heroSubtitle: "Juridiction favorable \u00e0 la vie priv\u00e9e avec un Internet rapide",
@@ -1126,7 +1126,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "ukraine": {
-    metaTitle: "Meilleur VPN pour l'Ukraine 2026 : Confidentialit\u00e9 et s\u00e9curit\u00e9 en conflit | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l'Ukraine 2026 : Confidentialit\u00e9 et s\u00e9curit\u00e9 en conflit | ZeroToAIAgents",
     metaDescription: "L'Ukraine fait face \u00e0 des coupures Internet li\u00e9es \u00e0 la guerre et des menaces de cybers\u00e9curit\u00e9. Trouvez des VPN qui offrent s\u00e9curit\u00e9 et acc\u00e8s fiable pendant le conflit en cours.",
     statusLabel: "L\u00e9gal, restrictions de guerre",
     heroSubtitle: "Restez en s\u00e9curit\u00e9 et connect\u00e9 pendant le conflit en cours",
@@ -1152,7 +1152,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "kazakhstan": {
-    metaTitle: "Meilleur VPN pour le Kazakhstan 2026 : Contourner la censure et la surveillance | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour le Kazakhstan 2026 : Contourner la censure et la surveillance | ZeroToAIAgents",
     metaDescription: "Le Kazakhstan censure Internet et a tent\u00e9 d'intercepter le HTTPS. Trouvez des VPN qui prot\u00e8gent votre vie priv\u00e9e et contournent la censure au Kazakhstan.",
     statusLabel: "Restreint et surveill\u00e9",
     heroSubtitle: "Protection contre les tentatives d'interception HTTPS et la censure Internet",
@@ -1178,7 +1178,7 @@ export const frTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "uzbekistan": {
-    metaTitle: "Meilleur VPN pour l'Ouzb\u00e9kistan 2026 : Contourner la censure et rester en s\u00e9curit\u00e9 | ZeroToVPN",
+    metaTitle: "Meilleur VPN pour l'Ouzb\u00e9kistan 2026 : Contourner la censure et rester en s\u00e9curit\u00e9 | ZeroToAIAgents",
     metaDescription: "L'Ouzb\u00e9kistan censure lourdement Internet et bloque les protocoles VPN. Trouvez des VPN avec obfuscation qui fonctionnent en Ouzb\u00e9kistan.",
     statusLabel: "Restreint",
     heroSubtitle: "Contourner la lourde censure Internet en Ouzb\u00e9kistan",

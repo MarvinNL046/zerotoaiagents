@@ -10,14 +10,14 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { RatingStars } from "./rating-stars";
-import { AffiliateButton } from "./affiliate-button";
+import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { Link } from "@/i18n/navigation";
 import { Check, X, Shield, Zap, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
-import type { VpnProvider } from "@/lib/vpn-data-layer";
+import type { AiAgentProvider } from "@/lib/agent-data-layer";
 
 interface ComparisonTableProps {
-  vpns: VpnProvider[];
+  vpns: AiAgentProvider[];
 }
 
 export function ComparisonTable({ vpns }: ComparisonTableProps) {
@@ -31,10 +31,10 @@ export function ComparisonTable({ vpns }: ComparisonTableProps) {
             <TableHead className="w-12">{t("headers.rank")}</TableHead>
             <TableHead>{t("headers.vpn")}</TableHead>
             <TableHead>{t("headers.rating")}</TableHead>
-            <TableHead className="text-center">{t("headers.speed")}</TableHead>
-            <TableHead className="text-center">{t("headers.security")}</TableHead>
-            <TableHead className="text-center">{t("headers.servers")}</TableHead>
-            <TableHead className="text-center">{t("headers.netflix")}</TableHead>
+            <TableHead className="text-center">Category</TableHead>
+            <TableHead className="text-center">Ease of Use</TableHead>
+            <TableHead className="text-center">Performance</TableHead>
+            <TableHead className="text-center">API Access</TableHead>
             <TableHead className="text-right">{t("headers.price")}</TableHead>
             <TableHead className="text-right">{t("headers.action")}</TableHead>
           </TableRow>
@@ -58,7 +58,7 @@ export function ComparisonTable({ vpns }: ComparisonTableProps) {
                       )}
                     </Link>
                     <div className="text-xs text-muted-foreground">
-                      {vpn.countries} {t("countries")} • {vpn.maxDevices >= 999 ? t("unlimited") : vpn.maxDevices} {t("devices")}
+                      {vpn.maxUsers} users • {vpn.category}
                     </div>
                   </div>
                 </div>
@@ -67,22 +67,21 @@ export function ComparisonTable({ vpns }: ComparisonTableProps) {
                 <RatingStars rating={vpn.overallRating} size="sm" />
               </TableCell>
               <TableCell className="text-center">
+                <Badge variant="outline">{vpn.category}</Badge>
+              </TableCell>
+              <TableCell className="text-center">
+                <div className="flex items-center justify-center gap-1">
+                  <span className="font-medium">{vpn.easeOfUse}/5</span>
+                </div>
+              </TableCell>
+              <TableCell className="text-center">
                 <div className="flex items-center justify-center gap-1">
                   <Zap className="h-4 w-4 text-yellow-500" />
-                  <span className="font-medium">{vpn.speedScore}%</span>
+                  <span className="font-medium">{vpn.performance}/5</span>
                 </div>
               </TableCell>
               <TableCell className="text-center">
-                <div className="flex items-center justify-center gap-1">
-                  <Shield className="h-4 w-4 text-blue-500" />
-                  <span className="font-medium">{vpn.securityScore}%</span>
-                </div>
-              </TableCell>
-              <TableCell className="text-center font-medium">
-                {vpn.servers.toLocaleString()}
-              </TableCell>
-              <TableCell className="text-center">
-                {vpn.netflixSupport ? (
+                {vpn.apiAccess ? (
                   <Check className="h-5 w-5 text-green-500 mx-auto" />
                 ) : (
                   <X className="h-5 w-5 text-red-500 mx-auto" />
@@ -90,14 +89,14 @@ export function ComparisonTable({ vpns }: ComparisonTableProps) {
               </TableCell>
               <TableCell className="text-right">
                 <div className="font-bold text-primary">
-                  ${vpn.priceTwoYear || vpn.priceYearly}
+                  ${vpn.annualPrice}
                 </div>
                 <div className="text-xs text-muted-foreground">{t("perMonth")}</div>
               </TableCell>
               <TableCell className="text-right">
                 <AffiliateButton
-                  vpnId={vpn.id}
-                  vpnName={vpn.name}
+                  agentId={vpn.id}
+                  agentName={vpn.name}
                   affiliateUrl={vpn.affiliateUrl}
                   size="sm"
                 >

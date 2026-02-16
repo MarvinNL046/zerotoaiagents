@@ -1,9 +1,9 @@
 ﻿import { MetadataRoute } from "next";
-import { getAllVpns } from "@/lib/vpn-data-layer";
+import { getAllAgents } from "@/lib/agent-data-layer";
 import { routing } from "@/i18n/routing";
-import { getAllDynamicCountries } from "@/lib/country-data";
 import { getAllPublishedSlugs } from "@/lib/pipeline/blog-service";
 import discoveredStaticRoutes from "@/lib/sitemap-static-routes.generated.json";
+import { useCases } from "@/lib/use-case-data";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 type ChangeFrequency = NonNullable<SitemapEntry["changeFrequency"]>;
@@ -25,7 +25,7 @@ function getPageProfile(path: string): {
   if (path.startsWith("/compare")) {
     return { priority: 0.85, changeFrequency: "weekly" };
   }
-  if (path.startsWith("/countries")) {
+  if (path.startsWith("/use-cases")) {
     return { priority: 0.8, changeFrequency: "weekly" };
   }
   if (path.startsWith("/blog")) {
@@ -34,7 +34,7 @@ function getPageProfile(path: string): {
   if (path.startsWith("/guides")) {
     return { priority: 0.75, changeFrequency: "monthly" };
   }
-  if (path === "/speed-test") {
+  if (path === "/quiz") {
     return { priority: 0.7, changeFrequency: "weekly" };
   }
   if (
@@ -50,10 +50,10 @@ function getPageProfile(path: string): {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://zerotovpn.com";
+  const baseUrl = "https://zerotoaiagents.com";
   const locales = routing.locales;
   const nowIso = new Date().toISOString();
-  const vpns = await getAllVpns();
+  const agents = await getAllAgents();
   const routeMap = new Map<string, SitemapEntry>();
   const staticPaths = discoveredStaticRoutes.paths as string[];
   const staticPathSet = new Set(staticPaths);
@@ -92,26 +92,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // 2) Dynamic review pages.
-  for (const vpn of vpns) {
-    addLocalizedPath(`/reviews/${vpn.slug}`, {
+  for (const agent of agents) {
+    addLocalizedPath(`/reviews/${agent.slug}`, {
       priority: 0.8,
       changeFrequency: "monthly",
     });
   }
 
   // 3) Dynamic comparison pages: all generated combinations.
-  for (let i = 0; i < vpns.length; i++) {
-    for (let j = i + 1; j < vpns.length; j++) {
-      addLocalizedPath(`/compare/${vpns[i].slug}-vs-${vpns[j].slug}`, {
+  for (let i = 0; i < agents.length; i++) {
+    for (let j = i + 1; j < agents.length; j++) {
+      addLocalizedPath(`/compare/${agents[i].slug}-vs-${agents[j].slug}`, {
         priority: 0.7,
         changeFrequency: "weekly",
       });
     }
   }
 
-  // 4) Dynamic country pages.
-  for (const country of getAllDynamicCountries()) {
-    addLocalizedPath(`/countries/${country.slug}`, {
+  // 4) Dynamic use case pages.
+  for (const useCase of useCases) {
+    addLocalizedPath(`/use-cases/${useCase.slug}`, {
       priority: 0.75,
       changeFrequency: "monthly",
     });

@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CouponList } from "@/components/coupons/coupon-list";
 import { getAllActiveCoupons } from "@/lib/coupon-data";
-import { getVpnBySlug } from "@/lib/vpn-data-layer";
+import { getAgentBySlug } from "@/lib/agent-data-layer";
 import { Ticket, TrendingDown, Clock, Shield } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
@@ -13,7 +13,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -78,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: titles[locale] || titles.en,
       description: descriptions[locale] || descriptions.en,
       url: canonicalUrl,
-      siteName: "ZeroToVPN",
+      siteName: "ZeroToAIAgents",
       locale: locale,
       type: "website",
     },
@@ -99,10 +99,10 @@ export default async function CouponsPage({ params }: Props) {
 
   // Group coupons by VPN
   const couponsByVpn = allCoupons.reduce((acc, coupon) => {
-    if (!acc[coupon.vpnSlug]) {
-      acc[coupon.vpnSlug] = [];
+    if (!acc[coupon.agentSlug]) {
+      acc[coupon.agentSlug] = [];
     }
-    acc[coupon.vpnSlug].push(coupon);
+    acc[coupon.agentSlug].push(coupon);
     return acc;
   }, {} as Record<string, typeof allCoupons>);
 
@@ -164,12 +164,12 @@ export default async function CouponsPage({ params }: Props) {
 
         {/* All Coupons by VPN */}
         <div className="space-y-12">
-          {await Promise.all(Object.entries(couponsByVpn).map(async ([vpnSlug, coupons]) => {
-            const vpn = await getVpnBySlug(vpnSlug);
+          {await Promise.all(Object.entries(couponsByVpn).map(async ([agentSlug, coupons]) => {
+            const vpn = await getAgentBySlug(agentSlug);
             if (!vpn) return null;
 
             return (
-              <section key={vpnSlug} id={vpnSlug}>
+              <section key={agentSlug} id={agentSlug}>
                 <Card>
                   <CardHeader>
                     <div className="flex items-center gap-4">

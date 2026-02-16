@@ -6,7 +6,7 @@ const BRIGHT_DATA_API_KEY = process.env.BRIGHT_DATA_API_KEY;
 const BRIGHT_DATA_ZONE = process.env.BRIGHT_DATA_ZONE || "web_unlocker1";
 
 export interface ScrapedPricing {
-  vpnSlug: string;
+  agentSlug: string;
   priceMonthly?: number;
   priceYearly?: number;
   priceTwoYear?: number;
@@ -126,85 +126,73 @@ export async function scrapeUrl(url: string): Promise<{ content: string; provide
   );
 }
 
-// VPN pricing page URLs — all 38 providers
-const VPN_PRICING_URLS: Record<string, string> = {
-  nordvpn: "https://nordvpn.com/pricing/",
-  surfshark: "https://surfshark.com/pricing",
-  expressvpn: "https://www.expressvpn.com/order",
-  cyberghost: "https://www.cyberghostvpn.com/buy/cyberghost-vpn-4",
-  protonvpn: "https://protonvpn.com/pricing",
-  "private-internet-access": "https://www.privateinternetaccess.com/buy-vpn-online",
-  mullvad: "https://mullvad.net/pricing",
-  ipvanish: "https://www.ipvanish.com/pricing/",
-  vyprvpn: "https://www.vyprvpn.com/buy-vpn",
-  tunnelbear: "https://www.tunnelbear.com/pricing",
-  windscribe: "https://windscribe.com/upgrade",
-  "hotspot-shield": "https://www.hotspotshield.com/pricing/",
-  strongvpn: "https://strongvpn.com/pricing/",
-  purevpn: "https://www.purevpn.com/order",
-  "atlas-vpn": "https://atlasvpn.com/pricing",
-  privatevpn: "https://privatevpn.com/prices",
-  torguard: "https://torguard.net/pricing.php",
-  airvpn: "https://airvpn.org/plans/",
-  ivpn: "https://www.ivpn.net/pricing/",
-  "mozilla-vpn": "https://vpn.mozilla.org/products/vpn/",
-  "hide-me": "https://hide.me/en/pricing",
-  zenmate: "https://zenmate.com/pricing",
-  privadovpn: "https://privadovpn.com/pricing/",
-  hma: "https://www.hidemyass.com/pricing",
-  astrill: "https://www.astrill.com/pricing",
-  "perfect-privacy": "https://www.perfect-privacy.com/en/order",
-  "goose-vpn": "https://goosevpn.com/pricing",
-  "trust-zone": "https://trust.zone/pricing",
-  fastestvpn: "https://fastestvpn.com/buy-vpn",
-  ovpn: "https://www.ovpn.com/en/pricing",
-  cactusvpn: "https://www.cactusvpn.com/pricing/",
-  betternet: "https://www.betternet.co/pricing",
-  speedify: "https://speedify.com/pricing/",
-  "vpn-unlimited": "https://www.vpnunlimitedapp.com/pricing",
-  nordlayer: "https://nordlayer.com/pricing/",
-  "perimeter-81": "https://www.perimeter81.com/pricing",
-  "urban-vpn": "https://www.urban-vpn.com/pricing",
-  "x-vpn": "https://xvpn.io/pricing",
+// AI Agent pricing page URLs — all 26 providers
+const AGENT_PRICING_URLS: Record<string, string> = {
+  "claude-code": "https://claude.ai/code",
+  "cursor": "https://cursor.com/pricing",
+  "github-copilot": "https://github.com/features/copilot/plans",
+  "windsurf": "https://codeium.com/windsurf/pricing",
+  "replit-agent": "https://replit.com/pricing",
+  "devin": "https://devin.ai/pricing",
+  "amazon-q-developer": "https://aws.amazon.com/q/developer/pricing/",
+  "n8n-ai": "https://n8n.io/pricing",
+  "flowise": "https://flowiseai.com/pricing",
+  "relevance-ai": "https://relevanceai.com/pricing",
+  "make-ai": "https://www.make.com/en/pricing",
+  "zapier-central": "https://zapier.com/pricing",
+  "crewai": "https://www.crewai.com/pricing",
+  "autogen": "https://microsoft.github.io/autogen/",
+  "langgraph": "https://langchain-ai.github.io/langgraph/",
+  "agentgpt": "https://agentgpt.reworkd.ai/pricing",
+  "salesforce-agentforce": "https://www.salesforce.com/agentforce/pricing/",
+  "microsoft-copilot-studio": "https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio#Pricing",
+  "google-vertex-ai-agent-builder": "https://cloud.google.com/products/agent-builder#pricing",
+  "intercom-fin": "https://www.intercom.com/pricing",
+  "zendesk-ai": "https://www.zendesk.com/pricing/",
+  "ada-ai": "https://www.ada.cx/pricing",
+  "chatgpt": "https://openai.com/chatgpt/pricing",
+  "claude": "https://claude.ai/",
+  "gemini": "https://gemini.google.com/",
+  "perplexity": "https://www.perplexity.ai/pro",
 };
 
-// Scrape pricing data for a specific VPN
-export async function scrapeVpnPricing(
-  vpnSlug: string
+// Scrape pricing data for a specific AI agent
+export async function scrapeAgentPricing(
+  agentSlug: string
 ): Promise<ScrapedPricing> {
-  const url = VPN_PRICING_URLS[vpnSlug];
+  const url = AGENT_PRICING_URLS[agentSlug];
   if (!url) {
-    throw new Error(`No pricing URL configured for VPN: ${vpnSlug}`);
+    throw new Error(`No pricing URL configured for AI agent: ${agentSlug}`);
   }
 
   const { content, provider } = await scrapeUrl(url);
 
   return {
-    vpnSlug,
+    agentSlug: agentSlug, // Keep field name for compatibility with existing schema
     rawContent: content,
     scrapedWith: provider,
   };
 }
 
-// VPN news sources to scrape
+// AI agent news sources to scrape
 const NEWS_SOURCES = [
-  "https://www.techradar.com/vpn/best-vpn",
-  "https://www.tomsguide.com/best-picks/best-vpn",
-  "https://www.cnet.com/tech/services-and-software/best-vpn-services-2026/",
+  "https://www.techcrunch.com/tag/artificial-intelligence/",
+  "https://www.theverge.com/ai-artificial-intelligence",
+  "https://www.wired.com/tag/artificial-intelligence/",
 ];
 
-// Scrape VPN news from major tech outlets (parallel)
-export async function scrapeVpnNews(): Promise<ScrapedNews[]> {
+// Scrape AI agent news from major tech outlets (parallel)
+export async function scrapeAgentNews(): Promise<ScrapedNews[]> {
   const settled = await Promise.allSettled(
     NEWS_SOURCES.map(async (sourceUrl) => {
       const { content } = await scrapeUrl(sourceUrl);
       return {
-        title: `VPN News from ${new URL(sourceUrl).hostname}`,
+        title: `AI Agent News from ${new URL(sourceUrl).hostname}`,
         summary: content.slice(0, 2000),
         source: new URL(sourceUrl).hostname,
         url: sourceUrl,
         date: new Date().toISOString(),
-        vpnMentions: extractVpnMentions(content),
+        vpnMentions: extractAgentMentions(content), // Keep field name for compatibility
       };
     })
   );
@@ -217,9 +205,9 @@ export async function scrapeVpnNews(): Promise<ScrapedNews[]> {
   return results;
 }
 
-// Scrape all known VPN pricing pages (parallel in batches of 4)
-export async function scrapeAllVpnData(): Promise<ScrapedPricing[]> {
-  const entries = Object.entries(VPN_PRICING_URLS);
+// Scrape all known AI agent pricing pages (parallel in batches of 4)
+export async function scrapeAllAgentData(): Promise<ScrapedPricing[]> {
+  const entries = Object.entries(AGENT_PRICING_URLS);
   const results: ScrapedPricing[] = [];
   const BATCH_SIZE = 4;
 
@@ -227,7 +215,7 @@ export async function scrapeAllVpnData(): Promise<ScrapedPricing[]> {
     const batch = entries.slice(i, i + BATCH_SIZE);
 
     const settled = await Promise.allSettled(
-      batch.map(async ([slug]) => scrapeVpnPricing(slug))
+      batch.map(async ([slug]) => scrapeAgentPricing(slug))
     );
 
     for (const result of settled) {
@@ -242,138 +230,95 @@ export async function scrapeAllVpnData(): Promise<ScrapedPricing[]> {
   return results;
 }
 
-// Extract VPN brand mentions from scraped content
-function extractVpnMentions(content: string): string[] {
-  const vpnNames = [
-    "NordVPN", "Surfshark", "ExpressVPN", "CyberGhost", "ProtonVPN",
-    "Private Internet Access", "PIA", "Mullvad", "IPVanish",
-    "VyprVPN", "TunnelBear", "Windscribe", "Hotspot Shield",
-    "StrongVPN", "PureVPN", "Atlas VPN", "PrivateVPN", "TorGuard",
-    "AirVPN", "IVPN", "Mozilla VPN", "Hide.me", "ZenMate",
-    "PrivadoVPN", "HMA", "Hide My Ass", "Astrill", "Perfect Privacy",
-    "Goose VPN", "Trust.Zone", "FastestVPN", "OVPN", "CactusVPN",
-    "Betternet", "Speedify", "VPN Unlimited", "NordLayer", "Perimeter 81",
-    "Urban VPN", "X-VPN",
+// Extract AI agent brand mentions from scraped content
+function extractAgentMentions(content: string): string[] {
+  const agentNames = [
+    "Claude Code", "Cursor", "GitHub Copilot", "Windsurf", "Codeium",
+    "Replit Agent", "Devin", "Amazon Q Developer", "n8n", "Flowise",
+    "Relevance AI", "Make", "Zapier", "CrewAI", "AutoGen", "LangGraph",
+    "AgentGPT", "Salesforce Agentforce", "Microsoft Copilot Studio",
+    "Google Vertex AI", "Intercom Fin", "Zendesk AI", "Ada",
+    "ChatGPT", "OpenAI", "Claude", "Anthropic", "Gemini", "Perplexity",
   ];
 
-  return vpnNames.filter((name) =>
+  return agentNames.filter((name) =>
     content.toLowerCase().includes(name.toLowerCase())
   );
 }
 
-// Country slug to name mapping for scraping
-const COUNTRY_NAMES: Record<string, string> = {
-  iran: "Iran",
-  china: "China",
-  russia: "Russia",
-  uae: "United Arab Emirates",
-  turkey: "Turkey",
-  "saudi-arabia": "Saudi Arabia",
-  egypt: "Egypt",
-  vietnam: "Vietnam",
-  pakistan: "Pakistan",
-  indonesia: "Indonesia",
-  india: "India",
-  thailand: "Thailand",
-  myanmar: "Myanmar",
-  cuba: "Cuba",
-  venezuela: "Venezuela",
-  belarus: "Belarus",
-  turkmenistan: "Turkmenistan",
-  "north-korea": "North Korea",
-  bangladesh: "Bangladesh",
-  ethiopia: "Ethiopia",
+// Use case slug to name mapping for scraping
+const USE_CASE_NAMES: Record<string, string> = {
+  coding: "Software Development",
+  marketing: "Marketing & Advertising",
+  writing: "Writing & Content Creation",
+  research: "Research & Analysis",
+  "customer-support": "Customer Support",
+  sales: "Sales & Lead Generation",
+  "data-analysis": "Data Analysis & Business Intelligence",
+  "hr-recruitment": "HR & Recruitment",
 };
 
-// Freedom House URL slug mapping (some differ from our slugs)
-const FREEDOM_HOUSE_SLUGS: Record<string, string> = {
-  uae: "united-arab-emirates",
-  "saudi-arabia": "saudi-arabia",
-  "north-korea": "north-korea",
-};
-
-// Scrape country-specific VPN/censorship data from multiple sources
-export async function scrapeCountryVpnData(
-  countrySlug: string
+// Scrape use-case-specific AI agent data from multiple sources
+export async function scrapeUseCaseAgentData(
+  useCaseSlug: string
 ): Promise<ScrapedCountryData> {
-  const countryName = COUNTRY_NAMES[countrySlug];
-  if (!countryName) {
-    throw new Error(`Unknown country slug: ${countrySlug}`);
+  const useCaseName = USE_CASE_NAMES[useCaseSlug];
+  if (!useCaseName) {
+    throw new Error(`Unknown use case slug: ${useCaseSlug}`);
   }
 
-  const freedomHouseSlug = FREEDOM_HOUSE_SLUGS[countrySlug] || countrySlug;
-  const freedomUrl = `https://freedomhouse.org/country/${freedomHouseSlug}/freedom-net`;
   const year = new Date().getFullYear();
 
-  // Scrape 4 sources in parallel for comprehensive data
+  // Scrape 3 sources in parallel for comprehensive data
   const results = await Promise.allSettled([
-    // 1. Freedom House country report
-    scrapeUrl(freedomUrl),
-    // 2. VPN/censorship news search
-    scrapeCountryNews(`https://s.jina.ai/${encodeURIComponent(`${countryName} VPN censorship internet freedom ${year}`)}`),
-    // 3. Best VPN reviews for this country
-    scrapeCountryNews(`https://s.jina.ai/${encodeURIComponent(`best VPN for ${countryName} ${year} review`)}`)
+    // 1. AI agent news for this use case
+    scrapeUseCaseNews(`https://s.jina.ai/${encodeURIComponent(`${useCaseName} AI agents automation ${year}`)}`),
+    // 2. Best AI agent reviews for this use case
+    scrapeUseCaseNews(`https://s.jina.ai/${encodeURIComponent(`best AI agents for ${useCaseName} ${year} review`)}`)
       .then((items) => items.map((item) => ({ ...item, title: `[Review] ${item.title}` }))),
-    // 4. VPN legality / internet laws
-    scrapeCountryNews(`https://s.jina.ai/${encodeURIComponent(`VPN legal ${countryName} ${year} internet censorship laws`)}`)
-      .then((items) => items.map((item) => ({ ...item, title: `[Legal] ${item.title}` }))),
+    // 3. How-to guides for this use case
+    scrapeUseCaseNews(`https://s.jina.ai/${encodeURIComponent(`how to use AI agents ${useCaseName} ${year} guide tutorial`)}`)
+      .then((items) => items.map((item) => ({ ...item, title: `[Guide] ${item.title}` }))),
   ]);
 
-  const freedomReport =
-    results[0].status === "fulfilled"
-      ? results[0].value.content.slice(0, 3000)
-      : null;
-
-  if (results[0].status === "rejected") {
-    console.warn(
-      `[scraper] Freedom House scrape failed for ${countrySlug}:`,
-      results[0].reason
-    );
-  }
-
   const recentNews: ScrapedCountryData["recentNews"] = [];
-  for (let i = 1; i < results.length; i++) {
+  for (let i = 0; i < results.length; i++) {
     if (results[i].status === "fulfilled") {
       const newsItems = (results[i] as PromiseFulfilledResult<ScrapedCountryData["recentNews"]>).value;
       recentNews.push(...newsItems);
     } else {
       console.warn(
-        `[scraper] Source ${i} scrape failed for ${countrySlug}:`,
+        `[scraper] Source ${i} scrape failed for ${useCaseSlug}:`,
         (results[i] as PromiseRejectedResult).reason
       );
     }
   }
 
-  const rawContent = [
-    freedomReport ? `FREEDOM HOUSE REPORT:\n${freedomReport}` : "",
-    recentNews.length > 0
-      ? `RECENT NEWS & SOURCES (${recentNews.length} items):\n${recentNews.map((n) => `- ${n.title}: ${n.summary} (${n.url})`).join("\n")}`
-      : "",
-  ]
-    .filter(Boolean)
-    .join("\n\n");
+  const rawContent = recentNews.length > 0
+    ? `RECENT NEWS & SOURCES (${recentNews.length} items):\n${recentNews.map((n) => `- ${n.title}: ${n.summary} (${n.url})`).join("\n")}`
+    : "";
 
   const successCount = results.filter((r) => r.status === "fulfilled").length;
-  console.log(`[scraper] ${countryName}: ${successCount}/${results.length} sources scraped, ${recentNews.length} news items`);
+  console.log(`[scraper] ${useCaseName}: ${successCount}/${results.length} sources scraped, ${recentNews.length} news items`);
 
-  if (!freedomReport && recentNews.length === 0) {
+  if (recentNews.length === 0) {
     throw new Error(
-      `No data could be scraped for ${countryName}. All ${results.length} sources failed.`
+      `No data could be scraped for ${useCaseName}. All ${results.length} sources failed.`
     );
   }
 
   return {
-    countrySlug,
-    countryName,
-    freedomReport,
+    countrySlug: useCaseSlug, // Keep field name for compatibility
+    countryName: useCaseName,
+    freedomReport: null,
     recentNews,
     rawContent,
     scrapedAt: new Date().toISOString(),
   };
 }
 
-// Scrape country-specific VPN news via Jina.ai search
-async function scrapeCountryNews(
+// Scrape use-case-specific AI agent news via Jina.ai search
+async function scrapeUseCaseNews(
   searchUrl: string
 ): Promise<Array<{ title: string; summary: string; url: string }>> {
   const headers: Record<string, string> = {
@@ -410,7 +355,7 @@ async function scrapeCountryNews(
 export async function saveScrapeJob(job: {
   type: string;
   source: string;
-  vpnSlug?: string;
+  agentSlug?: string;
   status: "pending" | "running" | "completed" | "failed";
   result?: string;
   error?: string;
@@ -423,7 +368,7 @@ export async function saveScrapeJob(job: {
     .values({
       type: job.type,
       source: job.source,
-      vpnSlug: job.vpnSlug ?? null,
+      agentSlug: job.agentSlug ?? null,
       status: job.status,
       result: job.result ?? null,
       error: job.error ?? null,

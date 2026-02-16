@@ -75,20 +75,20 @@ export async function generateBlogImage(
 
   const prompt = `Create a professional blog header image for an article titled "${title}".
 Style: ${style}.
-The image should be landscape format (16:9), modern, and suitable for a VPN comparison website called ZeroToVPN.
-Do NOT include any text in the image. Use abstract tech visuals, shields, locks, or network imagery.`;
+The image should be landscape format (16:9), modern, and suitable for an AI agent comparison website called ZeroToAIAgents.
+Do NOT include any text in the image. Use abstract tech visuals, neural networks, AI nodes, automation, or futuristic technology imagery.`;
 
   return generateImage(prompt);
 }
 
-// Generate a VPN comparison diagram
+// Generate an AI agent comparison diagram
 export async function generateComparisonDiagram(
-  vpnNames: string[],
+  agentNames: string[],
   metric: string
 ): Promise<GeneratedImage> {
-  const prompt = `Create a clean, professional comparison diagram showing ${vpnNames.join(", ")} compared by ${metric}.
+  const prompt = `Create a clean, professional comparison diagram showing ${agentNames.join(", ")} AI agents compared by ${metric}.
 Use a modern infographic style with clear data visualization.
-Bar chart or radar chart format. Professional color palette.
+Bar chart or radar chart format. Professional color palette with tech/AI themes.
 No text labels needed - just clean visual shapes and colors.`;
 
   return generateImage(prompt);

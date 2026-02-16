@@ -1,17 +1,17 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { getAllVpns } from "@/lib/vpn-data-layer";
+import { getAllAgents } from "@/lib/agent-data-layer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { RatingStars } from "@/components/vpn/rating-stars";
-import { AffiliateButton } from "@/components/vpn/affiliate-button";
+import { RatingStars } from "@/components/agents/rating-stars";
+import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { VpnComparisonTool } from "@/components/conversion/vpn-comparison-tool";
 import { PopularComparisons } from "@/components/compare/popular-comparisons";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentData } from "@/lib/db/agent-service";
 import {
   Check,
   X,
@@ -32,7 +32,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -49,9 +49,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(baseUrl),
-    title: "Compare VPNs Side by Side - ZeroToVPN",
+    title: "Compare AI Agents Side by Side - ZeroToAIAgents",
     description:
-      "Compare the best VPN services side by side. See detailed comparisons of speed, security, pricing, features, and more to find the perfect VPN for your needs.",
+      "Compare the best AI agent platforms side by side. See detailed comparisons of features, pricing, models, integrations, and more to find the perfect AI agent for your needs.",
     alternates: {
       canonical: canonicalUrl,
       languages: languages,
@@ -62,18 +62,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-// Structured Data for VPN Comparison List
-function ItemListSchema({ vpns }: { vpns: VpnData[] }) {
+// Structured Data for AI Agent Comparison List
+function ItemListSchema({ vpns }: { vpns: AiAgentData[] }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "VPN Comparison List",
+    name: "AI Agent Comparison List",
     numberOfItems: vpns.length,
     itemListElement: vpns.map((vpn, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: vpn.name,
-      url: `https://zerotovpn.com/reviews/${vpn.slug}`,
+      url: `https://zerotoaiagents.com/reviews/${vpn.slug}`,
     })),
   };
   return (
@@ -89,7 +89,7 @@ export default async function ComparePage({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations("comparePage");
-  const vpns = await getAllVpns();
+  const vpns = await getAllAgents();
 
   return (
     <>
@@ -98,7 +98,7 @@ export default async function ComparePage({ params }: Props) {
       <div className="flex flex-col">
         {/* Breadcrumbs */}
         <div className="container pt-6">
-          <BreadcrumbSchema items={[{ name: "Compare VPNs", href: "/compare" }]} />
+          <BreadcrumbSchema items={[{ name: "Compare AI Agents", href: "/compare" }]} />
         </div>
 
         {/* Hero Section */}
@@ -186,7 +186,7 @@ export default async function ComparePage({ params }: Props) {
                   </td>
                   {vpns.map((vpn) => (
                     <td key={vpn.id} className="p-4 text-center">
-                      <span className="font-semibold">${vpn.priceMonthly}</span>
+                      <span className="font-semibold">${vpn.monthlyPrice}</span>
                       <span className="text-muted-foreground">{t("perMonth")}</span>
                     </td>
                   ))}
@@ -203,25 +203,9 @@ export default async function ComparePage({ params }: Props) {
                   {vpns.map((vpn) => (
                     <td key={vpn.id} className="p-4 text-center">
                       <span className="text-xl font-bold text-green-600">
-                        ${vpn.priceTwoYear || vpn.priceYearly}
+                        ${vpn.annualPrice}
                       </span>
                       <span className="text-muted-foreground">{t("perMonth")}</span>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Money Back Guarantee */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      {t("moneyBackGuarantee")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <span className="font-semibold">{vpn.moneyBackDays}</span>{" "}
-                      {t("days")}
                     </td>
                   ))}
                 </tr>
@@ -236,7 +220,7 @@ export default async function ComparePage({ params }: Props) {
                   </td>
                   {vpns.map((vpn) => (
                     <td key={vpn.id} className="p-4 text-center">
-                      {vpn.freeTier ? (
+                      {vpn.hasFreeTier ? (
                         <Check className="h-6 w-6 text-green-500 mx-auto" />
                       ) : (
                         <X className="h-6 w-6 text-red-400 mx-auto" />
@@ -245,245 +229,9 @@ export default async function ComparePage({ params }: Props) {
                   ))}
                 </tr>
 
-                {/* Servers */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Server className="h-4 w-4 text-primary" />
-                      {t("totalServers")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <span className="font-semibold">
-                        {vpn.servers.toLocaleString()}+
-                      </span>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Countries */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Globe className="h-4 w-4 text-primary" />
-                      {t("countries")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <span className="font-semibold">{vpn.countries}</span>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Simultaneous Connections */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Monitor className="h-4 w-4 text-primary" />
-                      {t("simultaneousDevices")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <span className="font-semibold">
-                        {vpn.maxDevices >= 999 ? t("unlimited") : vpn.maxDevices}
-                      </span>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Speed Score */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Zap className="h-4 w-4 text-primary" />
-                      {t("speedScore")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <div className="flex items-center justify-center gap-2">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-green-500 rounded-full"
-                            style={{ width: `${vpn.speedScore}%` }}
-                          />
-                        </div>
-                        <span className="font-semibold text-sm">
-                          {vpn.speedScore}%
-                        </span>
-                      </div>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Security Score */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Lock className="h-4 w-4 text-primary" />
-                      {t("securityScore")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <div className="flex items-center justify-center gap-2">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-blue-500 rounded-full"
-                            style={{ width: `${vpn.securityScore}%` }}
-                          />
-                        </div>
-                        <span className="font-semibold text-sm">
-                          {vpn.securityScore}%
-                        </span>
-                      </div>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Streaming Score */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Tv className="h-4 w-4 text-primary" />
-                      {t("streamingScore")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <div className="flex items-center justify-center gap-2">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-purple-500 rounded-full"
-                            style={{ width: `${vpn.streamingScore}%` }}
-                          />
-                        </div>
-                        <span className="font-semibold text-sm">
-                          {vpn.streamingScore}%
-                        </span>
-                      </div>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Protocols */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Shield className="h-4 w-4 text-primary" />
-                      {t("protocols")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <div className="flex flex-wrap justify-center gap-1">
-                        {vpn.protocols.map((protocol) => (
-                          <Badge
-                            key={protocol}
-                            variant="outline"
-                            className="text-xs"
-                          >
-                            {protocol}
-                          </Badge>
-                        ))}
-                      </div>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Encryption */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Lock className="h-4 w-4 text-primary" />
-                      {t("encryption")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      <Badge variant="secondary">{vpn.encryption}</Badge>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Kill Switch */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Shield className="h-4 w-4 text-primary" />
-                      {t("killSwitch")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      {vpn.killSwitch ? (
-                        <Check className="h-6 w-6 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-6 w-6 text-red-400 mx-auto" />
-                      )}
-                    </td>
-                  ))}
-                </tr>
-
-                {/* No-Logs Policy */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Shield className="h-4 w-4 text-primary" />
-                      {t("noLogsPolicy")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      {vpn.noLogs ? (
-                        <Check className="h-6 w-6 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-6 w-6 text-red-400 mx-auto" />
-                      )}
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Netflix Support */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Tv className="h-4 w-4 text-primary" />
-                      {t("netflixSupport")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      {vpn.netflixSupport ? (
-                        <Check className="h-6 w-6 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-6 w-6 text-red-400 mx-auto" />
-                      )}
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Torrent Support */}
-                <tr className="border-b hover:bg-muted/30">
-                  <td className="p-4 font-medium sticky left-0 bg-background">
-                    <div className="flex items-center gap-2">
-                      <Download className="h-4 w-4 text-primary" />
-                      {t("torrentingSupport")}
-                    </div>
-                  </td>
-                  {vpns.map((vpn) => (
-                    <td key={vpn.id} className="p-4 text-center">
-                      {vpn.torrentSupport ? (
-                        <Check className="h-6 w-6 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-6 w-6 text-red-400 mx-auto" />
-                      )}
-                    </td>
-                  ))}
-                </tr>
+                {/* TODO: Add AI agent-specific comparison rows */}
+                {/* VPN-specific rows commented out - need to be replaced with AI agent metrics */}
+                {/* All VPN-specific comparison rows (servers, countries, speeds, protocols, etc.) temporarily disabled for AI agent site */}
 
                 {/* CTA Row */}
                 <tr className="bg-muted/30">
@@ -494,8 +242,8 @@ export default async function ComparePage({ params }: Props) {
                     <td key={vpn.id} className="p-4 text-center">
                       <div className="flex flex-col gap-2">
                         <AffiliateButton
-                          vpnId={vpn.id}
-                          vpnName={vpn.name}
+                          agentId={vpn.id}
+                          agentName={vpn.name}
                           affiliateUrl={vpn.affiliateUrl}
                           className="w-full"
                         >
@@ -525,141 +273,141 @@ export default async function ComparePage({ params }: Props) {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {/* Best Overall */}
+            {/* Best Overall - Claude Code */}
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Shield className="h-5 w-5 text-primary" />
-                <h3 className="font-bold">{t("bestOverall")}</h3>
+                <h3 className="font-bold">Best Overall (Coding)</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold">NordVPN</span>
-                <Badge className="bg-yellow-500 text-yellow-950">{t("winner")}</Badge>
+                <span className="text-2xl font-bold">Claude Code</span>
+                <Badge className="bg-yellow-500 text-yellow-950">Editor&apos;s Choice</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                {t("bestOverallDesc")}
+                Autonomous CLI agent with 200k context, exceptional reasoning, and multi-file editing capabilities.
               </p>
               <AffiliateButton
-                vpnId="nordvpn"
-                vpnName="NordVPN"
-                affiliateUrl="https://go.zerotovpn.com/nordvpn"
+                agentId="claude-code"
+                agentName="Claude Code"
+                affiliateUrl="https://go.zerotoaiagents.com/claude-code"
                 className="w-full"
               >
-                Get NordVPN
+                Get Claude Code
               </AffiliateButton>
             </div>
 
-            {/* Best Value */}
+            {/* Best Value - GitHub Copilot */}
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <DollarSign className="h-5 w-5 text-green-500" />
-                <h3 className="font-bold">{t("bestValue")}</h3>
+                <h3 className="font-bold">Best Value</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold">Surfshark</span>
-                <Badge variant="secondary">$1.99{t("perMonth")}</Badge>
+                <span className="text-2xl font-bold">GitHub Copilot</span>
+                <Badge variant="secondary">$10/mo</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                {t("bestValueDesc")}
+                Most affordable premium AI coding assistant with multi-IDE support and GitHub ecosystem integration.
               </p>
               <AffiliateButton
-                vpnId="surfshark"
-                vpnName="Surfshark"
-                affiliateUrl="https://go.zerotovpn.com/surfshark"
+                agentId="github-copilot"
+                agentName="GitHub Copilot"
+                affiliateUrl="https://go.zerotoaiagents.com/github-copilot"
                 className="w-full"
               >
-                Get Surfshark
+                Get GitHub Copilot
               </AffiliateButton>
             </div>
 
-            {/* Fastest */}
+            {/* Best Performance - ChatGPT */}
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Zap className="h-5 w-5 text-orange-500" />
-                <h3 className="font-bold">{t("fastestVpn")}</h3>
+                <h3 className="font-bold">Best Performance</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold">ExpressVPN</span>
-                <Badge variant="secondary">96% {t("speed")}</Badge>
+                <span className="text-2xl font-bold">ChatGPT</span>
+                <Badge variant="secondary">4.8/5</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                {t("fastestVpnDesc")}
+                OpenAI&apos;s flagship AI with cutting-edge o1 reasoning, custom GPTs, and multimodal capabilities.
               </p>
               <AffiliateButton
-                vpnId="expressvpn"
-                vpnName="ExpressVPN"
-                affiliateUrl="https://go.zerotovpn.com/expressvpn"
+                agentId="chatgpt"
+                agentName="ChatGPT"
+                affiliateUrl="https://go.zerotoaiagents.com/chatgpt"
                 className="w-full"
               >
-                Get ExpressVPN
+                Get ChatGPT
               </AffiliateButton>
             </div>
 
-            {/* Best Security */}
+            {/* Best for Enterprise - Microsoft Copilot Studio */}
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Lock className="h-5 w-5 text-blue-500" />
-                <h3 className="font-bold">{t("bestSecurity")}</h3>
+                <h3 className="font-bold">Best for Enterprise</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold">ProtonVPN</span>
-                <Badge variant="secondary">99% {t("security")}</Badge>
+                <span className="text-2xl font-bold">Copilot Studio</span>
+                <Badge variant="secondary">Enterprise</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                {t("bestSecurityDesc")}
+                Microsoft&apos;s enterprise platform for building custom AI copilots across Microsoft 365 and Power Platform.
               </p>
               <AffiliateButton
-                vpnId="protonvpn"
-                vpnName="ProtonVPN"
-                affiliateUrl="https://go.zerotovpn.com/protonvpn"
+                agentId="microsoft-copilot-studio"
+                agentName="Microsoft Copilot Studio"
+                affiliateUrl="https://go.zerotoaiagents.com/microsoft-copilot-studio"
                 className="w-full"
               >
-                Get ProtonVPN
+                Get Copilot Studio
               </AffiliateButton>
             </div>
 
-            {/* Most Servers */}
+            {/* Best Free - Flowise */}
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Server className="h-5 w-5 text-purple-500" />
-                <h3 className="font-bold">{t("mostServers")}</h3>
+                <h3 className="font-bold">Best Free Option</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold">PIA</span>
-                <Badge variant="secondary">35,000+</Badge>
+                <span className="text-2xl font-bold">Flowise</span>
+                <Badge className="bg-green-500 text-white">Open Source</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                {t("mostServersDesc")}
+                Free and open-source drag-and-drop LLM flow builder with RAG support and chatbot deployment.
               </p>
               <AffiliateButton
-                vpnId="pia"
-                vpnName="Private Internet Access"
-                affiliateUrl="https://go.zerotovpn.com/pia"
+                agentId="flowise"
+                agentName="Flowise"
+                affiliateUrl="https://go.zerotoaiagents.com/flowise"
                 className="w-full"
               >
-                Get PIA
+                Get Flowise
               </AffiliateButton>
             </div>
 
-            {/* Best Free Option */}
+            {/* Best No-Code - n8n AI */}
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <DollarSign className="h-5 w-5 text-green-500" />
-                <h3 className="font-bold">{t("bestFreeOption")}</h3>
+                <h3 className="font-bold">Best No-Code</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold">ProtonVPN</span>
-                <Badge className="bg-green-500 text-white">{t("freeTierBadge")}</Badge>
+                <span className="text-2xl font-bold">n8n AI</span>
+                <Badge variant="secondary">400+ Integrations</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                {t("bestFreeDesc")}
+                Open-source workflow automation with powerful AI agent builder and 400+ pre-built integrations.
               </p>
               <AffiliateButton
-                vpnId="protonvpn"
-                vpnName="ProtonVPN"
-                affiliateUrl="https://go.zerotovpn.com/protonvpn"
+                agentId="n8n-ai"
+                agentName="n8n AI"
+                affiliateUrl="https://go.zerotoaiagents.com/n8n-ai"
                 className="w-full"
               >
-                {t("tryFree")}
+                Get n8n AI
               </AffiliateButton>
             </div>
           </div>
@@ -680,37 +428,37 @@ export default async function ComparePage({ params }: Props) {
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <Zap className="h-5 w-5 text-primary" />
-                  {t("speedTesting")}
+                  Performance Testing
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  {t("speedTestingDesc")}
+                  We rigorously test each AI agent&apos;s response quality, speed, and reasoning capabilities across real-world tasks including code generation, analysis, and problem-solving.
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <Shield className="h-5 w-5 text-primary" />
-                  {t("securityAnalysis")}
+                  Privacy & Security Analysis
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  {t("securityAnalysisDesc")}
+                  We evaluate data handling practices, encryption standards, compliance certifications, and whether agents train on your data to ensure your information stays secure.
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <Tv className="h-5 w-5 text-primary" />
-                  {t("streamingTests")}
+                  Integration Testing
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  {t("streamingTestsDesc")}
+                  We test compatibility with popular tools, APIs, and workflows to verify seamless integration with your existing tech stack and development environment.
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <DollarSign className="h-5 w-5 text-primary" />
-                  {t("valueAssessment")}
+                  Value Assessment
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  {t("valueAssessmentDesc")}
+                  We analyze pricing tiers, free tier limitations, and feature-to-cost ratios to determine the best value AI agents for different budgets and use cases.
                 </p>
               </div>
             </div>
@@ -723,8 +471,29 @@ export default async function ComparePage({ params }: Props) {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <FAQSchema
-              faqs={t.raw("faq") as Array<{ question: string; answer: string }>}
-              title={t("faqSection.title")}
+              faqs={[
+                {
+                  question: "How do you compare AI agents?",
+                  answer: "We evaluate AI agents across multiple criteria including ease of use, performance, pricing, integrations, value for money, and real-world testing. Each agent is scored on a 5-point scale based on hands-on testing and user feedback."
+                },
+                {
+                  question: "How often are comparisons updated?",
+                  answer: "We update our comparison data monthly to reflect the latest pricing, features, model updates, and performance benchmarks. Major updates or new agent releases trigger immediate re-evaluation."
+                },
+                {
+                  question: "Can I compare more than two AI agents?",
+                  answer: "Yes, our comparison tool lets you compare up to 4 AI agents side by side. This helps you evaluate multiple options simultaneously and make the best decision for your specific needs."
+                },
+                {
+                  question: "Which AI agent is best for coding?",
+                  answer: "For coding, we recommend Claude Code for autonomous development with massive context, Cursor for AI-first IDE experience, or GitHub Copilot for budget-friendly autocomplete. The best choice depends on your workflow and budget."
+                },
+                {
+                  question: "Are there free AI agents available?",
+                  answer: "Yes! Several excellent free options exist: ChatGPT (free tier), Claude (limited free usage), Flowise (open-source), and n8n AI (self-hosted). Many coding agents also offer free tiers for students and open-source maintainers."
+                }
+              ]}
+              title="Frequently Asked Questions"
             />
           </div>
         </div>
@@ -740,10 +509,10 @@ export default async function ComparePage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
-                <Link href="/best/best-vpn">{t("viewBestVpns")}</Link>
+                <Link href="/best/coding-agents">View Best AI Coding Agents</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/guides/what-is-vpn">{t("whatIsVpn")}</Link>
+                <Link href="/guides/what-is-ai-agent">What is an AI Agent?</Link>
               </Button>
             </div>
           </div>

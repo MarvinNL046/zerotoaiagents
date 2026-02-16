@@ -38,7 +38,7 @@ export const deLabels: CountryPageLabels = {
 
 export const deTranslations: Record<string, TranslatedCountryContent> = {
   "thailand": {
-    metaTitle: "Bestes VPN für Thailand 2026: Sperren umgehen & privat bleiben | ZeroToVPN",
+    metaTitle: "Bestes VPN für Thailand 2026: Sperren umgehen & privat bleiben | ZeroToAIAgents",
     metaDescription: "Thailand sperrt Glücksspielseiten, einige Nachrichtenportale und überwacht soziale Medien unter dem Majestätsbeleidigungsgesetz. Finden Sie VPNs, die in Thailand zuverlässig funktionieren.",
     statusLabel: "Legal, aber überwacht",
     heroSubtitle: "Inhaltssperren umgehen und Ihre Privatsphäre in Thailand schützen",
@@ -65,7 +65,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "japan": {
-    metaTitle: "Bestes VPN für Japan 2026: Japanische Inhalte streamen & privat bleiben | ZeroToVPN",
+    metaTitle: "Bestes VPN für Japan 2026: Japanische Inhalte streamen & privat bleiben | ZeroToAIAgents",
     metaDescription: "Japan hat eine hohe Internetfreiheit, aber strenge Urheberrechtsdurchsetzung. Finden Sie VPNs mit schnellen japanischen Servern zum Streamen von Anime, für japanische Inhalte im Ausland und für Privatsphäre.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Japanische Inhalte weltweit streamen und Ihre Privatsphäre schützen",
@@ -92,7 +92,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-korea": {
-    metaTitle: "Bestes VPN für Südkorea 2026: Gaming, Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Südkorea 2026: Gaming, Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Südkorea hat schnelles Internet, überwacht aber Online-Aktivitäten. Finden Sie VPNs für Gaming, Streaming koreanischer Inhalte im Ausland und Schutz Ihrer Privatsphäre.",
     statusLabel: "Legal, einige Einschränkungen",
     heroSubtitle: "Schnelles Gaming, Streaming-Zugang und Privatsphäre in Südkorea",
@@ -119,7 +119,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hong-kong": {
-    metaTitle: "Bestes VPN für Hongkong 2026: Privatsphäre unter dem NSL | ZeroToVPN",
+    metaTitle: "Bestes VPN für Hongkong 2026: Privatsphäre unter dem NSL | ZeroToAIAgents",
     metaDescription: "Hongkongs Nationales Sicherheitsgesetz hat die Überwachung verstärkt. Finden Sie VPNs, die Ihre Privatsphäre schützen und Sie in Hongkongs sich wandelnder digitaler Landschaft sicher halten.",
     statusLabel: "Legal, aber zunehmend überwacht",
     heroSubtitle: "Schützen Sie Ihre digitale Privatsphäre in Hongkongs sich wandelnder Landschaft",
@@ -146,7 +146,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "taiwan": {
-    metaTitle: "Bestes VPN für Taiwan 2026: Streaming & Privatsphäre | ZeroToVPN",
+    metaTitle: "Bestes VPN für Taiwan 2026: Streaming & Privatsphäre | ZeroToAIAgents",
     metaDescription: "Taiwan genießt hohe Internetfreiheit. Nutzen Sie ein VPN für internationales Streaming, Privatsphäre und sichere öffentliche WLAN-Verbindungen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu globalen Inhalten und Schutz Ihrer Privatsphäre in Taiwan",
@@ -171,7 +171,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "singapore": {
-    metaTitle: "Bestes VPN für Singapur 2026: Privatsphäre & Inhaltszugang | ZeroToVPN",
+    metaTitle: "Bestes VPN für Singapur 2026: Privatsphäre & Inhaltszugang | ZeroToAIAgents",
     metaDescription: "Singapur hat strenge Inhaltsregulierungen und Überwachungsgesetze. Finden Sie VPNs, die Ihre Privatsphäre schützen und Inhaltsbeschränkungen in Singapur umgehen.",
     statusLabel: "Legal, aber überwacht",
     heroSubtitle: "Singapurs Internetregulierungen mit dem richtigen VPN meistern",
@@ -196,7 +196,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "malaysia": {
-    metaTitle: "Bestes VPN für Malaysia 2026: Websites entsperren & Privatsphäre schützen | ZeroToVPN",
+    metaTitle: "Bestes VPN für Malaysia 2026: Websites entsperren & Privatsphäre schützen | ZeroToAIAgents",
     metaDescription: "Malaysia sperrt Glücksspiel-, Erwachsenen- und politische Seiten. Finden Sie VPNs, die MCMC-Sperren umgehen und Ihre Privatsphäre in Malaysia schützen.",
     statusLabel: "Legal, aber Inhalte gefiltert",
     heroSubtitle: "MCMC-Inhaltssperren umgehen und Ihre Privatsphäre in Malaysia schützen",
@@ -221,7 +221,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "philippines": {
-    metaTitle: "Bestes VPN für die Philippinen 2026: Streaming & Sicherheit | ZeroToVPN",
+    metaTitle: "Bestes VPN für die Philippinen 2026: Streaming & Sicherheit | ZeroToAIAgents",
     metaDescription: "Die Philippinen haben langsames Internet und wachsende Überwachung. Finden Sie VPNs, die Geschwindigkeiten verbessern, Privatsphäre schützen und internationales Streaming freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Geschwindigkeiten verbessern, globale Inhalte erreichen und sicher bleiben auf den Philippinen",
@@ -246,7 +246,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "australia": {
-    metaTitle: "Bestes VPN für Australien 2026: Streaming, Privatsphäre & Torrenting | ZeroToVPN",
+    metaTitle: "Bestes VPN für Australien 2026: Streaming, Privatsphäre & Torrenting | ZeroToAIAgents",
     metaDescription: "Australien hat eine obligatorische Vorratsdatenspeicherung und strenge Urheberrechtsdurchsetzung. Finden Sie VPNs, die Ihre Privatsphäre schützen und internationales Streaming in Australien freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schützen Sie Ihre Privatsphäre vor Vorratsdatenspeicherung und greifen Sie auf globale Inhalte zu",
@@ -273,7 +273,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "new-zealand": {
-    metaTitle: "Bestes VPN für Neuseeland 2026: Streaming & Privatsphäre | ZeroToVPN",
+    metaTitle: "Bestes VPN für Neuseeland 2026: Streaming & Privatsphäre | ZeroToAIAgents",
     metaDescription: "Neuseeland hat großartige Internetfreiheit, aber begrenzte Streaming-Bibliotheken. Finden Sie VPNs für globale Inhalte und Privatsphäre als Five-Eyes-Mitglied.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu globalem Streaming und Schutz Ihrer Privatsphäre in Neuseeland",
@@ -298,7 +298,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-kingdom": {
-    metaTitle: "Bestes VPN für Großbritannien 2026: Privatsphäre, Streaming & ISP-Sperren | ZeroToVPN",
+    metaTitle: "Bestes VPN für Großbritannien 2026: Privatsphäre, Streaming & ISP-Sperren | ZeroToAIAgents",
     metaDescription: "Großbritannien hat umfangreiche Überwachungsgesetze und ISP-Level-Website-Sperren. Finden Sie VPNs, die Ihre Privatsphäre schützen und BT-, Virgin- und Sky-Sperren umgehen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "ISP-Sperren umgehen und Ihre Privatsphäre vor der Schnüffler-Charta schützen",
@@ -325,7 +325,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "germany": {
-    metaTitle: "Bestes VPN für Deutschland 2026: Privatsphäre, Streaming & Torrenting | ZeroToVPN",
+    metaTitle: "Bestes VPN für Deutschland 2026: Privatsphäre, Streaming & Torrenting | ZeroToAIAgents",
     metaDescription: "Deutschland hat strenge Urheberrechtsdurchsetzung und Datenschutzgesetze. Finden Sie VPNs, die Sie vor Abmahnungen schützen und internationales Streaming freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Urheberrechtliche Abmahnungen vermeiden und Ihre digitale Privatsphäre schützen",
@@ -352,7 +352,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "france": {
-    metaTitle: "Bestes VPN für Frankreich 2026: Privatsphäre, Streaming & HADOPI | ZeroToVPN",
+    metaTitle: "Bestes VPN für Frankreich 2026: Privatsphäre, Streaming & HADOPI | ZeroToAIAgents",
     metaDescription: "Frankreich überwacht Torrenting durch HADOPI und hat Gesetze zur Vorratsdatenspeicherung. Finden Sie VPNs, die Ihre Privatsphäre schützen und internationales Streaming aus Frankreich ermöglichen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schutz vor HADOPI-Überwachung und Zugang zu globalen Inhalten",
@@ -377,7 +377,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "spain": {
-    metaTitle: "Bestes VPN für Spanien 2026: Streaming, Privatsphäre & Torrenting | ZeroToVPN",
+    metaTitle: "Bestes VPN für Spanien 2026: Streaming, Privatsphäre & Torrenting | ZeroToAIAgents",
     metaDescription: "Spanien hat wachsende Urheberrechtsdurchsetzung und EU-Vorratsdatenspeicherung. Finden Sie VPNs für sicheres Torrenten, internationales Streaming und Privatsphäre.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Globale Inhalte streamen und Ihre Privatsphäre in Spanien schützen",
@@ -402,7 +402,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "italy": {
-    metaTitle: "Bestes VPN für Italien 2026: Streaming, Privatsphäre & AGCOM-Sperren | ZeroToVPN",
+    metaTitle: "Bestes VPN für Italien 2026: Streaming, Privatsphäre & AGCOM-Sperren | ZeroToAIAgents",
     metaDescription: "Italien sperrt Glücksspiel- und Piraterie-Seiten durch AGCOM. Finden Sie VPNs, die italienische ISP-Sperren umgehen und internationales Streaming freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "AGCOM-Sperren umgehen und globales Streaming aus Italien genießen",
@@ -427,7 +427,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "brazil": {
-    metaTitle: "Bestes VPN für Brasilien 2026: Privatsphäre, Streaming & WhatsApp-Sperren | ZeroToVPN",
+    metaTitle: "Bestes VPN für Brasilien 2026: Privatsphäre, Streaming & WhatsApp-Sperren | ZeroToAIAgents",
     metaDescription: "Brasilien sperrt gelegentlich WhatsApp und hat zunehmende Überwachung. Finden Sie VPNs, die Sie verbunden halten und Ihre Privatsphäre in Brasilien schützen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Während WhatsApp-Sperren verbunden bleiben und Ihre Privatsphäre schützen",
@@ -452,7 +452,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "mexico": {
-    metaTitle: "Bestes VPN für Mexiko 2026: Privatsphäre, Streaming & Sicherheit | ZeroToVPN",
+    metaTitle: "Bestes VPN für Mexiko 2026: Privatsphäre, Streaming & Sicherheit | ZeroToAIAgents",
     metaDescription: "Mexiko hat zunehmende Überwachung und Cybersicherheitsbedenken. Finden Sie VPNs, die Ihre Privatsphäre schützen und US-Streaming aus Mexiko freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Ihre Privatsphäre schützen und US-Streaming-Inhalte aus Mexiko genießen",
@@ -477,7 +477,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-states": {
-    metaTitle: "Bestes VPN für die USA 2026: Privatsphäre, ISP-Tracking & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für die USA 2026: Privatsphäre, ISP-Tracking & Streaming | ZeroToAIAgents",
     metaDescription: "US-ISPs können Ihre Browserdaten verkaufen und die DMCA-Durchsetzung ist streng. Finden Sie VPNs, die Ihre Privatsphäre schützen und internationales Streaming aus den USA ermöglichen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "ISP-Tracking stoppen, DMCA-Benachrichtigungen vermeiden und Ihre Privatsphäre schützen",
@@ -504,7 +504,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "canada": {
-    metaTitle: "Bestes VPN für Kanada 2026: Privatsphäre, Streaming & P2P | ZeroToVPN",
+    metaTitle: "Bestes VPN für Kanada 2026: Privatsphäre, Streaming & P2P | ZeroToAIAgents",
     metaDescription: "Kanada ist Five-Eyes-Mitglied mit Notice-and-Notice-Urheberrechtsregeln. Finden Sie VPNs, die Ihre Privatsphäre schützen und US-Streaming aus Kanada freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu US-Inhalten und Schutz Ihrer Privatsphäre als Five-Eyes-Mitglied",
@@ -529,7 +529,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "poland": {
-    metaTitle: "Bestes VPN für Polen 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Polen 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Polen hat EU-Vorratsdatenspeicherung und wachsende Überwachung. Finden Sie VPNs, die Ihre Privatsphäre schützen und internationales Streaming aus Polen freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Ihre Privatsphäre schützen und globales Streaming aus Polen genießen",
@@ -554,7 +554,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sweden": {
-    metaTitle: "Bestes VPN für Schweden 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Schweden 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Schweden ist 14-Eyes-Mitglied mit Urheberrechtsdurchsetzung. Finden Sie VPNs, die Ihre Privatsphäre schützen und internationales Streaming aus Schweden ermöglichen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schutz der Privatsphäre und globaler Inhaltszugang aus Schweden",
@@ -579,7 +579,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "switzerland": {
-    metaTitle: "Bestes VPN für die Schweiz 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für die Schweiz 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Die Schweiz hat starke Datenschutzgesetze, aber begrenzte Streaming-Optionen. Finden Sie VPNs für globale Inhalte und Privatsphäre in der Schweiz.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Starke Datenschutzgesetze und globaler Inhaltszugang aus der Schweiz",
@@ -604,7 +604,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "nigeria": {
-    metaTitle: "Bestes VPN für Nigeria 2026: Twitter-Sperren umgehen & privat bleiben | ZeroToVPN",
+    metaTitle: "Bestes VPN für Nigeria 2026: Twitter-Sperren umgehen & privat bleiben | ZeroToAIAgents",
     metaDescription: "Nigeria hat eine Geschichte von Social-Media-Sperren und wachsende Internetbeschränkungen. Finden Sie VPNs, die Sie verbunden halten und Ihre Privatsphäre in Nigeria schützen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Während Social-Media-Sperren verbunden bleiben und Ihre Privatsphäre schützen",
@@ -630,7 +630,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-africa": {
-    metaTitle: "Bestes VPN für Südafrika 2026: Streaming & Sicherheit | ZeroToVPN",
+    metaTitle: "Bestes VPN für Südafrika 2026: Streaming & Sicherheit | ZeroToAIAgents",
     metaDescription: "Südafrika hat wachsende Cyberkriminalität und begrenzte Streaming-Bibliotheken. Finden Sie VPNs, die Ihre Sicherheit schützen und globale Inhalte aus Südafrika freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schutz vor Cyberkriminalität und Zugang zu globalem Streaming",
@@ -655,7 +655,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "kenya": {
-    metaTitle: "Bestes VPN für Kenia 2026: Privatsphäre & globale Inhalte | ZeroToVPN",
+    metaTitle: "Bestes VPN für Kenia 2026: Privatsphäre & globale Inhalte | ZeroToAIAgents",
     metaDescription: "Kenia hat wachsende Internetüberwachung und Inhaltsbeschränkungen. Finden Sie VPNs, die Ihre Privatsphäre schützen und globale Streaming-Inhalte aus Kenia freischalten.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Ihre Privatsphäre schützen und globale Inhalte aus Kenia erreichen",
@@ -680,7 +680,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "myanmar": {
-    metaTitle: "Bestes VPN für Myanmar 2026: Militärzensur umgehen | ZeroToVPN",
+    metaTitle: "Bestes VPN für Myanmar 2026: Militärzensur umgehen | ZeroToAIAgents",
     metaDescription: "Myanmars Militärjunta hat seit dem Putsch 2021 schwere Internetbeschränkungen verhängt. Finden Sie VPNs mit Verschleierung, die tatsächlich in Myanmar funktionieren.",
     statusLabel: "Eingeschränkt seit dem Putsch",
     heroSubtitle: "Internetzensur der Militärjunta umgehen und verbunden bleiben",
@@ -707,7 +707,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "bangladesh": {
-    metaTitle: "Bestes VPN für Bangladesch 2026: Seiten entsperren & privat bleiben | ZeroToVPN",
+    metaTitle: "Bestes VPN für Bangladesch 2026: Seiten entsperren & privat bleiben | ZeroToAIAgents",
     metaDescription: "Bangladesch sperrt soziale Medien und Nachrichtenseiten während Unruhen. Finden Sie VPNs, die Sie verbunden halten und Ihre Privatsphäre in Bangladesch schützen.",
     statusLabel: "Legal, aber Seiten gesperrt",
     heroSubtitle: "Während Internet-Abschaltungen und Social-Media-Sperren verbunden bleiben",
@@ -732,7 +732,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "nepal": {
-    metaTitle: "Bestes VPN für Nepal 2026: TikTok entsperren & Inhalte erreichen | ZeroToVPN",
+    metaTitle: "Bestes VPN für Nepal 2026: TikTok entsperren & Inhalte erreichen | ZeroToAIAgents",
     metaDescription: "Nepal hat TikTok gesperrt und blockiert einige Inhalte. Finden Sie VPNs, die eingeschränkte Apps entsperren und Ihre Privatsphäre in Nepal schützen.",
     statusLabel: "Legal, TikTok gesperrt",
     heroSubtitle: "TikTok entsperren und auf eingeschränkte Inhalte in Nepal zugreifen",
@@ -757,7 +757,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sri-lanka": {
-    metaTitle: "Bestes VPN für Sri Lanka 2026: Social-Media-Zugang & Privatsphäre | ZeroToVPN",
+    metaTitle: "Bestes VPN für Sri Lanka 2026: Social-Media-Zugang & Privatsphäre | ZeroToAIAgents",
     metaDescription: "Sri Lanka sperrt soziale Medien während Krisen. Finden Sie VPNs, die Sie verbunden halten und Ihre Privatsphäre bei Internetbeschränkungen schützen.",
     statusLabel: "Legal, aber Social-Media-Sperren während Krisen",
     heroSubtitle: "Während Social-Media-Sperren verbunden bleiben und Ihre Privatsphäre schützen",
@@ -782,7 +782,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "cambodia": {
-    metaTitle: "Bestes VPN für Kambodscha 2026: Privatsphäre & Inhaltszugang | ZeroToVPN",
+    metaTitle: "Bestes VPN für Kambodscha 2026: Privatsphäre & Inhaltszugang | ZeroToAIAgents",
     metaDescription: "Kambodscha überwacht Online-Aktivitäten und sperrt unabhängige Medien. Finden Sie VPNs, die Ihre Privatsphäre schützen und uneingeschränkte Inhalte in Kambodscha zugänglich machen.",
     statusLabel: "Legal, aber überwacht",
     heroSubtitle: "Ihre Privatsphäre schützen und freie Medien in Kambodscha erreichen",
@@ -807,7 +807,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "israel": {
-    metaTitle: "Bestes VPN für Israel 2026: Privatsphäre & internationale Inhalte | ZeroToVPN",
+    metaTitle: "Bestes VPN für Israel 2026: Privatsphäre & internationale Inhalte | ZeroToAIAgents",
     metaDescription: "Israel hat fortschrittliche Überwachungsfähigkeiten und geo-beschränkte Inhalte. Finden Sie VPNs für Privatsphäre und internationales Streaming aus Israel.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schutz der Privatsphäre und globaler Inhaltszugang aus Israel",
@@ -832,7 +832,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "colombia": {
-    metaTitle: "Bestes VPN für Kolumbien 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Kolumbien 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Kolumbien hat wachsende Überwachungs- und Cyberkriminalitätsbedenken. Finden Sie VPNs, die Ihre Privatsphäre schützen und internationales Streaming aus Kolumbien ermöglichen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Online sicher bleiben und globale Streaming-Inhalte genießen",
@@ -857,7 +857,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "argentina": {
-    metaTitle: "Bestes VPN für Argentinien 2026: Streaming & Privatsphäre | ZeroToVPN",
+    metaTitle: "Bestes VPN für Argentinien 2026: Streaming & Privatsphäre | ZeroToAIAgents",
     metaDescription: "Argentinien hat gute Internetfreiheit, aber begrenztes Streaming. Finden Sie VPNs für globale Inhalte und günstigere Abonnements aus Argentinien.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu globalem Streaming und Schutz Ihrer Privatsphäre aus Argentinien",
@@ -882,7 +882,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "uzbekistan": {
-    metaTitle: "Bestes VPN für Usbekistan 2026: Zensur umgehen & sicher bleiben | ZeroToVPN",
+    metaTitle: "Bestes VPN für Usbekistan 2026: Zensur umgehen & sicher bleiben | ZeroToAIAgents",
     metaDescription: "Usbekistan zensiert das Internet stark und blockiert VPN-Protokolle. Finden Sie VPNs mit Verschleierung, die in Usbekistan funktionieren.",
     statusLabel: "Eingeschränkt",
     heroSubtitle: "Schwere Internetzensur in Usbekistan umgehen",
@@ -908,7 +908,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "kazakhstan": {
-    metaTitle: "Bestes VPN für Kasachstan 2026: Zensur & Überwachung umgehen | ZeroToVPN",
+    metaTitle: "Bestes VPN für Kasachstan 2026: Zensur & Überwachung umgehen | ZeroToAIAgents",
     metaDescription: "Kasachstan zensiert das Internet und hat HTTPS-Abfangversuche unternommen. Finden Sie VPNs, die Ihre Privatsphäre schützen und Zensur in Kasachstan umgehen.",
     statusLabel: "Eingeschränkt und überwacht",
     heroSubtitle: "Schutz vor HTTPS-Abfangversuchen und Internetzensur",
@@ -934,7 +934,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "ukraine": {
-    metaTitle: "Bestes VPN für die Ukraine 2026: Privatsphäre & Sicherheit im Konflikt | ZeroToVPN",
+    metaTitle: "Bestes VPN für die Ukraine 2026: Privatsphäre & Sicherheit im Konflikt | ZeroToAIAgents",
     metaDescription: "Die Ukraine steht vor kriegsbedingten Internetausfällen und Cybersicherheitsbedrohungen. Finden Sie VPNs, die Sicherheit und zuverlässigen Zugang während des laufenden Konflikts bieten.",
     statusLabel: "Legal, Kriegsbeschränkungen",
     heroSubtitle: "Sicher und verbunden bleiben während des laufenden Konflikts",
@@ -960,7 +960,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "romania": {
-    metaTitle: "Bestes VPN für Rumänien 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Rumänien 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Rumänien hat Vorratsdatenspeicherungsgesetze als verfassungswidrig erklärt. Finden Sie VPNs für Privatsphäre und internationales Streaming aus Rumänien.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Datenschutzfreundlicher Standort mit schnellem Internet",
@@ -985,7 +985,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "czech-republic": {
-    metaTitle: "Bestes VPN für Tschechien 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Tschechien 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Tschechien hat hohe Internetfreiheit, aber EU-Vorratsdatenspeicherung. Finden Sie VPNs für Privatsphäre und internationales Streaming aus Tschechien.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu globalen Inhalten und Schutz der Privatsphäre vor EU-Vorratsdatenspeicherung",
@@ -1009,7 +1009,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "greece": {
-    metaTitle: "Bestes VPN für Griechenland 2026: Privatsphäre & Streaming für Reisende | ZeroToVPN",
+    metaTitle: "Bestes VPN für Griechenland 2026: Privatsphäre & Streaming für Reisende | ZeroToAIAgents",
     metaDescription: "Griechenland ist ein beliebtes Reiseziel mit Risiken bei öffentlichem WLAN. Finden Sie VPNs, um Ihre Privatsphäre zu schützen und Ihre Heimat-Streaming-Inhalte zu erreichen.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Öffentliches WLAN absichern und Heimat-Streaming in Griechenland genießen",
@@ -1033,7 +1033,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "portugal": {
-    metaTitle: "Bestes VPN für Portugal 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Portugal 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Portugal hat hohe Internetfreiheit, aber EU-Vorratsdatenspeicherung gilt. Finden Sie VPNs für internationales Streaming und Privatsphäre aus Portugal.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu globalen Inhalten und Schutz der Privatsphäre vor EU-Vorratsdatenspeicherung",
@@ -1058,7 +1058,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "norway": {
-    metaTitle: "Bestes VPN für Norwegen 2026: Streaming & Privatsphäre | ZeroToVPN",
+    metaTitle: "Bestes VPN für Norwegen 2026: Streaming & Privatsphäre | ZeroToAIAgents",
     metaDescription: "Norwegen hat hohe Internetfreiheit, aber begrenzte Streaming-Kataloge. Finden Sie VPNs für globale Inhalte und Privatsphäre als NATO-Mitglied.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Zugang zu globalem Streaming und Schutz Ihrer digitalen Privatsphäre",
@@ -1082,7 +1082,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "denmark": {
-    metaTitle: "Bestes VPN für Dänemark 2026: Privatsphäre & Inhaltszugang | ZeroToVPN",
+    metaTitle: "Bestes VPN für Dänemark 2026: Privatsphäre & Inhaltszugang | ZeroToAIAgents",
     metaDescription: "Dänemark hat hohe Internetfreiheit, beteiligt sich aber an Geheimdienstkooperationen. Finden Sie VPNs für Privatsphäre und Streaming-Zugang aus Dänemark.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schutz der Privatsphäre und globale Inhalte aus Dänemark",
@@ -1107,7 +1107,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "finland": {
-    metaTitle: "Bestes VPN für Finnland 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Finnland 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Finnland hat Top-Internetfreiheit, aber begrenztes Streaming. Finden Sie VPNs für globale Inhalte und Privatsphäre trotz Geheimdienstkooperation.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Top-Internetfreiheit mit globalem Streaming-Zugang",
@@ -1131,7 +1131,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "belgium": {
-    metaTitle: "Bestes VPN für Belgien 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Belgien 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Belgien folgt der EU-Vorratsdatenspeicherung und hat wachsende Urheberrechtsdurchsetzung. Finden Sie VPNs für Privatsphäre und internationalen Streaming-Zugang aus Belgien.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Privatsphäre und globaler Streaming-Zugang aus Belgien",
@@ -1155,7 +1155,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "austria": {
-    metaTitle: "Bestes VPN für Österreich 2026: Privatsphäre & Streaming | ZeroToVPN",
+    metaTitle: "Bestes VPN für Österreich 2026: Privatsphäre & Streaming | ZeroToAIAgents",
     metaDescription: "Österreich hat EU-Vorratsdatenspeicherung und Urheberrechtsdurchsetzung. Finden Sie VPNs für Privatsphäre und internationales Streaming aus Österreich.",
     statusLabel: "Vollständig legal",
     heroSubtitle: "Schutz der Privatsphäre und globaler Inhaltszugang aus Österreich",
@@ -1179,7 +1179,7 @@ export const deTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hungary": {
-    metaTitle: "Bestes VPN für Ungarn 2026: Medienfreiheit & Privatsphäre | ZeroToVPN",
+    metaTitle: "Bestes VPN für Ungarn 2026: Medienfreiheit & Privatsphäre | ZeroToAIAgents",
     metaDescription: "Ungarn steht vor sinkender Medienfreiheit und wachsender Überwachung. Finden Sie VPNs, die Ihre Privatsphäre schützen und den Zugang zu unabhängigen Nachrichten aus Ungarn sichern.",
     statusLabel: "Legal, Medienbedenken",
     heroSubtitle: "Medienfreiheit und Privatsphäre in Ungarn schützen",

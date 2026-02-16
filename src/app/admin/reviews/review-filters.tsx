@@ -11,12 +11,12 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 
 interface ReviewFiltersProps {
-  vpnSlugs: string[];
+  agentSlugs: string[];
   currentStatus: string;
   currentVpn: string;
 }
 
-export function ReviewFilters({ vpnSlugs, currentStatus, currentVpn }: ReviewFiltersProps) {
+export function ReviewFilters({ agentSlugs, currentStatus, currentVpn }: ReviewFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -52,11 +52,11 @@ export function ReviewFilters({ vpnSlugs, currentStatus, currentVpn }: ReviewFil
             onValueChange={(value) => updateFilter("vpn", value)}
           >
             <SelectTrigger className="w-full sm:w-40">
-              <SelectValue placeholder="VPN" />
+              <SelectValue placeholder="Agent" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All VPNs</SelectItem>
-              {vpnSlugs.map((slug) => (
+              <SelectItem value="all">All Agents</SelectItem>
+              {agentSlugs.map((slug) => (
                 <SelectItem key={slug} value={slug} className="capitalize">
                   {slug}
                 </SelectItem>

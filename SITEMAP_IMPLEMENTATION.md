@@ -1,4 +1,4 @@
-# Dynamic Sitemap Implementation - ZeroToVPN
+# Dynamic Sitemap Implementation - ZeroToAIAgents
 
 ## Files Created/Modified
 
@@ -10,7 +10,7 @@ Enhanced the existing sitemap with:
 
 ### 2. `/src/app/robots.ts` (ALREADY EXISTS)
 - Blocks admin and API routes
-- Points to sitemap.xml at https://zerotovpn.com/sitemap.xml
+- Points to sitemap.xml at https://zerotoaiagents.com/sitemap.xml
 
 ## Sitemap Coverage
 
@@ -117,16 +117,16 @@ All URLs include proper hreflang alternates for 9 locales:
 
 Example URL structure:
 ```
-https://zerotovpn.com/reviews/nordvpn           (English)
-https://zerotovpn.com/nl/reviews/nordvpn        (Dutch)
-https://zerotovpn.com/de/reviews/nordvpn        (German)
+https://zerotoaiagents.com/reviews/nordvpn           (English)
+https://zerotoaiagents.com/nl/reviews/nordvpn        (Dutch)
+https://zerotoaiagents.com/de/reviews/nordvpn        (German)
 ... etc
 ```
 
 ## Access URLs
 
-- Sitemap: https://zerotovpn.com/sitemap.xml
-- Robots: https://zerotovpn.com/robots.txt
+- Sitemap: https://zerotoaiagents.com/sitemap.xml
+- Robots: https://zerotoaiagents.com/robots.txt
 
 ## Testing
 

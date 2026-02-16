@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Shield, Menu, X, Star, Zap, Globe, Tag, ChevronDown, Trophy, Gamepad2, Gift, Smartphone, Tablet, Laptop, Monitor, Apple } from "lucide-react";
+import { Bot, Menu, X, Star, Zap, Code, Tag, ChevronDown, Trophy, Briefcase, Wrench, HeadphonesIcon, Sparkles, BookOpen } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
@@ -20,24 +20,14 @@ export function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const bestVpnItems = [
-    { href: "/best/best-vpn", label: t("bestVpn"), icon: Trophy },
-    { href: "/best/vpn-china", label: t("vpnChina"), icon: Globe },
-    { href: "/best/vpn-russia", label: t("vpnRussia"), icon: Globe },
-    { href: "/best/vpn-uae", label: t("vpnUae"), icon: Globe },
-    { href: "/best/vpn-iran", label: t("vpnIran"), icon: Globe },
-    { href: "/best/vpn-gaming", label: t("vpnGaming"), icon: Gamepad2 },
-    { href: "/best/vpn-mobile", label: t("vpnMobile"), icon: Smartphone },
-    { href: "/best/vpn-tablet", label: t("vpnTablet"), icon: Tablet },
-    { href: "/best/free-vpn", label: t("freeVpn"), icon: Gift },
-  ];
-
-  const deviceItems = [
-    { href: "/best/vpn-laptops", label: t("vpnLaptops"), icon: Laptop },
-    { href: "/best/vpn-windows", label: t("vpnWindows"), icon: Monitor },
-    { href: "/best/vpn-macos", label: t("vpnMacos"), icon: Apple },
-    { href: "/best/vpn-chromebook", label: t("vpnChromebook"), icon: Laptop },
-    { href: "/best/vpn-linux", label: t("vpnLinux"), icon: Monitor },
+  const bestAgentItems = [
+    { href: "/best/coding-agents", label: t("codingAgents"), icon: Code },
+    { href: "/best/no-code-agents", label: t("noCodeAgents"), icon: Wrench },
+    { href: "/best/customer-support-agents", label: t("supportAgents"), icon: HeadphonesIcon },
+    { href: "/best/enterprise-agents", label: t("enterpriseAgents"), icon: Briefcase },
+    { href: "/best/free-agents", label: t("freeAgents"), icon: Sparkles },
+    { href: "/best/ai-frameworks", label: t("aiFrameworks"), icon: Wrench },
+    { href: "/best/general-purpose", label: t("generalPurpose"), icon: Bot },
   ];
 
   return (
@@ -45,9 +35,9 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <Shield className="h-6 w-6 text-primary" />
+          <Bot className="h-6 w-6 text-primary" />
           <span className="font-bold text-xl">
-            Zero<span className="text-primary">To</span>VPN
+            Zero<span className="text-primary">To</span>AIAgents
           </span>
         </Link>
 
@@ -75,8 +65,8 @@ export function Header() {
             {t("reviews")}
           </Link>
 
-          {/* HIGHLIGHTED ITEMS GROUP - Best VPNs, Countries, Deals */}
-          {/* Best VPNs - Dropdown */}
+          {/* HIGHLIGHTED ITEMS GROUP - Best AI Agents, Use Cases, Deals */}
+          {/* Best AI Agents - Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button
@@ -93,7 +83,7 @@ export function Header() {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="center" className="w-48">
-              {bestVpnItems.map((item) => {
+              {bestAgentItems.map((item) => {
                 const Icon = item.icon;
                 return (
                   <DropdownMenuItem key={item.href} asChild>
@@ -110,9 +100,9 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Countries - highlighted */}
+          {/* Use Cases - highlighted */}
           <Link
-            href="/countries"
+            href="/use-cases"
             className={cn(
               "relative inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold rounded-full transition-all",
               "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground",
@@ -120,8 +110,8 @@ export function Header() {
               "border border-primary/20"
             )}
           >
-            <Globe className="h-3.5 w-3.5 fill-current" />
-            {t("countries")}
+            <BookOpen className="h-3.5 w-3.5 fill-current" />
+            {t("useCases")}
           </Link>
 
           {/* Deals - highlighted */}
@@ -137,43 +127,6 @@ export function Header() {
             <Tag className="h-3.5 w-3.5 fill-current" />
             {t("deals")}
           </Link>
-
-          {/* Devices - Dropdown (regular) */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary inline-flex items-center gap-1",
-                  pathname.startsWith("/best/vpn-laptop") ||
-                  pathname.startsWith("/best/vpn-windows") ||
-                  pathname.startsWith("/best/vpn-macos") ||
-                  pathname.startsWith("/best/vpn-chromebook") ||
-                  pathname.startsWith("/best/vpn-linux")
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                )}
-              >
-                {t("devices")}
-                <ChevronDown className="h-3.5 w-3.5" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="w-48">
-              {deviceItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <DropdownMenuItem key={item.href} asChild>
-                    <Link
-                      href={item.href}
-                      className="flex items-center gap-2 cursor-pointer"
-                    >
-                      <Icon className="h-4 w-4" />
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
-            </DropdownMenuContent>
-          </DropdownMenu>
 
           {/* Compare & Guides - regular links */}
           <Link
@@ -200,13 +153,6 @@ export function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-2">
-          <Link
-            href="/speed-test"
-            className="hidden md:flex items-center justify-center h-9 w-9 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
-            title={t("speedTest")}
-          >
-            <Zap className="h-4 w-4" />
-          </Link>
           <ThemeToggle />
           <LanguageSwitcher />
 
@@ -252,38 +198,14 @@ export function Header() {
               {t("reviews")}
             </Link>
 
-            {/* Best VPNs section */}
+            {/* Best AI Agents section */}
             <div className="space-y-2">
               <span className="text-sm font-semibold text-primary flex items-center gap-2">
                 <Star className="h-4 w-4" />
                 {t("best")}
               </span>
               <div className="pl-6 space-y-2">
-                {bestVpnItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Icon className="h-4 w-4" />
-                      {item.label}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Devices section */}
-            <div className="space-y-2">
-              <span className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
-                <Laptop className="h-4 w-4" />
-                {t("devices")}
-              </span>
-              <div className="pl-6 space-y-2">
-                {deviceItems.map((item) => {
+                {bestAgentItems.map((item) => {
                   const Icon = item.icon;
                   return (
                     <Link
@@ -302,12 +224,12 @@ export function Header() {
 
             {/* Highlighted items */}
             <Link
-              href="/countries"
+              href="/use-cases"
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-primary to-primary/80 text-primary-foreground w-fit"
             >
-              <Globe className="h-4 w-4 fill-current" />
-              {t("countries")}
+              <BookOpen className="h-4 w-4 fill-current" />
+              {t("useCases")}
             </Link>
             <Link
               href="/deals"
@@ -338,16 +260,6 @@ export function Header() {
               )}
             >
               {t("guides")}
-            </Link>
-
-            {/* Speed Test */}
-            <Link
-              href="/speed-test"
-              onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-primary to-primary/80 text-primary-foreground w-fit"
-            >
-              <Zap className="h-4 w-4" />
-              {t("speedTest")}
             </Link>
           </div>
         </nav>

@@ -20,7 +20,7 @@ export async function syncAffiliateLinks(): Promise<{
         .where(eq(affiliateLinks.shortId, link.idString))
         .limit(1);
 
-      const vpnSlug = guessVpnSlug(link.path);
+      const agentSlug = guessAgentSlug(link.path);
       const now = new Date();
 
       if (existing) {
@@ -30,7 +30,7 @@ export async function syncAffiliateLinks(): Promise<{
           .set({
             path: link.path,
             originalUrl: link.originalURL,
-            vpnSlug,
+            agentSlug: agentSlug,
             clicks: link.clicks || 0,
             lastSyncedAt: now,
           })
@@ -41,7 +41,7 @@ export async function syncAffiliateLinks(): Promise<{
           shortId: link.idString,
           path: link.path,
           originalUrl: link.originalURL,
-          vpnSlug,
+          agentSlug: agentSlug,
           clicks: link.clicks || 0,
           lastSyncedAt: now,
         });
@@ -56,42 +56,46 @@ export async function syncAffiliateLinks(): Promise<{
   return { synced, total: links.length };
 }
 
-// Try to match a Short.io link path to a known VPN slug
-function guessVpnSlug(path: string): string | null {
+// Try to match a Short.io link path to a known AI agent slug
+function guessAgentSlug(path: string): string | null {
   if (!path) return null;
 
   const cleaned = path.replace(/^\//, "").toLowerCase();
 
   // Direct slug matches
   const knownSlugs = [
-    "nordvpn",
-    "surfshark",
-    "expressvpn",
-    "cyberghost",
-    "protonvpn",
-    "private-internet-access",
-    "mullvad",
-    "ipvanish",
-    "tunnelbear",
-    "windscribe",
-    "purevpn",
-    "atlasvpn",
-    "hotspotshield",
-    "strongvpn",
-    "vyprvpn",
-    "privatevpn",
-    "torguard",
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "replit-agent",
+    "devin",
+    "amazon-q-developer",
+    "n8n-ai",
+    "flowise",
+    "relevance-ai",
+    "make-ai",
+    "zapier-central",
+    "crewai",
+    "autogen",
+    "langgraph",
+    "agentgpt",
+    "salesforce-agentforce",
+    "microsoft-copilot-studio",
+    "google-vertex-ai-agent-builder",
+    "intercom-fin",
+    "zendesk-ai",
+    "ada-ai",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "perplexity",
   ];
 
   for (const slug of knownSlugs) {
     if (cleaned === slug || cleaned.startsWith(`${slug}/`) || cleaned.startsWith(`${slug}-`)) {
       return slug;
     }
-  }
-
-  // Handle "pia" shorthand
-  if (cleaned === "pia" || cleaned.startsWith("pia/")) {
-    return "private-internet-access";
   }
 
   return null;

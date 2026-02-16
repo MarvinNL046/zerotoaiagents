@@ -18,14 +18,14 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Contact Us - ZeroToVPN",
+    title: "Contact Us - ZeroToAIAgents",
     description:
-      "Get in touch with the ZeroToVPN team. Questions about VPNs, feedback on our reviews, or business inquiries - we're here to help.",
+      "Get in touch with the ZeroToAIAgents team. Questions about AI agents, feedback on our reviews, or business inquiries - we're here to help.",
     robots: {
       index: true,
       follow: true,
@@ -72,10 +72,10 @@ export default async function ContactPage({ params }: Props) {
                   Questions about our reviews, recommendations, or anything else?
                 </p>
                 <a
-                  href="mailto:hello@zerotovpn.com"
+                  href="mailto:hello@zerotoaiagents.com"
                   className="text-primary hover:underline font-medium"
                 >
-                  hello@zerotovpn.com
+                  hello@zerotoaiagents.com
                 </a>
               </div>
 
@@ -89,10 +89,10 @@ export default async function ContactPage({ params }: Props) {
                   Questions about your data or exercising your privacy rights.
                 </p>
                 <a
-                  href="mailto:hello@zerotovpn.com"
+                  href="mailto:hello@zerotoaiagents.com"
                   className="text-primary hover:underline font-medium"
                 >
-                  hello@zerotovpn.com
+                  hello@zerotoaiagents.com
                 </a>
               </div>
 
@@ -106,10 +106,10 @@ export default async function ContactPage({ params }: Props) {
                   Partnership opportunities or media inquiries.
                 </p>
                 <a
-                  href="mailto:hello@zerotovpn.com"
+                  href="mailto:hello@zerotoaiagents.com"
                   className="text-primary hover:underline font-medium"
                 >
-                  hello@zerotovpn.com
+                  hello@zerotoaiagents.com
                 </a>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default async function ContactPage({ params }: Props) {
                 >
                   <option value="">Select a topic...</option>
                   <option value="general">General Question</option>
-                  <option value="vpn-help">VPN Recommendation Help</option>
+                  <option value="ai-agent-help">AI Agent Recommendation Help</option>
                   <option value="review-feedback">Review Feedback</option>
                   <option value="technical">Technical Issue</option>
                   <option value="privacy">Privacy Request</option>
@@ -208,7 +208,7 @@ export default async function ContactPage({ params }: Props) {
                   <Link href="/privacy-policy" className="text-primary hover:underline">
                     Privacy Policy
                   </Link>{" "}
-                  and consent to ZeroToVPN storing my information to respond to my
+                  and consent to ZeroToAIAgents storing my information to respond to my
                   inquiry. <span className="text-red-500">*</span>
                 </label>
               </div>
@@ -243,15 +243,15 @@ export default async function ContactPage({ params }: Props) {
                   <HelpCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold mb-1">
-                      Which VPN should I choose?
+                      Which AI Agent should I choose?
                     </h3>
                     <p className="text-sm text-muted-foreground">
                       Check our{" "}
                       <Link
-                        href="/best/best-vpn"
+                        href="/best/coding-agents"
                         className="text-primary hover:underline"
                       >
-                        Best VPNs of 2026
+                        Best AI Agents of 2026
                       </Link>{" "}
                       guide for personalized recommendations based on your needs.
                     </p>
@@ -314,7 +314,7 @@ export default async function ContactPage({ params }: Props) {
                         href="/reviews"
                         className="text-primary hover:underline"
                       >
-                        VPN review page
+                        AI agent review page
                       </Link>{" "}
                       and scroll to the reviews section to share your experience.
                     </p>

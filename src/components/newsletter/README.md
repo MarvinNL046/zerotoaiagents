@@ -1,6 +1,6 @@
 # Newsletter Signup System
 
-Complete newsletter signup system for ZeroToVPN with multiple touchpoints and GDPR compliance.
+Complete newsletter signup system for ZeroToAIAgents with multiple touchpoints and GDPR compliance.
 
 ## Components
 

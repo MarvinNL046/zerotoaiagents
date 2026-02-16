@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AffiliateButton } from "@/components/vpn/affiliate-button";
+import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { CountdownTimer } from "@/components/ui/countdown-timer";
 import {
@@ -20,33 +20,33 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles: Record<string, string> = {
-    en: "VPN Deals & Coupons 2026: Save Up to 87% | ZeroToVPN",
-    nl: "VPN Deals & Kortingscodes 2026: Bespaar tot 87% | ZeroToVPN",
-    de: "VPN-Angebote & Gutscheine 2026: Sparen Sie bis zu 87% | ZeroToVPN",
-    es: "Ofertas y Cupones VPN 2026: Ahorra hasta 87% | ZeroToVPN",
-    fr: "Offres VPN & Coupons 2026: Économisez jusqu'à 87% | ZeroToVPN",
-    zh: "VPN优惠与折扣码2026：节省高达87% | ZeroToVPN",
-    ja: "VPNセール＆クーポン2026：最大87％オフ | ZeroToVPN",
-    ko: "VPN 할인 및 쿠폰 2026: 최대 87% 절약 | ZeroToVPN",
-    th: "ดีล VPN และคูปอง 2026: ประหยัดสูงสุด 87% | ZeroToVPN",
+    en: "AI Agent Deals & Coupons 2026: Save Up to 50% | ZeroToAIAgents",
+    nl: "AI Agent Deals & Kortingscodes 2026: Bespaar tot 50% | ZeroToAIAgents",
+    de: "KI-Agent-Angebote & Gutscheine 2026: Sparen Sie bis zu 50% | ZeroToAIAgents",
+    es: "Ofertas y Cupones de Agentes IA 2026: Ahorra hasta 50% | ZeroToAIAgents",
+    fr: "Offres Agents IA & Coupons 2026: Économisez jusqu'à 50% | ZeroToAIAgents",
+    zh: "AI代理优惠与折扣码2026：节省高达50% | ZeroToAIAgents",
+    ja: "AIエージェントセール＆クーポン2026：最大50％オフ | ZeroToAIAgents",
+    ko: "AI 에이전트 할인 및 쿠폰 2026: 최대 50% 절약 | ZeroToAIAgents",
+    th: "ดีล AI Agent และคูปอง 2026: ประหยัดสูงสุด 50% | ZeroToAIAgents",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Exclusive VPN deals and coupons for 2026. Save up to 87% on premium VPN services. Limited-time offers with money-back guarantees.",
-    nl: "Exclusieve VPN-deals en kortingscodes voor 2026. Bespaar tot 87% op premium VPN-diensten. Tijdelijke aanbiedingen met geld-terug-garantie.",
-    de: "Exklusive VPN-Angebote und Gutscheine für 2026. Sparen Sie bis zu 87% bei Premium-VPN-Diensten. Zeitlich begrenzte Angebote mit Geld-zurück-Garantie.",
-    es: "Ofertas y cupones VPN exclusivos para 2026. Ahorra hasta 87% en servicios VPN premium. Ofertas limitadas con garantía de devolución.",
-    fr: "Offres VPN exclusives et coupons pour 2026. Économisez jusqu'à 87% sur les services VPN premium. Offres limitées avec garantie satisfait ou remboursé.",
-    zh: "2026年独家VPN优惠和折扣码。高级VPN服务节省高达87%。限时优惠，支持退款保证。",
-    ja: "2026年限定VPNセールとクーポン。プレミアムVPNサービスが最大87％オフ。返金保証付きの期間限定オファー。",
-    ko: "2026년 독점 VPN 할인 및 쿠폰. 프리미엄 VPN 서비스에서 최대 87% 절약. 환불 보장이 있는 기간 한정 혜택.",
-    th: "ดีล VPN และคูปองพิเศษสำหรับปี 2026 ประหยัดสูงสุด 87% สำหรับบริการ VPN พรีเมียม ข้อเสนอจำกัดเวลาพร้อมการรับประกันคืนเงิน",
+    en: "Exclusive AI agent deals and coupons for 2026. Save up to 50% on premium AI automation platforms. Limited-time offers with free trials.",
+    nl: "Exclusieve AI agent-deals en kortingscodes voor 2026. Bespaar tot 50% op premium AI-automatiseringsplatforms. Tijdelijke aanbiedingen met gratis proefversies.",
+    de: "Exklusive KI-Agent-Angebote und Gutscheine für 2026. Sparen Sie bis zu 50% bei Premium-KI-Automatisierungsplattformen. Zeitlich begrenzte Angebote mit kostenlosen Testversionen.",
+    es: "Ofertas y cupones de agentes IA exclusivos para 2026. Ahorra hasta 50% en plataformas de automatización IA premium. Ofertas limitadas con pruebas gratuitas.",
+    fr: "Offres exclusives d'agents IA et coupons pour 2026. Économisez jusqu'à 50% sur les plateformes d'automatisation IA premium. Offres limitées avec essais gratuits.",
+    zh: "2026年独家AI代理优惠和折扣码。高级AI自动化平台节省高达50%。限时优惠，支持免费试用。",
+    ja: "2026年限定AIエージェントセールとクーポン。プレミアムAI自動化プラットフォームが最大50％オフ。無料トライアル付きの期間限定オファー。",
+    ko: "2026년 독점 AI 에이전트 할인 및 쿠폰. 프리미엄 AI 자동화 플랫폼에서 최대 50% 절약. 무료 체험이 있는 기간 한정 혜택.",
+    th: "ดีล AI Agent และคูปองพิเศษสำหรับปี 2026 ประหยัดสูงสุด 50% สำหรับแพลตฟอร์มอัตโนมัติ AI พรีเมียม ข้อเสนอจำกัดเวลาพร้อมทดลองใช้ฟรี",
   };
 
   return {
@@ -66,8 +66,8 @@ function DealsSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SpecialAnnouncement",
-    name: "VPN Deals & Coupons 2026",
-    description: "Exclusive VPN deals and coupons with savings up to 87%",
+    name: "AI Agent Deals & Coupons 2026",
+    description: "Exclusive AI agent deals and coupons with savings up to 50%",
     datePosted: "2026-11-29",
     expires: "2026-12-31",
   };
@@ -92,7 +92,7 @@ const deals = [
     total: 53.73,
     features: ["Unlimited devices", "Ad blocker", "24/7 support"],
     coupon: "SHARKGIFT",
-    affiliateUrl: "https://go.zerotovpn.com/surfshark",
+    affiliateUrl: "https://go.zerotoaiagents.com/surfshark",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
   {
@@ -106,7 +106,7 @@ const deals = [
     total: 80.73,
     features: ["10 devices", "Threat Protection", "Dark Web Monitor"],
     coupon: null,
-    affiliateUrl: "https://go.zerotovpn.com/nordvpn",
+    affiliateUrl: "https://go.zerotoaiagents.com/nordvpn",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
   {
@@ -120,7 +120,7 @@ const deals = [
     total: 88,
     features: ["12 devices", "Password manager", "Router app"],
     coupon: null,
-    affiliateUrl: "https://go.zerotovpn.com/expressvpn",
+    affiliateUrl: "https://go.zerotoaiagents.com/expressvpn",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
   {
@@ -134,7 +134,7 @@ const deals = [
     total: 56.94,
     features: ["7 devices", "Dedicated streaming servers", "45-day guarantee"],
     coupon: null,
-    affiliateUrl: "https://go.zerotovpn.com/cyberghost",
+    affiliateUrl: "https://go.zerotoaiagents.com/cyberghost",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
 ];
@@ -1186,8 +1186,8 @@ function DealCard({
 
         {/* CTA Button */}
         <AffiliateButton
-          vpnId={deal.name.toLowerCase().replace(/\s+/g, '-')}
-          vpnName={deal.name}
+          agentId={deal.name.toLowerCase().replace(/\s+/g, '-')}
+          agentName={deal.name}
           affiliateUrl={deal.affiliateUrl}
           className="w-full text-lg py-6"
           size="lg"

@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     const {
-      vpnSlug,
+      agentSlug,
       rating,
       title,
       content,
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     } = body;
 
     // Validation
-    if (!vpnSlug || !rating || !title || !content || !authorName || !authorEmail) {
+    if (!agentSlug || !rating || !title || !content || !authorName || !authorEmail) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
         created_at, updated_at
       ) VALUES (
         gen_random_uuid()::text,
-        ${vpnSlug},
+        ${agentSlug},
         ${authorName.slice(0, 50)},
         ${authorEmail.toLowerCase()},
         ${rating},
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
 
     console.log("New review submitted:", {
       id: result[0]?.id,
-      vpnSlug,
+      agentSlug,
       rating,
       authorName,
     });
@@ -113,14 +113,14 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const vpnSlug = searchParams.get("vpnSlug");
+    const agentSlug = searchParams.get("agentSlug");
     const page = parseInt(searchParams.get("page") || "1", 10);
     const limit = parseInt(searchParams.get("limit") || "10", 10);
 
     // Public access - only return approved reviews
-    if (!vpnSlug) {
+    if (!agentSlug) {
       return NextResponse.json(
-        { error: "vpnSlug parameter is required" },
+        { error: "agentSlug parameter is required" },
         { status: 400 }
       );
     }
@@ -142,14 +142,14 @@ export async function GET(request: NextRequest) {
              verified, featured, helpful_count, unhelpful_count,
              locale, created_at
       FROM "UserReview"
-      WHERE vpn_slug = ${vpnSlug} AND approved = true
+      WHERE vpn_slug = ${agentSlug} AND approved = true
       ORDER BY created_at DESC
       LIMIT ${limit} OFFSET ${offset}
     `;
 
     const countResult = await sql`
       SELECT COUNT(*) as total FROM "UserReview"
-      WHERE vpn_slug = ${vpnSlug} AND approved = true
+      WHERE vpn_slug = ${agentSlug} AND approved = true
     `;
 
     const total = Number(countResult[0]?.total || 0);

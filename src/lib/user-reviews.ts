@@ -2,7 +2,7 @@
 
 export interface UserReview {
   id: string;
-  vpnSlug: string;
+  agentSlug: string;
   authorName: string;
   authorEmail: string;
   authorCountry?: string;
@@ -25,7 +25,7 @@ export interface UserReview {
 }
 
 export interface ReviewFormData {
-  vpnSlug: string;
+  agentSlug: string;
   authorName: string;
   authorEmail: string;
   authorCountry?: string;
@@ -44,7 +44,7 @@ export interface ReviewFormData {
 export const mockUserReviews: UserReview[] = [
   {
     id: "1",
-    vpnSlug: "nordvpn",
+    agentSlug: "nordvpn",
     authorName: "Michael T.",
     authorEmail: "michael@example.com",
     authorCountry: "US",
@@ -67,7 +67,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "2",
-    vpnSlug: "nordvpn",
+    agentSlug: "nordvpn",
     authorName: "Emma S.",
     authorEmail: "emma@example.com",
     authorCountry: "GB",
@@ -89,7 +89,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "3",
-    vpnSlug: "nordvpn",
+    agentSlug: "nordvpn",
     authorName: "Jan de V.",
     authorEmail: "jan@example.com",
     authorCountry: "NL",
@@ -112,7 +112,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "4",
-    vpnSlug: "surfshark",
+    agentSlug: "surfshark",
     authorName: "David L.",
     authorEmail: "david@example.com",
     authorCountry: "DE",
@@ -134,7 +134,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "5",
-    vpnSlug: "surfshark",
+    agentSlug: "surfshark",
     authorName: "Sophie M.",
     authorEmail: "sophie@example.com",
     authorCountry: "FR",
@@ -157,7 +157,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "6",
-    vpnSlug: "expressvpn",
+    agentSlug: "expressvpn",
     authorName: "James R.",
     authorEmail: "james@example.com",
     authorCountry: "AU",
@@ -179,7 +179,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "7",
-    vpnSlug: "cyberghost",
+    agentSlug: "cyberghost",
     authorName: "Anna K.",
     authorEmail: "anna@example.com",
     authorCountry: "PL",
@@ -202,7 +202,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "8",
-    vpnSlug: "protonvpn",
+    agentSlug: "protonvpn",
     authorName: "Marcus W.",
     authorEmail: "marcus@example.com",
     authorCountry: "CH",
@@ -224,7 +224,7 @@ export const mockUserReviews: UserReview[] = [
   },
   {
     id: "9",
-    vpnSlug: "private-internet-access",
+    agentSlug: "private-internet-access",
     authorName: "Chris B.",
     authorEmail: "chris@example.com",
     authorCountry: "CA",
@@ -248,16 +248,16 @@ export const mockUserReviews: UserReview[] = [
 ];
 
 // Helper functions to work with mock data (will be replaced with database queries)
-export function getReviewsByVpnSlug(vpnSlug: string, locale?: string): UserReview[] {
+export function getReviewsByVpnSlug(agentSlug: string, locale?: string): UserReview[] {
   return mockUserReviews
-    .filter((review) => review.vpnSlug === vpnSlug && review.approved)
+    .filter((review) => review.agentSlug === agentSlug && review.approved)
     .filter((review) => !locale || review.locale === locale || review.locale === "en")
     .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 }
 
-export function getAverageUserRating(vpnSlug: string): { average: number; count: number } {
+export function getAverageUserRating(agentSlug: string): { average: number; count: number } {
   const reviews = mockUserReviews.filter(
-    (review) => review.vpnSlug === vpnSlug && review.approved
+    (review) => review.agentSlug === agentSlug && review.approved
   );
 
   if (reviews.length === 0) {
@@ -271,9 +271,9 @@ export function getAverageUserRating(vpnSlug: string): { average: number; count:
   };
 }
 
-export function getFeaturedReviews(vpnSlug: string): UserReview[] {
+export function getFeaturedReviews(agentSlug: string): UserReview[] {
   return mockUserReviews
-    .filter((review) => review.vpnSlug === vpnSlug && review.approved && review.featured)
+    .filter((review) => review.agentSlug === agentSlug && review.approved && review.featured)
     .sort((a, b) => b.helpfulCount - a.helpfulCount);
 }
 

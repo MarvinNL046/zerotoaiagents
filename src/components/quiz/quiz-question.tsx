@@ -73,10 +73,10 @@ export function QuizQuestion({
           className="w-24"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          {t("navigation.back")}
+          Back
         </Button>
         <Button onClick={onNext} disabled={!canProceed} className="w-32">
-          {isLastQuestion ? t("navigation.showResults") : t("navigation.next")}
+          {isLastQuestion ? "Show Results" : "Next"}
           {!isLastQuestion && <ArrowRight className="ml-2 h-4 w-4" />}
         </Button>
       </div>

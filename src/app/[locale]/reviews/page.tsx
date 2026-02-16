@@ -1,15 +1,15 @@
-import { setRequestLocale } from "next-intl/server";
-import { VpnCard } from "@/components/vpn/vpn-card";
-import { getAllVpns } from "@/lib/vpn-data-layer";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { aiAgentProviders, type AgentCategory } from "@/lib/ai-agent-data";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema, ComparisonTableSchema } from "@/components/structured-data";
 import type { Metadata } from "next";
+import { ReviewsPageClient } from "./reviews-client";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -24,27 +24,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   const titles: Record<string, string> = {
-    en: "VPN Reviews 2026 - Expert Analysis & Ratings",
-    nl: "VPN Reviews 2026 - Expert Analyse & Beoordelingen",
-    de: "VPN Tests 2026 - Expertenanalyse & Bewertungen",
-    es: "Reseñas de VPN 2026 - Análisis de Expertos",
-    fr: "Avis VPN 2026 - Analyse d'Experts",
-    zh: "VPN 评测 2026 - 专家分析与评分",
-    ja: "VPN レビュー 2026 - 専門家分析",
-    ko: "VPN 리뷰 2026 - 전문가 분석 및 평가",
-    th: "รีวิว VPN 2026 - วิเคราะห์โดยผู้เชี่ยวชาญ",
+    en: "AI Agent Reviews 2026 - Expert Analysis & Ratings",
+    nl: "AI Agent Reviews 2026 - Expert Analyse & Beoordelingen",
+    de: "AI Agent Tests 2026 - Expertenanalyse & Bewertungen",
+    es: "Reseñas de Agentes de IA 2026 - Análisis de Expertos",
+    fr: "Avis sur les Agents IA 2026 - Analyse d'Experts",
+    zh: "AI 代理评测 2026 - 专家分析与评分",
+    ja: "AI エージェントレビュー 2026 - 専門家分析",
+    ko: "AI 에이전트 리뷰 2026 - 전문가 분석 및 평가",
+    th: "รีวิว AI Agent 2026 - วิเคราะห์โดยผู้เชี่ยวชาญ",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Read our in-depth VPN reviews 2026. We test NordVPN, Surfshark, ExpressVPN & more for speed, security, streaming, and value. Find your perfect VPN.",
-    nl: "Lees onze uitgebreide VPN reviews 2026. We testen NordVPN, Surfshark, ExpressVPN en meer op snelheid, beveiliging, streaming en waarde.",
-    de: "Lesen Sie unsere ausführlichen VPN-Tests 2026. Wir testen NordVPN, Surfshark, ExpressVPN und mehr auf Geschwindigkeit, Sicherheit und Streaming.",
-    es: "Lee nuestras reseñas detalladas de VPN 2026. Probamos NordVPN, Surfshark, ExpressVPN y más en velocidad, seguridad y streaming.",
-    fr: "Lisez nos avis VPN approfondis 2026. Nous testons NordVPN, Surfshark, ExpressVPN et plus pour la vitesse, sécurité et streaming.",
-    zh: "阅读我们的深度VPN评测2026。我们测试NordVPN、Surfshark、ExpressVPN等的速度、安全性和流媒体功能。",
-    ja: "2026年の詳細なVPNレビューをご覧ください。NordVPN、Surfshark、ExpressVPNなどの速度、セキュリティ、ストリーミングをテスト。",
-    ko: "2026년 심층 VPN 리뷰를 읽어보세요. NordVPN, Surfshark, ExpressVPN 등의 속도, 보안, 스트리밍을 테스트합니다.",
-    th: "อ่านรีวิว VPN เชิงลึกของเรา 2026 เราทดสอบ NordVPN, Surfshark, ExpressVPN และอื่นๆ ด้านความเร็ว ความปลอดภัย และสตรีมมิ่ง",
+    en: "Read our in-depth AI agent reviews 2026. We test Claude Code, Cursor, ChatGPT, n8n & more for coding, automation, and productivity. Find your perfect AI agent.",
+    nl: "Lees onze uitgebreide AI agent reviews 2026. We testen Claude Code, Cursor, ChatGPT, n8n en meer op codering, automatisering en productiviteit.",
+    de: "Lesen Sie unsere ausführlichen KI-Agenten-Tests 2026. Wir testen Claude Code, Cursor, ChatGPT, n8n und mehr auf Codierung, Automatisierung und Produktivität.",
+    es: "Lee nuestras reseñas detalladas de agentes de IA 2026. Probamos Claude Code, Cursor, ChatGPT, n8n y más para codificación, automatización y productividad.",
+    fr: "Lisez nos avis approfondis sur les agents IA 2026. Nous testons Claude Code, Cursor, ChatGPT, n8n et plus pour le codage, l'automatisation et la productivité.",
+    zh: "阅读我们的深度AI代理评测2026。我们测试Claude Code、Cursor、ChatGPT、n8n等的编码、自动化和生产力功能。",
+    ja: "2026年の详細なAIエージェントレビューをご覧ください。Claude Code、Cursor、ChatGPT、n8nなどのコーディング、自動化、生産性をテスト。",
+    ko: "2026년 심층 AI 에이전트 리뷰를 읽어보세요. Claude Code, Cursor, ChatGPT, n8n 등의 코딩, 자동화, 생산성을 테스트합니다.",
+    th: "อ่านรีวิว AI agent เชิงลึกของเรา 2026 เราทดสอบ Claude Code, Cursor, ChatGPT, n8n และอื่นๆ สำหรับการเขียนโค้ด ระบบอัตโนมัติ และประสิทธิภาพ",
   };
 
   return {
@@ -52,14 +52,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
     keywords: [
-      "VPN reviews",
-      "VPN comparison",
-      "best VPN 2026",
-      "NordVPN review",
-      "Surfshark review",
-      "ExpressVPN review",
-      "VPN test",
-      "VPN ratings",
+      "AI agent reviews",
+      "AI agent comparison",
+      "best AI agents 2026",
+      "Claude Code review",
+      "Cursor review",
+      "ChatGPT review",
+      "AI agent test",
+      "AI agent ratings",
     ],
     alternates: {
       canonical: canonicalUrl,
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: titles[locale] || titles.en,
       description: descriptions[locale] || descriptions.en,
       url: canonicalUrl,
-      siteName: "ZeroToVPN",
+      siteName: "ZeroToAIAgents",
       locale: locale,
       type: "website",
     },
@@ -85,7 +85,7 @@ export default async function ReviewsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const vpns = await getAllVpns();
+  const agents = aiAgentProviders;
   const prefix = locale === "en" ? "" : `/${locale}`;
 
   const breadcrumbs = [
@@ -96,26 +96,8 @@ export default async function ReviewsPage({ params }: Props) {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
-      <ComparisonTableSchema vpns={vpns} />
-      <div className="py-12">
-        <div className="container">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">VPN Reviews</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Honest, in-depth reviews of the most popular VPN services. Each VPN
-              is tested for speed, security, streaming, and overall value.
-            </p>
-          </div>
-
-          {/* VPN Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {vpns.map((vpn, index) => (
-              <VpnCard key={vpn.id} vpn={vpn} rank={index + 1} locale={locale} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <ComparisonTableSchema agents={agents} />
+      <ReviewsPageClient agents={agents} locale={locale} />
     </>
   );
 }

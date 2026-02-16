@@ -25,13 +25,13 @@ export default async function ReviewModerationPage({
   // Fetch reviews from database
   const { reviews, pagination } = await getAdminReviews({
     approved: approvedFilter,
-    vpnSlug: filterVpn !== "all" ? filterVpn : undefined,
+    agentSlug: filterVpn !== "all" ? filterVpn : undefined,
     page: 1,
     limit: 50,
   });
 
   // Get unique VPN slugs for filter
-  const vpnSlugs = [...new Set(reviews.map((r) => r.vpnSlug))];
+  const agentSlugs = [...new Set(reviews.map((r) => r.agentSlug))];
 
   // Count pending reviews
   const { reviews: pendingReviews } = await getAdminReviews({
@@ -61,7 +61,7 @@ export default async function ReviewModerationPage({
 
       {/* Filters */}
       <ReviewFilters
-        vpnSlugs={vpnSlugs}
+        agentSlugs={agentSlugs}
         currentStatus={filterStatus}
         currentVpn={filterVpn}
       />

@@ -10,8 +10,8 @@ import {
 } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
-// VPN Providers - core data for comparisons and reviews
-export const vpnProviders = pgTable("VpnProvider", {
+// AI Agent Providers - core data for comparisons and reviews
+export const aiAgentProviders = pgTable("AiAgentProvider", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   name: text("name").notNull().unique(),
   slug: text("slug").notNull().unique(),
@@ -24,42 +24,40 @@ export const vpnProviders = pgTable("VpnProvider", {
   affiliateUrl: text("affiliateUrl").notNull(),
 
   // Pricing
-  priceMonthly: decimal("priceMonthly", { precision: 10, scale: 2 }).notNull(),
-  priceYearly: decimal("priceYearly", { precision: 10, scale: 2 }).notNull(),
-  priceTwoYear: decimal("priceTwoYear", { precision: 10, scale: 2 }),
-  moneyBackDays: integer("moneyBackDays").default(30).notNull(),
-  freeTier: boolean("freeTier").default(false).notNull(),
+  monthlyPrice: decimal("monthlyPrice", { precision: 10, scale: 2 }).notNull(),
+  annualPrice: decimal("annualPrice", { precision: 10, scale: 2 }).notNull(),
+  hasFreeTier: boolean("hasFreeTier").default(false).notNull(),
+  freeTierLimits: text("freeTierLimits"),
 
-  // Features
-  servers: integer("servers").notNull(),
-  countries: integer("countries").notNull(),
-  maxDevices: integer("maxDevices").notNull(),
-  speedScore: integer("speedScore").notNull(),
-  securityScore: integer("securityScore").notNull(),
-  streamingScore: integer("streamingScore").notNull(),
+  // Classification
+  category: text("category").notNull(),
+  subcategory: text("subcategory"),
 
-  // Protocols & Security
-  protocols: text("protocols").array(),
-  encryption: text("encryption").default("AES-256").notNull(),
-  killSwitch: boolean("killSwitch").default(true).notNull(),
-  noLogs: boolean("noLogs").default(true).notNull(),
+  // Capabilities
+  modelsSupported: text("modelsSupported").array(),
+  integrations: text("integrations").array(),
+  maxUsers: text("maxUsers").notNull(),
+  apiAccess: boolean("apiAccess").default(false).notNull(),
 
-  // Streaming
-  netflixSupport: boolean("netflixSupport").default(false).notNull(),
-  torrentSupport: boolean("torrentSupport").default(false).notNull(),
-
-  // Ratings
+  // Ratings (1-5 scale, one decimal)
   overallRating: decimal("overallRating", { precision: 2, scale: 1 }).notNull(),
-  editorChoice: boolean("editorChoice").default(false).notNull(),
+  easeOfUse: decimal("easeOfUse", { precision: 2, scale: 1 }).notNull(),
+  performance: decimal("performance", { precision: 2, scale: 1 }).notNull(),
+  valueForMoney: decimal("valueForMoney", { precision: 2, scale: 1 }).notNull(),
 
   // Content
   shortDescription: text("shortDescription"),
   pros: text("pros").array(),
   cons: text("cons").array(),
+  features: text("features").array(),
+  bestFor: text("bestFor"),
 
-  // Meta
+  // Display
+  editorChoice: boolean("editorChoice").default(false).notNull(),
   featured: boolean("featured").default(false).notNull(),
   sortOrder: integer("sortOrder").default(0).notNull(),
+
+  // Meta
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
@@ -69,9 +67,9 @@ export const reviews = pgTable(
   "Review",
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-    vpnId: text("vpnId")
+    agentId: text("agentId")
       .notNull()
-      .references(() => vpnProviders.id, { onDelete: "cascade" }),
+      .references(() => aiAgentProviders.id, { onDelete: "cascade" }),
 
     language: text("language").default("en").notNull(),
     title: text("title").notNull(),
@@ -90,7 +88,7 @@ export const reviews = pgTable(
     updatedAt: timestamp("updatedAt").defaultNow().notNull(),
   },
   (table) => [
-    unique().on(table.vpnId, table.language),
+    unique().on(table.agentId, table.language),
     index("Review_language_published_idx").on(table.language, table.published),
   ]
 );
@@ -100,9 +98,9 @@ export const clicks = pgTable(
   "Click",
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-    vpnId: text("vpnId")
+    agentId: text("agentId")
       .notNull()
-      .references(() => vpnProviders.id, { onDelete: "cascade" }),
+      .references(() => aiAgentProviders.id, { onDelete: "cascade" }),
 
     country: text("country"),
     city: text("city"),
@@ -113,7 +111,7 @@ export const clicks = pgTable(
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
   (table) => [
-    index("Click_vpnId_createdAt_idx").on(table.vpnId, table.createdAt),
+    index("Click_agentId_createdAt_idx").on(table.agentId, table.createdAt),
     index("Click_country_idx").on(table.country),
   ]
 );
@@ -123,7 +121,7 @@ export const userReviews = pgTable(
   "UserReview",
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-    vpnSlug: text("vpnSlug").notNull(),
+    agentSlug: text("agentSlug").notNull(),
 
     // Reviewer info
     authorName: text("authorName").notNull(),
@@ -165,9 +163,9 @@ export const userReviews = pgTable(
     updatedAt: timestamp("updatedAt").defaultNow().notNull(),
   },
   (table) => [
-    index("UserReview_vpnSlug_approved_idx").on(table.vpnSlug, table.approved),
+    index("UserReview_agentSlug_approved_idx").on(table.agentSlug, table.approved),
     index("UserReview_newsletter_idx").on(table.newsletterConsent, table.authorEmail),
-    index("UserReview_vpnSlug_rating_idx").on(table.vpnSlug, table.rating),
+    index("UserReview_agentSlug_rating_idx").on(table.agentSlug, table.rating),
     index("UserReview_createdAt_idx").on(table.createdAt),
   ]
 );
@@ -216,33 +214,33 @@ export const pages = pgTable(
 );
 
 // Relations
-export const vpnProviderRelations = relations(vpnProviders, ({ many }) => ({
+export const aiAgentProviderRelations = relations(aiAgentProviders, ({ many }) => ({
   reviews: many(reviews),
   clicks: many(clicks),
 }));
 
 export const reviewRelations = relations(reviews, ({ one }) => ({
-  vpn: one(vpnProviders, {
-    fields: [reviews.vpnId],
-    references: [vpnProviders.id],
+  agent: one(aiAgentProviders, {
+    fields: [reviews.agentId],
+    references: [aiAgentProviders.id],
   }),
 }));
 
 export const clickRelations = relations(clicks, ({ one }) => ({
-  vpn: one(vpnProviders, {
-    fields: [clicks.vpnId],
-    references: [vpnProviders.id],
+  agent: one(aiAgentProviders, {
+    fields: [clicks.agentId],
+    references: [aiAgentProviders.id],
   }),
 }));
 
-// Coupons - discount codes for VPN deals
+// Coupons - discount codes for AI agent deals
 export const coupons = pgTable(
   "Coupon",
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-    vpnSlug: text("vpnSlug").notNull(),
+    agentSlug: text("agentSlug").notNull(),
     code: text("code").notNull(),
-    discount: text("discount").notNull(), // e.g., "83% OFF" or "3 months free"
+    discount: text("discount").notNull(), // e.g., "50% OFF" or "2 months free"
     description: text("description"),
     expiresAt: timestamp("expiresAt"),
     isVerified: boolean("isVerified").default(true).notNull(),
@@ -250,7 +248,7 @@ export const coupons = pgTable(
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
   (table) => [
-    index("Coupon_vpnSlug_idx").on(table.vpnSlug),
+    index("Coupon_agentSlug_idx").on(table.agentSlug),
     index("Coupon_expiresAt_idx").on(table.expiresAt),
   ]
 );
@@ -260,10 +258,10 @@ export const scrapeJobs = pgTable(
   "ScrapeJob",
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-    type: text("type").notNull(), // "vpn-data" | "pricing" | "news"
+    type: text("type").notNull(), // "agent-data" | "pricing" | "news"
     status: text("status").notNull().default("pending"), // "pending" | "running" | "completed" | "failed"
     source: text("source").notNull(), // URL that was scraped
-    vpnSlug: text("vpnSlug"),
+    agentSlug: text("agentSlug"),
     result: text("result"), // JSON string with scraped data
     error: text("error"),
     startedAt: timestamp("startedAt").notNull(),
@@ -288,9 +286,9 @@ export const blogPosts = pgTable(
     content: text("content").notNull(), // Full HTML/markdown content
     metaTitle: text("metaTitle"),
     metaDescription: text("metaDescription"),
-    category: text("category").notNull(), // "news" | "guide" | "comparison" | "deal"
+    category: text("category").notNull(), // "news" | "guide" | "comparison" | "tutorial"
     tags: text("tags").array(),
-    aiModel: text("aiModel"), // "claude-haiku" | "gpt-5-nano"
+    aiModel: text("aiModel"), // "claude-haiku" | "gpt-4o-mini"
     aiPrompt: text("aiPrompt"),
     featuredImage: text("featuredImage"), // data URL or external URL
     sourceData: text("sourceData"), // JSON - scrape data used as input
@@ -314,12 +312,12 @@ export const contentQueue = pgTable(
   "ContentQueue",
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-    type: text("type").notNull(), // "blog-post" | "vpn-update" | "comparison"
+    type: text("type").notNull(), // "blog-post" | "agent-update" | "comparison"
     status: text("status").notNull().default("pending"), // "pending" | "processing" | "completed" | "failed"
     priority: integer("priority").default(0).notNull(),
     input: text("input").notNull(), // JSON - topic, keywords, scrape data
     output: text("output"), // JSON result
-    aiModel: text("aiModel").notNull(), // "claude-haiku" | "gpt-5-nano"
+    aiModel: text("aiModel").notNull(), // "claude-haiku" | "gpt-4o-mini"
     error: text("error"),
     attempts: integer("attempts").default(0).notNull(),
     maxAttempts: integer("maxAttempts").default(3).notNull(),
@@ -337,22 +335,22 @@ export const affiliateLinks = pgTable(
   {
     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
     shortId: text("shortId").notNull(),
-    path: text("path").notNull(), // e.g. "nordvpn"
+    path: text("path").notNull(), // e.g. "claude-code"
     originalUrl: text("originalUrl").notNull(),
-    vpnSlug: text("vpnSlug"),
+    agentSlug: text("agentSlug"),
     clicks: integer("clicks").default(0).notNull(),
     lastSyncedAt: timestamp("lastSyncedAt").notNull(),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
   (table) => [
     index("AffiliateLink_path_idx").on(table.path),
-    index("AffiliateLink_vpnSlug_idx").on(table.vpnSlug),
+    index("AffiliateLink_agentSlug_idx").on(table.agentSlug),
   ]
 );
 
 // Type exports
-export type VpnProvider = typeof vpnProviders.$inferSelect;
-export type NewVpnProvider = typeof vpnProviders.$inferInsert;
+export type AiAgentProvider = typeof aiAgentProviders.$inferSelect;
+export type NewAiAgentProvider = typeof aiAgentProviders.$inferInsert;
 export type Review = typeof reviews.$inferSelect;
 export type NewReview = typeof reviews.$inferInsert;
 export type Click = typeof clicks.$inferSelect;

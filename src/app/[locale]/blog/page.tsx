@@ -24,7 +24,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 function formatDateLong(dateStr: string, locale: string): string {
   const date = new Date(dateStr);
@@ -56,15 +56,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles: Record<string, string> = {
-    en: "VPN Blog - News, Tips & Security Guides | ZeroToVPN",
-    nl: "VPN Blog - Nieuws, Tips & Beveiligingsgidsen | ZeroToVPN",
-    de: "VPN Blog - Neuigkeiten, Tipps & Sicherheitsleitfäden | ZeroToVPN",
-    es: "Blog VPN - Noticias, Consejos y Guías de Seguridad | ZeroToVPN",
-    fr: "Blog VPN - Actualités, Conseils et Guides de Sécurité | ZeroToVPN",
-    zh: "VPN博客 - 新闻、技巧和安全指南 | ZeroToVPN",
-    ja: "VPNブログ - ニュース、ヒント、セキュリティガイド | ZeroToVPN",
-    ko: "VPN 블로그 - 뉴스, 팁 및 보안 가이드 | ZeroToVPN",
-    th: "VPN บล็อก - ข่าว เคล็ดลับ และคู่มือความปลอดภัย | ZeroToVPN",
+    en: "VPN Blog - News, Tips & Security Guides | ZeroToAIAgents",
+    nl: "VPN Blog - Nieuws, Tips & Beveiligingsgidsen | ZeroToAIAgents",
+    de: "VPN Blog - Neuigkeiten, Tipps & Sicherheitsleitfäden | ZeroToAIAgents",
+    es: "Blog VPN - Noticias, Consejos y Guías de Seguridad | ZeroToAIAgents",
+    fr: "Blog VPN - Actualités, Conseils et Guides de Sécurité | ZeroToAIAgents",
+    zh: "VPN博客 - 新闻、技巧和安全指南 | ZeroToAIAgents",
+    ja: "VPNブログ - ニュース、ヒント、セキュリティガイド | ZeroToAIAgents",
+    ko: "VPN 블로그 - 뉴스, 팁 및 보안 가이드 | ZeroToAIAgents",
+    th: "VPN บล็อก - ข่าว เคล็ดลับ และคู่มือความปลอดภัย | ZeroToAIAgents",
   };
 
   const descriptions: Record<string, string> = {

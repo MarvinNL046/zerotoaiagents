@@ -41,7 +41,7 @@ export function HeroIllustration({ className }: HeroIllustrationProps) {
           <div className="flex-1 flex justify-center">
             <div className="px-4 py-1 bg-background rounded-md text-xs text-muted-foreground flex items-center gap-2">
               <Lock className="h-3 w-3" />
-              zerotovpn.com
+              zerotoaiagents.com
             </div>
           </div>
         </div>

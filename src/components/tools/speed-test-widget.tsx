@@ -332,7 +332,7 @@ export function SpeedTestWidget() {
 📶 Ping: ${ping} ms
 📊 Jitter: ${jitter} ms
 
-Tested on ZeroToVPN.com`;
+Tested on ZeroToAIAgents.com`;
 
     if (navigator.share) {
       navigator.share({ text }).catch(() => {});

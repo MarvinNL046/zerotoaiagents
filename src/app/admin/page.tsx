@@ -67,7 +67,7 @@ export default async function AdminDashboard() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">Welcome to the ZeroToVPN admin dashboard</p>
+        <p className="text-muted-foreground">Welcome to the ZeroToAIAgents admin dashboard</p>
       </div>
 
       {/* Stats Grid */}
@@ -113,7 +113,7 @@ export default async function AdminDashboard() {
                     <div className="flex items-center gap-2">
                       <span className="font-medium">{review.authorName}</span>
                       <span className="text-muted-foreground">reviewed</span>
-                      <span className="font-medium capitalize">{review.vpnSlug}</span>
+                      <span className="font-medium capitalize">{review.agentSlug}</span> {/* agentSlug */}
                     </div>
                     <p className="text-sm text-muted-foreground mt-1 line-clamp-1">
                       {review.title}
@@ -158,9 +158,9 @@ export default async function AdminDashboard() {
                 <Shield className="h-6 w-6 text-indigo-500" />
               </div>
               <div>
-                <h3 className="font-semibold">VPN Providers</h3>
+                <h3 className="font-semibold">AI Agents</h3>
                 <p className="text-sm text-muted-foreground">
-                  Manage VPN data
+                  Manage AI agent data
                 </p>
               </div>
             </Link>

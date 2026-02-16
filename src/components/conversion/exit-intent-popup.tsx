@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { getFeaturedVpns } from "@/lib/vpn-data";
+import { getFeaturedAgents } from "@/lib/ai-agent-data";
 
 const SESSION_KEY = "exitIntentShown";
 const PERMANENT_DISMISS_KEY = "exitIntentDismissed";
@@ -80,15 +80,15 @@ export function ExitIntentPopup() {
     setIsOpen(false);
   };
 
-  // Get the #1 featured VPN (NordVPN)
-  const featuredVpns = getFeaturedVpns();
-  const topVpn = featuredVpns[0];
+  // Get the #1 featured AI Agent
+  const featuredAgents = getFeaturedAgents();
+  const topAgent = featuredAgents[0];
 
-  if (!topVpn) return null;
+  if (!topAgent) return null;
 
   // Calculate discount percentage
-  const monthlyPrice = topVpn.priceMonthly;
-  const bestPrice = topVpn.priceTwoYear || topVpn.priceYearly;
+  const monthlyPrice = topAgent.monthlyPrice;
+  const bestPrice = topAgent.annualPrice;
   const discountPercent = Math.round(((monthlyPrice - bestPrice) / monthlyPrice) * 100);
 
   return (
@@ -106,24 +106,24 @@ export function ExitIntentPopup() {
         <Card className="border-2 border-primary/20 shadow-lg">
           <CardContent className="p-6">
             <div className="flex flex-col gap-4">
-              {/* VPN Logo and Name */}
+              {/* Agent Logo and Name */}
               <div className="flex items-center gap-4">
-                <VpnLogo name={topVpn.name} size="md" />
+                <VpnLogo name={topAgent.name} size="md" />
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">{topVpn.name}</h3>
+                  <h3 className="text-lg font-semibold">{topAgent.name}</h3>
                   <div className="flex items-center gap-1">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
                         className={`h-4 w-4 ${
-                          i < Math.floor(topVpn.overallRating)
+                          i < Math.floor(topAgent.overallRating)
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         }`}
                       />
                     ))}
                     <span className="ml-1 text-sm text-muted-foreground">
-                      {topVpn.overallRating}
+                      {topAgent.overallRating}
                     </span>
                   </div>
                 </div>
@@ -143,24 +143,12 @@ export function ExitIntentPopup() {
 
               {/* Features */}
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="text-primary">✓</span>
-                  {t("exitIntent.feature1", {
-                    servers: topVpn.servers.toLocaleString(),
-                  })}
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-primary">✓</span>
-                  {t("exitIntent.feature2", {
-                    countries: topVpn.countries,
-                  })}
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-primary">✓</span>
-                  {t("exitIntent.feature3", {
-                    days: topVpn.moneyBackDays,
-                  })}
-                </li>
+                {topAgent.features.slice(0, 3).map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="text-primary">✓</span>
+                    {feature}
+                  </li>
+                ))}
               </ul>
 
               {/* Price */}
@@ -180,7 +168,7 @@ export function ExitIntentPopup() {
                 asChild
               >
                 <a
-                  href={topVpn.affiliateUrl}
+                  href={topAgent.affiliateUrl}
                   target="_blank"
                   rel="sponsored noopener noreferrer"
                   onClick={handleClose}

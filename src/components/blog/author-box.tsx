@@ -1,8 +1,8 @@
 import { Shield, CheckCircle, ExternalLink } from "lucide-react";
 
-// ZeroToVPN expert author info — used across all blog posts for E-E-A-T
+// ZeroToAIAgents expert author info — used across all blog posts for E-E-A-T
 export const AUTHOR = {
-  name: "ZeroToVPN Expert Team",
+  name: "ZeroToAIAgents Expert Team",
   role: "VPN Security Researchers",
   bio: "Our team of cybersecurity professionals has tested and reviewed over 50 VPN services since 2024. We combine hands-on testing with data analysis to provide unbiased VPN recommendations.",
   credentials: [
@@ -10,11 +10,11 @@ export const AUTHOR = {
     "Independent speed & security audits",
     "No sponsored rankings",
   ],
-  avatar: "/images/zerotovpn-team.svg",
-  url: "https://zerotovpn.com/about",
+  avatar: "/images/zerotoaiagents-team.svg",
+  url: "https://zerotoaiagents.com/about",
   sameAs: [
-    "https://twitter.com/zerotovpn",
-    "https://facebook.com/zerotovpn",
+    "https://twitter.com/zerotoaiagents",
+    "https://facebook.com/zerotoaiagents",
   ],
 };
 
@@ -100,7 +100,7 @@ export function FactCheckedBadge({
 // Sources section at the bottom of articles
 export function SourcesSection({ content }: { content: string }) {
   // Extract external links from the HTML content
-  const linkRegex = /<a\s+href="(https?:\/\/(?!zerotovpn\.com)[^"]+)"[^>]*>([^<]+)<\/a>/g;
+  const linkRegex = /<a\s+href="(https?:\/\/(?!zerotoaiagents\.com)[^"]+)"[^>]*>([^<]+)<\/a>/g;
   const sources: Array<{ url: string; text: string }> = [];
   const seen = new Set<string>();
 

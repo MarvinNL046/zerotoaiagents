@@ -1,22 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAllVpnsFromDb, createVpn, getVpnCount } from "@/lib/db/vpn-service";
+import { getAllAgentsFromDb, createAgent, getAgentCount } from "@/lib/db/agent-service";
 
-// GET /api/admin/vpns - List all VPNs
+// GET /api/admin/vpns - List all AI agents
 export async function GET() {
   try {
-    const vpns = await getAllVpnsFromDb();
-    const count = await getVpnCount();
+    const vpns = await getAllAgentsFromDb();
+    const count = await getAgentCount();
     return NextResponse.json({ vpns, count });
   } catch (error) {
-    console.error("Error fetching VPNs:", error);
+    console.error("Error fetching AI agents:", error);
     return NextResponse.json(
-      { error: "Failed to fetch VPNs" },
+      { error: "Failed to fetch AI agents" },
       { status: 500 }
     );
   }
 }
 
-// POST /api/admin/vpns - Create a new VPN
+// POST /api/admin/vpns - Create a new AI agent
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const vpn = await createVpn({
+    const vpn = await createAgent({
       name: data.name,
       slug: data.slug,
       logo: data.logo || null,
@@ -39,24 +39,22 @@ export async function POST(request: NextRequest) {
       ogImage: data.ogImage || null,
       website: data.website,
       affiliateUrl: data.affiliateUrl,
-      priceMonthly: data.priceMonthly || 0,
-      priceYearly: data.priceYearly || 0,
-      priceTwoYear: data.priceTwoYear || null,
-      moneyBackDays: data.moneyBackDays || 30,
-      freeTier: data.freeTier || false,
-      servers: data.servers || 0,
-      countries: data.countries || 0,
-      maxDevices: data.maxDevices || 1,
-      speedScore: data.speedScore || 50,
-      securityScore: data.securityScore || 50,
-      streamingScore: data.streamingScore || 50,
-      protocols: data.protocols || [],
-      encryption: data.encryption || "AES-256",
-      killSwitch: data.killSwitch ?? true,
-      noLogs: data.noLogs ?? true,
-      netflixSupport: data.netflixSupport || false,
-      torrentSupport: data.torrentSupport || false,
-      overallRating: data.overallRating || 3.0,
+      monthlyPrice: Number(data.monthlyPrice || 0),
+      annualPrice: Number(data.annualPrice || 0),
+      hasFreeTier: data.hasFreeTier ?? false,
+      freeTierLimits: data.freeTierLimits || null,
+      category: data.category || "general-purpose",
+      subcategory: data.subcategory || null,
+      modelsSupported: data.modelsSupported || [],
+      integrations: data.integrations || [],
+      maxUsers: data.maxUsers || "Unlimited",
+      apiAccess: data.apiAccess ?? false,
+      overallRating: Number(data.overallRating || 3.0),
+      easeOfUse: Number(data.easeOfUse || 3.0),
+      performance: Number(data.performance || 3.0),
+      valueForMoney: Number(data.valueForMoney || 3.0),
+      features: data.features || [],
+      bestFor: data.bestFor || null,
       editorChoice: data.editorChoice || false,
       shortDescription: data.shortDescription || null,
       pros: data.pros || [],
@@ -67,9 +65,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ vpn }, { status: 201 });
   } catch (error) {
-    console.error("Error creating VPN:", error);
+    console.error("Error creating AI agent:", error);
     return NextResponse.json(
-      { error: "Failed to create VPN" },
+      { error: "Failed to create AI agent" },
       { status: 500 }
     );
   }

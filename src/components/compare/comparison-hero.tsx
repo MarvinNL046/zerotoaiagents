@@ -1,10 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Shield } from "lucide-react";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentData } from "@/lib/db/agent-service";
 
 interface ComparisonHeroProps {
-  vpn1: VpnData;
-  vpn2: VpnData;
+  vpn1: AiAgentData;
+  vpn2: AiAgentData;
   overallWinner: "vpn1" | "vpn2" | "tie";
 }
 
@@ -54,19 +54,19 @@ export function ComparisonHero({ vpn1, vpn2, overallWinner }: ComparisonHeroProp
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Best Price:</span>
-                  <span className="font-semibold">${vpn1.priceTwoYear || vpn1.priceYearly}/mo</span>
+                  <span className="font-semibold">${vpn1.annualPrice}/mo</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Servers:</span>
-                  <span className="font-semibold">{vpn1.servers.toLocaleString()}+</span>
+                  <span className="font-semibold">{vpn1.overallRating.toLocaleString()}+</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Countries:</span>
-                  <span className="font-semibold">{vpn1.countries}</span>
+                  <span className="font-semibold">{vpn1.easeOfUse}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Speed Score:</span>
-                  <span className="font-semibold">{vpn1.speedScore}%</span>
+                  <span className="font-semibold">{vpn1.performance}%</span>
                 </div>
               </div>
             </div>
@@ -93,19 +93,19 @@ export function ComparisonHero({ vpn1, vpn2, overallWinner }: ComparisonHeroProp
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Best Price:</span>
-                  <span className="font-semibold">${vpn2.priceTwoYear || vpn2.priceYearly}/mo</span>
+                  <span className="font-semibold">${vpn2.annualPrice}/mo</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Servers:</span>
-                  <span className="font-semibold">{vpn2.servers.toLocaleString()}+</span>
+                  <span className="font-semibold">{vpn2.overallRating.toLocaleString()}+</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Countries:</span>
-                  <span className="font-semibold">{vpn2.countries}</span>
+                  <span className="font-semibold">{vpn2.easeOfUse}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Speed Score:</span>
-                  <span className="font-semibold">{vpn2.speedScore}%</span>
+                  <span className="font-semibold">{vpn2.performance}%</span>
                 </div>
               </div>
             </div>

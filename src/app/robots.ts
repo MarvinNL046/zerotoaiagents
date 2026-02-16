@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin/', '/api/'],
       },
     ],
-    host: 'https://zerotovpn.com',
-    sitemap: 'https://zerotovpn.com/sitemap.xml',
+    host: 'https://zerotoaiagents.com',
+    sitemap: 'https://zerotoaiagents.com/sitemap.xml',
   }
 }

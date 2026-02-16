@@ -1,18 +1,18 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { QuizWizard } from "@/components/quiz/quiz-wizard";
-import { getAllVpns } from "@/lib/vpn-data-layer";
+import { aiAgentProviders } from "@/lib/ai-agent-data";
 import { routing } from "@/i18n/routing";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "quiz.metadata" });
+  const t = await getTranslations({ locale, namespace: "quiz.meta" });
 
   const canonicalUrl =
     locale === "en" ? `${baseUrl}/quiz` : `${baseUrl}/${locale}/quiz`;
@@ -29,10 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     openGraph: {
-      title: t("ogTitle"),
-      description: t("ogDescription"),
+      title: t("title"),
+      description: t("description"),
       url: canonicalUrl,
-      siteName: "ZeroToVPN",
+      siteName: "ZeroToAIAgents",
       locale: locale,
       type: "website",
       images: [
@@ -40,14 +40,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: `${baseUrl}/og-quiz.jpg`,
           width: 1200,
           height: 630,
-          alt: t("ogImageAlt"),
+          alt: "AI Agent Quiz",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: t("ogTitle"),
-      description: t("ogDescription"),
+      title: t("title"),
+      description: t("description"),
       images: [`${baseUrl}/og-quiz.jpg`],
     },
     metadataBase: new URL(baseUrl),
@@ -62,8 +62,6 @@ export default async function QuizPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("quiz");
-
-  const vpns = await getAllVpns();
 
   return (
     <div className="flex flex-col">
@@ -85,7 +83,7 @@ export default async function QuizPage({ params }: Props) {
       {/* Quiz Section */}
       <section className="py-8 md:py-16">
         <div className="container">
-          <QuizWizard vpns={vpns} locale={locale} />
+          <QuizWizard agents={aiAgentProviders} locale={locale} />
         </div>
       </section>
 
@@ -93,8 +91,13 @@ export default async function QuizPage({ params }: Props) {
       <section className="py-16 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold">{t("info.title")}</h2>
-            <p className="text-muted-foreground">{t("info.description")}</p>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Find Your Perfect AI Agent
+            </h2>
+            <p className="text-muted-foreground">
+              Our quiz analyzes your needs, budget, and technical level to recommend
+              the best AI agents for you. Get personalized recommendations in under 2 minutes.
+            </p>
           </div>
         </div>
       </section>

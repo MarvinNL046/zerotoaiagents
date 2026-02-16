@@ -7,14 +7,14 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Privacy Policy - ZeroToVPN",
+    title: "Privacy Policy - ZeroToAIAgents",
     description:
-      "Learn how ZeroToVPN collects, uses, and protects your personal information. Our privacy policy explains your rights and our data practices.",
+      "Learn how ZeroToAIAgents collects, uses, and protects your personal information. Our privacy policy explains your rights and our data practices.",
     robots: {
       index: true,
       follow: true,
@@ -63,10 +63,10 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                   Introduction
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Welcome to ZeroToVPN (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to
+                  Welcome to ZeroToAIAgents (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to
                   protecting your privacy and ensuring you understand how we handle your
                   personal data. This Privacy Policy applies to our website at
-                  zerotovpn.com (the &quot;Website&quot;) and describes our practices regarding
+                  zerotoaiagents.com (the &quot;Website&quot;) and describes our practices regarding
                   the collection, use, and disclosure of your information.
                 </p>
                 <p className="text-muted-foreground">
@@ -250,7 +250,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                   <div className="border-l-4 border-primary pl-4">
                     <h4 className="font-semibold">Affiliate Partners</h4>
                     <p className="text-sm text-muted-foreground">
-                      When you click on affiliate links to VPN providers, you will be
+                      When you click on affiliate links to AI agent providers, you will be
                       redirected to their websites. These third-party sites have their
                       own privacy policies. We encourage you to review their policies
                       before providing any personal information. See our{" "}
@@ -461,14 +461,14 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                   data, or wish to exercise your rights, please contact us:
                 </p>
                 <div className="bg-muted/50 rounded-lg p-4">
-                  <p className="font-semibold">ZeroToVPN</p>
+                  <p className="font-semibold">ZeroToAIAgents</p>
                   <p className="text-muted-foreground">
                     Email:{" "}
                     <a
-                      href="mailto:hello@zerotovpn.com"
+                      href="mailto:hello@zerotoaiagents.com"
                       className="text-primary hover:underline"
                     >
-                      hello@zerotovpn.com
+                      hello@zerotoaiagents.com
                     </a>
                   </p>
                 </div>

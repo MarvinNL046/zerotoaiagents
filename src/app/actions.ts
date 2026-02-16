@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 // Types — match actual DB column names (camelCase)
 interface UserReview {
   id: string;
-  vpnSlug: string;
+  agentSlug: string;
   authorName: string;
   authorEmail: string;
   rating: number;
@@ -26,7 +26,7 @@ interface UserReview {
 // ==================== USER REVIEWS ====================
 
 // Get approved reviews for a VPN
-export async function getApprovedReviews(vpnSlug: string, page = 1, limit = 10): Promise<{
+export async function getApprovedReviews(agentSlug: string, page = 1, limit = 10): Promise<{
   reviews: UserReview[];
   pagination: {
     page: number;
@@ -38,18 +38,18 @@ export async function getApprovedReviews(vpnSlug: string, page = 1, limit = 10):
   const offset = (page - 1) * limit;
 
   const reviews = await sql`
-    SELECT id, "vpnSlug", "authorName", rating, title, content,
+    SELECT id, "agentSlug", "authorName", rating, title, content,
            "usageType", "usagePeriod", "userPros", "userCons",
            featured, "helpfulCount", "unhelpfulCount", "createdAt"
     FROM "UserReview"
-    WHERE "vpnSlug" = ${vpnSlug} AND approved = true
+    WHERE "agentSlug" = ${agentSlug} AND approved = true
     ORDER BY featured DESC, "createdAt" DESC
     LIMIT ${limit} OFFSET ${offset}
   ` as UserReview[];
 
   const countResult = await sql`
     SELECT COUNT(*) as total FROM "UserReview"
-    WHERE "vpnSlug" = ${vpnSlug} AND approved = true
+    WHERE "agentSlug" = ${agentSlug} AND approved = true
   ` as { total: string | number }[];
 
   const total = Number(countResult[0]?.total || 0);
@@ -67,7 +67,7 @@ export async function getApprovedReviews(vpnSlug: string, page = 1, limit = 10):
 
 // Submit a new user review
 export async function submitReview(formData: FormData): Promise<{ success: boolean; reviewId?: string; error?: string }> {
-  const vpnSlug = formData.get("vpnSlug") as string;
+  const agentSlug = formData.get("agentSlug") as string;
   const authorName = formData.get("authorName") as string;
   const authorEmail = formData.get("authorEmail") as string;
   const rating = Number(formData.get("rating"));
@@ -81,7 +81,7 @@ export async function submitReview(formData: FormData): Promise<{ success: boole
   const locale = formData.get("locale") as string || "en";
 
   // Validation
-  if (!vpnSlug || !authorName || !authorEmail || !rating || !title || !content) {
+  if (!agentSlug || !authorName || !authorEmail || !rating || !title || !content) {
     return { success: false, error: "Missing required fields" };
   }
 
@@ -97,12 +97,12 @@ export async function submitReview(formData: FormData): Promise<{ success: boole
   try {
     const result = await sql`
       INSERT INTO "UserReview" (
-        id, "vpnSlug", "authorName", "authorEmail", rating, title, content,
+        id, "agentSlug", "authorName", "authorEmail", rating, title, content,
         "usageType", "usagePeriod", "userPros", "userCons",
         "newsletterConsent", "consentDate", locale, "createdAt", "updatedAt"
       ) VALUES (
         gen_random_uuid()::text,
-        ${vpnSlug},
+        ${agentSlug},
         ${authorName},
         ${authorEmail},
         ${rating},
@@ -121,7 +121,7 @@ export async function submitReview(formData: FormData): Promise<{ success: boole
       RETURNING id
     `;
 
-    revalidatePath(`/reviews/${vpnSlug}`);
+    revalidatePath(`/reviews/${agentSlug}`);
 
     return { success: true, reviewId: result[0]?.id };
   } catch (error) {
@@ -196,7 +196,7 @@ export async function subscribeToNewsletter(formData: FormData): Promise<{ succe
 
 // Track affiliate click
 export async function trackClick(
-  vpnSlug: string,
+  agentSlug: string,
   page: string,
   country?: string,
   referrer?: string
@@ -204,7 +204,7 @@ export async function trackClick(
   try {
     // First get the VPN provider ID
     const vpn = await sql`
-      SELECT id FROM "VpnProvider" WHERE slug = ${vpnSlug}
+      SELECT id FROM "VpnProvider" WHERE slug = ${agentSlug}
     `;
 
     if (vpn.length === 0) {
@@ -230,7 +230,7 @@ export async function trackClick(
 export async function getAdminReviews(
   filters: {
     approved?: boolean;
-    vpnSlug?: string;
+    agentSlug?: string;
     page?: number;
     limit?: number;
   } = {}
@@ -243,7 +243,7 @@ export async function getAdminReviews(
     totalPages: number;
   };
 }> {
-  const { approved, vpnSlug, page = 1, limit = 20 } = filters;
+  const { approved, agentSlug, page = 1, limit = 20 } = filters;
   const offset = (page - 1) * limit;
 
   try {

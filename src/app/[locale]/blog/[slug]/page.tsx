@@ -17,7 +17,7 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-const baseUrl = "https://zerotovpn.com";
+const baseUrl = "https://zerotoaiagents.com";
 
 function formatDate(date: Date, locale: string): string {
   const months: Record<string, string[]> = {
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.publishedAt?.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
-      authors: ["ZeroToVPN Expert Team"],
+      authors: ["ZeroToAIAgents Expert Team"],
     },
   };
 }

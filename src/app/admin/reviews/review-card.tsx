@@ -19,7 +19,7 @@ import { useRouter } from "next/navigation";
 // Type matching the database structure (camelCase)
 interface UserReview {
   id: string;
-  vpnSlug: string;
+  agentSlug: string;
   authorName: string;
   authorEmail: string;
   rating: number;
@@ -112,7 +112,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
                 {formatDate(review.createdAt)}
               </div>
               <Badge variant="outline" className="capitalize">
-                {review.vpnSlug}
+                {review.agentSlug}
               </Badge>
               {review.featured && (
                 <Badge className="bg-yellow-500">Featured</Badge>

@@ -38,7 +38,7 @@ export const nlLabels: CountryPageLabels = {
 
 export const nlTranslations: Record<string, TranslatedCountryContent> = {
   thailand: {
-    metaTitle: "Beste VPN voor Thailand 2026: Blokkades omzeilen & privé blijven | ZeroToVPN",
+    metaTitle: "Beste VPN voor Thailand 2026: Blokkades omzeilen & privé blijven | ZeroToAIAgents",
     metaDescription: "Thailand blokkeert goksites, sommige nieuwsmedia en monitort sociale media onder de majesteitsschenniswetgeving. Vind VPN's die betrouwbaar werken in Thailand.",
     statusLabel: "Legaal maar gemonitord",
     heroSubtitle: "Omzeil contentblokkades en bescherm je privacy in Thailand",
@@ -65,7 +65,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   japan: {
-    metaTitle: "Beste VPN voor Japan 2026: Japanse content streamen & privé blijven | ZeroToVPN",
+    metaTitle: "Beste VPN voor Japan 2026: Japanse content streamen & privé blijven | ZeroToAIAgents",
     metaDescription: "Japan heeft veel internetvrijheid maar strikte auteursrechthandhaving. Vind VPN's met snelle Japanse servers voor het streamen van anime, toegang tot Japanse content vanuit het buitenland en privacy.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Stream Japanse content wereldwijd en bescherm je privacy",
@@ -92,7 +92,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-korea": {
-    metaTitle: "Beste VPN voor Zuid-Korea 2026: Gaming, privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Zuid-Korea 2026: Gaming, privacy & streaming | ZeroToAIAgents",
     metaDescription: "Zuid-Korea heeft snel internet maar monitort online activiteiten. Vind VPN's voor gaming, het streamen van Koreaanse content vanuit het buitenland en het beschermen van je privacy tegen surveillance.",
     statusLabel: "Legaal, enkele beperkingen",
     heroSubtitle: "Snel gamen, streamingtoegang en privacybescherming in Zuid-Korea",
@@ -119,7 +119,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "hong-kong": {
-    metaTitle: "Beste VPN voor Hongkong 2026: Privacy onder de NSL | ZeroToVPN",
+    metaTitle: "Beste VPN voor Hongkong 2026: Privacy onder de NSL | ZeroToAIAgents",
     metaDescription: "De Nationale Veiligheidswet van Hongkong heeft de surveillance verhoogd. Vind VPN's die je privacy beschermen en je veilig houden in het veranderende digitale landschap van Hongkong.",
     statusLabel: "Legaal maar toenemend gemonitord",
     heroSubtitle: "Bescherm je digitale privacy in het veranderende landschap van Hongkong",
@@ -146,7 +146,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   taiwan: {
-    metaTitle: "Beste VPN voor Taiwan 2026: Streaming & privacy | ZeroToVPN",
+    metaTitle: "Beste VPN voor Taiwan 2026: Streaming & privacy | ZeroToAIAgents",
     metaDescription: "Taiwan geniet van hoge internetvrijheid. Gebruik een VPN om internationale streamingcontent te openen, je privacy te beschermen en openbare WiFi-verbindingen te beveiligen.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Toegang tot wereldwijde content en bescherm je privacy in Taiwan",
@@ -171,7 +171,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   singapore: {
-    metaTitle: "Beste VPN voor Singapore 2026: Privacy & contenttoegang | ZeroToVPN",
+    metaTitle: "Beste VPN voor Singapore 2026: Privacy & contenttoegang | ZeroToAIAgents",
     metaDescription: "Singapore heeft strikte contentregulering en surveillancewetten. Vind VPN's die je privacy beschermen en contentbeperkingen in Singapore omzeilen.",
     statusLabel: "Legaal maar gemonitord",
     heroSubtitle: "Navigeer door de internetregels van Singapore met de juiste VPN",
@@ -196,7 +196,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   malaysia: {
-    metaTitle: "Beste VPN voor Maleisië 2026: Sites deblokkeren & privacy beschermen | ZeroToVPN",
+    metaTitle: "Beste VPN voor Maleisië 2026: Sites deblokkeren & privacy beschermen | ZeroToAIAgents",
     metaDescription: "Maleisië blokkeert gok-, volwassen content en politieke sites. Vind VPN's die MCMC-blokkades omzeilen en je privacy beschermen in Maleisië.",
     statusLabel: "Legaal maar content gefilterd",
     heroSubtitle: "Omzeil MCMC-contentblokkades en bescherm je privacy in Maleisië",
@@ -221,7 +221,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   philippines: {
-    metaTitle: "Beste VPN voor de Filipijnen 2026: Streaming & beveiliging | ZeroToVPN",
+    metaTitle: "Beste VPN voor de Filipijnen 2026: Streaming & beveiliging | ZeroToAIAgents",
     metaDescription: "De Filipijnen heeft traag internet en groeiende surveillance. Vind VPN's die snelheden verbeteren, privacy beschermen en internationale streamingcontent deblokkeren.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Verbeter snelheden, open wereldwijde content en blijf veilig op de Filipijnen",
@@ -246,7 +246,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   australia: {
-    metaTitle: "Beste VPN voor Australië 2026: Streaming, privacy & torrenting | ZeroToVPN",
+    metaTitle: "Beste VPN voor Australië 2026: Streaming, privacy & torrenting | ZeroToAIAgents",
     metaDescription: "Australië heeft verplichte dataretentie en strikte auteursrechthandhaving. Vind VPN's die je privacy beschermen en internationale streaming deblokkeren in Australië.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Bescherm je privacy tegen dataretentie en open wereldwijde content",
@@ -273,7 +273,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "new-zealand": {
-    metaTitle: "Beste VPN voor Nieuw-Zeeland 2026: Streaming & privacy | ZeroToVPN",
+    metaTitle: "Beste VPN voor Nieuw-Zeeland 2026: Streaming & privacy | ZeroToAIAgents",
     metaDescription: "Nieuw-Zeeland heeft goede internetvrijheid maar beperkte streamingbibliotheken. Vind VPN's om wereldwijde content te openen en je privacy te beschermen als Five Eyes-lid.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Open wereldwijde streaming en bescherm je privacy in Nieuw-Zeeland",
@@ -298,7 +298,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-kingdom": {
-    metaTitle: "Beste VPN voor het VK 2026: Privacy, streaming & ISP-blokkades | ZeroToVPN",
+    metaTitle: "Beste VPN voor het VK 2026: Privacy, streaming & ISP-blokkades | ZeroToAIAgents",
     metaDescription: "Het VK heeft uitgebreide surveillancewetten en ISP-websiteblokkering. Vind VPN's die je privacy beschermen en BT-, Virgin- en Sky-blokkades omzeilen.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Omzeil ISP-blokkades en bescherm je privacy tegen de Snooper's Charter",
@@ -325,7 +325,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   germany: {
-    metaTitle: "Beste VPN voor Duitsland 2026: Privacy, streaming & torrenting | ZeroToVPN",
+    metaTitle: "Beste VPN voor Duitsland 2026: Privacy, streaming & torrenting | ZeroToAIAgents",
     metaDescription: "Duitsland heeft strikte auteursrechthandhaving en privacywetten. Vind VPN's die je beschermen tegen Abmahnung-brieven en toegang bieden tot internationale streamingcontent.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Vermijd Abmahnung-auteursrechtbrieven en bescherm je digitale privacy",
@@ -352,7 +352,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   france: {
-    metaTitle: "Beste VPN voor Frankrijk 2026: Privacy, streaming & HADOPI | ZeroToVPN",
+    metaTitle: "Beste VPN voor Frankrijk 2026: Privacy, streaming & HADOPI | ZeroToAIAgents",
     metaDescription: "Frankrijk monitort torrenting via HADOPI en heeft dataretentiewetten. Vind VPN's die je privacy beschermen en internationale content toegankelijk maken vanuit Frankrijk.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Bescherm jezelf tegen HADOPI-monitoring en open wereldwijde content",
@@ -377,7 +377,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   spain: {
-    metaTitle: "Beste VPN voor Spanje 2026: Streaming, privacy & torrenting | ZeroToVPN",
+    metaTitle: "Beste VPN voor Spanje 2026: Streaming, privacy & torrenting | ZeroToAIAgents",
     metaDescription: "Spanje heeft groeiende auteursrechthandhaving en EU-dataretentie. Vind VPN's voor veilig torrenten, internationale streaming en privacybescherming.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Stream wereldwijde content en bescherm je privacy in Spanje",
@@ -402,7 +402,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   italy: {
-    metaTitle: "Beste VPN voor Italië 2026: Streaming, privacy & AGCOM-blokkades | ZeroToVPN",
+    metaTitle: "Beste VPN voor Italië 2026: Streaming, privacy & AGCOM-blokkades | ZeroToAIAgents",
     metaDescription: "Italië blokkeert gok- en piraterijsites via AGCOM. Vind VPN's die Italiaanse ISP-blokkades omzeilen en internationale streamingcontent openen.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Omzeil AGCOM-blokkades en open wereldwijde streaming vanuit Italië",
@@ -427,7 +427,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   brazil: {
-    metaTitle: "Beste VPN voor Brazilië 2026: Privacy, streaming & WhatsApp-blokkades | ZeroToVPN",
+    metaTitle: "Beste VPN voor Brazilië 2026: Privacy, streaming & WhatsApp-blokkades | ZeroToAIAgents",
     metaDescription: "Brazilië blokkeert soms WhatsApp en heeft groeiende surveillance. Vind VPN's die je verbonden houden en je privacy beschermen in Brazilië.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Blijf verbonden tijdens WhatsApp-blokkades en bescherm je privacy",
@@ -452,7 +452,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   mexico: {
-    metaTitle: "Beste VPN voor Mexico 2026: Privacy, streaming & beveiliging | ZeroToVPN",
+    metaTitle: "Beste VPN voor Mexico 2026: Privacy, streaming & beveiliging | ZeroToAIAgents",
     metaDescription: "Mexico heeft groeiende surveillance en cyberbeveiligingsproblemen. Vind VPN's die je privacy beschermen en VS-streamingcontent openen vanuit Mexico.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Bescherm je privacy en open VS-streamingcontent vanuit Mexico",
@@ -477,7 +477,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "united-states": {
-    metaTitle: "Beste VPN voor de VS 2026: Privacy, ISP-tracking & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor de VS 2026: Privacy, ISP-tracking & streaming | ZeroToAIAgents",
     metaDescription: "Amerikaanse ISP's mogen je browsegegevens verkopen en DMCA-handhaving is strikt. Vind VPN's die je privacy beschermen en internationale content openen vanuit de VS.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Stop ISP-tracking, vermijd DMCA-meldingen en bescherm je privacy",
@@ -504,7 +504,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   canada: {
-    metaTitle: "Beste VPN voor Canada 2026: Privacy, streaming & P2P | ZeroToVPN",
+    metaTitle: "Beste VPN voor Canada 2026: Privacy, streaming & P2P | ZeroToAIAgents",
     metaDescription: "Canada is een Five Eyes-lid met notice-and-notice auteursrechtregels. Vind VPN's die je privacy beschermen en VS-streaming openen vanuit Canada.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Open VS-content en bescherm je privacy als Five Eyes-lid",
@@ -529,7 +529,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   poland: {
-    metaTitle: "Beste VPN voor Polen 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Polen 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Polen heeft EU-dataretentie en groeiende surveillance. Vind VPN's die je privacy beschermen en internationale streamingcontent openen vanuit Polen.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Bescherm je privacy en open wereldwijde streaming vanuit Polen",
@@ -554,7 +554,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   sweden: {
-    metaTitle: "Beste VPN voor Zweden 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Zweden 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Zweden is een 14 Eyes-lid met auteursrechthandhaving. Vind VPN's die je privacy beschermen en internationale streaming openen vanuit Zweden.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Privacybescherming en wereldwijde contenttoegang vanuit Zweden",
@@ -579,7 +579,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   switzerland: {
-    metaTitle: "Beste VPN voor Zwitserland 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Zwitserland 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Zwitserland heeft sterke privacywetten maar beperkte streamingopties. Vind VPN's voor toegang tot wereldwijde content en het behouden van privacy in Zwitserland.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Sterke privacywetten en wereldwijde contenttoegang vanuit Zwitserland",
@@ -604,7 +604,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   nigeria: {
-    metaTitle: "Beste VPN voor Nigeria 2026: Twitter-verboden omzeilen & privé blijven | ZeroToVPN",
+    metaTitle: "Beste VPN voor Nigeria 2026: Twitter-verboden omzeilen & privé blijven | ZeroToAIAgents",
     metaDescription: "Nigeria heeft een geschiedenis van sociale-mediaverboden en groeiende internetbeperkingen. Vind VPN's die je verbonden houden en je privacy beschermen in Nigeria.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Blijf verbonden tijdens sociale-mediaverboden en bescherm je privacy",
@@ -630,7 +630,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "south-africa": {
-    metaTitle: "Beste VPN voor Zuid-Afrika 2026: Streaming & beveiliging | ZeroToVPN",
+    metaTitle: "Beste VPN voor Zuid-Afrika 2026: Streaming & beveiliging | ZeroToAIAgents",
     metaDescription: "Zuid-Afrika heeft groeiende cybercriminaliteit en beperkte streamingbibliotheken. Vind VPN's die je beveiliging beschermen en wereldwijde content openen vanuit Zuid-Afrika.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Bescherming tegen cybercriminaliteit en toegang tot wereldwijde streamingcontent",
@@ -655,7 +655,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   kenya: {
-    metaTitle: "Beste VPN voor Kenia 2026: Privacy & wereldwijde content | ZeroToVPN",
+    metaTitle: "Beste VPN voor Kenia 2026: Privacy & wereldwijde content | ZeroToAIAgents",
     metaDescription: "Kenia heeft groeiende internetsurveillance en contentbeperkingen. Vind VPN's die je privacy beschermen en wereldwijde streamingcontent openen vanuit Kenia.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Bescherm je privacy en open wereldwijde content vanuit Kenia",
@@ -680,7 +680,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   myanmar: {
-    metaTitle: "Beste VPN voor Myanmar 2026: Militaire censuur omzeilen | ZeroToVPN",
+    metaTitle: "Beste VPN voor Myanmar 2026: Militaire censuur omzeilen | ZeroToAIAgents",
     metaDescription: "De militaire junta van Myanmar heeft sinds de coup van 2021 zware internetbeperkingen opgelegd. Vind VPN's met obfuscatie die daadwerkelijk werken in Myanmar.",
     statusLabel: "Beperkt sinds de coup",
     heroSubtitle: "Omzeil de internetcensuur van de militaire junta en blijf verbonden",
@@ -707,7 +707,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   bangladesh: {
-    metaTitle: "Beste VPN voor Bangladesh 2026: Sites deblokkeren & privé blijven | ZeroToVPN",
+    metaTitle: "Beste VPN voor Bangladesh 2026: Sites deblokkeren & privé blijven | ZeroToAIAgents",
     metaDescription: "Bangladesh blokkeert sociale media en nieuwssites tijdens onrust. Vind VPN's die je verbonden houden en je privacy beschermen in Bangladesh.",
     statusLabel: "Legaal maar sites geblokkeerd",
     heroSubtitle: "Blijf verbonden tijdens internetafsluitingen en sociale-mediablokkades",
@@ -732,7 +732,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   nepal: {
-    metaTitle: "Beste VPN voor Nepal 2026: TikTok deblokkeren & content openen | ZeroToVPN",
+    metaTitle: "Beste VPN voor Nepal 2026: TikTok deblokkeren & content openen | ZeroToAIAgents",
     metaDescription: "Nepal heeft TikTok verboden en blokkeert sommige content. Vind VPN's die beperkte apps deblokkeren en je privacy beschermen in Nepal.",
     statusLabel: "Legaal, TikTok verboden",
     heroSubtitle: "Deblokkeer TikTok en open beperkte content in Nepal",
@@ -757,7 +757,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "sri-lanka": {
-    metaTitle: "Beste VPN voor Sri Lanka 2026: Sociale-mediatoegang & privacy | ZeroToVPN",
+    metaTitle: "Beste VPN voor Sri Lanka 2026: Sociale-mediatoegang & privacy | ZeroToAIAgents",
     metaDescription: "Sri Lanka blokkeert sociale media tijdens crises. Vind VPN's die je verbonden houden en je privacy beschermen tijdens internetbeperkingen.",
     statusLabel: "Legaal maar sociale media geblokkeerd tijdens crises",
     heroSubtitle: "Blijf verbonden tijdens sociale-mediablokkades en bescherm je privacy",
@@ -782,7 +782,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   cambodia: {
-    metaTitle: "Beste VPN voor Cambodja 2026: Privacy & contenttoegang | ZeroToVPN",
+    metaTitle: "Beste VPN voor Cambodja 2026: Privacy & contenttoegang | ZeroToAIAgents",
     metaDescription: "Cambodja monitort online activiteiten en blokkeert onafhankelijke media. Vind VPN's die je privacy beschermen en onbeperkte content openen in Cambodja.",
     statusLabel: "Legaal maar gemonitord",
     heroSubtitle: "Bescherm je privacy en open vrije media in Cambodja",
@@ -807,7 +807,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   israel: {
-    metaTitle: "Beste VPN voor Israël 2026: Privacy & internationale content | ZeroToVPN",
+    metaTitle: "Beste VPN voor Israël 2026: Privacy & internationale content | ZeroToAIAgents",
     metaDescription: "Israël heeft geavanceerde surveillancecapaciteiten en geo-beperkte content. Vind VPN's voor privacybescherming en toegang tot internationale streaming vanuit Israël.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Privacybescherming en wereldwijde contenttoegang vanuit Israël",
@@ -832,7 +832,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   colombia: {
-    metaTitle: "Beste VPN voor Colombia 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Colombia 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Colombia heeft groeiende surveillance en cybercriminaliteitszorgen. Vind VPN's die je privacy beschermen en internationale streaming openen vanuit Colombia.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Blijf veilig online en open wereldwijde streamingcontent",
@@ -857,7 +857,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   argentina: {
-    metaTitle: "Beste VPN voor Argentinië 2026: Streaming & privacy | ZeroToVPN",
+    metaTitle: "Beste VPN voor Argentinië 2026: Streaming & privacy | ZeroToAIAgents",
     metaDescription: "Argentinië heeft goede internetvrijheid maar beperkte streaming. Vind VPN's om wereldwijde content te openen en goedkopere abonnementen te krijgen vanuit Argentinië.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Open wereldwijde streaming en bescherm je privacy vanuit Argentinië",
@@ -882,7 +882,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   uzbekistan: {
-    metaTitle: "Beste VPN voor Oezbekistan 2026: Censuur omzeilen & veilig blijven | ZeroToVPN",
+    metaTitle: "Beste VPN voor Oezbekistan 2026: Censuur omzeilen & veilig blijven | ZeroToAIAgents",
     metaDescription: "Oezbekistan censureert het internet zwaar en blokkeert VPN-protocollen. Vind VPN's met obfuscatie die werken in Oezbekistan.",
     statusLabel: "Beperkt",
     heroSubtitle: "Omzeil zware internetcensuur in Oezbekistan",
@@ -908,7 +908,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   kazakhstan: {
-    metaTitle: "Beste VPN voor Kazachstan 2026: Censuur & surveillance omzeilen | ZeroToVPN",
+    metaTitle: "Beste VPN voor Kazachstan 2026: Censuur & surveillance omzeilen | ZeroToAIAgents",
     metaDescription: "Kazachstan censureert het internet en heeft geprobeerd HTTPS te onderscheppen. Vind VPN's die je privacy beschermen en censuur omzeilen in Kazachstan.",
     statusLabel: "Beperkt en gemonitord",
     heroSubtitle: "Bescherm jezelf tegen HTTPS-onderschepping en internetcensuur",
@@ -934,7 +934,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   ukraine: {
-    metaTitle: "Beste VPN voor Oekraïne 2026: Privacy & beveiliging tijdens het conflict | ZeroToVPN",
+    metaTitle: "Beste VPN voor Oekraïne 2026: Privacy & beveiliging tijdens het conflict | ZeroToAIAgents",
     metaDescription: "Oekraïne kampt met internetverstoringen en cyberbeveiligingsdreigingen in oorlogstijd. Vind VPN's die beveiliging en betrouwbare toegang bieden tijdens het lopende conflict.",
     statusLabel: "Legaal, oorlogstijdbeperkingen",
     heroSubtitle: "Blijf veilig en verbonden tijdens het lopende conflict",
@@ -960,7 +960,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   romania: {
-    metaTitle: "Beste VPN voor Roemenië 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Roemenië 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Roemenië verklaarde dataretentiewetten ongrondwettelijk. Vind VPN's voor privacy en toegang tot internationale streaming vanuit Roemenië.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Privacyvriendelijke jurisdictie met snelle internetsnelheden",
@@ -985,7 +985,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   "czech-republic": {
-    metaTitle: "Beste VPN voor Tsjechië 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Tsjechië 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Tsjechië heeft hoge internetvrijheid maar EU-dataretentie. Vind VPN's voor privacy en toegang tot internationale streaming vanuit Tsjechië.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Open wereldwijde content en bescherm je privacy tegen EU-dataretentie",
@@ -1009,7 +1009,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   greece: {
-    metaTitle: "Beste VPN voor Griekenland 2026: Privacy & streaming voor reizigers | ZeroToVPN",
+    metaTitle: "Beste VPN voor Griekenland 2026: Privacy & streaming voor reizigers | ZeroToAIAgents",
     metaDescription: "Griekenland is een populaire reisbestemming met openbare WiFi-risico's. Vind VPN's om je privacy te beschermen en je thuisstreaming te openen.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Beveilig openbare WiFi en open thuisstreaming in Griekenland",
@@ -1033,7 +1033,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   portugal: {
-    metaTitle: "Beste VPN voor Portugal 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Portugal 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Portugal heeft hoge internetvrijheid maar EU-dataretentie is van toepassing. Vind VPN's voor internationale streaming en privacy vanuit Portugal.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Open wereldwijde content en bescherm je privacy tegen EU-dataretentie",
@@ -1058,7 +1058,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   norway: {
-    metaTitle: "Beste VPN voor Noorwegen 2026: Streaming & privacy | ZeroToVPN",
+    metaTitle: "Beste VPN voor Noorwegen 2026: Streaming & privacy | ZeroToAIAgents",
     metaDescription: "Noorwegen heeft hoge internetvrijheid maar beperkte streamingcatalogi. Vind VPN's om wereldwijde content te openen en privacy te beschermen als NAVO-lid.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Open wereldwijde streaming en bescherm je digitale privacy",
@@ -1082,7 +1082,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   denmark: {
-    metaTitle: "Beste VPN voor Denemarken 2026: Privacy & contenttoegang | ZeroToVPN",
+    metaTitle: "Beste VPN voor Denemarken 2026: Privacy & contenttoegang | ZeroToAIAgents",
     metaDescription: "Denemarken heeft hoge internetvrijheid maar neemt deel aan inlichtingendeling. Vind VPN's voor privacy en streamingtoegang vanuit Denemarken.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Privacybescherming en wereldwijde content vanuit Denemarken",
@@ -1107,7 +1107,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   finland: {
-    metaTitle: "Beste VPN voor Finland 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Finland 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Finland heeft topinternetvrijheid maar beperkte streaming. Vind VPN's om wereldwijde content te openen en privacy te beschermen tegen inlichtingensamenwerking.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Topinternetvrijheid met wereldwijde streamingtoegang",
@@ -1131,7 +1131,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   belgium: {
-    metaTitle: "Beste VPN voor België 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor België 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "België volgt EU-dataretentie en heeft groeiende auteursrechthandhaving. Vind VPN's voor privacy en internationale streamingtoegang vanuit België.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Privacy en wereldwijde streamingtoegang vanuit België",
@@ -1155,7 +1155,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   austria: {
-    metaTitle: "Beste VPN voor Oostenrijk 2026: Privacy & streaming | ZeroToVPN",
+    metaTitle: "Beste VPN voor Oostenrijk 2026: Privacy & streaming | ZeroToAIAgents",
     metaDescription: "Oostenrijk heeft EU-dataretentie en auteursrechthandhaving. Vind VPN's voor privacybescherming en internationale streaming vanuit Oostenrijk.",
     statusLabel: "Volledig legaal",
     heroSubtitle: "Privacybescherming en wereldwijde contenttoegang vanuit Oostenrijk",
@@ -1179,7 +1179,7 @@ export const nlTranslations: Record<string, TranslatedCountryContent> = {
     ],
   },
   hungary: {
-    metaTitle: "Beste VPN voor Hongarije 2026: Mediavrijheid & privacy | ZeroToVPN",
+    metaTitle: "Beste VPN voor Hongarije 2026: Mediavrijheid & privacy | ZeroToAIAgents",
     metaDescription: "Hongarije kampt met afnemende mediavrijheid en groeiende surveillance. Vind VPN's die je privacy beschermen en toegang bieden tot onafhankelijk nieuws vanuit Hongarije.",
     statusLabel: "Legaal, zorgen over media",
     heroSubtitle: "Bescherm mediavrijheid en privacy in Hongarije",

@@ -15,7 +15,7 @@ interface StickyCTABarProps {
 export function StickyCTABar({
   vpnName = "NordVPN",
   discountPercent = 68,
-  affiliateUrl = "https://go.zerotovpn.com/nordvpn",
+  affiliateUrl = "https://go.zerotoaiagents.com/nordvpn",
   position = "bottom",
 }: StickyCTABarProps) {
   const t = useTranslations("stickyBar");

@@ -7,10 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import type { VpnData } from "@/lib/db/vpn-service";
+import type { AiAgentData } from "@/lib/db/agent-service";
 
 interface VpnFormProps {
-  vpn?: VpnData;
+  vpn?: AiAgentData;
   onSuccess: () => void;
 }
 
@@ -33,32 +33,33 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
   const [ogImage, setOgImage] = useState(vpn?.ogImage || "");
 
   // Pricing
-  const [priceMonthly, setPriceMonthly] = useState(vpn?.priceMonthly?.toString() || "0");
-  const [priceYearly, setPriceYearly] = useState(vpn?.priceYearly?.toString() || "0");
-  const [priceTwoYear, setPriceTwoYear] = useState(vpn?.priceTwoYear?.toString() || "");
-  const [moneyBackDays, setMoneyBackDays] = useState(vpn?.moneyBackDays?.toString() || "30");
-  const [freeTier, setFreeTier] = useState(vpn?.freeTier || false);
+  const [monthlyPrice, setPriceMonthly] = useState(vpn?.monthlyPrice?.toString() || "0");
+  const [annualPrice, setPriceYearly] = useState(vpn?.annualPrice?.toString() || "0");
+  // TODO: This form needs complete refactoring for AI agents - VPN fields kept for compatibility
+  const [priceTwoYear, setPriceTwoYear] = useState("");
+  const [moneyBackDays, setMoneyBackDays] = useState("30");
+  const [hasFreeTier, setFreeTier] = useState(vpn?.hasFreeTier || false);
 
-  // Features
-  const [servers, setServers] = useState(vpn?.servers?.toString() || "0");
-  const [countries, setCountries] = useState(vpn?.countries?.toString() || "0");
-  const [maxDevices, setMaxDevices] = useState(vpn?.maxDevices?.toString() || "1");
+  // VPN-specific fields - placeholders for form compatibility
+  const [servers, setServers] = useState("0");
+  const [countries, setCountries] = useState("0");
+  const [maxDevices, setMaxDevices] = useState("1");
 
   // Scores
-  const [speedScore, setSpeedScore] = useState(vpn?.speedScore?.toString() || "50");
-  const [securityScore, setSecurityScore] = useState(vpn?.securityScore?.toString() || "50");
-  const [streamingScore, setStreamingScore] = useState(vpn?.streamingScore?.toString() || "50");
+  const [speedScore, setSpeedScore] = useState("50");
+  const [securityScore, setSecurityScore] = useState("50");
+  const [streamingScore, setStreamingScore] = useState("50");
   const [overallRating, setOverallRating] = useState(vpn?.overallRating?.toString() || "3.0");
 
-  // Security
-  const [protocols, setProtocols] = useState(vpn?.protocols?.join(", ") || "WireGuard, OpenVPN");
-  const [encryption, setEncryption] = useState(vpn?.encryption || "AES-256");
-  const [killSwitch, setKillSwitch] = useState(vpn?.killSwitch ?? true);
-  const [noLogs, setNoLogs] = useState(vpn?.noLogs ?? true);
+  // Security - VPN-specific placeholders
+  const [protocols, setProtocols] = useState("WireGuard, OpenVPN");
+  const [encryption, setEncryption] = useState("AES-256");
+  const [killSwitch, setKillSwitch] = useState(true);
+  const [noLogs, setNoLogs] = useState(true);
 
-  // Support
-  const [netflixSupport, setNetflixSupport] = useState(vpn?.netflixSupport || false);
-  const [torrentSupport, setTorrentSupport] = useState(vpn?.torrentSupport || false);
+  // Support - VPN-specific placeholders
+  const [netflixSupport, setNetflixSupport] = useState(false);
+  const [torrentSupport, setTorrentSupport] = useState(false);
 
   // Pros & Cons
   const [pros, setPros] = useState(vpn?.pros?.join("\n") || "");
@@ -94,24 +95,25 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
         thumbnailImage: thumbnailImage || null,
         cardImage: cardImage || null,
         ogImage: ogImage || null,
-        priceMonthly: parseFloat(priceMonthly) || 0,
-        priceYearly: parseFloat(priceYearly) || 0,
-        priceTwoYear: priceTwoYear ? parseFloat(priceTwoYear) : null,
-        moneyBackDays: parseInt(moneyBackDays) || 30,
-        freeTier,
-        servers: parseInt(servers) || 0,
-        countries: parseInt(countries) || 0,
-        maxDevices: parseInt(maxDevices) || 1,
-        speedScore: parseInt(speedScore) || 50,
-        securityScore: parseInt(securityScore) || 50,
-        streamingScore: parseInt(streamingScore) || 50,
+        monthlyPrice: parseFloat(monthlyPrice) || 0,
+        annualPrice: parseFloat(annualPrice) || 0,
+        // VPN-specific fields commented out - TODO: Add AI agent fields
+        // priceTwoYear: priceTwoYear ? parseFloat(priceTwoYear) : null,
+        // moneyBackDays: parseInt(moneyBackDays) || 30,
+        hasFreeTier,
+        // servers: parseInt(servers) || 0,
+        // countries: parseInt(countries) || 0,
+        // maxDevices: parseInt(maxDevices) || 1,
+        // speedScore: parseInt(speedScore) || 50,
+        // securityScore: parseInt(securityScore) || 50,
+        // streamingScore: parseInt(streamingScore) || 50,
         overallRating: parseFloat(overallRating) || 3.0,
-        protocols: protocols.split(",").map((p) => p.trim()).filter(Boolean),
-        encryption,
-        killSwitch,
-        noLogs,
-        netflixSupport,
-        torrentSupport,
+        // protocols: protocols.split(",").map((p) => p.trim()).filter(Boolean),
+        // encryption,
+        // killSwitch,
+        // noLogs,
+        // netflixSupport,
+        // torrentSupport,
         pros: pros.split("\n").map((p) => p.trim()).filter(Boolean),
         cons: cons.split("\n").map((c) => c.trim()).filter(Boolean),
         featured,
@@ -130,7 +132,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
 
       if (!res.ok) {
         const errorData = await res.json();
-        throw new Error(errorData.error || "Failed to save VPN");
+        throw new Error(errorData.error || "Failed to save AI agent");
       }
 
       onSuccess();
@@ -195,7 +197,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="website"
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
-                placeholder="https://nordvpn.com"
+                placeholder="https://platform.openai.com"
                 required
               />
             </div>
@@ -205,7 +207,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="affiliateUrl"
                 value={affiliateUrl}
                 onChange={(e) => setAffiliateUrl(e.target.value)}
-                placeholder="https://go.zerotovpn.com/nordvpn"
+                placeholder="https://go.zerotoaiagents.com/chatgpt"
                 required
               />
             </div>
@@ -217,7 +219,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
               id="shortDescription"
               value={shortDescription}
               onChange={(e) => setShortDescription(e.target.value)}
-              placeholder="Industry-leading VPN with exceptional speed..."
+              placeholder="AI assistant with advanced reasoning capabilities..."
               rows={2}
             />
           </div>
@@ -229,7 +231,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="logo"
                 value={logo}
                 onChange={(e) => setLogo(e.target.value)}
-                placeholder="/logos/nordvpn.svg"
+                placeholder="/logos/chatgpt.svg"
               />
             </div>
             <div className="space-y-2">
@@ -238,7 +240,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="screenshot"
                 value={screenshot}
                 onChange={(e) => setScreenshot(e.target.value)}
-                placeholder="/vpn-images/nordvpn-hero.webp"
+                placeholder="/agent-images/chatgpt-hero.webp"
               />
             </div>
           </div>
@@ -250,7 +252,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="thumbnailImage"
                 value={thumbnailImage}
                 onChange={(e) => setThumbnailImage(e.target.value)}
-                placeholder="/vpn-images/nordvpn-thumb.webp"
+                placeholder="/agent-images/chatgpt-thumb.webp"
               />
             </div>
             <div className="space-y-2">
@@ -259,7 +261,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="cardImage"
                 value={cardImage}
                 onChange={(e) => setCardImage(e.target.value)}
-                placeholder="/vpn-images/nordvpn-card.webp"
+                placeholder="/agent-images/chatgpt-card.webp"
               />
             </div>
             <div className="space-y-2">
@@ -268,7 +270,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="ogImage"
                 value={ogImage}
                 onChange={(e) => setOgImage(e.target.value)}
-                placeholder="/vpn-images/nordvpn-og.webp"
+                placeholder="/agent-images/chatgpt-og.webp"
               />
             </div>
           </div>
@@ -307,22 +309,22 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
         <TabsContent value="pricing" className="space-y-4 mt-4">
           <div className="grid grid-cols-3 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="priceMonthly">Monthly Price ($)</Label>
+              <Label htmlFor="monthlyPrice">Monthly Price ($)</Label>
               <Input
-                id="priceMonthly"
+                id="monthlyPrice"
                 type="number"
                 step="0.01"
-                value={priceMonthly}
+                value={monthlyPrice}
                 onChange={(e) => setPriceMonthly(e.target.value)}
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="priceYearly">Yearly Price ($/mo)</Label>
+              <Label htmlFor="annualPrice">Yearly Price ($/mo)</Label>
               <Input
-                id="priceYearly"
+                id="annualPrice"
                 type="number"
                 step="0.01"
-                value={priceYearly}
+                value={annualPrice}
                 onChange={(e) => setPriceYearly(e.target.value)}
               />
             </div>
@@ -351,11 +353,11 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
             </div>
             <div className="flex items-center gap-2 pt-8">
               <Switch
-                id="freeTier"
-                checked={freeTier}
+                id="hasFreeTier"
+                checked={hasFreeTier}
                 onCheckedChange={setFreeTier}
               />
-              <Label htmlFor="freeTier">Has Free Tier</Label>
+              <Label htmlFor="hasFreeTier">Has Free Tier</Label>
             </div>
           </div>
         </TabsContent>
@@ -511,7 +513,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
               id="pros"
               value={pros}
               onChange={(e) => setPros(e.target.value)}
-              placeholder="Excellent speeds&#10;Great for streaming&#10;Strong security"
+              placeholder="Advanced reasoning&#10;Multimodal capabilities&#10;Fast response times"
               rows={5}
             />
           </div>
@@ -522,7 +524,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
               id="cons"
               value={cons}
               onChange={(e) => setCons(e.target.value)}
-              placeholder="Expensive&#10;Limited servers&#10;No free tier"
+              placeholder="Expensive&#10;Limited context window&#10;No free tier"
               rows={5}
             />
           </div>
@@ -531,7 +533,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
 
       <div className="flex justify-end gap-4 pt-4 border-t">
         <Button type="submit" disabled={loading}>
-          {loading ? "Saving..." : vpn ? "Update VPN" : "Create VPN"}
+          {loading ? "Saving..." : vpn ? "Update Agent" : "Create Agent"}
         </Button>
       </div>
     </form>

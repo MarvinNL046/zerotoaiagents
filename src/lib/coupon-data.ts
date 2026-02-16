@@ -3,7 +3,7 @@
 
 export interface Coupon {
   id: string;
-  vpnSlug: string;
+  agentSlug: string;
   code: string;
   discount: string; // e.g., "83% OFF" or "3 months free"
   description?: string;
@@ -15,9 +15,9 @@ export interface Coupon {
 
 export const coupons: Coupon[] = [
   {
-    id: "nordvpn-zerotovpn",
-    vpnSlug: "nordvpn",
-    code: "ZEROTOVPN",
+    id: "nordvpn-zerotoaiagents",
+    agentSlug: "nordvpn",
+    code: "ZEROTOAIAGENTS",
     discount: "83% OFF",
     description: "Save 83% on 2-year plan",
     expiresAt: new Date("2026-12-31"),
@@ -27,7 +27,7 @@ export const coupons: Coupon[] = [
   },
   {
     id: "surfshark-zero25",
-    vpnSlug: "surfshark",
+    agentSlug: "surfshark",
     code: "ZERO25",
     discount: "81% OFF + 3 months free",
     description: "Get 81% off plus 3 extra months on 2-year plan",
@@ -38,7 +38,7 @@ export const coupons: Coupon[] = [
   },
   {
     id: "expressvpn-zerovpn",
-    vpnSlug: "expressvpn",
+    agentSlug: "expressvpn",
     code: "ZEROVPN",
     discount: "49% OFF",
     description: "Save 49% on annual plan",
@@ -49,7 +49,7 @@ export const coupons: Coupon[] = [
   },
   {
     id: "cyberghost-cyber25",
-    vpnSlug: "cyberghost",
+    agentSlug: "cyberghost",
     code: "CYBER25",
     discount: "85% OFF + 3 months free",
     description: "Massive discount on 2-year plan",
@@ -60,7 +60,7 @@ export const coupons: Coupon[] = [
   },
   {
     id: "protonvpn-promo",
-    vpnSlug: "protonvpn",
+    agentSlug: "protonvpn",
     code: "PROMO50",
     discount: "50% OFF",
     description: "Half price on 2-year plan",
@@ -71,9 +71,9 @@ export const coupons: Coupon[] = [
   },
 ];
 
-export function getCouponsByVpnSlug(vpnSlug: string): Coupon[] {
+export function getCouponsByVpnSlug(agentSlug: string): Coupon[] {
   return coupons
-    .filter((coupon) => coupon.vpnSlug === vpnSlug)
+    .filter((coupon) => coupon.agentSlug === agentSlug)
     .filter((coupon) => !coupon.expiresAt || coupon.expiresAt > new Date())
     .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 }
@@ -88,8 +88,8 @@ export function getCouponById(id: string): Coupon | undefined {
   return coupons.find((coupon) => coupon.id === id);
 }
 
-export function hasActiveCoupon(vpnSlug: string): boolean {
-  return getCouponsByVpnSlug(vpnSlug).length > 0;
+export function hasActiveCoupon(agentSlug: string): boolean {
+  return getCouponsByVpnSlug(agentSlug).length > 0;
 }
 
 export function getDaysUntilExpiry(expiresAt?: Date): number | null {
