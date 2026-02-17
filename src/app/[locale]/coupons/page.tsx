@@ -7,7 +7,7 @@ import { getAgentBySlug } from "@/lib/agent-data-layer";
 import { Ticket, TrendingDown, Clock, Shield } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { VpnLogo } from "@/components/ui/vpn-logo";
+import { AgentLogo } from "@/components/ui/agent-logo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -25,27 +25,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${baseUrl}${prefix}/coupons`;
 
   const titles: Record<string, string> = {
-    en: "VPN Coupons & Discount Codes 2026 - Save Up To 83% OFF",
-    nl: "VPN Kortingscodes 2026 - Bespaar tot 83%",
-    de: "VPN Gutscheine 2026 - Sparen Sie bis zu 83%",
-    es: "Cupones VPN 2026 - Ahorra hasta 83%",
-    fr: "Codes Promo VPN 2026 - Économisez jusqu'à 83%",
-    zh: "VPN优惠券2026 - 节省高达83%",
-    ja: "VPNクーポン2026 - 最大83%割引",
-    ko: "VPN 쿠폰 2026 - 최대 83% 할인",
-    th: "คูปอง VPN 2026 - ประหยัดสูงสุด 83%",
+    en: "AI Agent Coupons & Discount Codes 2026 - Save Up To 50% OFF",
+    nl: "AI Agent Kortingscodes 2026 - Bespaar tot 50%",
+    de: "KI-Agent Gutscheine 2026 - Sparen Sie bis zu 50%",
+    es: "Cupones de Agentes IA 2026 - Ahorra hasta 50%",
+    fr: "Codes Promo Agents IA 2026 - Économisez jusqu'à 50%",
+    zh: "AI代理优惠券2026 - 节省高达50%",
+    ja: "AIエージェントクーポン2026 - 最大50%割引",
+    ko: "AI 에이전트 쿠폰 2026 - 최대 50% 할인",
+    th: "คูปอง AI Agent 2026 - ประหยัดสูงสุด 50%",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Get the best VPN deals with verified discount codes. Save up to 83% OFF on NordVPN, Surfshark, ExpressVPN and more. Exclusive coupons updated daily.",
-    nl: "De beste VPN-deals met geverifieerde kortingscodes. Bespaar tot 83% op NordVPN, Surfshark, ExpressVPN en meer. Exclusieve kortingen dagelijks bijgewerkt.",
-    de: "Die besten VPN-Angebote mit verifizierten Gutscheincodes. Sparen Sie bis zu 83% bei NordVPN, Surfshark, ExpressVPN und mehr. Exklusive Gutscheine täglich aktualisiert.",
-    es: "Las mejores ofertas de VPN con códigos de descuento verificados. Ahorra hasta el 83% en NordVPN, Surfshark, ExpressVPN y más. Cupones exclusivos actualizados diariamente.",
-    fr: "Les meilleures offres VPN avec des codes de réduction vérifiés. Économisez jusqu'à 83% sur NordVPN, Surfshark, ExpressVPN et plus. Coupons exclusifs mis à jour quotidiennement.",
-    zh: "获取经过验证的VPN折扣码最佳优惠。NordVPN、Surfshark、ExpressVPN等可节省高达83%。每日更新独家优惠券。",
-    ja: "認証済み割引コードで最高のVPN取引を入手。NordVPN、Surfshark、ExpressVPNなどで最大83%割引。毎日更新される限定クーポン。",
-    ko: "검증된 할인 코드로 최고의 VPN 거래를 받으세요. NordVPN, Surfshark, ExpressVPN 등에서 최대 83% 할인. 매일 업데이트되는 독점 쿠폰.",
-    th: "รับดีลVPNที่ดีที่สุดพร้อมรหัสส่วนลดที่ยืนยันแล้ว ประหยัดสูงสุด 83% สำหรับ NordVPN, Surfshark, ExpressVPN และอื่นๆ คูปองพิเศษอัปเดตทุกวัน",
+    en: "Get the best AI agent deals with verified discount codes. Save up to 50% OFF on Claude Code, Cursor, Replit Agent and more. Exclusive coupons updated daily.",
+    nl: "De beste AI agent deals met geverifieerde kortingscodes. Bespaar tot 50% op Claude Code, Cursor, Replit Agent en meer. Exclusieve kortingen dagelijks bijgewerkt.",
+    de: "Die besten KI-Agent-Angebote mit verifizierten Gutscheincodes. Sparen Sie bis zu 50% bei Claude Code, Cursor, Replit Agent und mehr. Exklusive Gutscheine täglich aktualisiert.",
+    es: "Las mejores ofertas de agentes IA con códigos de descuento verificados. Ahorra hasta el 50% en Claude Code, Cursor, Replit Agent y más. Cupones exclusivos actualizados diariamente.",
+    fr: "Les meilleures offres d'agents IA avec des codes de réduction vérifiés. Économisez jusqu'à 50% sur Claude Code, Cursor, Replit Agent et plus. Coupons exclusifs mis à jour quotidiennement.",
+    zh: "获取经过验证的AI代理折扣码最佳优惠。Claude Code、Cursor、Replit Agent等可节省高达50%。每日更新独家优惠券。",
+    ja: "認証済み割引コードで最高のAIエージェント取引を入手。Claude Code、Cursor、Replit Agentなどで最大50%割引。毎日更新される限定クーポン。",
+    ko: "검증된 할인 코드로 최고의 AI 에이전트 거래를 받으세요. Claude Code, Cursor, Replit Agent 등에서 최대 50% 할인. 매일 업데이트되는 독점 쿠폰.",
+    th: "รับดีล AI Agent ที่ดีที่สุดพร้อมรหัสส่วนลดที่ยืนยันแล้ว ประหยัดสูงสุด 50% สำหรับ Claude Code, Cursor, Replit Agent และอื่นๆ คูปองพิเศษอัปเดตทุกวัน",
   };
 
   // Generate alternates for all languages
@@ -60,15 +60,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
     keywords: [
-      "VPN coupons",
-      "VPN discount codes",
-      "VPN deals",
-      "VPN promo codes",
-      "NordVPN coupon",
-      "Surfshark coupon",
-      "ExpressVPN coupon",
-      "cheap VPN",
-      "VPN sale",
+      "AI agent coupons",
+      "AI agent discount codes",
+      "AI agent deals",
+      "AI agent promo codes",
+      "Claude Code coupon",
+      "Cursor coupon",
+      "Replit Agent coupon",
+      "cheap AI agent",
+      "AI agent sale",
     ],
     alternates: {
       canonical: canonicalUrl,
@@ -97,7 +97,7 @@ export default async function CouponsPage({ params }: Props) {
 
   const allCoupons = await getAllActiveCoupons();
 
-  // Group coupons by VPN
+  // Group coupons by agent
   const couponsByVpn = allCoupons.reduce((acc, coupon) => {
     if (!acc[coupon.agentSlug]) {
       acc[coupon.agentSlug] = [];
@@ -162,7 +162,7 @@ export default async function CouponsPage({ params }: Props) {
           </Card>
         </div>
 
-        {/* All Coupons by VPN */}
+        {/* All Coupons by Agent */}
         <div className="space-y-12">
           {await Promise.all(Object.entries(couponsByVpn).map(async ([agentSlug, coupons]) => {
             const vpn = await getAgentBySlug(agentSlug);
@@ -173,7 +173,7 @@ export default async function CouponsPage({ params }: Props) {
                 <Card>
                   <CardHeader>
                     <div className="flex items-center gap-4">
-                      <VpnLogo name={vpn.name} size="lg" />
+                      <AgentLogo name={vpn.name} size="lg" />
                       <div>
                         <CardTitle className="text-2xl">
                           {vpn.name} {t("coupons")}
@@ -192,7 +192,7 @@ export default async function CouponsPage({ params }: Props) {
                   <CardContent>
                     <CouponList
                       coupons={coupons}
-                      vpnName={vpn.name}
+                      agentName={vpn.name}
                       affiliateUrl={vpn.affiliateUrl}
                     />
                   </CardContent>

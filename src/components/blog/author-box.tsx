@@ -3,10 +3,10 @@ import { Shield, CheckCircle, ExternalLink } from "lucide-react";
 // ZeroToAIAgents expert author info — used across all blog posts for E-E-A-T
 export const AUTHOR = {
   name: "ZeroToAIAgents Expert Team",
-  role: "VPN Security Researchers",
-  bio: "Our team of cybersecurity professionals has tested and reviewed over 50 VPN services since 2024. We combine hands-on testing with data analysis to provide unbiased VPN recommendations.",
+  role: "AI Agent Researchers",
+  bio: "Our team of AI and technology professionals has tested and reviewed over 50 AI agent platforms since 2024. We combine hands-on testing with data analysis to provide unbiased AI agent recommendations.",
   credentials: [
-    "50+ VPN services tested",
+    "50+ AI agents tested",
     "Independent speed & security audits",
     "No sponsored rankings",
   ],

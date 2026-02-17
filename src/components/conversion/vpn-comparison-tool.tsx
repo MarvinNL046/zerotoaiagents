@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { X, Plus, Check, Minus, Crown, Shield, Zap, Code, Star, Users } from "lucide-react";
-import { VpnLogo } from "@/components/ui/vpn-logo";
+import { AgentLogo } from "@/components/ui/agent-logo";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -11,8 +11,8 @@ import { RatingStars } from "@/components/agents/rating-stars";
 import { useTranslations } from "next-intl";
 import type { AiAgentData } from "@/lib/db/agent-service";
 
-interface VpnComparisonToolProps {
-  vpns: AiAgentData[];
+interface AgentComparisonToolProps {
+  agents: AiAgentData[];
   maxCompare?: number;
 }
 
@@ -22,9 +22,9 @@ interface ComparisonRowProps {
   valueKey: keyof AiAgentData;
   format?: "number" | "boolean" | "price" | "array" | "percentage" | "rating";
   betterIs?: "highest" | "lowest";
-  selectedVpns: AiAgentData[];
+  selectedAgents: AiAgentData[];
   maxCompare: number;
-  isWinner: (vpn: AiAgentData, key: keyof AiAgentData, type: "highest" | "lowest") => boolean;
+  isWinner: (agent: AiAgentData, key: keyof AiAgentData, type: "highest" | "lowest") => boolean;
 }
 
 function ComparisonRow({
@@ -33,7 +33,7 @@ function ComparisonRow({
   valueKey,
   format = "number",
   betterIs = "highest",
-  selectedVpns,
+  selectedAgents,
   maxCompare,
   isWinner,
 }: ComparisonRowProps) {
@@ -43,9 +43,9 @@ function ComparisonRow({
         {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
         {label}
       </td>
-      {selectedVpns.map(vpn => {
-        const value = vpn[valueKey];
-        const winner = isWinner(vpn, valueKey, betterIs);
+      {selectedAgents.map(agent => {
+        const value = agent[valueKey];
+        const winner = isWinner(agent, valueKey, betterIs);
 
         let displayValue: React.ReactNode;
         if (format === "boolean") {
@@ -77,46 +77,46 @@ function ComparisonRow({
 
         return (
           <td
-            key={vpn.id}
-            className={`py-3 px-4 text-center ${winner && selectedVpns.length > 1 ? "bg-primary/5 font-semibold" : ""}`}
+            key={agent.id}
+            className={`py-3 px-4 text-center ${winner && selectedAgents.length > 1 ? "bg-primary/5 font-semibold" : ""}`}
           >
             {displayValue}
-            {winner && selectedVpns.length > 1 && format !== "boolean" && (
+            {winner && selectedAgents.length > 1 && format !== "boolean" && (
               <Crown className="h-3 w-3 text-yellow-500 inline ml-1" />
             )}
           </td>
         );
       })}
-      {selectedVpns.length < maxCompare && <td className="py-3 px-4" />}
+      {selectedAgents.length < maxCompare && <td className="py-3 px-4" />}
     </tr>
   );
 }
 
-export function VpnComparisonTool({ vpns, maxCompare = 4 }: VpnComparisonToolProps) {
+export function AgentComparisonTool({ agents, maxCompare = 4 }: AgentComparisonToolProps) {
   const t = useTranslations("comparisonTool");
-  const [selectedVpns, setSelectedVpns] = useState<AiAgentData[]>([]);
-  const [isSelectingVpn, setIsSelectingVpn] = useState(false);
+  const [selectedAgents, setSelectedAgents] = useState<AiAgentData[]>([]);
+  const [isSelectingAgent, setIsSelectingAgent] = useState(false);
 
-  const availableVpns = useMemo(() => {
-    return vpns.filter(vpn => !selectedVpns.some(s => s.id === vpn.id));
-  }, [vpns, selectedVpns]);
+  const availableAgents = useMemo(() => {
+    return agents.filter(agent => !selectedAgents.some(s => s.id === agent.id));
+  }, [agents, selectedAgents]);
 
-  const addVpn = (vpn: AiAgentData) => {
-    if (selectedVpns.length < maxCompare) {
-      setSelectedVpns([...selectedVpns, vpn]);
-      setIsSelectingVpn(false);
+  const addAgent = (agent: AiAgentData) => {
+    if (selectedAgents.length < maxCompare) {
+      setSelectedAgents([...selectedAgents, agent]);
+      setIsSelectingAgent(false);
     }
   };
 
-  const removeVpn = (vpnId: string) => {
-    setSelectedVpns(selectedVpns.filter(v => v.id !== vpnId));
+  const removeAgent = (agentId: string) => {
+    setSelectedAgents(selectedAgents.filter(a => a.id !== agentId));
   };
 
   const getBestValue = (key: keyof AiAgentData, type: "highest" | "lowest" = "highest"): number | null => {
-    if (selectedVpns.length < 2) return null;
-    const values = selectedVpns
-      .map(vpn => {
-        const value = vpn[key];
+    if (selectedAgents.length < 2) return null;
+    const values = selectedAgents
+      .map(agent => {
+        const value = agent[key];
         return typeof value === 'number' ? value : null;
       })
       .filter((v): v is number => v !== null);
@@ -125,9 +125,9 @@ export function VpnComparisonTool({ vpns, maxCompare = 4 }: VpnComparisonToolPro
     return type === "highest" ? Math.max(...values) : Math.min(...values);
   };
 
-  const isWinner = (vpn: AiAgentData, key: keyof AiAgentData, type: "highest" | "lowest" = "highest"): boolean => {
+  const isWinner = (agent: AiAgentData, key: keyof AiAgentData, type: "highest" | "lowest" = "highest"): boolean => {
     const best = getBestValue(key, type);
-    const value = vpn[key];
+    const value = agent[key];
     return best !== null && typeof value === 'number' && value === best;
   };
 
@@ -139,55 +139,55 @@ export function VpnComparisonTool({ vpns, maxCompare = 4 }: VpnComparisonToolPro
             <h2 className="text-2xl font-bold">{t("title")}</h2>
             <p className="text-muted-foreground">{t("subtitle")}</p>
           </div>
-          {selectedVpns.length > 0 && (
+          {selectedAgents.length > 0 && (
             <Badge variant="secondary">
-              {selectedVpns.length}/{maxCompare} {t("selected")}
+              {selectedAgents.length}/{maxCompare} {t("selected")}
             </Badge>
           )}
         </div>
       </CardHeader>
 
       <CardContent className="p-0">
-        {/* VPN selector cards */}
+        {/* Agent selector cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 border-b bg-muted/30">
-          {selectedVpns.map(vpn => (
+          {selectedAgents.map(agent => (
             <div
-              key={vpn.id}
+              key={agent.id}
               className="relative bg-background rounded-lg border p-4 text-center"
             >
               <button
-                onClick={() => removeVpn(vpn.id)}
+                onClick={() => removeAgent(agent.id)}
                 className="absolute -top-2 -right-2 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80 transition-colors"
                 aria-label={t("remove")}
               >
                 <X className="h-4 w-4" />
               </button>
-              <VpnLogo name={vpn.name} size="md" className="mx-auto" />
-              <p className="mt-2 font-semibold text-sm">{vpn.name}</p>
-              <RatingStars rating={vpn.overallRating} size="sm" />
+              <AgentLogo name={agent.name} size="md" className="mx-auto" />
+              <p className="mt-2 font-semibold text-sm">{agent.name}</p>
+              <RatingStars rating={agent.overallRating} size="sm" />
             </div>
           ))}
 
-          {selectedVpns.length < maxCompare && (
+          {selectedAgents.length < maxCompare && (
             <div className="relative">
-              {isSelectingVpn ? (
+              {isSelectingAgent ? (
                 <div className="bg-background rounded-lg border p-2 max-h-48 overflow-y-auto">
                   <div className="space-y-1">
-                    {availableVpns.map(vpn => (
+                    {availableAgents.map(agent => (
                       <button
-                        key={vpn.id}
-                        onClick={() => addVpn(vpn)}
+                        key={agent.id}
+                        onClick={() => addAgent(agent)}
                         className="w-full text-left p-2 rounded hover:bg-muted transition-colors flex items-center gap-2"
                       >
-                        <VpnLogo name={vpn.name} size="sm" />
-                        <span className="text-sm">{vpn.name}</span>
+                        <AgentLogo name={agent.name} size="sm" />
+                        <span className="text-sm">{agent.name}</span>
                       </button>
                     ))}
                   </div>
                 </div>
               ) : (
                 <button
-                  onClick={() => setIsSelectingVpn(true)}
+                  onClick={() => setIsSelectingAgent(true)}
                   className="w-full h-full min-h-24 bg-background rounded-lg border-2 border-dashed border-muted-foreground/30 hover:border-primary/50 transition-colors flex flex-col items-center justify-center gap-2 text-muted-foreground hover:text-primary"
                 >
                   <Plus className="h-8 w-8" />
@@ -199,63 +199,63 @@ export function VpnComparisonTool({ vpns, maxCompare = 4 }: VpnComparisonToolPro
         </div>
 
         {/* Comparison table */}
-        {selectedVpns.length > 0 ? (
+        {selectedAgents.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="border-b bg-muted/50">
                   <th className="py-3 px-4 text-left font-semibold">{t("feature")}</th>
-                  {selectedVpns.map(vpn => (
-                    <th key={vpn.id} className="py-3 px-4 text-center font-semibold">
-                      {vpn.name}
+                  {selectedAgents.map(agent => (
+                    <th key={agent.id} className="py-3 px-4 text-center font-semibold">
+                      {agent.name}
                     </th>
                   ))}
-                  {selectedVpns.length < maxCompare && <th className="py-3 px-4" />}
+                  {selectedAgents.length < maxCompare && <th className="py-3 px-4" />}
                 </tr>
               </thead>
               <tbody>
                 {/* Pricing */}
                 <tr className="bg-muted/30">
-                  <td colSpan={selectedVpns.length + 2} className="py-2 px-4 font-bold text-sm text-muted-foreground">
+                  <td colSpan={selectedAgents.length + 2} className="py-2 px-4 font-bold text-sm text-muted-foreground">
                     {t("pricing")}
                   </td>
                 </tr>
-                <ComparisonRow label={t("monthlyPrice")} valueKey="monthlyPrice" format="price" betterIs="lowest" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label={t("yearlyPrice")} valueKey="annualPrice" format="price" betterIs="lowest" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Free Tier" valueKey="hasFreeTier" format="boolean" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("monthlyPrice")} valueKey="monthlyPrice" format="price" betterIs="lowest" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("yearlyPrice")} valueKey="annualPrice" format="price" betterIs="lowest" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("freeTier")} valueKey="hasFreeTier" format="boolean" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
 
                 {/* Ratings */}
                 <tr className="bg-muted/30">
-                  <td colSpan={selectedVpns.length + 2} className="py-2 px-4 font-bold text-sm text-muted-foreground">
+                  <td colSpan={selectedAgents.length + 2} className="py-2 px-4 font-bold text-sm text-muted-foreground">
                     {t("performance")}
                   </td>
                 </tr>
-                <ComparisonRow label="Overall Rating" icon={Star} valueKey="overallRating" format="rating" betterIs="highest" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Ease of Use" icon={Users} valueKey="easeOfUse" format="rating" betterIs="highest" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Performance" icon={Zap} valueKey="performance" format="rating" betterIs="highest" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Value for Money" icon={Shield} valueKey="valueForMoney" format="rating" betterIs="highest" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("overallRating")} icon={Star} valueKey="overallRating" format="rating" betterIs="highest" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("easeOfUse")} icon={Users} valueKey="easeOfUse" format="rating" betterIs="highest" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("performanceLabel")} icon={Zap} valueKey="performance" format="rating" betterIs="highest" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("valueForMoney")} icon={Shield} valueKey="valueForMoney" format="rating" betterIs="highest" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
 
                 {/* Features */}
                 <tr className="bg-muted/30">
-                  <td colSpan={selectedVpns.length + 2} className="py-2 px-4 font-bold text-sm text-muted-foreground">
+                  <td colSpan={selectedAgents.length + 2} className="py-2 px-4 font-bold text-sm text-muted-foreground">
                     {t("features")}
                   </td>
                 </tr>
-                <ComparisonRow label="Category" valueKey="category" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Max Users" icon={Users} valueKey="maxUsers" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="API Access" icon={Code} valueKey="apiAccess" format="boolean" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Models Supported" valueKey="modelsSupported" format="array" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
-                <ComparisonRow label="Integrations" valueKey="integrations" format="array" selectedVpns={selectedVpns} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("category")} valueKey="category" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("maxUsers")} icon={Users} valueKey="maxUsers" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("apiAccess")} icon={Code} valueKey="apiAccess" format="boolean" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("modelsSupported")} valueKey="modelsSupported" format="array" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
+                <ComparisonRow label={t("integrationsLabel")} valueKey="integrations" format="array" selectedAgents={selectedAgents} maxCompare={maxCompare} isWinner={isWinner} />
 
                 {/* CTA Row */}
                 <tr className="border-t-2">
                   <td className="py-4 px-4 font-semibold">{t("getStarted")}</td>
-                  {selectedVpns.map(vpn => (
-                    <td key={vpn.id} className="py-4 px-4 text-center">
+                  {selectedAgents.map(agent => (
+                    <td key={agent.id} className="py-4 px-4 text-center">
                       <AffiliateButton
-                        agentId={vpn.id}
-                        agentName={vpn.name}
-                        affiliateUrl={vpn.affiliateUrl}
+                        agentId={agent.id}
+                        agentName={agent.name}
+                        affiliateUrl={agent.affiliateUrl}
                         size="sm"
                         className="w-full"
                       >
@@ -263,7 +263,7 @@ export function VpnComparisonTool({ vpns, maxCompare = 4 }: VpnComparisonToolPro
                       </AffiliateButton>
                     </td>
                   ))}
-                  {selectedVpns.length < maxCompare && <td className="py-4 px-4" />}
+                  {selectedAgents.length < maxCompare && <td className="py-4 px-4" />}
                 </tr>
               </tbody>
             </table>
@@ -275,7 +275,7 @@ export function VpnComparisonTool({ vpns, maxCompare = 4 }: VpnComparisonToolPro
             </div>
             <h3 className="text-lg font-semibold mb-2">{t("noVpnsSelected")}</h3>
             <p className="text-muted-foreground mb-4">{t("selectToCompare")}</p>
-            <Button onClick={() => setIsSelectingVpn(true)}>
+            <Button onClick={() => setIsSelectingAgent(true)}>
               <Plus className="h-4 w-4 mr-2" />
               {t("addFirstVpn")}
             </Button>

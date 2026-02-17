@@ -4,9 +4,9 @@ import { getAllAgentsFromDb, createAgent, getAgentCount } from "@/lib/db/agent-s
 // GET /api/admin/vpns - List all AI agents
 export async function GET() {
   try {
-    const vpns = await getAllAgentsFromDb();
+    const agents = await getAllAgentsFromDb();
     const count = await getAgentCount();
-    return NextResponse.json({ vpns, count });
+    return NextResponse.json({ vpns: agents, count });
   } catch (error) {
     console.error("Error fetching AI agents:", error);
     return NextResponse.json(
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const vpn = await createAgent({
+    const agent = await createAgent({
       name: data.name,
       slug: data.slug,
       logo: data.logo || null,
@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
       sortOrder: data.sortOrder || 999,
     });
 
-    return NextResponse.json({ vpn }, { status: 201 });
+    return NextResponse.json({ agent }, { status: 201 });
   } catch (error) {
     console.error("Error creating AI agent:", error);
     return NextResponse.json(

@@ -1483,7 +1483,11 @@
     "getDeal": "Obtener Oferta",
     "revealCode": "Revelar Código",
     "copied": "¡Copiado!",
-    "copyCode": "Copiar Código"
+    "copyCode": "Copiar Código",
+    "code": "Código",
+    "copy": "Copiar",
+    "verified": "Verificado",
+    "expires": "Expira"
   },
   "couponsPage": {
     "meta": {

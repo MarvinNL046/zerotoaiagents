@@ -56,27 +56,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles: Record<string, string> = {
-    en: "VPN Blog - News, Tips & Security Guides | ZeroToAIAgents",
-    nl: "VPN Blog - Nieuws, Tips & Beveiligingsgidsen | ZeroToAIAgents",
-    de: "VPN Blog - Neuigkeiten, Tipps & Sicherheitsleitfäden | ZeroToAIAgents",
-    es: "Blog VPN - Noticias, Consejos y Guías de Seguridad | ZeroToAIAgents",
-    fr: "Blog VPN - Actualités, Conseils et Guides de Sécurité | ZeroToAIAgents",
-    zh: "VPN博客 - 新闻、技巧和安全指南 | ZeroToAIAgents",
-    ja: "VPNブログ - ニュース、ヒント、セキュリティガイド | ZeroToAIAgents",
-    ko: "VPN 블로그 - 뉴스, 팁 및 보안 가이드 | ZeroToAIAgents",
-    th: "VPN บล็อก - ข่าว เคล็ดลับ และคู่มือความปลอดภัย | ZeroToAIAgents",
+    en: "AI Agent Blog - News, Tips & Guides | ZeroToAIAgents",
+    nl: "AI Agent Blog - Nieuws, Tips & Gidsen | ZeroToAIAgents",
+    de: "KI-Agent Blog - Neuigkeiten, Tipps & Leitfäden | ZeroToAIAgents",
+    es: "Blog de Agentes IA - Noticias, Consejos y Guías | ZeroToAIAgents",
+    fr: "Blog Agents IA - Actualités, Conseils et Guides | ZeroToAIAgents",
+    zh: "AI代理博客 - 新闻、技巧和指南 | ZeroToAIAgents",
+    ja: "AIエージェントブログ - ニュース、ヒント、ガイド | ZeroToAIAgents",
+    ko: "AI 에이전트 블로그 - 뉴스, 팁 및 가이드 | ZeroToAIAgents",
+    th: "บล็อก AI Agent - ข่าว เคล็ดลับ และคู่มือ | ZeroToAIAgents",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Stay updated with the latest VPN news, security tips, and in-depth guides. Learn about VPN deals, privacy, and online security.",
-    nl: "Blijf op de hoogte van het laatste VPN-nieuws, beveiligingstips en uitgebreide gidsen. Leer over VPN-deals, privacy en online beveiliging.",
-    de: "Bleiben Sie auf dem Laufenden mit den neuesten VPN-Nachrichten, Sicherheitstipps und ausführlichen Leitfäden. Erfahren Sie mehr über VPN-Angebote, Datenschutz und Online-Sicherheit.",
-    es: "Mantente actualizado con las últimas noticias de VPN, consejos de seguridad y guías detalladas. Aprende sobre ofertas de VPN, privacidad y seguridad en línea.",
-    fr: "Restez informé des dernières actualités VPN, conseils de sécurité et guides détaillés. Apprenez-en plus sur les offres VPN, la confidentialité et la sécurité en ligne.",
-    zh: "了解最新的VPN新闻、安全提示和深入指南。学习VPN优惠、隐私和在线安全知识。",
-    ja: "最新のVPNニュース、セキュリティのヒント、詳細なガイドで最新情報を入手。VPNのお得な情報、プライバシー、オンラインセキュリティについて学びましょう。",
-    ko: "최신 VPN 뉴스, 보안 팁 및 심층 가이드로 최신 정보를 유지하세요. VPN 거래, 개인 정보 보호 및 온라인 보안에 대해 알아보세요.",
-    th: "อัปเดตข่าวสาร VPN ล่าสุด เคล็ดลับความปลอดภัย และคู่มือเชิงลึก เรียนรู้เกี่ยวกับดีล VPN ความเป็นส่วนตัว และความปลอดภัยออนไลน์",
+    en: "Stay updated with the latest AI agent news, tips, and in-depth guides. Learn about AI agent platforms, use cases, and best practices.",
+    nl: "Blijf op de hoogte van het laatste AI agent nieuws, tips en uitgebreide gidsen. Leer over AI agent platforms, toepassingen en best practices.",
+    de: "Bleiben Sie auf dem Laufenden mit den neuesten KI-Agent-Nachrichten, Tipps und ausführlichen Leitfäden. Erfahren Sie mehr über KI-Agent-Plattformen, Anwendungsfälle und Best Practices.",
+    es: "Mantente actualizado con las últimas noticias de agentes IA, consejos y guías detalladas. Aprende sobre plataformas de agentes IA, casos de uso y mejores prácticas.",
+    fr: "Restez informé des dernières actualités sur les agents IA, conseils et guides détaillés. Apprenez-en plus sur les plateformes d'agents IA, cas d'usage et meilleures pratiques.",
+    zh: "了解最新的AI代理新闻、技巧和深入指南。学习AI代理平台、用例和最佳实践。",
+    ja: "最新のAIエージェントニュース、ヒント、詳細なガイドで最新情報を入手。AIエージェントプラットフォーム、ユースケース、ベストプラクティスについて学びましょう。",
+    ko: "최신 AI 에이전트 뉴스, 팁 및 심층 가이드로 최신 정보를 유지하세요. AI 에이전트 플랫폼, 사용 사례 및 모범 사례에 대해 알아보세요.",
+    th: "อัปเดตข่าวสาร AI Agent ล่าสุด เคล็ดลับ และคู่มือเชิงลึก เรียนรู้เกี่ยวกับแพลตฟอร์ม AI Agent กรณีการใช้งาน และแนวทางปฏิบัติที่ดีที่สุด",
   };
 
   return {
@@ -90,31 +90,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-
-// Blog posts data
-const blogPosts = [
-  {
-    slug: "vpn-black-friday-2026",
-    category: "deals",
-    featured: true,
-    date: "2026-11-29",
-    readTime: "5 min",
-  },
-  {
-    slug: "is-vpn-legal",
-    category: "security",
-    featured: false,
-    date: "2026-01-15",
-    readTime: "8 min",
-  },
-  {
-    slug: "vpn-vs-proxy",
-    category: "tips",
-    featured: false,
-    date: "2026-01-10",
-    readTime: "6 min",
-  },
-];
 
 const categoryConfig: Record<string, {
   icon: typeof TrendingUp;
@@ -230,11 +205,8 @@ export default async function BlogPage({ params }: Props) {
     // DB might not be available during build — continue with static posts only
   }
 
-  // Merge static + dynamic, static posts first
-  const allPosts = [
-    ...blogPosts.map((p) => ({ ...p, isDynamic: false as const, title: "", excerpt: "", featuredImage: null })),
-    ...dynamicPosts,
-  ];
+  // Use only dynamic posts from DB
+  const allPosts = dynamicPosts;
 
   const featuredPost = allPosts.find((post) => post.featured);
   const otherPosts = allPosts.filter((post) => !post.featured);
@@ -469,12 +441,12 @@ export default async function BlogPage({ params }: Props) {
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <RelatedPages
-              title="Explore More"
+              title={t("relatedPages.title")}
               pages={[
-                { title: "Best VPNs 2026", description: "Our top-rated VPN services", href: "/best/best-vpn", icon: "trophy" },
-                { title: "VPN Black Friday Deals", description: "Biggest discounts of the year", href: "/blog/vpn-black-friday-2026", icon: "tag" },
-                { title: "Is VPN Legal?", description: "VPN legality around the world", href: "/blog/is-vpn-legal", icon: "shield" },
-                { title: "VPN vs Proxy", description: "Differences and when to use each", href: "/blog/vpn-vs-proxy", icon: "zap" }
+                { title: t("relatedPages.bestAgents"), description: t("relatedPages.bestAgentsDesc"), href: "/best/coding-agents", icon: "trophy" },
+                { title: t("relatedPages.guides"), description: t("relatedPages.guidesDesc"), href: "/guides/what-is-ai-agent", icon: "shield" },
+                { title: t("relatedPages.compare"), description: t("relatedPages.compareDesc"), href: "/compare", icon: "zap" },
+                { title: t("relatedPages.useCases"), description: t("relatedPages.useCasesDesc"), href: "/use-cases", icon: "tag" }
               ]}
             />
           </div>

@@ -22,7 +22,7 @@ export interface ScrapedNews {
   source: string;
   url: string;
   date?: string;
-  vpnMentions: string[];
+  agentMentions: string[];
 }
 
 export interface ScrapedCountryData {
@@ -192,7 +192,7 @@ export async function scrapeAgentNews(): Promise<ScrapedNews[]> {
         source: new URL(sourceUrl).hostname,
         url: sourceUrl,
         date: new Date().toISOString(),
-        vpnMentions: extractAgentMentions(content), // Keep field name for compatibility
+        agentMentions: extractAgentMentions(content),
       };
     })
   );

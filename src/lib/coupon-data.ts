@@ -1,11 +1,11 @@
-// Static coupon data for VPN deals
+// Static coupon data for AI agent deals
 // This will be replaced with database queries once Neon is configured
 
 export interface Coupon {
   id: string;
   agentSlug: string;
   code: string;
-  discount: string; // e.g., "83% OFF" or "3 months free"
+  discount: string; // e.g., "50% OFF" or "1 month free"
   description?: string;
   expiresAt?: Date;
   isVerified: boolean;
@@ -15,55 +15,55 @@ export interface Coupon {
 
 export const coupons: Coupon[] = [
   {
-    id: "nordvpn-zerotoaiagents",
-    agentSlug: "nordvpn",
+    id: "cursor-zerotoaiagents",
+    agentSlug: "cursor",
     code: "ZEROTOAIAGENTS",
-    discount: "83% OFF",
-    description: "Save 83% on 2-year plan",
+    discount: "50% OFF",
+    description: "Save 50% on first year of Cursor Pro",
     expiresAt: new Date("2026-12-31"),
     isVerified: true,
     clickCount: 0,
     createdAt: new Date("2026-01-01"),
   },
   {
-    id: "surfshark-zero25",
-    agentSlug: "surfshark",
+    id: "n8n-zero25",
+    agentSlug: "n8n-ai",
     code: "ZERO25",
-    discount: "81% OFF + 3 months free",
-    description: "Get 81% off plus 3 extra months on 2-year plan",
+    discount: "25% OFF",
+    description: "Get 25% off n8n Cloud annual plan",
     expiresAt: new Date("2026-12-31"),
     isVerified: true,
     clickCount: 0,
     createdAt: new Date("2026-01-01"),
   },
   {
-    id: "expressvpn-zerovpn",
-    agentSlug: "expressvpn",
-    code: "ZEROVPN",
-    discount: "49% OFF",
-    description: "Save 49% on annual plan",
+    id: "copilot-annual",
+    agentSlug: "github-copilot",
+    code: "COPILOT20",
+    discount: "20% OFF",
+    description: "Save 20% on GitHub Copilot Business annual plan",
     expiresAt: new Date("2026-12-31"),
     isVerified: true,
     clickCount: 0,
     createdAt: new Date("2026-01-01"),
   },
   {
-    id: "cyberghost-cyber25",
-    agentSlug: "cyberghost",
-    code: "CYBER25",
-    discount: "85% OFF + 3 months free",
-    description: "Massive discount on 2-year plan",
+    id: "windsurf-promo",
+    agentSlug: "windsurf",
+    code: "WIND30",
+    discount: "30% OFF",
+    description: "30% off Windsurf Pro for the first 3 months",
     expiresAt: new Date("2026-06-30"),
     isVerified: true,
     clickCount: 0,
     createdAt: new Date("2026-01-01"),
   },
   {
-    id: "protonvpn-promo",
-    agentSlug: "protonvpn",
-    code: "PROMO50",
+    id: "relevance-ai-promo",
+    agentSlug: "relevance-ai",
+    code: "RELEVANCE50",
     discount: "50% OFF",
-    description: "Half price on 2-year plan",
+    description: "Half price on Relevance AI annual plan",
     expiresAt: new Date("2026-12-31"),
     isVerified: true,
     clickCount: 0,
@@ -71,7 +71,7 @@ export const coupons: Coupon[] = [
   },
 ];
 
-export function getCouponsByVpnSlug(agentSlug: string): Coupon[] {
+export function getCouponsByAgentSlug(agentSlug: string): Coupon[] {
   return coupons
     .filter((coupon) => coupon.agentSlug === agentSlug)
     .filter((coupon) => !coupon.expiresAt || coupon.expiresAt > new Date())
@@ -89,7 +89,7 @@ export function getCouponById(id: string): Coupon | undefined {
 }
 
 export function hasActiveCoupon(agentSlug: string): boolean {
-  return getCouponsByVpnSlug(agentSlug).length > 0;
+  return getCouponsByAgentSlug(agentSlug).length > 0;
 }
 
 export function getDaysUntilExpiry(expiresAt?: Date): number | null {

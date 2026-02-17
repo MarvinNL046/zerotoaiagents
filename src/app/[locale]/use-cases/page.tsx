@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,11 +12,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
+  const t = await getTranslations({ locale, namespace: "useCasesPage.meta" });
 
   return {
-    title: "AI Agent Use Cases | ZeroToAIAgents",
-    description: "Discover how AI agents can transform your workflow. Explore use cases for coding, marketing, customer support, and more.",
+    title: t("title"),
+    description: t("description"),
   };
 }
 
@@ -26,21 +26,21 @@ export default async function UseCasesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "useCasesPage" });
 
   return (
     <div className="container mx-auto py-12 px-4">
       {/* Hero Section */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <Badge className="mb-4" variant="secondary">
-          Use Cases
+          {t("badge")}
         </Badge>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Discover AI Agent Use Cases
+          {t("title")}
         </h1>
         <p className="text-xl text-muted-foreground">
-          From software development to customer support, AI agents are transforming how we work.
-          Explore use cases and find the perfect AI agents for your needs.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -72,14 +72,14 @@ export default async function UseCasesPage({
               {/* Recommended agents count */}
               <div className="pt-2 border-t">
                 <p className="text-sm text-muted-foreground">
-                  <strong>{useCase.recommendedAgentSlugs.length}</strong> recommended AI agents
+                  {t("recommendedAgents", { count: useCase.recommendedAgentSlugs.length })}
                 </p>
               </div>
 
               {/* CTA */}
               <Button asChild className="w-full" variant="default">
                 <Link href={`/use-cases/${useCase.slug}`}>
-                  Explore {useCase.name}
+                  {t("explore", { name: useCase.name })}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -91,17 +91,17 @@ export default async function UseCasesPage({
       {/* Bottom CTA */}
       <div className="mt-16 text-center max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">
-          Not Sure Which AI Agent You Need?
+          {t("ctaTitle")}
         </h2>
         <p className="text-muted-foreground mb-6">
-          Take our quick quiz to get personalized AI agent recommendations based on your specific needs.
+          {t("ctaSubtitle")}
         </p>
         <div className="flex gap-4 justify-center">
           <Button asChild size="lg">
-            <Link href="/quiz">Take the Quiz</Link>
+            <Link href="/quiz">{t("takeQuiz")}</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/reviews">View All AI Agents</Link>
+            <Link href="/reviews">{t("viewAllAgents")}</Link>
           </Button>
         </div>
       </div>

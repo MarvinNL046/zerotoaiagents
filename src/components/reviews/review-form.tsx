@@ -19,11 +19,11 @@ import { usageTypeLabels, usagePeriodLabels } from "@/lib/user-reviews";
 
 interface ReviewFormProps {
   agentSlug: string;
-  vpnName: string;
+  agentName: string;
   locale: string;
 }
 
-export function ReviewForm({ agentSlug, vpnName, locale }: ReviewFormProps) {
+export function ReviewForm({ agentSlug, agentName, locale }: ReviewFormProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -44,13 +44,13 @@ export function ReviewForm({ agentSlug, vpnName, locale }: ReviewFormProps) {
   const labels = {
     en: {
       writeReview: "Write a Review",
-      shareExperience: `Share your experience with ${vpnName}`,
+      shareExperience: `Share your experience with ${agentName}`,
       yourRating: "Your Rating",
       clickToRate: "Click to rate",
       reviewTitle: "Review Title",
       titlePlaceholder: "Summarize your experience",
       yourReview: "Your Review",
-      reviewPlaceholder: "What did you like or dislike? What did you use this VPN for?",
+      reviewPlaceholder: "What did you like or dislike? What did you use this AI agent for?",
       yourName: "Your Name",
       namePlaceholder: "John D.",
       yourEmail: "Your Email",
@@ -74,17 +74,17 @@ export function ReviewForm({ agentSlug, vpnName, locale }: ReviewFormProps) {
       required: "This field is required",
       invalidEmail: "Please enter a valid email",
       ratingRequired: "Please select a rating",
-      newsletterConsent: "Yes, I want to receive VPN deals and tips via email",
+      newsletterConsent: "Yes, I want to receive AI agent deals and tips via email",
     },
     nl: {
       writeReview: "Schrijf een Review",
-      shareExperience: `Deel je ervaring met ${vpnName}`,
+      shareExperience: `Deel je ervaring met ${agentName}`,
       yourRating: "Jouw Beoordeling",
       clickToRate: "Klik om te beoordelen",
       reviewTitle: "Review Titel",
       titlePlaceholder: "Vat je ervaring samen",
       yourReview: "Jouw Review",
-      reviewPlaceholder: "Wat vond je goed of slecht? Waarvoor heb je deze VPN gebruikt?",
+      reviewPlaceholder: "Wat vond je goed of slecht? Waarvoor heb je deze AI agent gebruikt?",
       yourName: "Je Naam",
       namePlaceholder: "Jan de V.",
       yourEmail: "Je E-mail",
@@ -108,7 +108,7 @@ export function ReviewForm({ agentSlug, vpnName, locale }: ReviewFormProps) {
       required: "Dit veld is verplicht",
       invalidEmail: "Voer een geldig e-mailadres in",
       ratingRequired: "Selecteer een beoordeling",
-      newsletterConsent: "Ja, ik wil graag VPN deals en tips ontvangen per email",
+      newsletterConsent: "Ja, ik wil graag AI agent deals en tips ontvangen per email",
     },
   };
 

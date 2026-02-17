@@ -6,16 +6,16 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 interface StickyCTABarProps {
-  vpnName?: string;
+  agentName?: string;
   discountPercent?: number;
   affiliateUrl?: string;
   position?: "top" | "bottom";
 }
 
 export function StickyCTABar({
-  vpnName = "NordVPN",
+  agentName = "Cursor",
   discountPercent = 68,
-  affiliateUrl = "https://go.zerotoaiagents.com/nordvpn",
+  affiliateUrl = "https://go.zerotoaiagents.com/cursor",
   position = "bottom",
 }: StickyCTABarProps) {
   const t = useTranslations("stickyBar");
@@ -74,10 +74,10 @@ export function StickyCTABar({
                   {discountPercent}% OFF
                 </span>
                 <span className="hidden md:inline text-primary-foreground/90">
-                  {t("getExclusive", { vpn: vpnName })}
+                  {t("getExclusive", { vpn: agentName })}
                 </span>
                 <span className="md:hidden text-primary-foreground/90 truncate">
-                  {vpnName}
+                  {agentName}
                 </span>
               </div>
               <p className="text-sm text-primary-foreground/80 hidden lg:block">

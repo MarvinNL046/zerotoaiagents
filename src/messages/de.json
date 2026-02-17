@@ -1483,7 +1483,11 @@
     "getDeal": "Angebot Holen",
     "revealCode": "Code Anzeigen",
     "copied": "Kopiert!",
-    "copyCode": "Code Kopieren"
+    "copyCode": "Code Kopieren",
+    "code": "Code",
+    "copy": "Kopieren",
+    "verified": "Verifiziert",
+    "expires": "Läuft ab"
   },
   "couponsPage": {
     "meta": {

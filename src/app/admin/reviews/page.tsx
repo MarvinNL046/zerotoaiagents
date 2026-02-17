@@ -11,11 +11,11 @@ export const dynamic = "force-dynamic";
 export default async function ReviewModerationPage({
   searchParams,
 }: {
-  searchParams: { status?: string; vpn?: string };
+  searchParams: { status?: string; agent?: string };
 }) {
   // Get filter values
   const filterStatus = searchParams.status || "all";
-  const filterVpn = searchParams.vpn || "all";
+  const filterAgent = searchParams.agent || "all";
 
   // Determine approved filter
   let approvedFilter: boolean | undefined = undefined;
@@ -25,12 +25,12 @@ export default async function ReviewModerationPage({
   // Fetch reviews from database
   const { reviews, pagination } = await getAdminReviews({
     approved: approvedFilter,
-    agentSlug: filterVpn !== "all" ? filterVpn : undefined,
+    agentSlug: filterAgent !== "all" ? filterAgent : undefined,
     page: 1,
     limit: 50,
   });
 
-  // Get unique VPN slugs for filter
+  // Get unique agent slugs for filter
   const agentSlugs = [...new Set(reviews.map((r) => r.agentSlug))];
 
   // Count pending reviews
@@ -63,7 +63,7 @@ export default async function ReviewModerationPage({
       <ReviewFilters
         agentSlugs={agentSlugs}
         currentStatus={filterStatus}
-        currentVpn={filterVpn}
+        currentVpn={filterAgent}
       />
 
       {/* Reviews List */}

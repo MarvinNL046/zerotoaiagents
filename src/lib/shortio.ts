@@ -146,7 +146,7 @@ export async function getLinkStats(linkId: string): Promise<LinkStats> {
 }
 
 /**
- * Get aggregated analytics for all VPN links
+ * Get aggregated analytics for all affiliate links
  */
 export async function getClickAnalytics(
   _days: number = 7
@@ -154,8 +154,8 @@ export async function getClickAnalytics(
   try {
     const links = await getAllLinks();
 
-    // Filter only VPN links (from go.zerotoaiagents.com)
-    const vpnLinks = links.filter((link) =>
+    // Filter only agent affiliate links (from go.zerotoaiagents.com)
+    const agentLinks = links.filter((link) =>
       link.path && !link.path.includes("admin")
     );
 
@@ -173,7 +173,7 @@ export async function getClickAnalytics(
 
     const linkStats: LinkStats[] = [];
 
-    for (const link of vpnLinks) {
+    for (const link of agentLinks) {
       const clicks = link.clicks || 0;
       totalClicks += clicks;
 
@@ -204,7 +204,7 @@ export async function getClickAnalytics(
     const topLinks = linkStats.slice(0, 5).map((stat) => ({
       path: stat.path,
       clicks: stat.clicks,
-      agentName: formatVpnName(stat.path),
+      agentName: formatAgentName(stat.path),
     }));
 
     // Calculate trend (simple: compare this week vs last week)
@@ -227,9 +227,9 @@ export async function getClickAnalytics(
 }
 
 /**
- * Format VPN path to display name
+ * Format agent path to display name
  */
-function formatVpnName(path: string): string {
+function formatAgentName(path: string): string {
   if (!path) return "Unknown";
 
   // Remove leading slash and convert to title case
@@ -241,8 +241,8 @@ function formatVpnName(path: string): string {
 }
 
 /**
- * Get VPN name from slug for display
+ * Get agent name from slug for display
  */
-export function getVpnNameFromPath(path: string): string {
-  return formatVpnName(path);
+export function getAgentNameFromPath(path: string): string {
+  return formatAgentName(path);
 }

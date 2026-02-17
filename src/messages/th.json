@@ -1483,7 +1483,11 @@
     "getDeal": "Get Deal",
     "revealCode": "Reveal Code",
     "copied": "Copied!",
-    "copyCode": "Copy Code"
+    "copyCode": "Copy Code",
+    "code": "รหัส",
+    "copy": "คัดลอก",
+    "verified": "ยืนยันแล้ว",
+    "expires": "หมดอายุ"
   },
   "couponsPage": {
     "meta": {

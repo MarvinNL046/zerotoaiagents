@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(baseUrl),
     title: "About ZeroToAIAgents | Our Testing Methodology",
     description:
-      "Learn about ZeroToAIAgents's independent AI agent testing methodology, our expert team, and our commitment to honest, unbiased reviews. No sponsored rankings.",
+      "Learn about ZeroToAIAgents's independent AI Agent testing methodology, our expert team, and our commitment to honest, unbiased reviews. No sponsored rankings.",
     robots: {
       index: true,
       follow: true,
@@ -50,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "About ZeroToAIAgents | Our Testing Methodology",
       description:
-        "Discover how we independently test and review AI agent platforms. Our rigorous methodology covers features, performance, pricing, and integration capabilities.",
+        "Discover how we independently test and review AI Agent platforms. Our rigorous methodology covers features, performance, pricing, and integration capabilities.",
       url: `${baseUrl}/about`,
       siteName: "ZeroToAIAgents",
       type: "website",
@@ -80,7 +80,7 @@ export default async function AboutPage({ params }: Props) {
               About ZeroToAIAgents
             </h1>
             <p className="text-xl text-muted-foreground">
-              We are an independent AI agent review platform dedicated to helping
+              We are an independent AI Agent review platform dedicated to helping
               people make informed decisions about AI automation tools. Every
               rating is earned through rigorous, hands-on testing &mdash; never
               paid for.
@@ -147,7 +147,7 @@ export default async function AboutPage({ params }: Props) {
                 </div>
                 <p className="text-lg text-muted-foreground">
                   In an age where AI automation is transforming work,
-                  finding the right AI agent should not require extensive
+                  finding the right AI Agent should not require extensive
                   technical knowledge. With hundreds of platforms making bold claims, it is
                   nearly impossible to separate genuine capabilities from
                   marketing hype.
@@ -155,13 +155,13 @@ export default async function AboutPage({ params }: Props) {
                 <p className="text-lg text-muted-foreground">
                   ZeroToAIAgents exists to solve that problem.{" "}
                   <strong>
-                    We provide honest, independent AI agent reviews based on
+                    We provide honest, independent AI Agent reviews based on
                     real-world testing &mdash; not press releases, not vendor
                     claims, and not sponsored placements.
                   </strong>
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  Every AI agent we review is tested with our own accounts,
+                  Every AI Agent we review is tested with our own accounts,
                   evaluated in real workflows, and put through weeks of rigorous testing
                   before we publish a single word.
                 </p>
@@ -177,7 +177,7 @@ export default async function AboutPage({ params }: Props) {
                           Independence First
                         </span>
                         <p className="text-sm text-muted-foreground">
-                          No AI agent provider can pay for a higher ranking. Our
+                          No AI Agent provider can pay for a higher ranking. Our
                           editorial team operates independently from our
                           business team.
                         </p>
@@ -243,14 +243,14 @@ export default async function AboutPage({ params }: Props) {
                 Our Testing Methodology
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Every AI agent review follows a standardized, multi-phase testing
+                Every AI Agent review follows a standardized, multi-phase testing
                 protocol. We test with real projects, under real-world conditions,
                 across multiple use cases and workflows.
               </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              {/* Speed Testing */}
+              {/* Response Quality Testing */}
               <Card>
                 <CardContent className="pt-2">
                   <div className="flex items-start gap-4">
@@ -259,25 +259,25 @@ export default async function AboutPage({ params }: Props) {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2">
-                        Speed Testing
+                        Response Quality Testing
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        We measure download speed, upload speed, and latency
-                        across 50+ server locations on a standardized 1Gbps
-                        baseline connection.
+                        We test each AI Agent&apos;s output quality, reasoning accuracy,
+                        and response speed across diverse tasks including code generation,
+                        analysis, creative writing, and problem-solving.
                       </p>
                       <ul className="space-y-1.5">
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Multiple test runs at different times of day
+                          Multiple test runs across different task types
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Tests from US, EU, and Asia-Pacific locations
+                          Accuracy benchmarks for coding, math, and reasoning
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          WireGuard, OpenAI agent, and IKEv2 protocol comparison
+                          Response time and token efficiency measurement
                         </li>
                       </ul>
                     </div>
@@ -285,7 +285,7 @@ export default async function AboutPage({ params }: Props) {
                 </CardContent>
               </Card>
 
-              {/* Security Audits */}
+              {/* Privacy & Data Handling */}
               <Card>
                 <CardContent className="pt-2">
                   <div className="flex items-start gap-4">
@@ -294,29 +294,29 @@ export default async function AboutPage({ params }: Props) {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2">
-                        Security Audits
+                        Privacy & Data Handling
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        We perform comprehensive leak tests and evaluate
-                        encryption implementation to verify each AI agent truly
-                        protects your data.
+                        We evaluate each platform&apos;s data handling practices, whether
+                        they train on user data, compliance certifications, and data
+                        encryption standards.
                       </p>
                       <ul className="space-y-1.5">
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          DNS leak testing (IPv4 and IPv6)
+                          User data training opt-in/opt-out policies
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          WebRTC leak detection
+                          Compliance certifications (SOC 2, GDPR, HIPAA)
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Kill switch reliability testing
+                          Data retention and deletion policies
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Encryption protocol verification (AES-256, ChaCha20)
+                          Encryption standards (TLS, end-to-end encryption)
                         </li>
                       </ul>
                     </div>
@@ -324,7 +324,7 @@ export default async function AboutPage({ params }: Props) {
                 </CardContent>
               </Card>
 
-              {/* Streaming Tests */}
+              {/* Integration Testing */}
               <Card>
                 <CardContent className="pt-2">
                   <div className="flex items-start gap-4">
@@ -333,24 +333,24 @@ export default async function AboutPage({ params }: Props) {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2">
-                        Streaming Tests
+                        Integration Testing
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        We test each AI agent against 15+ major streaming platforms
-                        to verify geo-unblocking claims with real subscriptions.
+                        We test each AI Agent&apos;s integrations with popular tools to
+                        verify seamless workflow integration across 100+ platforms.
                       </p>
                       <ul className="space-y-1.5">
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Netflix (US, UK, JP, and 7+ other libraries)
+                          IDE integrations (VS Code, Cursor, JetBrains)
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Disney+, BBC iPlayer, Hulu, Amazon Prime
+                          Slack, GitHub, CRM, and database connectors
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Streaming quality and buffering assessment
+                          API reliability and documentation quality
                         </li>
                       </ul>
                     </div>
@@ -358,7 +358,7 @@ export default async function AboutPage({ params }: Props) {
                 </CardContent>
               </Card>
 
-              {/* Privacy Policy Analysis */}
+              {/* Capability Benchmarking */}
               <Card>
                 <CardContent className="pt-2">
                   <div className="flex items-start gap-4">
@@ -367,29 +367,28 @@ export default async function AboutPage({ params }: Props) {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2">
-                        Privacy Policy Analysis
+                        Capability Benchmarking
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Our team reads and analyzes every word of each
-                        provider&apos;s privacy policy, terms of service, and
-                        transparency reports.
+                        We benchmark each agent against standardized tasks to evaluate
+                        their true capabilities in real-world scenarios.
                       </p>
                       <ul className="space-y-1.5">
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          No-logs claims verification
+                          Coding challenges (LeetCode, HackerRank style)
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Jurisdiction and data retention analysis
+                          Multi-step reasoning and planning tasks
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Third-party audit report review
+                          Tool usage accuracy and workflow automation
                         </li>
                         <li className="text-xs text-muted-foreground flex items-center gap-1.5">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
-                          Warrant canary and transparency report assessment
+                          Context retention across long conversations
                         </li>
                       </ul>
                     </div>
@@ -402,26 +401,26 @@ export default async function AboutPage({ params }: Props) {
             <div className="grid gap-4 md:grid-cols-3 mt-6">
               <div className="bg-card border rounded-lg p-5 text-center">
                 <Users className="h-6 w-6 text-pink-600 dark:text-pink-400 mx-auto mb-3" />
-                <h3 className="font-semibold mb-1">Customer Support</h3>
+                <h3 className="font-semibold mb-1">Documentation & Support</h3>
                 <p className="text-xs text-muted-foreground">
-                  We contact each support team with real questions and evaluate
-                  response times, helpfulness, and expertise.
+                  We evaluate documentation quality, support response times,
+                  community resources, and onboarding experience.
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5 text-center">
                 <Award className="h-6 w-6 text-cyan-600 dark:text-cyan-400 mx-auto mb-3" />
                 <h3 className="font-semibold mb-1">Value Assessment</h3>
                 <p className="text-xs text-muted-foreground">
-                  We compare pricing tiers, features, device limits, and
-                  performance to determine true value for money.
+                  We compare pricing tiers, feature availability, token limits,
+                  and performance to determine true value for money.
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5 text-center">
                 <Fingerprint className="h-6 w-6 text-rose-600 dark:text-rose-400 mx-auto mb-3" />
-                <h3 className="font-semibold mb-1">App Security</h3>
+                <h3 className="font-semibold mb-1">Platform Security</h3>
                 <p className="text-xs text-muted-foreground">
-                  We analyze app permissions, third-party trackers, and
-                  connection handling to identify potential risks.
+                  We analyze authentication methods, access controls, audit logs,
+                  and security best practices implementation.
                 </p>
               </div>
             </div>
@@ -434,26 +433,26 @@ export default async function AboutPage({ params }: Props) {
                   How We Calculate Scores
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Each AI agent receives a weighted composite score out of 10 based
+                  Each AI Agent receives a weighted composite score out of 10 based
                   on the following categories:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   <div className="bg-muted/50 rounded-lg p-3 text-center">
                     <div className="text-lg font-bold text-primary">30%</div>
                     <div className="text-xs text-muted-foreground">
-                      Security & Privacy
+                      Performance & Accuracy
                     </div>
                   </div>
                   <div className="bg-muted/50 rounded-lg p-3 text-center">
                     <div className="text-lg font-bold text-primary">25%</div>
                     <div className="text-xs text-muted-foreground">
-                      Speed & Performance
+                      Features & Capabilities
                     </div>
                   </div>
                   <div className="bg-muted/50 rounded-lg p-3 text-center">
                     <div className="text-lg font-bold text-primary">15%</div>
                     <div className="text-xs text-muted-foreground">
-                      Streaming & Unblocking
+                      Integrations & Ecosystem
                     </div>
                   </div>
                   <div className="bg-muted/50 rounded-lg p-3 text-center">
@@ -471,7 +470,7 @@ export default async function AboutPage({ params }: Props) {
                   <div className="bg-muted/50 rounded-lg p-3 text-center">
                     <div className="text-lg font-bold text-primary">10%</div>
                     <div className="text-xs text-muted-foreground">
-                      Customer Support
+                      Documentation & Support
                     </div>
                   </div>
                 </div>
@@ -488,8 +487,8 @@ export default async function AboutPage({ params }: Props) {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Team</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                ZeroToAIAgents is built by a team of cybersecurity professionals,
-                tech journalists, and privacy advocates with decades of
+                ZeroToAIAgents is built by a team of AI technology experts,
+                software engineers, and automation specialists with decades of
                 combined experience.
               </p>
             </div>
@@ -512,14 +511,14 @@ export default async function AboutPage({ params }: Props) {
                       </span>
                     </div>
                     <p className="text-sm text-muted-foreground mt-1">
-                      AI agent Security Researchers & Privacy Analysts
+                      AI Agent Testing Specialists & Automation Experts
                     </p>
 
                     <p className="text-muted-foreground mt-4 leading-relaxed">
-                      Our team of cybersecurity professionals has tested and
-                      reviewed over 50 AI agent services since 2024. We combine
-                      hands-on technical testing with in-depth data analysis to
-                      provide unbiased AI agent recommendations you can trust.
+                      Our team of AI technology professionals has tested and
+                      reviewed over 25 AI Agent platforms since 2024. We combine
+                      hands-on technical testing with in-depth capability analysis to
+                      provide unbiased AI Agent recommendations you can trust.
                     </p>
 
                     <div className="mt-4 space-y-2">
@@ -528,12 +527,12 @@ export default async function AboutPage({ params }: Props) {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "50+ AI agent services tested",
-                          "Independent speed & security audits",
+                          "25+ AI Agent platforms tested",
+                          "Independent performance & capability audits",
                           "No sponsored rankings",
                           "Active since 2024",
-                          "Multi-platform testing (Windows, macOS, Linux, iOS, Android)",
-                          "Real-world streaming verification",
+                          "Multi-platform testing (web, CLI, IDE, API)",
+                          "Real-world workflow testing",
                         ].map((cred) => (
                           <span
                             key={cred}
@@ -553,19 +552,19 @@ export default async function AboutPage({ params }: Props) {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         <div className="text-sm text-muted-foreground flex items-center gap-2">
                           <Shield className="h-4 w-4 text-primary flex-shrink-0" />
-                          Network security & encryption protocols
+                          AI model evaluation & benchmarking
                         </div>
                         <div className="text-sm text-muted-foreground flex items-center gap-2">
                           <Eye className="h-4 w-4 text-primary flex-shrink-0" />
-                          Online privacy & data protection law
+                          Data privacy & compliance standards
                         </div>
                         <div className="text-sm text-muted-foreground flex items-center gap-2">
                           <Zap className="h-4 w-4 text-primary flex-shrink-0" />
-                          Performance benchmarking methodology
+                          Automation workflow design
                         </div>
                         <div className="text-sm text-muted-foreground flex items-center gap-2">
                           <Globe className="h-4 w-4 text-primary flex-shrink-0" />
-                          Geo-restriction and censorship circumvention
+                          Integration testing & API evaluation
                         </div>
                       </div>
                     </div>
@@ -582,12 +581,12 @@ export default async function AboutPage({ params }: Props) {
                 </div>
                 <h3 className="text-lg font-semibold mb-1">Research Team</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  AI agent Testing & Analysis
+                  AI Agent Testing & Analysis
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Our researchers conduct hands-on testing of every AI agent across
-                  multiple devices, running speed tests, security audits, and
-                  usability assessments under standardized conditions.
+                  Our researchers conduct hands-on testing of every AI Agent across
+                  multiple platforms, running performance benchmarks, capability
+                  assessments, and integration testing under standardized conditions.
                 </p>
               </div>
 
@@ -611,13 +610,13 @@ export default async function AboutPage({ params }: Props) {
                   <Shield className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold mb-1">
-                  Security Advisors
+                  Technical Advisors
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Cybersecurity Expertise
+                  AI & Automation Expertise
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Security professionals who verify the accuracy of our
+                  AI technology experts who verify the accuracy of our
                   technical assessments and ensure our methodology follows
                   current industry best practices.
                 </p>
@@ -734,9 +733,9 @@ export default async function AboutPage({ params }: Props) {
                           Primary sources preferred
                         </span>
                         <p className="text-xs text-muted-foreground">
-                          We rely on our own testing data, official AI agent
-                          documentation, court records, and published audit
-                          reports.
+                          We rely on our own testing data, official platform
+                          documentation, published benchmarks, and independent
+                          audit reports.
                         </p>
                       </div>
                     </li>
@@ -747,7 +746,7 @@ export default async function AboutPage({ params }: Props) {
                           Cross-reference verification
                         </span>
                         <p className="text-xs text-muted-foreground">
-                          Claims from AI agent providers are cross-referenced with
+                          Claims from AI Agent platforms are cross-referenced with
                           independent third-party sources before inclusion.
                         </p>
                       </div>
@@ -789,7 +788,7 @@ export default async function AboutPage({ params }: Props) {
                     Update Frequency
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    AI agent services evolve rapidly. We maintain the accuracy of our
+                    AI Agent platforms evolve rapidly. We maintain the accuracy of our
                     content through a structured update schedule:
                   </p>
                   <div className="grid gap-4 md:grid-cols-2">
@@ -801,9 +800,9 @@ export default async function AboutPage({ params }: Props) {
                         </h4>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Every reviewed AI agent is re-tested at minimum once every 3
-                        months to verify speed, security, and streaming
-                        performance remain consistent.
+                        Every reviewed AI Agent is re-tested at minimum once every 3
+                        months to verify performance, capabilities, and integration
+                        quality remain consistent.
                       </p>
                     </div>
                     <div className="bg-muted/50 rounded-lg p-4">
@@ -814,8 +813,8 @@ export default async function AboutPage({ params }: Props) {
                         </h4>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        When a AI agent announces significant changes (pricing
-                        updates, security incidents, feature additions), we
+                        When an AI Agent announces significant changes (pricing
+                        updates, new features, API changes), we
                         update our reviews within 48 hours.
                       </p>
                     </div>
@@ -827,7 +826,7 @@ export default async function AboutPage({ params }: Props) {
                         </h4>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Once a year, every AI agent review receives a complete
+                        Once a year, every AI Agent review receives a complete
                         re-evaluation with fresh testing across all categories.
                       </p>
                     </div>
@@ -883,7 +882,7 @@ export default async function AboutPage({ params }: Props) {
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Trust is earned, not claimed. Here is what sets us apart from
-                other AI agent review sites.
+                other AI Agent review sites.
               </p>
             </div>
 
@@ -896,9 +895,9 @@ export default async function AboutPage({ params }: Props) {
                   <h3 className="text-lg font-semibold">Experience</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  We have personally tested over 50 AI agent services since 2024,
+                  We have personally tested over 25 AI Agent platforms since 2024,
                   accumulating thousands of hours of real-world usage across
-                  Windows, macOS, Linux, iOS, and Android platforms.
+                  web interfaces, CLI tools, IDE integrations, and API implementations.
                 </p>
               </div>
 
@@ -910,9 +909,9 @@ export default async function AboutPage({ params }: Props) {
                   <h3 className="text-lg font-semibold">Expertise</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Our team includes cybersecurity professionals with deep
-                  knowledge of encryption protocols, network security, and
-                  privacy law. We understand the technology behind the tools.
+                  Our team includes AI technology experts with deep
+                  knowledge of machine learning models, automation workflows, and
+                  software integration. We understand the technology behind the tools.
                 </p>
               </div>
 
@@ -925,8 +924,8 @@ export default async function AboutPage({ params }: Props) {
                 </div>
                 <p className="text-sm text-muted-foreground">
                   With 100,000+ monthly readers and content published in 9
-                  languages, ZeroToAIAgents is a trusted resource for AI agent information
-                  worldwide. Our reviews are cited by privacy advocates and tech
+                  languages, ZeroToAIAgents is a trusted resource for AI Agent information
+                  worldwide. Our reviews are cited by automation experts and tech
                   publications.
                 </p>
               </div>
@@ -955,7 +954,7 @@ export default async function AboutPage({ params }: Props) {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold">Get in Touch</h2>
             <p className="text-lg text-muted-foreground">
-              Have questions about our methodology, want to suggest a AI agent for
+              Have questions about our methodology, want to suggest an AI Agent for
               review, or found an error in our content? We welcome your
               feedback.
             </p>
@@ -1013,7 +1012,7 @@ export default async function AboutPage({ params }: Props) {
                   className="text-primary hover:underline flex items-center gap-1"
                 >
                   <BookOpen className="h-4 w-4" />
-                  AI agent Reviews
+                  AI Agent Reviews
                 </Link>
                 <Link
                   href="/affiliate-disclosure"

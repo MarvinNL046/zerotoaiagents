@@ -9,12 +9,12 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { AiAgentData } from "@/lib/db/agent-service";
 
-interface VpnFormProps {
+interface AgentFormProps {
   vpn?: AiAgentData;
   onSuccess: () => void;
 }
 
-export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
+export function AgentForm({ vpn, onSuccess }: AgentFormProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -35,12 +35,12 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
   // Pricing
   const [monthlyPrice, setPriceMonthly] = useState(vpn?.monthlyPrice?.toString() || "0");
   const [annualPrice, setPriceYearly] = useState(vpn?.annualPrice?.toString() || "0");
-  // TODO: This form needs complete refactoring for AI agents - VPN fields kept for compatibility
+  // TODO: This form needs complete refactoring - legacy fields kept for compatibility
   const [priceTwoYear, setPriceTwoYear] = useState("");
   const [moneyBackDays, setMoneyBackDays] = useState("30");
   const [hasFreeTier, setFreeTier] = useState(vpn?.hasFreeTier || false);
 
-  // VPN-specific fields - placeholders for form compatibility
+  // Legacy-specific fields - placeholders for form compatibility
   const [servers, setServers] = useState("0");
   const [countries, setCountries] = useState("0");
   const [maxDevices, setMaxDevices] = useState("1");
@@ -51,13 +51,13 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
   const [streamingScore, setStreamingScore] = useState("50");
   const [overallRating, setOverallRating] = useState(vpn?.overallRating?.toString() || "3.0");
 
-  // Security - VPN-specific placeholders
+  // Security - legacy placeholders
   const [protocols, setProtocols] = useState("WireGuard, OpenVPN");
   const [encryption, setEncryption] = useState("AES-256");
   const [killSwitch, setKillSwitch] = useState(true);
   const [noLogs, setNoLogs] = useState(true);
 
-  // Support - VPN-specific placeholders
+  // Support - legacy placeholders
   const [netflixSupport, setNetflixSupport] = useState(false);
   const [torrentSupport, setTorrentSupport] = useState(false);
 
@@ -97,7 +97,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
         ogImage: ogImage || null,
         monthlyPrice: parseFloat(monthlyPrice) || 0,
         annualPrice: parseFloat(annualPrice) || 0,
-        // VPN-specific fields commented out - TODO: Add AI agent fields
+        // Legacy-specific fields commented out - TODO: Add AI agent fields
         // priceTwoYear: priceTwoYear ? parseFloat(priceTwoYear) : null,
         // moneyBackDays: parseInt(moneyBackDays) || 30,
         hasFreeTier,
@@ -169,7 +169,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="NordVPN"
+                placeholder="Cursor"
                 required
               />
             </div>
@@ -180,7 +180,7 @@ export function VpnForm({ vpn, onSuccess }: VpnFormProps) {
                   id="slug"
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
-                  placeholder="nordvpn"
+                  placeholder="cursor"
                   required
                 />
                 <Button type="button" variant="outline" onClick={generateSlug}>

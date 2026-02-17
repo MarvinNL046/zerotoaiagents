@@ -92,11 +92,10 @@ export default async function QuizPage({ params }: Props) {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">
-              Find Your Perfect AI Agent
+              {t("info.title")}
             </h2>
             <p className="text-muted-foreground">
-              Our quiz analyzes your needs, budget, and technical level to recommend
-              the best AI agents for you. Get personalized recommendations in under 2 minutes.
+              {t("info.description")}
             </p>
           </div>
         </div>

@@ -598,87 +598,107 @@
       "subtitle": "Everything you need to know about AI agents"
     },
     "categories": {
-      "gettingStarted": "Getting Started",
+      "all": "All Guides",
+      "basics": "Getting Started",
+      "useCases": "Use Cases",
       "technical": "Technical Guides",
       "business": "Business Guides",
       "security": "Security & Privacy"
     },
     "sections": {
+      "startHere": {
+        "title": "Start Here",
+        "subtitle": "Essential guides for understanding AI agents"
+      },
+      "allGuides": {
+        "title": "All Guides",
+        "subtitle": "Comprehensive resources for every aspect of AI agents"
+      },
+      "topics": {
+        "title": "Browse by Topic",
+        "subtitle": "Find guides organized by category"
+      },
       "cta": {
         "title": "Ready to Get Started?",
         "subtitle": "Find the perfect AI agent for your needs"
       }
     },
     "buttons": {
+      "readGuide": "Read Guide",
       "startLearning": "Start Learning",
       "compareAgents": "Compare AI Agents"
     },
-    "guides": [
-      {
-        "slug": "what-is-ai-agent",
+    "topicCards": {
+      "basics": {
+        "title": "Basics",
+        "description": "Fundamental concepts and getting started guides"
+      },
+      "securityPrivacy": {
+        "title": "Security & Privacy",
+        "description": "Best practices for secure AI agent deployment"
+      },
+      "business": {
+        "title": "Business Use Cases",
+        "description": "How businesses leverage AI agents for growth"
+      },
+      "technical": {
+        "title": "Technical Deep Dives",
+        "description": "Advanced implementation and integration guides"
+      }
+    },
+    "relatedPages": {
+      "title": "Top Guides",
+      "whatIsAiAgent": "What is an AI Agent?",
+      "whatIsAiAgentDesc": "Complete beginner's guide to AI agents",
+      "howAiAgentsWork": "How AI Agents Work",
+      "howAiAgentsWorkDesc": "Technical deep-dive into AI agent technology",
+      "bestAgents": "Best AI Agents 2026",
+      "bestAgentsDesc": "Our top-rated AI agent recommendations",
+      "aiAgentSecurity": "AI Agent Security",
+      "aiAgentSecurityDesc": "Security and privacy guide for AI agents"
+    },
+    "guides": {
+      "whatIsAiAgent": {
         "title": "What is an AI Agent?",
         "description": "Complete beginner's guide to understanding AI agents",
-        "category": "gettingStarted",
-        "readTime": "10 min",
-        "level": "Beginner"
+        "readTime": "10 min read"
       },
-      {
-        "slug": "how-ai-agents-work",
+      "howAiAgentsWork": {
         "title": "How Do AI Agents Work?",
         "description": "Technical deep-dive into AI agent architecture",
-        "category": "technical",
-        "readTime": "12 min",
-        "level": "Intermediate"
+        "readTime": "12 min read"
       },
-      {
-        "slug": "choosing-ai-agent",
+      "choosingAiAgent": {
         "title": "How to Choose the Right AI Agent",
         "description": "Step-by-step guide to selecting the perfect platform",
-        "category": "gettingStarted",
-        "readTime": "9 min",
-        "level": "All Levels"
+        "readTime": "9 min read"
       },
-      {
-        "slug": "ai-agent-security",
+      "aiAgentSecurity": {
         "title": "AI Agent Security & Privacy",
         "description": "Best practices for secure AI agent deployment",
-        "category": "security",
-        "readTime": "8 min",
-        "level": "Intermediate"
+        "readTime": "8 min read"
       },
-      {
-        "slug": "ai-agents-for-business",
+      "aiAgentsForBusiness": {
         "title": "AI Agents for Business",
         "description": "How businesses leverage AI agents for growth",
-        "category": "business",
-        "readTime": "11 min",
-        "level": "Business"
+        "readTime": "11 min read"
       },
-      {
-        "slug": "ai-agent-pricing",
+      "aiAgentPricing": {
         "title": "Understanding AI Agent Pricing",
         "description": "Navigate pricing models and calculate ROI",
-        "category": "business",
-        "readTime": "7 min",
-        "level": "All Levels"
+        "readTime": "7 min read"
       },
-      {
-        "slug": "ai-agent-integrations",
+      "aiAgentIntegrations": {
         "title": "AI Agent Integrations Guide",
         "description": "Connect agents to your existing tools",
-        "category": "technical",
-        "readTime": "9 min",
-        "level": "Technical"
+        "readTime": "9 min read"
       },
-      {
-        "slug": "building-ai-workflows",
+      "buildingAiWorkflows": {
         "title": "Building AI Agent Workflows",
         "description": "Design effective automation workflows",
-        "category": "technical",
-        "readTime": "10 min",
-        "level": "Intermediate"
+        "readTime": "10 min read"
       }
-    ]
+    }
   },
   "home": {
     "meta": {
@@ -1535,16 +1555,28 @@
       "description": "Latest news, guides, and tutorials about AI agents. Stay updated on new platforms, use cases, and best practices."
     },
     "hero": {
+      "badge": "AI Agent Blog",
       "title": "AI Agent Blog",
-      "subtitle": "Latest news, guides, and tutorials about AI agents"
+      "subtitle": "Stay updated with the latest AI agent news, tips, and in-depth guides."
     },
     "categories": {
       "all": "All Posts",
+      "deals": "Deals",
+      "security": "Security",
+      "tips": "Tips & Tricks",
       "news": "News",
+      "guide": "Guides",
       "guides": "Guides",
       "tutorials": "Tutorials",
       "reviews": "Reviews",
+      "comparison": "Comparisons",
       "comparisons": "Comparisons"
+    },
+    "featured": {
+      "title": "Featured Article"
+    },
+    "recent": {
+      "title": "Recent Articles"
     },
     "filters": {
       "latest": "Latest",
@@ -1555,6 +1587,21 @@
     "minRead": "min read",
     "share": "Share",
     "relatedPosts": "Related Posts",
+    "cta": {
+      "title": "Stay Informed About AI Agents",
+      "subtitle": "Get the latest tips, reviews, and guides delivered to your inbox."
+    },
+    "relatedPages": {
+      "title": "Explore More",
+      "bestAgents": "Best AI Agents 2026",
+      "bestAgentsDesc": "Our top-rated AI agent recommendations",
+      "guides": "What is an AI Agent?",
+      "guidesDesc": "Complete beginner's guide to AI agents",
+      "compare": "Compare AI Agents",
+      "compareDesc": "Head-to-head AI agent comparisons",
+      "useCases": "AI Agent Use Cases",
+      "useCasesDesc": "Discover how AI agents can transform your work"
+    },
     "newsletter": {
       "title": "Never Miss an Update",
       "description": "Get the latest AI agent news, reviews, and tutorials delivered weekly."
@@ -1569,12 +1616,77 @@
       "title": "Compare AI Agents",
       "subtitle": "Select agents to compare side-by-side"
     },
+    "badge": "AI Agent Comparison Tool",
+    "title": "Compare AI Agents Side by Side",
+    "subtitle": "Find the perfect AI agent by comparing features, pricing, and performance side by side.",
+    "fullComparisonTable": "Full AI Agent Comparison Table",
+    "vpnProvider": "AI Agent",
+    "editorsChoice": "Editor's Choice",
+    "overallRating": "Overall Rating",
+    "monthlyPrice": "Monthly Price",
+    "perMonth": "/month",
+    "bestPrice": "Best Annual Price",
+    "freeTier": "Free Tier",
+    "getStarted": "Get Started",
+    "visit": "Visit",
+    "readReview": "Read Review",
+    "quickComparison": "Quick Comparison",
+    "quickComparisonSubtitle": "Our top picks across different categories",
+    "howWeCompare": "How We Compare AI Agents",
+    "needHelpDeciding": "Need Help Deciding?",
+    "needHelpDesc": "Check out our detailed reviews and guides to help you find the perfect AI agent.",
     "selectAgents": "Select Agents to Compare",
     "search": "Search AI agents...",
     "selected": "Selected",
     "compare": "Compare",
     "clearAll": "Clear All",
     "addAgent": "Add Agent",
+    "breadcrumb": "Compare AI Agents",
+    "quickCards": {
+      "bestOverall": "Best Overall (Coding)",
+      "bestValue": "Best Value",
+      "bestPerformance": "Best Performance",
+      "bestEnterprise": "Best for Enterprise",
+      "enterpriseBadge": "Enterprise",
+      "bestFree": "Best Free Option",
+      "openSource": "Open Source",
+      "bestNoCode": "Best No-Code",
+      "integrationsCount": "400+ Integrations",
+      "claudeCodeDesc": "Autonomous CLI agent with 200k context, exceptional reasoning, and multi-file editing capabilities.",
+      "copilotDesc": "Most affordable premium AI coding assistant with multi-IDE support and GitHub ecosystem integration.",
+      "chatgptDesc": "OpenAI's flagship AI with cutting-edge o1 reasoning, custom GPTs, and multimodal capabilities.",
+      "copilotStudioDesc": "Microsoft's enterprise platform for building custom AI copilots across Microsoft 365 and Power Platform.",
+      "flowiseDesc": "Free and open-source drag-and-drop LLM flow builder with RAG support and chatbot deployment.",
+      "n8nDesc": "Open-source workflow automation with powerful AI agent builder and 400+ pre-built integrations.",
+      "getCta": "Get {name}"
+    },
+    "methodology": {
+      "performance": "Performance Testing",
+      "performanceDesc": "We rigorously test each AI agent's response quality, speed, and reasoning capabilities across real-world tasks including code generation, analysis, and problem-solving.",
+      "privacy": "Privacy & Security Analysis",
+      "privacyDesc": "We evaluate data handling practices, encryption standards, compliance certifications, and whether agents train on your data to ensure your information stays secure.",
+      "integration": "Integration Testing",
+      "integrationDesc": "We test compatibility with popular tools, APIs, and workflows to verify seamless integration with your existing tech stack and development environment.",
+      "value": "Value Assessment",
+      "valueDesc": "We analyze pricing tiers, free tier limitations, and feature-to-cost ratios to determine the best value AI agents for different budgets and use cases."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "question": "How do you compare AI agents?", "answer": "We evaluate AI agents across multiple criteria including ease of use, performance, pricing, integrations, value for money, and real-world testing. Each agent is scored on a 5-point scale based on hands-on testing and user feedback." },
+        { "question": "How often are comparisons updated?", "answer": "We update our comparison data monthly to reflect the latest pricing, features, model updates, and performance benchmarks. Major updates or new agent releases trigger immediate re-evaluation." },
+        { "question": "Can I compare more than two AI agents?", "answer": "Yes, our comparison tool lets you compare up to 4 AI agents side by side. This helps you evaluate multiple options simultaneously and make the best decision for your specific needs." },
+        { "question": "Which AI agent is best for coding?", "answer": "For coding, we recommend Claude Code for autonomous development with massive context, Cursor for AI-first IDE experience, or GitHub Copilot for budget-friendly autocomplete. The best choice depends on your workflow and budget." },
+        { "question": "Are there free AI agents available?", "answer": "Yes! Several excellent free options exist: ChatGPT (free tier), Claude (limited free usage), Flowise (open-source), and n8n AI (self-hosted). Many coding agents also offer free tiers for students and open-source maintainers." }
+      ]
+    },
+    "ctaButtonPrimary": "View Best AI Coding Agents",
+    "ctaButtonSecondary": "What is an AI Agent?",
+    "popularComparisons": {
+      "badge": "Popular Comparisons",
+      "title": "Compare Top AI Agents",
+      "subtitle": "See how the most popular AI agent platforms stack up against each other"
+    },
     "columns": {
       "overview": "Overview",
       "pricing": "Pricing",
@@ -1606,7 +1718,11 @@
     "getDeal": "Get Deal",
     "revealCode": "Reveal Code",
     "copied": "Copied!",
-    "copyCode": "Copy Code"
+    "copyCode": "Copy Code",
+    "code": "Code",
+    "copy": "Copy",
+    "verified": "Verified",
+    "expires": "Expires"
   },
   "couponsPage": {
     "title": "AI Agent Deals & Discounts",
@@ -1825,6 +1941,10 @@
       "compareAll": "Compare All Recommendations",
       "retakeQuiz": "Retake Quiz",
       "shareResults": "Share Results"
+    },
+    "info": {
+      "title": "Find Your Perfect AI Agent",
+      "description": "Our quiz analyzes your needs, budget, and technical level to recommend the best AI agents for you. Get personalized recommendations in under 2 minutes."
     }
   },
   "stickyBar": {
@@ -1853,6 +1973,26 @@
     "noVpnsSelected": "No AI agents selected",
     "selectToCompare": "Select 2-4 AI agents to compare",
     "addFirstVpn": "Add your first AI agent to start comparing",
+    "selected": "selected",
+    "remove": "Remove",
+    "feature": "Feature",
+    "pricing": "Pricing",
+    "monthlyPrice": "Monthly Price",
+    "yearlyPrice": "Yearly Price",
+    "performance": "Performance",
+    "performanceLabel": "Performance",
+    "features": "Features",
+    "getStarted": "Get Started",
+    "visitSite": "Visit Site",
+    "freeTier": "Free Tier",
+    "overallRating": "Overall Rating",
+    "easeOfUse": "Ease of Use",
+    "valueForMoney": "Value for Money",
+    "category": "Category",
+    "maxUsers": "Max Users",
+    "apiAccess": "API Access",
+    "modelsSupported": "Models Supported",
+    "integrationsLabel": "Integrations",
     "filters": {
       "useCase": "Use Case",
       "priceRange": "Price Range",
@@ -1862,5 +2002,20 @@
     "results": "{count} agents match your criteria",
     "noResults": "No agents match your filters. Try adjusting your criteria.",
     "resetFilters": "Reset Filters"
+  },
+  "useCasesPage": {
+    "badge": "Use Cases",
+    "title": "Discover AI Agent Use Cases",
+    "subtitle": "From software development to customer support, AI agents are transforming how we work. Explore use cases and find the perfect AI agents for your needs.",
+    "recommendedAgents": "{count} recommended AI agents",
+    "explore": "Explore {name}",
+    "ctaTitle": "Not Sure Which AI Agent You Need?",
+    "ctaSubtitle": "Take our quick quiz to get personalized AI agent recommendations based on your specific needs.",
+    "takeQuiz": "Take the Quiz",
+    "viewAllAgents": "View All AI Agents",
+    "meta": {
+      "title": "AI Agent Use Cases | ZeroToAIAgents",
+      "description": "Discover how AI agents can transform your workflow. Explore use cases for coding, marketing, customer support, and more."
+    }
   }
 }

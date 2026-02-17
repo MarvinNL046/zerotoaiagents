@@ -18,8 +18,8 @@ import {
 import type { AiAgentData } from "@/lib/db/agent-service";
 
 interface ComparisonTableProps {
-  vpn1: AiAgentData;
-  vpn2: AiAgentData;
+  agent1: AiAgentData;
+  agent2: AiAgentData;
 }
 
 type FeatureValue = string | number | boolean | string[];
@@ -29,10 +29,10 @@ interface FeatureRow {
   icon: React.ComponentType<{ className?: string }>;
   getValue: (agent: AiAgentData) => FeatureValue;
   format?: (value: FeatureValue) => React.ReactNode;
-  determineWinner?: (val1: FeatureValue, val2: FeatureValue) => "vpn1" | "vpn2" | "tie";
+  determineWinner?: (val1: FeatureValue, val2: FeatureValue) => "agent1" | "agent2" | "tie";
 }
 
-export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
+export function ComparisonTable({ agent1, agent2 }: ComparisonTableProps) {
   const features: FeatureRow[] = [
     {
       label: "Overall Rating",
@@ -44,14 +44,14 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
           <span className="text-muted-foreground">/5</span>
         </div>
       ),
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "agent1" : (v1 as number) < (v2 as number) ? "agent2" : "tie"),
     },
     {
       label: "Monthly Price",
       icon: DollarSign,
       getValue: (agent) => agent.monthlyPrice,
       format: (val) => <span className="font-semibold">${val}/mo</span>,
-      determineWinner: (v1, v2) => ((v1 as number) < (v2 as number) ? "vpn1" : (v1 as number) > (v2 as number) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as number) < (v2 as number) ? "agent1" : (v1 as number) > (v2 as number) ? "agent2" : "tie"),
     },
     {
       label: "Annual Price",
@@ -60,7 +60,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
       format: (val) => (
         <span className="text-xl font-bold text-green-600">${val}/mo</span>
       ),
-      determineWinner: (v1, v2) => ((v1 as number) < (v2 as number) ? "vpn1" : (v1 as number) > (v2 as number) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as number) < (v2 as number) ? "agent1" : (v1 as number) > (v2 as number) ? "agent2" : "tie"),
     },
     {
       label: "Free Tier",
@@ -72,7 +72,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
         ) : (
           <X className="h-6 w-6 text-red-400 mx-auto" />
         ),
-      determineWinner: (v1, v2) => ((v1 as boolean) && !(v2 as boolean) ? "vpn1" : !(v1 as boolean) && (v2 as boolean) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as boolean) && !(v2 as boolean) ? "agent1" : !(v1 as boolean) && (v2 as boolean) ? "agent2" : "tie"),
     },
     {
       label: "Category",
@@ -96,7 +96,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
         ) : (
           <X className="h-6 w-6 text-red-400 mx-auto" />
         ),
-      determineWinner: (v1, v2) => ((v1 as boolean) && !(v2 as boolean) ? "vpn1" : !(v1 as boolean) && (v2 as boolean) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as boolean) && !(v2 as boolean) ? "agent1" : !(v1 as boolean) && (v2 as boolean) ? "agent2" : "tie"),
     },
     {
       label: "Ease of Use",
@@ -113,7 +113,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
           <span className="font-semibold text-sm">{val}/5</span>
         </div>
       ),
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "agent1" : (v1 as number) < (v2 as number) ? "agent2" : "tie"),
     },
     {
       label: "Performance",
@@ -130,7 +130,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
           <span className="font-semibold text-sm">{val}/5</span>
         </div>
       ),
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "agent1" : (v1 as number) < (v2 as number) ? "agent2" : "tie"),
     },
     {
       label: "Value for Money",
@@ -147,7 +147,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
           <span className="font-semibold text-sm">{val}/5</span>
         </div>
       ),
-      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "vpn1" : (v1 as number) < (v2 as number) ? "vpn2" : "tie"),
+      determineWinner: (v1, v2) => ((v1 as number) > (v2 as number) ? "agent1" : (v1 as number) < (v2 as number) ? "agent2" : "tie"),
     },
     {
       label: "Models Supported",
@@ -204,17 +204,17 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
                   Feature
                 </th>
                 <th className="p-4 bg-muted/50 text-center w-1/3">
-                  <div className="font-bold text-lg">{vpn1.name}</div>
+                  <div className="font-bold text-lg">{agent1.name}</div>
                 </th>
                 <th className="p-4 bg-muted/50 text-center w-1/3">
-                  <div className="font-bold text-lg">{vpn2.name}</div>
+                  <div className="font-bold text-lg">{agent2.name}</div>
                 </th>
               </tr>
             </thead>
             <tbody>
               {features.map((feature, index) => {
-                const val1 = feature.getValue(vpn1);
-                const val2 = feature.getValue(vpn2);
+                const val1 = feature.getValue(agent1);
+                const val2 = feature.getValue(agent2);
                 const winner = feature.determineWinner?.(val1, val2);
                 const Icon = feature.icon;
 
@@ -233,7 +233,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
                     </td>
                     <td className="p-4 text-center relative">
                       <div className="flex items-center justify-center gap-2">
-                        {winner === "vpn1" && (
+                        {winner === "agent1" && (
                           <Trophy className="h-4 w-4 text-green-500 absolute left-2" />
                         )}
                         {feature.format ? feature.format(val1) : val1}
@@ -241,7 +241,7 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
                     </td>
                     <td className="p-4 text-center relative">
                       <div className="flex items-center justify-center gap-2">
-                        {winner === "vpn2" && (
+                        {winner === "agent2" && (
                           <Trophy className="h-4 w-4 text-green-500 absolute left-2" />
                         )}
                         {feature.format ? feature.format(val2) : val2}
@@ -257,30 +257,30 @@ export function ComparisonTable({ vpn1, vpn2 }: ComparisonTableProps) {
                 <td className="p-4">
                   <div className="flex flex-col gap-2">
                     <AffiliateButton
-                      agentId={vpn1.id}
-                      agentName={vpn1.name}
-                      affiliateUrl={vpn1.affiliateUrl}
+                      agentId={agent1.id}
+                      agentName={agent1.name}
+                      affiliateUrl={agent1.affiliateUrl}
                       className="w-full"
                     >
-                      Visit {vpn1.name}
+                      Visit {agent1.name}
                     </AffiliateButton>
                     <Button variant="outline" size="sm" asChild>
-                      <Link href={`/reviews/${vpn1.slug}`}>Read Review</Link>
+                      <Link href={`/reviews/${agent1.slug}`}>Read Review</Link>
                     </Button>
                   </div>
                 </td>
                 <td className="p-4">
                   <div className="flex flex-col gap-2">
                     <AffiliateButton
-                      agentId={vpn2.id}
-                      agentName={vpn2.name}
-                      affiliateUrl={vpn2.affiliateUrl}
+                      agentId={agent2.id}
+                      agentName={agent2.name}
+                      affiliateUrl={agent2.affiliateUrl}
                       className="w-full"
                     >
-                      Visit {vpn2.name}
+                      Visit {agent2.name}
                     </AffiliateButton>
                     <Button variant="outline" size="sm" asChild>
-                      <Link href={`/reviews/${vpn2.slug}`}>Read Review</Link>
+                      <Link href={`/reviews/${agent2.slug}`}>Read Review</Link>
                     </Button>
                   </div>
                 </td>

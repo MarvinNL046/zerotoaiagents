@@ -59,14 +59,14 @@ export default function ClickAnalyticsPage() {
     fetchAnalytics();
   }, [dateRange]);
 
-  // Filter link stats by VPN
+  // Filter link stats by agent
   const filteredStats = analytics?.linkStats.filter((stat) => {
     if (agentFilter === "all") return true;
     return stat.path.toLowerCase() === agentFilter.toLowerCase();
   }) || [];
 
-  // Get VPN name from path
-  const getVpnName = (path: string) => {
+  // Get agent name from path
+  const getAgentName = (path: string) => {
     const slug = path.replace(/^\//, "");
     const agent = agents.find((v) => v.slug === slug);
     return agent?.name || path.replace(/^\//, "").replace(/-/g, " ");
@@ -148,10 +148,10 @@ export default function ClickAnalyticsPage() {
           </Select>
           <Select value={agentFilter} onValueChange={setAgentFilter}>
             <SelectTrigger className="w-40">
-              <SelectValue placeholder="All VPNs" />
+              <SelectValue placeholder="All Agents" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All VPNs</SelectItem>
+              <SelectItem value="all">All Agents</SelectItem>
               {agents.map((agent) => (
                 <SelectItem key={agent.slug} value={agent.slug}>
                   {agent.name}
@@ -243,12 +243,12 @@ export default function ClickAnalyticsPage() {
         </Card>
       </div>
 
-      {/* Top Performing VPNs */}
+      {/* Top Performing Agents */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <ExternalLink className="h-5 w-5" />
-            Top Performing VPNs
+            Top Performing Agents
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -291,7 +291,7 @@ export default function ClickAnalyticsPage() {
             All Affiliate Links
             {agentFilter !== "all" && (
               <Badge variant="secondary" className="ml-2">
-                Filtered: {getVpnName(agentFilter)}
+                Filtered: {getAgentName(agentFilter)}
               </Badge>
             )}
           </CardTitle>
@@ -301,7 +301,7 @@ export default function ClickAnalyticsPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b">
-                  <th className="text-left py-3 px-4 font-medium">VPN</th>
+                  <th className="text-left py-3 px-4 font-medium">Agent</th>
                   <th className="text-left py-3 px-4 font-medium">Short URL</th>
                   <th className="text-right py-3 px-4 font-medium">Total Clicks</th>
                   <th className="text-left py-3 px-4 font-medium">Last Click</th>
@@ -319,7 +319,7 @@ export default function ClickAnalyticsPage() {
                     <tr key={stat.path} className="border-b last:border-0">
                       <td className="py-3 px-4">
                         <Badge variant="outline" className="capitalize">
-                          {getVpnName(stat.path)}
+                          {getAgentName(stat.path)}
                         </Badge>
                       </td>
                       <td className="py-3 px-4">

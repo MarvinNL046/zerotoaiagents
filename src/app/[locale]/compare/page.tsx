@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RatingStars } from "@/components/agents/rating-stars";
 import { AffiliateButton } from "@/components/agents/affiliate-button";
-import { VpnComparisonTool } from "@/components/conversion/vpn-comparison-tool";
+import { AgentComparisonTool } from "@/components/conversion/vpn-comparison-tool";
 import { PopularComparisons } from "@/components/compare/popular-comparisons";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
@@ -98,7 +98,7 @@ export default async function ComparePage({ params }: Props) {
       <div className="flex flex-col">
         {/* Breadcrumbs */}
         <div className="container pt-6">
-          <BreadcrumbSchema items={[{ name: "Compare AI Agents", href: "/compare" }]} />
+          <BreadcrumbSchema items={[{ name: t("breadcrumb"), href: "/compare" }]} />
         </div>
 
         {/* Hero Section */}
@@ -124,7 +124,7 @@ export default async function ComparePage({ params }: Props) {
       {/* Interactive Comparison Tool */}
       <section className="py-12 lg:py-16 bg-muted/30">
         <div className="container">
-          <VpnComparisonTool vpns={vpns} maxCompare={4} />
+          <AgentComparisonTool agents={vpns} maxCompare={4} />
         </div>
       </section>
 
@@ -230,8 +230,7 @@ export default async function ComparePage({ params }: Props) {
                 </tr>
 
                 {/* TODO: Add AI agent-specific comparison rows */}
-                {/* VPN-specific rows commented out - need to be replaced with AI agent metrics */}
-                {/* All VPN-specific comparison rows (servers, countries, speeds, protocols, etc.) temporarily disabled for AI agent site */}
+                {/* Additional AI agent-specific comparison rows can be added here */}
 
                 {/* CTA Row */}
                 <tr className="bg-muted/30">
@@ -277,14 +276,14 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Shield className="h-5 w-5 text-primary" />
-                <h3 className="font-bold">Best Overall (Coding)</h3>
+                <h3 className="font-bold">{t("quickCards.bestOverall")}</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold">Claude Code</span>
-                <Badge className="bg-yellow-500 text-yellow-950">Editor&apos;s Choice</Badge>
+                <Badge className="bg-yellow-500 text-yellow-950">{t("editorsChoice")}</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Autonomous CLI agent with 200k context, exceptional reasoning, and multi-file editing capabilities.
+                {t("quickCards.claudeCodeDesc")}
               </p>
               <AffiliateButton
                 agentId="claude-code"
@@ -292,7 +291,7 @@ export default async function ComparePage({ params }: Props) {
                 affiliateUrl="https://go.zerotoaiagents.com/claude-code"
                 className="w-full"
               >
-                Get Claude Code
+                {t("quickCards.getCta", { name: "Claude Code" })}
               </AffiliateButton>
             </div>
 
@@ -300,14 +299,14 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <DollarSign className="h-5 w-5 text-green-500" />
-                <h3 className="font-bold">Best Value</h3>
+                <h3 className="font-bold">{t("quickCards.bestValue")}</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold">GitHub Copilot</span>
-                <Badge variant="secondary">$10/mo</Badge>
+                <Badge variant="secondary">$10{t("perMonth")}</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Most affordable premium AI coding assistant with multi-IDE support and GitHub ecosystem integration.
+                {t("quickCards.copilotDesc")}
               </p>
               <AffiliateButton
                 agentId="github-copilot"
@@ -315,7 +314,7 @@ export default async function ComparePage({ params }: Props) {
                 affiliateUrl="https://go.zerotoaiagents.com/github-copilot"
                 className="w-full"
               >
-                Get GitHub Copilot
+                {t("quickCards.getCta", { name: "GitHub Copilot" })}
               </AffiliateButton>
             </div>
 
@@ -323,14 +322,14 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Zap className="h-5 w-5 text-orange-500" />
-                <h3 className="font-bold">Best Performance</h3>
+                <h3 className="font-bold">{t("quickCards.bestPerformance")}</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold">ChatGPT</span>
                 <Badge variant="secondary">4.8/5</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                OpenAI&apos;s flagship AI with cutting-edge o1 reasoning, custom GPTs, and multimodal capabilities.
+                {t("quickCards.chatgptDesc")}
               </p>
               <AffiliateButton
                 agentId="chatgpt"
@@ -338,7 +337,7 @@ export default async function ComparePage({ params }: Props) {
                 affiliateUrl="https://go.zerotoaiagents.com/chatgpt"
                 className="w-full"
               >
-                Get ChatGPT
+                {t("quickCards.getCta", { name: "ChatGPT" })}
               </AffiliateButton>
             </div>
 
@@ -346,14 +345,14 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Lock className="h-5 w-5 text-blue-500" />
-                <h3 className="font-bold">Best for Enterprise</h3>
+                <h3 className="font-bold">{t("quickCards.bestEnterprise")}</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold">Copilot Studio</span>
-                <Badge variant="secondary">Enterprise</Badge>
+                <Badge variant="secondary">{t("quickCards.enterpriseBadge")}</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Microsoft&apos;s enterprise platform for building custom AI copilots across Microsoft 365 and Power Platform.
+                {t("quickCards.copilotStudioDesc")}
               </p>
               <AffiliateButton
                 agentId="microsoft-copilot-studio"
@@ -361,7 +360,7 @@ export default async function ComparePage({ params }: Props) {
                 affiliateUrl="https://go.zerotoaiagents.com/microsoft-copilot-studio"
                 className="w-full"
               >
-                Get Copilot Studio
+                {t("quickCards.getCta", { name: "Copilot Studio" })}
               </AffiliateButton>
             </div>
 
@@ -369,14 +368,14 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Server className="h-5 w-5 text-purple-500" />
-                <h3 className="font-bold">Best Free Option</h3>
+                <h3 className="font-bold">{t("quickCards.bestFree")}</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold">Flowise</span>
-                <Badge className="bg-green-500 text-white">Open Source</Badge>
+                <Badge className="bg-green-500 text-white">{t("quickCards.openSource")}</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Free and open-source drag-and-drop LLM flow builder with RAG support and chatbot deployment.
+                {t("quickCards.flowiseDesc")}
               </p>
               <AffiliateButton
                 agentId="flowise"
@@ -384,7 +383,7 @@ export default async function ComparePage({ params }: Props) {
                 affiliateUrl="https://go.zerotoaiagents.com/flowise"
                 className="w-full"
               >
-                Get Flowise
+                {t("quickCards.getCta", { name: "Flowise" })}
               </AffiliateButton>
             </div>
 
@@ -392,14 +391,14 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-card border rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <DollarSign className="h-5 w-5 text-green-500" />
-                <h3 className="font-bold">Best No-Code</h3>
+                <h3 className="font-bold">{t("quickCards.bestNoCode")}</h3>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold">n8n AI</span>
-                <Badge variant="secondary">400+ Integrations</Badge>
+                <Badge variant="secondary">{t("quickCards.integrationsCount")}</Badge>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Open-source workflow automation with powerful AI agent builder and 400+ pre-built integrations.
+                {t("quickCards.n8nDesc")}
               </p>
               <AffiliateButton
                 agentId="n8n-ai"
@@ -407,7 +406,7 @@ export default async function ComparePage({ params }: Props) {
                 affiliateUrl="https://go.zerotoaiagents.com/n8n-ai"
                 className="w-full"
               >
-                Get n8n AI
+                {t("quickCards.getCta", { name: "n8n AI" })}
               </AffiliateButton>
             </div>
           </div>
@@ -415,7 +414,13 @@ export default async function ComparePage({ params }: Props) {
       </section>
 
       {/* Popular Comparisons */}
-      <PopularComparisons />
+      <PopularComparisons
+        translations={{
+          badge: t("popularComparisons.badge"),
+          title: t("popularComparisons.title"),
+          subtitle: t("popularComparisons.subtitle"),
+        }}
+      />
 
       {/* How We Compare */}
       <section className="py-12 lg:py-16">
@@ -428,37 +433,37 @@ export default async function ComparePage({ params }: Props) {
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <Zap className="h-5 w-5 text-primary" />
-                  Performance Testing
+                  {t("methodology.performance")}
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  We rigorously test each AI agent&apos;s response quality, speed, and reasoning capabilities across real-world tasks including code generation, analysis, and problem-solving.
+                  {t("methodology.performanceDesc")}
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <Shield className="h-5 w-5 text-primary" />
-                  Privacy & Security Analysis
+                  {t("methodology.privacy")}
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  We evaluate data handling practices, encryption standards, compliance certifications, and whether agents train on your data to ensure your information stays secure.
+                  {t("methodology.privacyDesc")}
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <Tv className="h-5 w-5 text-primary" />
-                  Integration Testing
+                  {t("methodology.integration")}
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  We test compatibility with popular tools, APIs, and workflows to verify seamless integration with your existing tech stack and development environment.
+                  {t("methodology.integrationDesc")}
                 </p>
               </div>
               <div className="bg-card border rounded-lg p-5">
                 <h3 className="font-semibold mb-2 flex items-center gap-2">
                   <DollarSign className="h-5 w-5 text-primary" />
-                  Value Assessment
+                  {t("methodology.value")}
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  We analyze pricing tiers, free tier limitations, and feature-to-cost ratios to determine the best value AI agents for different budgets and use cases.
+                  {t("methodology.valueDesc")}
                 </p>
               </div>
             </div>
@@ -471,29 +476,8 @@ export default async function ComparePage({ params }: Props) {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <FAQSchema
-              faqs={[
-                {
-                  question: "How do you compare AI agents?",
-                  answer: "We evaluate AI agents across multiple criteria including ease of use, performance, pricing, integrations, value for money, and real-world testing. Each agent is scored on a 5-point scale based on hands-on testing and user feedback."
-                },
-                {
-                  question: "How often are comparisons updated?",
-                  answer: "We update our comparison data monthly to reflect the latest pricing, features, model updates, and performance benchmarks. Major updates or new agent releases trigger immediate re-evaluation."
-                },
-                {
-                  question: "Can I compare more than two AI agents?",
-                  answer: "Yes, our comparison tool lets you compare up to 4 AI agents side by side. This helps you evaluate multiple options simultaneously and make the best decision for your specific needs."
-                },
-                {
-                  question: "Which AI agent is best for coding?",
-                  answer: "For coding, we recommend Claude Code for autonomous development with massive context, Cursor for AI-first IDE experience, or GitHub Copilot for budget-friendly autocomplete. The best choice depends on your workflow and budget."
-                },
-                {
-                  question: "Are there free AI agents available?",
-                  answer: "Yes! Several excellent free options exist: ChatGPT (free tier), Claude (limited free usage), Flowise (open-source), and n8n AI (self-hosted). Many coding agents also offer free tiers for students and open-source maintainers."
-                }
-              ]}
-              title="Frequently Asked Questions"
+              faqs={(t.raw("faq.items") as Array<{ question: string; answer: string }>)}
+              title={t("faq.title")}
             />
           </div>
         </div>
@@ -509,10 +493,10 @@ export default async function ComparePage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
-                <Link href="/best/coding-agents">View Best AI Coding Agents</Link>
+                <Link href="/best/coding-agents">{t("ctaButtonPrimary")}</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/guides/what-is-ai-agent">What is an AI Agent?</Link>
+                <Link href="/guides/what-is-ai-agent">{t("ctaButtonSecondary")}</Link>
               </Button>
             </div>
           </div>

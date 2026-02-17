@@ -8,7 +8,7 @@ import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { UserReviewsList } from "@/components/reviews/user-reviews-list";
 import { ReviewForm } from "@/components/reviews/review-form";
 import { aiAgentProviders, getAgentBySlug, type AiAgentProvider, getCategoryDisplayName } from "@/lib/ai-agent-data";
-import { getReviewsByVpnSlug, getAverageUserRating } from "@/lib/user-reviews";
+import { getReviewsByAgentSlug, getAverageUserRating } from "@/lib/user-reviews";
 import { Link } from "@/i18n/navigation";
 import {
   Check,
@@ -529,7 +529,7 @@ export default async function ReviewPage({ params }: Props) {
 
 // User Reviews Section Component
 function UserReviewsSection({ agent, locale, title }: { agent: AiAgentProvider; locale: string; title: string }) {
-  const userReviews = getReviewsByVpnSlug(agent.slug, locale);
+  const userReviews = getReviewsByAgentSlug(agent.slug, locale);
   const { average, count } = getAverageUserRating(agent.slug);
 
   return (
@@ -540,7 +540,7 @@ function UserReviewsSection({ agent, locale, title }: { agent: AiAgentProvider; 
       </div>
 
       {/* Review Form */}
-      <ReviewForm agentSlug={agent.slug} vpnName={agent.name} locale={locale} />
+      <ReviewForm agentSlug={agent.slug} agentName={agent.name} locale={locale} />
 
       {/* Reviews List */}
       <UserReviewsList

@@ -1483,7 +1483,11 @@
     "getDeal": "お得情報を取得",
     "revealCode": "コードを表示",
     "copied": "コピーしました!",
-    "copyCode": "コードをコピー"
+    "copyCode": "コードをコピー",
+    "code": "コード",
+    "copy": "コピー",
+    "verified": "検証済み",
+    "expires": "有効期限"
   },
   "couponsPage": {
     "meta": {

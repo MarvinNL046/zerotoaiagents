@@ -88,15 +88,16 @@ export default async function HomePage({ params }: Props) {
   // Category configuration
   const categories: Array<{
     slug: AgentCategory;
+    bestUrl: string;
     icon: typeof Code;
     gradient: string;
   }> = [
-    { slug: "coding-agents", icon: Code, gradient: "from-blue-500/10 to-cyan-500/10" },
-    { slug: "no-code-builders", icon: Blocks, gradient: "from-purple-500/10 to-pink-500/10" },
-    { slug: "frameworks", icon: Sparkles, gradient: "from-orange-500/10 to-red-500/10" },
-    { slug: "enterprise", icon: Building2, gradient: "from-green-500/10 to-emerald-500/10" },
-    { slug: "customer-support", icon: MessageSquare, gradient: "from-indigo-500/10 to-blue-500/10" },
-    { slug: "general-purpose", icon: Globe, gradient: "from-yellow-500/10 to-amber-500/10" },
+    { slug: "coding-agents", bestUrl: "/best/coding-agents", icon: Code, gradient: "from-blue-500/10 to-cyan-500/10" },
+    { slug: "no-code-builders", bestUrl: "/best/no-code-agents", icon: Blocks, gradient: "from-purple-500/10 to-pink-500/10" },
+    { slug: "frameworks", bestUrl: "/best/ai-frameworks", icon: Sparkles, gradient: "from-orange-500/10 to-red-500/10" },
+    { slug: "enterprise", bestUrl: "/best/enterprise-agents", icon: Building2, gradient: "from-green-500/10 to-emerald-500/10" },
+    { slug: "customer-support", bestUrl: "/best/customer-support-agents", icon: MessageSquare, gradient: "from-indigo-500/10 to-blue-500/10" },
+    { slug: "general-purpose", bestUrl: "/best/general-purpose", icon: Globe, gradient: "from-yellow-500/10 to-amber-500/10" },
   ];
 
   // Use cases configuration
@@ -131,10 +132,7 @@ export default async function HomePage({ params }: Props) {
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <PulseIndicator variant="success" label={tHero("badge")} size="sm" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-fade-in-up">
-                {tHero("title")}{" "}
-                <HighlightedText variant="primary">
-                  {tHero("titleHighlight")}
-                </HighlightedText>
+                {tHero("title")}
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up stagger-1">
                 {tHero("subtitle")}
@@ -217,7 +215,7 @@ export default async function HomePage({ params }: Props) {
                 return (
                   <Link
                     key={category.slug}
-                    href={`/best/${category.slug}`}
+                    href={category.bestUrl}
                     className={`group relative overflow-hidden rounded-xl border bg-gradient-to-br ${category.gradient} p-6 card-hover animate-fade-in-up stagger-${index + 1}`}
                   >
                     <div className="flex items-start gap-4">

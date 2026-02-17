@@ -74,7 +74,7 @@ export function MetricBadge({
   );
 }
 
-// Preset badges for common VPN metrics
+// Preset badges for common AI agent metrics
 export function SpeedBadge({ value, className }: { value: string; className?: string }) {
   return <MetricBadge value={value} icon="speed" variant="success" className={className} />;
 }

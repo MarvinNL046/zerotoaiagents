@@ -11,11 +11,11 @@ import { getDaysUntilExpiry } from "@/lib/coupon-data";
 
 interface CouponCardProps {
   coupon: Coupon;
-  vpnName?: string;
+  agentName?: string;
   affiliateUrl?: string;
 }
 
-export function CouponCard({ coupon, vpnName, affiliateUrl }: CouponCardProps) {
+export function CouponCard({ coupon, agentName, affiliateUrl }: CouponCardProps) {
   const t = useTranslations("coupons");
   const [copied, setCopied] = useState(false);
 
@@ -124,7 +124,7 @@ export function CouponCard({ coupon, vpnName, affiliateUrl }: CouponCardProps) {
             className="w-full"
             size="lg"
           >
-            {t("getDeal")} {vpnName && `- ${vpnName}`}
+            {t("getDeal")} {agentName && `- ${agentName}`}
           </Button>
         )}
       </CardContent>

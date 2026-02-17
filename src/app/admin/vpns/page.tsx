@@ -30,7 +30,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Plus, Pencil, Trash2, Search, Star, Check, X, Database } from "lucide-react";
-import { VpnForm } from "./vpn-form";
+import { AgentForm } from "./vpn-form";
 import type { AiAgentData } from "@/lib/db/agent-service";
 
 export default function VpnsAdminPage() {
@@ -160,7 +160,7 @@ export default function VpnsAdminPage() {
             <DialogHeader>
               <DialogTitle>Add New AI Agent</DialogTitle>
             </DialogHeader>
-            <VpnForm onSuccess={handleCreateSuccess} />
+            <AgentForm onSuccess={handleCreateSuccess} />
           </DialogContent>
           </Dialog>
         </div>
@@ -181,7 +181,7 @@ export default function VpnsAdminPage() {
         </CardContent>
       </Card>
 
-      {/* VPN Table */}
+      {/* Agent Table */}
       <Card>
         <CardContent className="p-0">
           <Table>
@@ -275,7 +275,7 @@ export default function VpnsAdminPage() {
             <DialogTitle>Edit AI Agent: {editingVpn?.name}</DialogTitle>
           </DialogHeader>
           {editingVpn && (
-            <VpnForm vpn={editingVpn} onSuccess={handleEditSuccess} />
+            <AgentForm vpn={editingVpn} onSuccess={handleEditSuccess} />
           )}
         </DialogContent>
       </Dialog>

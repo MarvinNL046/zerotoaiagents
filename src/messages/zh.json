@@ -1483,7 +1483,11 @@
     "getDeal": "获取优惠",
     "revealCode": "显示代码",
     "copied": "已复制!",
-    "copyCode": "复制代码"
+    "copyCode": "复制代码",
+    "code": "代码",
+    "copy": "复制",
+    "verified": "已验证",
+    "expires": "过期"
   },
   "couponsPage": {
     "meta": {

@@ -1483,7 +1483,11 @@
     "getDeal": "할인 받기",
     "revealCode": "코드 공개",
     "copied": "복사됨!",
-    "copyCode": "코드 복사"
+    "copyCode": "코드 복사",
+    "code": "코드",
+    "copy": "복사",
+    "verified": "인증됨",
+    "expires": "만료"
   },
   "couponsPage": {
     "meta": {

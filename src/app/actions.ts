@@ -25,7 +25,7 @@ interface UserReview {
 
 // ==================== USER REVIEWS ====================
 
-// Get approved reviews for a VPN
+// Get approved reviews for an AI agent
 export async function getApprovedReviews(agentSlug: string, page = 1, limit = 10): Promise<{
   reviews: UserReview[];
   pagination: {
@@ -202,19 +202,19 @@ export async function trackClick(
   referrer?: string
 ): Promise<{ success: boolean }> {
   try {
-    // First get the VPN provider ID
-    const vpn = await sql`
-      SELECT id FROM "VpnProvider" WHERE slug = ${agentSlug}
+    // First get the AI agent provider ID
+    const agent = await sql`
+      SELECT id FROM "AiAgentProvider" WHERE slug = ${agentSlug}
     `;
 
-    if (vpn.length === 0) {
-      // VPN not in database yet, skip tracking
+    if (agent.length === 0) {
+      // Agent not in database yet, skip tracking
       return { success: true };
     }
 
     await sql`
-      INSERT INTO "Click" (id, "vpnId", page, country, referrer, "createdAt")
-      VALUES (gen_random_uuid()::text, ${vpn[0].id}, ${page}, ${country}, ${referrer}, NOW())
+      INSERT INTO "Click" (id, "agentId", page, country, referrer, "createdAt")
+      VALUES (gen_random_uuid()::text, ${agent[0].id}, ${page}, ${country}, ${referrer}, NOW())
     `;
 
     return { success: true };

@@ -11,6 +11,14 @@ interface PopularComparison {
   badge?: string;
 }
 
+interface PopularComparisonsProps {
+  translations: {
+    badge: string;
+    title: string;
+    subtitle: string;
+  };
+}
+
 const popularComparisons: PopularComparison[] = [
   {
     agent1: "Cursor",
@@ -56,7 +64,7 @@ const popularComparisons: PopularComparison[] = [
   },
 ];
 
-export function PopularComparisons() {
+export function PopularComparisons({ translations }: PopularComparisonsProps) {
   return (
     <section className="py-12 lg:py-16 bg-muted/30">
       <div className="container">
@@ -64,11 +72,11 @@ export function PopularComparisons() {
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-2 mb-4">
               <TrendingUp className="h-5 w-5 text-primary" />
-              <Badge variant="secondary">Popular Comparisons</Badge>
+              <Badge variant="secondary">{translations.badge}</Badge>
             </div>
-            <h2 className="text-3xl font-bold mb-2">Compare Top AI Agents</h2>
+            <h2 className="text-3xl font-bold mb-2">{translations.title}</h2>
             <p className="text-muted-foreground">
-              See how the most popular AI agent platforms stack up against each other
+              {translations.subtitle}
             </p>
           </div>
 

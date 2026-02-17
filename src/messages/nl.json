@@ -590,77 +590,107 @@
       "subtitle": "Alles wat je moet weten over AI agents"
     },
     "categories": {
-      "gettingStarted": "Aan De Slag",
+      "all": "Alle Gidsen",
+      "basics": "Aan De Slag",
+      "useCases": "Toepassingen",
       "technical": "Technische Gidsen",
       "business": "Business Gidsen",
       "security": "Beveiliging & Privacy"
     },
-    "guides": [
-      {
-        "slug": "what-is-ai-agent",
+    "sections": {
+      "startHere": {
+        "title": "Begin Hier",
+        "subtitle": "Essentiële gidsen voor het begrijpen van AI agents"
+      },
+      "allGuides": {
+        "title": "Alle Gidsen",
+        "subtitle": "Uitgebreide bronnen voor elk aspect van AI agents"
+      },
+      "topics": {
+        "title": "Bladeren op Onderwerp",
+        "subtitle": "Vind gidsen georganiseerd per categorie"
+      },
+      "cta": {
+        "title": "Klaar om te Beginnen?",
+        "subtitle": "Vind de perfecte AI agent voor jouw behoeften"
+      }
+    },
+    "buttons": {
+      "readGuide": "Lees Gids",
+      "startLearning": "Begin met Leren",
+      "compareAgents": "Vergelijk AI Agents"
+    },
+    "topicCards": {
+      "basics": {
+        "title": "Basis",
+        "description": "Fundamentele concepten en startgidsen"
+      },
+      "securityPrivacy": {
+        "title": "Beveiliging & Privacy",
+        "description": "Best practices voor veilige AI agent implementatie"
+      },
+      "business": {
+        "title": "Business Toepassingen",
+        "description": "Hoe bedrijven AI agents inzetten voor groei"
+      },
+      "technical": {
+        "title": "Technische Deep Dives",
+        "description": "Geavanceerde implementatie en integratie gidsen"
+      }
+    },
+    "relatedPages": {
+      "title": "Top Gidsen",
+      "whatIsAiAgent": "Wat is een AI Agent?",
+      "whatIsAiAgentDesc": "Complete beginnersgids over AI agents",
+      "howAiAgentsWork": "Hoe AI Agents Werken",
+      "howAiAgentsWorkDesc": "Technische verdieping in AI agent technologie",
+      "bestAgents": "Beste AI Agents 2026",
+      "bestAgentsDesc": "Onze best beoordeelde AI agent aanbevelingen",
+      "aiAgentSecurity": "AI Agent Beveiliging",
+      "aiAgentSecurityDesc": "Beveiligings- en privacygids voor AI agents"
+    },
+    "guides": {
+      "whatIsAiAgent": {
         "title": "Wat is een AI Agent?",
         "description": "Complete beginner gids voor het begrijpen van AI agents",
-        "category": "gettingStarted",
-        "readTime": "10 min",
-        "level": "Beginner"
+        "readTime": "10 min lezen"
       },
-      {
-        "slug": "how-ai-agents-work",
+      "howAiAgentsWork": {
         "title": "Hoe Werken AI Agents?",
         "description": "Technische deep-dive in AI agent architectuur",
-        "category": "technical",
-        "readTime": "12 min",
-        "level": "Intermediate"
+        "readTime": "12 min lezen"
       },
-      {
-        "slug": "choosing-ai-agent",
+      "choosingAiAgent": {
         "title": "Hoe Kies je de Juiste AI Agent",
         "description": "Stap-voor-stap gids voor het selecteren van het perfecte platform",
-        "category": "gettingStarted",
-        "readTime": "9 min",
-        "level": "Alle Niveaus"
+        "readTime": "9 min lezen"
       },
-      {
-        "slug": "ai-agent-security",
+      "aiAgentSecurity": {
         "title": "AI Agent Beveiliging & Privacy",
         "description": "Best practices voor veilige AI agent implementatie",
-        "category": "security",
-        "readTime": "8 min",
-        "level": "Intermediate"
+        "readTime": "8 min lezen"
       },
-      {
-        "slug": "ai-agents-for-business",
+      "aiAgentsForBusiness": {
         "title": "AI Agents voor Bedrijven",
         "description": "Hoe bedrijven AI agents inzetten voor groei",
-        "category": "business",
-        "readTime": "11 min",
-        "level": "Business"
+        "readTime": "11 min lezen"
       },
-      {
-        "slug": "ai-agent-pricing",
+      "aiAgentPricing": {
         "title": "AI Agent Prijzen Begrijpen",
         "description": "Navigeer prijsmodellen en bereken ROI",
-        "category": "business",
-        "readTime": "7 min",
-        "level": "Alle Niveaus"
+        "readTime": "7 min lezen"
       },
-      {
-        "slug": "ai-agent-integrations",
+      "aiAgentIntegrations": {
         "title": "AI Agent Integraties Gids",
         "description": "Verbind agents met je bestaande tools",
-        "category": "technical",
-        "readTime": "9 min",
-        "level": "Technisch"
+        "readTime": "9 min lezen"
       },
-      {
-        "slug": "building-ai-workflows",
+      "buildingAiWorkflows": {
         "title": "AI Agent Workflows Bouwen",
         "description": "Ontwerp effectieve automatisering workflows",
-        "category": "technical",
-        "readTime": "10 min",
-        "level": "Intermediate"
+        "readTime": "10 min lezen"
       }
-    ]
+    }
   },
   "home": {
     "meta": {
@@ -685,45 +715,32 @@
     "categories": {
       "title": "Vind AI Agents per Toepassing",
       "subtitle": "Verschillende agents excelleren in verschillende taken. Kies je categorie:",
-      "items": [
-        {
+      "items": {
+        "coding-agents": {
           "title": "Coding Agents",
-          "description": "Schrijf, debug en deploy code met AI assistentie",
-          "icon": "Code",
-          "href": "/best/coding-agents",
-          "popular": true
+          "description": "Schrijf, debug en deploy code met AI assistentie"
         },
-        {
+        "no-code-builders": {
           "title": "No-Code Builders",
-          "description": "Bouw AI workflows zonder code te schrijven",
-          "icon": "Blocks",
-          "href": "/best/no-code-agents"
+          "description": "Bouw AI workflows zonder code te schrijven"
         },
-        {
-          "title": "Klantenservice",
-          "description": "Automatiseer klantenservice met AI agents",
-          "icon": "Headphones",
-          "href": "/best/support-agents"
-        },
-        {
-          "title": "Enterprise AI",
-          "description": "Enterprise-grade AI agent platforms",
-          "icon": "Building",
-          "href": "/best/enterprise-agents"
-        },
-        {
-          "title": "Gratis AI Agents",
-          "description": "Start met gratis AI agent platforms",
-          "icon": "Gift",
-          "href": "/best/free-agents"
-        },
-        {
+        "frameworks": {
           "title": "AI Frameworks",
-          "description": "Bouw custom agents met frameworks",
-          "icon": "Wrench",
-          "href": "/best/ai-frameworks"
+          "description": "Bouw custom agents met krachtige frameworks"
+        },
+        "enterprise": {
+          "title": "Enterprise AI",
+          "description": "Enterprise-grade AI agent platforms"
+        },
+        "customer-support": {
+          "title": "Klantenservice",
+          "description": "Automatiseer klantenservice met AI agents"
+        },
+        "general-purpose": {
+          "title": "Algemeen",
+          "description": "Veelzijdige AI agents voor meerdere toepassingen"
         }
-      ]
+      }
     },
     "featured": {
       "title": "Top Beoordeelde AI Agents",
@@ -732,38 +749,40 @@
     "useCases": {
       "title": "Wat Kunnen AI Agents Doen?",
       "subtitle": "Praktische toepassingen van AI agent technologie",
-      "items": [
-        {
+      "items": {
+        "coding": {
           "title": "Softwareontwikkeling",
-          "description": "Genereer code, fix bugs, schrijf tests en deploy applicaties autonoom",
-          "icon": "Code"
+          "description": "Genereer code, fix bugs, schrijf tests en deploy applicaties autonoom"
         },
-        {
-          "title": "Klantenservice",
-          "description": "Behandel vragen, los problemen op en escaleer complexe cases 24/7",
-          "icon": "MessageSquare"
+        "marketing": {
+          "title": "Marketing Automatisering",
+          "description": "Automatiseer campagnes, analyseer metrics en optimaliseer marketing strategieën"
         },
-        {
-          "title": "Data Analyse",
-          "description": "Bevraag databases, creëer visualisaties en genereer automatisch inzichten",
-          "icon": "BarChart"
-        },
-        {
+        "writing": {
           "title": "Content Creatie",
-          "description": "Schrijf blogposts, creëer social media content en optimaliseer voor SEO",
-          "icon": "FileText"
+          "description": "Schrijf blogposts, creëer social media content en optimaliseer voor SEO"
         },
-        {
-          "title": "Bedrijfsautomatisering",
-          "description": "Automatiseer workflows, data invoer, e-mail responses en rapportage",
-          "icon": "Zap"
-        },
-        {
+        "research": {
           "title": "Research & Intelligence",
-          "description": "Browse het web, verzamel informatie en synthetiseer inzichten",
-          "icon": "Search"
+          "description": "Browse het web, verzamel informatie en synthetiseer inzichten"
+        },
+        "customer-support": {
+          "title": "Klantenservice",
+          "description": "Behandel vragen, los problemen op en escaleer complexe cases 24/7"
+        },
+        "sales": {
+          "title": "Sales Automatisering",
+          "description": "Automatiseer lead kwalificatie, follow-ups en verkoopprocessen"
+        },
+        "data-analysis": {
+          "title": "Data Analyse",
+          "description": "Bevraag databases, creëer visualisaties en genereer automatisch inzichten"
+        },
+        "hr-recruitment": {
+          "title": "HR & Recruitment",
+          "description": "Screen kandidaten, plan interviews en automatiseer HR workflows"
         }
-      ]
+      }
     },
     "comparison": {
       "title": "Vergelijk Top AI Agents",
@@ -801,7 +820,51 @@
       "subtitle": "Vergelijk platforms, lees reviews en vind de perfecte AI agent voor jouw behoeften",
       "primaryButton": "Vergelijk AI Agents",
       "secondaryButton": "Bekijk Alle Reviews"
-    }
+    },
+    "howItWorks": {
+      "title": "Hoe Het Werkt",
+      "subtitle": "Vind je perfecte AI agent in 3 simpele stappen",
+      "steps": {
+        "browse": {
+          "title": "Verken",
+          "description": "Bekijk onze uitgebreide reviews en vergelijkingen van top AI agents"
+        },
+        "compare": {
+          "title": "Vergelijk",
+          "description": "Vergelijk features, prijzen en prestaties naast elkaar"
+        },
+        "choose": {
+          "title": "Kies",
+          "description": "Selecteer de AI agent die het beste bij jouw behoeften past"
+        }
+      }
+    },
+    "faqSection": {
+      "title": "Veelgestelde Vragen"
+    },
+    "ctaSection": {
+      "title": "Klaar om te Beginnen?",
+      "subtitle": "Vind vandaag nog je perfecte AI agent",
+      "button": "Vergelijk AI Agents"
+    },
+    "faq": [
+      {
+        "question": "Wat is een AI agent?",
+        "answer": "Een AI agent is een autonoom softwaresysteem aangedreven door AI dat context kan begrijpen, beslissingen kan nemen en acties kan uitvoeren. Anders dan chatbots die alleen reageren op vragen, kunnen AI agents actief naar doelen toewerken, tools gebruiken en met andere systemen communiceren."
+      },
+      {
+        "question": "Hoe kies ik de juiste AI agent?",
+        "answer": "Overweeg je specifieke toepassing (coderen, klantenservice, etc.), budget, benodigde integraties en technisch niveau. Onze vergelijkingstool en reviews helpen je de beste match te vinden."
+      },
+      {
+        "question": "Zijn AI agents veilig?",
+        "answer": "Beveiliging verschilt per platform. Enterprise-grade AI agents bieden features zoals data encryptie, SOC 2 compliance en private deployments. Bekijk altijd de beveiligingsdocumentatie."
+      },
+      {
+        "question": "Kan ik AI agents gratis uitproberen?",
+        "answer": "Ja! Veel AI agent platforms bieden gratis tiers of proefperiodes. Bekijk onze 'Gratis AI Agents' pagina om te zien welke platforms gratis plannen aanbieden."
+      }
+    ]
   },
   "agentTable": {
     "columns": {
@@ -1412,16 +1475,28 @@
       "description": "Laatste nieuws, gidsen en tutorials over AI agents. Blijf op de hoogte van nieuwe platforms, toepassingen en best practices."
     },
     "hero": {
+      "badge": "AI Agent Blog",
       "title": "AI Agent Blog",
-      "subtitle": "Laatste nieuws, gidsen en tutorials over AI agents"
+      "subtitle": "Blijf op de hoogte van het laatste AI agent nieuws, tips en uitgebreide gidsen."
     },
     "categories": {
-      "all": "Alle Posts",
+      "all": "Alle Artikelen",
+      "deals": "Deals",
+      "security": "Beveiliging",
+      "tips": "Tips & Tricks",
       "news": "Nieuws",
+      "guide": "Gidsen",
       "guides": "Gidsen",
       "tutorials": "Tutorials",
       "reviews": "Reviews",
+      "comparison": "Vergelijkingen",
       "comparisons": "Vergelijkingen"
+    },
+    "featured": {
+      "title": "Uitgelicht Artikel"
+    },
+    "recent": {
+      "title": "Recente Artikelen"
     },
     "filters": {
       "latest": "Nieuwste",
@@ -1432,6 +1507,21 @@
     "minRead": "min leestijd",
     "share": "Deel",
     "relatedPosts": "Gerelateerde Posts",
+    "cta": {
+      "title": "Blijf Op de Hoogte Over AI Agents",
+      "subtitle": "Ontvang de nieuwste tips, reviews en gidsen in je inbox."
+    },
+    "relatedPages": {
+      "title": "Ontdek Meer",
+      "bestAgents": "Beste AI Agents 2026",
+      "bestAgentsDesc": "Onze best beoordeelde AI agent aanbevelingen",
+      "guides": "Wat is een AI Agent?",
+      "guidesDesc": "Complete beginnersgids over AI agents",
+      "compare": "Vergelijk AI Agents",
+      "compareDesc": "AI agents naast elkaar vergelijken",
+      "useCases": "AI Agent Toepassingen",
+      "useCasesDesc": "Ontdek hoe AI agents je werk kunnen transformeren"
+    },
     "newsletter": {
       "title": "Mis Nooit Een Update",
       "description": "Ontvang wekelijks de nieuwste AI agent nieuws, reviews en tutorials."
@@ -1446,12 +1536,77 @@
       "title": "Vergelijk AI Agents",
       "subtitle": "Selecteer agents om side-by-side te vergelijken"
     },
+    "badge": "AI Agent Vergelijkingstool",
+    "title": "Vergelijk AI Agents Naast Elkaar",
+    "subtitle": "Vind de perfecte AI agent door features, prijzen en prestaties naast elkaar te vergelijken.",
+    "fullComparisonTable": "Volledige AI Agent Vergelijkingstabel",
+    "vpnProvider": "AI Agent",
+    "editorsChoice": "Redactie Keuze",
+    "overallRating": "Totale Beoordeling",
+    "monthlyPrice": "Maandelijkse Prijs",
+    "perMonth": "/maand",
+    "bestPrice": "Beste Jaarprijs",
+    "freeTier": "Gratis Tier",
+    "getStarted": "Aan de Slag",
+    "visit": "Bekijk",
+    "readReview": "Lees Review",
+    "quickComparison": "Snelle Vergelijking",
+    "quickComparisonSubtitle": "Onze top picks per categorie",
+    "howWeCompare": "Hoe Wij AI Agents Vergelijken",
+    "needHelpDeciding": "Hulp Nodig bij het Kiezen?",
+    "needHelpDesc": "Bekijk onze gedetailleerde reviews en gidsen om de perfecte AI agent voor jouw behoeften te vinden.",
     "selectAgents": "Selecteer Agents Om Te Vergelijken",
     "search": "Zoek AI agents...",
     "selected": "Geselecteerd",
     "compare": "Vergelijk",
     "clearAll": "Wis Alles",
     "addAgent": "Voeg Agent Toe",
+    "breadcrumb": "Vergelijk AI Agents",
+    "quickCards": {
+      "bestOverall": "Beste Algeheel (Coding)",
+      "bestValue": "Beste Waarde",
+      "bestPerformance": "Beste Prestaties",
+      "bestEnterprise": "Beste voor Enterprise",
+      "enterpriseBadge": "Enterprise",
+      "bestFree": "Beste Gratis Optie",
+      "openSource": "Open Source",
+      "bestNoCode": "Beste No-Code",
+      "integrationsCount": "400+ Integraties",
+      "claudeCodeDesc": "Autonome CLI agent met 200k context, uitzonderlijk redeneervermogen en multi-bestand bewerkingsmogelijkheden.",
+      "copilotDesc": "Meest betaalbare premium AI coding assistent met multi-IDE ondersteuning en GitHub ecosysteem integratie.",
+      "chatgptDesc": "OpenAI's vlaggenschip AI met geavanceerde o1 redenering, custom GPTs en multimodale mogelijkheden.",
+      "copilotStudioDesc": "Microsoft's enterprise platform voor het bouwen van custom AI copilots over Microsoft 365 en Power Platform.",
+      "flowiseDesc": "Gratis en open-source drag-and-drop LLM flow builder met RAG ondersteuning en chatbot deployment.",
+      "n8nDesc": "Open-source workflow automatisering met krachtige AI agent builder en 400+ voorgebouwde integraties.",
+      "getCta": "Probeer {name}"
+    },
+    "methodology": {
+      "performance": "Prestatie Testen",
+      "performanceDesc": "We testen rigoureus de responskwaliteit, snelheid en redeneervermogen van elke AI agent over real-world taken inclusief code generatie, analyse en probleemoplossing.",
+      "privacy": "Privacy & Beveiligingsanalyse",
+      "privacyDesc": "We evalueren dataverwerking, encryptiestandaarden, compliance certificeringen en of agents trainen op je data om te garanderen dat je informatie veilig blijft.",
+      "integration": "Integratie Testen",
+      "integrationDesc": "We testen compatibiliteit met populaire tools, API's en workflows om naadloze integratie met je bestaande tech stack en ontwikkelomgeving te verifiëren.",
+      "value": "Waarde Beoordeling",
+      "valueDesc": "We analyseren prijstiers, gratis tier beperkingen en feature-naar-kosten verhoudingen om de beste waarde AI agents te bepalen voor verschillende budgetten en toepassingen."
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "items": [
+        { "question": "Hoe vergelijken jullie AI agents?", "answer": "We evalueren AI agents op meerdere criteria inclusief gebruiksgemak, prestaties, prijzen, integraties, prijs-kwaliteit en real-world testen. Elke agent wordt beoordeeld op een 5-puntsschaal op basis van hands-on testen en gebruikersfeedback." },
+        { "question": "Hoe vaak worden vergelijkingen bijgewerkt?", "answer": "We werken onze vergelijkingsdata maandelijks bij om de nieuwste prijzen, features, modelupdates en prestatie benchmarks weer te geven. Grote updates of nieuwe agent releases triggeren onmiddellijke herevaluatie." },
+        { "question": "Kan ik meer dan twee AI agents vergelijken?", "answer": "Ja, onze vergelijkingstool laat je tot 4 AI agents naast elkaar vergelijken. Dit helpt je meerdere opties tegelijkertijd te evalueren en de beste beslissing te nemen voor je specifieke behoeften." },
+        { "question": "Welke AI agent is het beste voor coderen?", "answer": "Voor coderen raden we Claude Code aan voor autonome ontwikkeling met enorme context, Cursor voor AI-first IDE ervaring, of GitHub Copilot voor budgetvriendelijke autocomplete. De beste keuze hangt af van je workflow en budget." },
+        { "question": "Zijn er gratis AI agents beschikbaar?", "answer": "Ja! Er bestaan meerdere uitstekende gratis opties: ChatGPT (gratis tier), Claude (beperkt gratis gebruik), Flowise (open-source) en n8n AI (self-hosted). Veel coding agents bieden ook gratis tiers voor studenten en open-source maintainers." }
+      ]
+    },
+    "ctaButtonPrimary": "Bekijk Beste AI Coding Agents",
+    "ctaButtonSecondary": "Wat is een AI Agent?",
+    "popularComparisons": {
+      "badge": "Populaire Vergelijkingen",
+      "title": "Vergelijk Top AI Agents",
+      "subtitle": "Zie hoe de populairste AI agent platforms zich tot elkaar verhouden"
+    },
     "columns": {
       "overview": "Overzicht",
       "pricing": "Prijzen",
@@ -1483,7 +1638,11 @@
     "getDeal": "Bekijk Deal",
     "revealCode": "Onthul Code",
     "copied": "Gekopieerd!",
-    "copyCode": "Kopieer Code"
+    "copyCode": "Kopieer Code",
+    "code": "Code",
+    "copy": "Kopieer",
+    "verified": "Geverifieerd",
+    "expires": "Verloopt"
   },
   "couponsPage": {
     "meta": {
@@ -1681,6 +1840,10 @@
       "compareAll": "Vergelijk Alle Aanbevelingen",
       "retakeQuiz": "Quiz Opnieuw Doen",
       "shareResults": "Deel Resultaten"
+    },
+    "info": {
+      "title": "Vind Jouw Perfecte AI Agent",
+      "description": "Onze quiz analyseert je behoeften, budget en technisch niveau om de beste AI agents voor jou aan te bevelen. Krijg gepersonaliseerde aanbevelingen in minder dan 2 minuten."
     }
   },
   "stickyBar": {
@@ -1705,6 +1868,30 @@
   "comparisonTool": {
     "title": "AI Agent Vergelijkingstool",
     "subtitle": "Vind de perfecte AI agent door features, prijzen en mogelijkheden te vergelijken",
+    "addVpn": "Voeg AI Agent Toe",
+    "noVpnsSelected": "Geen AI agents geselecteerd",
+    "selectToCompare": "Selecteer 2-4 AI agents om te vergelijken",
+    "addFirstVpn": "Voeg je eerste AI agent toe om te vergelijken",
+    "selected": "geselecteerd",
+    "remove": "Verwijderen",
+    "feature": "Feature",
+    "pricing": "Prijzen",
+    "monthlyPrice": "Maandprijs",
+    "yearlyPrice": "Jaarprijs",
+    "performance": "Prestaties",
+    "performanceLabel": "Prestaties",
+    "features": "Features",
+    "getStarted": "Aan de Slag",
+    "visitSite": "Bezoek Site",
+    "freeTier": "Gratis Tier",
+    "overallRating": "Totale Beoordeling",
+    "easeOfUse": "Gebruiksgemak",
+    "valueForMoney": "Prijs-Kwaliteit",
+    "category": "Categorie",
+    "maxUsers": "Max Gebruikers",
+    "apiAccess": "API Toegang",
+    "modelsSupported": "Ondersteunde Modellen",
+    "integrationsLabel": "Integraties",
     "filters": {
       "useCase": "Toepassing",
       "priceRange": "Prijsklasse",
@@ -1714,5 +1901,20 @@
     "results": "{count} agents voldoen aan jouw criteria",
     "noResults": "Geen agents voldoen aan je filters. Probeer je criteria aan te passen.",
     "resetFilters": "Reset Filters"
+  },
+  "useCasesPage": {
+    "badge": "Toepassingen",
+    "title": "Ontdek AI Agent Toepassingen",
+    "subtitle": "Van softwareontwikkeling tot klantenservice, AI agents transformeren hoe we werken. Ontdek toepassingen en vind de perfecte AI agents voor jouw behoeften.",
+    "recommendedAgents": "{count} aanbevolen AI agents",
+    "explore": "Ontdek {name}",
+    "ctaTitle": "Niet Zeker Welke AI Agent Je Nodig Hebt?",
+    "ctaSubtitle": "Doe onze snelle quiz voor gepersonaliseerde AI agent aanbevelingen op basis van jouw specifieke behoeften.",
+    "takeQuiz": "Doe de Quiz",
+    "viewAllAgents": "Bekijk Alle AI Agents",
+    "meta": {
+      "title": "AI Agent Toepassingen | ZeroToAIAgents",
+      "description": "Ontdek hoe AI agents je werkwijze kunnen transformeren. Bekijk toepassingen voor codering, marketing, klantenservice en meer."
+    }
   }
 }

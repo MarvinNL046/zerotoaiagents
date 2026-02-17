@@ -66,8 +66,8 @@ function DealsSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SpecialAnnouncement",
-    name: "AI Agent Deals & Coupons 2026",
-    description: "Exclusive AI agent deals and coupons with savings up to 50%",
+    name: "AI Agent Deals & Discounts 2026",
+    description: "Exclusive AI agent platform deals and discounts with savings up to 50%",
     datePosted: "2026-11-29",
     expires: "2026-12-31",
   };
@@ -82,59 +82,59 @@ function DealsSchema() {
 
 const deals = [
   {
-    name: "Surfshark",
+    name: "Cursor Pro",
     badgeKey: "bestDeal" as const,
     badgeColor: "bg-green-500",
-    originalPrice: 12.95,
-    dealPrice: 1.99,
-    discount: 87,
-    months: 27, // 2 years + 3 months
-    total: 53.73,
-    features: ["Unlimited devices", "Ad blocker", "24/7 support"],
-    coupon: "SHARKGIFT",
-    affiliateUrl: "https://go.zerotoaiagents.com/surfshark",
+    originalPrice: 20,
+    dealPrice: 10,
+    discount: 50,
+    months: 12,
+    total: 120,
+    features: ["AI code completion", "GPT-4 & Claude models", "Unlimited usage"],
+    coupon: null,
+    affiliateUrl: "https://go.zerotoaiagents.com/cursor",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
   {
-    name: "NordVPN",
+    name: "Claude Pro",
     badgeKey: "mostPopular" as const,
     badgeColor: "bg-blue-500",
-    originalPrice: 12.99,
-    dealPrice: 2.99,
-    discount: 74,
-    months: 27,
-    total: 80.73,
-    features: ["10 devices", "Threat Protection", "Dark Web Monitor"],
+    originalPrice: 20,
+    dealPrice: 18,
+    discount: 10,
+    months: 12,
+    total: 216,
+    features: ["Extended usage limits", "Priority access", "Claude 3.5 Sonnet & Opus"],
     coupon: null,
-    affiliateUrl: "https://go.zerotoaiagents.com/nordvpn",
+    affiliateUrl: "https://go.zerotoaiagents.com/claude",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
   {
-    name: "ExpressVPN",
+    name: "GitHub Copilot",
     badgeKey: "premiumChoice" as const,
     badgeColor: "bg-purple-500",
-    originalPrice: 12.95,
-    dealPrice: 2.44,
-    discount: 77,
-    months: 28, // 2 years + 4 months
-    total: 88,
-    features: ["12 devices", "Password manager", "Router app"],
+    originalPrice: 19,
+    dealPrice: 10,
+    discount: 47,
+    months: 12,
+    total: 120,
+    features: ["AI pair programming", "Multi-IDE support", "Code suggestions"],
     coupon: null,
-    affiliateUrl: "https://go.zerotoaiagents.com/expressvpn",
+    affiliateUrl: "https://go.zerotoaiagents.com/github-copilot",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
   {
-    name: "CyberGhost",
+    name: "n8n Cloud",
     badgeKey: "bestValue" as const,
     badgeColor: "bg-orange-500",
-    originalPrice: 12.99,
-    dealPrice: 2.03,
-    discount: 83,
-    months: 28,
-    total: 56.94,
-    features: ["7 devices", "Dedicated streaming servers", "45-day guarantee"],
+    originalPrice: 24,
+    dealPrice: 20,
+    discount: 17,
+    months: 12,
+    total: 240,
+    features: ["AI workflow automation", "500+ integrations", "Self-host option"],
     coupon: null,
-    affiliateUrl: "https://go.zerotoaiagents.com/cyberghost",
+    affiliateUrl: "https://go.zerotoaiagents.com/n8n-ai",
     expiresAt: new Date("2026-12-31T23:59:59"),
   },
 ];
@@ -190,9 +190,9 @@ export default async function DealsPage({ params }: Props) {
   > = {
     en: {
       hero: {
-        title: "VPN Deals & Coupons 2026",
+        title: "AI Agent Deals & Discounts 2026",
         subtitle:
-          "Exclusive discounts on premium VPN services. Save up to 87% with our verified deals and coupon codes.",
+          "Exclusive discounts on premium AI agent platforms. Save up to 50% with our verified deals.",
         urgency: "Limited-time offers - Don't miss out!",
         timerLabel: "Deals End In",
       },
@@ -224,29 +224,29 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "Check Renewal Prices",
             description:
-              "Always check what you'll pay after the promotional period ends. Many VPNs increase prices significantly after year 1.",
+              "Always check what you'll pay after the promotional period ends. Many AI platforms increase prices after year 1.",
           },
           {
-            title: "Extra Months Trick",
+            title: "Free Tier First",
             description:
-              "The 'free months' are already calculated into the monthly price. A 27-month deal is really just a 2-year subscription with better pricing.",
+              "Most AI agents offer free tiers. Test them before committing to a paid plan to make sure it fits your needs.",
           },
           {
             title: "Money-Back Guarantee",
             description:
-              "All deals include 30-45 day money-back guarantees. Test the service risk-free before committing long-term.",
+              "Many platforms offer trial periods or money-back guarantees. Test the service risk-free before committing.",
           },
           {
-            title: "Annual vs Multi-Year",
+            title: "Annual vs Monthly",
             description:
-              "Multi-year plans offer the best per-month pricing, but only if you're certain you'll use the VPN for that duration.",
+              "Annual plans typically offer 15-30% savings over monthly billing. Choose annual if you're committed.",
           },
         ],
       },
       guarantee: {
-        title: "Risk-Free with Money-Back Guarantees",
+        title: "Risk-Free with Free Trials & Guarantees",
         description:
-          "Every deal on this page includes a money-back guarantee (30-45 days depending on the provider). Try the service risk-free and get a full refund if you're not satisfied.",
+          "Most AI agent platforms offer free tiers or trial periods. Try the service risk-free and upgrade only if you're satisfied.",
       },
       faq: {
         title: "Frequently Asked Questions",
@@ -254,31 +254,31 @@ export default async function DealsPage({ params }: Props) {
           {
             question: "Do these deals expire?",
             answer:
-              "Yes, VPN deals change frequently. We update this page regularly with the latest offers. The deals shown are current as of today.",
+              "Yes, AI agent deals change frequently. We update this page regularly with the latest offers.",
           },
           {
             question: "Are coupon codes required?",
             answer:
-              "Most deals are automatically applied through our affiliate links. When a coupon code is required, we display it prominently on the deal card.",
+              "Most deals are automatically applied through our links. When a coupon code is required, we display it prominently.",
           },
           {
             question: "What happens after the promotional period?",
             answer:
-              "After your initial subscription period ends, you'll be charged the standard renewal price unless you cancel. Always check the renewal terms before purchasing.",
+              "After your initial subscription period ends, you'll be charged the standard renewal price unless you cancel.",
           },
           {
-            question: "Can I get a refund if I don't like the VPN?",
+            question: "Can I get a refund if I don't like the AI agent?",
             answer:
-              "Yes! All VPNs listed here offer money-back guarantees ranging from 30-45 days. Contact their support to request a refund within the guarantee period.",
+              "Most AI platforms offer free tiers, trial periods, or money-back guarantees. Check the specific platform's refund policy.",
           },
         ],
       },
     },
     nl: {
       hero: {
-        title: "VPN Deals & Kortingscodes 2026",
+        title: "AI Agent Deals & Kortingen 2026",
         subtitle:
-          "Exclusieve kortingen op premium VPN-diensten. Bespaar tot 87% met onze geverifieerde deals en kortingscodes.",
+          "Exclusieve kortingen op premium AI agent-platforms. Bespaar tot 50% met onze geverifieerde deals.",
         urgency: "Tijdelijke aanbiedingen - Mis het niet!",
         timerLabel: "Deals Eindigen In",
       },
@@ -310,29 +310,29 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "Controleer Verlengingsprijzen",
             description:
-              "Controleer altijd wat u betaalt nadat de promotieperiode afloopt. Veel VPN's verhogen de prijzen aanzienlijk na jaar 1.",
+              "Controleer altijd wat u betaalt nadat de promotieperiode afloopt. Veel AI-platforms verhogen de prijzen na jaar 1.",
           },
           {
-            title: "Extra Maanden Truc",
+            title: "Gratis Tier Eerst",
             description:
-              "De 'gratis maanden' zijn al verwerkt in de maandprijs. Een 27-maanden deal is eigenlijk gewoon een 2-jarig abonnement met betere prijzen.",
+              "De meeste AI agents bieden gratis tiers. Test ze voordat u zich committeert aan een betaald plan om er zeker van te zijn dat het past bij uw behoeften.",
           },
           {
             title: "Geld-Terug-Garantie",
             description:
-              "Alle deals bevatten 30-45 dagen geld-terug-garantie. Test de dienst risicovrij voordat u zich langdurig committeert.",
+              "Veel platforms bieden proefperiodes of geld-terug-garanties. Test de dienst risicovrij voordat u zich committeert.",
           },
           {
-            title: "Jaarlijks vs Meerjarig",
+            title: "Jaarlijks vs Maandelijks",
             description:
-              "Meerjarige plannen bieden de beste prijs per maand, maar alleen als u zeker weet dat u de VPN voor die duur zult gebruiken.",
+              "Jaarplannen bieden doorgaans 15-30% besparing ten opzichte van maandelijkse facturering. Kies jaarlijks als u toegewijd bent.",
           },
         ],
       },
       guarantee: {
-        title: "Risicovrij met Geld-Terug-Garanties",
+        title: "Risicovrij met Gratis Proefversies & Garanties",
         description:
-          "Elke deal op deze pagina bevat een geld-terug-garantie (30-45 dagen afhankelijk van de aanbieder). Probeer de dienst risicovrij en krijg een volledige terugbetaling als u niet tevreden bent.",
+          "De meeste AI agent-platforms bieden gratis tiers of proefperiodes. Probeer de dienst risicovrij en upgrade alleen als u tevreden bent.",
       },
       faq: {
         title: "Veelgestelde Vragen",
@@ -340,31 +340,31 @@ export default async function DealsPage({ params }: Props) {
           {
             question: "Verlopen deze deals?",
             answer:
-              "Ja, VPN-deals veranderen regelmatig. We werken deze pagina regelmatig bij met de nieuwste aanbiedingen. De getoonde deals zijn actueel vanaf vandaag.",
+              "Ja, AI agent-deals veranderen regelmatig. We werken deze pagina regelmatig bij met de nieuwste aanbiedingen.",
           },
           {
             question: "Zijn kortingscodes vereist?",
             answer:
-              "De meeste deals worden automatisch toegepast via onze affiliate links. Wanneer een kortingscode vereist is, tonen we deze prominent op de dealkaart.",
+              "De meeste deals worden automatisch toegepast via onze links. Wanneer een kortingscode vereist is, tonen we deze prominent.",
           },
           {
             question: "Wat gebeurt er na de promotieperiode?",
             answer:
-              "Nadat uw initiële abonnementsperiode afloopt, wordt u de standaard verlengingsprijs in rekening gebracht tenzij u annuleert. Controleer altijd de verlengingsvoorwaarden voordat u koopt.",
+              "Nadat uw initiële abonnementsperiode afloopt, wordt u de standaard verlengingsprijs in rekening gebracht tenzij u annuleert.",
           },
           {
-            question: "Kan ik mijn geld terugkrijgen als ik de VPN niet leuk vind?",
+            question: "Kan ik mijn geld terugkrijgen als ik de AI agent niet leuk vind?",
             answer:
-              "Ja! Alle VPN's die hier vermeld staan, bieden geld-terug-garanties van 30-45 dagen. Neem contact op met hun ondersteuning om een terugbetaling aan te vragen binnen de garantieperiode.",
+              "De meeste AI-platforms bieden gratis tiers, proefperiodes of geld-terug-garanties. Controleer het specifieke terugbetalingsbeleid van het platform.",
           },
         ],
       },
     },
     de: {
       hero: {
-        title: "VPN-Angebote & Gutscheine 2026",
+        title: "KI-Agent-Angebote & Rabatte 2026",
         subtitle:
-          "Exklusive Rabatte auf Premium-VPN-Dienste. Sparen Sie bis zu 87% mit unseren verifizierten Angeboten und Gutscheincodes.",
+          "Exklusive Rabatte auf Premium-KI-Agent-Plattformen. Sparen Sie bis zu 50% mit unseren verifizierten Angeboten.",
         urgency: "Zeitlich begrenzte Angebote - Verpassen Sie es nicht!",
         timerLabel: "Angebote Enden In",
       },
@@ -396,29 +396,29 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "Verlängerungspreise prüfen",
             description:
-              "Überprüfen Sie immer, was Sie nach Ablauf der Aktionsperiode zahlen. Viele VPNs erhöhen die Preise nach dem ersten Jahr erheblich.",
+              "Überprüfen Sie immer, was Sie nach Ablauf der Aktionsperiode zahlen. Viele KI-Plattformen erhöhen die Preise nach dem ersten Jahr.",
           },
           {
-            title: "Extra-Monate-Trick",
+            title: "Kostenlose Stufe zuerst",
             description:
-              "Die 'kostenlosen Monate' sind bereits im Monatspreis eingerechnet. Ein 27-Monats-Deal ist eigentlich nur ein 2-Jahres-Abonnement mit besserer Preisgestaltung.",
+              "Die meisten KI-Agenten bieten kostenlose Stufen. Testen Sie sie, bevor Sie sich auf einen kostenpflichtigen Plan festlegen, um sicherzustellen, dass er Ihren Anforderungen entspricht.",
           },
           {
             title: "Geld-zurück-Garantie",
             description:
-              "Alle Angebote beinhalten 30-45 Tage Geld-zurück-Garantie. Testen Sie den Service risikofrei, bevor Sie sich langfristig verpflichten.",
+              "Viele Plattformen bieten Testzeiträume oder Geld-zurück-Garantien. Testen Sie den Service risikofrei, bevor Sie sich verpflichten.",
           },
           {
-            title: "Jährlich vs. Mehrjährig",
+            title: "Jährlich vs. Monatlich",
             description:
-              "Mehrjährige Pläne bieten die besten monatlichen Preise, aber nur, wenn Sie sicher sind, dass Sie das VPN für diese Dauer nutzen werden.",
+              "Jahrespläne bieten in der Regel 15-30% Einsparungen gegenüber monatlicher Abrechnung. Wählen Sie jährlich, wenn Sie sich verpflichten.",
           },
         ],
       },
       guarantee: {
-        title: "Risikofrei mit Geld-zurück-Garantien",
+        title: "Risikofrei mit kostenlosen Testversionen & Garantien",
         description:
-          "Jedes Angebot auf dieser Seite enthält eine Geld-zurück-Garantie (30-45 Tage je nach Anbieter). Testen Sie den Service risikofrei und erhalten Sie eine vollständige Rückerstattung, wenn Sie nicht zufrieden sind.",
+          "Die meisten KI-Agent-Plattformen bieten kostenlose Stufen oder Testzeiträume. Testen Sie den Service risikofrei und upgraden Sie nur, wenn Sie zufrieden sind.",
       },
       faq: {
         title: "Häufig gestellte Fragen",
@@ -426,31 +426,31 @@ export default async function DealsPage({ params }: Props) {
           {
             question: "Laufen diese Angebote ab?",
             answer:
-              "Ja, VPN-Angebote ändern sich häufig. Wir aktualisieren diese Seite regelmäßig mit den neuesten Angeboten. Die angezeigten Deals sind ab heute aktuell.",
+              "Ja, KI-Agent-Angebote ändern sich häufig. Wir aktualisieren diese Seite regelmäßig mit den neuesten Angeboten.",
           },
           {
             question: "Sind Gutscheincodes erforderlich?",
             answer:
-              "Die meisten Angebote werden automatisch über unsere Affiliate-Links angewendet. Wenn ein Gutscheincode erforderlich ist, zeigen wir ihn prominent auf der Deal-Karte an.",
+              "Die meisten Angebote werden automatisch über unsere Links angewendet. Wenn ein Gutscheincode erforderlich ist, zeigen wir ihn prominent an.",
           },
           {
             question: "Was passiert nach der Aktionsperiode?",
             answer:
-              "Nach Ablauf Ihrer anfänglichen Abonnementperiode wird Ihnen der Standardverlängerungspreis berechnet, es sei denn, Sie kündigen. Überprüfen Sie immer die Verlängerungsbedingungen vor dem Kauf.",
+              "Nach Ablauf Ihrer anfänglichen Abonnementperiode wird Ihnen der Standardverlängerungspreis berechnet, es sei denn, Sie kündigen.",
           },
           {
-            question: "Kann ich eine Rückerstattung erhalten, wenn mir das VPN nicht gefällt?",
+            question: "Kann ich eine Rückerstattung erhalten, wenn mir der KI-Agent nicht gefällt?",
             answer:
-              "Ja! Alle hier aufgeführten VPNs bieten Geld-zurück-Garantien von 30-45 Tagen. Kontaktieren Sie deren Support, um eine Rückerstattung innerhalb der Garantiezeit anzufordern.",
+              "Die meisten KI-Plattformen bieten kostenlose Stufen, Testzeiträume oder Geld-zurück-Garantien. Überprüfen Sie die spezifische Rückerstattungsrichtlinie der Plattform.",
           },
         ],
       },
     },
     es: {
       hero: {
-        title: "Ofertas y Cupones VPN 2026",
+        title: "Ofertas y Descuentos de Agentes IA 2026",
         subtitle:
-          "Descuentos exclusivos en servicios VPN premium. Ahorra hasta 87% con nuestras ofertas verificadas y códigos de cupón.",
+          "Descuentos exclusivos en plataformas de agentes IA premium. Ahorra hasta 50% con nuestras ofertas verificadas.",
         urgency: "¡Ofertas por tiempo limitado - No te lo pierdas!",
         timerLabel: "Las Ofertas Terminan En",
       },
@@ -482,29 +482,29 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "Verificar Precios de Renovación",
             description:
-              "Siempre verifica lo que pagarás después de que termine el período promocional. Muchas VPN aumentan los precios significativamente después del año 1.",
+              "Siempre verifica lo que pagarás después de que termine el período promocional. Muchas plataformas de IA aumentan los precios después del año 1.",
           },
           {
-            title: "Truco de Meses Extra",
+            title: "Nivel Gratuito Primero",
             description:
-              "Los 'meses gratis' ya están calculados en el precio mensual. Una oferta de 27 meses es realmente solo una suscripción de 2 años con mejor precio.",
+              "La mayoría de los agentes IA ofrecen niveles gratuitos. Pruébalos antes de comprometerte con un plan de pago para asegurarte de que se adapte a tus necesidades.",
           },
           {
             title: "Garantía de Devolución de Dinero",
             description:
-              "Todas las ofertas incluyen garantías de devolución de dinero de 30-45 días. Prueba el servicio sin riesgo antes de comprometerte a largo plazo.",
+              "Muchas plataformas ofrecen períodos de prueba o garantías de devolución de dinero. Prueba el servicio sin riesgo antes de comprometerte.",
           },
           {
-            title: "Anual vs Multi-año",
+            title: "Anual vs Mensual",
             description:
-              "Los planes multi-año ofrecen el mejor precio por mes, pero solo si estás seguro de que usarás la VPN durante ese tiempo.",
+              "Los planes anuales suelen ofrecer un ahorro del 15-30% sobre la facturación mensual. Elige anual si estás comprometido.",
           },
         ],
       },
       guarantee: {
-        title: "Sin Riesgo con Garantías de Devolución de Dinero",
+        title: "Sin Riesgo con Pruebas Gratuitas y Garantías",
         description:
-          "Cada oferta en esta página incluye una garantía de devolución de dinero (30-45 días según el proveedor). Prueba el servicio sin riesgo y obtén un reembolso completo si no estás satisfecho.",
+          "La mayoría de las plataformas de agentes IA ofrecen niveles gratuitos o períodos de prueba. Prueba el servicio sin riesgo y actualiza solo si estás satisfecho.",
       },
       faq: {
         title: "Preguntas Frecuentes",
@@ -512,31 +512,31 @@ export default async function DealsPage({ params }: Props) {
           {
             question: "¿Estas ofertas expiran?",
             answer:
-              "Sí, las ofertas de VPN cambian con frecuencia. Actualizamos esta página regularmente con las últimas ofertas. Las ofertas mostradas son actuales a partir de hoy.",
+              "Sí, las ofertas de agentes IA cambian con frecuencia. Actualizamos esta página regularmente con las últimas ofertas.",
           },
           {
             question: "¿Se requieren códigos de cupón?",
             answer:
-              "La mayoría de las ofertas se aplican automáticamente a través de nuestros enlaces de afiliados. Cuando se requiere un código de cupón, lo mostramos de manera prominente en la tarjeta de la oferta.",
+              "La mayoría de las ofertas se aplican automáticamente a través de nuestros enlaces. Cuando se requiere un código de cupón, lo mostramos de manera prominente.",
           },
           {
             question: "¿Qué sucede después del período promocional?",
             answer:
-              "Después de que termine tu período de suscripción inicial, se te cobrará el precio de renovación estándar a menos que canceles. Siempre verifica los términos de renovación antes de comprar.",
+              "Después de que termine tu período de suscripción inicial, se te cobrará el precio de renovación estándar a menos que canceles.",
           },
           {
-            question: "¿Puedo obtener un reembolso si no me gusta la VPN?",
+            question: "¿Puedo obtener un reembolso si no me gusta el agente IA?",
             answer:
-              "¡Sí! Todas las VPN listadas aquí ofrecen garantías de devolución de dinero que van desde 30-45 días. Contacta a su soporte para solicitar un reembolso dentro del período de garantía.",
+              "La mayoría de las plataformas de IA ofrecen niveles gratuitos, períodos de prueba o garantías de devolución de dinero. Verifica la política de reembolso específica de la plataforma.",
           },
         ],
       },
     },
     fr: {
       hero: {
-        title: "Offres VPN & Coupons 2026",
+        title: "Offres Agents IA & Réductions 2026",
         subtitle:
-          "Remises exclusives sur les services VPN premium. Économisez jusqu'à 87% avec nos offres vérifiées et codes promo.",
+          "Remises exclusives sur les plateformes d'agents IA premium. Économisez jusqu'à 50% avec nos offres vérifiées.",
         urgency: "Offres à durée limitée - Ne manquez pas ça!",
         timerLabel: "Les Offres Se Terminent Dans",
       },
@@ -568,29 +568,29 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "Vérifier les Prix de Renouvellement",
             description:
-              "Vérifiez toujours ce que vous paierez après la fin de la période promotionnelle. De nombreux VPN augmentent considérablement les prix après la 1ère année.",
+              "Vérifiez toujours ce que vous paierez après la fin de la période promotionnelle. De nombreuses plateformes IA augmentent les prix après la 1ère année.",
           },
           {
-            title: "Astuce des Mois Supplémentaires",
+            title: "Niveau Gratuit D'abord",
             description:
-              "Les 'mois gratuits' sont déjà calculés dans le prix mensuel. Une offre de 27 mois est en réalité juste un abonnement de 2 ans avec un meilleur prix.",
+              "La plupart des agents IA offrent des niveaux gratuits. Testez-les avant de vous engager dans un plan payant pour vous assurer qu'il répond à vos besoins.",
           },
           {
             title: "Garantie Satisfait ou Remboursé",
             description:
-              "Toutes les offres incluent des garanties satisfait ou remboursé de 30-45 jours. Testez le service sans risque avant de vous engager à long terme.",
+              "De nombreuses plateformes offrent des périodes d'essai ou des garanties satisfait ou remboursé. Testez le service sans risque avant de vous engager.",
           },
           {
-            title: "Annuel vs Multi-années",
+            title: "Annuel vs Mensuel",
             description:
-              "Les plans multi-années offrent le meilleur prix mensuel, mais seulement si vous êtes certain d'utiliser le VPN pendant cette durée.",
+              "Les plans annuels offrent généralement 15-30% d'économies par rapport à la facturation mensuelle. Choisissez annuel si vous êtes engagé.",
           },
         ],
       },
       guarantee: {
-        title: "Sans Risque avec Garanties Satisfait ou Remboursé",
+        title: "Sans Risque avec Essais Gratuits & Garanties",
         description:
-          "Chaque offre sur cette page inclut une garantie satisfait ou remboursé (30-45 jours selon le fournisseur). Essayez le service sans risque et obtenez un remboursement complet si vous n'êtes pas satisfait.",
+          "La plupart des plateformes d'agents IA offrent des niveaux gratuits ou des périodes d'essai. Essayez le service sans risque et mettez à niveau uniquement si vous êtes satisfait.",
       },
       faq: {
         title: "Questions Fréquemment Posées",
@@ -598,30 +598,30 @@ export default async function DealsPage({ params }: Props) {
           {
             question: "Ces offres expirent-elles?",
             answer:
-              "Oui, les offres VPN changent fréquemment. Nous mettons à jour cette page régulièrement avec les dernières offres. Les offres affichées sont actuelles à partir d'aujourd'hui.",
+              "Oui, les offres d'agents IA changent fréquemment. Nous mettons à jour cette page régulièrement avec les dernières offres.",
           },
           {
             question: "Les codes promo sont-ils obligatoires?",
             answer:
-              "La plupart des offres sont automatiquement appliquées via nos liens d'affiliation. Lorsqu'un code promo est requis, nous l'affichons de manière bien visible sur la carte de l'offre.",
+              "La plupart des offres sont automatiquement appliquées via nos liens. Lorsqu'un code promo est requis, nous l'affichons de manière bien visible.",
           },
           {
             question: "Que se passe-t-il après la période promotionnelle?",
             answer:
-              "Après la fin de votre période d'abonnement initiale, vous serez facturé au prix de renouvellement standard sauf si vous annulez. Vérifiez toujours les conditions de renouvellement avant d'acheter.",
+              "Après la fin de votre période d'abonnement initiale, vous serez facturé au prix de renouvellement standard sauf si vous annulez.",
           },
           {
-            question: "Puis-je obtenir un remboursement si je n'aime pas le VPN?",
+            question: "Puis-je obtenir un remboursement si je n'aime pas l'agent IA?",
             answer:
-              "Oui! Tous les VPN listés ici offrent des garanties satisfait ou remboursé allant de 30 à 45 jours. Contactez leur support pour demander un remboursement pendant la période de garantie.",
+              "La plupart des plateformes IA offrent des niveaux gratuits, des périodes d'essai ou des garanties satisfait ou remboursé. Vérifiez la politique de remboursement spécifique de la plateforme.",
           },
         ],
       },
     },
     zh: {
       hero: {
-        title: "VPN优惠与折扣码2026",
-        subtitle: "高级VPN服务独家折扣。使用我们验证过的优惠和折扣码节省高达87%。",
+        title: "AI代理优惠与折扣2026",
+        subtitle: "高级AI代理平台独家折扣。使用我们验证过的优惠节省高达50%。",
         urgency: "限时优惠 - 不要错过！",
         timerLabel: "优惠结束倒计时",
       },
@@ -652,53 +652,53 @@ export default async function DealsPage({ params }: Props) {
         items: [
           {
             title: "检查续订价格",
-            description: "始终检查促销期结束后您将支付的价格。许多VPN在第一年后会大幅提高价格。",
+            description: "始终检查促销期结束后您将支付的价格。许多AI平台在第一年后会提高价格。",
           },
           {
-            title: "额外月份技巧",
-            description: "免费月份已经计算在月价格中。27个月的优惠实际上只是一个价格更优惠的2年订阅。",
+            title: "先试用免费层",
+            description: "大多数AI代理提供免费层。在承诺付费计划之前测试它们，确保它符合您的需求。",
           },
           {
             title: "退款保证",
-            description: "所有优惠都包含30-45天退款保证。在长期承诺之前无风险测试服务。",
+            description: "许多平台提供试用期或退款保证。在承诺之前无风险测试服务。",
           },
           {
-            title: "年度vs多年",
-            description: "多年计划提供最佳的月度价格，但前提是您确定在该期间内会使用VPN。",
+            title: "年度vs月度",
+            description: "年度计划通常比月度计费节省15-30%。如果您准备承诺，请选择年度。",
           },
         ],
       },
       guarantee: {
-        title: "退款保证无风险",
+        title: "免费试用和保证无风险",
         description:
-          "此页面上的每笔交易都包含退款保证（根据提供商30-45天）。无风险试用服务，如果您不满意可获得全额退款。",
+          "大多数AI代理平台提供免费层或试用期。无风险试用服务，只有在满意时才升级。",
       },
       faq: {
         title: "常见问题",
         items: [
           {
             question: "这些优惠会过期吗？",
-            answer: "是的，VPN优惠经常变化。我们定期更新此页面以提供最新优惠。所示优惠截至今天是最新的。",
+            answer: "是的，AI代理优惠经常变化。我们定期更新此页面以提供最新优惠。",
           },
           {
             question: "需要优惠码吗？",
-            answer: "大多数优惠通过我们的附属链接自动应用。当需要优惠码时，我们会在优惠卡上显著显示它。",
+            answer: "大多数优惠通过我们的链接自动应用。当需要优惠码时，我们会显著显示它。",
           },
           {
             question: "促销期结束后会怎样？",
-            answer: "初始订阅期结束后，除非您取消，否则将按标准续订价格收费。购买前始终检查续订条款。",
+            answer: "初始订阅期结束后，除非您取消，否则将按标准续订价格收费。",
           },
           {
-            question: "如果我不喜欢VPN可以退款吗？",
-            answer: "可以！此处列出的所有VPN都提供30-45天的退款保证。在保证期内联系他们的支持请求退款。",
+            question: "如果我不喜欢AI代理可以退款吗？",
+            answer: "大多数AI平台提供免费层、试用期或退款保证。请查看特定平台的退款政策。",
           },
         ],
       },
     },
     ja: {
       hero: {
-        title: "VPNセール＆クーポン2026",
-        subtitle: "プレミアムVPNサービスの独占割引。検証済みのセールとクーポンコードで最大87％節約。",
+        title: "AIエージェントセール＆割引2026",
+        subtitle: "プレミアムAIエージェントプラットフォームの独占割引。検証済みのセールで最大50％節約。",
         urgency: "期間限定オファー - お見逃しなく！",
         timerLabel: "セール終了まで",
       },
@@ -730,29 +730,29 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "更新価格を確認",
             description:
-              "プロモーション期間終了後に支払う金額を必ず確認してください。多くのVPNは1年目以降に価格を大幅に引き上げます。",
+              "プロモーション期間終了後に支払う金額を必ず確認してください。多くのAIプラットフォームは1年目以降に価格を引き上げます。",
           },
           {
-            title: "追加月のトリック",
+            title: "まず無料ティア",
             description:
-              "「無料月」は月額料金にすでに計算されています。27ヶ月のディールは、実際にはより良い価格設定の2年間サブスクリプションです。",
+              "ほとんどのAIエージェントは無料ティアを提供しています。有料プランにコミットする前にテストして、ニーズに合うことを確認してください。",
           },
           {
             title: "返金保証",
             description:
-              "すべてのディールには30-45日間の返金保証が含まれています。長期的にコミットする前にサービスをリスクなしでテストしてください。",
+              "多くのプラットフォームは試用期間または返金保証を提供しています。コミットする前にサービスをリスクなしでテストしてください。",
           },
           {
-            title: "年間vs複数年",
+            title: "年間vs月間",
             description:
-              "複数年プランは月額料金が最もお得ですが、その期間VPNを使用することが確実な場合のみです。",
+              "年間プランは通常、月額請求に比べて15-30％の節約になります。コミットする場合は年間を選択してください。",
           },
         ],
       },
       guarantee: {
-        title: "返金保証でリスクフリー",
+        title: "無料トライアルと保証でリスクフリー",
         description:
-          "このページのすべてのディールには返金保証（プロバイダーによって30-45日）が含まれています。サービスをリスクなく試して、満足できない場合は全額返金を受けることができます。",
+          "ほとんどのAIエージェントプラットフォームは無料ティアまたは試用期間を提供しています。サービスをリスクなく試して、満足した場合のみアップグレードしてください。",
       },
       faq: {
         title: "よくある質問",
@@ -760,30 +760,30 @@ export default async function DealsPage({ params }: Props) {
           {
             question: "これらのディールは期限切れになりますか？",
             answer:
-              "はい、VPNディールは頻繁に変わります。このページを定期的に最新のオファーで更新しています。表示されているディールは本日現在のものです。",
+              "はい、AIエージェントディールは頻繁に変わります。このページを定期的に最新のオファーで更新しています。",
           },
           {
             question: "クーポンコードは必要ですか？",
             answer:
-              "ほとんどのディールはアフィリエイトリンクを通じて自動的に適用されます。クーポンコードが必要な場合は、ディールカードに目立つように表示されます。",
+              "ほとんどのディールはリンクを通じて自動的に適用されます。クーポンコードが必要な場合は、目立つように表示されます。",
           },
           {
             question: "プロモーション期間後はどうなりますか？",
             answer:
-              "初回購読期間が終了すると、キャンセルしない限り標準更新価格が請求されます。購入前に必ず更新条件を確認してください。",
+              "初回購読期間が終了すると、キャンセルしない限り標準更新価格が請求されます。",
           },
           {
-            question: "VPNが気に入らない場合、返金を受けられますか？",
+            question: "AIエージェントが気に入らない場合、返金を受けられますか？",
             answer:
-              "はい！ここにリストされているすべてのVPNは30-45日間の返金保証を提供しています。保証期間内にサポートに連絡して返金をリクエストしてください。",
+              "ほとんどのAIプラットフォームは無料ティア、試用期間、または返金保証を提供しています。特定のプラットフォームの返金ポリシーを確認してください。",
           },
         ],
       },
     },
     ko: {
       hero: {
-        title: "VPN 할인 및 쿠폰 2026",
-        subtitle: "프리미엄 VPN 서비스 독점 할인. 검증된 할인 및 쿠폰 코드로 최대 87% 절약하세요.",
+        title: "AI 에이전트 할인 및 특가 2026",
+        subtitle: "프리미엄 AI 에이전트 플랫폼 독점 할인. 검증된 할인으로 최대 50% 절약하세요.",
         urgency: "기간 한정 혜택 - 놓치지 마세요!",
         timerLabel: "할인 종료까지",
       },
@@ -814,53 +814,53 @@ export default async function DealsPage({ params }: Props) {
         items: [
           {
             title: "갱신 가격 확인",
-            description: "프로모션 기간 종료 후 지불할 금액을 항상 확인하세요. 많은 VPN이 1년 후 가격을 크게 인상합니다.",
+            description: "프로모션 기간 종료 후 지불할 금액을 항상 확인하세요. 많은 AI 플랫폼이 1년 후 가격을 인상합니다.",
           },
           {
-            title: "추가 개월 트릭",
-            description: "'무료 개월'은 이미 월 가격에 계산되어 있습니다. 27개월 할인은 실제로 더 나은 가격의 2년 구독일 뿐입니다.",
+            title: "무료 티어 먼저",
+            description: "대부분의 AI 에이전트는 무료 티어를 제공합니다. 유료 플랜에 약정하기 전에 테스트하여 필요에 맞는지 확인하세요.",
           },
           {
             title: "환불 보장",
-            description: "모든 할인에는 30-45일 환불 보장이 포함됩니다. 장기 약정 전에 서비스를 위험 없이 테스트하세요.",
+            description: "많은 플랫폼이 체험 기간이나 환불 보장을 제공합니다. 약정하기 전에 서비스를 위험 없이 테스트하세요.",
           },
           {
-            title: "연간 vs 다년",
-            description: "다년 플랜은 월별 가격이 가장 좋지만 해당 기간 동안 VPN을 사용할 것이 확실한 경우에만 해당됩니다.",
+            title: "연간 vs 월간",
+            description: "연간 플랜은 일반적으로 월간 청구보다 15-30% 절감됩니다. 약정할 준비가 되었다면 연간을 선택하세요.",
           },
         ],
       },
       guarantee: {
-        title: "환불 보장으로 위험 없음",
+        title: "무료 체험 및 보장으로 위험 없음",
         description:
-          "이 페이지의 모든 거래에는 환불 보장(공급자에 따라 30-45일)이 포함됩니다. 서비스를 위험 없이 시도하고 만족하지 않으면 전액 환불받으세요.",
+          "대부분의 AI 에이전트 플랫폼은 무료 티어나 체험 기간을 제공합니다. 서비스를 위험 없이 시도하고 만족한 경우에만 업그레이드하세요.",
       },
       faq: {
         title: "자주 묻는 질문",
         items: [
           {
             question: "이 할인들은 만료되나요?",
-            answer: "예, VPN 할인은 자주 변경됩니다. 최신 혜택으로 이 페이지를 정기적으로 업데이트합니다. 표시된 할인은 오늘 기준으로 최신입니다.",
+            answer: "예, AI 에이전트 할인은 자주 변경됩니다. 최신 혜택으로 이 페이지를 정기적으로 업데이트합니다.",
           },
           {
             question: "쿠폰 코드가 필요한가요?",
-            answer: "대부분의 할인은 제휴 링크를 통해 자동으로 적용됩니다. 쿠폰 코드가 필요한 경우 할인 카드에 눈에 띄게 표시됩니다.",
+            answer: "대부분의 할인은 링크를 통해 자동으로 적용됩니다. 쿠폰 코드가 필요한 경우 눈에 띄게 표시됩니다.",
           },
           {
             question: "프로모션 기간 후에는 어떻게 되나요?",
-            answer: "초기 구독 기간이 종료되면 취소하지 않는 한 표준 갱신 가격이 청구됩니다. 구매 전에 항상 갱신 조건을 확인하세요.",
+            answer: "초기 구독 기간이 종료되면 취소하지 않는 한 표준 갱신 가격이 청구됩니다.",
           },
           {
-            question: "VPN이 마음에 들지 않으면 환불받을 수 있나요?",
-            answer: "예! 여기에 나열된 모든 VPN은 30-45일의 환불 보장을 제공합니다. 보장 기간 내에 지원팀에 연락하여 환불을 요청하세요.",
+            question: "AI 에이전트가 마음에 들지 않으면 환불받을 수 있나요?",
+            answer: "대부분의 AI 플랫폼은 무료 티어, 체험 기간 또는 환불 보장을 제공합니다. 특정 플랫폼의 환불 정책을 확인하세요.",
           },
         ],
       },
     },
     th: {
       hero: {
-        title: "ดีล VPN และคูปอง 2026",
-        subtitle: "ส่วนลดพิเศษสำหรับบริการ VPN พรีเมียม ประหยัดสูงสุด 87% ด้วยดีลและรหัสคูปองที่ตรวจสอบแล้วของเรา",
+        title: "ดีล AI Agent และส่วนลด 2026",
+        subtitle: "ส่วนลดพิเศษสำหรับแพลตฟอร์ม AI agent พรีเมียม ประหยัดสูงสุด 50% ด้วยดีลที่ตรวจสอบแล้วของเรา",
         urgency: "ข้อเสนอจำกัดเวลา - อย่าพลาด!",
         timerLabel: "ดีลสิ้นสุดใน",
       },
@@ -892,51 +892,51 @@ export default async function DealsPage({ params }: Props) {
           {
             title: "ตรวจสอบราคาต่ออายุ",
             description:
-              "ตรวจสอบเสมอว่าคุณจะจ่ายเท่าไหร่หลังจากช่วงโปรโมชั่นสิ้นสุด VPN หลายรายเพิ่มราคาอย่างมากหลังจากปีแรก",
+              "ตรวจสอบเสมอว่าคุณจะจ่ายเท่าไหร่หลังจากช่วงโปรโมชั่นสิ้นสุด แพลตฟอร์ม AI หลายรายเพิ่มราคาหลังจากปีแรก",
           },
           {
-            title: "เคล็ดลับเดือนเพิ่มเติม",
+            title: "ทดลองใช้ฟรีก่อน",
             description:
-              "'เดือนฟรี' ถูกคำนวณไว้ในราคารายเดือนแล้ว ดีล 27 เดือนจริงๆ แล้วเป็นเพียงการสมัครสมาชิก 2 ปีที่มีราคาดีกว่า",
+              "AI agent ส่วนใหญ่เสนอระดับฟรี ทดสอบก่อนที่จะผูกมัดกับแผนที่ต้องชำระเงินเพื่อให้แน่ใจว่าตรงกับความต้องการของคุณ",
           },
           {
             title: "การรับประกันคืนเงิน",
             description:
-              "ทุกดีลมีการรับประกันคืนเงิน 30-45 วัน ทดลองใช้บริการโดยไม่มีความเสี่ยงก่อนที่จะผูกพันระยะยาว",
+              "หลายแพลตฟอร์มเสนอช่วงทดลองหรือการรับประกันคืนเงิน ทดสอบบริการโดยไม่มีความเสี่ยงก่อนที่จะผูกมัด",
           },
           {
-            title: "รายปี vs หลายปี",
+            title: "รายปี vs รายเดือน",
             description:
-              "แผนหลายปีให้ราคารายเดือนที่ดีที่สุด แต่ต้องแน่ใจว่าคุณจะใช้ VPN ตลอดระยะเวลานั้น",
+              "แผนรายปีมักจะให้ส่วนลด 15-30% เมื่อเทียบกับการเรียกเก็บเงินรายเดือน เลือกรายปีหากคุณพร้อมที่จะผูกมัด",
           },
         ],
       },
       guarantee: {
-        title: "ไร้ความเสี่ยงด้วยการรับประกันคืนเงิน",
+        title: "ไร้ความเสี่ยงด้วยการทดลองใช้ฟรีและการรับประกัน",
         description:
-          "ทุกดีลในหน้านี้มีการรับประกันคืนเงิน (30-45 วันขึ้นอยู่กับผู้ให้บริการ) ลองใช้บริการโดยไม่มีความเสี่ยงและรับเงินคืนเต็มจำนวนหากคุณไม่พอใจ",
+          "แพลตฟอร์ม AI agent ส่วนใหญ่เสนอระดับฟรีหรือช่วงทดลอง ทดลองใช้บริการโดยไม่มีความเสี่ยงและอัปเกรดเฉพาะเมื่อคุณพอใจ",
       },
       faq: {
         title: "คำถามที่พบบ่อย",
         items: [
           {
             question: "ดีลเหล่านี้หมดอายุหรือไม่?",
-            answer: "ใช่ ดีล VPN เปลี่ยนแปลงบ่อย เราอัปเดตหน้านี้เป็นประจำด้วยข้อเสนอล่าสุด ดีลที่แสดงเป็นข้อมูลล่าสุดณวันนี้",
+            answer: "ใช่ ดีล AI agent เปลี่ยนแปลงบ่อย เราอัปเดตหน้านี้เป็นประจำด้วยข้อเสนอล่าสุด",
           },
           {
             question: "ต้องใช้รหัสคูปองหรือไม่?",
             answer:
-              "ดีลส่วนใหญ่จะถูกนำไปใช้โดยอัตโนมัติผ่านลิงก์พันธมิตรของเรา เมื่อต้องใช้รหัสคูปอง เราจะแสดงอย่างเด่นชัดบนการ์ดดีล",
+              "ดีลส่วนใหญ่จะถูกนำไปใช้โดยอัตโนมัติผ่านลิงก์ของเรา เมื่อต้องใช้รหัสคูปอง เราจะแสดงอย่างเด่นชัด",
           },
           {
             question: "จะเกิดอะไรขึ้นหลังจากช่วงโปรโมชั่น?",
             answer:
-              "หลังจากช่วงสมัครสมาชิกเริ่มต้นสิ้นสุด คุณจะถูกเรียกเก็บเงินตามราคาต่ออายุมาตรฐานเว้นแต่คุณจะยกเลิก ตรวจสอบข้อกำหนดการต่ออายุก่อนซื้อเสมอ",
+              "หลังจากช่วงสมัครสมาชิกเริ่มต้นสิ้นสุด คุณจะถูกเรียกเก็บเงินตามราคาต่ออายุมาตรฐานเว้นแต่คุณจะยกเลิก",
           },
           {
-            question: "ฉันสามารถขอคืนเงินได้หากไม่ชอบ VPN หรือไม่?",
+            question: "ฉันสามารถขอคืนเงินได้หากไม่ชอบ AI agent หรือไม่?",
             answer:
-              "ได้! VPN ทั้งหมดที่ระบุไว้ที่นี่มีการรับประกันคืนเงิน 30-45 วัน ติดต่อฝ่ายสนับสนุนเพื่อขอคืนเงินภายในช่วงระยะเวลารับประกัน",
+              "แพลตฟอร์ม AI ส่วนใหญ่เสนอระดับฟรี ช่วงทดลอง หรือการรับประกันคืนเงิน ตรวจสอบนโยบายคืนเงินเฉพาะของแพลตฟอร์ม",
           },
         ],
       },
@@ -1117,7 +1117,7 @@ function DealCard({
       </div>
 
       <CardContent className="pt-6">
-        {/* VPN Name */}
+        {/* Platform Name */}
         <h3 className="text-2xl font-bold mb-6">{deal.name}</h3>
 
         {/* Pricing */}
@@ -1153,10 +1153,6 @@ function DealCard({
               <p className="text-sm text-muted-foreground mb-1">
                 {deal.months} {t.deals.months}
               </p>
-              <div className="inline-flex items-center gap-1 bg-green-500/10 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-xs font-semibold">
-                <Gift className="h-3 w-3" />
-                {deal.months - 24} {t.deals.extraMonths}
-              </div>
             </div>
           </div>
         </div>

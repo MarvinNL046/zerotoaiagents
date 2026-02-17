@@ -126,7 +126,7 @@ Respond with ONLY the blog post title — nothing else. No quotes, no explanatio
   }
 
   // Fallback with date to ensure uniqueness
-  return `VPN Guide and Tips - ${month} ${year}`;
+  return `AI Agent Guide and Tips - ${month} ${year}`;
 }
 
 // Replace INFOGRAPHIC_1 and INFOGRAPHIC_2 placeholders with Gemini-generated images
@@ -150,7 +150,7 @@ async function replaceInfographicPlaceholders(
 
     try {
       onProgress?.(`Generating infographic ${index}...`);
-      const prompt = `Create a clean, professional infographic-style illustration for a VPN blog article.
+      const prompt = `Create a clean, professional infographic-style illustration for an AI agent blog article.
 The illustration should visualize: ${altText}
 Style: modern flat design, clean data visualization, professional color palette (blues, greens, white).
 Use icons, charts, diagrams, abstract shapes, and visual metaphors. Landscape format (16:9).
@@ -332,7 +332,7 @@ IMPORTANT: Respond ONLY with valid JSON in this exact format (no markdown code b
   "content": "The full blog post content in HTML format following the structure above",
   "metaTitle": "SEO optimized title with primary keyword (max 60 chars)",
   "metaDescription": "Compelling SEO meta description with CTA (max 155 chars)",
-  "tags": ["primary-keyword", "secondary-keyword", "vpn", "related-tag"]
+  "tags": ["primary-keyword", "secondary-keyword", "ai-agent", "related-tag"]
 }`;
 }
 

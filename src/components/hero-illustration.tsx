@@ -1,32 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, Check, Globe, Zap, Lock, Server, Wifi, Eye } from "lucide-react";
+import { Bot, Check, Globe, Zap, Lock, Brain, Cpu, Clock, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PulseIndicator } from "@/components/ui/pulse-indicator";
-
-// Hook to detect visitor's country
-function useVisitorCountry(fallback = "Netherlands") {
-  const [country, setCountry] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Fetch visitor's country from IP geolocation API
-    fetch("https://ipapi.co/country_name/")
-      .then((res) => res.ok ? res.text() : Promise.reject())
-      .then((name) => setCountry(name.trim()))
-      .catch(() => setCountry(fallback));
-  }, [fallback]);
-
-  return country;
-}
 
 interface HeroIllustrationProps {
   className?: string;
 }
 
 export function HeroIllustration({ className }: HeroIllustrationProps) {
-  const visitorCountry = useVisitorCountry();
-
   return (
     <div className={cn("relative w-full max-w-4xl mx-auto", className)}>
       {/* Main Dashboard Card */}
@@ -48,49 +31,49 @@ export function HeroIllustration({ className }: HeroIllustrationProps) {
 
         {/* Dashboard Content */}
         <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* VPN Status Card */}
+          {/* AI Agent Status Card */}
           <div className="col-span-1 md:col-span-2 bg-gradient-to-br from-green-500/10 to-emerald-500/5 rounded-xl p-4 border border-green-500/20 animate-fade-in-up stagger-1">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-green-500" />
-                <span className="font-semibold">VPN Status</span>
+                <Bot className="h-5 w-5 text-green-500" />
+                <span className="font-semibold">AI Agent Status</span>
               </div>
-              <PulseIndicator variant="success" label="Protected" />
+              <PulseIndicator variant="success" label="Active" />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="text-xs text-muted-foreground mb-1">Your IP</p>
-                <p className="font-mono text-sm">••••••••••</p>
+                <p className="text-xs text-muted-foreground mb-1">Active Agents</p>
+                <p className="font-mono text-sm">3</p>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground mb-1">Location</p>
+                <p className="text-xs text-muted-foreground mb-1">Tasks Completed</p>
                 <p className="font-mono text-sm flex items-center gap-1">
-                  <Globe className="h-3 w-3" />
-                  {visitorCountry ?? <span className="animate-pulse">•••</span>}
+                  <Check className="h-3 w-3" />
+                  127
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Speed Indicator */}
+          {/* Response Time Indicator */}
           <div className="bg-muted/30 rounded-xl p-4 border animate-fade-in-up stagger-2">
             <div className="flex items-center gap-2 mb-3">
-              <Zap className="h-4 w-4 text-yellow-500" />
-              <span className="text-sm font-medium">Speed</span>
+              <Clock className="h-4 w-4 text-yellow-500" />
+              <span className="text-sm font-medium">Response Time</span>
             </div>
-            <div className="text-2xl font-bold text-gradient">850 Mbps</div>
+            <div className="text-2xl font-bold text-gradient">1.2s avg</div>
             <div className="mt-2 h-2 bg-muted rounded-full overflow-hidden">
-              <div className="h-full w-[85%] bg-gradient-to-r from-green-500 to-emerald-400 rounded-full" />
+              <div className="h-full w-[92%] bg-gradient-to-r from-green-500 to-emerald-400 rounded-full" />
             </div>
           </div>
 
           {/* Feature Pills */}
           <div className="col-span-1 md:col-span-3 flex flex-wrap gap-2 animate-fade-in-up stagger-3">
-            <FeaturePill icon={<Check className="h-3 w-3" />} label="No Logs" active />
-            <FeaturePill icon={<Server className="h-3 w-3" />} label="6,000+ Servers" />
-            <FeaturePill icon={<Globe className="h-3 w-3" />} label="100 Countries" />
-            <FeaturePill icon={<Wifi className="h-3 w-3" />} label="Kill Switch" active />
-            <FeaturePill icon={<Eye className="h-3 w-3" />} label="Ad Blocker" />
+            <FeaturePill icon={<Layers className="h-3 w-3" />} label="Multi-Model" active />
+            <FeaturePill icon={<Cpu className="h-3 w-3" />} label="Auto-Scaling" />
+            <FeaturePill icon={<Globe className="h-3 w-3" />} label="API Access" />
+            <FeaturePill icon={<Zap className="h-3 w-3" />} label="24/7 Uptime" active />
+            <FeaturePill icon={<Brain className="h-3 w-3" />} label="Context Window" />
           </div>
         </div>
       </div>
@@ -98,15 +81,15 @@ export function HeroIllustration({ className }: HeroIllustrationProps) {
       {/* Floating Elements */}
       <div className="absolute -top-4 -right-4 md:-right-8 animate-float">
         <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center gap-2">
-          <Shield className="h-4 w-4" />
-          256-bit Encryption
+          <Brain className="h-4 w-4" />
+          GPT-4 + Claude
         </div>
       </div>
 
       <div className="absolute -bottom-4 -left-4 md:-left-8 animate-float" style={{ animationDelay: "1.5s" }}>
         <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center gap-2">
           <Zap className="h-4 w-4" />
-          Lightning Fast
+          99.9% Uptime
         </div>
       </div>
 
@@ -137,25 +120,23 @@ function FeaturePill({ icon, label, active = false }: { icon: React.ReactNode; l
 
 // Simpler version for smaller spaces
 export function MiniDashboard({ className }: { className?: string }) {
-  const visitorCountry = useVisitorCountry();
-
   return (
     <div className={cn("bg-card border rounded-lg p-4 shadow-lg", className)}>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <Shield className="h-4 w-4 text-green-500" />
-          <span className="text-sm font-medium">Protected</span>
+          <Bot className="h-4 w-4 text-green-500" />
+          <span className="text-sm font-medium">AI Active</span>
         </div>
         <PulseIndicator variant="success" size="sm" />
       </div>
       <div className="space-y-2">
         <div className="flex justify-between text-xs">
-          <span className="text-muted-foreground">Speed</span>
-          <span className="font-medium">850 Mbps</span>
+          <span className="text-muted-foreground">Response Time</span>
+          <span className="font-medium">1.2s</span>
         </div>
         <div className="flex justify-between text-xs">
-          <span className="text-muted-foreground">Location</span>
-          <span className="font-medium">{visitorCountry ?? "•••"}</span>
+          <span className="text-muted-foreground">Models</span>
+          <span className="font-medium">4</span>
         </div>
       </div>
     </div>

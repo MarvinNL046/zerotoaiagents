@@ -337,12 +337,12 @@ export default async function GuidesPage({ params }: Props) {
       <section className="py-12 lg:py-16">
         <div className="container">
           <RelatedPages
-            title="Top Guides"
+            title={t("relatedPages.title")}
             pages={[
-              { title: "What is an AI Agent?", description: "Complete beginner's guide to AI agents", href: "/guides/what-is-ai-agent", icon: "shield" },
-              { title: "How AI Agents Work", description: "Technical deep-dive into AI agent technology", href: "/guides/how-ai-agents-work", icon: "lock" },
-              { title: "Best AI Agents 2026", description: "Our top-rated AI agent recommendations", href: "/best/best-ai-agent", icon: "trophy" },
-              { title: "AI Agent Security", description: "Security and privacy guide for AI agents", href: "/guides/ai-agent-security", icon: "play" }
+              { title: t("relatedPages.whatIsAiAgent"), description: t("relatedPages.whatIsAiAgentDesc"), href: "/guides/what-is-ai-agent", icon: "shield" },
+              { title: t("relatedPages.howAiAgentsWork"), description: t("relatedPages.howAiAgentsWorkDesc"), href: "/guides/how-ai-agents-work", icon: "lock" },
+              { title: t("relatedPages.bestAgents"), description: t("relatedPages.bestAgentsDesc"), href: "/best/coding-agents", icon: "trophy" },
+              { title: t("relatedPages.aiAgentSecurity"), description: t("relatedPages.aiAgentSecurityDesc"), href: "/guides/ai-agent-security", icon: "play" }
             ]}
           />
         </div>

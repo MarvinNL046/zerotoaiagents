@@ -9,13 +9,13 @@ type RouteContext = {
 export async function GET(request: NextRequest, context: RouteContext) {
   try {
     const { id } = await context.params;
-    const vpn = await getAgentByIdFromDb(id);
+    const agent = await getAgentByIdFromDb(id);
 
-    if (!vpn) {
+    if (!agent) {
       return NextResponse.json({ error: "AI agent not found" }, { status: 404 });
     }
 
-    return NextResponse.json({ vpn });
+    return NextResponse.json({ agent });
   } catch (error) {
     console.error("Error fetching AI agent:", error);
     return NextResponse.json(
@@ -37,8 +37,8 @@ export async function PUT(request: NextRequest, context: RouteContext) {
       return NextResponse.json({ error: "AI agent not found" }, { status: 404 });
     }
 
-    const vpn = await updateAgent(id, data);
-    return NextResponse.json({ vpn });
+    const agent = await updateAgent(id, data);
+    return NextResponse.json({ agent });
   } catch (error) {
     console.error("Error updating AI agent:", error);
     return NextResponse.json(

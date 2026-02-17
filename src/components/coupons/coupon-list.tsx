@@ -6,12 +6,12 @@ import type { Coupon } from "@/lib/coupon-data";
 
 interface CouponListProps {
   coupons: Coupon[];
-  vpnName?: string;
+  agentName?: string;
   agentSlug?: string;
   affiliateUrl?: string;
 }
 
-export function CouponList({ coupons, vpnName, affiliateUrl }: CouponListProps) {
+export function CouponList({ coupons, agentName, affiliateUrl }: CouponListProps) {
   const t = useTranslations("coupons");
 
   if (coupons.length === 0) {
@@ -28,7 +28,7 @@ export function CouponList({ coupons, vpnName, affiliateUrl }: CouponListProps) 
         <CouponCard
           key={coupon.id}
           coupon={coupon}
-          vpnName={vpnName}
+          agentName={agentName}
           affiliateUrl={affiliateUrl}
         />
       ))}

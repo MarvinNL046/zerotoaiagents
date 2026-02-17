@@ -4,8 +4,7 @@ import { sql } from "@/lib/neon";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    // vpnId is kept for backward compatibility (now represents agentId)
-    const { vpnId, page, referrer } = body;
+    const { agentId, page, referrer } = body;
 
     // Get geo information from headers (Netlify/Vercel provide these)
     const country = request.headers.get("x-vercel-ip-country") ||
@@ -14,21 +13,21 @@ export async function POST(request: NextRequest) {
       "unknown";
     const userAgent = request.headers.get("user-agent") || "unknown";
 
-    // First check if AI agent exists in database
-    const vpn = await sql`
-      SELECT id FROM "VpnProvider" WHERE slug = ${vpnId} OR id = ${vpnId}
+    // Check if AI agent exists in database
+    const agent = await sql`
+      SELECT id FROM "AiAgentProvider" WHERE slug = ${agentId} OR id = ${agentId}
     `;
 
-    if (vpn.length > 0) {
+    if (agent.length > 0) {
       // Insert click record
       await sql`
-        INSERT INTO "Click" (id, vpn_id, page, country, referrer, user_agent, created_at)
-        VALUES (gen_random_uuid()::text, ${vpn[0].id}, ${page}, ${country}, ${referrer}, ${userAgent}, NOW())
+        INSERT INTO "Click" (id, "agentId", page, country, referrer, user_agent, created_at)
+        VALUES (gen_random_uuid()::text, ${agent[0].id}, ${page}, ${country}, ${referrer}, ${userAgent}, NOW())
       `;
     } else {
       // Log click even if agent not in DB yet
       console.log("Affiliate click (agent not in DB):", {
-        vpnId,
+        agentId,
         country,
         referrer,
         page,

@@ -117,12 +117,12 @@ function detectUseCase(topic: string): UseCaseInfo | null {
   return null;
 }
 
-// Stub for country detection (legacy VPN feature, not used for AI agents)
+// Stub for country detection (legacy feature, not used for AI agents)
 function detectCountry(_topic: string): null {
   return null;
 }
 
-// Stub for country data scraping (legacy VPN feature, not used for AI agents)
+// Stub for country data scraping (legacy feature, not used for AI agents)
 async function scrapeCountryDataForBlog(_country: never): Promise<null> {
   return null;
 }
@@ -702,7 +702,7 @@ E-E-A-T SIGNALS (critical for Google rankings — weave throughout):
 - TRUSTWORTHINESS: Be balanced — mention downsides too. Be honest about limitations.
 - CRITICAL: Only use prices, speeds, and specs from the REFERENCE DATA provided. If no data is provided for a specific number, say "check the provider's website for current pricing" instead of making up a number. NEVER fabricate test results, percentages, or performance metrics.
 
-VPN LOGOS: Official VPN provider logos are available and will be automatically inserted into headings and comparison tables. When writing about specific VPNs, use their EXACT full names (${Object.values(AGENT_LOGOS).map(v => v.displayName).join(", ")}) in H2/H3 headings so logos appear correctly. Give each recommended VPN its own H2 or H3 section when appropriate.
+AI AGENT LOGOS: Official AI agent platform logos are available and will be automatically inserted into headings and comparison tables. When writing about specific AI agents, use their EXACT full names (${Object.values(AGENT_LOGOS).map(v => v.displayName).join(", ")}) in H2/H3 headings so logos appear correctly. Give each recommended AI agent its own H2 or H3 section when appropriate.
 
 FORMATTING RULES:
 - Bold key terms on first mention in each section
@@ -878,7 +878,7 @@ async function generateFeaturedImage(title: string, category: string): Promise<s
     "a person's silhouette surrounded by a protective digital aura",
     "abstract underwater fiber optic cables glowing on the ocean floor",
     "a split scene: chaotic open data on one side, calm encrypted flow on the other",
-    "floating islands connected by glowing bridges representing VPN tunnels",
+    "floating islands connected by neural network pathways representing AI agent connections",
     "a futuristic passport or key card with holographic security layers",
   ];
 
@@ -946,7 +946,7 @@ async function replaceInfographicPlaceholders(content: string, title: string): P
     const altMatch = updatedContent.match(new RegExp(`src="${src}"\\s+alt="([^"]*)"`));
     const altText = altMatch?.[1] || `Infographic for ${title} - part ${index}`;
 
-    const prompt = `Create a clean, professional infographic-style illustration for a VPN blog article.
+    const prompt = `Create a clean, professional infographic-style illustration for an AI agent blog article.
 The illustration should visualize: ${altText}
 Style: modern flat design, clean data visualization, professional color palette (blues, greens, white).
 Use icons, charts, diagrams, abstract shapes, and visual metaphors. Landscape format (16:9).
@@ -1016,7 +1016,7 @@ const handler: Handler = async (event) => {
     console.log("[bg-generate] Topic:", topic, "Model:", model);
 
     // Build scrape context — for use case posts, fetch relevant agent data
-    // Legacy VPN country detection disabled for AI agents site
+    // Legacy country detection disabled for AI agents site
     let scrapeContext: string;
 
     // For AI agent posts, try to find relevant pricing data based on agent names in topic
@@ -1198,7 +1198,7 @@ RULES:
 - Keep ALL HTML tags, structure, and formatting exactly as-is
 - Keep ALL URLs/links unchanged (do not translate URLs)
 - Keep all <img> tags and their src/alt attributes unchanged
-- Keep technical terms (VPN, DNS, IP, etc.) in English
+- Keep technical terms (AI, API, LLM, GPT, etc.) in English
 - Translate the title, excerpt, metaTitle, and metaDescription too
 
 Respond ONLY with valid JSON (no markdown blocks):
