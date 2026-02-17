@@ -12,7 +12,6 @@ import {
 } from "@/lib/ai-agent-data";
 import { Link } from "@/i18n/navigation";
 import {
-  Shield,
   Zap,
   Globe,
   CheckCircle,
@@ -132,26 +131,31 @@ export default async function HomePage({ params }: Props) {
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <PulseIndicator variant="success" label={tHero("badge")} size="sm" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-fade-in-up">
-                {tHero("title")}
+                {tHero("title")}{" "}
+                <HighlightedText variant="primary">
+                  {tHero("titleHighlight")}
+                </HighlightedText>{" "}
+                <HighlightedText variant="cursive" className="text-3xl md:text-4xl lg:text-5xl">
+                  {tHero("titleAccent")}
+                </HighlightedText>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up stagger-1">
                 {tHero("subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up stagger-2">
                 <Button size="lg" asChild className="group">
-                  <Link href="/reviews">
+                  <a href="#comparison">
                     {tHero("primaryCta")}
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <a href="#comparison">{tHero("secondaryCta")}</a>
+                  <Link href="/guides/what-is-ai-agent">{tHero("secondaryCta")}</Link>
                 </Button>
               </div>
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground animate-fade-in-up stagger-3">
-                <Shield className="h-4 w-4 text-green-500" />
-                <span>{tHero("trusted")}</span>
-              </div>
+              <p className="text-sm text-muted-foreground animate-fade-in-up stagger-3">
+                {tHero("trusted")}
+              </p>
             </div>
 
             {/* Hero Illustration */}
