@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { desc, eq } from "drizzle-orm";
+import { desc, eq, and, asc } from "drizzle-orm";
 import { getDb, scrapeJobs, blogPosts, contentQueue } from "@/lib/db";
-import { autoSelectTopic } from "@/lib/pipeline/content-generator";
+import {
+  autoSelectTopic,
+  generateBlogPostText,
+  generateBlogPostImages,
+} from "@/lib/pipeline/content-generator";
 import { publishPost, getPostById } from "@/lib/pipeline/blog-service";
 import { sendPostPublishedNotification } from "@/lib/resend";
-import type { AiModel } from "@/lib/pipeline/ai-provider";
+import { generateContent, type AiModel } from "@/lib/pipeline/ai-provider";
+
+// Allow up to 300s on Vercel Pro plan for manual triggers
+export const maxDuration = 300;
 
 function validatePipelineKey(request: NextRequest): boolean {
   const key =
@@ -14,7 +21,7 @@ function validatePipelineKey(request: NextRequest): boolean {
 }
 
 // Phases:
-// "start"   → Create job, trigger background function → { jobId }
+// "start"   → Create job, generate blog post inline → { jobId, postId }
 // "status"  → Poll job status → { status, postId?, error? }
 // "images"  → Generate images for postId (sync) → { updated }
 // "publish" → Publish postId (sync) → { published }
@@ -60,7 +67,7 @@ export async function POST(request: NextRequest) {
         return handlePublish(postId);
       case "start":
       default:
-        return handleStart(request, rawTopic, model, publish);
+        return handleStart(rawTopic, model, publish);
     }
   } catch (error) {
     console.error("Pipeline generate error:", error);
@@ -74,9 +81,8 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Create a job and trigger the Netlify Background Function
+// Generate a blog post inline (no background function needed)
 async function handleStart(
-  request: NextRequest,
   rawTopic: string | undefined,
   model: AiModel,
   publish: boolean
@@ -96,46 +102,106 @@ async function handleStart(
       ? await autoSelectTopic(recentScrapes)
       : rawTopic;
 
-  // Create job in contentQueue
+  // Create job in contentQueue for tracking
   const [job] = await db
     .insert(contentQueue)
     .values({
       type: "blog-post",
-      status: "pending",
+      status: "processing",
       priority: 0,
       input: JSON.stringify({ topic, publish }),
       aiModel: model,
+      attempts: 1,
     })
     .returning();
 
-  // Trigger the Netlify Background Function (must await to prevent serverless teardown)
-  const siteUrl = process.env.SITE_URL || process.env.URL || "";
-  const pipelineKey = process.env.PIPELINE_SECRET || "";
+  console.log(`[generate] Job ${job.id} created, topic: "${topic}"`);
 
   try {
-    const bgRes = await fetch(`${siteUrl}/.netlify/functions/generate-blog-background`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-pipeline-key": pipelineKey,
-      },
-      body: JSON.stringify({
-        topic,
-        model,
-        publish,
-        jobId: job.id,
-      }),
-    });
-    console.log(`[generate] Background function triggered: ${bgRes.status}`);
-  } catch (err) {
-    console.error("[generate] Failed to trigger background function:", err);
-  }
+    // Build scrape context
+    const scrapeContext = recentScrapes
+      .map((s) => s.result)
+      .filter(Boolean)
+      .join("\n\n")
+      .slice(0, 4000);
 
-  return NextResponse.json({
-    jobId: job.id,
-    topic,
-    status: "pending",
-  });
+    // Generate blog post text inline (no background function)
+    const post = await generateBlogPostText(topic, scrapeContext || null, model);
+
+    // Ensure unique slug
+    let finalSlug = post.slug;
+    const [existingPost] = await db
+      .select({ id: blogPosts.id })
+      .from(blogPosts)
+      .where(and(eq(blogPosts.slug, finalSlug), eq(blogPosts.language, "en")))
+      .limit(1);
+
+    if (existingPost) {
+      const now = new Date();
+      finalSlug = `${post.slug}-${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+    }
+
+    // Save post to DB
+    const [savedPost] = await db
+      .insert(blogPosts)
+      .values({
+        slug: finalSlug,
+        language: "en",
+        title: post.title,
+        excerpt: post.excerpt,
+        content: post.content,
+        metaTitle: post.metaTitle,
+        metaDescription: post.metaDescription,
+        category: post.category,
+        tags: post.tags,
+        featuredImage: null,
+        aiModel: model,
+        aiPrompt: topic,
+        sourceData: scrapeContext || null,
+        published: false,
+      })
+      .returning();
+
+    console.log(`[generate] Post saved: ${savedPost.id} "${savedPost.title}"`);
+
+    // Mark job as completed
+    await db
+      .update(contentQueue)
+      .set({
+        status: "completed",
+        output: JSON.stringify({
+          postId: savedPost.id,
+          slug: finalSlug,
+          title: savedPost.title,
+          published: false,
+        }),
+        processedAt: new Date(),
+      })
+      .where(eq(contentQueue.id, job.id));
+
+    return NextResponse.json({
+      jobId: job.id,
+      postId: savedPost.id,
+      slug: finalSlug,
+      title: savedPost.title,
+      topic,
+      status: "completed",
+      message:
+        "Post text generated. Use phase='images' to generate images, then phase='publish' to publish.",
+    });
+  } catch (error) {
+    // Mark job as failed
+    await db
+      .update(contentQueue)
+      .set({
+        status: "failed",
+        error: error instanceof Error ? error.message : "Unknown error",
+        processedAt: new Date(),
+      })
+      .where(eq(contentQueue.id, job.id));
+
+    throw error;
+  }
 }
 
 // Poll job status
