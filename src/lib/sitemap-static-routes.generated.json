@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-02-17T13:27:35.377Z",
+  "generatedAt": "2026-03-16T20:07:00.975Z",
   "paths": [
     "",
     "/about",
     "/affiliate-disclosure",
+    "/authors",
     "/best/ai-frameworks",
     "/best/coding-agents",
     "/best/customer-support-agents",
@@ -14,8 +15,10 @@
     "/blog",
     "/compare",
     "/contact",
+    "/cookie-policy",
     "/coupons",
     "/deals",
+    "/editorial-policy",
     "/guides",
     "/guides/ai-agent-integrations",
     "/guides/ai-agent-pricing",
