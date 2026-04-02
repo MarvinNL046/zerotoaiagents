@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/50">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
@@ -22,158 +22,95 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">{t("aboutText")}</p>
           </div>
 
-          {/* Quick Links */}
+          {/* Reviews */}
           <div>
-            <h4 className="font-semibold mb-4">{t("links")}</h4>
+            <h4 className="font-semibold mb-4">Reviews</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/reviews"
+                  href="/reviews/cursor"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("reviews")}
+                  Cursor Review
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/coding-agents"
+                  href="/reviews/github-copilot"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("bestAgents")}
+                  GitHub Copilot Review
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/deals"
+                  href="/reviews/windsurf"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("deals")}
+                  Windsurf Review
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/free-agents"
+                  href="/reviews/claude-code"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("freeAgents")}
+                  Claude Code Review
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/compare"
+                  href="/reviews/devin"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("compare")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/use-cases"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("useCases")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/what-is-ai-agent"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("whatIsAgent")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("blog")}
+                  Devin Review
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Categories */}
+          {/* Guides */}
           <div>
-            <h4 className="font-semibold mb-4">{t("categories")}</h4>
+            <h4 className="font-semibold mb-4">Guides</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/best/coding-agents"
+                  href="/guides/what-are-ai-coding-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("codingAgents")}
+                  What Are AI Coding Agents?
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/no-code-agents"
+                  href="/guides/how-to-choose-ai-coding-agent"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("noCodeAgents")}
+                  How to Choose
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/enterprise-agents"
+                  href="/guides/getting-started-ai-pair-programming"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("enterpriseAgents")}
+                  Getting Started
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/customer-support-agents"
+                  href="/guides/ai-coding-agents-beginners-vs-experienced"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("supportAgents")}
+                  Beginners vs Experienced
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/best/ai-frameworks"
+                  href="/guides/free-vs-paid-ai-coding-agents"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("aiFrameworks")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/best/general-purpose"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("generalPurpose")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold mb-4">{t("legal")}</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("privacy")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("terms")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/affiliate-disclosure"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  {t("disclosure")}
+                  Free vs Paid
                 </Link>
               </li>
             </ul>
@@ -181,14 +118,14 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">{t("company")}</h4>
+            <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/about"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("about")}
+                  About
                 </Link>
               </li>
               <li>
@@ -196,10 +133,25 @@ export function Footer() {
                   href="/contact"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  {t("contactPage")}
+                  Contact
                 </Link>
               </li>
-              <li className="text-muted-foreground">hello@zerotoaiagents.com</li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  Terms
+                </Link>
+              </li>
             </ul>
           </div>
 
