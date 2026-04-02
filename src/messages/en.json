@@ -4,32 +4,15 @@
     "description": "Find the perfect AI agent for your needs. Expert reviews, honest comparisons, and exclusive deals on top AI agent platforms."
   },
   "nav": {
-    "home": "Home",
     "reviews": "Reviews",
-    "best": "Best AI Agents",
-    "codingAgents": "Coding Agents",
-    "noCodeAgents": "No-Code Builders",
-    "supportAgents": "Customer Support",
-    "enterpriseAgents": "Enterprise",
-    "freeAgents": "Free Agents",
-    "aiFrameworks": "AI Frameworks",
-    "generalPurpose": "General Purpose",
-    "useCases": "Use Cases",
-    "deals": "Deals",
     "compare": "Compare",
     "guides": "Guides",
     "blog": "Blog",
     "about": "About"
   },
   "hero": {
-    "badge": "2026's Best AI Agents",
-    "title": "Find Your Perfect AI Agent",
-    "titleHighlight": "Perfect AI Agent",
-    "subtitle": "From zero to AI-powered in minutes. Expert reviews, honest comparisons, and exclusive deals on the best AI agent platforms.",
-    "cta": "Compare AI Agents",
-    "primaryCta": "Compare AI Agents",
-    "secondaryCta": "View All Reviews",
-    "trusted": "Trusted by over 50,000 developers and businesses"
+    "title": "Zero to AI Agents",
+    "subtitle": "Learn, compare, and master AI coding agents"
   },
   "comparison": {
     "title": "Best AI Agents of 2026",
@@ -83,48 +66,10 @@
     "compare": "Compare",
     "getStarted": "Get Started"
   },
-  "exitIntent": {
-    "headline": "Wait! Don't miss this exclusive AI agent deal!",
-    "subheadline": "Get our #1 rated AI agent platform at an unbeatable price",
-    "off": "OFF",
-    "specialDeal": "Special Limited Time Offer",
-    "feature1": "Access to {models} advanced AI models",
-    "feature2": "{integrations} integrations available",
-    "feature3": "{days}-day free trial included",
-    "claimDeal": "Claim This Deal Now",
-    "dontShowAgain": "Don't show this again"
-  },
   "footer": {
-    "aboutText": "We help you find the best AI agent for your needs through independent testing and honest reviews.",
-    "links": "Quick Links",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "disclosure": "Affiliate Disclosure",
-    "company": "Company",
-    "about": "About Us",
-    "contactPage": "Contact",
+    "aboutText": "We help you find the best AI coding agent through independent testing and honest reviews.",
     "copyright": "© {year} ZeroToAIAgents. All rights reserved.",
-    "disclaimer": "We may earn a commission when you buy through our links, at no extra cost to you.",
-    "deals": "AI Agent Deals",
-    "freeAgents": "Free AI Agents",
-    "blog": "Blog",
-    "reviews": "AI Agent Reviews",
-    "bestAgents": "Best AI Agents 2026",
-    "compare": "Compare AI Agents",
-    "whatIsAiAgent": "What is an AI Agent?",
-    "whatIsAgent": "What is an AI Agent?",
-    "useCases": "Use Cases",
-    "categories": "Categories",
-    "codingAgents": "Coding Agents",
-    "noCodeBuilders": "No-Code Builders",
-    "noCodeAgents": "No-Code Builders",
-    "enterprise": "Enterprise AI",
-    "enterpriseAgents": "Enterprise AI",
-    "customerSupport": "Customer Support",
-    "supportAgents": "Customer Support",
-    "aiFrameworks": "AI Frameworks",
-    "generalPurpose": "General Purpose"
+    "disclaimer": "We may earn a commission when you buy through our links, at no extra cost to you."
   },
   "newsletter": {
     "title": "Stay Updated",
@@ -1946,11 +1891,6 @@
       "title": "Find Your Perfect AI Agent",
       "description": "Our quiz analyzes your needs, budget, and technical level to recommend the best AI agents for you. Get personalized recommendations in under 2 minutes."
     }
-  },
-  "stickyBar": {
-    "message": "Limited Time: Get {discount} off {name}",
-    "cta": "Claim Deal",
-    "closeLabel": "Close"
   },
   "exitPopup": {
     "title": "Wait! Before You Go...",
