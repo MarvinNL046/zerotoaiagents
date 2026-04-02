@@ -3,22 +3,9 @@
   "paths": [
     "",
     "/about",
-    "/affiliate-disclosure",
-    "/authors",
-    "/best/ai-frameworks",
-    "/best/coding-agents",
-    "/best/customer-support-agents",
-    "/best/enterprise-agents",
-    "/best/free-agents",
-    "/best/general-purpose",
-    "/best/no-code-agents",
     "/blog",
     "/compare",
     "/contact",
-    "/cookie-policy",
-    "/coupons",
-    "/deals",
-    "/editorial-policy",
     "/guides",
     "/guides/ai-agent-integrations",
     "/guides/ai-agent-pricing",
@@ -29,9 +16,7 @@
     "/guides/how-ai-agents-work",
     "/guides/what-is-ai-agent",
     "/privacy-policy",
-    "/quiz",
     "/reviews",
-    "/terms",
-    "/use-cases"
+    "/terms"
   ]
 }

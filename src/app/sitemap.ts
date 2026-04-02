@@ -3,7 +3,6 @@ import { getAllAgents } from "@/lib/agent-data-layer";
 import { routing } from "@/i18n/routing";
 import { getAllPublishedSlugs } from "@/lib/pipeline/blog-service";
 import discoveredStaticRoutes from "@/lib/sitemap-static-routes.generated.json";
-import { useCases } from "@/lib/use-case-data";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 type ChangeFrequency = NonNullable<SitemapEntry["changeFrequency"]>;
@@ -13,20 +12,11 @@ function getPageProfile(path: string): {
   changeFrequency: ChangeFrequency;
 } {
   if (path === "") return { priority: 1.0, changeFrequency: "weekly" };
-  if (path === "/deals" || path === "/coupons") {
-    return { priority: 0.85, changeFrequency: "daily" };
-  }
   if (path.startsWith("/reviews")) {
     return { priority: 0.9, changeFrequency: "weekly" };
   }
-  if (path.startsWith("/best/")) {
-    return { priority: 0.85, changeFrequency: "weekly" };
-  }
   if (path.startsWith("/compare")) {
     return { priority: 0.85, changeFrequency: "weekly" };
-  }
-  if (path.startsWith("/use-cases")) {
-    return { priority: 0.8, changeFrequency: "weekly" };
   }
   if (path.startsWith("/blog")) {
     return { priority: 0.8, changeFrequency: "weekly" };
@@ -34,13 +24,9 @@ function getPageProfile(path: string): {
   if (path.startsWith("/guides")) {
     return { priority: 0.75, changeFrequency: "monthly" };
   }
-  if (path === "/quiz") {
-    return { priority: 0.7, changeFrequency: "weekly" };
-  }
   if (
     path === "/about" ||
     path === "/contact" ||
-    path === "/affiliate-disclosure" ||
     path === "/privacy-policy" ||
     path === "/terms"
   ) {
@@ -109,15 +95,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // 4) Dynamic use case pages.
-  for (const useCase of useCases) {
-    addLocalizedPath(`/use-cases/${useCase.slug}`, {
-      priority: 0.75,
-      changeFrequency: "monthly",
-    });
-  }
-
-  // 5) Dynamic blog posts from DB (skip static blog files already discovered).
+  // 4) Dynamic blog posts from DB (skip static blog files already discovered).
   try {
     const dynamicSlugs = await getAllPublishedSlugs();
     const slugLastModifiedMap = new Map<string, Date>();

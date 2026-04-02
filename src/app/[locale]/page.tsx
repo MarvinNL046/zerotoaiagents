@@ -6,30 +6,12 @@ import { AgentCard } from "@/components/agents/agent-card";
 import {
   getFeaturedAgents,
   aiAgentProviders,
-  getAgentsByCategory,
-  getCategoryDisplayName,
-  type AgentCategory
 } from "@/lib/ai-agent-data";
 import { Link } from "@/i18n/navigation";
 import {
-  Zap,
-  Globe,
-  CheckCircle,
   ArrowRight,
-  Code,
-  Blocks,
-  Building2,
-  MessageSquare,
-  Sparkles,
-  TrendingUp,
   Search,
-  Target,
   MousePointerClick,
-  Users,
-  Briefcase,
-  FileText,
-  Database,
-  UserPlus,
   BarChart
 } from "lucide-react";
 import {
@@ -84,32 +66,6 @@ export default async function HomePage({ params }: Props) {
   // Get FAQ data from translations
   const faqData = tHome.raw("faq") as Array<{ question: string; answer: string }>;
 
-  // Category configuration
-  const categories: Array<{
-    slug: AgentCategory;
-    bestUrl: string;
-    icon: typeof Code;
-    gradient: string;
-  }> = [
-    { slug: "coding-agents", bestUrl: "/best/coding-agents", icon: Code, gradient: "from-blue-500/10 to-cyan-500/10" },
-    { slug: "no-code-builders", bestUrl: "/best/no-code-agents", icon: Blocks, gradient: "from-purple-500/10 to-pink-500/10" },
-    { slug: "frameworks", bestUrl: "/best/ai-frameworks", icon: Sparkles, gradient: "from-orange-500/10 to-red-500/10" },
-    { slug: "enterprise", bestUrl: "/best/enterprise-agents", icon: Building2, gradient: "from-green-500/10 to-emerald-500/10" },
-    { slug: "customer-support", bestUrl: "/best/customer-support-agents", icon: MessageSquare, gradient: "from-indigo-500/10 to-blue-500/10" },
-    { slug: "general-purpose", bestUrl: "/best/general-purpose", icon: Globe, gradient: "from-yellow-500/10 to-amber-500/10" },
-  ];
-
-  // Use cases configuration
-  const useCases = [
-    { slug: "coding", icon: Code, color: "text-blue-500 bg-blue-500/10" },
-    { slug: "marketing", icon: TrendingUp, color: "text-purple-500 bg-purple-500/10" },
-    { slug: "writing", icon: FileText, color: "text-green-500 bg-green-500/10" },
-    { slug: "research", icon: Search, color: "text-orange-500 bg-orange-500/10" },
-    { slug: "customer-support", icon: MessageSquare, color: "text-indigo-500 bg-indigo-500/10" },
-    { slug: "sales", icon: Briefcase, color: "text-red-500 bg-red-500/10" },
-    { slug: "data-analysis", icon: Database, color: "text-cyan-500 bg-cyan-500/10" },
-    { slug: "hr-recruitment", icon: UserPlus, color: "text-pink-500 bg-pink-500/10" },
-  ];
 
   return (
     <>
@@ -197,85 +153,6 @@ export default async function HomePage({ params }: Props) {
               </p>
             </div>
             <ComparisonTable agents={top10Agents} />
-          </div>
-        </section>
-
-        {/* Categories Section */}
-        <section className="py-16 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent" />
-          <div className="container relative">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {tHome("categories.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                {tHome("categories.subtitle")}
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {categories.map((category, index) => {
-                const Icon = category.icon;
-                const displayName = getCategoryDisplayName(category.slug);
-                return (
-                  <Link
-                    key={category.slug}
-                    href={category.bestUrl}
-                    className={`group relative overflow-hidden rounded-xl border bg-gradient-to-br ${category.gradient} p-6 card-hover animate-fade-in-up stagger-${index + 1}`}
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-background/80 backdrop-blur-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                          {displayName}
-                        </h3>
-                        <p className="text-sm text-muted-foreground line-clamp-2">
-                          {tHome(`categories.items.${category.slug}.description`)}
-                        </p>
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-16 lg:py-24">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {tHome("useCases.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                {tHome("useCases.subtitle")}
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
-                return (
-                  <Link
-                    key={useCase.slug}
-                    href={`/use-cases/${useCase.slug}`}
-                    className={`group text-center p-6 rounded-xl border bg-card card-hover animate-fade-in-up stagger-${index + 1}`}
-                  >
-                    <div className={`w-14 h-14 rounded-xl ${useCase.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                      <Icon className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                      {tHome(`useCases.items.${useCase.slug}.title`)}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {tHome(`useCases.items.${useCase.slug}.description`)}
-                    </p>
-                  </Link>
-                );
-              })}
-            </div>
           </div>
         </section>
 
