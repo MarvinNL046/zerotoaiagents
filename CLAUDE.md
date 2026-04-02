@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working with the ZeroToAIAgents 
 
 ## Project Overview
 
-ZeroToAIAgents (zerotoaiagents.com) is a multilingual VPN affiliate comparison website built with Next.js 16. The site compares VPN providers, displays user reviews, and earns affiliate commissions through Short.io tracked links.
+ZeroToAIAgents (zerotoaiagents.com) is an AI coding agents comparison and educational platform built with Next.js 16. The site compares different AI agents, provides learning guides, and earns revenue through AdSense (primary monetization). English-only at launch, with infrastructure supporting 9 locales for future expansion.
 
 ## Tech Stack
 
@@ -12,8 +12,8 @@ ZeroToAIAgents (zerotoaiagents.com) is a multilingual VPN affiliate comparison w
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui (Radix UI primitives)
-- **Internationalization**: next-intl (9 locales)
-- **Database**: PostgreSQL via Prisma (Neon - not yet connected)
+- **Internationalization**: next-intl (English only, infrastructure supports 9 locales for future expansion)
+- **Database**: PostgreSQL via Drizzle ORM (Neon)
 - **Themes**: next-themes (light/dark mode)
 
 ## Development Commands
@@ -31,10 +31,9 @@ npm start
 # Linting
 npm run lint
 
-# Prisma commands
-npx prisma generate          # Generate Prisma client
-npx prisma db push           # Push schema to database
-npx prisma studio            # Open Prisma Studio GUI
+# Drizzle commands
+npx drizzle-kit push postgres  # Push schema to database
+npx drizzle-kit studio        # Open Drizzle Studio GUI
 ```
 
 ## Project Architecture
@@ -44,48 +43,42 @@ npx prisma studio            # Open Prisma Studio GUI
 ```
 src/
 ├── app/
-│   ├── [locale]/           # Internationalized routes
-│   │   ├── page.tsx        # Homepage with VPN comparisons
+│   ├── [locale]/           # Internationalized routes (English only currently)
+│   │   ├── page.tsx        # Homepage with AI agent comparisons
 │   │   ├── layout.tsx      # Root layout with i18n
+│   │   ├── guides/         # AI agent guides and tutorials
+│   │   │   ├── page.tsx    # All guides listing
+│   │   │   └── [slug]/     # Individual guide pages
 │   │   └── reviews/
 │   │       ├── page.tsx    # All reviews listing
-│   │       └── [slug]/     # Individual VPN review pages
-│   │           └── page.tsx
+│   │       └── [slug]/     # Individual agent review pages
 │   ├── admin/              # Admin dashboard (outside i18n)
 │   │   ├── layout.tsx      # Admin layout with auth
 │   │   ├── page.tsx        # Dashboard overview
+│   │   ├── agents/         # AI agent management
 │   │   ├── reviews/        # Review moderation
-│   │   ├── clicks/         # Click analytics
 │   │   └── settings/       # Admin settings
 │   └── api/                # API routes
 │       └── reviews/        # Review submission API
 ├── components/
 │   ├── ui/                 # shadcn/ui components
-│   ├── vpn/                # VPN-specific components
+│   ├── agents/             # AI agent-specific components
 │   └── reviews/            # Review system components
 ├── lib/
-│   ├── vpn-data.ts         # Static VPN provider data
-│   ├── user-reviews.ts     # Review types and mock data
+│   ├── ai-agent-data.ts    # AI agent data (database-driven)
+│   ├── user-reviews.ts     # Review types and data
 │   └── utils.ts            # Utility functions (cn)
 ├── i18n/
 │   ├── routing.ts          # Locale configuration
 │   └── request.ts          # i18n request handler
-├── messages/               # Translation JSON files (en.json, nl.json, etc.)
-└── generated/prisma/       # Generated Prisma client
+└── messages/               # Translation JSON files (en.json, nl.json, etc.)
 ```
 
 ### Supported Locales
 
 Configured in `src/i18n/routing.ts`:
-- English (en) - default
-- Dutch (nl)
-- German (de)
-- Spanish (es)
-- French (fr)
-- Chinese (zh)
-- Japanese (ja)
-- Korean (ko)
-- Thai (th)
+- **English (en)** - Only active locale at launch
+- Dutch (nl), German (de), Spanish (es), French (fr), Chinese (zh), Japanese (ja), Korean (ko), Thai (th) - Translation files preserved for future localization support
 
 ### Middleware
 
@@ -97,12 +90,12 @@ The middleware (`src/middleware.ts`) handles i18n routing with exclusions for:
 
 ## Key Components
 
-### VPN Data (`src/lib/vpn-data.ts`)
+### AI Agent Data (`src/lib/ai-agent-data.ts`)
 
-Static VPN provider data including:
-- Pricing, features, ratings
-- Affiliate URLs (Short.io format: `go.zerotoaiagents.com/vpnname`)
-- Will be migrated to database once Neon is connected
+AI coding agents data sourced from PostgreSQL (Drizzle ORM) including:
+- Agent name, description, capabilities
+- Pricing models and features
+- User ratings and reviews
 
 ### Review System
 
@@ -114,19 +107,18 @@ Static VPN provider data including:
 ### Admin Dashboard (`/admin`)
 
 - Simple localStorage-based authentication (8+ character key)
-- Review moderation (approve/reject pending reviews)
-- Click analytics (placeholder for Short.io integration)
+- AI agent management (`/admin/agents`)
+- Review moderation (approve/reject pending user reviews)
 - Settings management
 
 ## Database Schema
 
-Prisma schema (`prisma/schema.prisma`) includes:
-- `VpnProvider` - VPN data with pricing, features, ratings
-- `Review` - Editorial reviews (multilingual)
+Drizzle ORM schema includes:
+- `Agent` - AI agent data with pricing, features, ratings
+- `Guide` - Educational guides and tutorials
 - `UserReview` - User-submitted reviews with moderation
-- `Click` - Affiliate click tracking
-- `Subscriber` - Email newsletter subscribers
-- `Page` - Static content pages
+- `Subscriber` - Newsletter subscribers
+- `AdminUser` - Admin dashboard users
 
 ## Important Patterns
 
@@ -146,27 +138,26 @@ import { useTranslations } from "next-intl";
 const t = useTranslations("namespace");
 ```
 
-### Affiliate Links
+### Revenue Model
 
-All affiliate URLs use Short.io tracking format:
-```
-https://go.zerotoaiagents.com/{vpn-slug}
-```
+- **Primary**: AdSense integration (to be applied once content is complete)
+- **Future**: Affiliate links for AI agent referrals (Phase 2)
 
 ### Admin Route Protection
 
 Admin routes are excluded from i18n middleware. The admin layout handles its own authentication via localStorage.
 
-## Pending Work
+## Current Status
 
-1. **Database Connection**: Connect to Neon PostgreSQL and migrate from mock data
-2. **Reviews API**: Connect `/api/reviews` to database
-3. **Short.io Integration**: API integration for click analytics in admin
-4. **Email System**: Newsletter functionality for collected emails
+1. **Database**: Connected via Drizzle ORM to Neon PostgreSQL
+2. **Reviews API**: Connected to database
+3. **AdSense**: Apply after content is complete
+4. **Guides**: Educational content being developed
+5. **Affiliate Links**: Planned for Phase 2
 
 ## Deployment
 
-Configured for Netlify static hosting with:
-- Image optimization disabled (`unoptimized: true`)
-- Static export ready (uncomment `output: "export"` in next.config.ts)
-# Database connected
+Deployed on Vercel with:
+- Full Next.js capabilities (App Router, server components, API routes)
+- Database integration via Neon PostgreSQL
+- Environment variables configured in Vercel dashboard
