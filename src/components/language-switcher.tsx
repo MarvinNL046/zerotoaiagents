@@ -13,26 +13,10 @@ import { routing, type Locale } from "@/i18n/routing";
 
 const languageNames: Record<Locale, string> = {
   en: "English",
-  nl: "Nederlands",
-  de: "Deutsch",
-  es: "Español",
-  fr: "Français",
-  zh: "中文",
-  ja: "日本語",
-  ko: "한국어",
-  th: "ไทย",
 };
 
 const languageFlags: Record<Locale, string> = {
   en: "🇬🇧",
-  nl: "🇳🇱",
-  de: "🇩🇪",
-  es: "🇪🇸",
-  fr: "🇫🇷",
-  zh: "🇨🇳",
-  ja: "🇯🇵",
-  ko: "🇰🇷",
-  th: "🇹🇭",
 };
 
 export function LanguageSwitcher() {
