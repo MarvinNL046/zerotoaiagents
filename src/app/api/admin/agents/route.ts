@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAllAgentsFromDb, createAgent, getAgentCount } from "@/lib/db/agent-service";
 
-// GET /api/admin/vpns - List all AI agents
+// GET /api/admin/agents - List all AI agents
 export async function GET() {
   try {
     const agents = await getAllAgentsFromDb();
@@ -16,7 +16,7 @@ export async function GET() {
   }
 }
 
-// POST /api/admin/vpns - Create a new AI agent
+// POST /api/admin/agents - Create a new AI agent
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();

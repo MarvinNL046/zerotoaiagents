@@ -121,7 +121,7 @@ export function AgentForm({ vpn, onSuccess }: AgentFormProps) {
         sortOrder: parseInt(sortOrder) || 999,
       };
 
-      const url = vpn ? `/api/admin/vpns/${vpn.id}` : "/api/admin/vpns";
+      const url = vpn ? `/api/admin/agents/${vpn.id}` : "/api/admin/agents";
       const method = vpn ? "PUT" : "POST";
 
       const res = await fetch(url, {

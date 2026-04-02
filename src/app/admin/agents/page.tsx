@@ -30,7 +30,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Plus, Pencil, Trash2, Search, Star, Check, X, Database } from "lucide-react";
-import { AgentForm } from "./vpn-form";
+import { AgentForm } from "./agent-form";
 import type { AiAgentData } from "@/lib/db/agent-service";
 
 export default function VpnsAdminPage() {
@@ -46,7 +46,7 @@ export default function VpnsAdminPage() {
 
   const fetchVpns = async () => {
     try {
-      const res = await fetch("/api/admin/vpns");
+      const res = await fetch("/api/admin/agents");
       const data = await res.json();
       setVpns(data.vpns || []);
       setFilteredVpns(data.vpns || []);
@@ -78,7 +78,7 @@ export default function VpnsAdminPage() {
     if (!deleteAgent) return;
 
     try {
-      const res = await fetch(`/api/admin/vpns/${deleteAgent.id}`, {
+      const res = await fetch(`/api/admin/agents/${deleteAgent.id}`, {
         method: "DELETE",
       });
 

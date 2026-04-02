@@ -5,7 +5,7 @@ type RouteContext = {
   params: Promise<{ id: string }>;
 };
 
-// GET /api/admin/vpns/[id] - Get single AI agent
+// GET /api/admin/agents/[id] - Get single AI agent
 export async function GET(request: NextRequest, context: RouteContext) {
   try {
     const { id } = await context.params;
@@ -25,7 +25,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
   }
 }
 
-// PUT /api/admin/vpns/[id] - Update AI agent
+// PUT /api/admin/agents/[id] - Update AI agent
 export async function PUT(request: NextRequest, context: RouteContext) {
   try {
     const { id } = await context.params;
@@ -48,7 +48,7 @@ export async function PUT(request: NextRequest, context: RouteContext) {
   }
 }
 
-// DELETE /api/admin/vpns/[id] - Delete AI agent
+// DELETE /api/admin/agents/[id] - Delete AI agent
 export async function DELETE(request: NextRequest, context: RouteContext) {
   try {
     const { id } = await context.params;

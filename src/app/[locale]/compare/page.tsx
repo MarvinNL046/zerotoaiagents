@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RatingStars } from "@/components/agents/rating-stars";
 import { AffiliateButton } from "@/components/agents/affiliate-button";
-import { AgentComparisonTool } from "@/components/conversion/vpn-comparison-tool";
+import { AgentComparisonTool } from "@/components/conversion/agent-comparison-tool";
 import { PopularComparisons } from "@/components/compare/popular-comparisons";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
