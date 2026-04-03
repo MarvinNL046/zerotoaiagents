@@ -1,0 +1,829 @@
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip to content" [ref=e4] [cursor=pointer]:
+        - /url: "#main"
+      - link "Homepage" [ref=e6] [cursor=pointer]:
+        - /url: /home
+        - img [ref=e7]
+        - generic [ref=e16]: Cursor
+      - generic [ref=e18]:
+        - button "Open navigation" [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+        - navigation:
+          - generic:
+            - button "Close navigation":
+              - img
+          - list:
+            - listitem:
+              - button "Product":
+                - text: Product
+                - generic: →
+            - listitem:
+              - generic:
+                - link "Enterprise":
+                  - /url: /enterprise
+            - listitem:
+              - generic:
+                - link "Pricing":
+                  - /url: /pricing
+            - listitem:
+              - button "Resources":
+                - text: Resources
+                - generic: →
+      - generic [ref=e22]:
+        - link "Sign in" [ref=e23] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Download" [ref=e24] [cursor=pointer]:
+          - /url: /download
+  - main [ref=e25]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - heading "Built to make you extraordinarily productive, Cursor is the best way to code with AI." [level=1] [ref=e29]
+        - generic [ref=e30]:
+          - link "Download for macOS" [ref=e33] [cursor=pointer]:
+            - /url: /download
+            - text: Download for macOS
+            - generic [ref=e35]: ⤓
+          - link "Request a demo" [ref=e37] [cursor=pointer]:
+            - /url: /contact-sales?source=hero_request_demo
+            - text: Request a demo
+            - generic [ref=e39]: →
+      - generic [ref=e45]:
+        - generic [ref=e46]: This element contains an interactive demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a subtle, solid brand background.
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic: Cursor
+            - generic [ref=e53]:
+              - button [ref=e54] [cursor=pointer]: Get Cursor
+              - button [ref=e55]:
+                - img [ref=e56]
+          - generic [ref=e61]:
+            - complementary [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - generic [ref=e66]: In Progress 3
+                  - generic [ref=e67]:
+                    - button [ref=e68] [cursor=pointer]:
+                      - img [ref=e71]
+                      - generic [ref=e73]:
+                        - generic [ref=e75]: Build Landing Page
+                        - generic [ref=e78]: Reading docs
+                    - button [ref=e79] [cursor=pointer]:
+                      - img [ref=e82]
+                      - generic [ref=e84]:
+                        - generic [ref=e86]: Analyze Tab vs Agent Usage Patterns
+                        - generic [ref=e89]: Fetching data
+                    - button [ref=e90] [cursor=pointer]:
+                      - img [ref=e93]
+                      - generic [ref=e95]:
+                        - generic [ref=e97]: Plan Mission Control
+                        - generic [ref=e100]: Generating plan
+                - generic [ref=e101]:
+                  - generic [ref=e102]: Ready for Review 3
+                  - generic [ref=e103]:
+                    - button [ref=e104] [cursor=pointer]:
+                      - img [ref=e106]
+                      - generic [ref=e108]:
+                        - generic [ref=e109]:
+                          - generic [ref=e110]: PyTorch MNIST Experiments
+                          - generic [ref=e111]: 10m
+                        - generic [ref=e114]: PyTorch MNIST Experiments
+                    - button [ref=e115] [cursor=pointer]:
+                      - img [ref=e117]
+                      - generic [ref=e119]:
+                        - generic [ref=e120]:
+                          - generic [ref=e121]: Set up Cursor Rules for Dashboard
+                          - generic [ref=e122]: 30m
+                        - generic [ref=e125]: Set up Cursor Rules for Dashboard
+                    - button [ref=e126] [cursor=pointer]:
+                      - img [ref=e128]
+                      - generic [ref=e130]:
+                        - generic [ref=e131]:
+                          - generic [ref=e132]: Bioinformatics Tools
+                          - generic [ref=e133]: 45m
+                        - generic [ref=e135]:
+                          - generic [ref=e136]:
+                            - generic [ref=e137]: "+135"
+                            - generic [ref=e138]: "-21"
+                          - generic [ref=e139]: ·
+                          - generic [ref=e140]: Bioinformatics Tools
+            - generic [ref=e141]:
+              - tabpanel [ref=e144]:
+                - generic [ref=e145]:
+                  - generic [ref=e146]:
+                    - generic [ref=e147]:
+                      - button [disabled] [ref=e148]:
+                        - img [ref=e149]
+                      - button [disabled] [ref=e151]:
+                        - img [ref=e152]
+                      - button [ref=e154]:
+                        - img [ref=e155]
+                    - generic [ref=e158]: http://localhost:3000
+                    - button [ref=e159]:
+                      - img [ref=e160]
+                  - generic [ref=e164]:
+                    - generic [ref=e166] [cursor=pointer]: Acme Labs
+                    - generic [ref=e167]:
+                      - paragraph [ref=e168] [cursor=pointer]: Software creation is changing. We are a group of researchers, engineers, and technologists inventing at the edge of what's useful and possible.
+                      - paragraph [ref=e169]: We have much to learn, try, and build.
+                      - generic [ref=e170]:
+                        - button [ref=e171] [cursor=pointer]: See projects
+                        - link [ref=e172] [cursor=pointer]:
+                          - /url: https://cursor.com/careers
+                          - text: Join our team →
+                      - table [ref=e173] [cursor=pointer]:
+                        - rowgroup [ref=e174]:
+                          - row [ref=e175]:
+                            - cell [ref=e176]: "2026"
+                            - cell [ref=e177]: Secure codebase indexing
+                            - cell [ref=e178]: Published
+                          - row [ref=e179]:
+                            - cell [ref=e180]: "2026"
+                            - cell [ref=e181]: Semantic search
+                            - cell [ref=e182]: Published
+                          - row [ref=e183]:
+                            - cell [ref=e184]: "2025"
+                            - cell [ref=e185]: Reinforcement learning
+                            - cell [ref=e186]: Published
+                          - row [ref=e187]:
+                            - cell [ref=e188]: "2024"
+                            - cell [ref=e189]: Shadow workspaces
+                            - cell [ref=e190]: Published
+                          - row [ref=e191]:
+                            - cell [ref=e192]: "2024"
+                            - cell [ref=e193]: Multi-agent collaboration
+                            - cell [ref=e194]: Published
+                          - row [ref=e195]:
+                            - cell [ref=e196]: "2023"
+                            - cell [ref=e197]: Context-aware completions
+                            - cell [ref=e198]: Published
+                          - row [ref=e199]:
+                            - cell [ref=e200]: "2023"
+                            - cell [ref=e201]: Intelligent code navigation
+                            - cell [ref=e202]: Published
+                          - row [ref=e203]:
+                            - cell [ref=e204]: "2022"
+                            - cell [ref=e205]: Fast inference optimization
+                            - cell [ref=e206]: Published
+                          - row [ref=e207]:
+                            - cell [ref=e208]: "2022"
+                            - cell [ref=e209]: Language model fine-tuning
+                            - cell [ref=e210]: Published
+              - generic [ref=e212]:
+                - generic [ref=e214]: Build Landing Page
+                - generic [ref=e219]: make a landing page based on attached docs explaining what we do
+                - generic [ref=e224]:
+                  - textbox [ref=e225]:
+                    - /placeholder: Plan, search, build anything...
+                  - generic [ref=e227]:
+                    - generic [ref=e228]:
+                      - button [ref=e229] [cursor=pointer]:
+                        - img [ref=e230]
+                        - generic [ref=e232]: Agent
+                        - img [ref=e233]
+                      - button [ref=e235] [cursor=pointer]:
+                        - generic [ref=e236]: Composer 2
+                        - img [ref=e237]
+                    - button [disabled] [ref=e239]:
+                      - img [ref=e240]
+    - generic [ref=e251]:
+      - heading "Trusted every day by teams that build world-class software" [level=2] [ref=e252]
+      - generic [ref=e253]:
+        - img [ref=e256]:
+          - img [ref=e257]
+        - img [ref=e261]:
+          - img [ref=e262]
+        - img [ref=e272]:
+          - img [ref=e273]
+        - img [ref=e279]:
+          - img [ref=e280]
+        - img [ref=e285]:
+          - img [ref=e286]
+        - img [ref=e293]:
+          - img [ref=e294]
+        - img [ref=e302]:
+          - img [ref=e303]
+        - img [ref=e307]:
+          - img [ref=e308]
+    - generic [ref=e311]:
+      - generic [ref=e314]:
+        - link "Agents turn ideas into code Accelerate development by handing off tasks to Cursor, while you focus on making decisions. Learn about agentic development →" [ref=e315] [cursor=pointer]:
+          - /url: /product
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - heading "Agents turn ideas into code" [level=3] [ref=e319]
+              - generic [ref=e320]: Accelerate development by handing off tasks to Cursor, while you focus on making decisions.
+            - generic [ref=e322]: Learn about agentic development →
+        - generic [ref=e331]:
+          - generic [ref=e332]: This element contains an interactive demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a subtle, solid brand background.
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - generic: Cursor
+              - button [ref=e340] [cursor=pointer]: Get Cursor
+            - generic [ref=e345]:
+              - generic [ref=e347]:
+                - tablist [ref=e348]:
+                  - tab [selected] [ref=e349] [cursor=pointer]:
+                    - button [ref=e350]: feature-prd.md
+                    - button [ref=e351]:
+                      - img [ref=e352]
+                  - tab [ref=e354] [cursor=pointer]:
+                    - button [ref=e355]: presence.ts
+                    - button [ref=e356]:
+                      - img [ref=e357]
+                - tabpanel [ref=e360]:
+                  - generic [ref=e361]:
+                    - generic [ref=e363]:
+                      - generic [ref=e364]:
+                        - generic [ref=e365]: Plans
+                        - img [ref=e366]
+                        - generic [ref=e368]: feature-prd.md
+                      - generic [ref=e369]:
+                        - button [ref=e370]:
+                          - generic [ref=e371]: Composer 2
+                          - img [ref=e372]
+                        - button [ref=e374]: Build
+                    - generic [ref=e376]:
+                      - heading [level=1] [ref=e377]: Mission Control Interface
+                      - paragraph [ref=e379]: A grid view of all open windows as scaled previews, allowing quick selection to bring any window to front.
+                      - heading [level=2] [ref=e381]: Trigger
+                      - paragraph [ref=e382]: Menu item in MenuBar.tsx (View > Mission Control), hotkey F3, or double-tap desktop.
+                      - heading [level=2] [ref=e384]: View Behavior
+                      - paragraph [ref=e385]: Overlay existing windows into a grid of live previews with spring-based layout animations and shared element transitions.
+                      - generic [ref=e387]:
+                        - generic [ref=e389]: 3 Tasks
+                        - generic [ref=e391]:
+                          - generic [ref=e394]: Add multiplayer mode to useAppStore.ts
+                          - generic [ref=e397]: Create a new MissionControlView.tsx component
+                          - generic [ref=e400]: Update AppManager.tsx to apply expose modes.
+                          - generic [ref=e403]: Add a task, ⌘K to generate...
+              - generic [ref=e405]:
+                - generic [ref=e407]: Plan Mission Control
+                - generic [ref=e412]: let's build a mission control interface, similar to the expose-style window manager on macOS
+                - generic [ref=e417]:
+                  - textbox [ref=e418]:
+                    - /placeholder: Plan, search, build anything...
+                  - generic [ref=e420]:
+                    - generic [ref=e421]:
+                      - button [ref=e422] [cursor=pointer]:
+                        - img [ref=e423]
+                        - generic [ref=e428]: Plan
+                        - img [ref=e429]
+                      - button [ref=e431] [cursor=pointer]:
+                        - generic [ref=e432]: Composer 2
+                        - img [ref=e433]
+                    - button [disabled] [ref=e435]:
+                      - img [ref=e436]
+      - generic [ref=e448]:
+        - generic [ref=e451]:
+          - generic [ref=e452]:
+            - heading "Works autonomously, runs in parallel" [level=3] [ref=e453]
+            - generic [ref=e454]: Agents use their own computers to build, test, and demo features end to end for you to review.
+          - link "Learn about cloud agents →" [ref=e457] [cursor=pointer]:
+            - /url: /docs/cloud-agent
+        - generic [ref=e467]:
+          - generic [ref=e475]:
+            - generic [ref=e476]: 
+            - generic [ref=e477]: cursor.com/agent
+            - generic [ref=e478]: 
+          - generic [ref=e480]:
+            - generic [ref=e481]:
+              - img [ref=e483]
+              - generic [ref=e486]:
+                - generic [ref=e487]: This Week
+                - button "Acme Research Dashboard" [ref=e488] [cursor=pointer]:
+                  - generic [ref=e491]: Acme Research Dashboard
+                - button " Live Telemetry Pipeline" [ref=e492] [cursor=pointer]:
+                  - generic [ref=e493]: 
+                  - generic [ref=e494]: Live Telemetry Pipeline
+                - button " Zero-Downtime Deploys" [ref=e495] [cursor=pointer]:
+                  - generic [ref=e496]: 
+                  - generic [ref=e497]: Zero-Downtime Deploys
+                - generic [ref=e498]: This Month
+                - button " Binary Protocol Parser" [ref=e499] [cursor=pointer]:
+                  - generic [ref=e500]: 
+                  - generic [ref=e501]: Binary Protocol Parser
+                - button "Edge Cache Invalidation" [ref=e502] [cursor=pointer]:
+                  - generic [ref=e505]: Edge Cache Invalidation
+                - button " Auth Token Rotation" [ref=e506] [cursor=pointer]:
+                  - generic [ref=e507]: 
+                  - generic [ref=e508]: Auth Token Rotation
+            - generic [ref=e510]:
+              - generic [ref=e512]: Acme Research Dashboard
+              - generic [ref=e514]:
+                - generic [ref=e518]: let's build a dashboard to make our research findings interactive
+                - generic [ref=e519]:
+                  - generic [ref=e520]:
+                    - generic [ref=e521]: Explored 12 files, 4 searches
+                    - generic [ref=e522]: On it. I'll build the dashboard using your theme config, wire up the research data, and add interactive charts with public access controls.
+                    - generic [ref=e523]: Worked for 14m 22s
+                    - generic [ref=e524]: Processed screen recording
+                    - generic [ref=e525]: Done! Here's a walkthrough of the dashboard.
+                  - button "Acme Labs" [ref=e527] [cursor=pointer]:
+                    - generic [ref=e529]:
+                      - generic [ref=e635]: Acme Labs
+                      - img [ref=e650]
+                  - generic [ref=e652]: Summary
+                  - generic [ref=e653]: Built the interactive dashboard with realtime charts, data from Snowflake, and shadcn components. Deployed to staging via Vercel.
+              - generic [ref=e655]:
+                - generic [ref=e656]: Add a follow up...
+                - generic [ref=e658]:
+                  - generic [ref=e659]:
+                    - button "Agent" [ref=e661] [cursor=pointer]:
+                      - img [ref=e663]
+                      - generic [ref=e665]: Agent
+                      - img [ref=e666]
+                    - button "Opus 4.6" [ref=e669] [cursor=pointer]:
+                      - generic [ref=e670]: Opus 4.6
+                      - img [ref=e671]
+                  - button "Send message" [ref=e673]:
+                    - img [ref=e674]
+      - generic [ref=e678]:
+        - link "In every tool, at every step Cursor reviews your PRs in GitHub, collaborates in Slack, and runs in your terminal. Learn about Cursor's surfaces →" [ref=e679] [cursor=pointer]:
+          - /url: /product
+          - generic [ref=e681]:
+            - generic [ref=e682]:
+              - heading "In every tool, at every step" [level=3] [ref=e683]
+              - generic [ref=e684]: Cursor reviews your PRs in GitHub, collaborates in Slack, and runs in your terminal.
+            - generic [ref=e686]: Learn about Cursor's surfaces →
+        - generic [ref=e696]:
+          - generic [ref=e697]: "This element contains an interactive demo for sighted users showing multiple Cursor interfaces: Slack integration for team communication, GitHub integration for code review and debugging. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop."
+          - generic [ref=e698]:
+            - generic [ref=e699]:
+              - generic: Slack
+              - button [ref=e705] [cursor=pointer]: Get Cursor for Slack
+            - generic [ref=e708]:
+              - generic [ref=e709]:
+                - button [ref=e711]:
+                  - generic [ref=e712]:
+                    - heading [level=1] [ref=e714]: "#feature-realtime-sync"
+                    - generic [ref=e716]: 8 members
+                - generic [ref=e718]:
+                  - img [ref=e719]
+                  - img [ref=e720]
+                  - img [ref=e721]
+                  - img [ref=e722]
+              - generic [ref=e724]:
+                - generic [ref=e727]:
+                  - img [ref=e729]
+                  - generic [ref=e730]:
+                    - generic [ref=e731]:
+                      - generic [ref=e732]: swhitmore
+                      - generic [ref=e733]: 5m
+                    - generic [ref=e738]: i wanna be able to go to cursor.com/changelog#1.0 to see 1.0 changelog
+                - generic [ref=e741]:
+                  - img [ref=e743]
+                  - generic [ref=e744]:
+                    - generic [ref=e745]:
+                      - generic [ref=e746]: eric
+                      - generic [ref=e747]: 4m
+                    - generic [ref=e752]: checks out
+                - generic [ref=e761]: "@cursor can you take a stab?"
+                - generic [ref=e764]:
+                  - img [ref=e766]
+                  - generic [ref=e767]:
+                    - generic [ref=e768]:
+                      - generic [ref=e769]: Cursor
+                      - generic [ref=e770]: APP
+                      - generic [ref=e771]: 2m
+                    - generic [ref=e772]:
+                      - generic [ref=e776]: I added direct linking for changelog entries and updated the Node.js version constraints across the project for better maintainability.
+                      - generic [ref=e777]:
+                        - generic: View PR
+                        - generic: Open in Cursor
+                        - generic: Open in Web
+          - generic [ref=e778]:
+            - generic [ref=e779]:
+              - generic: GitHub Pull Request
+              - button [ref=e785] [cursor=pointer]: Get BugBot
+            - generic [ref=e789]:
+              - generic [ref=e794]:
+                - generic [ref=e796]:
+                  - generic [ref=e797]: leerob
+                  - generic [ref=e798]: 5m ago
+                - generic [ref=e799]: "@cursor can you review this PR?"
+              - generic [ref=e805]:
+                - generic [ref=e807]:
+                  - generic [ref=e808]: cursor
+                  - generic [ref=e809]: bot
+                  - generic [ref=e810]: reviewed 3m ago
+                - generic [ref=e811]:
+                  - generic [ref=e813]: src/vs/workbench/composer/browser/components/ComposerUnifiedDropdown.tsx
+                  - generic [ref=e814]:
+                    - generic [ref=e815]:
+                      - generic [ref=e816]: "3292"
+                      - generic [ref=e817]: "-"
+                      - generic [ref=e818]: "{selectedMode().keybinding}"
+                    - generic [ref=e819]:
+                      - generic [ref=e820]: "3293"
+                      - generic [ref=e821]: +
+                      - generic [ref=e822]: "{composerOpenModeToggleKeybinding()}"
+                - generic [ref=e826]:
+                  - generic [ref=e827]: "Bug: Function Returns Object Instead of String (Logic bug)"
+                  - generic [ref=e828]:
+                    - text: The
+                    - code [ref=e829]: composerOpenModeToggleKeybinding
+                    - text: is a function that needs to be called to get its value. This makes the condition always truthy.
+                - generic [ref=e830]:
+                  - button [ref=e831]:
+                    - img [ref=e832]
+                    - text: Fix in Cursor
+                  - button [ref=e835]: Fix in Web
+      - generic [ref=e838]:
+        - link "Magically accurate autocomplete Our specialized Tab model predicts your next action with striking speed and precision. Learn about Tab →" [ref=e839] [cursor=pointer]:
+          - /url: /product/tab
+          - generic [ref=e841]:
+            - generic [ref=e842]:
+              - heading "Magically accurate autocomplete" [level=3] [ref=e843]
+              - generic [ref=e844]: Our specialized Tab model predicts your next action with striking speed and precision.
+            - generic [ref=e846]: Learn about Tab →
+        - generic [ref=e854]:
+          - img "Abstract waves background" [ref=e856]
+          - generic [ref=e857]:
+            - generic [ref=e858]: This element contains an interactive demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop.
+            - generic [ref=e859]:
+              - generic [ref=e860]:
+                - generic: Cursor
+                - button [disabled] [ref=e866] [cursor=pointer]: Get Cursor
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - tablist:
+                              - tab [selected]:
+                                - button: Dashboard.tsx
+                                - button:
+                                  - img
+                              - tab:
+                                - button: SupportChat.tsx
+                                - button:
+                                  - img
+                            - tabpanel:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - code:
+                                      - generic: "\"use client\";"
+                                      - generic: "import React, { useState } from \"react\";"
+                                      - generic: import Navigation from "./Navigation";
+                                      - generic: import SupportChat from "./SupportChat";
+                                      - generic: "export default function Dashboard() {"
+                                      - generic: return (
+                                      - generic: <div className="flex h-[600px] border rounded-lg overflow-hidden">
+                                      - generic: <div className="w-64 border-r">
+                                      - generic: </div>
+                                      - generic: <div className="w-80 border-l">
+                                      - generic: <SupportChat />
+                                      - generic: </div>
+                                      - generic: </div>
+                                      - generic: );
+                                      - generic: "}"
+    - generic [ref=e867]:
+      - heading "The new way to build software." [level=2] [ref=e870]
+      - generic [ref=e872]:
+        - figure [ref=e875]:
+          - blockquote [ref=e876]:
+            - paragraph [ref=e877]: “It was night and day from one batch to another, adoption went from single digits to over 80%. It just spread like wildfire, all the best builders were using Cursor.”
+          - generic [ref=e881]:
+            - text: Diana Hu
+            - generic [ref=e882]: General Partner, Y Combinator
+        - figure [ref=e885]:
+          - blockquote [ref=e886]:
+            - paragraph [ref=e887]: “My favorite enterprise AI service is Cursor. Every one of our engineers, some 40,000, are now assisted by AI and our productivity has gone up incredibly.”
+          - generic [ref=e891]:
+            - text: Jensen Huang
+            - generic [ref=e892]: President & CEO, NVIDIA
+        - figure [ref=e895]:
+          - blockquote [ref=e896]:
+            - paragraph [ref=e897]: "“The best LLM applications have an autonomy slider: you control how much independence to give the AI. In Cursor, you can do Tab completion, Cmd+K for targeted edits, or you can let it rip with the full autonomy agentic version.”"
+          - generic [ref=e901]:
+            - text: Andrej Karpathy
+            - generic [ref=e902]: CEO, Eureka Labs
+        - figure [ref=e905]:
+          - blockquote [ref=e906]:
+            - paragraph [ref=e907]: “Cursor quickly grew from hundreds to thousands of extremely enthusiastic Stripe employees. We spend more on R&D and software creation than any other undertaking, and there's significant economic outcomes when making that process more efficient.”
+          - generic [ref=e911]:
+            - text: Patrick Collison
+            - generic [ref=e912]: Co‑Founder & CEO, Stripe
+        - figure [ref=e915]:
+          - blockquote [ref=e916]:
+            - paragraph [ref=e917]: “The most useful AI tool that I currently pay for, hands down, is Cursor. It's fast, autocompletes when and where you need it to, handles brackets properly, sensible keyboard shortcuts, bring-your-own-model... everything is well put together.”
+          - generic [ref=e921]:
+            - text: shadcn
+            - generic [ref=e922]: Creator of shadcn/ui
+        - figure [ref=e925]:
+          - blockquote [ref=e926]:
+            - paragraph [ref=e927]: “It's definitely becoming more fun to be a programmer. We are at the 1% of what's possible, and it's in interactive experiences like Cursor where models like GPT-5 shine brightest.”
+          - generic [ref=e931]:
+            - text: Greg Brockman
+            - generic [ref=e932]: President, OpenAI
+    - generic [ref=e934]:
+      - heading "Stay on the frontier" [level=2] [ref=e936]
+      - generic [ref=e937]:
+        - generic [ref=e939]:
+          - generic [ref=e940]:
+            - generic [ref=e941]:
+              - heading "Use the best model for every task" [level=3] [ref=e942]
+              - generic [ref=e943]: Choose between every cutting-edge model from OpenAI, Anthropic, Gemini, xAI, and Cursor.
+            - link "Explore models ↗" [ref=e945] [cursor=pointer]:
+              - /url: /docs/models
+          - figure [ref=e946]:
+            - generic [ref=e952]:
+              - generic [ref=e953]: Ask Cursor to plan or build anything
+              - generic [ref=e955]:
+                - generic [ref=e956]:
+                  - button "Agent" [ref=e957]:
+                    - img [ref=e958]
+                    - generic [ref=e960]: Agent
+                    - img [ref=e961]
+                  - generic [ref=e963]:
+                    - button "Auto" [ref=e964]:
+                      - generic [ref=e965]: Auto
+                      - img [ref=e966]
+                    - menu "Model menu" [ref=e969]:
+                      - generic [ref=e970]:
+                        - menuitem "Auto Suggested ✓" [ref=e971]:
+                          - generic [ref=e972]:
+                            - generic [ref=e973]: Auto
+                            - generic [ref=e974]: Suggested
+                          - generic [ref=e975]: ✓
+                        - menuitem "Composer 2" [ref=e976]:
+                          - generic [ref=e978]: Composer 2
+                        - menuitem "GPT-5.4" [ref=e979]:
+                          - generic [ref=e981]: GPT-5.4
+                        - menuitem "Opus 4.6" [ref=e982]:
+                          - generic [ref=e984]: Opus 4.6
+                        - menuitem "Gemini 3 Pro" [ref=e985]:
+                          - generic [ref=e987]: Gemini 3 Pro
+                        - menuitem "Grok Code" [ref=e988]:
+                          - generic [ref=e990]: Grok Code
+                - button "Send message" [ref=e991]:
+                  - img [ref=e992]
+        - generic [ref=e995]:
+          - generic [ref=e996]:
+            - generic [ref=e997]:
+              - heading "Complete codebase understanding" [level=3] [ref=e998]
+              - generic [ref=e999]: Cursor learns how your codebase works, no matter the scale or complexity.
+            - link "Learn about codebase indexing ↗" [ref=e1001] [cursor=pointer]:
+              - /url: /docs/context/semantic-search
+          - figure [ref=e1002]:
+            - region "Tool calls" [ref=e1008]:
+              - generic [ref=e1010]:
+                - generic [ref=e1011]: Where are these menu label colors defined?
+                - list
+        - generic [ref=e1013]:
+          - generic [ref=e1014]:
+            - generic [ref=e1015]:
+              - heading "Develop enduring software" [level=3] [ref=e1016]
+              - generic [ref=e1017]: Trusted by over half of the Fortune 500 to accelerate development, securely and at scale.
+            - link "Explore enterprise →" [ref=e1019] [cursor=pointer]:
+              - /url: /enterprise
+          - figure [ref=e1020]
+    - generic [ref=e1024]:
+      - heading "Changelog" [level=2] [ref=e1025]
+      - generic [ref=e1027]:
+        - article [ref=e1029]:
+          - link "3.0 Apr 2, 2026 New Cursor Interface" [ref=e1030] [cursor=pointer]:
+            - /url: /changelog/3-0
+            - generic [ref=e1031]:
+              - generic [ref=e1032]: "3.0"
+              - time [ref=e1033]: Apr 2, 2026
+            - paragraph [ref=e1034]: New Cursor Interface
+        - article [ref=e1036]:
+          - link "Mar 25, 2026 Self-hosted Cloud Agents" [ref=e1037] [cursor=pointer]:
+            - /url: /changelog/03-25-26
+            - time [ref=e1039]: Mar 25, 2026
+            - paragraph [ref=e1040]: Self-hosted Cloud Agents
+        - article [ref=e1042]:
+          - link "Mar 19, 2026 Composer 2" [ref=e1043] [cursor=pointer]:
+            - /url: /changelog/composer-2
+            - time [ref=e1045]: Mar 19, 2026
+            - paragraph [ref=e1046]: Composer 2
+        - article [ref=e1048]:
+          - link "Mar 11, 2026 New Plugins on the Cursor Marketplace" [ref=e1049] [cursor=pointer]:
+            - /url: /changelog/03-11-26
+            - time [ref=e1051]: Mar 11, 2026
+            - paragraph [ref=e1052]: New Plugins on the Cursor Marketplace
+      - link "See what's new in Cursor →" [ref=e1053] [cursor=pointer]:
+        - /url: /changelog
+    - generic [ref=e1059]:
+      - heading "Cursor is an applied research team focused on building the future of software development." [level=3] [ref=e1061]
+      - link "Join us" [ref=e1064] [cursor=pointer]:
+        - /url: /careers
+        - text: Join us
+        - generic [ref=e1066]: →
+    - generic [ref=e1074]:
+      - heading "Recent highlights" [level=2] [ref=e1075]
+      - generic [ref=e1077]:
+        - article [ref=e1079]:
+          - link "Mar 27, 2026 Research A technical report on Composer 2 Sasha Rush3 min read" [ref=e1080] [cursor=pointer]:
+            - /url: /blog/composer-2-technical-report
+            - generic [ref=e1081]:
+              - generic [ref=e1082]:
+                - time [ref=e1083]: Mar 27, 2026
+                - generic [ref=e1084]: ·
+                - generic [ref=e1085]: Research
+              - paragraph [ref=e1087]: A technical report on Composer 2
+              - generic [ref=e1088]:
+                - img [ref=e1092]
+                - generic [ref=e1093]:
+                  - text: Sasha Rush
+                  - generic [ref=e1094]: · 3 min read
+        - article [ref=e1096]:
+          - link "Apr 2, 2026 Product Meet the new Cursor Michael & Sualeh10 min read" [ref=e1097] [cursor=pointer]:
+            - /url: /blog/cursor-3
+            - generic [ref=e1098]:
+              - generic [ref=e1099]:
+                - time [ref=e1100]: Apr 2, 2026
+                - generic [ref=e1101]: ·
+                - generic [ref=e1102]: Product
+              - paragraph [ref=e1104]: Meet the new Cursor
+              - generic [ref=e1105]:
+                - generic [ref=e1106]:
+                  - img [ref=e1109]
+                  - img [ref=e1112]
+                - generic [ref=e1113]:
+                  - text: Michael & Sualeh
+                  - generic [ref=e1114]: · 10 min read
+        - article [ref=e1116]:
+          - link "Mar 19, 2026 Research Introducing Composer 2 Cursor Team3 min read" [ref=e1117] [cursor=pointer]:
+            - /url: /blog/composer-2
+            - generic [ref=e1118]:
+              - generic [ref=e1119]:
+                - time [ref=e1120]: Mar 19, 2026
+                - generic [ref=e1121]: ·
+                - generic [ref=e1122]: Research
+              - paragraph [ref=e1124]: Introducing Composer 2
+              - generic [ref=e1125]:
+                - img [ref=e1129]
+                - generic [ref=e1130]:
+                  - text: Cursor Team
+                  - generic [ref=e1131]: · 3 min read
+        - article [ref=e1133]:
+          - link "Mar 11, 2026 Research How we compare model quality in Cursor Naman Jain7 min read" [ref=e1134] [cursor=pointer]:
+            - /url: /blog/cursorbench
+            - generic [ref=e1135]:
+              - generic [ref=e1136]:
+                - time [ref=e1137]: Mar 11, 2026
+                - generic [ref=e1138]: ·
+                - generic [ref=e1139]: Research
+              - paragraph [ref=e1141]: How we compare model quality in Cursor
+              - generic [ref=e1142]:
+                - img [ref=e1146]
+                - generic [ref=e1147]:
+                  - text: Naman Jain
+                  - generic [ref=e1148]: · 7 min read
+      - link "View all blog posts →" [ref=e1149] [cursor=pointer]:
+        - /url: /blog
+    - generic [ref=e1152]:
+      - heading "Try Cursor now." [level=2] [ref=e1153]
+      - link "Download for macOS" [ref=e1157] [cursor=pointer]:
+        - /url: /download
+        - text: Download for macOS
+        - generic [ref=e1159]: ⤓
+  - contentinfo [ref=e1160]:
+    - navigation [ref=e1162]:
+      - generic [ref=e1163]:
+        - generic [ref=e1164]:
+          - heading "Product" [level=3] [ref=e1165]
+          - list [ref=e1166]:
+            - listitem [ref=e1167]:
+              - link "Agents" [ref=e1168] [cursor=pointer]:
+                - /url: /en-US/product
+            - listitem [ref=e1169]:
+              - link "Enterprise" [ref=e1170] [cursor=pointer]:
+                - /url: /en-US/enterprise
+            - listitem [ref=e1171]:
+              - link "Pricing" [ref=e1172] [cursor=pointer]:
+                - /url: /en-US/pricing
+            - listitem [ref=e1173]:
+              - link "Code Review" [ref=e1174] [cursor=pointer]:
+                - /url: /en-US/bugbot
+            - listitem [ref=e1175]:
+              - link "Tab" [ref=e1176] [cursor=pointer]:
+                - /url: /en-US/product/tab
+            - listitem [ref=e1177]:
+              - link "CLI" [ref=e1178] [cursor=pointer]:
+                - /url: /en-US/cli
+            - listitem [ref=e1179]:
+              - link "Cloud Agents" [ref=e1180] [cursor=pointer]:
+                - /url: /agents
+            - listitem [ref=e1181]:
+              - link "Marketplace ↗" [ref=e1182] [cursor=pointer]:
+                - /url: https://cursor.com/marketplace
+                - text: Marketplace
+                - generic [ref=e1183]: ↗
+        - generic [ref=e1184]:
+          - heading "Resources" [level=3] [ref=e1185]
+          - list [ref=e1186]:
+            - listitem [ref=e1187]:
+              - link "Download" [ref=e1188] [cursor=pointer]:
+                - /url: /en-US/download
+            - listitem [ref=e1189]:
+              - link "Changelog" [ref=e1190] [cursor=pointer]:
+                - /url: /en-US/changelog
+            - listitem [ref=e1191]:
+              - link "Docs" [ref=e1192] [cursor=pointer]:
+                - /url: /docs
+            - listitem [ref=e1193]:
+              - link "Learn ↗" [ref=e1194] [cursor=pointer]:
+                - /url: https://cursor.com/learn
+                - text: Learn
+                - generic [ref=e1195]: ↗
+            - listitem [ref=e1196]:
+              - link "Forum ↗" [ref=e1197] [cursor=pointer]:
+                - /url: https://forum.cursor.com/
+                - text: Forum
+                - generic [ref=e1198]: ↗
+            - listitem [ref=e1199]:
+              - link "Help ↗" [ref=e1200] [cursor=pointer]:
+                - /url: https://cursor.com/help
+                - text: Help
+                - generic [ref=e1201]: ↗
+            - listitem [ref=e1202]:
+              - link "Workshops" [ref=e1203] [cursor=pointer]:
+                - /url: /en-US/workshops
+            - listitem [ref=e1204]:
+              - link "Status ↗" [ref=e1205] [cursor=pointer]:
+                - /url: https://status.cursor.com/
+                - text: Status
+                - generic [ref=e1206]: ↗
+        - generic [ref=e1207]:
+          - heading "Company" [level=3] [ref=e1208]
+          - list [ref=e1209]:
+            - listitem [ref=e1210]:
+              - link "Careers" [ref=e1211] [cursor=pointer]:
+                - /url: /en-US/careers
+            - listitem [ref=e1212]:
+              - link "Blog" [ref=e1213] [cursor=pointer]:
+                - /url: /en-US/blog
+            - listitem [ref=e1214]:
+              - link "Community" [ref=e1215] [cursor=pointer]:
+                - /url: /en-US/community
+            - listitem [ref=e1216]:
+              - link "Students" [ref=e1217] [cursor=pointer]:
+                - /url: /en-US/students
+            - listitem [ref=e1218]:
+              - link "Brand" [ref=e1219] [cursor=pointer]:
+                - /url: /en-US/brand
+            - listitem [ref=e1220]:
+              - link "Future" [ref=e1221] [cursor=pointer]:
+                - /url: /en-US/future
+            - listitem [ref=e1222]:
+              - link "Anysphere ↗" [ref=e1223] [cursor=pointer]:
+                - /url: https://anysphere.inc/
+                - text: Anysphere
+                - generic [ref=e1224]: ↗
+        - generic [ref=e1225]:
+          - heading "Legal" [level=3] [ref=e1226]
+          - list [ref=e1227]:
+            - listitem [ref=e1228]:
+              - link "Terms of Service" [ref=e1229] [cursor=pointer]:
+                - /url: /en-US/terms-of-service
+            - listitem [ref=e1230]:
+              - link "Privacy Policy" [ref=e1231] [cursor=pointer]:
+                - /url: /en-US/privacy
+            - listitem [ref=e1232]:
+              - link "Data Use" [ref=e1233] [cursor=pointer]:
+                - /url: /en-US/data-use
+            - listitem [ref=e1234]:
+              - link "Security" [ref=e1235] [cursor=pointer]:
+                - /url: /en-US/security
+        - generic [ref=e1236]:
+          - heading "Connect" [level=3] [ref=e1237]
+          - list [ref=e1238]:
+            - listitem [ref=e1239]:
+              - link "X ↗" [ref=e1240] [cursor=pointer]:
+                - /url: https://x.com/cursor_ai
+                - text: X
+                - generic [ref=e1241]: ↗
+            - listitem [ref=e1242]:
+              - link "LinkedIn ↗" [ref=e1243] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/cursorai
+                - text: LinkedIn
+                - generic [ref=e1244]: ↗
+            - listitem [ref=e1245]:
+              - link "YouTube ↗" [ref=e1246] [cursor=pointer]:
+                - /url: https://www.youtube.com/@cursor_ai
+                - text: YouTube
+                - generic [ref=e1247]: ↗
+    - generic [ref=e1248]:
+      - generic [ref=e1249]:
+        - generic [ref=e1250]:
+          - text: © 2026
+          - link "Anysphere, Inc." [ref=e1251] [cursor=pointer]:
+            - /url: https://anysphere.inc
+        - generic [ref=e1252]:
+          - text: 🛡
+          - link "SOC 2 Certified" [ref=e1253] [cursor=pointer]:
+            - /url: /en-US/security
+      - button "🌐 English ↓" [ref=e1257] [cursor=pointer]:
+        - generic [ref=e1258]: 🌐
+        - text: English
+        - generic [ref=e1259]: ↓
+  - alert [ref=e1260]
