@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "ZeroToAIAgents - Best AI Agent Reviews & Comparisons";
+export const alt = "ZeroToAIAgents - Learn, Compare & Master AI Coding Agents";
 export const size = {
   width: 1200,
   height: 630,
@@ -43,19 +43,19 @@ export default async function OgImage() {
           >
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-              fill="#8b5cf6"
+              fill="#f97316"
             />
             <path
               d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
-              fill="#6366f1"
+              fill="#ea580c"
             />
-            <circle cx="12" cy="12" r="2" fill="#8b5cf6" />
+            <circle cx="12" cy="12" r="2" fill="#f97316" />
           </svg>
           <span
             style={{
               fontSize: 72,
               fontWeight: 800,
-              background: "linear-gradient(to right, #8b5cf6, #a78bfa)",
+              background: "linear-gradient(to right, #f97316, #fb923c)",
               backgroundClip: "text",
               color: "transparent",
             }}
@@ -77,7 +77,7 @@ export default async function OgImage() {
               marginBottom: 16,
             }}
           >
-            Best AI Agent Reviews & Comparisons 2026
+            Learn, Compare & Master AI Coding Agents
           </span>
           <span
             style={{

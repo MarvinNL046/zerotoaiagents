@@ -1,99 +1,65 @@
-﻿import { MetadataRoute } from "next";
-import { getAllAgents } from "@/lib/agent-data-layer";
-import { routing } from "@/i18n/routing";
-import discoveredStaticRoutes from "@/lib/sitemap-static-routes.generated.json";
+import { MetadataRoute } from "next";
+import { aiAgentProviders } from "@/lib/ai-agent-data";
 
-type SitemapEntry = MetadataRoute.Sitemap[number];
-type ChangeFrequency = NonNullable<SitemapEntry["changeFrequency"]>;
-
-function getPageProfile(path: string): {
-  priority: number;
-  changeFrequency: ChangeFrequency;
-} {
-  if (path === "") return { priority: 1.0, changeFrequency: "weekly" };
-  if (path.startsWith("/reviews")) {
-    return { priority: 0.9, changeFrequency: "weekly" };
-  }
-  if (path.startsWith("/compare")) {
-    return { priority: 0.85, changeFrequency: "weekly" };
-  }
-  if (path.startsWith("/blog")) {
-    return { priority: 0.8, changeFrequency: "weekly" };
-  }
-  if (path.startsWith("/guides")) {
-    return { priority: 0.75, changeFrequency: "monthly" };
-  }
-  if (
-    path === "/about" ||
-    path === "/contact" ||
-    path === "/privacy-policy" ||
-    path === "/terms"
-  ) {
-    return { priority: 0.5, changeFrequency: "monthly" };
-  }
-  return { priority: 0.7, changeFrequency: "weekly" };
-}
-
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zerotoaiagents.com";
-  const locales = routing.locales;
-  const nowIso = new Date().toISOString();
-  const agents = await getAllAgents();
-  const routeMap = new Map<string, SitemapEntry>();
-  const staticPaths = discoveredStaticRoutes.paths as string[];
+  const now = "2026-04-03T00:00:00.000Z";
 
-  const addLocalizedPath = (
-    path: string,
-    opts?: Partial<Pick<SitemapEntry, "priority" | "changeFrequency" | "lastModified">>
-  ) => {
-    const profile = getPageProfile(path);
-    const alternates: Record<string, string> = {
-      "x-default": `${baseUrl}${path}`,
-    };
+  const staticPages = [
+    { url: "", priority: 1.0, changeFrequency: "weekly" as const },
+    { url: "/reviews", priority: 0.9, changeFrequency: "weekly" as const },
+    { url: "/compare", priority: 0.85, changeFrequency: "weekly" as const },
+    { url: "/guides", priority: 0.85, changeFrequency: "monthly" as const },
+    { url: "/guides/what-are-ai-coding-agents", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/guides/how-to-choose-ai-coding-agent", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/guides/getting-started-ai-pair-programming", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/guides/ai-coding-agents-beginners-vs-experienced", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/guides/free-vs-paid-ai-coding-agents", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/about", priority: 0.5, changeFrequency: "monthly" as const },
+    { url: "/contact", priority: 0.4, changeFrequency: "monthly" as const },
+    { url: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" as const },
+    { url: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
+  ];
 
-    for (const locale of locales) {
-      const altPrefix = locale === "en" ? "" : `/${locale}`;
-      alternates[locale] = `${baseUrl}${altPrefix}${path}`;
-    }
+  const comparisons = [
+    "/compare/cursor-vs-github-copilot",
+    "/compare/cursor-vs-windsurf",
+    "/compare/github-copilot-vs-claude-code",
+    "/compare/cursor-vs-windsurf-vs-github-copilot",
+    "/compare/devin-vs-claude-code",
+  ];
 
-    for (const locale of locales) {
-      const prefix = locale === "en" ? "" : `/${locale}`;
-      const url = `${baseUrl}${prefix}${path}`;
+  const entries: MetadataRoute.Sitemap = [];
 
-      routeMap.set(url, {
-        url,
-        lastModified: opts?.lastModified ?? nowIso,
-        changeFrequency: opts?.changeFrequency ?? profile.changeFrequency,
-        priority: opts?.priority ?? profile.priority,
-        alternates: { languages: alternates },
-      });
-    }
-  };
-
-  // 1) Auto-discovered static routes for locale pages.
-  for (const path of staticPaths) {
-    addLocalizedPath(path);
-  }
-
-  // 2) Dynamic review pages.
-  for (const agent of agents) {
-    addLocalizedPath(`/reviews/${agent.slug}`, {
-      priority: 0.8,
-      changeFrequency: "monthly",
+  // Static pages
+  for (const page of staticPages) {
+    entries.push({
+      url: `${baseUrl}${page.url}`,
+      lastModified: now,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
     });
   }
 
-  // 3) Dynamic comparison pages: all generated combinations.
-  for (let i = 0; i < agents.length; i++) {
-    for (let j = i + 1; j < agents.length; j++) {
-      addLocalizedPath(`/compare/${agents[i].slug}-vs-${agents[j].slug}`, {
-        priority: 0.7,
-        changeFrequency: "weekly",
-      });
-    }
+  // All 26 agent reviews
+  for (const agent of aiAgentProviders) {
+    entries.push({
+      url: `${baseUrl}/reviews/${agent.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
   }
 
-  // Note: dynamic blog posts from DB will be added here once Convex is wired in.
+  // Featured comparisons only
+  for (const path of comparisons) {
+    entries.push({
+      url: `${baseUrl}${path}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.75,
+    });
+  }
 
-  return Array.from(routeMap.values());
+  return entries;
 }

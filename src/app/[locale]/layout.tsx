@@ -20,80 +20,51 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
-  const titles: Record<string, string> = {
-    en: "ZeroToAIAgents - Best AI Agent Reviews & Comparisons 2026",
-    nl: "ZeroToAIAgents - Beste AI Agent Reviews & Vergelijkingen 2026",
-    de: "ZeroToAIAgents - Beste AI Agent Tests & Vergleiche 2026",
-    es: "ZeroToAIAgents - Mejores Reseñas y Comparaciones de AI Agent 2026",
-    fr: "ZeroToAIAgents - Meilleurs Avis et Comparaisons AI Agent 2026",
-    zh: "ZeroToAIAgents - 2026年最佳AI Agent评测与比较",
-    ja: "ZeroToAIAgents - 2026年ベストAI Agentレビュー＆比較",
-    ko: "ZeroToAIAgents - 2026년 최고의 AI Agent 리뷰 및 비교",
-    th: "ZeroToAIAgents - รีวิวและเปรียบเทียบ AI Agent ที่ดีที่สุด 2026",
-  };
-
-  const descriptions: Record<string, string> = {
-    en: "Find the perfect AI agent for your needs. Expert reviews, honest comparisons, and exclusive deals on top AI agent platforms.",
-    nl: "Vind de perfecte AI agent voor jouw behoeften. Expert reviews, eerlijke vergelijkingen en exclusieve deals.",
-    de: "Finden Sie den perfekten AI Agent für Ihre Bedürfnisse. Expertenbewertungen, ehrliche Vergleiche und exklusive Angebote.",
-    es: "Encuentra el AI agent perfecto para tus necesidades. Reseñas de expertos, comparaciones honestas y ofertas exclusivas.",
-    fr: "Trouvez l'AI agent parfait pour vos besoins. Avis d'experts, comparaisons honnêtes et offres exclusives.",
-    zh: "找到适合您需求的完美AI agent。专家评测、诚实比较和独家优惠。",
-    ja: "あなたのニーズに最適なAI agentを見つけましょう。専門家レビュー、正直な比較、限定特典。",
-    ko: "당신의 필요에 맞는 완벽한 AI agent를 찾아보세요. 전문가 리뷰, 솔직한 비교, 독점 혜택.",
-    th: "ค้นหา AI agent ที่สมบูรณ์แบบสำหรับความต้องการของคุณ รีวิวจากผู้เชี่ยวชาญ เปรียบเทียบอย่างตรงไปตรงมา",
-  };
+  const title = "ZeroToAIAgents - Best AI Coding Agent Reviews & Comparisons 2026";
+  const description =
+    "Find the best AI coding agent for your needs. Expert reviews, honest comparisons, and in-depth guides on Cursor, GitHub Copilot, Claude Code, Windsurf, and more.";
 
   const baseUrl = "https://zerotoaiagents.com";
   const canonicalUrl = locale === "en" ? baseUrl : `${baseUrl}/${locale}`;
 
-  // Generate alternates for all languages
-  const languages: Record<string, string> = { "x-default": baseUrl };
-  routing.locales.forEach((l) => {
-    languages[l] = l === "en" ? baseUrl : `${baseUrl}/${l}`;
-  });
-
   return {
     title: {
-      default: titles[locale] || titles.en,
+      default: title,
       template: "%s | ZeroToAIAgents",
     },
-    description: descriptions[locale] || descriptions.en,
+    description,
     keywords: [
-      "AI agent",
-      "AI agent review",
-      "best AI agent",
-      "AI agent comparison",
-      "ChatGPT",
-      "Claude",
-      "Cursor",
-      "GitHub Copilot",
-      "AI automation",
+      "AI coding agents",
+      "AI coding agent review",
+      "best AI coding agent",
+      "AI coding agent comparison",
+      "Cursor review",
+      "GitHub Copilot review",
+      "Claude Code review",
+      "Windsurf review",
+      "AI pair programming",
       "coding agent",
-      "customer support AI",
-      "no-code AI",
-      "enterprise AI",
-      "AI frameworks",
+      "AI developer tools",
+      "AI code assistant",
     ],
     authors: [{ name: "ZeroToAIAgents" }],
     creator: "ZeroToAIAgents",
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: canonicalUrl,
-      languages: languages,
     },
     openGraph: {
       type: "website",
-      locale: locale,
+      locale: "en_US",
       url: canonicalUrl,
       siteName: "ZeroToAIAgents",
-      title: titles[locale] || titles.en,
-      description: descriptions[locale] || descriptions.en,
+      title,
+      description,
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale] || titles.en,
-      description: descriptions[locale] || descriptions.en,
+      title,
+      description,
     },
     robots: {
       index: true,
