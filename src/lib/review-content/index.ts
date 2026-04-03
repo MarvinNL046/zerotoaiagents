@@ -12,11 +12,13 @@ export interface ReviewContent {
 import { cursorReview } from "./cursor";
 import { claudeCodeReview } from "./claude-code";
 import { githubCopilotReview } from "./github-copilot";
+import { windsurfReview } from "./windsurf";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
   "claude-code": claudeCodeReview,
   "github-copilot": githubCopilotReview,
+  "windsurf": windsurfReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
