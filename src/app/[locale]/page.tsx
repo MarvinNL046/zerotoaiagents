@@ -88,7 +88,7 @@ const contentItems: ContentItem[] = [
   {
     type: "comparison",
     title: "Cursor vs Windsurf vs Copilot",
-    href: "/compare/cursor-vs-windsurf-vs-copilot",
+    href: "/compare/cursor-vs-windsurf-vs-github-copilot",
     description: "Three-way battle of the top AI coding tools",
   },
   {

@@ -20,7 +20,7 @@ type Props = {
 const baseUrl = "https://zerotoaiagents.com";
 export const revalidate = 86400;
 
-// Parse comparison slug (e.g., "cursor-vs-windsurf" or "cursor-vs-windsurf-vs-copilot") into agent slugs
+// Parse comparison slug (e.g., "cursor-vs-windsurf" or "cursor-vs-windsurf-vs-github-copilot") into agent slugs
 function parseComparisonSlug(comparison: string): { slugs: string[] } | null {
   const parts = comparison.split("-vs-");
   if (parts.length < 2 || parts.length > 3 || parts.some((p) => !p)) {
