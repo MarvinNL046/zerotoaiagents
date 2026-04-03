@@ -1,21 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { RatingStars } from "./rating-stars";
-import { AffiliateButton } from "./affiliate-button";
 import { Link } from "@/i18n/navigation";
 import {
   Cpu,
   Zap,
-  Check,
   Sparkles,
+  Check,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { AiAgentProvider } from "@/lib/ai-agent-data";
-import { cn } from "@/lib/utils";
 
 interface AgentCardProps {
   agent: AiAgentProvider;
@@ -25,7 +21,6 @@ interface AgentCardProps {
 
 export function AgentCard({ agent, rank }: AgentCardProps) {
   const t = useTranslations("agentCard");
-  const isTopRanked = rank === 1;
 
   // Calculate price display
   const priceDisplay = agent.hasFreeTier && agent.monthlyPrice === 0
@@ -33,51 +28,50 @@ export function AgentCard({ agent, rank }: AgentCardProps) {
     : `$${agent.monthlyPrice}`;
 
   return (
-    <Card className={cn(
-      "relative overflow-hidden card-hover",
-      isTopRanked && "gradient-border"
-    )}>
-      {/* Category Badge over card */}
-      <div className="relative h-40 w-full overflow-hidden bg-muted">
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/20">
-          <Cpu className="h-16 w-16 text-primary/30" />
-        </div>
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+    <div className="group border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-200 bg-white dark:bg-slate-800">
+      {/* Image section */}
+      <div className="relative h-44 w-full overflow-hidden">
+        <img
+          src={`/screenshots/${agent.slug}-card.webp`}
+          alt={agent.name}
+          className="w-full h-full object-cover object-top"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
 
-        {/* Badges - positioned over image */}
-        <div className="absolute top-3 left-3 flex gap-2 z-10">
+        {/* Badges on top */}
+        <div className="absolute top-3 left-3 flex gap-2">
           {rank && (
-            <Badge variant="secondary" className="font-bold shadow-md">
+            <span className="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">
               #{rank}
-            </Badge>
+            </span>
           )}
           {agent.editorChoice && (
-            <Badge className="bg-yellow-500 text-yellow-950 shadow-md">
-              {t("editorChoice")}
-            </Badge>
+            <span className="bg-yellow-500 text-yellow-950 text-xs font-bold px-2 py-1 rounded-full">
+              Editor&apos;s Choice
+            </span>
           )}
         </div>
 
-        {/* Category badge in top right */}
-        <div className="absolute top-3 right-3 z-10">
-          <Badge variant="outline" className="bg-background/90 shadow-md">
-            {agent.category}
-          </Badge>
+        <div className="absolute top-3 right-3">
+          <span className="bg-white/90 dark:bg-slate-800/90 text-xs px-2 py-1 rounded-full">
+            {agent.category.replace(/-/g, " ")}
+          </span>
         </div>
       </div>
 
-      <CardHeader className="pt-4 pb-4">
+      {/* Card header */}
+      <CardHeader className="pt-4 pb-2">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-2xl font-bold">{agent.name}</h3>
+            <h3 className="text-xl font-bold group-hover:text-orange-500 transition-colors">
+              {agent.name}
+            </h3>
             <RatingStars rating={agent.overallRating} size="md" />
           </div>
           <div className="text-right">
             <div className="text-sm text-muted-foreground">{t("from")}</div>
-            <div className="text-3xl font-bold text-primary">
-              {priceDisplay}
-            </div>
+            <div className="text-2xl font-bold text-orange-500">{priceDisplay}</div>
             {agent.monthlyPrice > 0 && (
               <div className="text-xs text-muted-foreground">{t("perMonth")}</div>
             )}
@@ -85,7 +79,7 @@ export function AgentCard({ agent, rank }: AgentCardProps) {
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4 pb-4">
         {/* Description */}
         <p className="text-muted-foreground text-sm">{agent.shortDescription}</p>
 
@@ -119,11 +113,13 @@ export function AgentCard({ agent, rank }: AgentCardProps) {
             <div className="flex items-center gap-2">
               <div className="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-green-500 rounded-full"
+                  className="h-full bg-orange-500 rounded-full"
                   style={{ width: `${(agent.easeOfUse / 5) * 100}%` }}
                 />
               </div>
-              <span className="text-xs font-medium w-8">{Math.round((agent.easeOfUse / 5) * 100)}%</span>
+              <span className="text-xs font-medium w-8">
+                {Math.round((agent.easeOfUse / 5) * 100)}%
+              </span>
             </div>
           </div>
           <div className="flex items-center justify-between text-sm">
@@ -133,11 +129,13 @@ export function AgentCard({ agent, rank }: AgentCardProps) {
             <div className="flex items-center gap-2">
               <div className="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-blue-500 rounded-full"
+                  className="h-full bg-orange-500 rounded-full"
                   style={{ width: `${(agent.performance / 5) * 100}%` }}
                 />
               </div>
-              <span className="text-xs font-medium w-8">{Math.round((agent.performance / 5) * 100)}%</span>
+              <span className="text-xs font-medium w-8">
+                {Math.round((agent.performance / 5) * 100)}%
+              </span>
             </div>
           </div>
         </div>
@@ -162,19 +160,15 @@ export function AgentCard({ agent, rank }: AgentCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="flex gap-2">
-        <AffiliateButton
-          agentId={agent.id}
-          agentName={agent.name}
-          affiliateUrl={agent.affiliateUrl}
-          className="flex-1"
+      {/* Footer */}
+      <div className="px-5 pb-5">
+        <Link
+          href={`/reviews/${agent.slug}`}
+          className="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 rounded-full transition-colors"
         >
-          {t("tryAgent", { name: agent.name })}
-        </AffiliateButton>
-        <Button variant="outline" asChild>
-          <Link href={`/reviews/${agent.slug}`}>{t("review")}</Link>
-        </Button>
-      </CardFooter>
-    </Card>
+          Read Review →
+        </Link>
+      </div>
+    </div>
   );
 }
