@@ -1,49 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sql } from "@/lib/neon";
 
-export async function POST(request: NextRequest) {
+const CONVEX_SITE_URL = process.env.CONVEX_SITE_URL || "";
+
+export async function POST(req: NextRequest) {
+  const { email, site, locale } = await req.json();
+
+  if (!email || typeof email !== "string") {
+    return NextResponse.json({ error: "Email is required" }, { status: 400 });
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+  }
+
+  const normalizedEmail = email.toLowerCase().trim();
+
   try {
-    const body = await request.json();
-    const { email, language = "en", source = "homepage" } = body;
-
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      return NextResponse.json(
-        { success: false, error: "Invalid email address" },
-        { status: 400 }
-      );
+    if (CONVEX_SITE_URL) {
+      await fetch(`${CONVEX_SITE_URL}/subscribe`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: normalizedEmail,
+          site: site || "zerotoaiagents",
+          locale: locale || "en",
+        }),
+      });
     }
-
-    // Check if already subscribed
-    const existing = await sql`
-      SELECT id FROM "Subscriber" WHERE email = ${email.toLowerCase()}
-    `;
-
-    if (existing.length > 0) {
-      // Already subscribed, return success anyway (don't reveal subscription status)
-      return NextResponse.json({ success: true });
-    }
-
-    // Create subscriber
-    await sql`
-      INSERT INTO "Subscriber" (id, email, language, source, confirmed, created_at)
-      VALUES (gen_random_uuid()::text, ${email.toLowerCase()}, ${language}, ${source}, false, NOW())
-    `;
-
-    console.log("New subscriber:", {
-      email: email.toLowerCase(),
-      language,
-      source,
-      timestamp: new Date().toISOString(),
-    });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Failed to subscribe:", error);
-    return NextResponse.json(
-      { success: false, error: "Failed to subscribe" },
-      { status: 500 }
-    );
+    console.error("Subscribe error:", error);
+    return NextResponse.json({ error: "Failed to subscribe" }, { status: 500 });
   }
 }

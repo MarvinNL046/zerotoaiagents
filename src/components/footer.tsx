@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Bot } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { NewsletterFooter } from "@/components/newsletter/newsletter-footer";
+import { EmailCapture } from "@/components/email-capture";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -156,8 +156,8 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="text-slate-400">
-            <NewsletterFooter />
+          <div>
+            <EmailCapture variant="footer" />
           </div>
         </div>
 

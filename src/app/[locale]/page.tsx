@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { Code, CheckCircle, Shield } from "lucide-react";
-import { NewsletterFooter } from "@/components/newsletter/newsletter-footer";
+import { EmailCapture } from "@/components/email-capture";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -305,8 +305,8 @@ export default async function HomePage({ params }: Props) {
 
       {/* Newsletter */}
       <section className="py-16">
-        <div className="container px-4 max-w-md mx-auto">
-          <NewsletterFooter />
+        <div className="container px-4 max-w-3xl mx-auto">
+          <EmailCapture variant="inline" />
         </div>
       </section>
     </div>
