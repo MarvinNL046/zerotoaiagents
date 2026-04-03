@@ -1,3 +1,41 @@
+// AiAgentData is the normalized type used throughout the frontend.
+// It mirrors AiAgentProvider but with nullable fields to stay compatible
+// with any future Convex-backed data source.
+export type AiAgentData = {
+  id: string;
+  name: string;
+  slug: string;
+  logo: string | null;
+  screenshot: string | null;
+  thumbnailImage: string | null;
+  cardImage: string | null;
+  ogImage: string | null;
+  website: string;
+  affiliateUrl: string;
+  monthlyPrice: number;
+  annualPrice: number;
+  hasFreeTier: boolean;
+  freeTierLimits: string | null;
+  category: string;
+  subcategory: string | null;
+  modelsSupported: string[];
+  integrations: string[];
+  maxUsers: string;
+  apiAccess: boolean;
+  overallRating: number;
+  easeOfUse: number;
+  performance: number;
+  valueForMoney: number;
+  shortDescription: string | null;
+  pros: string[];
+  cons: string[];
+  features: string[];
+  bestFor: string | null;
+  editorChoice: boolean;
+  featured: boolean;
+  sortOrder: number;
+};
+
 export type AgentCategory =
   | "coding-agents"
   | "no-code-builders"

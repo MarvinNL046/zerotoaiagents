@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Shield } from "lucide-react";
-import type { AiAgentData } from "@/lib/db/agent-service";
+import type { AiAgentData } from "@/lib/agent-data-layer";
 
 interface ComparisonHeroProps {
   agent1: AiAgentData;

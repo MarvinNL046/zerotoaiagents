@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, X, Trophy } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
-import type { AiAgentData } from "@/lib/db/agent-service";
+import type { AiAgentData } from "@/lib/agent-data-layer";
 
 type Props = {
   params: Promise<{ locale: string; comparison: string }>;

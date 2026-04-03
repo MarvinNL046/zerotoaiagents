@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { headers } from "next/headers";
-import { sql } from "@/lib/neon";
+
+// Reviews API — database backend (Convex) not yet connected.
+// POST: accepts submissions but does not persist them yet.
+// GET: returns empty list until Convex is wired in.
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,12 +15,6 @@ export async function POST(request: NextRequest) {
       content,
       authorName,
       authorEmail,
-      usageType,
-      usagePeriod,
-      userPros = [],
-      userCons = [],
-      locale = "en",
-      newsletterConsent = false,
     } = body;
 
     // Validation
@@ -43,54 +39,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get request metadata
-    const headersList = await headers();
-    const ipAddress = headersList.get("x-forwarded-for") ||
-                      headersList.get("x-real-ip") ||
-                      "unknown";
-    const userAgent = headersList.get("user-agent") || "unknown";
-
-    // Prepare data
-    const cleanPros = userPros.slice(0, 5).map((p: string) => p.slice(0, 100));
-    const cleanCons = userCons.slice(0, 5).map((c: string) => c.slice(0, 100));
-
-    // Create review in database using Neon
-    const result = await sql`
-      INSERT INTO "UserReview" (
-        id, vpn_slug, author_name, author_email, rating, title, content,
-        usage_type, usage_period, user_pros, user_cons, locale,
-        ip_address, user_agent, newsletter_consent, consent_date,
-        verified, approved, helpful_count, unhelpful_count,
-        created_at, updated_at
-      ) VALUES (
-        gen_random_uuid()::text,
-        ${agentSlug},
-        ${authorName.slice(0, 50)},
-        ${authorEmail.toLowerCase()},
-        ${rating},
-        ${title.slice(0, 100)},
-        ${content.slice(0, 2000)},
-        ${usageType || null},
-        ${usagePeriod || null},
-        ${cleanPros},
-        ${cleanCons},
-        ${locale},
-        ${ipAddress},
-        ${userAgent},
-        ${newsletterConsent},
-        ${newsletterConsent ? new Date() : null},
-        false,
-        false,
-        0,
-        0,
-        NOW(),
-        NOW()
-      )
-      RETURNING id
-    `;
-
-    console.log("New review submitted:", {
-      id: result[0]?.id,
+    // TODO: persist to Convex once the mutation is wired in
+    console.log("Review submission received (not yet persisted):", {
       agentSlug,
       rating,
       authorName,
@@ -99,7 +49,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: "Review submitted successfully. It will be visible after moderation.",
-      reviewId: result[0]?.id,
     });
   } catch (error) {
     console.error("Error submitting review:", error);
@@ -111,61 +60,22 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const agentSlug = searchParams.get("agentSlug");
-    const page = parseInt(searchParams.get("page") || "1", 10);
-    const limit = parseInt(searchParams.get("limit") || "10", 10);
+  const searchParams = request.nextUrl.searchParams;
+  const agentSlug = searchParams.get("agentSlug");
 
-    // Public access - only return approved reviews
-    if (!agentSlug) {
-      return NextResponse.json(
-        { error: "agentSlug parameter is required" },
-        { status: 400 }
-      );
-    }
-
-    // Validate pagination parameters
-    if (page < 1 || limit < 1 || limit > 100) {
-      return NextResponse.json(
-        { error: "Invalid pagination parameters" },
-        { status: 400 }
-      );
-    }
-
-    const offset = (page - 1) * limit;
-
-    // Fetch approved reviews with pagination using Neon
-    const reviews = await sql`
-      SELECT id, vpn_slug, author_name, rating, title, content,
-             usage_type, usage_period, user_pros, user_cons,
-             verified, featured, helpful_count, unhelpful_count,
-             locale, created_at
-      FROM "UserReview"
-      WHERE vpn_slug = ${agentSlug} AND approved = true
-      ORDER BY created_at DESC
-      LIMIT ${limit} OFFSET ${offset}
-    `;
-
-    const countResult = await sql`
-      SELECT COUNT(*) as total FROM "UserReview"
-      WHERE vpn_slug = ${agentSlug} AND approved = true
-    `;
-
-    const total = Number(countResult[0]?.total || 0);
-
-    return NextResponse.json({
-      reviews,
-      total,
-      page,
-      limit,
-      totalPages: Math.ceil(total / limit),
-    });
-  } catch (error) {
-    console.error("Error fetching reviews:", error);
+  if (!agentSlug) {
     return NextResponse.json(
-      { error: "Failed to fetch reviews" },
-      { status: 500 }
+      { error: "agentSlug parameter is required" },
+      { status: 400 }
     );
   }
+
+  // TODO: fetch from Convex once wired in
+  return NextResponse.json({
+    reviews: [],
+    total: 0,
+    page: 1,
+    limit: 10,
+    totalPages: 0,
+  });
 }

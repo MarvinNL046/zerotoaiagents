@@ -1,7 +1,6 @@
 ﻿import { MetadataRoute } from "next";
 import { getAllAgents } from "@/lib/agent-data-layer";
 import { routing } from "@/i18n/routing";
-import { getAllPublishedSlugs } from "@/lib/pipeline/blog-service";
 import discoveredStaticRoutes from "@/lib/sitemap-static-routes.generated.json";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
@@ -42,7 +41,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const agents = await getAllAgents();
   const routeMap = new Map<string, SitemapEntry>();
   const staticPaths = discoveredStaticRoutes.paths as string[];
-  const staticPathSet = new Set(staticPaths);
 
   const addLocalizedPath = (
     path: string,
@@ -95,31 +93,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // 4) Dynamic blog posts from DB (skip static blog files already discovered).
-  try {
-    const dynamicSlugs = await getAllPublishedSlugs();
-    const slugLastModifiedMap = new Map<string, Date>();
-
-    for (const entry of dynamicSlugs) {
-      const existing = slugLastModifiedMap.get(entry.slug);
-      if (!existing || entry.updatedAt > existing) {
-        slugLastModifiedMap.set(entry.slug, entry.updatedAt);
-      }
-    }
-
-    for (const [slug, updatedAt] of slugLastModifiedMap) {
-      const path = `/blog/${slug}`;
-      if (staticPathSet.has(path)) continue;
-
-      addLocalizedPath(path, {
-        priority: 0.7,
-        changeFrequency: "weekly",
-        lastModified: updatedAt.toISOString(),
-      });
-    }
-  } catch {
-    // DB can be unavailable during build.
-  }
+  // Note: dynamic blog posts from DB will be added here once Convex is wired in.
 
   return Array.from(routeMap.values());
 }

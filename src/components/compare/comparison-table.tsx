@@ -15,7 +15,7 @@ import {
   Tag,
   Plug,
 } from "lucide-react";
-import type { AiAgentData } from "@/lib/db/agent-service";
+import type { AiAgentData } from "@/lib/agent-data-layer";
 
 interface ComparisonTableProps {
   agent1: AiAgentData;

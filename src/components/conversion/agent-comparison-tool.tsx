@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { AffiliateButton } from "@/components/agents/affiliate-button";
 import { RatingStars } from "@/components/agents/rating-stars";
 import { useTranslations } from "next-intl";
-import type { AiAgentData } from "@/lib/db/agent-service";
+import type { AiAgentData } from "@/lib/agent-data-layer";
 
 interface AgentComparisonToolProps {
   agents: AiAgentData[];

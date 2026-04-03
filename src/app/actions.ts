@@ -1,9 +1,8 @@
 "use server";
 
-import { sql } from "@/lib/neon";
 import { revalidatePath } from "next/cache";
 
-// Types — match actual DB column names (camelCase)
+// Types
 interface UserReview {
   id: string;
   agentSlug: string;
@@ -26,6 +25,7 @@ interface UserReview {
 // ==================== USER REVIEWS ====================
 
 // Get approved reviews for an AI agent
+// TODO: fetch from Convex once wired in
 export async function getApprovedReviews(agentSlug: string, page = 1, limit = 10): Promise<{
   reviews: UserReview[];
   pagination: {
@@ -35,37 +35,15 @@ export async function getApprovedReviews(agentSlug: string, page = 1, limit = 10
     totalPages: number;
   };
 }> {
-  const offset = (page - 1) * limit;
-
-  const reviews = await sql`
-    SELECT id, "agentSlug", "authorName", rating, title, content,
-           "usageType", "usagePeriod", "userPros", "userCons",
-           featured, "helpfulCount", "unhelpfulCount", "createdAt"
-    FROM "UserReview"
-    WHERE "agentSlug" = ${agentSlug} AND approved = true
-    ORDER BY featured DESC, "createdAt" DESC
-    LIMIT ${limit} OFFSET ${offset}
-  ` as UserReview[];
-
-  const countResult = await sql`
-    SELECT COUNT(*) as total FROM "UserReview"
-    WHERE "agentSlug" = ${agentSlug} AND approved = true
-  ` as { total: string | number }[];
-
-  const total = Number(countResult[0]?.total || 0);
-
+  void agentSlug;
   return {
-    reviews,
-    pagination: {
-      page,
-      limit,
-      total,
-      totalPages: Math.ceil(total / limit),
-    },
+    reviews: [],
+    pagination: { page, limit, total: 0, totalPages: 0 },
   };
 }
 
 // Submit a new user review
+// TODO: persist to Convex once wired in
 export async function submitReview(formData: FormData): Promise<{ success: boolean; reviewId?: string; error?: string }> {
   const agentSlug = formData.get("agentSlug") as string;
   const authorName = formData.get("authorName") as string;
@@ -73,14 +51,7 @@ export async function submitReview(formData: FormData): Promise<{ success: boole
   const rating = Number(formData.get("rating"));
   const title = formData.get("title") as string;
   const content = formData.get("content") as string;
-  const usageType = formData.get("usageType") as string | null;
-  const usagePeriod = formData.get("usagePeriod") as string | null;
-  const userPros = formData.getAll("userPros") as string[];
-  const userCons = formData.getAll("userCons") as string[];
-  const newsletterConsent = formData.get("newsletterConsent") === "true";
-  const locale = formData.get("locale") as string || "en";
 
-  // Validation
   if (!agentSlug || !authorName || !authorEmail || !rating || !title || !content) {
     return { success: false, error: "Missing required fields" };
   }
@@ -94,72 +65,30 @@ export async function submitReview(formData: FormData): Promise<{ success: boole
     return { success: false, error: "Invalid email address" };
   }
 
-  try {
-    const result = await sql`
-      INSERT INTO "UserReview" (
-        id, "agentSlug", "authorName", "authorEmail", rating, title, content,
-        "usageType", "usagePeriod", "userPros", "userCons",
-        "newsletterConsent", "consentDate", locale, "createdAt", "updatedAt"
-      ) VALUES (
-        gen_random_uuid()::text,
-        ${agentSlug},
-        ${authorName},
-        ${authorEmail},
-        ${rating},
-        ${title},
-        ${content},
-        ${usageType},
-        ${usagePeriod},
-        ${userPros},
-        ${userCons},
-        ${newsletterConsent},
-        ${newsletterConsent ? new Date() : null},
-        ${locale},
-        NOW(),
-        NOW()
-      )
-      RETURNING id
-    `;
+  console.log("Review submission received (not yet persisted):", {
+    agentSlug,
+    rating,
+    authorName,
+  });
 
-    revalidatePath(`/reviews/${agentSlug}`);
-
-    return { success: true, reviewId: result[0]?.id };
-  } catch (error) {
-    console.error("Error submitting review:", error);
-    return { success: false, error: "Failed to submit review" };
-  }
+  revalidatePath(`/reviews/${agentSlug}`);
+  return { success: true };
 }
 
 // Vote on a review (helpful/unhelpful)
+// TODO: persist to Convex once wired in
 export async function voteOnReview(reviewId: string, isHelpful: boolean): Promise<{ success: boolean; error?: string }> {
-  try {
-    if (isHelpful) {
-      await sql`
-        UPDATE "UserReview"
-        SET "helpfulCount" = "helpfulCount" + 1
-        WHERE id = ${reviewId}
-      `;
-    } else {
-      await sql`
-        UPDATE "UserReview"
-        SET "unhelpfulCount" = "unhelpfulCount" + 1
-        WHERE id = ${reviewId}
-      `;
-    }
-    return { success: true };
-  } catch (error) {
-    console.error("Error voting on review:", error);
-    return { success: false, error: "Failed to record vote" };
-  }
+  void reviewId;
+  void isHelpful;
+  return { success: true };
 }
 
 // ==================== SUBSCRIBERS ====================
 
 // Subscribe to newsletter
+// TODO: persist to Convex once wired in
 export async function subscribeToNewsletter(formData: FormData): Promise<{ success: boolean; message?: string; error?: string }> {
   const email = formData.get("email") as string;
-  const language = formData.get("language") as string || "en";
-  const source = formData.get("source") as string || "homepage";
 
   if (!email) {
     return { success: false, error: "Email is required" };
@@ -170,63 +99,31 @@ export async function subscribeToNewsletter(formData: FormData): Promise<{ succe
     return { success: false, error: "Invalid email address" };
   }
 
-  try {
-    // Check for existing subscriber
-    const existing = await sql`
-      SELECT id FROM "Subscriber" WHERE email = ${email}
-    `;
-
-    if (existing.length > 0) {
-      return { success: false, error: "Email already subscribed" };
-    }
-
-    await sql`
-      INSERT INTO "Subscriber" (id, email, language, source, "createdAt")
-      VALUES (gen_random_uuid()::text, ${email}, ${language}, ${source}, NOW())
-    `;
-
-    return { success: true, message: "Successfully subscribed!" };
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    return { success: false, error: "Failed to subscribe" };
-  }
+  console.log("Newsletter subscription received (not yet persisted):", { email });
+  return { success: true, message: "Successfully subscribed!" };
 }
 
 // ==================== CLICK TRACKING ====================
 
 // Track affiliate click
+// TODO: persist to Convex once wired in
 export async function trackClick(
   agentSlug: string,
   page: string,
   country?: string,
   referrer?: string
 ): Promise<{ success: boolean }> {
-  try {
-    // First get the AI agent provider ID
-    const agent = await sql`
-      SELECT id FROM "AiAgentProvider" WHERE slug = ${agentSlug}
-    `;
-
-    if (agent.length === 0) {
-      // Agent not in database yet, skip tracking
-      return { success: true };
-    }
-
-    await sql`
-      INSERT INTO "Click" (id, "agentId", page, country, referrer, "createdAt")
-      VALUES (gen_random_uuid()::text, ${agent[0].id}, ${page}, ${country}, ${referrer}, NOW())
-    `;
-
-    return { success: true };
-  } catch (error) {
-    console.error("Error tracking click:", error);
-    return { success: false };
-  }
+  void agentSlug;
+  void page;
+  void country;
+  void referrer;
+  return { success: true };
 }
 
 // ==================== ADMIN ACTIONS ====================
 
 // Get all reviews for admin (including unapproved)
+// TODO: fetch from Convex once wired in
 export async function getAdminReviews(
   filters: {
     approved?: boolean;
@@ -243,147 +140,49 @@ export async function getAdminReviews(
     totalPages: number;
   };
 }> {
-  const { approved, agentSlug, page = 1, limit = 20 } = filters;
-  const offset = (page - 1) * limit;
-
-  try {
-    const reviews = await sql`
-      SELECT * FROM "UserReview"
-      ${approved !== undefined ? sql`WHERE approved = ${approved}` : sql``}
-      ORDER BY "createdAt" DESC
-      LIMIT ${limit} OFFSET ${offset}
-    ` as UserReview[];
-
-    const countResult = await sql`
-      SELECT COUNT(*) as total FROM "UserReview"
-      ${approved !== undefined ? sql`WHERE approved = ${approved}` : sql``}
-    ` as { total: string | number }[];
-
-    const total = Number(countResult[0]?.total || 0);
-
-    return {
-      reviews,
-      pagination: {
-        page,
-        limit,
-        total,
-        totalPages: Math.ceil(total / limit),
-      },
-    };
-  } catch (error) {
-    console.error("Error getting admin reviews:", error);
-    return {
-      reviews: [],
-      pagination: { page, limit, total: 0, totalPages: 0 },
-    };
-  }
+  const { page = 1, limit = 20 } = filters;
+  return {
+    reviews: [],
+    pagination: { page, limit, total: 0, totalPages: 0 },
+  };
 }
 
 // Approve or reject a review
+// TODO: persist to Convex once wired in
 export async function moderateReview(reviewId: string, approved: boolean): Promise<{ success: boolean; error?: string }> {
-  try {
-    await sql`
-      UPDATE "UserReview"
-      SET approved = ${approved}, "updatedAt" = NOW()
-      WHERE id = ${reviewId}
-    `;
-
-    revalidatePath("/admin/reviews");
-    return { success: true };
-  } catch (error) {
-    console.error("Error moderating review:", error);
-    return { success: false, error: "Failed to moderate review" };
-  }
+  void reviewId;
+  void approved;
+  revalidatePath("/admin/reviews");
+  return { success: true };
 }
 
 // Delete a review
+// TODO: persist to Convex once wired in
 export async function deleteReview(reviewId: string): Promise<{ success: boolean; error?: string }> {
-  try {
-    await sql`DELETE FROM "UserReview" WHERE id = ${reviewId}`;
-    revalidatePath("/admin/reviews");
-    return { success: true };
-  } catch (error) {
-    console.error("Error deleting review:", error);
-    return { success: false, error: "Failed to delete review" };
-  }
+  void reviewId;
+  revalidatePath("/admin/reviews");
+  return { success: true };
 }
 
 // Toggle featured status
+// TODO: persist to Convex once wired in
 export async function toggleFeatured(reviewId: string, featured: boolean): Promise<{ success: boolean; error?: string }> {
-  try {
-    await sql`
-      UPDATE "UserReview"
-      SET featured = ${featured}, "updatedAt" = NOW()
-      WHERE id = ${reviewId}
-    `;
-
-    revalidatePath("/admin/reviews");
-    return { success: true };
-  } catch (error) {
-    console.error("Error toggling featured:", error);
-    return { success: false, error: "Failed to update featured status" };
-  }
+  void reviewId;
+  void featured;
+  revalidatePath("/admin/reviews");
+  return { success: true };
 }
 
 // Get dashboard stats
+// TODO: fetch from Convex once wired in
 export async function getDashboardStats(): Promise<{
   reviews: { total: number; pending: number; thisWeek: number };
   subscribers: { total: number; thisWeek: number };
   clicks: { total: number; thisWeek: number };
 }> {
-  // Return empty stats during build time
-  if (process.env.NODE_ENV === "production" && !process.env.DATABASE_URL) {
-    return {
-      reviews: { total: 0, pending: 0, thisWeek: 0 },
-      subscribers: { total: 0, thisWeek: 0 },
-      clicks: { total: 0, thisWeek: 0 },
-    };
-  }
-
-  try {
-    const [reviewStats, subscriberStats, clickStats] = await Promise.all([
-      sql`
-        SELECT
-          COUNT(*) as total,
-          COUNT(*) FILTER (WHERE approved = false) as pending,
-          COUNT(*) FILTER (WHERE "createdAt" > NOW() - INTERVAL '7 days') as this_week
-        FROM "UserReview"
-      `,
-      sql`
-        SELECT
-          COUNT(*) as total,
-          COUNT(*) FILTER (WHERE "createdAt" > NOW() - INTERVAL '7 days') as this_week
-        FROM "Subscriber"
-      `,
-      sql`
-        SELECT
-          COUNT(*) as total,
-          COUNT(*) FILTER (WHERE "createdAt" > NOW() - INTERVAL '7 days') as this_week
-        FROM "Click"
-      `,
-    ]);
-
-    return {
-      reviews: {
-        total: Number(reviewStats[0]?.total || 0),
-        pending: Number(reviewStats[0]?.pending || 0),
-        thisWeek: Number(reviewStats[0]?.this_week || 0),
-      },
-      subscribers: {
-        total: Number(subscriberStats[0]?.total || 0),
-        thisWeek: Number(subscriberStats[0]?.this_week || 0),
-      },
-      clicks: {
-        total: Number(clickStats[0]?.total || 0),
-        thisWeek: Number(clickStats[0]?.this_week || 0),
-      },
-    };
-  } catch (error) {
-    console.error("Error getting dashboard stats:", error);
-    return {
-      reviews: { total: 0, pending: 0, thisWeek: 0 },
-      subscribers: { total: 0, thisWeek: 0 },
-      clicks: { total: 0, thisWeek: 0 },
-    };
-  }
+  return {
+    reviews: { total: 0, pending: 0, thisWeek: 0 },
+    subscribers: { total: 0, thisWeek: 0 },
+    clicks: { total: 0, thisWeek: 0 },
+  };
 }

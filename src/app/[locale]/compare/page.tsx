@@ -11,7 +11,7 @@ import { PopularComparisons } from "@/components/compare/popular-comparisons";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
-import type { AiAgentData } from "@/lib/db/agent-service";
+import type { AiAgentData } from "@/lib/agent-data-layer";
 import {
   Check,
   X,

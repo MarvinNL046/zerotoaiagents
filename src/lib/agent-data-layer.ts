@@ -1,21 +1,11 @@
-// Hybrid data layer that uses database when available, falls back to static data
-import { aiAgentProviders, type AiAgentProvider as StaticAiAgentProvider } from "./ai-agent-data";
-import {
-  getAllAgentsFromDb,
-  getFeaturedAgentsFromDb,
-  getAgentBySlugFromDb,
-  type AiAgentData,
-} from "./db/agent-service";
+// Static data layer — uses ai-agent-data.ts directly.
+// Database (Convex) integration will be added separately.
+import { aiAgentProviders, type AiAgentProvider, type AiAgentData } from "./ai-agent-data";
 
-// Check if we're in a build phase - use static data during build for faster builds
-const isBuildPhase = process.env.NEXT_PHASE === "phase-production-build" ||
-  process.env.NODE_ENV === "production" && typeof window === "undefined" && !process.env.VERCEL;
+export type { AiAgentData };
 
-// Re-export the AiAgentProvider type for consistency
-export type AiAgentProvider = StaticAiAgentProvider | AiAgentData;
-
-// Helper to convert static AI Agent data to match AiAgentData interface
-function staticToAiAgentData(agent: StaticAiAgentProvider): AiAgentData {
+// Convert static AiAgentProvider to the normalized AiAgentData interface
+function staticToAiAgentData(agent: AiAgentProvider): AiAgentData {
   return {
     id: agent.id,
     name: agent.name,
@@ -52,70 +42,23 @@ function staticToAiAgentData(agent: StaticAiAgentProvider): AiAgentData {
   };
 }
 
-// Get all AI Agents - tries database first, falls back to static data
+// Get all AI Agents sorted by sortOrder
 export async function getAllAgents(): Promise<AiAgentData[]> {
-  // During build, use static data directly to avoid slow database timeouts
-  if (isBuildPhase) {
-    return aiAgentProviders.map(staticToAiAgentData).sort((a, b) => a.sortOrder - b.sortOrder);
-  }
-
-  try {
-    const dbAgents = await getAllAgentsFromDb();
-    if (dbAgents.length > 0) {
-      return dbAgents;
-    }
-  } catch (error) {
-    console.warn("Database unavailable, using static AI Agent data:", error);
-  }
-
-  // Fallback to static data
-  return aiAgentProviders.map(staticToAiAgentData).sort((a, b) => a.sortOrder - b.sortOrder);
+  return aiAgentProviders
+    .map(staticToAiAgentData)
+    .sort((a, b) => a.sortOrder - b.sortOrder);
 }
 
-// Get featured AI Agents - tries database first, falls back to static data
+// Get featured AI Agents sorted by sortOrder
 export async function getFeaturedAgents(): Promise<AiAgentData[]> {
-  // During build, use static data directly to avoid slow database timeouts
-  if (isBuildPhase) {
-    return aiAgentProviders
-      .filter((agent) => agent.featured)
-      .map(staticToAiAgentData)
-      .sort((a, b) => a.sortOrder - b.sortOrder);
-  }
-
-  try {
-    const dbAgents = await getFeaturedAgentsFromDb();
-    if (dbAgents.length > 0) {
-      return dbAgents;
-    }
-  } catch (error) {
-    console.warn("Database unavailable, using static AI Agent data:", error);
-  }
-
-  // Fallback to static data
   return aiAgentProviders
     .filter((agent) => agent.featured)
     .map(staticToAiAgentData)
     .sort((a, b) => a.sortOrder - b.sortOrder);
 }
 
-// Get AI Agent by slug - tries database first, falls back to static data
+// Get AI Agent by slug
 export async function getAgentBySlug(slug: string): Promise<AiAgentData | null> {
-  // During build, use static data directly to avoid slow database timeouts
-  if (isBuildPhase) {
-    const staticAgent = aiAgentProviders.find((agent) => agent.slug === slug);
-    return staticAgent ? staticToAiAgentData(staticAgent) : null;
-  }
-
-  try {
-    const dbAgent = await getAgentBySlugFromDb(slug);
-    if (dbAgent) {
-      return dbAgent;
-    }
-  } catch (error) {
-    console.warn("Database unavailable, using static AI Agent data:", error);
-  }
-
-  // Fallback to static data
-  const staticAgent = aiAgentProviders.find((agent) => agent.slug === slug);
-  return staticAgent ? staticToAiAgentData(staticAgent) : null;
+  const agent = aiAgentProviders.find((a) => a.slug === slug);
+  return agent ? staticToAiAgentData(agent) : null;
 }
