@@ -29,6 +29,12 @@ import { crewaiReview } from "./crewai";
 import { autogenReview } from "./autogen";
 import { langgraphReview } from "./langgraph";
 import { agentgptReview } from "./agentgpt";
+import { salesforceAgentforceReview } from "./salesforce-agentforce";
+import { microsoftCopilotStudioReview } from "./microsoft-copilot-studio";
+import { googleVertexAiAgentBuilderReview } from "./google-vertex-ai-agent-builder";
+import { intercomFinReview } from "./intercom-fin";
+import { zendeskAiReview } from "./zendesk-ai";
+import { adaAiReview } from "./ada-ai";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
@@ -51,6 +57,12 @@ const reviews: Record<string, ReviewContent> = {
   "autogen": autogenReview,
   "langgraph": langgraphReview,
   "agentgpt": agentgptReview,
+  "salesforce-agentforce": salesforceAgentforceReview,
+  "microsoft-copilot-studio": microsoftCopilotStudioReview,
+  "google-vertex-ai-agent-builder": googleVertexAiAgentBuilderReview,
+  "intercom-fin": intercomFinReview,
+  "zendesk-ai": zendeskAiReview,
+  "ada-ai": adaAiReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
