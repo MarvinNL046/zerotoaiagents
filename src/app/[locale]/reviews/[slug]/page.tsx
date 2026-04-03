@@ -22,6 +22,7 @@ import { BreadcrumbSchema } from "@/components/structured-data";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { getReviewContent } from "@/lib/review-content";
+import { AuthorBio } from "@/components/author-bio";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -551,6 +552,9 @@ export default async function ReviewPage({ params }: Props) {
                     ))}
                   </ul>
                 </section>
+
+                {/* Author Bio */}
+                <AuthorBio />
               </>
             ) : (
               <>
@@ -910,6 +914,9 @@ export default async function ReviewPage({ params }: Props) {
                 </li>
               </ul>
             </section>
+
+            {/* Author Bio */}
+            <AuthorBio />
             </>
             )}
 

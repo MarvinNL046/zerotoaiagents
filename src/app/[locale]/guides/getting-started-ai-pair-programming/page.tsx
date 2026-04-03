@@ -9,6 +9,7 @@ import { FAQSchema } from "@/components/seo/faq-schema";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { TableOfContents } from "@/components/seo/table-of-contents";
 import { routing } from "@/i18n/routing";
+import { AuthorBio } from "@/components/author-bio";
 import {
   Users,
   Terminal,
@@ -1319,6 +1320,15 @@ export function ThemeToggle() {
                   </Link>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Author Bio */}
+        <section className="py-8">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <AuthorBio />
             </div>
           </div>
         </section>

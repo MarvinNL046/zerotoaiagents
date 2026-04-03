@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { routing } from "@/i18n/routing";
+import { AuthorBio } from "@/components/author-bio";
 import {
   ArrowLeft,
   BookOpen,
@@ -1006,6 +1007,15 @@ export default async function HowToChooseAiCodingAgentPage({ params }: Props) {
                   Free vs Paid Breakdown
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Author Bio */}
+        <section className="py-8">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <AuthorBio />
             </div>
           </div>
         </section>
