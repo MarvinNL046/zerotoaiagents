@@ -25,6 +25,10 @@ import { flowiseReview } from "./flowise";
 import { relevanceAiReview } from "./relevance-ai";
 import { makeAiReview } from "./make-ai";
 import { zapierCentralReview } from "./zapier-central";
+import { crewaiReview } from "./crewai";
+import { autogenReview } from "./autogen";
+import { langgraphReview } from "./langgraph";
+import { agentgptReview } from "./agentgpt";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
@@ -43,6 +47,10 @@ const reviews: Record<string, ReviewContent> = {
   "relevance-ai": relevanceAiReview,
   "make-ai": makeAiReview,
   "zapier-central": zapierCentralReview,
+  "crewai": crewaiReview,
+  "autogen": autogenReview,
+  "langgraph": langgraphReview,
+  "agentgpt": agentgptReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
