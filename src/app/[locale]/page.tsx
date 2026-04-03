@@ -32,6 +32,7 @@ interface ContentItem {
   title: string;
   href: string;
   description: string;
+  image?: string;
 }
 
 const contentItems: ContentItem[] = [
@@ -41,30 +42,35 @@ const contentItems: ContentItem[] = [
     title: "Cursor Review",
     href: "/reviews/cursor",
     description: "The AI-first code editor with built-in agent capabilities",
+    image: "/screenshots/cursor-homepage.webp",
   },
   {
     type: "review",
     title: "GitHub Copilot Review",
     href: "/reviews/github-copilot",
     description: "Microsoft's AI pair programmer for VS Code and beyond",
+    image: "/screenshots/copilot-homepage.webp",
   },
   {
     type: "review",
     title: "Windsurf Review",
     href: "/reviews/windsurf",
     description: "Codeium's free-tier AI coding agent",
+    image: "/screenshots/windsurf-homepage.webp",
   },
   {
     type: "review",
     title: "Claude Code Review",
     href: "/reviews/claude-code",
     description: "Anthropic's CLI-based autonomous coding agent",
+    image: "/screenshots/claude-code-homepage.webp",
   },
   {
     type: "review",
     title: "Devin Review",
     href: "/reviews/devin",
     description: "The first fully autonomous AI software engineer",
+    image: "/screenshots/devin-homepage.webp",
   },
   // Comparisons
   {
@@ -251,25 +257,37 @@ export default async function HomePage({ params }: Props) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 overflow-hidden hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-200 flex flex-col p-5"
+                className="group border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 overflow-hidden hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-200 flex flex-col"
               >
-                <div className="flex flex-col gap-3 flex-1">
-                  <span
-                    className={`inline-block text-xs font-semibold px-3 py-0.5 rounded-full w-fit ${typeBadgeStyles[item.type]}`}
-                  >
-                    {typeLabels[item.type]}
-                  </span>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2 flex-1">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="mt-4">
-                  <span className="text-orange-500 group-hover:text-orange-600 font-semibold text-sm">
-                    Read more →
-                  </span>
+                {item.image && (
+                  <div className="h-40 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex flex-col gap-3 flex-1">
+                    <span
+                      className={`inline-block text-xs font-semibold px-3 py-0.5 rounded-full w-fit ${typeBadgeStyles[item.type]}`}
+                    >
+                      {typeLabels[item.type]}
+                    </span>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2 flex-1">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div className="mt-4">
+                    <span className="text-orange-500 group-hover:text-orange-600 font-semibold text-sm">
+                      Read more →
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
