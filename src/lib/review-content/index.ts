@@ -14,6 +14,9 @@ import { claudeCodeReview } from "./claude-code";
 import { githubCopilotReview } from "./github-copilot";
 import { windsurfReview } from "./windsurf";
 import { devinReview } from "./devin";
+import { replitAgentReview } from "./replit-agent";
+import { amazonQDeveloperReview } from "./amazon-q-developer";
+import { chatgptReview } from "./chatgpt";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
@@ -21,6 +24,9 @@ const reviews: Record<string, ReviewContent> = {
   "github-copilot": githubCopilotReview,
   "windsurf": windsurfReview,
   "devin": devinReview,
+  "replit-agent": replitAgentReview,
+  "amazon-q-developer": amazonQDeveloperReview,
+  "chatgpt": chatgptReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
