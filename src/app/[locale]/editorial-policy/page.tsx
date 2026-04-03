@@ -39,7 +39,7 @@ export default async function EditorialPolicyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const lastUpdated = "March 16, 2026";
+  const lastUpdated = "April 3, 2026";
 
   return (
     <div className="flex flex-col">
@@ -123,15 +123,9 @@ export default async function EditorialPolicyPage({ params }: Props) {
                   <div className="bg-muted/50 rounded-lg p-4">
                     <h4 className="font-semibold mb-2">Transparency</h4>
                     <p className="text-sm text-muted-foreground">
-                      We clearly disclose our affiliate relationships and how we
-                      earn revenue. See our{" "}
-                      <Link
-                        href="/affiliate-disclosure"
-                        className="text-primary hover:underline"
-                      >
-                        Affiliate Disclosure
-                      </Link>{" "}
-                      for full details.
+                      We clearly disclose how we earn revenue. Currently we
+                      display Google AdSense advertisements. Future affiliate
+                      or commercial relationships will be disclosed accordingly.
                     </p>
                   </div>
 
@@ -190,26 +184,27 @@ export default async function EditorialPolicyPage({ params }: Props) {
                   Independence from Advertisers
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  While ZeroToAIAgents earns revenue through affiliate
-                  partnerships and Google AdSense advertising, our editorial
-                  decisions are made independently.
+                  ZeroToAIAgents currently earns revenue through Google AdSense
+                  advertising. We may participate in affiliate programs in the
+                  future. In either case, our editorial decisions are made
+                  independently of commercial considerations.
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   <li>
-                    Affiliate commissions and ad revenue do not determine which
-                    platforms we review, how we rate them, or what we recommend
+                    Ad revenue does not determine which platforms we review,
+                    how we rate them, or what we recommend
                   </li>
                   <li>
-                    A platform with a higher affiliate commission will never
-                    receive a better rating solely because of that commission
+                    No AI agent platform can pay for a better rating or a higher
+                    position in our comparisons
                   </li>
                   <li>
-                    We include AI agent platforms in our reviews even if they do
-                    not have affiliate programs
+                    We include AI agent platforms in our reviews regardless of
+                    whether they advertise with us or have affiliate programs
                   </li>
                   <li>
                     Our ratings reflect the actual quality and value of each
-                    platform based on our research and testing
+                    platform based on our research and hands-on testing
                   </li>
                 </ul>
               </div>
@@ -317,13 +312,6 @@ export default async function EditorialPolicyPage({ params }: Props) {
                   >
                     <BookOpen className="h-4 w-4" />
                     About Us
-                  </Link>
-                  <Link
-                    href="/affiliate-disclosure"
-                    className="text-primary hover:underline flex items-center gap-1"
-                  >
-                    <FileText className="h-4 w-4" />
-                    Affiliate Disclosure
                   </Link>
                   <Link
                     href="/privacy-policy"

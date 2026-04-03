@@ -38,7 +38,7 @@ export default async function CookiePolicyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const lastUpdated = "March 16, 2026";
+  const lastUpdated = "April 3, 2026";
 
   return (
     <div className="flex flex-col">
@@ -149,24 +149,6 @@ export default async function CookiePolicyPage({ params }: Props) {
                     </p>
                   </div>
 
-                  <div className="bg-muted/50 rounded-lg p-4">
-                    <h4 className="font-semibold mb-2">
-                      Affiliate Tracking Cookies
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      When you click on affiliate links to AI agent providers,
-                      cookies may be placed by the affiliate partner to track
-                      referrals. These cookies are set by the third-party
-                      provider, not by ZeroToAIAgents. See our{" "}
-                      <Link
-                        href="/affiliate-disclosure"
-                        className="text-primary hover:underline"
-                      >
-                        Affiliate Disclosure
-                      </Link>{" "}
-                      for more details.
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -218,14 +200,6 @@ export default async function CookiePolicyPage({ params }: Props) {
                     </p>
                   </div>
 
-                  <div className="border-l-4 border-primary pl-4">
-                    <h4 className="font-semibold">Affiliate Partners</h4>
-                    <p className="text-sm text-muted-foreground">
-                      AI agent providers we link to may set their own cookies
-                      when you visit their websites through our affiliate links.
-                      These are governed by their respective privacy policies.
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -373,13 +347,6 @@ export default async function CookiePolicyPage({ params }: Props) {
                   >
                     <FileText className="h-4 w-4" />
                     Terms of Service
-                  </Link>
-                  <Link
-                    href="/affiliate-disclosure"
-                    className="text-primary hover:underline flex items-center gap-1"
-                  >
-                    <FileText className="h-4 w-4" />
-                    Affiliate Disclosure
                   </Link>
                   <Link
                     href="/contact"

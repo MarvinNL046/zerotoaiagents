@@ -26,7 +26,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const lastUpdated = "November 28, 2026";
+  const lastUpdated = "April 3, 2026";
 
   return (
     <div className="flex flex-col">
@@ -248,19 +248,39 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                   </div>
 
                   <div className="border-l-4 border-primary pl-4">
-                    <h4 className="font-semibold">Affiliate Partners</h4>
+                    <h4 className="font-semibold">Convex</h4>
                     <p className="text-sm text-muted-foreground">
-                      When you click on affiliate links to AI agent providers, you will be
-                      redirected to their websites. These third-party sites have their
-                      own privacy policies. We encourage you to review their policies
-                      before providing any personal information. See our{" "}
-                      <Link
-                        href="/affiliate-disclosure"
+                      We use Convex as our backend database to store newsletter
+                      subscriptions and other data you provide. Convex operates
+                      under its own privacy policy and security standards. Learn
+                      more at{" "}
+                      <a
+                        href="https://www.convex.dev/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-primary hover:underline"
                       >
-                        Affiliate Disclosure
-                      </Link>{" "}
-                      for more information.
+                        Convex Privacy Policy
+                      </a>
+                      .
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-primary pl-4">
+                    <h4 className="font-semibold">Vercel</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Our website is hosted on Vercel. Vercel may collect
+                      server logs and performance data as part of providing
+                      hosting services. Learn more at{" "}
+                      <a
+                        href="https://vercel.com/legal/privacy-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline"
+                      >
+                        Vercel Privacy Policy
+                      </a>
+                      .
                     </p>
                   </div>
                 </div>
@@ -489,11 +509,11 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                     Terms of Service
                   </Link>
                   <Link
-                    href="/affiliate-disclosure"
+                    href="/cookie-policy"
                     className="text-primary hover:underline flex items-center gap-1"
                   >
-                    <FileText className="h-4 w-4" />
-                    Affiliate Disclosure
+                    <Cookie className="h-4 w-4" />
+                    Cookie Policy
                   </Link>
                   <Link
                     href="/contact"

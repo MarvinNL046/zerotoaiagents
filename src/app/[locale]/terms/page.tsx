@@ -35,7 +35,7 @@ export default async function TermsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const lastUpdated = "November 28, 2026";
+  const lastUpdated = "April 3, 2026";
 
   return (
     <div className="flex flex-col">
@@ -94,10 +94,10 @@ export default async function TermsPage({ params }: Props) {
                   ZeroToAIAgents is an informational website that provides:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>AI agent provider reviews and comparisons</li>
-                  <li>Educational content about AI agents and online privacy</li>
-                  <li>User reviews and ratings of AI agent services</li>
-                  <li>Affiliate links to AI agent provider websites</li>
+                  <li>AI coding agent reviews and comparisons</li>
+                  <li>Educational content about AI coding agents and developer tools</li>
+                  <li>User reviews and ratings of AI coding agent services</li>
+                  <li>Advertisements served through Google AdSense</li>
                 </ul>
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
                   <p className="text-sm font-medium flex items-start gap-2">
@@ -111,38 +111,52 @@ export default async function TermsPage({ params }: Props) {
                 </div>
               </div>
 
-              {/* Affiliate Disclosure */}
+              {/* Revenue and Advertising */}
               <div className="bg-card border rounded-lg p-6 mb-8">
-                <h2 className="text-2xl font-bold mb-4">Affiliate Relationships</h2>
+                <h2 className="text-2xl font-bold mb-4">Revenue and Advertising</h2>
                 <p className="text-muted-foreground mb-4">
-                  ZeroToAIAgents participates in affiliate programs. This means:
+                  ZeroToAIAgents currently earns revenue through Google AdSense
+                  advertising. In the future, we may also participate in affiliate
+                  programs. This means:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   <li>
-                    We may earn commissions when you purchase AI agent services through
-                    our affiliate links
+                    We display ads through Google AdSense. These ads are served
+                    by Google and may be personalised based on your browsing activity.
                   </li>
                   <li>
-                    Affiliate relationships do not influence our editorial content
+                    Advertising relationships do not influence our editorial content
                     or ratings
                   </li>
                   <li>
-                    Using our affiliate links does not cost you any extra money
-                  </li>
-                  <li>
-                    We are committed to providing honest, unbiased reviews
+                    We are committed to providing honest, unbiased reviews regardless
+                    of any commercial relationships
                   </li>
                 </ul>
-                <p className="text-muted-foreground mt-4">
-                  For more details, please read our{" "}
-                  <Link
-                    href="/affiliate-disclosure"
-                    className="text-primary hover:underline"
-                  >
-                    Affiliate Disclosure
-                  </Link>
-                  .
+              </div>
+
+              {/* Pricing Accuracy */}
+              <div className="bg-card border rounded-lg p-6 mb-8">
+                <h2 className="text-2xl font-bold mb-4">Pricing Accuracy</h2>
+                <p className="text-muted-foreground mb-4">
+                  We strive to keep pricing information accurate and up to date.
+                  However, AI coding agent providers frequently change their pricing,
+                  plans, and features. Please be aware that:
                 </p>
+                <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                  <li>
+                    Prices and plans displayed on our Website are for informational
+                    purposes only and may not reflect the current offering
+                  </li>
+                  <li>
+                    Always verify pricing directly on the provider&apos;s official website
+                    before making a purchasing decision
+                  </li>
+                  <li>
+                    We accept no liability for decisions made based on outdated
+                    pricing information displayed on our Website
+                  </li>
+                </ul>
               </div>
 
               {/* User Responsibilities */}
@@ -459,11 +473,11 @@ export default async function TermsPage({ params }: Props) {
                     Privacy Policy
                   </Link>
                   <Link
-                    href="/affiliate-disclosure"
+                    href="/cookie-policy"
                     className="text-primary hover:underline flex items-center gap-1"
                   >
                     <FileText className="h-4 w-4" />
-                    Affiliate Disclosure
+                    Cookie Policy
                   </Link>
                   <Link
                     href="/contact"

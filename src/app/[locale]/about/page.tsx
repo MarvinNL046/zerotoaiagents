@@ -967,8 +967,8 @@ export default async function AboutPage({ params }: Props) {
                   <p className="text-sm text-blue-600 font-medium mb-3">Founder &amp; Developer</p>
                   <p className="text-slate-600 mb-3">
                     Marvin is a Dutch web developer and digital entrepreneur who builds tools and resources to help
-                    people get started online. From travel guides to hosting reviews, VPN comparisons to WordPress
-                    tutorials — he creates practical, honest content based on hands-on testing and real experience.
+                    people get started online. From travel guides to hosting reviews, AI coding agent comparisons to
+                    WordPress tutorials — he creates practical, honest content based on hands-on testing and real experience.
                   </p>
                   <p className="text-slate-600">
                     When he&apos;s not coding, you&apos;ll find him exploring Southeast Asia or testing the latest
