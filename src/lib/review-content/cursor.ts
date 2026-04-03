@@ -24,7 +24,10 @@ export const cursorReview: ReviewContent = {
 
 <p>Authentication is handled via GitHub or Google SSO, after which you're dropped into a familiar VS Code-like interface with a new chat panel on the right side. The Hobby plan activates automatically — no credit card required. For teams migrating from other editors, Cursor supports Vim keybindings, Emacs keybindings, and JetBrains key maps, which covers the vast majority of developer preferences.</p>
 
-<div class="screenshot-placeholder"><p>Screenshot: Cursor's main interface showing the editor, chat panel, and Composer 2 agent mode side by side</p></div>
+<figure class="my-6">
+<img src="/screenshots/cursor-homepage.webp" alt="Cursor AI code editor homepage showing Composer 2 interface with autonomous agent mode, multi-file editing, and task management" class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg w-full" loading="lazy" />
+<figcaption class="text-sm text-slate-500 mt-2 text-center">Cursor's homepage showcasing the Composer 2 interface — the autonomous agent that plans and builds features across multiple files.</figcaption>
+</figure>
 
 <div class="pro-tip"><strong>💡 Pro Tip:</strong> When first setting up Cursor, open the Command Palette (Ctrl/Cmd+Shift+P) and run "Cursor: Import VS Code Settings" to pull in all your existing VS Code configuration in one step. You'll save 30+ minutes of manual setup.</div>
 
@@ -42,7 +45,10 @@ export const cursorReview: ReviewContent = {
 
 <p>In my hands-on testing, I gave Composer 2 a complex task: migrate a REST API endpoint to use Zod schema validation, update the corresponding TypeScript types, fix the downstream consumers, and write unit tests. Tasks that would have taken me 45 minutes manually were completed in under 5 minutes, with minimal corrections needed. The quality was production-ready — not "good enough for a first draft."</p>
 
-<div class="screenshot-placeholder"><p>Screenshot: Composer 2 agent mode showing a multi-file refactoring task in progress with the plan, changes, and diff view</p></div>
+<figure class="my-6">
+<img src="/screenshots/cursor-pricing.webp" alt="Cursor pricing plans showing Hobby (Free), Pro ($20/mo), Pro+ ($60/mo), Ultra ($200/mo), Teams ($40/user/mo), and Enterprise options" class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg w-full" loading="lazy" />
+<figcaption class="text-sm text-slate-500 mt-2 text-center">Cursor's pricing as of April 2026 — from a free Hobby plan to Enterprise with pooled usage and audit logs.</figcaption>
+</figure>
 
 <p>Composer 2 also introduces the <strong>autonomy slider</strong> — a setting that controls how much Cursor asks for confirmation before making changes. At maximum autonomy, it runs end-to-end and presents you with a finished diff. At minimum autonomy, it checks in at each step. For experienced developers who trust the AI, max autonomy on well-scoped tasks is a revelation. For learning or sensitive codebases, the step-by-step mode is invaluable.</p>
 
@@ -62,7 +68,7 @@ export const cursorReview: ReviewContent = {
 
 <p>For large monorepos (200k+ lines of code), the initial indexing takes a few minutes and can be slow. But once indexed, codebase-aware questions become dramatically faster and more accurate. It's a meaningful competitive advantage over tools that operate only within the current file or open tabs.</p>
 
-<div class="screenshot-placeholder"><p>Screenshot: Cursor's codebase chat showing a query answered with references across multiple files, with source citations</p></div>
+<div class="pro-tip"><strong>💡 Pro Tip:</strong> Use the <code>@codebase</code> mention in Cursor's chat to ask questions about your entire project. It indexes your codebase semantically, so you can ask things like "where is the authentication logic?" and get precise file references — much faster than grep.</div>
 
 <h2>Supported AI Models</h2>
 

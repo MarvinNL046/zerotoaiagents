@@ -1,0 +1,461 @@
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip to content" [ref=e4] [cursor=pointer]:
+        - /url: "#main"
+      - link "Homepage" [ref=e6] [cursor=pointer]:
+        - /url: /home
+        - img [ref=e7]
+        - generic [ref=e16]: Cursor
+      - navigation [ref=e17]:
+        - list [ref=e18]:
+          - listitem [ref=e19]:
+            - link "Product" [ref=e20] [cursor=pointer]:
+              - /url: /product
+            - button "Expand Menu" [ref=e21]:
+              - generic [ref=e22]: ↓
+          - listitem [ref=e23]:
+            - link "Enterprise" [ref=e24] [cursor=pointer]:
+              - /url: /enterprise
+          - listitem [ref=e25]:
+            - link "Pricing" [ref=e26] [cursor=pointer]:
+              - /url: /pricing
+          - listitem [ref=e27]:
+            - link "Resources" [ref=e28] [cursor=pointer]:
+              - /url: /changelog
+            - button "Expand Menu" [ref=e29]:
+              - generic [ref=e30]: ↓
+      - generic [ref=e31]:
+        - link "Sign in" [ref=e32] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Contact sales" [ref=e33] [cursor=pointer]:
+          - /url: /contact-sales?source=navbar
+          - generic [ref=e34]: Contact sales
+        - link "Download" [ref=e35] [cursor=pointer]:
+          - /url: /download
+  - main [ref=e36]:
+    - generic [ref=e38]:
+      - heading "Pricing" [level=1] [ref=e39]
+      - group "Payment frequency" [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43] [cursor=pointer]:
+            - radio "Monthly" [checked] [ref=e44]
+            - text: Monthly
+          - generic [ref=e45] [cursor=pointer]:
+            - radio "Yearly" [ref=e46]
+            - text: Yearly
+      - generic [ref=e48]:
+        - heading "Individual Plans" [level=2] [ref=e49]:
+          - link "Individual Plans" [ref=e50] [cursor=pointer]:
+            - /url: "#individual"
+        - generic [ref=e51]:
+          - 'link "Hobby Free Includes: ✓ No credit card required ✓ Limited Agent requests ✓ Limited Tab completions Download" [ref=e52] [cursor=pointer]':
+            - /url: /download
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - heading "Hobby" [level=3] [ref=e56]
+                - paragraph [ref=e57]:
+                  - generic [ref=e58]: Free
+                - paragraph [ref=e59]: "Includes:"
+                - list [ref=e60]:
+                  - listitem [ref=e61]:
+                    - generic [ref=e62]: ✓
+                    - text: No credit card required
+                  - listitem [ref=e63]:
+                    - generic [ref=e64]: ✓
+                    - text: Limited Agent requests
+                  - listitem [ref=e65]:
+                    - generic [ref=e66]: ✓
+                    - text: Limited Tab completions
+              - generic [ref=e68]: Download
+          - generic "Pro" [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - heading "Pro" [level=3] [ref=e73]
+                - paragraph [ref=e74]:
+                  - generic [ref=e75]: $20
+                  - generic [ref=e76]: / mo.
+                - paragraph [ref=e77]: "Everything in Hobby, plus:"
+                - list [ref=e78]:
+                  - listitem [ref=e79]:
+                    - generic [ref=e80]: ✓
+                    - generic [ref=e81]:
+                      - text: Extended limits on Agent
+                      - link "Learn more about model limits and pricing" [ref=e82] [cursor=pointer]:
+                        - /url: https://cursor.com/docs/models-and-pricing
+                        - text: i
+                  - listitem [ref=e83]:
+                    - generic [ref=e84]: ✓
+                    - text: Access to frontier models
+                  - listitem [ref=e85]:
+                    - generic [ref=e86]: ✓
+                    - text: MCPs, skills, and hooks
+                  - listitem [ref=e87]:
+                    - generic [ref=e88]: ✓
+                    - text: Cloud agents
+              - link "Get Pro" [ref=e91] [cursor=pointer]:
+                - /url: https://cursor.com/api/auth/checkoutDeepControl?yearly=false
+          - generic "Pro+" [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]:
+                  - heading "Pro+" [level=3] [ref=e96]
+                  - paragraph [ref=e97]: Recommended
+                - paragraph [ref=e98]:
+                  - generic [ref=e99]: $60
+                  - generic [ref=e100]: / mo.
+                - paragraph [ref=e101]: "Everything in Pro, plus:"
+                - list [ref=e102]:
+                  - listitem [ref=e103]:
+                    - generic [ref=e104]: ✓
+                    - text: 3x usage on all OpenAI, Claude, Gemini models
+              - link "Get Pro+" [ref=e107] [cursor=pointer]:
+                - /url: https://cursor.com/api/auth/checkoutDeepControl?tier=pro_plus&yearly=false
+          - generic "Ultra" [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - heading "Ultra" [level=3] [ref=e112]
+                - paragraph [ref=e113]:
+                  - generic [ref=e114]: $200
+                  - generic [ref=e115]: / mo.
+                - paragraph [ref=e116]: "Everything in Pro, plus:"
+                - list [ref=e117]:
+                  - listitem [ref=e118]:
+                    - generic [ref=e119]: ✓
+                    - text: 20x usage on all OpenAI, Claude, Gemini models
+                  - listitem [ref=e120]:
+                    - generic [ref=e121]: ✓
+                    - text: Priority access to new features
+              - link "Get Ultra" [ref=e124] [cursor=pointer]:
+                - /url: https://cursor.com/api/auth/checkoutDeepControl?tier=ultra&yearly=false
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - heading "Business Plans" [level=2] [ref=e127]:
+            - link "Business Plans" [ref=e128] [cursor=pointer]:
+              - /url: "#business"
+          - generic [ref=e129]:
+            - 'link "Teams $40 / user / mo. Everything in Pro, plus: ✓ Shared chats, commands, and rules ✓ Centralized team billing ✓ Usage analytics and reporting ✓ Org-wide privacy mode controls ✓ Role-based access control ✓ SAML/OIDC SSO Get Teams" [ref=e130] [cursor=pointer]':
+              - /url: https://cursor.com/team/new-team?yearly=false
+              - generic [ref=e131]:
+                - generic [ref=e132]:
+                  - heading "Teams" [level=3] [ref=e134]
+                  - paragraph [ref=e135]:
+                    - generic [ref=e136]: $40
+                    - generic [ref=e137]: / user / mo.
+                  - paragraph [ref=e138]: "Everything in Pro, plus:"
+                  - list [ref=e139]:
+                    - listitem [ref=e140]:
+                      - generic [ref=e141]: ✓
+                      - text: Shared chats, commands, and rules
+                    - listitem [ref=e142]:
+                      - generic [ref=e143]: ✓
+                      - text: Centralized team billing
+                    - listitem [ref=e144]:
+                      - generic [ref=e145]: ✓
+                      - text: Usage analytics and reporting
+                    - listitem [ref=e146]:
+                      - generic [ref=e147]: ✓
+                      - text: Org-wide privacy mode controls
+                    - listitem [ref=e148]:
+                      - generic [ref=e149]: ✓
+                      - text: Role-based access control
+                    - listitem [ref=e150]:
+                      - generic [ref=e151]: ✓
+                      - text: SAML/OIDC SSO
+                - generic [ref=e153]: Get Teams
+            - 'link "Enterprise Custom Everything in Teams, plus: ✓ Pooled usage ✓ Invoice/PO billing ✓ SCIM seat management ✓ AI code tracking API and audit logs ✓ Granular admin and model controls ✓ Priority support and account management Contact Sales" [ref=e154] [cursor=pointer]':
+              - /url: /contact-sales?source=pricing_enterprise
+              - generic [ref=e155]:
+                - generic [ref=e156]:
+                  - heading "Enterprise" [level=3] [ref=e158]
+                  - paragraph [ref=e159]:
+                    - generic [ref=e160]: Custom
+                  - paragraph [ref=e161]: "Everything in Teams, plus:"
+                  - list [ref=e162]:
+                    - listitem [ref=e163]:
+                      - generic [ref=e164]: ✓
+                      - text: Pooled usage
+                    - listitem [ref=e165]:
+                      - generic [ref=e166]: ✓
+                      - text: Invoice/PO billing
+                    - listitem [ref=e167]:
+                      - generic [ref=e168]: ✓
+                      - text: SCIM seat management
+                    - listitem [ref=e169]:
+                      - generic [ref=e170]: ✓
+                      - text: AI code tracking API and audit logs
+                    - listitem [ref=e171]:
+                      - generic [ref=e172]: ✓
+                      - text: Granular admin and model controls
+                    - listitem [ref=e173]:
+                      - generic [ref=e174]: ✓
+                      - text: Priority support and account management
+                - generic [ref=e176]: Contact Sales
+        - generic [ref=e179]:
+          - heading "Trusted every day by teams that build world-class software." [level=2] [ref=e180]
+          - generic [ref=e181]:
+            - img [ref=e184]:
+              - img [ref=e185]
+            - img [ref=e189]:
+              - img [ref=e190]
+            - img [ref=e200]:
+              - img [ref=e201]
+            - img [ref=e207]:
+              - img [ref=e208]
+            - img [ref=e213]:
+              - img [ref=e214]
+            - img [ref=e221]:
+              - img [ref=e222]
+            - img [ref=e230]:
+              - img [ref=e231]
+            - img [ref=e235]:
+              - img [ref=e236]
+      - generic [ref=e240]:
+        - heading "Bugbot" [level=2] [ref=e241]:
+          - link "Bugbot" [ref=e242] [cursor=pointer]:
+            - /url: "#bugbot"
+        - generic [ref=e243]:
+          - 'link "Pro $40 / user / mo. Includes: ✓ 14 day individual trial ✓ Reviews on up to 200 PRs/mo ✓ Access to Bugbot rules Get Bugbot Pro" [ref=e244] [cursor=pointer]':
+            - /url: https://cursor.com/dashboard/bugbot
+            - generic [ref=e245]:
+              - generic [ref=e246]:
+                - heading "Pro" [level=3] [ref=e248]
+                - paragraph [ref=e249]:
+                  - generic [ref=e250]: $40
+                  - generic [ref=e251]: / user / mo.
+                - paragraph [ref=e252]: "Includes:"
+                - list [ref=e253]:
+                  - listitem [ref=e254]:
+                    - generic [ref=e255]: ✓
+                    - text: 14 day individual trial
+                  - listitem [ref=e256]:
+                    - generic [ref=e257]: ✓
+                    - text: Reviews on up to 200 PRs/mo
+                  - listitem [ref=e258]:
+                    - generic [ref=e259]: ✓
+                    - text: Access to Bugbot rules
+              - generic [ref=e261]: Get Bugbot Pro
+          - 'link "Teams $40 / user / mo. Everything in Pro, plus: ✓ 14-day team trial ✓ Code reviews on all PRs ✓ Analytics and reporting dashboard ✓ Advanced rules and settings Get Bugbot Teams" [ref=e262] [cursor=pointer]':
+            - /url: https://cursor.com/dashboard/bugbot
+            - generic [ref=e263]:
+              - generic [ref=e264]:
+                - heading "Teams" [level=3] [ref=e266]
+                - paragraph [ref=e267]:
+                  - generic [ref=e268]: $40
+                  - generic [ref=e269]: / user / mo.
+                - paragraph [ref=e270]: "Everything in Pro, plus:"
+                - list [ref=e271]:
+                  - listitem [ref=e272]:
+                    - generic [ref=e273]: ✓
+                    - text: 14-day team trial
+                  - listitem [ref=e274]:
+                    - generic [ref=e275]: ✓
+                    - text: Code reviews on all PRs
+                  - listitem [ref=e276]:
+                    - generic [ref=e277]: ✓
+                    - text: Analytics and reporting dashboard
+                  - listitem [ref=e278]:
+                    - generic [ref=e279]: ✓
+                    - text: Advanced rules and settings
+              - generic [ref=e281]: Get Bugbot Teams
+          - 'link "Enterprise Custom Includes: ✓ 30-day org-wide trial ✓ Advanced analytics and reporting ✓ Priority support and account management Contact Sales" [ref=e282] [cursor=pointer]':
+            - /url: /contact-sales?source=pricing_bugbot_enterprise
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - heading "Enterprise" [level=3] [ref=e286]
+                - paragraph [ref=e287]:
+                  - generic [ref=e288]: Custom
+                - paragraph [ref=e289]: "Includes:"
+                - list [ref=e290]:
+                  - listitem [ref=e291]:
+                    - generic [ref=e292]: ✓
+                    - text: 30-day org-wide trial
+                  - listitem [ref=e293]:
+                    - generic [ref=e294]: ✓
+                    - text: Advanced analytics and reporting
+                  - listitem [ref=e295]:
+                    - generic [ref=e296]: ✓
+                    - text: Priority support and account management
+              - generic [ref=e298]: Contact Sales
+    - generic [ref=e301]:
+      - heading "Questions & Answers" [level=2] [ref=e304]
+      - generic [ref=e306]:
+        - heading "What is the right plan for me?" [level=3] [ref=e308]:
+          - button "What is the right plan for me?" [ref=e309] [cursor=pointer]:
+            - text: What is the right plan for me?
+            - generic [ref=e311]: ↓
+        - heading "What are my payment options?" [level=3] [ref=e313]:
+          - button "What are my payment options?" [ref=e314] [cursor=pointer]:
+            - text: What are my payment options?
+            - generic [ref=e316]: ↓
+        - heading "How does usage-based pricing work?" [level=3] [ref=e318]:
+          - button "How does usage-based pricing work?" [ref=e319] [cursor=pointer]:
+            - text: How does usage-based pricing work?
+            - generic [ref=e321]: ↓
+        - heading "How can I see and manage Cursor's usage in my organization?" [level=3] [ref=e323]:
+          - button "How can I see and manage Cursor's usage in my organization?" [ref=e324] [cursor=pointer]:
+            - text: How can I see and manage Cursor's usage in my organization?
+            - generic [ref=e326]: ↓
+        - heading "How does Cursor use my data?" [level=3] [ref=e328]:
+          - button "How does Cursor use my data?" [ref=e329] [cursor=pointer]:
+            - text: How does Cursor use my data?
+            - generic [ref=e331]: ↓
+        - heading "Can I buy Cursor from a reseller or third party?" [level=3] [ref=e333]:
+          - button "Can I buy Cursor from a reseller or third party?" [ref=e334] [cursor=pointer]:
+            - text: Can I buy Cursor from a reseller or third party?
+            - generic [ref=e336]: ↓
+        - heading "Where can I ask more questions?" [level=3] [ref=e338]:
+          - button "Where can I ask more questions?" [ref=e339] [cursor=pointer]:
+            - text: Where can I ask more questions?
+            - generic [ref=e341]: ↓
+    - generic [ref=e344]:
+      - heading "Get started with Cursor." [level=2] [ref=e345]
+      - generic [ref=e346]:
+        - link "Download" [ref=e347] [cursor=pointer]:
+          - /url: /download
+          - text: Download
+          - generic [ref=e349]: ⤓
+        - link "Contact Sales" [ref=e350] [cursor=pointer]:
+          - /url: /contact-sales?source=pricing_footer
+  - contentinfo [ref=e351]:
+    - navigation [ref=e353]:
+      - generic [ref=e354]:
+        - generic [ref=e355]:
+          - heading "Product" [level=3] [ref=e356]
+          - list [ref=e357]:
+            - listitem [ref=e358]:
+              - link "Agents" [ref=e359] [cursor=pointer]:
+                - /url: /en-US/product
+            - listitem [ref=e360]:
+              - link "Enterprise" [ref=e361] [cursor=pointer]:
+                - /url: /en-US/enterprise
+            - listitem [ref=e362]:
+              - link "Pricing" [ref=e363] [cursor=pointer]:
+                - /url: /en-US/pricing
+            - listitem [ref=e364]:
+              - link "Code Review" [ref=e365] [cursor=pointer]:
+                - /url: /en-US/bugbot
+            - listitem [ref=e366]:
+              - link "Tab" [ref=e367] [cursor=pointer]:
+                - /url: /en-US/product/tab
+            - listitem [ref=e368]:
+              - link "CLI" [ref=e369] [cursor=pointer]:
+                - /url: /en-US/cli
+            - listitem [ref=e370]:
+              - link "Cloud Agents" [ref=e371] [cursor=pointer]:
+                - /url: /agents
+            - listitem [ref=e372]:
+              - link "Marketplace ↗" [ref=e373] [cursor=pointer]:
+                - /url: https://cursor.com/marketplace
+                - text: Marketplace
+                - generic [ref=e374]: ↗
+        - generic [ref=e375]:
+          - heading "Resources" [level=3] [ref=e376]
+          - list [ref=e377]:
+            - listitem [ref=e378]:
+              - link "Download" [ref=e379] [cursor=pointer]:
+                - /url: /en-US/download
+            - listitem [ref=e380]:
+              - link "Changelog" [ref=e381] [cursor=pointer]:
+                - /url: /en-US/changelog
+            - listitem [ref=e382]:
+              - link "Docs" [ref=e383] [cursor=pointer]:
+                - /url: /docs
+            - listitem [ref=e384]:
+              - link "Learn ↗" [ref=e385] [cursor=pointer]:
+                - /url: https://cursor.com/learn
+                - text: Learn
+                - generic [ref=e386]: ↗
+            - listitem [ref=e387]:
+              - link "Forum ↗" [ref=e388] [cursor=pointer]:
+                - /url: https://forum.cursor.com/
+                - text: Forum
+                - generic [ref=e389]: ↗
+            - listitem [ref=e390]:
+              - link "Help ↗" [ref=e391] [cursor=pointer]:
+                - /url: https://cursor.com/help
+                - text: Help
+                - generic [ref=e392]: ↗
+            - listitem [ref=e393]:
+              - link "Workshops" [ref=e394] [cursor=pointer]:
+                - /url: /en-US/workshops
+            - listitem [ref=e395]:
+              - link "Status ↗" [ref=e396] [cursor=pointer]:
+                - /url: https://status.cursor.com/
+                - text: Status
+                - generic [ref=e397]: ↗
+        - generic [ref=e398]:
+          - heading "Company" [level=3] [ref=e399]
+          - list [ref=e400]:
+            - listitem [ref=e401]:
+              - link "Careers" [ref=e402] [cursor=pointer]:
+                - /url: /en-US/careers
+            - listitem [ref=e403]:
+              - link "Blog" [ref=e404] [cursor=pointer]:
+                - /url: /en-US/blog
+            - listitem [ref=e405]:
+              - link "Community" [ref=e406] [cursor=pointer]:
+                - /url: /en-US/community
+            - listitem [ref=e407]:
+              - link "Students" [ref=e408] [cursor=pointer]:
+                - /url: /en-US/students
+            - listitem [ref=e409]:
+              - link "Brand" [ref=e410] [cursor=pointer]:
+                - /url: /en-US/brand
+            - listitem [ref=e411]:
+              - link "Future" [ref=e412] [cursor=pointer]:
+                - /url: /en-US/future
+            - listitem [ref=e413]:
+              - link "Anysphere ↗" [ref=e414] [cursor=pointer]:
+                - /url: https://anysphere.inc/
+                - text: Anysphere
+                - generic [ref=e415]: ↗
+        - generic [ref=e416]:
+          - heading "Legal" [level=3] [ref=e417]
+          - list [ref=e418]:
+            - listitem [ref=e419]:
+              - link "Terms of Service" [ref=e420] [cursor=pointer]:
+                - /url: /en-US/terms-of-service
+            - listitem [ref=e421]:
+              - link "Privacy Policy" [ref=e422] [cursor=pointer]:
+                - /url: /en-US/privacy
+            - listitem [ref=e423]:
+              - link "Data Use" [ref=e424] [cursor=pointer]:
+                - /url: /en-US/data-use
+            - listitem [ref=e425]:
+              - link "Security" [ref=e426] [cursor=pointer]:
+                - /url: /en-US/security
+        - generic [ref=e427]:
+          - heading "Connect" [level=3] [ref=e428]
+          - list [ref=e429]:
+            - listitem [ref=e430]:
+              - link "X ↗" [ref=e431] [cursor=pointer]:
+                - /url: https://x.com/cursor_ai
+                - text: X
+                - generic [ref=e432]: ↗
+            - listitem [ref=e433]:
+              - link "LinkedIn ↗" [ref=e434] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/cursorai
+                - text: LinkedIn
+                - generic [ref=e435]: ↗
+            - listitem [ref=e436]:
+              - link "YouTube ↗" [ref=e437] [cursor=pointer]:
+                - /url: https://www.youtube.com/@cursor_ai
+                - text: YouTube
+                - generic [ref=e438]: ↗
+    - generic [ref=e439]:
+      - generic [ref=e440]:
+        - generic [ref=e441]:
+          - text: © 2026
+          - link "Anysphere, Inc." [ref=e442] [cursor=pointer]:
+            - /url: https://anysphere.inc
+        - generic [ref=e443]:
+          - text: 🛡
+          - link "SOC 2 Certified" [ref=e444] [cursor=pointer]:
+            - /url: /en-US/security
+      - button "🌐 English ↓" [ref=e448] [cursor=pointer]:
+        - generic [ref=e449]: 🌐
+        - text: English
+        - generic [ref=e450]: ↓
+  - alert [ref=e451]

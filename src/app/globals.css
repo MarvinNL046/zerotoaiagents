@@ -527,6 +527,10 @@
 .review-content td { @apply p-3 border border-slate-200 dark:border-slate-700; }
 .review-content .pro-tip { @apply bg-orange-50 dark:bg-orange-950/20 border-l-4 border-orange-500 p-4 my-6 rounded-r-lg; }
 .review-content .screenshot-placeholder { @apply bg-slate-100 dark:bg-slate-800 border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-xl p-8 my-6 text-center text-slate-500; }
+.review-content figure { @apply my-6; }
+.review-content figcaption { @apply text-sm text-slate-500 mt-2 text-center; }
+.review-content img { @apply rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg w-full; }
+.review-content code { @apply bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-sm font-mono; }
 
 /* Container utility */
 .container {
