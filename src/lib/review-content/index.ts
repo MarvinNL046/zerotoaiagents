@@ -10,9 +10,11 @@ export interface ReviewContent {
 
 // Import all reviews
 import { cursorReview } from "./cursor";
+import { claudeCodeReview } from "./claude-code";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
+  "claude-code": claudeCodeReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
