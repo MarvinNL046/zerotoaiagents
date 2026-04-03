@@ -29,15 +29,14 @@ export function AgentCard({ agent, rank }: AgentCardProps) {
 
   return (
     <div className="group border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-200 bg-white dark:bg-slate-800">
-      {/* Image section */}
-      <div className="relative h-44 w-full overflow-hidden">
+      {/* Logo section */}
+      <div className="relative h-24 w-full bg-slate-50 dark:bg-slate-700/50 flex items-center justify-center p-4">
         <img
-          src={`/screenshots/${agent.slug}-card.webp`}
-          alt={agent.name}
-          className="w-full h-full object-cover object-top"
+          src={`/screenshots/${agent.slug}-logo.webp`}
+          alt={`${agent.name} logo`}
+          className="max-h-14 max-w-[200px] object-contain"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
 
         {/* Badges on top */}
         <div className="absolute top-3 left-3 flex gap-2">
