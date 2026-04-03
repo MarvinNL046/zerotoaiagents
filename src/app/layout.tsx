@@ -1,5 +1,3 @@
-import { StackProvider, StackTheme } from "@stackframe/stack";
-import { stackServerApp } from "@/lib/stack";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -35,11 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <StackProvider app={stackServerApp}>
-          <StackTheme>
-            {children}
-          </StackTheme>
-        </StackProvider>
+        {children}
       </body>
     </html>
   );
