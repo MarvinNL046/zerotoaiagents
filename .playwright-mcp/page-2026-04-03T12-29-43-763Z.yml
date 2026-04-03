@@ -1,0 +1,865 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e4]:
+        - generic [ref=e5]:
+          - link "Home Page" [ref=e6] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e8]
+          - generic [ref=e11]:
+            - list [ref=e13]:
+              - listitem [ref=e14]:
+                - generic [ref=e15]:
+                  - generic [ref=e16]: Contact sales
+                  - link "Contact sales" [ref=e18] [cursor=pointer]:
+                    - /url: /contact-sales
+                    - generic [ref=e19]: Contact sales
+              - listitem [ref=e20]:
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Try Claude
+                  - link "Try Claude" [ref=e24] [cursor=pointer]:
+                    - /url: https://claude.ai/
+                    - generic [ref=e25]: Try Claude
+            - button "Open Menu" [ref=e26] [cursor=pointer]
+      - generic [ref=e32]:
+        - navigation [ref=e33]:
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - link "Product" [ref=e37] [cursor=pointer]:
+                - /url: /product/overview
+                - generic [ref=e38]: Product
+              - generic [ref=e39]: /
+            - listitem [ref=e40]:
+              - generic [ref=e42]: Claude Code
+        - button "Explore here" [ref=e44] [cursor=pointer]:
+          - generic [ref=e45]: Explore here
+          - img [ref=e48]
+    - main [ref=e51]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e60]:
+            - generic [ref=e61]: ✽
+            - generic [ref=e62]: Debugging...
+          - generic [ref=e63]:
+            - 'heading "Claude Code: AI-powered coding assistant for developers" [level=1] [ref=e64]'
+            - generic [ref=e65]:
+              - generic [ref=e66]: Built for
+              - img [ref=e68]
+              - generic [ref=e70]: developers
+          - paragraph [ref=e73]: Work with Claude directly in your codebase. Build, debug, and ship from your terminal, IDE, Slack, or the web. Describe what you need, and Claude handles the rest.
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - button "Get Claude Code" [ref=e81] [cursor=pointer]:
+                - generic [ref=e82]: Get Claude Code
+                - img [ref=e85]
+              - button "curl -fsSL https://claude.ai/install.sh | bash Copy command to clipboard" [ref=e88] [cursor=pointer]:
+                - generic [ref=e89]: curl -fsSL https://claude.ai/install.sh | bash
+                - generic [ref=e90]:
+                  - generic [ref=e91]: Copy command to clipboard
+                  - img [ref=e93]
+            - generic [ref=e95]:
+              - text: Or read the
+              - link "documentation" [ref=e96] [cursor=pointer]:
+                - /url: https://code.claude.com/docs/en/overview
+        - list [ref=e102]:
+          - listitem [ref=e103]:
+            - img "logo" [ref=e105]
+          - listitem [ref=e106]:
+            - img "logo" [ref=e108]
+          - listitem [ref=e109]:
+            - img "logo" [ref=e111]
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - heading "Use Claude Code where you work" [level=2] [ref=e115]
+            - tablist [ref=e116]:
+              - generic [ref=e117]:
+                - tab "Desktop" [selected] [ref=e118] [cursor=pointer]:
+                  - generic [ref=e119]: Desktop
+                - tab "Terminal" [ref=e120] [cursor=pointer]:
+                  - generic [ref=e121]: Terminal
+                - tab "IDE" [ref=e122] [cursor=pointer]:
+                  - generic [ref=e123]: IDE
+                - tab "Web and iOS" [ref=e124] [cursor=pointer]:
+                  - generic [ref=e125]: Web and iOS
+                - tab "Slack" [ref=e126] [cursor=pointer]:
+                  - generic [ref=e127]: Slack
+          - tabpanel [ref=e129]:
+            - generic [ref=e132]:
+              - img [ref=e142]
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - heading "Claude Code on desktop" [level=3] [ref=e154]
+                  - generic [ref=e156]: Beta
+                - generic [ref=e157]:
+                  - paragraph [ref=e159]: Run Claude Code in the desktop app. Manage multiple parallel tasks, review visual diffs, preview servers, and monitor PR status, all from one place.
+                  - generic [ref=e163]:
+                    - generic [ref=e164]: Download Claude for desktop
+                    - link "Download Claude for desktop" [ref=e166] [cursor=pointer]:
+                      - /url: /download
+                      - generic [ref=e167]: Download Claude for desktop
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - img "lottie-animation-container" [ref=e179]:
+            - img [ref=e181]
+          - heading "Get started with Claude Code" [level=2] [ref=e188]
+        - generic [ref=e190]:
+          - tablist [ref=e192]:
+            - generic [ref=e193]:
+              - tab "Individual" [selected] [ref=e194] [cursor=pointer]:
+                - img [ref=e197]
+                - generic [ref=e199]: Individual
+              - tab "Team & Enterprise" [ref=e200] [cursor=pointer]:
+                - img [ref=e203]
+                - generic [ref=e205]: Team & Enterprise
+          - tabpanel [ref=e207]:
+            - generic [ref=e212]:
+              - generic [ref=e213]:
+                - img [ref=e216]
+                - heading "Pro" [level=3] [ref=e227]
+                - paragraph [ref=e229]: Claude Code is included in your Pro plan. Perfect for short coding sprints in small codebases with access to both Sonnet 4.6 and Opus 4.6.
+                - generic [ref=e230]:
+                  - generic [ref=e231]: $17
+                  - paragraph [ref=e234]: Per month with annual subscription discount ($200 billed up front). $20 if billed monthly.
+                - generic [ref=e237]:
+                  - generic [ref=e238]: Try Claude
+                  - link "Try Claude" [ref=e240] [cursor=pointer]:
+                    - /url: https://claude.ai/login?plan=pro
+                    - generic [ref=e241]: Try Claude
+              - generic [ref=e242]:
+                - img [ref=e245]
+                - heading "Max 5x" [level=3] [ref=e261]
+                - paragraph [ref=e263]: Claude Code is included in your Max plan. Great value for everyday use in larger codebases.
+                - generic [ref=e264]:
+                  - generic [ref=e265]: $100
+                  - paragraph [ref=e268]: Per month
+                - generic [ref=e271]:
+                  - generic [ref=e272]: Try Claude
+                  - link "Try Claude" [ref=e274] [cursor=pointer]:
+                    - /url: https://claude.ai/login?plan=max
+                    - generic [ref=e275]: Try Claude
+              - generic [ref=e276]:
+                - img [ref=e279]
+                - heading "Max 20x" [level=3] [ref=e295]
+                - paragraph [ref=e297]: Even more Claude Code included in your Max plan. Great value for power users with the most access to Claude models.
+                - generic [ref=e298]:
+                  - generic [ref=e299]: $200
+                  - paragraph [ref=e302]: Per month
+                - generic [ref=e305]:
+                  - generic [ref=e306]: Try Claude
+                  - link "Try Claude" [ref=e308] [cursor=pointer]:
+                    - /url: https://claude.ai/login?plan=max
+                    - generic [ref=e309]: Try Claude
+        - paragraph [ref=e311]:
+          - text: "*"
+          - link "Usage limits" [ref=e312] [cursor=pointer]:
+            - /url: https://support.anthropic.com/en/articles/9797557-usage-limit-best-practices
+          - text: apply. Prices shown don’t include applicable tax.
+      - generic [ref=e320]:
+        - img "lottie-animation-container" [ref=e326]:
+          - img [ref=e328]
+        - heading "Start a task from your phone, come back to a pull request" [level=2] [ref=e339]
+      - generic [ref=e350]:
+        - generic [ref=e351]:
+          - img "lottie-animation-container" [ref=e357]:
+            - img [ref=e359]
+          - heading "What could you do with Claude Code?" [level=2] [ref=e374]
+        - generic [ref=e377]:
+          - generic [ref=e380]:
+            - tablist [ref=e382]:
+              - generic [ref=e383]:
+                - tab "Onboarding" [selected] [ref=e384] [cursor=pointer]:
+                  - img [ref=e387]
+                  - generic [ref=e389]: Onboarding
+                - tab "Triage issues" [ref=e390] [cursor=pointer]:
+                  - img [ref=e393]
+                  - generic [ref=e395]: Triage issues
+                - tab "Refactor code" [ref=e396] [cursor=pointer]:
+                  - img [ref=e399]
+                  - generic [ref=e401]: Refactor code
+            - tabpanel [ref=e403]:
+              - generic [ref=e412]:
+                - generic [ref=e413]:
+                  - generic [ref=e414]: ">"
+                  - generic [ref=e415]: I'm new to this codebase. Can you explain it to me?
+                - generic [ref=e417]:
+                  - paragraph [ref=e418]: ⏺ I'll analyze the Excalidraw codebase structure and provide a high-level overview.
+                  - paragraph [ref=e419]: ‍
+                  - paragraph [ref=e420]: "⏺ Analyze(what: \"Excalidraw codebase structure and provide a high-level overview of what it is, its main components, and how they're organized. Focus on understanding the project's purpose, architecture, and key features.\")"
+                  - paragraph [ref=e421]: ‍
+                  - paragraph [ref=e422]: Excalidraw is an open-source virtual whiteboard application with a hand-drawn style. It's designed for creating diagrams, wireframes, and collaborative drawings.
+                  - paragraph [ref=e423]: ‍
+                  - paragraph [ref=e424]: "## Purpose"
+                  - paragraph [ref=e425]: "- Web-based drawing tool with infinite canvas"
+                  - paragraph [ref=e426]: "- Hand-drawn aesthetic with support for shapes, arrows, text"
+                  - paragraph [ref=e427]: "- End-to-end encrypted collaboration"
+                  - paragraph [ref=e428]: "- Works offline as a PWA (Progressive Web App)"
+                  - paragraph [ref=e429]: ‍
+                  - paragraph [ref=e430]: "## Architecture"
+                  - paragraph [ref=e431]: "The project is organized as a monorepo with these main components:"
+                  - paragraph [ref=e432]: ‍
+                  - paragraph [ref=e433]: 1. Core Package (packages/excalidraw)
+                  - paragraph [ref=e434]: "- React component library for embedding Excalidraw in any application"
+                  - paragraph [ref=e435]: "- Handles drawing, rendering, and core functionality"
+                  - paragraph [ref=e436]: "- Uses roughjs for the hand-drawn style"
+                  - paragraph [ref=e437]: "- Includes export capabilities (PNG, SVG)"
+                  - paragraph [ref=e438]: ‍
+                  - paragraph [ref=e439]: 2. Web Application (excalidraw-app/)
+                  - paragraph [ref=e440]: "- Full-featured web app at excalidraw.com"
+                  - paragraph [ref=e441]: "- Built on top of the core package"
+                  - paragraph [ref=e442]: "- Adds collaboration features, local storage, sharing"
+                  - paragraph [ref=e443]: ‍
+                  - paragraph [ref=e444]: 3. Support Packages
+                  - paragraph [ref=e445]: "- common - Shared utilities and constants"
+                  - paragraph [ref=e446]: "- element - Element manipulation and type definitions"
+                  - paragraph [ref=e447]: "- math - Mathematical functions for drawing"
+                  - paragraph [ref=e448]: "- utils - General utility functions"
+                  - paragraph [ref=e449]: ‍
+                  - paragraph [ref=e450]: 4. Examples
+                  - paragraph [ref=e451]: "- Integration examples (Next.js, browser script)"
+                  - paragraph [ref=e452]: "- Shows how to embed Excalidraw in different environments"
+                  - paragraph [ref=e453]: ‍
+                  - paragraph [ref=e454]: 5. Documentation (dev-docs/)
+                  - paragraph [ref=e455]: "- API documentation"
+                  - paragraph [ref=e456]: "- Integration guides"
+                  - paragraph [ref=e457]: "- Component documentation"
+                  - paragraph [ref=e458]: ‍
+                  - paragraph [ref=e459]: "## Key Features"
+                  - paragraph [ref=e460]: "- Real-time collaboration with end-to-end encryption"
+                  - paragraph [ref=e461]: "- Export to various formats (PNG, SVG, JSON)"
+                  - paragraph [ref=e462]: "- Customizable drawing tools (rectangle, circle, arrows, freehand)"
+                  - paragraph [ref=e463]: "- Dark mode support"
+                  - paragraph [ref=e464]: "- Localization"
+                  - paragraph [ref=e465]: "- Library of shapes and components"
+                  - paragraph [ref=e466]: "- Arrow bindings and labels"
+                  - paragraph [ref=e467]: "- Image support"
+                  - paragraph [ref=e468]: ‍
+                  - paragraph [ref=e469]: "## Technology Stack"
+                  - paragraph [ref=e470]: "- React for UI"
+                  - paragraph [ref=e471]: "- TypeScript for type safety"
+                  - paragraph [ref=e472]: "- Firebase for collaboration backend"
+                  - paragraph [ref=e473]: "- Jotai for state management"
+                  - paragraph [ref=e474]: "- Vite for development and building"
+                  - paragraph [ref=e475]: "- IndexedDB/LocalStorage for offline storage"
+                  - paragraph [ref=e476]: ‍
+                  - paragraph [ref=e477]: The architecture allows for both using Excalidraw as a component in other applications and as a standalone web application with additional features.
+          - generic [ref=e481]:
+            - generic [ref=e483]:
+              - heading "Code onboarding" [level=3] [ref=e485]
+              - paragraph [ref=e487]: Claude Code maps and explains entire codebases in a few seconds. It uses agentic search to understand project structure and dependencies without you having to manually select context files.
+            - generic [ref=e489]:
+              - heading "Turn issues into PRs" [level=3] [ref=e491]
+              - paragraph [ref=e493]: Stop bouncing between tools. Claude Code integrates with GitHub, GitLab, and your command line tools to handle the entire workflow—reading issues, writing code, running tests, and submitting PRs—all from your terminal.
+            - generic [ref=e495]:
+              - heading "Make powerful edits" [level=3] [ref=e497]
+              - paragraph [ref=e499]: Claude Code’s understanding of your codebase and dependencies enables it to make powerful, multi-file edits that work.
+      - generic [ref=e511]:
+        - generic [ref=e512]:
+          - img "lottie-animation-container" [ref=e518]:
+            - img [ref=e520]
+          - heading "Meets you where you code" [level=2] [ref=e539]
+        - generic [ref=e544]:
+          - generic [ref=e545]:
+            - img [ref=e548]
+            - generic [ref=e557]: Kick off coding tasks in Slack
+          - generic [ref=e560]:
+            - generic [ref=e561]:
+              - generic [ref=e562]: Add to Slack
+              - img [ref=e566]
+              - link "Add to Slack" [ref=e569] [cursor=pointer]:
+                - /url: https://slack.com/oauth/v2/authorize?client_id=1601185624273.8899143856786&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,files:read,files:write,groups:history,groups:read,im:history,im:read,im:write,mpim:history,reactions:write,users:read,users:read.email,commands,search:read.public&user_scope=bookmarks:read,channels:history,channels:read,chat:write,emoji:read,files:read,groups:history,groups:read,groups:write,im:history,im:read,im:write,links:read,mpim:history,mpim:read,mpim:write,mpim:write.topic,pins:read,reactions:read,reactions:write,remote_files:read,team:read,users:read,users:read.email,search:read.public,search:read.private,search:read.im,search:read.mpim,search:read.files,search:read.users,canvases:read,canvases:write
+                - generic [ref=e570]: Add to Slack
+            - generic [ref=e571]:
+              - generic [ref=e572]: Learn more
+              - link "Learn more" [ref=e574] [cursor=pointer]:
+                - /url: /claude-for-slack
+                - generic [ref=e575]: Learn more
+      - generic [ref=e582]:
+        - generic [ref=e583]:
+          - img "lottie-animation-container" [ref=e588]:
+            - img [ref=e590]
+          - heading "Latest feature announcements" [level=2] [ref=e601]
+        - generic [ref=e603]:
+          - generic [ref=e604]: View changelog
+          - img [ref=e608]
+          - link "View changelog" [ref=e611] [cursor=pointer]:
+            - /url: https://code.claude.com/docs/en/changelog
+            - generic [ref=e612]: View changelog
+      - generic [ref=e619]:
+        - heading "What developers are saying" [level=2] [ref=e621]
+        - list [ref=e626]:
+          - listitem [ref=e627]:
+            - generic [ref=e629]:
+              - img "Ramp" [ref=e631]
+              - generic [ref=e632]:
+                - generic [ref=e633]:
+                  - paragraph [ref=e634]: “Claude Code has dramatically accelerated our team’s coding efficiency. I can now write EDA code in a notebook—pulling data, training a model, and evaluating it with basic metrics—and then ask Claude to convert that into a Metaflow pipeline. This process saves 1-2 days of routine (and often boring!) work per model.”
+                  - generic [ref=e636]: Anton Biryukov, Staff Software Engineer
+                - generic [ref=e639]:
+                  - generic [ref=e640]: Read story
+                  - link "Read story" [ref=e642] [cursor=pointer]:
+                    - /url: https://www.claude.com/customers/ramp
+                    - generic [ref=e643]: Read story
+          - listitem [ref=e644]:
+            - generic [ref=e646]:
+              - img "Intercom" [ref=e648]
+              - generic [ref=e649]:
+                - generic [ref=e650]:
+                  - paragraph [ref=e651]: “With Claude, we’re not just automating customer service—we’re elevating it to truly human quality. This lets support teams think more strategically about customer experience and what makes interactions genuinely valuable.”
+                  - generic [ref=e653]: Fergal Reid, VP of AI
+                - generic [ref=e656]:
+                  - generic [ref=e657]: Read story
+                  - link "Read story" [ref=e659] [cursor=pointer]:
+                    - /url: https://www.claude.com/customers/intercom
+                    - generic [ref=e660]: Read story
+          - listitem [ref=e661]:
+            - generic [ref=e663]:
+              - img "Notion (Simon Last 2)" [ref=e665]
+              - generic [ref=e666]:
+                - generic [ref=e667]:
+                  - paragraph [ref=e668]: "“Claude Code is moving our team up a level: we decide what needs to happen, and smooth the process so it can build and verify end-to-end. A big part of my job now is to keep as many instances of Claude Code busy as possible.”"
+                  - generic [ref=e670]: Simon Last, Co-founder
+                - generic [ref=e673]:
+                  - generic [ref=e674]: Read story
+                  - link "Read story" [ref=e676] [cursor=pointer]:
+                    - /url: https://www.claude.com/customers/notion
+                    - generic [ref=e677]: Read story
+      - generic [ref=e684]:
+        - list [ref=e689]
+        - generic [ref=e693]:
+          - heading "Connects with your favorite command line tools" [level=2] [ref=e695]
+          - paragraph [ref=e697]: Your terminal is where real work happens. Claude Code connects with the tools that power development—deployment, databases, monitoring, version control. Rather than adding another interface to juggle, it enhances your existing stack.
+      - generic [ref=e704]:
+        - generic [ref=e705]:
+          - img "lottie-animation-container" [ref=e711]:
+            - img [ref=e713]
+          - heading "FAQ" [level=2] [ref=e724]
+        - generic [ref=e726]:
+          - list [ref=e730]:
+            - generic [ref=e731]:
+              - listitem [ref=e732]:
+                - heading "How do I get started with Claude?" [level=3] [ref=e734]:
+                  - button "How do I get started with Claude?" [ref=e735] [cursor=pointer]:
+                    - generic [ref=e736]: How do I get started with Claude?
+              - listitem [ref=e740]:
+                - heading "What kinds of tasks can Claude Code handle?" [level=3] [ref=e742]:
+                  - button "What kinds of tasks can Claude Code handle?" [ref=e743] [cursor=pointer]:
+                    - generic [ref=e744]: What kinds of tasks can Claude Code handle?
+              - listitem [ref=e748]:
+                - heading "How does Claude Code work with my existing tools?" [level=3] [ref=e750]:
+                  - button "How does Claude Code work with my existing tools?" [ref=e751] [cursor=pointer]:
+                    - generic [ref=e752]: How does Claude Code work with my existing tools?
+              - listitem [ref=e756]:
+                - heading "Is Claude Code secure?" [level=3] [ref=e758]:
+                  - button "Is Claude Code secure?" [ref=e759] [cursor=pointer]:
+                    - generic [ref=e760]: Is Claude Code secure?
+              - listitem [ref=e764]:
+                - heading "Which models does Claude Code use?" [level=3] [ref=e766]:
+                  - button "Which models does Claude Code use?" [ref=e767] [cursor=pointer]:
+                    - generic [ref=e768]: Which models does Claude Code use?
+              - listitem [ref=e772]:
+                - heading "What are the system requirements to run Claude Code?" [level=3] [ref=e774]:
+                  - button "What are the system requirements to run Claude Code?" [ref=e775] [cursor=pointer]:
+                    - generic [ref=e776]: What are the system requirements to run Claude Code?
+              - listitem [ref=e780]:
+                - heading "How much does Claude Code cost?" [level=3] [ref=e782]:
+                  - button "How much does Claude Code cost?" [ref=e783] [cursor=pointer]:
+                    - generic [ref=e784]: How much does Claude Code cost?
+              - listitem [ref=e788]:
+                - heading "Does Claude Code work with the Claude desktop app?" [level=3] [ref=e790]:
+                  - button "Does Claude Code work with the Claude desktop app?" [ref=e791] [cursor=pointer]:
+                    - generic [ref=e792]: Does Claude Code work with the Claude desktop app?
+              - listitem [ref=e796]:
+                - heading "What is fast mode on Claude Code?" [level=3] [ref=e798]:
+                  - button "What is fast mode on Claude Code?" [ref=e799] [cursor=pointer]:
+                    - generic [ref=e800]: What is fast mode on Claude Code?
+          - generic [ref=e807]:
+            - generic [ref=e808] [cursor=pointer]:
+              - img [ref=e811]
+              - button "Prev" [ref=e814]:
+                - generic [ref=e815]: Prev
+            - generic [ref=e816]:
+              - button "Go to slide 1" [ref=e817] [cursor=pointer]
+              - button "Go to slide 2" [ref=e818] [cursor=pointer]
+              - button "Go to slide 3" [ref=e819] [cursor=pointer]
+              - button "Go to slide 4" [ref=e820] [cursor=pointer]
+            - generic [ref=e821] [cursor=pointer]:
+              - img [ref=e824]
+              - button "Next" [ref=e827]:
+                - generic [ref=e828]: Next
+      - generic [ref=e836]:
+        - img "lottie-animation-container" [ref=e842]:
+          - img [ref=e844]
+        - heading "Get the technical rundown" [level=2] [ref=e861]
+      - generic [ref=e871]:
+        - generic [ref=e873]:
+          - heading "Create what’s exciting. Maintain what’s essential." [level=2] [ref=e875]
+          - generic [ref=e877]:
+            - generic [ref=e878]: Use Claude Code where you work
+            - generic [ref=e879]:
+              - button "Get Claude Code" [ref=e881] [cursor=pointer]:
+                - generic [ref=e882]: Get Claude Code
+                - img [ref=e885]
+              - button "curl -fsSL https://claude.ai/install.sh | bash Copy command to clipboard" [ref=e888] [cursor=pointer]:
+                - generic [ref=e889]: curl -fsSL https://claude.ai/install.sh | bash
+                - generic [ref=e890]:
+                  - generic [ref=e891]: Copy command to clipboard
+                  - img [ref=e893]
+            - generic [ref=e895]:
+              - text: Or read the
+              - link "documentation" [ref=e896] [cursor=pointer]:
+                - /url: https://code.claude.com/docs/en/overview
+        - generic [ref=e902]:
+          - img [ref=e906]
+          - heading "Get the developer newsletter" [level=3] [ref=e914]
+          - paragraph [ref=e916]: Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.
+          - form "Claude developer newsletter subscription" [ref=e918]:
+            - generic [ref=e919]:
+              - textbox "email" [ref=e920]:
+                - /placeholder: Enter your email
+              - generic [ref=e921] [cursor=pointer]:
+                - img [ref=e924]
+                - button "Subscribe" [ref=e927]:
+                  - generic [ref=e928]: Subscribe
+            - paragraph [ref=e930]: Please provide your email address if you'd like to receive our monthly developer newsletter. You can unsubscribe at any time.
+    - generic [ref=e935]:
+      - generic [ref=e936]:
+        - generic [ref=e937]:
+          - generic [ref=e938]:
+            - generic [ref=e939]:
+              - img [ref=e941]
+              - link "Homepage" [ref=e945] [cursor=pointer]:
+                - /url: https://claude.com
+                - generic [ref=e946]: Homepage
+            - generic [ref=e948]:
+              - form "Footer Prompt" [ref=e951]:
+                - generic [ref=e952]:
+                  - textbox "How can I help you today?" [ref=e953]
+                  - generic [ref=e954]:
+                    - img [ref=e957]
+                    - button "Next" [ref=e960] [cursor=pointer]:
+                      - generic [ref=e961]: Next
+              - generic [ref=e962]:
+                - generic [ref=e963]:
+                  - img [ref=e966]
+                  - generic [ref=e968]: Write
+                  - button "Button Text" [ref=e970] [cursor=pointer]:
+                    - generic [ref=e971]: Button Text
+                - generic [ref=e972]:
+                  - img [ref=e975]
+                  - generic [ref=e977]: Learn
+                  - button "Button Text" [ref=e979] [cursor=pointer]:
+                    - generic [ref=e980]: Button Text
+                - generic [ref=e981]:
+                  - img [ref=e984]
+                  - generic [ref=e986]: Code
+                  - button "Button Text" [ref=e988] [cursor=pointer]:
+                    - generic [ref=e989]: Button Text
+          - generic [ref=e990]:
+            - generic [ref=e991]:
+              - img [ref=e992]
+              - link "Anthropic" [ref=e1005] [cursor=pointer]:
+                - /url: https://www.anthropic.com/
+                - generic [ref=e1006]: Anthropic
+            - generic [ref=e1007]: © 2026 Anthropic PBC
+        - generic [ref=e1009]:
+          - generic [ref=e1010]:
+            - generic [ref=e1011]:
+              - generic [ref=e1012]: Products
+              - list [ref=e1013]:
+                - listitem [ref=e1014]:
+                  - generic [ref=e1015]: Claude
+                  - link "Claude" [ref=e1017] [cursor=pointer]:
+                    - /url: /product/overview
+                    - generic [ref=e1018]: Claude
+                - listitem [ref=e1019]:
+                  - generic [ref=e1020]: Claude Code
+                  - link "Claude Code" [ref=e1022] [cursor=pointer]:
+                    - /url: /product/claude-code
+                    - generic [ref=e1023]: Claude Code
+                - listitem [ref=e1024]:
+                  - generic [ref=e1025]: Claude Code for Enterprise
+                  - link "Claude Code for Enterprise" [ref=e1027] [cursor=pointer]:
+                    - /url: /product/claude-code/enterprise
+                    - generic [ref=e1028]: Claude Code for Enterprise
+                - listitem [ref=e1029]:
+                  - generic [ref=e1030]: Claude Cowork
+                  - link "Claude Cowork" [ref=e1032] [cursor=pointer]:
+                    - /url: /product/cowork
+                    - generic [ref=e1033]: Claude Cowork
+                - listitem [ref=e1034]:
+                  - generic [ref=e1035]: Max plan
+                  - link "Max plan" [ref=e1037] [cursor=pointer]:
+                    - /url: /pricing/max
+                    - generic [ref=e1038]: Max plan
+                - listitem [ref=e1039]:
+                  - generic [ref=e1040]: Team plan
+                  - link "Team plan" [ref=e1042] [cursor=pointer]:
+                    - /url: /pricing/team
+                    - generic [ref=e1043]: Team plan
+                - listitem [ref=e1044]:
+                  - generic [ref=e1045]: Enterprise plan
+                  - link "Enterprise plan" [ref=e1047] [cursor=pointer]:
+                    - /url: /pricing/enterprise
+                    - generic [ref=e1048]: Enterprise plan
+                - listitem [ref=e1049]:
+                  - generic [ref=e1050]: Download app
+                  - link "Download app" [ref=e1052] [cursor=pointer]:
+                    - /url: /download
+                    - generic [ref=e1053]: Download app
+                - listitem [ref=e1054]:
+                  - generic [ref=e1055]: Pricing
+                  - link "Pricing" [ref=e1057] [cursor=pointer]:
+                    - /url: /pricing
+                    - generic [ref=e1058]: Pricing
+                - listitem [ref=e1059]:
+                  - generic [ref=e1060]: Log in
+                  - link "Log in" [ref=e1062] [cursor=pointer]:
+                    - /url: https://claude.ai/login
+                    - generic [ref=e1063]: Log in
+            - generic [ref=e1064]:
+              - generic [ref=e1065]: Features
+              - list [ref=e1066]:
+                - listitem [ref=e1067]:
+                  - generic [ref=e1068]: Claude for Chrome
+                  - link "Claude for Chrome" [ref=e1070] [cursor=pointer]:
+                    - /url: /claude-for-chrome
+                    - generic [ref=e1071]: Claude for Chrome
+                - listitem [ref=e1072]:
+                  - generic [ref=e1073]: Claude for Slack
+                  - link "Claude for Slack" [ref=e1075] [cursor=pointer]:
+                    - /url: /claude-for-slack
+                    - generic [ref=e1076]: Claude for Slack
+                - listitem [ref=e1077]:
+                  - generic [ref=e1078]: Claude for Excel
+                  - link "Claude for Excel" [ref=e1080] [cursor=pointer]:
+                    - /url: /claude-for-excel
+                    - generic [ref=e1081]: Claude for Excel
+                - listitem [ref=e1082]:
+                  - generic [ref=e1083]: Claude for PowerPoint
+                  - link "Claude for PowerPoint" [ref=e1085] [cursor=pointer]:
+                    - /url: /claude-for-powerpoint
+                    - generic [ref=e1086]: Claude for PowerPoint
+                - listitem [ref=e1087]:
+                  - generic [ref=e1088]: Skills
+                  - link "Skills" [ref=e1090] [cursor=pointer]:
+                    - /url: /skills
+                    - generic [ref=e1091]: Skills
+            - generic [ref=e1092]:
+              - generic [ref=e1093]: Models
+              - list [ref=e1094]:
+                - listitem [ref=e1095]:
+                  - generic [ref=e1096]: Opus
+                  - link "Opus" [ref=e1098] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/claude/opus
+                    - generic [ref=e1099]: Opus
+                - listitem [ref=e1100]:
+                  - generic [ref=e1101]: Sonnet
+                  - link "Sonnet" [ref=e1103] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/claude/sonnet
+                    - generic [ref=e1104]: Sonnet
+                - listitem [ref=e1105]:
+                  - generic [ref=e1106]: Haiku
+                  - link "Haiku" [ref=e1108] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/claude/haiku
+                    - generic [ref=e1109]: Haiku
+          - generic [ref=e1110]:
+            - generic [ref=e1111]:
+              - generic [ref=e1112]: Solutions
+              - list [ref=e1113]:
+                - listitem [ref=e1114]:
+                  - generic [ref=e1115]: AI agents
+                  - link "AI agents" [ref=e1117] [cursor=pointer]:
+                    - /url: /solutions/agents
+                    - generic [ref=e1118]: AI agents
+                - listitem [ref=e1119]:
+                  - generic [ref=e1120]: Claude Code Security
+                  - link "Claude Code Security" [ref=e1122] [cursor=pointer]:
+                    - /url: /solutions/claude-code-security
+                    - generic [ref=e1123]: Claude Code Security
+                - listitem [ref=e1124]:
+                  - generic [ref=e1125]: Code modernization
+                  - link "Code modernization" [ref=e1127] [cursor=pointer]:
+                    - /url: /solutions/code-modernization
+                    - generic [ref=e1128]: Code modernization
+                - listitem [ref=e1129]:
+                  - generic [ref=e1130]: Coding
+                  - link "Coding" [ref=e1132] [cursor=pointer]:
+                    - /url: /solutions/coding
+                    - generic [ref=e1133]: Coding
+                - listitem [ref=e1134]:
+                  - generic [ref=e1135]: Customer support
+                  - link "Customer support" [ref=e1137] [cursor=pointer]:
+                    - /url: /solutions/customer-support
+                    - generic [ref=e1138]: Customer support
+                - listitem [ref=e1139]:
+                  - generic [ref=e1140]: Education
+                  - link "Education" [ref=e1142] [cursor=pointer]:
+                    - /url: /solutions/education
+                    - generic [ref=e1143]: Education
+                - listitem [ref=e1144]:
+                  - generic [ref=e1145]: Financial services
+                  - link "Financial services" [ref=e1147] [cursor=pointer]:
+                    - /url: /solutions/financial-services
+                    - generic [ref=e1148]: Financial services
+                - listitem [ref=e1149]:
+                  - generic [ref=e1150]: Government
+                  - link "Government" [ref=e1152] [cursor=pointer]:
+                    - /url: /solutions/government
+                    - generic [ref=e1153]: Government
+                - listitem [ref=e1154]:
+                  - generic [ref=e1155]: Healthcare
+                  - link "Healthcare" [ref=e1157] [cursor=pointer]:
+                    - /url: /solutions/healthcare
+                    - generic [ref=e1158]: Healthcare
+                - listitem [ref=e1159]:
+                  - generic [ref=e1160]: Life sciences
+                  - link "Life sciences" [ref=e1162] [cursor=pointer]:
+                    - /url: /solutions/life-sciences
+                    - generic [ref=e1163]: Life sciences
+                - listitem [ref=e1164]:
+                  - generic [ref=e1165]: Nonprofits
+                  - link "Nonprofits" [ref=e1167] [cursor=pointer]:
+                    - /url: /solutions/nonprofits
+                    - generic [ref=e1168]: Nonprofits
+            - generic [ref=e1169]:
+              - generic [ref=e1170]: Claude Platform
+              - list [ref=e1171]:
+                - listitem [ref=e1172]:
+                  - generic [ref=e1173]: Overview
+                  - link "Overview" [ref=e1175] [cursor=pointer]:
+                    - /url: /platform/api
+                    - generic [ref=e1176]: Overview
+                - listitem [ref=e1177]:
+                  - generic [ref=e1178]: Developer docs
+                  - link "Developer docs" [ref=e1180] [cursor=pointer]:
+                    - /url: https://platform.claude.com/docs
+                    - generic [ref=e1181]: Developer docs
+                - listitem [ref=e1182]:
+                  - generic [ref=e1183]: Pricing
+                  - link "Pricing" [ref=e1185] [cursor=pointer]:
+                    - /url: https://claude.com/pricing#api
+                    - generic [ref=e1186]: Pricing
+                - listitem [ref=e1187]:
+                  - generic [ref=e1188]: Marketplace
+                  - link "Marketplace" [ref=e1190] [cursor=pointer]:
+                    - /url: /platform/marketplace
+                    - generic [ref=e1191]: Marketplace
+                - listitem [ref=e1192]:
+                  - generic [ref=e1193]: Amazon Bedrock
+                  - link "Amazon Bedrock" [ref=e1195] [cursor=pointer]:
+                    - /url: /partners/amazon-bedrock
+                    - generic [ref=e1196]: Amazon Bedrock
+                - listitem [ref=e1197]:
+                  - generic [ref=e1198]: Google Cloud’s Vertex AI
+                  - link "Google Cloud’s Vertex AI" [ref=e1200] [cursor=pointer]:
+                    - /url: /partners/google-cloud-vertex-ai
+                    - generic [ref=e1201]: Google Cloud’s Vertex AI
+                - listitem [ref=e1202]:
+                  - generic [ref=e1203]: Microsoft Foundry
+                  - link "Microsoft Foundry" [ref=e1205] [cursor=pointer]:
+                    - /url: /partners/microsoft-foundry
+                    - generic [ref=e1206]: Microsoft Foundry
+                - listitem [ref=e1207]:
+                  - generic [ref=e1208]: Regional compliance
+                  - link "Regional compliance" [ref=e1210] [cursor=pointer]:
+                    - /url: /regional-compliance
+                    - generic [ref=e1211]: Regional compliance
+                - listitem [ref=e1212]:
+                  - generic [ref=e1213]: Console login
+                  - link "Console login" [ref=e1215] [cursor=pointer]:
+                    - /url: https://platform.claude.com/
+                    - generic [ref=e1216]: Console login
+          - generic [ref=e1217]:
+            - generic [ref=e1218]:
+              - generic [ref=e1219]: Resources
+              - list [ref=e1220]:
+                - listitem [ref=e1221]:
+                  - generic [ref=e1222]: Blog
+                  - link "Blog" [ref=e1224] [cursor=pointer]:
+                    - /url: /blog
+                    - generic [ref=e1225]: Blog
+                - listitem [ref=e1226]:
+                  - generic [ref=e1227]: Claude partner network
+                  - link "Claude partner network" [ref=e1229] [cursor=pointer]:
+                    - /url: /partners
+                    - generic [ref=e1230]: Claude partner network
+                - listitem [ref=e1231]:
+                  - generic [ref=e1232]: Community
+                  - link "Community" [ref=e1234] [cursor=pointer]:
+                    - /url: /community
+                    - generic [ref=e1235]: Community
+                - listitem [ref=e1236]:
+                  - generic [ref=e1237]: Connectors
+                  - link "Connectors" [ref=e1239] [cursor=pointer]:
+                    - /url: /connectors
+                    - generic [ref=e1240]: Connectors
+                - listitem [ref=e1241]:
+                  - generic [ref=e1242]: Courses
+                  - link "Courses" [ref=e1244] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/learn
+                    - generic [ref=e1245]: Courses
+                - listitem [ref=e1246]:
+                  - generic [ref=e1247]: Customer stories
+                  - link "Customer stories" [ref=e1249] [cursor=pointer]:
+                    - /url: /customers
+                    - generic [ref=e1250]: Customer stories
+                - listitem [ref=e1251]:
+                  - generic [ref=e1252]: Engineering at Anthropic
+                  - link "Engineering at Anthropic" [ref=e1254] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/engineering
+                    - generic [ref=e1255]: Engineering at Anthropic
+                - listitem [ref=e1256]:
+                  - generic [ref=e1257]: Events
+                  - link "Events" [ref=e1259] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/events
+                    - generic [ref=e1260]: Events
+                - listitem [ref=e1261]:
+                  - generic [ref=e1262]: Plugins
+                  - link "Plugins" [ref=e1264] [cursor=pointer]:
+                    - /url: /plugins
+                    - generic [ref=e1265]: Plugins
+                - listitem [ref=e1266]:
+                  - generic [ref=e1267]: Powered by Claude
+                  - link "Powered by Claude" [ref=e1269] [cursor=pointer]:
+                    - /url: /partners/powered-by-claude
+                    - generic [ref=e1270]: Powered by Claude
+                - listitem [ref=e1271]:
+                  - generic [ref=e1272]: Service partners
+                  - link "Service partners" [ref=e1274] [cursor=pointer]:
+                    - /url: /partners/services
+                    - generic [ref=e1275]: Service partners
+                - listitem [ref=e1276]:
+                  - generic [ref=e1277]: Startups program
+                  - link "Startups program" [ref=e1279] [cursor=pointer]:
+                    - /url: /programs/startups
+                    - generic [ref=e1280]: Startups program
+                - listitem [ref=e1281]:
+                  - generic [ref=e1282]: Tutorials
+                  - link "Tutorials" [ref=e1284] [cursor=pointer]:
+                    - /url: /resources/tutorials
+                    - generic [ref=e1285]: Tutorials
+                - listitem [ref=e1286]:
+                  - generic [ref=e1287]: Use cases
+                  - link "Use cases" [ref=e1289] [cursor=pointer]:
+                    - /url: /resources/use-cases
+                    - generic [ref=e1290]: Use cases
+            - generic [ref=e1291]:
+              - generic [ref=e1292]: Company
+              - list [ref=e1293]:
+                - listitem [ref=e1294]:
+                  - generic [ref=e1295]: Anthropic
+                  - link "Anthropic" [ref=e1297] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/
+                    - generic [ref=e1298]: Anthropic
+                - listitem [ref=e1299]:
+                  - generic [ref=e1300]: Careers
+                  - link "Careers" [ref=e1302] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/careers
+                    - generic [ref=e1303]: Careers
+                - listitem [ref=e1304]:
+                  - generic [ref=e1305]: Economic Futures
+                  - link "Economic Futures" [ref=e1307] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/economic-futures
+                    - generic [ref=e1308]: Economic Futures
+                - listitem [ref=e1309]:
+                  - generic [ref=e1310]: Research
+                  - link "Research" [ref=e1312] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/research
+                    - generic [ref=e1313]: Research
+                - listitem [ref=e1314]:
+                  - generic [ref=e1315]: News
+                  - link "News" [ref=e1317] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/news
+                    - generic [ref=e1318]: News
+                - listitem [ref=e1319]:
+                  - generic [ref=e1320]: Responsible Scaling Policy
+                  - link "Responsible Scaling Policy" [ref=e1322] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy
+                    - generic [ref=e1323]: Responsible Scaling Policy
+                - listitem [ref=e1324]:
+                  - generic [ref=e1325]: Security and compliance
+                  - link "Security and compliance" [ref=e1327] [cursor=pointer]:
+                    - /url: https://trust.anthropic.com/
+                    - generic [ref=e1328]: Security and compliance
+                - listitem [ref=e1329]:
+                  - generic [ref=e1330]: Transparency
+                  - link "Transparency" [ref=e1332] [cursor=pointer]:
+                    - /url: https://anthropic.com/transparency
+                    - generic [ref=e1333]: Transparency
+          - generic [ref=e1334]:
+            - generic [ref=e1335]:
+              - generic [ref=e1336]: Help and security
+              - list [ref=e1337]:
+                - listitem [ref=e1338]:
+                  - generic [ref=e1339]: Availability
+                  - link "Availability" [ref=e1341] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/supported-countries
+                    - generic [ref=e1342]: Availability
+                - listitem [ref=e1343]:
+                  - generic [ref=e1344]: Status
+                  - link "Status" [ref=e1346] [cursor=pointer]:
+                    - /url: https://status.anthropic.com/
+                    - generic [ref=e1347]: Status
+                - listitem [ref=e1348]:
+                  - generic [ref=e1349]: Support center
+                  - link "Support center" [ref=e1351] [cursor=pointer]:
+                    - /url: https://support.claude.com/en/
+                    - generic [ref=e1352]: Support center
+            - generic [ref=e1353]:
+              - generic [ref=e1354]: Terms and policies
+              - list [ref=e1355]:
+                - listitem [ref=e1356]:
+                  - button [ref=e1357] [cursor=pointer]:
+                    - generic [ref=e1358]: Privacy choices
+                - listitem [ref=e1359]:
+                  - generic [ref=e1360]: Privacy policy
+                  - link "Privacy policy" [ref=e1362] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/legal/privacy
+                    - generic [ref=e1363]: Privacy policy
+                - listitem [ref=e1364]:
+                  - generic [ref=e1365]: Responsible disclosure policy
+                  - link "Responsible disclosure policy" [ref=e1367] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/responsible-disclosure-policy
+                    - generic [ref=e1368]: Responsible disclosure policy
+                - listitem [ref=e1369]:
+                  - generic [ref=e1370]: "Terms of service: Commercial"
+                  - 'link "Terms of service: Commercial" [ref=e1372] [cursor=pointer]':
+                    - /url: https://www.anthropic.com/legal/commercial-terms
+                    - generic [ref=e1373]: "Terms of service: Commercial"
+                - listitem [ref=e1374]:
+                  - generic [ref=e1375]: "Terms of service: Consumer"
+                  - 'link "Terms of service: Consumer" [ref=e1377] [cursor=pointer]':
+                    - /url: https://www.anthropic.com/legal/consumer-terms
+                    - generic [ref=e1378]: "Terms of service: Consumer"
+                - listitem [ref=e1379]:
+                  - generic [ref=e1380]: Usage policy
+                  - link "Usage policy" [ref=e1382] [cursor=pointer]:
+                    - /url: https://www.anthropic.com/legal/aup
+                    - generic [ref=e1383]: Usage policy
+      - generic [ref=e1384]:
+        - generic [ref=e1385]:
+          - generic [ref=e1386]:
+            - link "x.com" [ref=e1388] [cursor=pointer]:
+              - /url: https://x.com/claudeai
+              - generic [ref=e1389]: x.com
+            - img [ref=e1390]
+          - generic [ref=e1393]:
+            - link "LinkedIn" [ref=e1395] [cursor=pointer]:
+              - /url: https://www.linkedin.com/showcase/claude/
+              - generic [ref=e1396]: LinkedIn
+            - img [ref=e1397]
+          - generic [ref=e1399]:
+            - link "YouTube" [ref=e1401] [cursor=pointer]:
+              - /url: https://www.youtube.com/@anthropic-ai
+              - generic [ref=e1402]: YouTube
+            - img [ref=e1403]
+          - generic [ref=e1406]:
+            - link "Instagram" [ref=e1408] [cursor=pointer]:
+              - /url: https://www.instagram.com/claudeai
+              - generic [ref=e1409]: Instagram
+            - img [ref=e1410]
+        - button "English (US)" [ref=e1416] [cursor=pointer]:
+          - img [ref=e1419]
+          - generic [ref=e1421]: English (US)
+          - img [ref=e1422]
+  - tooltip

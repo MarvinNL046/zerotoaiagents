@@ -13,12 +13,14 @@ import { cursorReview } from "./cursor";
 import { claudeCodeReview } from "./claude-code";
 import { githubCopilotReview } from "./github-copilot";
 import { windsurfReview } from "./windsurf";
+import { devinReview } from "./devin";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
   "claude-code": claudeCodeReview,
   "github-copilot": githubCopilotReview,
   "windsurf": windsurfReview,
+  "devin": devinReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
