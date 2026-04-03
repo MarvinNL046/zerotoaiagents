@@ -16,10 +16,12 @@ import {
   ExternalLink,
   BookOpen,
   GitCompare,
+  ChevronDown,
 } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/structured-data";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
+import { getReviewContent } from "@/lib/review-content";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -150,6 +152,8 @@ export default async function ReviewPage({ params }: Props) {
     notFound();
   }
 
+  const reviewContent = getReviewContent(slug);
+
   const prefix = _locale === "en" ? "" : `/${_locale}`;
   const breadcrumbs = [
     { name: "Home", url: `${baseUrl}${prefix}` },
@@ -163,18 +167,30 @@ export default async function ReviewPage({ params }: Props) {
 
   const comparisonLinks = COMPARISON_LINKS[agent.slug] ?? [];
 
-  const tocSections = [
-    { id: "what-is", label: `What is ${agent.name}?` },
-    { id: "key-features", label: "Key Features" },
-    { id: "models-integrations", label: "Models & Integrations" },
-    { id: "pricing", label: "Pricing & Plans" },
-    { id: "pros-cons", label: "Pros & Cons" },
-    { id: "ratings", label: "Our Ratings" },
-    ...(comparisonLinks.length > 0 ? [{ id: "comparisons", label: "How It Compares" }] : []),
-    { id: "verdict", label: "Verdict" },
-    { id: "related-guides", label: "Related Guides" },
-    { id: "sources", label: "Sources & References" },
-  ];
+  const tocSections = reviewContent
+    ? [
+        { id: "key-takeaways", label: "Key Takeaways" },
+        { id: "full-review", label: "Full Review" },
+        { id: "pros-cons", label: "Pros & Cons" },
+        { id: "ratings", label: "Our Ratings" },
+        ...(comparisonLinks.length > 0 ? [{ id: "comparisons", label: "How It Compares" }] : []),
+        { id: "verdict", label: "Verdict" },
+        { id: "faq", label: "FAQ" },
+        { id: "related-guides", label: "Related Guides" },
+        { id: "sources", label: "Sources & References" },
+      ]
+    : [
+        { id: "what-is", label: `What is ${agent.name}?` },
+        { id: "key-features", label: "Key Features" },
+        { id: "models-integrations", label: "Models & Integrations" },
+        { id: "pricing", label: "Pricing & Plans" },
+        { id: "pros-cons", label: "Pros & Cons" },
+        { id: "ratings", label: "Our Ratings" },
+        ...(comparisonLinks.length > 0 ? [{ id: "comparisons", label: "How It Compares" }] : []),
+        { id: "verdict", label: "Verdict" },
+        { id: "related-guides", label: "Related Guides" },
+        { id: "sources", label: "Sources & References" },
+      ];
 
   return (
     <>
@@ -235,18 +251,33 @@ export default async function ReviewPage({ params }: Props) {
               Key Takeaways
             </h2>
             <ul className="space-y-2">
-              {agent.pros.slice(0, 4).map((pro, i) => (
+              {(reviewContent?.keyTakeaways ?? agent.pros.slice(0, 4)).map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-slate-200 text-sm">
                   <Check className="h-4 w-4 text-orange-400 flex-shrink-0 mt-0.5" />
-                  {pro}
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <p className="mt-5 text-xs text-slate-500">
-            Last updated: April 2, 2026
-          </p>
+          <div className="mt-5 flex items-center gap-4 text-xs text-slate-500">
+            <span>
+              Last updated:{" "}
+              {reviewContent
+                ? new Date(reviewContent.lastUpdated).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : "April 2, 2026"}
+            </span>
+            {reviewContent && (
+              <span className="flex items-center gap-1">
+                <BookOpen className="h-3 w-3" />
+                {reviewContent.readTime}
+              </span>
+            )}
+          </div>
         </div>
       </section>
 
@@ -285,6 +316,238 @@ export default async function ReviewPage({ params }: Props) {
           {/* Main Article Content */}
           <main className="flex-1 max-w-3xl min-w-0">
 
+            {reviewContent ? (
+              <>
+                {/* Rich Review: Key Takeaways anchor */}
+                <div id="key-takeaways" className="scroll-mt-24" />
+
+                {/* Rich Review: Full Article Content */}
+                <section id="full-review" className="mb-14 scroll-mt-24">
+                  <div
+                    className="review-content"
+                    dangerouslySetInnerHTML={{ __html: reviewContent.content }}
+                  />
+                </section>
+
+                {/* Section: Pros & Cons */}
+                <section id="pros-cons" className="mb-14 scroll-mt-24">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 pb-2 border-b border-slate-200 dark:border-slate-700">
+                    Pros &amp; Cons
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="border border-green-200 dark:border-green-800 rounded-xl p-5 bg-white dark:bg-slate-900 hover:shadow-lg transition-all">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-950/40 flex items-center justify-center">
+                          <Check className="h-4 w-4 text-green-600" />
+                        </span>
+                        <h3 className="font-bold text-green-700 dark:text-green-400">Pros</h3>
+                      </div>
+                      <ul className="space-y-3">
+                        {agent.pros.map((pro, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+                            <Check className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                            {pro}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="border border-red-200 dark:border-red-900 rounded-xl p-5 bg-white dark:bg-slate-900 hover:shadow-lg transition-all">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-950/40 flex items-center justify-center">
+                          <X className="h-4 w-4 text-red-600" />
+                        </span>
+                        <h3 className="font-bold text-red-700 dark:text-red-400">Cons</h3>
+                      </div>
+                      <ul className="space-y-3">
+                        {agent.cons.map((con, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+                            <X className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                            {con}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section: Our Ratings */}
+                <section id="ratings" className="mb-14 scroll-mt-24 bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 lg:p-8">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 pb-2 border-b border-slate-200 dark:border-slate-600">
+                    Our Ratings
+                  </h2>
+                  <div className="space-y-5">
+                    <RatingBar
+                      label="Overall"
+                      value={agent.overallRating}
+                      icon={<Sparkles className="h-4 w-4 text-orange-500" />}
+                    />
+                    <RatingBar
+                      label="Ease of Use"
+                      value={agent.easeOfUse}
+                      icon={<Zap className="h-4 w-4 text-orange-500" />}
+                    />
+                    <RatingBar
+                      label="Performance"
+                      value={agent.performance}
+                      icon={<Cpu className="h-4 w-4 text-orange-500" />}
+                    />
+                    <RatingBar
+                      label="Value for Money"
+                      value={agent.valueForMoney}
+                      icon={<DollarSign className="h-4 w-4 text-orange-500" />}
+                    />
+                  </div>
+                </section>
+
+                {/* Section: Comparisons */}
+                {comparisonLinks.length > 0 && (
+                  <section id="comparisons" className="mb-14 scroll-mt-24">
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 pb-2 border-b border-slate-200 dark:border-slate-700">
+                      How {agent.name} Compares
+                    </h2>
+                    <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm">
+                      Not sure {agent.name} is right for you? See how it stacks up against alternatives.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {comparisonLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="flex items-start gap-3 border border-slate-200 dark:border-slate-700 rounded-xl p-4 bg-white dark:bg-slate-900 hover:shadow-lg hover:border-orange-300 dark:hover:border-orange-700 transition-all group"
+                        >
+                          <span className="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-orange-200 dark:group-hover:bg-orange-950/60 transition-colors">
+                            <GitCompare className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+                          </span>
+                          <div>
+                            <div className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                              {link.title}
+                            </div>
+                            <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                              {link.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {/* Section: Verdict */}
+                <section id="verdict" className="mb-14 scroll-mt-24">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 pb-2 border-b border-slate-200 dark:border-slate-700">
+                    Verdict
+                  </h2>
+                  <div className="border-l-4 border-orange-500 bg-orange-50 dark:bg-orange-950/20 rounded-r-xl p-6 mb-6">
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      {agent.name} earns a strong <strong>{agent.overallRating}/5</strong> in our testing.{" "}
+                      {agent.editorChoice
+                        ? `It is our Editor's Choice in the ${getCategoryDisplayName(agent.category)} category — a well-rounded tool that delivers real value for the right team.`
+                        : `It is a solid choice for ${agent.bestFor.toLowerCase()}, offering a good balance of features and accessibility.`}
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      {agent.hasFreeTier
+                        ? `With a free tier available, there is very little risk in trying it out. `
+                        : `Starting at $${agent.monthlyPrice}/month, it is priced ${agent.valueForMoney >= 4 ? "competitively for what it offers" : "at a premium, but justifies the cost for power users"}. `}
+                      If you are evaluating AI {getCategoryDisplayName(agent.category).toLowerCase()}, {agent.name} deserves serious consideration.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <RatingStars rating={agent.overallRating} size="md" showValue={false} />
+                      <span className="font-bold text-slate-900 dark:text-white">{agent.overallRating}/5</span>
+                    </div>
+                    <Link
+                      href="/guides/how-to-choose-ai-coding-agent"
+                      className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-3 font-semibold text-sm transition-colors"
+                    >
+                      <BookOpen className="h-4 w-4" />
+                      Read our guide on choosing the right AI agent
+                    </Link>
+                  </div>
+                </section>
+
+                {/* Section: FAQ */}
+                <section id="faq" className="mb-14 scroll-mt-24">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 pb-2 border-b border-slate-200 dark:border-slate-700">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-4">
+                    {reviewContent.faqs.map((faq, i) => (
+                      <details
+                        key={i}
+                        className="group border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden"
+                      >
+                        <summary className="flex items-center justify-between p-5 cursor-pointer bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                          <span className="font-semibold text-slate-900 dark:text-white text-sm pr-4">
+                            {faq.question}
+                          </span>
+                          <ChevronDown className="h-4 w-4 text-slate-400 flex-shrink-0 group-open:rotate-180 transition-transform" />
+                        </summary>
+                        <div
+                          className="px-5 pb-5 pt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800"
+                          dangerouslySetInnerHTML={{ __html: faq.answer }}
+                        />
+                      </details>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Section: Related Guides */}
+                <section id="related-guides" className="mb-14 scroll-mt-24 bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 lg:p-8">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 pb-2 border-b border-slate-200 dark:border-slate-600">
+                    Related Guides
+                  </h2>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">
+                    Deepen your understanding with these in-depth guides.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {RELATED_GUIDES.map((guide) => (
+                      <Link
+                        key={guide.href}
+                        href={guide.href}
+                        className="flex flex-col gap-2 border border-slate-200 dark:border-slate-700 rounded-xl p-4 bg-white dark:bg-slate-900 hover:shadow-lg hover:border-orange-300 dark:hover:border-orange-700 transition-all group"
+                      >
+                        <span className="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center group-hover:bg-orange-200 dark:group-hover:bg-orange-950/60 transition-colors">
+                          <BookOpen className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+                        </span>
+                        <div className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                          {guide.title}
+                        </div>
+                        <div className="text-xs text-slate-500 dark:text-slate-400">
+                          {guide.description}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Section: Sources */}
+                <section id="sources" className="mb-14 scroll-mt-24">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 pb-2 border-b border-slate-200 dark:border-slate-700">
+                    Sources &amp; References
+                  </h2>
+                  <ul className="space-y-3">
+                    {reviewContent.sources.map((source, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm">
+                        <ExternalLink className="h-4 w-4 text-slate-400 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <a
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-orange-600 hover:text-orange-700 dark:text-orange-400 hover:underline font-medium"
+                          >
+                            {source.name}
+                          </a>
+                          <span className="text-slate-400 ml-2">· {source.description}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </>
+            ) : (
+              <>
             {/* Section: What is {Agent}? */}
             <section id="what-is" className="mb-14 scroll-mt-24">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 pb-2 border-b border-slate-200 dark:border-slate-700">
@@ -641,6 +904,8 @@ export default async function ReviewPage({ params }: Props) {
                 </li>
               </ul>
             </section>
+            </>
+            )}
 
           </main>
         </div>
