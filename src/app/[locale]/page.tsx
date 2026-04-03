@@ -1,15 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Code, CheckCircle, Shield } from "lucide-react";
 import { NewsletterFooter } from "@/components/newsletter/newsletter-footer";
 
 type Props = {
@@ -139,9 +131,9 @@ const contentItems: ContentItem[] = [
 ];
 
 const typeBadgeStyles: Record<ContentType, string> = {
-  review: "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
-  comparison: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
-  guide: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+  review: "bg-orange-100 text-orange-700 border border-orange-200",
+  comparison: "bg-emerald-100 text-emerald-700 border border-emerald-200",
+  guide: "bg-amber-100 text-amber-700 border border-amber-200",
 };
 
 const typeLabels: Record<ContentType, string> = {
@@ -152,18 +144,23 @@ const typeLabels: Record<ContentType, string> = {
 
 const trustItems = [
   {
+    icon: Code,
     title: "Hands-on Testing",
     description: "We use every tool ourselves before reviewing",
   },
   {
+    icon: CheckCircle,
     title: "Independent Reviews",
     description: "No sponsored content, no pay-for-placement",
   },
   {
+    icon: Shield,
     title: "Updated Regularly",
     description: "All reviews reflect the latest features and pricing",
   },
 ];
+
+const filterTabs = ["All", "Reviews", "Comparisons", "Guides"];
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
@@ -172,40 +169,108 @@ export default async function HomePage({ params }: Props) {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 lg:py-32">
-        <div className="container max-w-4xl mx-auto text-center px-4 space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl" />
+
+        <div className="relative container max-w-4xl mx-auto text-center px-4 space-y-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
             Zero to AI Agents
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Learn, compare, and master AI coding agents
           </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 justify-center pt-2">
+            <a
+              href="#content"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3.5 rounded-full shadow-lg shadow-orange-500/25 font-semibold transition-all"
+            >
+              Browse Reviews
+            </a>
+            <Link
+              href="/guides"
+              className="border border-slate-600 bg-white/10 hover:border-orange-400 text-white px-6 py-3.5 rounded-full font-semibold transition-all"
+            >
+              Read Guides
+            </Link>
+          </div>
+
+          {/* Hero illustration — floating AI comparison card */}
+          <div className="mt-16 max-w-2xl mx-auto">
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-2xl p-6 shadow-2xl">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <span className="ml-2 text-sm text-slate-400">AI Agent Comparison</span>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                {["Cursor", "Copilot", "Claude Code"].map((name) => (
+                  <div key={name} className="bg-slate-700/50 rounded-lg p-3 text-center">
+                    <div className="text-orange-400 font-semibold text-sm">{name}</div>
+                    <div className="text-2xl font-bold text-white mt-1">4.8</div>
+                    <div className="text-xs text-slate-400">★★★★★</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Content Grid */}
-      <section className="py-16">
+      <section id="content" className="py-16">
         <div className="container px-4">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-6">
+            Latest Reviews, Guides &amp; Comparisons
+          </h2>
+
+          {/* Filter tabs */}
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {filterTabs.map((tab, i) => (
+              <span
+                key={tab}
+                className={
+                  i === 0
+                    ? "bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold"
+                    : "border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-400 px-4 py-2 rounded-full text-sm font-semibold hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer"
+                }
+              >
+                {tab}
+              </span>
+            ))}
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contentItems.map((item) => (
-              <Link key={item.href} href={item.href} className="group block">
-                <Card className="h-full transition-shadow hover:shadow-md">
-                  <CardHeader>
-                    <span
-                      className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full w-fit ${typeBadgeStyles[item.type]}`}
-                    >
-                      {typeLabels[item.type]}
-                    </span>
-                    <CardTitle className="text-base mt-2">{item.title}</CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
-                  </CardHeader>
-                  <CardFooter>
-                    <span className="text-sm font-medium text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Read more
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </span>
-                  </CardFooter>
-                </Card>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 overflow-hidden hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-200 flex flex-col p-5"
+              >
+                <div className="flex flex-col gap-3 flex-1">
+                  <span
+                    className={`inline-block text-xs font-semibold px-3 py-0.5 rounded-full w-fit ${typeBadgeStyles[item.type]}`}
+                  >
+                    {typeLabels[item.type]}
+                  </span>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2 flex-1">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <span className="text-orange-500 group-hover:text-orange-600 font-semibold text-sm">
+                    Read more →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -213,18 +278,27 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Why Trust Us */}
-      <section className="py-16 bg-muted/40">
+      <section className="py-16 bg-slate-50 dark:bg-slate-900/50">
         <div className="container px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-slate-900 dark:text-white mb-10">
             Why Trust Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {trustItems.map((item) => (
-              <div key={item.title} className="text-center space-y-2">
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
-              </div>
-            ))}
+            {trustItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="border border-slate-200 dark:border-slate-700 rounded-xl p-6 text-center hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 bg-white dark:bg-slate-800"
+                >
+                  <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-5 h-5 text-orange-500" />
+                  </div>
+                  <h3 className="font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">{item.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
