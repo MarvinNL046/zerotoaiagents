@@ -21,6 +21,10 @@ import { claudeReview } from "./claude";
 import { geminiReview } from "./gemini";
 import { perplexityReview } from "./perplexity";
 import { n8nAiReview } from "./n8n-ai";
+import { flowiseReview } from "./flowise";
+import { relevanceAiReview } from "./relevance-ai";
+import { makeAiReview } from "./make-ai";
+import { zapierCentralReview } from "./zapier-central";
 
 const reviews: Record<string, ReviewContent> = {
   "cursor": cursorReview,
@@ -35,6 +39,10 @@ const reviews: Record<string, ReviewContent> = {
   "gemini": geminiReview,
   "perplexity": perplexityReview,
   "n8n-ai": n8nAiReview,
+  "flowise": flowiseReview,
+  "relevance-ai": relevanceAiReview,
+  "make-ai": makeAiReview,
+  "zapier-central": zapierCentralReview,
 };
 
 export function getReviewContent(slug: string): ReviewContent | null {
