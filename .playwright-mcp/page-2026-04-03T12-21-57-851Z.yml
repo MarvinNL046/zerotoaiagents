@@ -1,0 +1,354 @@
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip to content" [ref=e4] [cursor=pointer]:
+        - /url: "#main"
+      - link "Homepage" [ref=e6] [cursor=pointer]:
+        - /url: /home
+        - img [ref=e7]
+        - generic [ref=e16]: Cursor
+      - navigation [ref=e17]:
+        - list [ref=e18]:
+          - listitem [ref=e19]:
+            - link "Product" [ref=e20] [cursor=pointer]:
+              - /url: /product
+            - button "Expand Menu" [ref=e21]:
+              - generic [ref=e22]: ↓
+          - listitem [ref=e23]:
+            - link "Enterprise" [ref=e24] [cursor=pointer]:
+              - /url: /enterprise
+          - listitem [ref=e25]:
+            - link "Pricing" [ref=e26] [cursor=pointer]:
+              - /url: /pricing
+          - listitem [ref=e27]:
+            - link "Resources" [ref=e28] [cursor=pointer]:
+              - /url: /changelog
+            - button "Expand Menu" [ref=e29]:
+              - generic [ref=e30]: ↓
+      - generic [ref=e31]:
+        - link "Sign in" [ref=e32] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Contact sales" [ref=e33] [cursor=pointer]:
+          - /url: /contact-sales?source=navbar
+          - generic [ref=e34]: Contact sales
+        - link "Download" [ref=e35] [cursor=pointer]:
+          - /url: /download
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - article [ref=e38]:
+        - generic [ref=e41]:
+          - link "Blog" [ref=e42] [cursor=pointer]:
+            - /url: /blog
+          - text: /
+          - link "research" [ref=e43] [cursor=pointer]:
+            - /url: /blog/topic/research
+        - generic [ref=e46]:
+          - time [ref=e48]: Mar 19, 2026
+          - heading "Introducing Composer 2" [level=1] [ref=e49]
+          - generic [ref=e50]: 3 min read
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: Composer 2 is now available in Cursor.
+            - paragraph [ref=e56]:
+              - text: It's frontier-level at coding and priced at $0.50/M input and $2.50/M output tokens, making it a new, optimal combination of intelligence and cost. We also released a
+              - link "technical report" [ref=e57] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2603.24477
+              - text: on how we trained it.
+            - figure [ref=e58]:
+              - img "Composer 2 efficiency and quality on CursorBench" [ref=e60]
+            - heading "Link to this section Frontier-level coding intelligence" [level=2] [ref=e61]:
+              - link "Link to this section" [ref=e62] [cursor=pointer]:
+                - /url: "#frontier-level-coding-intelligence"
+                - text: "#"
+              - text: Frontier-level coding intelligence
+            - paragraph [ref=e63]:
+              - text: We're rapidly improving the quality of our model. Composer 2 delivers large improvements on all
+              - link "benchmarks we measure" [ref=e64] [cursor=pointer]:
+                - /url: /blog/cursorbench
+              - text: ", including Terminal-Bench 2.0"
+              - superscript [ref=e65]:
+                - link "1" [ref=e66] [cursor=pointer]:
+                  - /url: "#fn-1"
+              - text: "and SWE-bench Multilingual:"
+            - figure [ref=e67]:
+              - img "Composer 2 Terminal-Bench 2.0 results" [ref=e69]
+            - table [ref=e71]:
+              - rowgroup [ref=e72]:
+                - row "Model CursorBench Terminal-Bench 2.0 SWE-bench Multilingual" [ref=e73]:
+                  - columnheader "Model" [ref=e74]
+                  - columnheader "CursorBench" [ref=e75]
+                  - columnheader "Terminal-Bench 2.0" [ref=e76]
+                  - columnheader "SWE-bench Multilingual" [ref=e77]
+              - rowgroup [ref=e78]:
+                - row "Composer 2 61.3 61.7 73.7" [ref=e79]:
+                  - cell "Composer 2" [ref=e80]
+                  - cell "61.3" [ref=e81]
+                  - cell "61.7" [ref=e82]
+                  - cell "73.7" [ref=e83]
+                - row "Composer 1.5 44.2 47.9 65.9" [ref=e84]:
+                  - cell "Composer 1.5" [ref=e85]
+                  - cell "44.2" [ref=e86]
+                  - cell "47.9" [ref=e87]
+                  - cell "65.9" [ref=e88]
+                - row "Composer 1 38.0 40.0 56.9" [ref=e89]:
+                  - cell "Composer 1" [ref=e90]
+                  - cell "38.0" [ref=e91]
+                  - cell "40.0" [ref=e92]
+                  - cell "56.9" [ref=e93]
+            - paragraph [ref=e94]: These quality improvements come from our first continued pretraining run, which provides a far stronger base to scale our reinforcement learning.
+            - paragraph [ref=e95]:
+              - text: From this base, we train on
+              - link "long-horizon" [ref=e96] [cursor=pointer]:
+                - /url: /blog/self-driving-codebases
+              - text: coding tasks through
+              - link "reinforcement learning" [ref=e97] [cursor=pointer]:
+                - /url: /blog/self-summarization
+              - text: . Composer 2 is able to solve challenging tasks requiring hundreds of actions.
+            - heading "Link to this section Try Composer 2" [level=2] [ref=e98]:
+              - link "Link to this section" [ref=e99] [cursor=pointer]:
+                - /url: "#try-composer-2"
+                - text: "#"
+              - text: Try Composer 2
+            - paragraph [ref=e100]: Composer 2 is priced at $0.50/M input and $2.50/M output tokens.
+            - paragraph [ref=e101]:
+              - text: There is also a
+              - strong [ref=e102]: faster variant with the same intelligence
+              - text: at $1.50/M input and $7.50/M output tokens, which has a lower cost than other fast models
+              - superscript [ref=e103]:
+                - link "2" [ref=e104] [cursor=pointer]:
+                  - /url: "#fn-2"
+              - text: . We're making fast the default option. See our
+              - link "model docs" [ref=e105] [cursor=pointer]:
+                - /url: /docs/models/cursor-composer-2
+              - text: for full details.
+            - figure [ref=e106]:
+              - img "Composer 2 fast variant speed and cost compared to other models" [ref=e108]
+            - paragraph [ref=e109]:
+              - text: On individual plans, Composer usage is part of a
+              - link "standalone usage pool" [ref=e110] [cursor=pointer]:
+                - /url: https://cursor.com/docs/models-and-pricing#usage-pools
+              - text: with generous usage included. Try Composer 2 today in Cursor or in the early alpha of our
+              - link "new interface" [ref=e111] [cursor=pointer]:
+                - /url: https://cursor.com/glass
+              - text: . ■
+            - generic [ref=e112]:
+              - separator [ref=e113]
+              - list [ref=e114]:
+                - listitem [ref=e115]:
+                  - generic [ref=e116]:
+                    - text: Terminal-Bench 2.0 is an agent evaluation benchmark for terminal use maintained by the Laude Institute. Anthropic model scores use the Claude Code harness and OpenAI model scores use the Simple Codex harness. Our Cursor score was computed using the official
+                    - link "Harbor evaluation framework" [ref=e117] [cursor=pointer]:
+                      - /url: https://github.com/laude-institute/harbor
+                    - text: (the designated harness for Terminal-Bench 2.0) with default benchmark settings. We ran 5 iterations per model-agent pair and report the average. More details on the benchmark can be found at the official
+                    - link "Terminal Bench website" [ref=e118] [cursor=pointer]:
+                      - /url: https://www.tbench.ai/
+                    - text: . For other models besides Composer 2, we took the max score between the
+                    - link "official leaderboard" [ref=e119] [cursor=pointer]:
+                      - /url: https://www.tbench.ai/leaderboard/terminal-bench/2.0
+                    - text: score and the score recorded running in our infrastructure.
+                    - link "↩" [ref=e120] [cursor=pointer]:
+                      - /url: "#fnref-1"
+                - listitem [ref=e121]:
+                  - generic [ref=e122]:
+                    - text: Tokens per second (TPS) for all models are from a snapshot of Cursor traffic on March 18th, 2026. Token sizing for Composer and GPT models are similar. Anthropic tokens are ~15% smaller and the TPS number is normalized to reflect that. Similarly, output token price for non-Anthropic models was scaled to match the same ~15% change. Speed may vary depending on provider capacity and improvements over time.
+                    - link "↩" [ref=e123] [cursor=pointer]:
+                      - /url: "#fnref-2"
+          - generic [ref=e124]:
+            - paragraph [ref=e125]:
+              - generic [ref=e126]: "Filed under:"
+              - link "research" [ref=e127] [cursor=pointer]:
+                - /url: /blog/topic/research
+            - paragraph [ref=e128]: "Author: Cursor Team"
+      - generic [ref=e132]:
+        - heading "Related posts" [level=2] [ref=e134]
+        - generic [ref=e136]:
+          - article [ref=e138]:
+            - link "Mar 27, 2026 Research A technical report on Composer 2 Sasha Rush3 min read" [ref=e139] [cursor=pointer]:
+              - /url: /blog/composer-2-technical-report
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - time [ref=e142]: Mar 27, 2026
+                  - generic [ref=e143]: ·
+                  - generic [ref=e144]: Research
+                - paragraph [ref=e146]: A technical report on Composer 2
+                - generic [ref=e147]:
+                  - img [ref=e151]
+                  - generic [ref=e152]:
+                    - text: Sasha Rush
+                    - generic [ref=e153]: · 3 min read
+          - article [ref=e155]:
+            - link "Mar 26, 2026 Research Improving Composer through real-time RL Jacob, Ben, Nathan & Wanqi7 min read" [ref=e156] [cursor=pointer]:
+              - /url: /blog/real-time-rl-for-composer
+              - generic [ref=e157]:
+                - generic [ref=e158]:
+                  - time [ref=e159]: Mar 26, 2026
+                  - generic [ref=e160]: ·
+                  - generic [ref=e161]: Research
+                - paragraph [ref=e163]: Improving Composer through real-time RL
+                - generic [ref=e164]:
+                  - generic [ref=e165]:
+                    - img [ref=e168]
+                    - img [ref=e171]
+                    - img [ref=e174]
+                    - img [ref=e177]
+                  - generic [ref=e178]:
+                    - text: Jacob, Ben, Nathan & Wanqi
+                    - generic [ref=e179]: · 7 min read
+          - article [ref=e181]:
+            - link "Feb 9, 2026 Research Introducing Composer 1.5 Cursor Team3 min read" [ref=e182] [cursor=pointer]:
+              - /url: /blog/composer-1-5
+              - generic [ref=e183]:
+                - generic [ref=e184]:
+                  - time [ref=e185]: Feb 9, 2026
+                  - generic [ref=e186]: ·
+                  - generic [ref=e187]: Research
+                - paragraph [ref=e189]: Introducing Composer 1.5
+                - generic [ref=e190]:
+                  - img [ref=e194]
+                  - generic [ref=e195]:
+                    - text: Cursor Team
+                    - generic [ref=e196]: · 3 min read
+          - link "View more posts →" [ref=e197] [cursor=pointer]:
+            - /url: /blog
+  - contentinfo [ref=e198]:
+    - navigation [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - heading "Product" [level=3] [ref=e203]
+          - list [ref=e204]:
+            - listitem [ref=e205]:
+              - link "Agents" [ref=e206] [cursor=pointer]:
+                - /url: /en-US/product
+            - listitem [ref=e207]:
+              - link "Enterprise" [ref=e208] [cursor=pointer]:
+                - /url: /en-US/enterprise
+            - listitem [ref=e209]:
+              - link "Pricing" [ref=e210] [cursor=pointer]:
+                - /url: /en-US/pricing
+            - listitem [ref=e211]:
+              - link "Code Review" [ref=e212] [cursor=pointer]:
+                - /url: /en-US/bugbot
+            - listitem [ref=e213]:
+              - link "Tab" [ref=e214] [cursor=pointer]:
+                - /url: /en-US/product/tab
+            - listitem [ref=e215]:
+              - link "CLI" [ref=e216] [cursor=pointer]:
+                - /url: /en-US/cli
+            - listitem [ref=e217]:
+              - link "Cloud Agents" [ref=e218] [cursor=pointer]:
+                - /url: /agents
+            - listitem [ref=e219]:
+              - link "Marketplace ↗" [ref=e220] [cursor=pointer]:
+                - /url: https://cursor.com/marketplace
+                - text: Marketplace
+                - generic [ref=e221]: ↗
+        - generic [ref=e222]:
+          - heading "Resources" [level=3] [ref=e223]
+          - list [ref=e224]:
+            - listitem [ref=e225]:
+              - link "Download" [ref=e226] [cursor=pointer]:
+                - /url: /en-US/download
+            - listitem [ref=e227]:
+              - link "Changelog" [ref=e228] [cursor=pointer]:
+                - /url: /en-US/changelog
+            - listitem [ref=e229]:
+              - link "Docs" [ref=e230] [cursor=pointer]:
+                - /url: /docs
+            - listitem [ref=e231]:
+              - link "Learn ↗" [ref=e232] [cursor=pointer]:
+                - /url: https://cursor.com/learn
+                - text: Learn
+                - generic [ref=e233]: ↗
+            - listitem [ref=e234]:
+              - link "Forum ↗" [ref=e235] [cursor=pointer]:
+                - /url: https://forum.cursor.com/
+                - text: Forum
+                - generic [ref=e236]: ↗
+            - listitem [ref=e237]:
+              - link "Help ↗" [ref=e238] [cursor=pointer]:
+                - /url: https://cursor.com/help
+                - text: Help
+                - generic [ref=e239]: ↗
+            - listitem [ref=e240]:
+              - link "Workshops" [ref=e241] [cursor=pointer]:
+                - /url: /en-US/workshops
+            - listitem [ref=e242]:
+              - link "Status ↗" [ref=e243] [cursor=pointer]:
+                - /url: https://status.cursor.com/
+                - text: Status
+                - generic [ref=e244]: ↗
+        - generic [ref=e245]:
+          - heading "Company" [level=3] [ref=e246]
+          - list [ref=e247]:
+            - listitem [ref=e248]:
+              - link "Careers" [ref=e249] [cursor=pointer]:
+                - /url: /en-US/careers
+            - listitem [ref=e250]:
+              - link "Blog" [ref=e251] [cursor=pointer]:
+                - /url: /en-US/blog
+            - listitem [ref=e252]:
+              - link "Community" [ref=e253] [cursor=pointer]:
+                - /url: /en-US/community
+            - listitem [ref=e254]:
+              - link "Students" [ref=e255] [cursor=pointer]:
+                - /url: /en-US/students
+            - listitem [ref=e256]:
+              - link "Brand" [ref=e257] [cursor=pointer]:
+                - /url: /en-US/brand
+            - listitem [ref=e258]:
+              - link "Future" [ref=e259] [cursor=pointer]:
+                - /url: /en-US/future
+            - listitem [ref=e260]:
+              - link "Anysphere ↗" [ref=e261] [cursor=pointer]:
+                - /url: https://anysphere.inc/
+                - text: Anysphere
+                - generic [ref=e262]: ↗
+        - generic [ref=e263]:
+          - heading "Legal" [level=3] [ref=e264]
+          - list [ref=e265]:
+            - listitem [ref=e266]:
+              - link "Terms of Service" [ref=e267] [cursor=pointer]:
+                - /url: /en-US/terms-of-service
+            - listitem [ref=e268]:
+              - link "Privacy Policy" [ref=e269] [cursor=pointer]:
+                - /url: /en-US/privacy
+            - listitem [ref=e270]:
+              - link "Data Use" [ref=e271] [cursor=pointer]:
+                - /url: /en-US/data-use
+            - listitem [ref=e272]:
+              - link "Security" [ref=e273] [cursor=pointer]:
+                - /url: /en-US/security
+        - generic [ref=e274]:
+          - heading "Connect" [level=3] [ref=e275]
+          - list [ref=e276]:
+            - listitem [ref=e277]:
+              - link "X ↗" [ref=e278] [cursor=pointer]:
+                - /url: https://x.com/cursor_ai
+                - text: X
+                - generic [ref=e279]: ↗
+            - listitem [ref=e280]:
+              - link "LinkedIn ↗" [ref=e281] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/cursorai
+                - text: LinkedIn
+                - generic [ref=e282]: ↗
+            - listitem [ref=e283]:
+              - link "YouTube ↗" [ref=e284] [cursor=pointer]:
+                - /url: https://www.youtube.com/@cursor_ai
+                - text: YouTube
+                - generic [ref=e285]: ↗
+    - generic [ref=e286]:
+      - generic [ref=e287]:
+        - generic [ref=e288]:
+          - text: © 2026
+          - link "Anysphere, Inc." [ref=e289] [cursor=pointer]:
+            - /url: https://anysphere.inc
+        - generic [ref=e290]:
+          - text: 🛡
+          - link "SOC 2 Certified" [ref=e291] [cursor=pointer]:
+            - /url: /en-US/security
+      - button "🌐 English ↓" [ref=e295] [cursor=pointer]:
+        - generic [ref=e296]: 🌐
+        - text: English
+        - generic [ref=e297]: ↓
+  - alert [ref=e298]

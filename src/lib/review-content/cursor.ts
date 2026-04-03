@@ -46,8 +46,8 @@ export const cursorReview: ReviewContent = {
 <p>In my hands-on testing, I gave Composer 2 a complex task: migrate a REST API endpoint to use Zod schema validation, update the corresponding TypeScript types, fix the downstream consumers, and write unit tests. Tasks that would have taken me 45 minutes manually were completed in under 5 minutes, with minimal corrections needed. The quality was production-ready — not "good enough for a first draft."</p>
 
 <figure class="my-6">
-<img src="/screenshots/cursor-pricing.webp" alt="Cursor pricing plans showing Hobby (Free), Pro ($20/mo), Pro+ ($60/mo), Ultra ($200/mo), Teams ($40/user/mo), and Enterprise options" class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg w-full" loading="lazy" />
-<figcaption class="text-sm text-slate-500 mt-2 text-center">Cursor's pricing as of April 2026 — from a free Hobby plan to Enterprise with pooled usage and audit logs.</figcaption>
+<img src="/screenshots/cursor-composer2.webp" alt="Cursor Composer 2 blog post showing Performance vs Cost benchmark — Composer 2 outperforming GPT-5.4 and Opus 4.6 on CursorBench" class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg w-full" loading="lazy" />
+<figcaption class="text-sm text-slate-500 mt-2 text-center">Composer 2 benchmark results — frontier-level coding performance at a fraction of the cost of GPT-5.4 and Claude Opus 4.6. <a href="https://cursor.com/blog/composer-2" target="_blank" rel="noopener">Source: Cursor Blog</a></figcaption>
 </figure>
 
 <p>Composer 2 also introduces the <strong>autonomy slider</strong> — a setting that controls how much Cursor asks for confirmation before making changes. At maximum autonomy, it runs end-to-end and presents you with a finished diff. At minimum autonomy, it checks in at each step. For experienced developers who trust the AI, max autonomy on well-scoped tasks is a revelation. For learning or sensitive codebases, the step-by-step mode is invaluable.</p>
@@ -120,6 +120,11 @@ export const cursorReview: ReviewContent = {
 <p>In practice, I use Claude Opus 4.6 for architecture discussions and Composer 2 agent tasks where deep reasoning matters, and switch to Gemini 3 Pro for quick one-off completions where I want sub-second response times. The Cursor Auto model is excellent for beginners who don't want to think about model selection — it routes requests intelligently based on task complexity. MCP (Model Context Protocol) support on Pro plans also allows you to connect Cursor to external tools and data sources, further expanding its capabilities.</p>
 
 <h2>Pricing Breakdown</h2>
+
+<figure class="my-6">
+<img src="/screenshots/cursor-pricing.webp" alt="Cursor pricing page showing all individual and business plans with features and prices" class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg w-full" loading="lazy" />
+<figcaption class="text-sm text-slate-500 mt-2 text-center">Cursor's official pricing page as of April 2026 — from a free Hobby plan to custom Enterprise pricing.</figcaption>
+</figure>
 
 <p>Cursor's pricing spans a wide range, from free to enterprise-grade. Here's the full breakdown as of April 2026:</p>
 
