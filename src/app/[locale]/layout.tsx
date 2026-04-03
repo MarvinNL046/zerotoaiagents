@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = "ZeroToAIAgents - Best AI Coding Agent Reviews & Comparisons 2026";
   const description =
-    "Find the best AI coding agent for your needs. Expert reviews, honest comparisons, and in-depth guides on Cursor, GitHub Copilot, Claude Code, Windsurf, and more.";
+    "Find the perfect AI coding agent for your needs. Expert reviews, honest comparisons, and in-depth guides for tools like Cursor, GitHub Copilot, Claude Code, and more.";
 
   const baseUrl = "https://zerotoaiagents.com";
   const canonicalUrl = locale === "en" ? baseUrl : `${baseUrl}/${locale}`;

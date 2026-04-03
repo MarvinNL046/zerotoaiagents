@@ -110,6 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(baseUrl),
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
+    authors: [{ name: "Marvin Smit" }],
     keywords: [
       agent.name,
       `${agent.name} review`,
@@ -262,6 +263,10 @@ export default async function ReviewPage({ params }: Props) {
 
           <div className="mt-5 flex items-center gap-4 text-xs text-slate-500">
             <span>
+              By <strong className="text-slate-300">Marvin Smit</strong>
+            </span>
+            <span>•</span>
+            <span>
               Last updated:{" "}
               {reviewContent
                 ? new Date(reviewContent.lastUpdated).toLocaleDateString("en-US", {
@@ -269,10 +274,11 @@ export default async function ReviewPage({ params }: Props) {
                     month: "long",
                     day: "numeric",
                   })
-                : "April 2, 2026"}
+                : "April 3, 2026"}
             </span>
             {reviewContent && (
               <span className="flex items-center gap-1">
+                <span>•</span>
                 <BookOpen className="h-3 w-3" />
                 {reviewContent.readTime}
               </span>
