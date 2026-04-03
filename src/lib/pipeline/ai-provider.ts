@@ -1,58 +1,24 @@
-export type AiModel = "claude-haiku" | "gpt-5-nano";
+const AI_TIMEOUT_MS = 120_000;
+const MAX_RETRIES = 2;
 
-interface GenerateOptions {
-  model: AiModel;
-  maxTokens?: number;
+interface AIOptions {
+  systemPrompt: string;
+  userPrompt: string;
   temperature?: number;
+  maxTokens?: number;
 }
 
-const MAX_RETRIES = 3;
-const RETRY_DELAY_MS = 1000;
-
-// Unified AI content generation interface
-export async function generateContent(
-  prompt: string,
-  options: GenerateOptions
-): Promise<string> {
-  const { model, maxTokens = 4096, temperature = 0.7 } = options;
-
-  let lastError: Error | null = null;
-
-  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    try {
-      if (model === "claude-haiku") {
-        return await callClaude(prompt, maxTokens, temperature);
-      } else {
-        return await callOpenAI(prompt, maxTokens, temperature);
-      }
-    } catch (error) {
-      lastError = error instanceof Error ? error : new Error(String(error));
-      console.error(
-        `AI generation attempt ${attempt}/${MAX_RETRIES} failed (${model}):`,
-        lastError.message
-      );
-
-      if (attempt < MAX_RETRIES) {
-        await sleep(RETRY_DELAY_MS * attempt);
-      }
-    }
-  }
-
-  throw new Error(
-    `AI generation failed after ${MAX_RETRIES} attempts: ${lastError?.message}`
-  );
+interface AIResponse {
+  content: string;
+  model: string;
+  tokensUsed?: number;
 }
 
-// Claude API (Anthropic) — raw fetch, no SDK
-async function callClaude(
-  prompt: string,
-  maxTokens: number,
-  temperature: number
-): Promise<string> {
+async function callClaude(options: AIOptions): Promise<AIResponse> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error("ANTHROPIC_API_KEY is not configured");
+  if (!apiKey) throw new Error("ANTHROPIC_API_KEY not set");
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -61,65 +27,71 @@ async function callClaude(
     },
     body: JSON.stringify({
       model: "claude-haiku-4-5-20251001",
-      max_tokens: maxTokens,
-      temperature,
-      messages: [{ role: "user", content: prompt }],
+      max_tokens: options.maxTokens || 16384,
+      temperature: options.temperature ?? 0.5,
+      system: options.systemPrompt,
+      messages: [{ role: "user", content: options.userPrompt }],
     }),
+    signal: AbortSignal.timeout(AI_TIMEOUT_MS),
   });
 
-  if (!response.ok) {
-    const errorBody = await response.text();
-    throw new Error(`Claude API error ${response.status}: ${errorBody}`);
-  }
-
-  const data = await response.json();
-  const textBlock = data.content?.find(
-    (block: { type: string }) => block.type === "text"
-  );
-  if (!textBlock?.text) {
-    throw new Error("No text content in Claude response");
-  }
-
-  return textBlock.text;
+  if (!res.ok) throw new Error(`Claude API error: ${res.status}`);
+  const data = await res.json();
+  return {
+    content: data.content[0].text,
+    model: "claude-haiku",
+    tokensUsed: data.usage?.output_tokens,
+  };
 }
 
-// OpenAI API — raw fetch, no SDK
-async function callOpenAI(
-  prompt: string,
-  maxTokens: number,
-  temperature: number
-): Promise<string> {
+async function callOpenAI(options: AIOptions): Promise<AIResponse> {
   const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) throw new Error("OPENAI_API_KEY is not configured");
+  if (!apiKey) throw new Error("OPENAI_API_KEY not set");
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: "gpt-5-nano-2025-08-07",
-      max_tokens: maxTokens,
-      temperature,
-      messages: [{ role: "user", content: prompt }],
+      model: "gpt-4o-mini",
+      max_tokens: options.maxTokens || 16384,
+      temperature: options.temperature ?? 0.5,
+      messages: [
+        { role: "system", content: options.systemPrompt },
+        { role: "user", content: options.userPrompt },
+      ],
     }),
+    signal: AbortSignal.timeout(AI_TIMEOUT_MS),
   });
 
-  if (!response.ok) {
-    const errorBody = await response.text();
-    throw new Error(`OpenAI API error ${response.status}: ${errorBody}`);
-  }
-
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content;
-  if (!content) {
-    throw new Error("No content in OpenAI response");
-  }
-
-  return content;
+  if (!res.ok) throw new Error(`OpenAI API error: ${res.status}`);
+  const data = await res.json();
+  return {
+    content: data.choices[0].message.content,
+    model: "gpt-4o-mini",
+    tokensUsed: data.usage?.completion_tokens,
+  };
 }
 
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+export async function generateContent(options: AIOptions): Promise<AIResponse> {
+  const providers = [
+    ...(process.env.ANTHROPIC_API_KEY ? [callClaude] : []),
+    ...(process.env.OPENAI_API_KEY ? [callOpenAI] : []),
+  ];
+
+  if (providers.length === 0) throw new Error("No AI API keys configured");
+
+  for (const provider of providers) {
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        return await provider(options);
+      } catch (err) {
+        console.error(`AI attempt ${attempt + 1} failed:`, (err as Error).message);
+        if (attempt < MAX_RETRIES) await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
+      }
+    }
+  }
+  throw new Error("All AI providers failed after retries");
 }
