@@ -8,8 +8,11 @@
  * @module
  */
 
+import type * as blogPosts from "../blogPosts.js";
 import type * as emails from "../emails.js";
 import type * as http from "../http.js";
+import type * as pipelineJobs from "../pipelineJobs.js";
+import type * as scrapedAgentData from "../scrapedAgentData.js";
 
 import type {
   ApiFromModules,
@@ -18,8 +21,11 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  blogPosts: typeof blogPosts;
   emails: typeof emails;
   http: typeof http;
+  pipelineJobs: typeof pipelineJobs;
+  scrapedAgentData: typeof scrapedAgentData;
 }>;
 
 /**
