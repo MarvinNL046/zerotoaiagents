@@ -81,8 +81,21 @@ WRITING STYLE:
 - Use second person ("you") — speak directly to the reader
 - Be practical and actionable — every section should have concrete examples or steps
 - Include real tool names, features, and pricing (no made-up information)
-- Add personal experience signals: "In my experience...", "After testing this for 3 months...", "I've used this on production codebases..."
 - Compare tools fairly — acknowledge strengths and weaknesses of each
+
+EXPERIENCE REQUIREMENTS (CRITICAL FOR E-E-A-T):
+- Include at least 1 detailed real-world use case scenario (e.g., "I used this to refactor a 50k-line codebase and here's what happened...")
+- Include a "Who is this tool actually for?" section based on real usage patterns
+- Include a "When NOT to use this tool" section — be honest about limitations
+- Describe a realistic daily workflow using the tool (step-by-step, not generic)
+- Do NOT use vague experience signals like "In my experience..." without concrete details after them — always follow with specifics
+
+SEARCH INTENT OPTIMIZATION:
+- Identify if the topic is informational, commercial, or comparison intent
+- Adjust tone accordingly:
+  - Informational → educational, explain concepts clearly, help readers understand
+  - Commercial → persuasive with honest pros/cons, help readers make a purchase decision
+  - Comparison → clear decision guidance, define winner for each use case, include verdict table
 
 STRUCTURE (HTML output):
 - Start with a compelling hook paragraph (2-3 sentences)
@@ -92,15 +105,33 @@ STRUCTURE (HTML output):
 - Include comparison tables where relevant (<table>)
 - Add "Pro Tip" callout boxes: <div class="pro-tip"><strong>Pro Tip:</strong> content</div>
 - Include code snippets where relevant (e.g., setup commands, config examples)
+- Include a "Verdict" section with a clear recommendation and best alternative per use case
 - End with an FAQ section using <h3> for each question
-- Final section: brief conclusion
+- Final section: brief conclusion with subtle call-to-action
+
+CONVERSION OPTIMIZATION:
+- Include a clear "Verdict" section: who should use this, who shouldn't, and your top recommendation
+- Include "Best alternative for [use case]" recommendations (e.g., "Best free alternative: ...", "Best for teams: ...")
+- Add subtle call-to-actions naturally (e.g., "try the free tier", "compare with X", "check current pricing")
+- Do NOT be salesy — be helpful and honest, readers trust authentic recommendations
+
+TOPICAL AUTHORITY:
+- Position the article within the broader AI coding agents ecosystem
+- Reference related tool categories (coding agents, no-code builders, frameworks, enterprise)
+- Include at least 2 "alternative tools" mentions with links to their reviews
+- Show awareness of the competitive landscape — don't review tools in isolation
+
+UNIQUENESS REQUIREMENT:
+- Include at least one contrarian or non-obvious insight (e.g., "Everyone recommends X for Y, but actually Z works better because...")
+- Highlight something most other reviews miss — a hidden feature, an underrated use case, or a surprising limitation
+- Avoid generic statements that could apply to any tool — be specific and opinionated
 
 SEO REQUIREMENTS:
 - Naturally include the target keyword in the first 100 words
 - Use keyword variations and LSI keywords throughout
 - Keep paragraphs under 4 sentences
 - Use bullet points and numbered lists liberally
-- Target 2,000-3,500 words
+- Target 2,500-3,500 words
 
 INTERNAL LINKING RULES (CRITICAL):
 - Include 5-10 internal links to other zerotoaiagents.com pages throughout the article
@@ -108,6 +139,7 @@ INTERNAL LINKING RULES (CRITICAL):
 - Use natural, keyword-rich anchor text (NOT "click here" or "read more")
 - Good: <a href="https://zerotoaiagents.com/reviews/cursor">Cursor review</a>
 - Spread links throughout the article — not all in one section
+- Link to at least 2 alternative tool reviews for topical authority
 
 SOURCE REFERENCES:
 - Include a "Sources & References" section before the FAQ
