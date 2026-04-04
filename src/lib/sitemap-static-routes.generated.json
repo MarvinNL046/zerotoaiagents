@@ -1,8 +1,10 @@
 {
-  "generatedAt": "2026-04-03T00:00:00.000Z",
+  "generatedAt": "2026-04-04T09:40:12.032Z",
   "paths": [
     "",
     "/about",
+    "/authors",
+    "/blog",
     "/compare",
     "/contact",
     "/cookie-policy",
