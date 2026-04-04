@@ -31,7 +31,7 @@ jobs:
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
             "${{ secrets.SITE_URL }}/api/pipeline/scrape" \
             -H "Content-Type: application/json" \
-            -H "x-pipeline-key: ${{ secrets.PIPELINE_API_KEY }}" \
+            -H "x-pipeline-key: ${{ secrets.PIPELINE_SECRET }}" \
             -d '{"type": "pricing", "agentSlug": "${{ matrix.agent }}"}' \
             --max-time 90)
 
@@ -75,7 +75,7 @@ jobs:
             RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
               "${{ secrets.SITE_URL }}/api/pipeline/scrape" \
               -H "Content-Type: application/json" \
-              -H "x-pipeline-key: ${{ secrets.PIPELINE_API_KEY }}" \
+              -H "x-pipeline-key: ${{ secrets.PIPELINE_SECRET }}" \
               -d "{\"type\": \"pricing\", \"agentSlug\": \"$AGENT\"}" \
               --max-time 90)
 
@@ -100,7 +100,7 @@ jobs:
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
             "${{ secrets.SITE_URL }}/api/pipeline/sync-links" \
             -H "Content-Type: application/json" \
-            -H "x-pipeline-key: ${{ secrets.PIPELINE_API_KEY }}" \
+            -H "x-pipeline-key: ${{ secrets.PIPELINE_SECRET }}" \
             -d '{}' \
             --max-time 120)
 
@@ -125,5 +125,5 @@ jobs:
         run: |
           echo "Checking pipeline health..."
           curl -s "${{ secrets.SITE_URL }}/api/pipeline/status" \
-            -H "x-pipeline-key: ${{ secrets.PIPELINE_API_KEY }}" \
+            -H "x-pipeline-key: ${{ secrets.PIPELINE_SECRET }}" \
             --max-time 30 | head -c 1000

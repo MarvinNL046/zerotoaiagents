@@ -47,7 +47,7 @@ jobs:
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
             "${{ secrets.SITE_URL }}/api/pipeline/generate" \
             -H "Content-Type: application/json" \
-            -H "x-pipeline-key: ${{ secrets.PIPELINE_API_KEY }}" \
+            -H "x-pipeline-key: ${{ secrets.PIPELINE_SECRET }}" \
             -d "{\"type\": \"blog-post\", \"phase\": \"start\", \"topic\": \"$TOPIC\", \"model\": \"$MODEL\", \"publish\": $PUBLISH}" \
             --max-time 300)
 
