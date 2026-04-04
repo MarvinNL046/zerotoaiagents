@@ -11,7 +11,9 @@ function validatePipelineKey(request: NextRequest): boolean {
 
 export async function GET(request: NextRequest) {
   if (!validatePipelineKey(request)) {
-    return NextResponse.json({ error: "Unauthorized", debug: { secretSet: !!process.env.PIPELINE_SECRET, secretLen: process.env.PIPELINE_SECRET?.length } }, { status: 401 });
+    const secret = process.env.PIPELINE_SECRET;
+    const sentKey = request.headers.get("x-pipeline-key");
+    return NextResponse.json({ error: "Unauthorized", debug: { secretSet: !!secret, secretLen: secret?.length, keyLen: sentKey?.length, secretStart: secret?.slice(0, 6), keyStart: sentKey?.slice(0, 6), secretEnd: secret?.slice(-4), keyEnd: sentKey?.slice(-4) } }, { status: 401 });
   }
 
   try {
