@@ -4,14 +4,14 @@ import { api } from "../../../../../convex/_generated/api";
 
 function validatePipelineKey(request: NextRequest): boolean {
   const key = request.headers.get("x-admin-key") || request.headers.get("x-pipeline-key");
-  const secret = process.env.PIPELINE_SECRET;
+  const secret = process.env.PIPELINE_API_KEY;
   console.log(`Auth debug: key_len=${key?.length} secret_len=${secret?.length} secret_set=${!!secret} match=${key === secret}`);
   return !!key && !!secret && key === secret;
 }
 
 export async function GET(request: NextRequest) {
   if (!validatePipelineKey(request)) {
-    const secret = process.env.PIPELINE_SECRET;
+    const secret = process.env.PIPELINE_API_KEY;
     const sentKey = request.headers.get("x-pipeline-key");
     return NextResponse.json({ error: "Unauthorized", debug: { secretSet: !!secret, secretLen: secret?.length, keyLen: sentKey?.length, secretStart: secret?.slice(0, 6), keyStart: sentKey?.slice(0, 6), secretEnd: secret?.slice(-4), keyEnd: sentKey?.slice(-4) } }, { status: 401 });
   }

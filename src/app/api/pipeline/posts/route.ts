@@ -5,7 +5,7 @@ import type { Id } from "../../../../../convex/_generated/dataModel";
 
 function validatePipelineKey(request: NextRequest): boolean {
   const key = request.headers.get("x-admin-key") || request.headers.get("x-pipeline-key");
-  return !!key && key === process.env.PIPELINE_SECRET;
+  return !!key && key === process.env.PIPELINE_API_KEY;
 }
 
 export async function GET(request: NextRequest) {
