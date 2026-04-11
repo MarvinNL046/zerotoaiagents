@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Metadata } from "next";
+import Image, { type ImageLoaderProps } from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
@@ -16,6 +17,7 @@ import { cn } from "@/lib/utils";
 import { RelatedPages } from "@/components/seo/related-pages";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { getAllPublishedPosts } from "@/lib/pipeline/blog-service";
+import { routing } from "@/i18n/routing";
 
 // Force dynamic rendering so new DB posts show immediately
 export const dynamic = "force-dynamic";
@@ -25,6 +27,8 @@ type Props = {
 };
 
 const baseUrl = "https://zerotoaiagents.com";
+
+const passthroughImageLoader = ({ src }: ImageLoaderProps) => src;
 
 function formatDateLong(dateStr: string, locale: string): string {
   const date = new Date(dateStr);
@@ -54,6 +58,14 @@ function formatDateShort(dateStr: string, locale: string): string {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${prefix}/blog`;
+  const languages: Record<string, string> = { "x-default": `${baseUrl}/blog` };
+
+  routing.locales.forEach((l) => {
+    const localePrefix = l === "en" ? "" : `/${l}`;
+    languages[l] = `${baseUrl}${localePrefix}/blog`;
+  });
 
   const titles: Record<string, string> = {
     en: "AI Agent Blog - News, Tips & Guides | ZeroToAIAgents",
@@ -83,10 +95,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(baseUrl),
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
+    alternates: {
+      canonical: canonicalUrl,
+      languages,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title: titles[locale] || titles.en,
       description: descriptions[locale] || descriptions.en,
+      url: canonicalUrl,
+      siteName: "ZeroToAIAgents",
+      locale,
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titles[locale] || titles.en,
+      description: descriptions[locale] || descriptions.en,
     },
   };
 }
@@ -280,10 +308,14 @@ export default async function BlogPage({ params }: Props) {
                       )}
                     >
                       {featuredPost.featuredImage ? (
-                        <img
+                        <Image
+                          loader={passthroughImageLoader}
+                          unoptimized
                           src={featuredPost.featuredImage}
                           alt={featuredPost.isDynamic ? featuredPost.title : ""}
-                          className="w-full h-full object-cover"
+                          fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
                         />
                       ) : (
                         <>
@@ -300,8 +332,8 @@ export default async function BlogPage({ params }: Props) {
                             );
                           })()}
                         </>
-                      )}
-                    </div>
+                        )}
+                      </div>
                     {/* Content */}
                     <div className="p-6 md:p-8 flex flex-col justify-center">
                       <div className="flex items-center gap-3 mb-4">
@@ -314,10 +346,14 @@ export default async function BlogPage({ params }: Props) {
                         </span>
                       </div>
                       <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                        {t(`posts.${featuredPost.slug}.title`)}
+                        {featuredPost.isDynamic
+                          ? featuredPost.title
+                          : t(`posts.${featuredPost.slug}.title`)}
                       </h3>
                       <p className="text-muted-foreground mb-4">
-                        {t(`posts.${featuredPost.slug}.excerpt`)}
+                        {featuredPost.isDynamic
+                          ? featuredPost.excerpt
+                          : t(`posts.${featuredPost.slug}.excerpt`)}
                       </p>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
@@ -372,10 +408,14 @@ export default async function BlogPage({ params }: Props) {
                         )}
                       >
                         {post.featuredImage ? (
-                          <img
+                          <Image
+                            loader={passthroughImageLoader}
+                            unoptimized
                             src={post.featuredImage}
                             alt={postTitle}
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            className="object-cover"
                           />
                         ) : (
                           <>
@@ -443,10 +483,10 @@ export default async function BlogPage({ params }: Props) {
             <RelatedPages
               title={t("relatedPages.title")}
               pages={[
-                { title: t("relatedPages.bestAgents"), description: t("relatedPages.bestAgentsDesc"), href: "/best/coding-agents", icon: "trophy" },
-                { title: t("relatedPages.guides"), description: t("relatedPages.guidesDesc"), href: "/guides/what-is-ai-agent", icon: "shield" },
+                { title: t("relatedPages.bestAgents"), description: t("relatedPages.bestAgentsDesc"), href: "/reviews", icon: "trophy" },
+                { title: t("relatedPages.guides"), description: t("relatedPages.guidesDesc"), href: "/guides/what-are-ai-coding-agents", icon: "shield" },
                 { title: t("relatedPages.compare"), description: t("relatedPages.compareDesc"), href: "/compare", icon: "zap" },
-                { title: t("relatedPages.useCases"), description: t("relatedPages.useCasesDesc"), href: "/use-cases", icon: "tag" }
+                { title: t("relatedPages.useCases"), description: t("relatedPages.useCasesDesc"), href: "/guides", icon: "tag" }
               ]}
             />
           </div>

@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
+import Image, { type ImageLoaderProps } from "next/image";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { ArticleJsonLd } from "@/components/structured-data";
@@ -7,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { getPostBySlug } from "@/lib/pipeline/blog-service";
+import { routing } from "@/i18n/routing";
 import {
   AuthorBox,
   FactCheckedBadge,
@@ -18,6 +20,7 @@ type Props = {
 };
 
 const baseUrl = "https://zerotoaiagents.com";
+const passthroughImageLoader = ({ src }: ImageLoaderProps) => src;
 
 function formatDate(date: Date, locale: string): string {
   const months: Record<string, string[]> = {
@@ -39,17 +42,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Post Not Found" };
   }
 
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${prefix}/blog/${post.slug}`;
+  const languages: Record<string, string> = {
+    "x-default": `${baseUrl}/blog/${post.slug}`,
+  };
+
+  routing.locales.forEach((l) => {
+    const localePrefix = l === "en" ? "" : `/${l}`;
+    languages[l] = `${baseUrl}${localePrefix}/blog/${post.slug}`;
+  });
+
   return {
     metadataBase: new URL(baseUrl),
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
+    alternates: {
+      canonical: canonicalUrl,
+      languages,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title: post.metaTitle || post.title,
       description: post.metaDescription || post.excerpt,
+      url: canonicalUrl,
       type: "article",
       publishedTime: post.publishedAt?.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
       authors: ["ZeroToAIAgents Expert Team"],
+      images: post.featuredImage ? [{ url: post.featuredImage }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metaTitle || post.title,
+      description: post.metaDescription || post.excerpt,
+      images: post.featuredImage ? [post.featuredImage] : undefined,
     },
   };
 }
@@ -123,9 +153,14 @@ export default async function DynamicBlogPost({ params }: Props) {
         {/* Featured Image */}
         {post.featuredImage && (
           <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
-            <img
+            <Image
+              loader={passthroughImageLoader}
+              unoptimized
               src={post.featuredImage}
               alt={post.title}
+              width={1200}
+              height={630}
+              sizes="(min-width: 1024px) 896px, 100vw"
               className="w-full h-auto object-cover max-h-[400px]"
             />
           </div>

@@ -1,5 +1,5 @@
-import { setRequestLocale, getTranslations } from "next-intl/server";
-import { aiAgentProviders, type AgentCategory } from "@/lib/ai-agent-data";
+import { setRequestLocale } from "next-intl/server";
+import { aiAgentProviders } from "@/lib/ai-agent-data";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema, ComparisonTableSchema } from "@/components/structured-data";
 import type { Metadata } from "next";
@@ -24,27 +24,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   const titles: Record<string, string> = {
-    en: "AI Agent Reviews 2026 - Expert Analysis & Ratings",
-    nl: "AI Agent Reviews 2026 - Expert Analyse & Beoordelingen",
-    de: "AI Agent Tests 2026 - Expertenanalyse & Bewertungen",
-    es: "Reseñas de Agentes de IA 2026 - Análisis de Expertos",
-    fr: "Avis sur les Agents IA 2026 - Analyse d'Experts",
-    zh: "AI 代理评测 2026 - 专家分析与评分",
-    ja: "AI エージェントレビュー 2026 - 専門家分析",
-    ko: "AI 에이전트 리뷰 2026 - 전문가 분석 및 평가",
-    th: "รีวิว AI Agent 2026 - วิเคราะห์โดยผู้เชี่ยวชาญ",
+    en: "Best AI Coding Agents 2026 - Ranked Reviews & Top Picks",
+    nl: "Beste AI Coding Agents 2026 - Reviews, Rankings & Top Picks",
+    de: "Beste KI Coding Agents 2026 - Rankings, Tests & Top Picks",
+    es: "Mejores Agentes de IA para Programar 2026 - Rankings y Reseñas",
+    fr: "Meilleurs Agents IA pour le Code 2026 - Classement et Avis",
+    zh: "最佳 AI 编码代理 2026 - 排名、评测与推荐",
+    ja: "最高のAIコーディングエージェント 2026 - ランキングとレビュー",
+    ko: "최고의 AI 코딩 에이전트 2026 - 순위, 리뷰 및 추천",
+    th: "AI Coding Agents ที่ดีที่สุด 2026 - รีวิว อันดับ และตัวเลือกแนะนำ",
   };
 
   const descriptions: Record<string, string> = {
-    en: "Read our in-depth AI agent reviews 2026. We test Claude Code, Cursor, ChatGPT, n8n & more for coding, automation, and productivity. Find your perfect AI agent.",
-    nl: "Lees onze uitgebreide AI agent reviews 2026. We testen Claude Code, Cursor, ChatGPT, n8n en meer op codering, automatisering en productiviteit.",
-    de: "Lesen Sie unsere ausführlichen KI-Agenten-Tests 2026. Wir testen Claude Code, Cursor, ChatGPT, n8n und mehr auf Codierung, Automatisierung und Produktivität.",
-    es: "Lee nuestras reseñas detalladas de agentes de IA 2026. Probamos Claude Code, Cursor, ChatGPT, n8n y más para codificación, automatización y productividad.",
-    fr: "Lisez nos avis approfondis sur les agents IA 2026. Nous testons Claude Code, Cursor, ChatGPT, n8n et plus pour le codage, l'automatisation et la productivité.",
-    zh: "阅读我们的深度AI代理评测2026。我们测试Claude Code、Cursor、ChatGPT、n8n等的编码、自动化和生产力功能。",
-    ja: "2026年の详細なAIエージェントレビューをご覧ください。Claude Code、Cursor、ChatGPT、n8nなどのコーディング、自動化、生産性をテスト。",
-    ko: "2026년 심층 AI 에이전트 리뷰를 읽어보세요. Claude Code, Cursor, ChatGPT, n8n 등의 코딩, 자동화, 생산성을 테스트합니다.",
-    th: "อ่านรีวิว AI agent เชิงลึกของเรา 2026 เราทดสอบ Claude Code, Cursor, ChatGPT, n8n และอื่นๆ สำหรับการเขียนโค้ด ระบบอัตโนมัติ และประสิทธิภาพ",
+    en: "Discover the best AI coding agents in 2026. We ranked Claude Code, Cursor, GitHub Copilot, Windsurf, Devin and more based on hands-on testing, pricing, features, and value.",
+    nl: "Ontdek de beste AI coding agents van 2026. We rangschikken Claude Code, Cursor, GitHub Copilot, Windsurf, Devin en meer op basis van hands-on tests, prijzen en functies.",
+    de: "Entdecken Sie die besten KI Coding Agents 2026. Wir bewerten Claude Code, Cursor, GitHub Copilot, Windsurf, Devin und mehr anhand von Praxistests, Preisen und Funktionen.",
+    es: "Descubre los mejores agentes de IA para programar en 2026. Clasificamos Claude Code, Cursor, GitHub Copilot, Windsurf, Devin y más según pruebas reales, precio y funciones.",
+    fr: "Découvrez les meilleurs agents IA pour coder en 2026. Nous classons Claude Code, Cursor, GitHub Copilot, Windsurf, Devin et plus selon des tests réels, les prix et les fonctionnalités.",
+    zh: "了解 2026 年最佳 AI 编码代理。我们基于实测、价格、功能和性价比对 Claude Code、Cursor、GitHub Copilot、Windsurf、Devin 等进行排名。",
+    ja: "2026年の最高のAIコーディングエージェントを紹介します。Claude Code、Cursor、GitHub Copilot、Windsurf、Devin などを実機テスト、価格、機能、価値で評価しました。",
+    ko: "2026년 최고의 AI 코딩 에이전트를 확인하세요. Claude Code, Cursor, GitHub Copilot, Windsurf, Devin 등을 실사용 테스트, 가격, 기능, 가성비 기준으로 평가했습니다.",
+    th: "ค้นหา AI coding agents ที่ดีที่สุดในปี 2026 เราจัดอันดับ Claude Code, Cursor, GitHub Copilot, Windsurf, Devin และอื่นๆ จากการทดสอบจริง ราคา ฟีเจอร์ และความคุ้มค่า",
   };
 
   return {
@@ -52,14 +52,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
     keywords: [
-      "AI agent reviews",
-      "AI agent comparison",
-      "best AI agents 2026",
+      "best AI coding agents 2026",
+      "best AI coding tools",
+      "AI coding agent reviews",
+      "AI coding agent comparison",
       "Claude Code review",
       "Cursor review",
-      "ChatGPT review",
-      "AI agent test",
-      "AI agent ratings",
+      "GitHub Copilot review",
+      "Windsurf review",
+      "AI coding agent rankings",
     ],
     alternates: {
       canonical: canonicalUrl,

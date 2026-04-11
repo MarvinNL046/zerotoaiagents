@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, X, Trophy } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { FAQSchema } from "@/components/seo/faq-schema";
 import type { AiAgentData } from "@/lib/agent-data-layer";
 
 type Props = {
@@ -27,6 +28,35 @@ function parseComparisonSlug(comparison: string): { slugs: string[] } | null {
     return null;
   }
   return { slugs: parts };
+}
+
+function buildComparisonFaqs(agents: AiAgentData[]) {
+  const namesJoined = agents.map((agent) => agent.name).join(" vs ");
+  const highestRated = [...agents].sort((a, b) => b.overallRating - a.overallRating)[0];
+  const cheapest = [...agents].sort((a, b) => a.annualPrice - b.annualPrice)[0];
+  const easiest = [...agents].sort((a, b) => b.easeOfUse - a.easeOfUse)[0];
+
+  return [
+    {
+      question: `Which is better: ${namesJoined}?`,
+      answer:
+        agents.length === 2
+          ? `${highestRated.name} currently has the higher overall rating in our testing, but the better choice still depends on your workflow, budget, and preferred style of AI-assisted coding.`
+          : `${highestRated.name} currently leads this comparison on overall rating, but the right choice depends on whether you prioritize price, ease of use, or raw performance.`,
+    },
+    {
+      question: "Which option is best for beginners?",
+      answer: `${easiest.name} is the easiest to start with in this comparison based on our ease-of-use rating and onboarding experience.`,
+    },
+    {
+      question: "Which option offers the best value?",
+      answer: `${cheapest.name} is the lowest-priced option in this comparison at about $${cheapest.annualPrice}/month on annual pricing, making it the strongest value pick for budget-conscious users.`,
+    },
+    {
+      question: "Should I read the full reviews before choosing?",
+      answer: "Yes. Comparison pages are best for narrowing the field, but the full reviews explain pricing tradeoffs, workflow fit, strengths, and limitations in much more detail.",
+    },
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -63,6 +93,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(baseUrl),
     title: `${namesJoined}: Which is Better in 2026? - ZeroToAIAgents`,
     description: `Compare ${namesJoined} side by side. See the differences in speed, security, pricing, features, and more to choose the best AI agent for your needs.`,
+    keywords: [
+      `${namesJoined} comparison`,
+      ...resolvedAgents.map((agent) => `${agent.name} review`),
+      "AI agent comparison",
+      "best AI coding agents 2026",
+    ],
     alternates: {
       canonical: canonicalUrl,
       languages: languages,
@@ -75,7 +111,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${namesJoined}: AI Agent Comparison 2026`,
       description: `Detailed comparison of ${namesJoined}. Find out which AI agent performs better, offers more features, and offers better value.`,
       url: canonicalUrl,
+      siteName: "ZeroToAIAgents",
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${namesJoined}: AI Agent Comparison 2026`,
+      description: `Detailed comparison of ${namesJoined}. Find out which tool is the better fit for your workflow.`,
     },
   };
 }
@@ -90,7 +132,7 @@ function ComparisonSchema({ agents }: { agents: AiAgentData[] }) {
     itemReviewed: agents.map((agent) => ({
       "@type": "SoftwareApplication",
       name: agent.name,
-      applicationCategory: "SecurityApplication",
+      applicationCategory: "AI Agent Platform",
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: agent.overallRating,
@@ -115,8 +157,6 @@ function ComparisonSchema({ agents }: { agents: AiAgentData[] }) {
 
 // Three-agent comparison table rendered inline
 function ThreeWayComparisonTable({ agents }: { agents: AiAgentData[] }) {
-  const [a1, a2, a3] = agents;
-
   const rows: Array<{
     label: string;
     getValue: (a: AiAgentData) => string | number | boolean | string[];
@@ -309,6 +349,7 @@ export default async function ComparisonPage({ params }: Props) {
   const isTie = agents.filter((a) => a.overallRating === topRating).length > 1;
 
   const namesJoined = agents.map((a) => a.name).join(" vs ");
+  const comparisonFaqs = buildComparisonFaqs(agents);
 
   return (
     <>
@@ -616,6 +657,17 @@ export default async function ComparisonPage({ params }: Props) {
           </div>
         </section>
 
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <FAQSchema
+                faqs={comparisonFaqs}
+                title={`${namesJoined} FAQ`}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Related Comparisons CTA */}
         <section className="py-12 lg:py-16 bg-primary/5">
           <div className="container">
@@ -630,7 +682,7 @@ export default async function ComparisonPage({ params }: Props) {
                   <Link href="/compare">View All Comparisons</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="/best/coding-agents">See Best AI Agents 2026</Link>
+                  <Link href="/reviews">See Best AI Agents 2026</Link>
                 </Button>
               </div>
             </div>

@@ -17,14 +17,10 @@ import {
   X,
   Shield,
   Zap,
-  Globe,
   Server,
-  Monitor,
   DollarSign,
-  Clock,
   Lock,
   Tv,
-  Download,
   Scale,
 } from "lucide-react";
 
@@ -493,10 +489,10 @@ export default async function ComparePage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
-                <Link href="/best/coding-agents">{t("ctaButtonPrimary")}</Link>
+                <Link href="/reviews">{t("ctaButtonPrimary")}</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/guides/what-is-ai-agent">{t("ctaButtonSecondary")}</Link>
+                <Link href="/guides/what-are-ai-coding-agents">{t("ctaButtonSecondary")}</Link>
               </Button>
             </div>
           </div>

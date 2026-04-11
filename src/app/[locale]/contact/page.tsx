@@ -248,7 +248,7 @@ export default async function ContactPage({ params }: Props) {
                     <p className="text-sm text-muted-foreground">
                       Check our{" "}
                       <Link
-                        href="/best/coding-agents"
+                        href="/reviews"
                         className="text-primary hover:underline"
                       >
                         Best AI Agents of 2026

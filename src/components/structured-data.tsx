@@ -109,6 +109,67 @@ export function AgentReviewSchema({ agent }: { agent: AiAgentProvider }) {
   );
 }
 
+// SoftwareApplication Schema for individual AI agent review pages
+export function AgentSoftwareApplicationSchema({
+  agent,
+}: {
+  agent: AiAgentProvider;
+}) {
+  const imageUrl = agent.logo.startsWith("http")
+    ? agent.logo
+    : `https://zerotoaiagents.com${agent.logo}`;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: agent.name,
+    description: agent.shortDescription,
+    url: `https://zerotoaiagents.com/reviews/${agent.slug}`,
+    image: imageUrl,
+    applicationCategory: "AI Agent Platform",
+    operatingSystem: "Web, Windows, macOS, Linux",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: agent.overallRating,
+      bestRating: 5,
+      worstRating: 1,
+      ratingCount: 1,
+    },
+    review: {
+      "@type": "Review",
+      name: `${agent.name} Review 2026`,
+      author: {
+        "@type": "Organization",
+        name: "ZeroToAIAgents",
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: agent.overallRating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    },
+    offers: {
+      "@type": "Offer",
+      price: agent.annualPrice || agent.monthlyPrice,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      priceValidUntil: new Date(
+        new Date().setFullYear(new Date().getFullYear() + 1)
+      )
+        .toISOString()
+        .split("T")[0],
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 // Product Schema for AI Agent
 export function AgentProductSchema({ agent }: { agent: AiAgentProvider }) {
   const schema = {

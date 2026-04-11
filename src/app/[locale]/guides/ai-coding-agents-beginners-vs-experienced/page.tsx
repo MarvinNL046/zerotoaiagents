@@ -592,7 +592,7 @@ export default async function BeginnersVsExperiencedPage({ params }: Props) {
                   {
                     title: "Best AI Coding Agents 2026",
                     description: "Our top-rated picks with detailed analysis",
-                    href: "/best/coding-agents",
+                    href: "/reviews",
                     icon: "trophy",
                   },
                 ]}

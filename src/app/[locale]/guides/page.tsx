@@ -239,7 +239,7 @@ export default async function GuidesPage({ params }: Props) {
                 Compare AI Coding Agents
               </Link>
               <Link
-                href="/best/coding-agents"
+                href="/reviews"
                 className="inline-flex items-center justify-center px-6 py-3 border rounded-lg font-medium hover:bg-muted transition-colors"
               >
                 View Top Picks

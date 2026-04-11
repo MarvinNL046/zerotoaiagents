@@ -18,7 +18,12 @@ import {
   GitCompare,
   ChevronDown,
 } from "lucide-react";
-import { BreadcrumbSchema } from "@/components/structured-data";
+import {
+  FaqSchema,
+  AgentReviewSchema,
+  AgentSoftwareApplicationSchema,
+  BreadcrumbSchema,
+} from "@/components/structured-data";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { getReviewContent } from "@/lib/review-content";
@@ -30,6 +35,13 @@ type Props = {
 
 const baseUrl = "https://zerotoaiagents.com";
 export const revalidate = 86400;
+
+function stripHtmlForSchema(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 // Comparison links for internal linking
 const COMPARISON_LINKS: Record<string, Array<{ title: string; href: string; description: string }>> = {
@@ -196,6 +208,16 @@ export default async function ReviewPage({ params }: Props) {
 
   return (
     <>
+      <AgentReviewSchema agent={agent} />
+      <AgentSoftwareApplicationSchema agent={agent} />
+      {reviewContent && reviewContent.faqs.length > 0 && (
+        <FaqSchema
+          faqs={reviewContent.faqs.map((faq) => ({
+            question: faq.question,
+            answer: stripHtmlForSchema(faq.answer),
+          }))}
+        />
+      )}
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
