@@ -9,7 +9,6 @@ import {
   Search,
   RefreshCw,
   Mail,
-  FileText,
   BadgeCheck,
 } from "lucide-react";
 
@@ -22,7 +21,7 @@ const baseUrl = "https://zerotoaiagents.com";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Editorial Policy - ZeroToAIAgents",
+    title: "Editorial Policy",
     description:
       "Learn about ZeroToAIAgents' editorial standards, content creation process, and commitment to providing accurate, unbiased AI agent reviews and comparisons.",
     robots: {

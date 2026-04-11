@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import {
   Users,
@@ -37,7 +38,7 @@ const baseUrl = "https://zerotoaiagents.com";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "About ZeroToAIAgents | Our Testing Methodology",
+    title: "About Us | Our Testing Methodology",
     description:
       "Learn about ZeroToAIAgents's independent AI Agent testing methodology, our expert team, and our commitment to honest, unbiased reviews. No sponsored rankings.",
     robots: {
@@ -48,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: `${baseUrl}/about`,
     },
     openGraph: {
-      title: "About ZeroToAIAgents | Our Testing Methodology",
+      title: "About Us | Our Testing Methodology",
       description:
         "Discover how we independently test and review AI Agent platforms. Our rigorous methodology covers features, performance, pricing, and integration capabilities.",
       url: `${baseUrl}/about`,
@@ -955,11 +956,12 @@ export default async function AboutPage({ params }: Props) {
             <div className="mt-10">
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">Meet the Founder</h2>
               <div className="flex flex-col md:flex-row gap-6 items-start not-prose">
-                <img
+                <Image
                   src="/images/team/marvin.webp"
                   alt="Marvin — Founder & Developer"
                   width={160}
                   height={160}
+                  sizes="160px"
                   className="rounded-2xl object-cover"
                 />
                 <div>

@@ -21,7 +21,7 @@ const baseUrl = "https://zerotoaiagents.com";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Terms of Service - ZeroToAIAgents",
+    title: "Terms of Service",
     description:
       "Read the terms and conditions for using ZeroToAIAgents. Understand your rights and responsibilities when using our AI agent comparison and review website.",
     robots: {

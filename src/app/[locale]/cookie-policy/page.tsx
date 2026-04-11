@@ -21,7 +21,7 @@ const baseUrl = "https://zerotoaiagents.com";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Cookie Policy - ZeroToAIAgents",
+    title: "Cookie Policy",
     description:
       "Learn how ZeroToAIAgents uses cookies and similar tracking technologies. This policy explains what cookies we use, why, and how you can manage your preferences.",
     robots: {

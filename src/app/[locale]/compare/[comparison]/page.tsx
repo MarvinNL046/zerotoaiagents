@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(baseUrl),
-    title: `${namesJoined}: Which is Better in 2026? - ZeroToAIAgents`,
+    title: `${namesJoined}: Which is Better in 2026?`,
     description: `Compare ${namesJoined} side by side. See the differences in speed, security, pricing, features, and more to choose the best AI agent for your needs.`,
     keywords: [
       `${namesJoined} comparison`,

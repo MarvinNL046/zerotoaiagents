@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(baseUrl),
-    title: "Compare AI Agents Side by Side - ZeroToAIAgents",
+    title: "Compare AI Agents Side by Side",
     description:
       "Compare the best AI agent platforms side by side. See detailed comparisons of features, pricing, models, integrations, and more to find the perfect AI agent for your needs.",
     alternates: {

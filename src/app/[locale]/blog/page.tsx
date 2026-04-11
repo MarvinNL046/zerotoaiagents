@@ -68,15 +68,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   const titles: Record<string, string> = {
-    en: "AI Agent Blog - News, Tips & Guides | ZeroToAIAgents",
-    nl: "AI Agent Blog - Nieuws, Tips & Gidsen | ZeroToAIAgents",
-    de: "KI-Agent Blog - Neuigkeiten, Tipps & Leitfäden | ZeroToAIAgents",
-    es: "Blog de Agentes IA - Noticias, Consejos y Guías | ZeroToAIAgents",
-    fr: "Blog Agents IA - Actualités, Conseils et Guides | ZeroToAIAgents",
-    zh: "AI代理博客 - 新闻、技巧和指南 | ZeroToAIAgents",
-    ja: "AIエージェントブログ - ニュース、ヒント、ガイド | ZeroToAIAgents",
-    ko: "AI 에이전트 블로그 - 뉴스, 팁 및 가이드 | ZeroToAIAgents",
-    th: "บล็อก AI Agent - ข่าว เคล็ดลับ และคู่มือ | ZeroToAIAgents",
+    en: "AI Agent Blog - News, Tips & Guides",
+    nl: "AI Agent Blog - Nieuws, Tips & Gidsen",
+    de: "KI-Agent Blog - Neuigkeiten, Tipps & Leitfäden",
+    es: "Blog de Agentes IA - Noticias, Consejos y Guías",
+    fr: "Blog Agents IA - Actualités, Conseils et Guides",
+    zh: "AI代理博客 - 新闻、技巧和指南",
+    ja: "AIエージェントブログ - ニュース、ヒント、ガイド",
+    ko: "AI 에이전트 블로그 - 뉴스, 팁 및 가이드",
+    th: "บล็อก AI Agent - ข่าว เคล็ดลับ และคู่มือ",
   };
 
   const descriptions: Record<string, string> = {

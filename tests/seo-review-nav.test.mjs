@@ -10,6 +10,19 @@ const sitemapPage = readFileSync("src/app/sitemap.ts", "utf8");
 const blogIndexPage = readFileSync("src/app/[locale]/blog/page.tsx", "utf8");
 const blogPostPage = readFileSync("src/app/[locale]/blog/[slug]/page.tsx", "utf8");
 const comparisonDetailPage = readFileSync("src/app/[locale]/compare/[comparison]/page.tsx", "utf8");
+const comparisonHero = readFileSync("src/components/compare/comparison-hero.tsx", "utf8");
+const metadataTitleSources = [
+  readFileSync("src/app/[locale]/about/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/authors/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/compare/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/compare/[comparison]/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/contact/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/cookie-policy/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/editorial-policy/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/guides/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/privacy-policy/page.tsx", "utf8"),
+  readFileSync("src/app/[locale]/terms/page.tsx", "utf8"),
+].join("\n");
 const projectSource = readFileSync("src/app/[locale]/compare/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/compare/[comparison]/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/contact/page.tsx", "utf8")
@@ -162,5 +175,33 @@ test("comparison detail pages include FAQ schema and stronger SEO scaffolding", 
     comparisonDetailPage,
     /comparisonFaqs|buildComparisonFaqs/,
     "Expected comparison detail pages to build data-driven FAQ content"
+  );
+});
+
+test("page metadata titles do not hardcode the site name when layout templates already append it", () => {
+  const localizedBlogTitleBlock = blogIndexPage.match(/const titles:[\s\S]*?const descriptions:/)?.[0] || "";
+
+  assert.doesNotMatch(
+    metadataTitleSources,
+    /title:\s*[`"][^`"\n]*ZeroToAIAgents/,
+    "Expected route metadata titles to avoid hardcoding the site name"
+  );
+  assert.doesNotMatch(
+    localizedBlogTitleBlock,
+    /ZeroToAIAgents/,
+    "Expected localized blog metadata titles to avoid hardcoding the site name"
+  );
+});
+
+test("comparison hero uses AI-agent terminology instead of legacy VPN labels", () => {
+  assert.doesNotMatch(
+    comparisonHero,
+    /Servers:|Countries:|Speed Score:/,
+    "Expected comparison hero to avoid legacy VPN stat labels"
+  );
+  assert.match(
+    comparisonHero,
+    /renderQuickStat\("Best Price"|renderQuickStat\("Free Tier"|renderQuickStat\("Ease of Use"|renderQuickStat\("Best For"/,
+    "Expected comparison hero to expose AI-agent-specific quick stats"
   );
 });

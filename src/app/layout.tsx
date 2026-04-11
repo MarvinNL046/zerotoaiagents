@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zerotoaiagents.com"),
   title: "ZeroToAIAgents",
   description: "Best AI Agent Reviews & Comparisons",
   manifest: "/manifest.json",

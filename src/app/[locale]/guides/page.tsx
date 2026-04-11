@@ -22,7 +22,7 @@ const baseUrl = "https://zerotoaiagents.com";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "AI Coding Agent Guides 2026 - ZeroToAIAgents",
+    title: "AI Coding Agent Guides 2026",
     description:
       "In-depth guides on AI coding agents: what they are, how to choose one, getting started with AI pair programming, and more. Written by developers who use these tools daily.",
     robots: {

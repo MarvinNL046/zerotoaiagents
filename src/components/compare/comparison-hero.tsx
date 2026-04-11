@@ -8,6 +8,31 @@ interface ComparisonHeroProps {
   overallWinner: "agent1" | "agent2" | "tie";
 }
 
+function renderQuickStat(label: string, value: string) {
+  return (
+    <div className="flex justify-between gap-4">
+      <span className="text-muted-foreground">{label}:</span>
+      <span className="font-semibold text-right">{value}</span>
+    </div>
+  );
+}
+
+function getPricingLabel(agent: AiAgentData) {
+  return agent.annualPrice === 0 ? "Free" : `$${agent.annualPrice}/mo`;
+}
+
+function getBestForLabel(agent: AiAgentData) {
+  if (agent.bestFor) {
+    return agent.bestFor;
+  }
+
+  if (agent.subcategory) {
+    return agent.subcategory;
+  }
+
+  return agent.category;
+}
+
 export function ComparisonHero({ agent1, agent2, overallWinner }: ComparisonHeroProps) {
   return (
     <section className="py-12 lg:py-16 bg-gradient-to-br from-primary/5 via-background to-background">
@@ -52,22 +77,10 @@ export function ComparisonHero({ agent1, agent2, overallWinner }: ComparisonHero
                 )}
               </div>
               <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Best Price:</span>
-                  <span className="font-semibold">${agent1.annualPrice}/mo</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Servers:</span>
-                  <span className="font-semibold">{agent1.overallRating.toLocaleString()}+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Countries:</span>
-                  <span className="font-semibold">{agent1.easeOfUse}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Speed Score:</span>
-                  <span className="font-semibold">{agent1.performance}%</span>
-                </div>
+                {renderQuickStat("Best Price", getPricingLabel(agent1))}
+                {renderQuickStat("Free Tier", agent1.hasFreeTier ? "Yes" : "No")}
+                {renderQuickStat("Ease of Use", `${agent1.easeOfUse}/5`)}
+                {renderQuickStat("Best For", getBestForLabel(agent1))}
               </div>
             </div>
 
@@ -91,22 +104,10 @@ export function ComparisonHero({ agent1, agent2, overallWinner }: ComparisonHero
                 )}
               </div>
               <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Best Price:</span>
-                  <span className="font-semibold">${agent2.annualPrice}/mo</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Servers:</span>
-                  <span className="font-semibold">{agent2.overallRating.toLocaleString()}+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Countries:</span>
-                  <span className="font-semibold">{agent2.easeOfUse}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Speed Score:</span>
-                  <span className="font-semibold">{agent2.performance}%</span>
-                </div>
+                {renderQuickStat("Best Price", getPricingLabel(agent2))}
+                {renderQuickStat("Free Tier", agent2.hasFreeTier ? "Yes" : "No")}
+                {renderQuickStat("Ease of Use", `${agent2.easeOfUse}/5`)}
+                {renderQuickStat("Best For", getBestForLabel(agent2))}
               </div>
             </div>
           </div>

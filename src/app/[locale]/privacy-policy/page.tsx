@@ -12,7 +12,7 @@ const baseUrl = "https://zerotoaiagents.com";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
-    title: "Privacy Policy - ZeroToAIAgents",
+    title: "Privacy Policy",
     description:
       "Learn how ZeroToAIAgents collects, uses, and protects your personal information. Our privacy policy explains your rights and our data practices.",
     robots: {
