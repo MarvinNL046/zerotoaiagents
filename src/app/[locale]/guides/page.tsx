@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import {
+  Bot,
   BookOpen,
   Brain,
   DollarSign,
@@ -63,6 +64,26 @@ const guides = [
       "Setup steps for Cursor, GitHub Copilot, and Claude Code, plus best practices, common mistakes to avoid, and a realistic example session.",
     readTime: "11 min read",
     featured: true,
+  },
+  {
+    slug: "what-are-ai-agents",
+    icon: Bot,
+    category: "Broad AI",
+    title: "What Are AI Agents? A Beginner's Guide",
+    description:
+      "A broad introduction to AI agents beyond coding alone: what they are, how they differ from chatbots, and where they are actually used.",
+    readTime: "9 min read",
+    featured: false,
+  },
+  {
+    slug: "principles-of-building-ai-agents",
+    icon: Brain,
+    category: "Builder Guide",
+    title: "Principles of Building AI Agents",
+    description:
+      "A practical framework guide covering orchestration, memory, tool use, evaluation, and how CrewAI, AutoGen, and LangGraph differ.",
+    readTime: "10 min read",
+    featured: false,
   },
   {
     slug: "ai-coding-agent-statistics",

@@ -21,8 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: "/reviews", priority: 0.9, changeFrequency: "weekly" as const },
     { url: "/compare", priority: 0.85, changeFrequency: "weekly" as const },
     { url: "/blog", priority: 0.85, changeFrequency: "weekly" as const },
+    { url: "/blog/ai-agents-news", priority: 0.8, changeFrequency: "weekly" as const },
     { url: "/guides", priority: 0.85, changeFrequency: "monthly" as const },
+    { url: "/guides/what-are-ai-agents", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/guides/what-are-ai-coding-agents", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/guides/principles-of-building-ai-agents", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/guides/how-to-choose-ai-coding-agent", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/guides/getting-started-ai-pair-programming", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/guides/ai-coding-agents-beginners-vs-experienced", priority: 0.8, changeFrequency: "monthly" as const },
@@ -36,9 +39,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const comparisons = [
     "/compare/cursor-vs-github-copilot",
     "/compare/cursor-vs-windsurf",
+    "/compare/claude-code-vs-cursor",
     "/compare/github-copilot-vs-claude-code",
+    "/compare/github-copilot-vs-windsurf",
     "/compare/cursor-vs-windsurf-vs-github-copilot",
+    "/compare/cursor-vs-devin",
     "/compare/devin-vs-claude-code",
+    "/compare/crewai-vs-autogen-vs-langgraph",
   ];
 
   const entries: MetadataRoute.Sitemap = [];

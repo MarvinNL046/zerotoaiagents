@@ -48,22 +48,36 @@ const COMPARISON_LINKS: Record<string, Array<{ title: string; href: string; desc
   "cursor": [
     { title: "Cursor vs GitHub Copilot", href: "/compare/cursor-vs-github-copilot", description: "See how Cursor stacks up against Microsoft's AI coding tool" },
     { title: "Cursor vs Windsurf", href: "/compare/cursor-vs-windsurf", description: "Two AI-first code editors compared" },
+    { title: "Cursor vs Claude Code", href: "/compare/claude-code-vs-cursor", description: "Editor-first workflow vs terminal-native agent" },
+    { title: "Cursor vs Devin", href: "/compare/cursor-vs-devin", description: "Interactive AI editor against a more autonomous coding agent" },
     { title: "Cursor vs Windsurf vs Copilot", href: "/compare/cursor-vs-windsurf-vs-github-copilot", description: "Three-way comparison of the top AI editors" },
   ],
   "github-copilot": [
     { title: "Copilot vs Cursor", href: "/compare/cursor-vs-github-copilot", description: "GitHub Copilot vs the AI-first editor" },
     { title: "Copilot vs Claude Code", href: "/compare/github-copilot-vs-claude-code", description: "IDE extension vs CLI agent approach" },
+    { title: "Copilot vs Windsurf", href: "/compare/github-copilot-vs-windsurf", description: "Microsoft's incumbent vs Codeium's AI-native editor" },
   ],
   "windsurf": [
     { title: "Windsurf vs Cursor", href: "/compare/cursor-vs-windsurf", description: "Two AI-first editors head-to-head" },
     { title: "Windsurf vs Cursor vs Copilot", href: "/compare/cursor-vs-windsurf-vs-github-copilot", description: "How does Windsurf hold up in a three-way comparison?" },
   ],
   "claude-code": [
+    { title: "Claude Code vs Cursor", href: "/compare/claude-code-vs-cursor", description: "Terminal-native agent against the leading AI editor" },
     { title: "Claude Code vs Copilot", href: "/compare/github-copilot-vs-claude-code", description: "CLI agent vs IDE extension — two approaches compared" },
     { title: "Claude Code vs Devin", href: "/compare/devin-vs-claude-code", description: "Two autonomous AI agents head-to-head" },
   ],
   "devin": [
+    { title: "Devin vs Cursor", href: "/compare/cursor-vs-devin", description: "Autonomous software engineer vs interactive AI editor" },
     { title: "Devin vs Claude Code", href: "/compare/devin-vs-claude-code", description: "First AI engineer vs Anthropic's coding agent" },
+  ],
+  "crewai": [
+    { title: "CrewAI vs AutoGen vs LangGraph", href: "/compare/crewai-vs-autogen-vs-langgraph", description: "Three-way framework comparison for multi-agent builders" },
+  ],
+  "autogen": [
+    { title: "AutoGen vs CrewAI vs LangGraph", href: "/compare/crewai-vs-autogen-vs-langgraph", description: "See how Microsoft's framework stacks up against the leading alternatives" },
+  ],
+  "langgraph": [
+    { title: "LangGraph vs CrewAI vs AutoGen", href: "/compare/crewai-vs-autogen-vs-langgraph", description: "Compare graph-based orchestration against the other top frameworks" },
   ],
 };
 

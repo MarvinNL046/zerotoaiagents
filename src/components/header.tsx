@@ -23,9 +23,13 @@ const navItems = [
 const comparisonLinks = [
   { href: "/compare/cursor-vs-github-copilot", label: "Cursor vs GitHub Copilot" },
   { href: "/compare/cursor-vs-windsurf", label: "Cursor vs Windsurf" },
+  { href: "/compare/claude-code-vs-cursor", label: "Claude Code vs Cursor" },
   { href: "/compare/github-copilot-vs-claude-code", label: "GitHub Copilot vs Claude Code" },
+  { href: "/compare/github-copilot-vs-windsurf", label: "GitHub Copilot vs Windsurf" },
   { href: "/compare/cursor-vs-windsurf-vs-github-copilot", label: "Cursor vs Windsurf vs Copilot" },
+  { href: "/compare/cursor-vs-devin", label: "Cursor vs Devin" },
   { href: "/compare/devin-vs-claude-code", label: "Devin vs Claude Code" },
+  { href: "/compare/crewai-vs-autogen-vs-langgraph", label: "CrewAI vs AutoGen vs LangGraph" },
 ];
 
 export function Header() {

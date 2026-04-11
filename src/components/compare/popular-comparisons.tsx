@@ -4,10 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp } from "lucide-react";
 
 interface PopularComparison {
-  agent1: string;
-  agent2: string;
-  slug1: string;
-  slug2: string;
+  title: string;
+  href: string;
   badge?: string;
 }
 
@@ -21,46 +19,34 @@ interface PopularComparisonsProps {
 
 const popularComparisons: PopularComparison[] = [
   {
-    agent1: "Cursor",
-    agent2: "GitHub Copilot",
-    slug1: "cursor",
-    slug2: "github-copilot",
+    title: "Cursor vs GitHub Copilot",
+    href: "/compare/cursor-vs-github-copilot",
     badge: "Most Popular",
   },
   {
-    agent1: "ChatGPT",
-    agent2: "Claude",
-    slug1: "chatgpt",
-    slug2: "claude",
-    badge: "AI Assistant Showdown",
+    title: "Claude Code vs Cursor",
+    href: "/compare/claude-code-vs-cursor",
+    badge: "Editor vs Terminal",
   },
   {
-    agent1: "Claude Code",
-    agent2: "Cursor",
-    slug1: "claude-code",
-    slug2: "cursor",
-    badge: "Coding Powerhouses",
+    title: "GitHub Copilot vs Windsurf",
+    href: "/compare/github-copilot-vs-windsurf",
+    badge: "IDE Showdown",
   },
   {
-    agent1: "n8n AI",
-    agent2: "Flowise",
-    slug1: "n8n-ai",
-    slug2: "flowise",
-    badge: "Open Source",
+    title: "Cursor vs Devin",
+    href: "/compare/cursor-vs-devin",
+    badge: "Hands-on vs Autonomous",
   },
   {
-    agent1: "CrewAI",
-    agent2: "AutoGen",
-    slug1: "crewai",
-    slug2: "autogen",
+    title: "CrewAI vs AutoGen vs LangGraph",
+    href: "/compare/crewai-vs-autogen-vs-langgraph",
     badge: "Multi-Agent Frameworks",
   },
   {
-    agent1: "Intercom Fin",
-    agent2: "Zendesk AI",
-    slug1: "intercom-fin",
-    slug2: "zendesk-ai",
-    badge: "Customer Support",
+    title: "Cursor vs Windsurf vs Copilot",
+    href: "/compare/cursor-vs-windsurf-vs-github-copilot",
+    badge: "3-Way Comparison",
   },
 ];
 
@@ -83,8 +69,8 @@ export function PopularComparisons({ translations }: PopularComparisonsProps) {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {popularComparisons.map((comparison) => (
               <Link
-                key={`${comparison.slug1}-${comparison.slug2}`}
-                href={`/compare/${comparison.slug1}-vs-${comparison.slug2}`}
+                key={comparison.href}
+                href={comparison.href}
                 className="group"
               >
                 <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
@@ -93,13 +79,9 @@ export function PopularComparisons({ translations }: PopularComparisonsProps) {
                       <Badge className="mb-3 text-xs">{comparison.badge}</Badge>
                     )}
                     <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="font-bold text-lg mb-1">
-                          {comparison.agent1}
-                        </div>
-                        <div className="text-xs text-muted-foreground">vs</div>
-                        <div className="font-bold text-lg mt-1">
-                          {comparison.agent2}
+                        <div className="flex-1">
+                        <div className="font-bold text-lg leading-snug">
+                          {comparison.title}
                         </div>
                       </div>
                       <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />

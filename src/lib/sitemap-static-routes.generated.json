@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-04-11T07:40:42.163Z",
+  "generatedAt": "2026-04-11T10:07:32.420Z",
   "paths": [
     "",
     "/about",
     "/authors",
     "/blog",
+    "/blog/ai-agents-news",
     "/compare",
     "/contact",
     "/cookie-policy",
@@ -15,6 +16,8 @@
     "/guides/free-vs-paid-ai-coding-agents",
     "/guides/getting-started-ai-pair-programming",
     "/guides/how-to-choose-ai-coding-agent",
+    "/guides/principles-of-building-ai-agents",
+    "/guides/what-are-ai-agents",
     "/guides/what-are-ai-coding-agents",
     "/privacy-policy",
     "/reviews",

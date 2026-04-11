@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const reviewPage = readFileSync("src/app/[locale]/reviews/[slug]/page.tsx", "utf8");
 const reviewsIndexPage = readFileSync("src/app/[locale]/reviews/page.tsx", "utf8");
@@ -13,6 +13,22 @@ const guidesIndexPage = readFileSync("src/app/[locale]/guides/page.tsx", "utf8")
 const statisticsGuidePage = readFileSync("src/app/[locale]/guides/ai-coding-agent-statistics/page.tsx", "utf8");
 const comparisonDetailPage = readFileSync("src/app/[locale]/compare/[comparison]/page.tsx", "utf8");
 const comparisonHero = readFileSync("src/components/compare/comparison-hero.tsx", "utf8");
+const popularComparisons = readFileSync("src/components/compare/popular-comparisons.tsx", "utf8");
+const broadAiAgentsGuidePath = "src/app/[locale]/guides/what-are-ai-agents/page.tsx";
+const broadAiAgentsGuideExists = existsSync(broadAiAgentsGuidePath);
+const broadAiAgentsGuidePage = broadAiAgentsGuideExists
+  ? readFileSync(broadAiAgentsGuidePath, "utf8")
+  : "";
+const builderPrinciplesGuidePath = "src/app/[locale]/guides/principles-of-building-ai-agents/page.tsx";
+const builderPrinciplesGuideExists = existsSync(builderPrinciplesGuidePath);
+const builderPrinciplesGuidePage = builderPrinciplesGuideExists
+  ? readFileSync(builderPrinciplesGuidePath, "utf8")
+  : "";
+const aiAgentsNewsHubPath = "src/app/[locale]/blog/ai-agents-news/page.tsx";
+const aiAgentsNewsHubExists = existsSync(aiAgentsNewsHubPath);
+const aiAgentsNewsHubPage = aiAgentsNewsHubExists
+  ? readFileSync(aiAgentsNewsHubPath, "utf8")
+  : "";
 const metadataTitleSources = [
   readFileSync("src/app/[locale]/about/page.tsx", "utf8"),
   readFileSync("src/app/[locale]/authors/page.tsx", "utf8"),
@@ -63,6 +79,21 @@ test("header exposes compare pages and blog navigation", () => {
     /cursor-vs-github-copilot/,
     "Expected header to expose specific comparison links"
   );
+});
+
+test("header exposes the expanded comparison set", () => {
+  [
+    /claude-code-vs-cursor/,
+    /github-copilot-vs-windsurf/,
+    /cursor-vs-devin/,
+    /crewai-vs-autogen-vs-langgraph/,
+  ].forEach((pattern) => {
+    assert.match(
+      header,
+      pattern,
+      `Expected header to expose comparison slug ${pattern}`
+    );
+  });
 });
 
 test("review pages include FAQ structured data", () => {
@@ -183,6 +214,21 @@ test("comparison detail pages include FAQ schema and stronger SEO scaffolding", 
   );
 });
 
+test("compare hub promotes the expanded comparison set", () => {
+  [
+    /claude-code-vs-cursor/,
+    /github-copilot-vs-windsurf/,
+    /cursor-vs-devin/,
+    /crewai-vs-autogen-vs-langgraph/,
+  ].forEach((pattern) => {
+    assert.match(
+      popularComparisons,
+      pattern,
+      `Expected compare hub to promote comparison slug ${pattern}`
+    );
+  });
+});
+
 test("page metadata titles do not hardcode the site name when layout templates already append it", () => {
   const localizedBlogTitleBlock = blogIndexPage.match(/const titles:[\s\S]*?const descriptions:/)?.[0] || "";
 
@@ -252,6 +298,21 @@ test("statistics guide is linked from key SEO hubs", () => {
   );
 });
 
+test("sitemap includes the expanded comparison targets", () => {
+  [
+    /\/compare\/claude-code-vs-cursor/,
+    /\/compare\/github-copilot-vs-windsurf/,
+    /\/compare\/cursor-vs-devin/,
+    /\/compare\/crewai-vs-autogen-vs-langgraph/,
+  ].forEach((pattern) => {
+    assert.match(
+      sitemapPage,
+      pattern,
+      `Expected sitemap source to include comparison route ${pattern}`
+    );
+  });
+});
+
 test("claude code review links to relevant WordPress implementation guides", () => {
   assert.match(
     reviewPage,
@@ -270,5 +331,101 @@ test("statistics guide references practical WordPress implementation examples", 
     statisticsGuidePage,
     /zerotowp\.com\/openclaw-wordpress/,
     "Expected statistics guide to reference the OpenClaw WordPress tutorial"
+  );
+});
+
+test("broad what are ai agents guide exists and is wired into SEO hubs", () => {
+  assert.equal(
+    broadAiAgentsGuideExists,
+    true,
+    "Expected a dedicated broad AI agents guide route to exist"
+  );
+
+  assert.match(
+    broadAiAgentsGuidePage,
+    /What Are AI Agents/i,
+    "Expected the broad guide to target the What Are AI Agents topic"
+  );
+
+  assert.match(
+    broadAiAgentsGuidePage,
+    /\/reviews|\/compare|\/reviews\/n8n-ai|\/reviews\/crewai|\/reviews\/claude-code/,
+    "Expected the broad guide to link into existing review or compare hubs"
+  );
+
+  assert.match(
+    guidesIndexPage,
+    /slug:\s*"what-are-ai-agents"|what-are-ai-agents/,
+    "Expected guides index to include the broad AI agents guide card"
+  );
+
+  assert.match(
+    sitemapPage,
+    /\/guides\/what-are-ai-agents/,
+    "Expected sitemap source to include the broad AI agents guide"
+  );
+});
+
+test("principles of building ai agents guide exists and links framework pages together", () => {
+  assert.equal(
+    builderPrinciplesGuideExists,
+    true,
+    "Expected a dedicated principles of building AI agents guide route to exist"
+  );
+
+  assert.match(
+    builderPrinciplesGuidePage,
+    /Principles of Building AI Agents/i,
+    "Expected the builder guide to target the principles of building AI agents topic"
+  );
+
+  assert.match(
+    builderPrinciplesGuidePage,
+    /\/reviews\/crewai|\/reviews\/autogen|\/reviews\/langgraph|\/compare\/crewai-vs-autogen-vs-langgraph/,
+    "Expected the builder guide to connect the framework reviews and comparison"
+  );
+
+  assert.match(
+    guidesIndexPage,
+    /principles-of-building-ai-agents/,
+    "Expected guides index to include the builder principles guide"
+  );
+
+  assert.match(
+    sitemapPage,
+    /\/guides\/principles-of-building-ai-agents/,
+    "Expected sitemap source to include the builder principles guide"
+  );
+});
+
+test("ai agents news hub exists and is wired into the blog surface", () => {
+  assert.equal(
+    aiAgentsNewsHubExists,
+    true,
+    "Expected a dedicated AI Agents News hub route to exist"
+  );
+
+  assert.match(
+    aiAgentsNewsHubPage,
+    /AI Agents News/i,
+    "Expected the news hub to target the AI Agents News topic"
+  );
+
+  assert.match(
+    aiAgentsNewsHubPage,
+    /\/blog|\/reviews|\/compare|\/guides\/ai-coding-agent-statistics/,
+    "Expected the news hub to link into the blog and core SEO hubs"
+  );
+
+  assert.match(
+    blogIndexPage,
+    /ai-agents-news/,
+    "Expected the blog index to link to the AI Agents News hub"
+  );
+
+  assert.match(
+    sitemapPage,
+    /\/blog\/ai-agents-news/,
+    "Expected sitemap source to include the AI Agents News hub"
   );
 });

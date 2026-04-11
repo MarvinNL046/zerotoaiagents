@@ -287,6 +287,29 @@ export default async function BlogPage({ params }: Props) {
         </div>
       </section>
 
+      <section className="py-10 border-b">
+        <div className="container">
+          <Link href="/blog/ai-agents-news" className="group block">
+            <div className="max-w-4xl rounded-2xl border bg-card p-6 hover:border-primary/40 hover:shadow-lg transition-all">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <Badge>News Hub</Badge>
+                <span className="text-sm text-muted-foreground">AI Agents News</span>
+              </div>
+              <h2 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Track the AI agents market from one stable hub
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Follow launches, enterprise rollout signals, and safety changes without bouncing between scattered posts.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
+                Open the AI Agents News hub
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Featured Post */}
       {featuredPost && (
         <section className="py-12 lg:py-16">
@@ -484,6 +507,7 @@ export default async function BlogPage({ params }: Props) {
               title={t("relatedPages.title")}
               pages={[
                 { title: t("relatedPages.bestAgents"), description: t("relatedPages.bestAgentsDesc"), href: "/reviews", icon: "trophy" },
+                { title: "AI Agents News", description: "Use the evergreen news hub to track launches, rollout signals, and safety changes.", href: "/blog/ai-agents-news", icon: "calendar" },
                 { title: "AI Coding Agent Statistics 2026", description: "See the latest public adoption, trust, and enterprise usage numbers.", href: "/guides/ai-coding-agent-statistics", icon: "users" },
                 { title: t("relatedPages.guides"), description: t("relatedPages.guidesDesc"), href: "/guides/what-are-ai-coding-agents", icon: "shield" },
                 { title: t("relatedPages.compare"), description: t("relatedPages.compareDesc"), href: "/compare", icon: "zap" },
