@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-11T07:19:09.654Z",
+  "generatedAt": "2026-04-11T07:40:42.163Z",
   "paths": [
     "",
     "/about",
@@ -10,6 +10,7 @@
     "/cookie-policy",
     "/editorial-policy",
     "/guides",
+    "/guides/ai-coding-agent-statistics",
     "/guides/ai-coding-agents-beginners-vs-experienced",
     "/guides/free-vs-paid-ai-coding-agents",
     "/guides/getting-started-ai-pair-programming",

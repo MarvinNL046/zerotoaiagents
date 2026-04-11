@@ -9,6 +9,8 @@ const header = readFileSync("src/components/header.tsx", "utf8");
 const sitemapPage = readFileSync("src/app/sitemap.ts", "utf8");
 const blogIndexPage = readFileSync("src/app/[locale]/blog/page.tsx", "utf8");
 const blogPostPage = readFileSync("src/app/[locale]/blog/[slug]/page.tsx", "utf8");
+const guidesIndexPage = readFileSync("src/app/[locale]/guides/page.tsx", "utf8");
+const statisticsGuidePage = readFileSync("src/app/[locale]/guides/ai-coding-agent-statistics/page.tsx", "utf8");
 const comparisonDetailPage = readFileSync("src/app/[locale]/compare/[comparison]/page.tsx", "utf8");
 const comparisonHero = readFileSync("src/components/compare/comparison-hero.tsx", "utf8");
 const metadataTitleSources = [
@@ -27,10 +29,13 @@ const projectSource = readFileSync("src/app/[locale]/compare/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/compare/[comparison]/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/contact/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/guides/page.tsx", "utf8")
+  + readFileSync("src/app/[locale]/guides/ai-coding-agent-statistics/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/guides/ai-coding-agents-beginners-vs-experienced/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/guides/what-are-ai-coding-agents/page.tsx", "utf8")
   + readFileSync("src/app/[locale]/guides/free-vs-paid-ai-coding-agents/page.tsx", "utf8")
-  + readFileSync("src/app/[locale]/blog/page.tsx", "utf8");
+  + readFileSync("src/app/[locale]/blog/page.tsx", "utf8")
+  + readFileSync("src/app/[locale]/reviews/reviews-client.tsx", "utf8")
+  + readFileSync("src/app/[locale]/reviews/[slug]/page.tsx", "utf8");
 
 test("review pages include review and software structured data", () => {
   assert.match(
@@ -203,5 +208,46 @@ test("comparison hero uses AI-agent terminology instead of legacy VPN labels", (
     comparisonHero,
     /renderQuickStat\("Best Price"|renderQuickStat\("Free Tier"|renderQuickStat\("Ease of Use"|renderQuickStat\("Best For"/,
     "Expected comparison hero to expose AI-agent-specific quick stats"
+  );
+});
+
+test("statistics guide exists as a linked SEO hub with structured data and sources", () => {
+  assert.match(
+    statisticsGuidePage,
+    /AI Coding Agent Statistics 2026/i,
+    "Expected a dedicated AI coding agent statistics guide page"
+  );
+  assert.match(
+    statisticsGuidePage,
+    /FAQSchema|FAQJsonLd/,
+    "Expected the statistics guide to include FAQ structured data"
+  );
+  assert.match(
+    statisticsGuidePage,
+    /github\.blog|survey\.stackoverflow\.co|stackoverflow\.blog|mckinsey\.com|anthropic\.com|cursor\.com\/blog/,
+    "Expected the statistics guide to include cited source links"
+  );
+});
+
+test("statistics guide is linked from key SEO hubs", () => {
+  assert.match(
+    guidesIndexPage,
+    /\/guides\/ai-coding-agent-statistics/,
+    "Expected guides index to link to the statistics guide"
+  );
+  assert.match(
+    reviewsClientPage,
+    /\/guides\/ai-coding-agent-statistics/,
+    "Expected reviews hub to link to the statistics guide"
+  );
+  assert.match(
+    reviewPage,
+    /\/guides\/ai-coding-agent-statistics/,
+    "Expected review detail pages to link to the statistics guide"
+  );
+  assert.match(
+    blogIndexPage,
+    /\/guides\/ai-coding-agent-statistics/,
+    "Expected blog hub to link to the statistics guide"
   );
 });

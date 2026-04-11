@@ -11,6 +11,7 @@ import {
   Users,
   Code,
   ArrowRight,
+  TrendingUp,
 } from "lucide-react";
 
 type Props = {
@@ -62,6 +63,16 @@ const guides = [
       "Setup steps for Cursor, GitHub Copilot, and Claude Code, plus best practices, common mistakes to avoid, and a realistic example session.",
     readTime: "11 min read",
     featured: true,
+  },
+  {
+    slug: "ai-coding-agent-statistics",
+    icon: TrendingUp,
+    category: "Data & Trends",
+    title: "AI Coding Agent Statistics 2026",
+    description:
+      "The most useful public numbers on adoption, trust, GitHub Copilot scale, Cursor rollout, and where AI coding agents are actually delivering ROI.",
+    readTime: "10 min read",
+    featured: false,
   },
   {
     slug: "ai-coding-agents-beginners-vs-experienced",
@@ -243,6 +254,15 @@ export default async function GuidesPage({ params }: Props) {
                 className="inline-flex items-center justify-center px-6 py-3 border rounded-lg font-medium hover:bg-muted transition-colors"
               >
                 View Top Picks
+              </Link>
+            </div>
+            <div className="pt-2">
+              <Link
+                href="/guides/ai-coding-agent-statistics"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+              >
+                <TrendingUp className="h-4 w-4" />
+                View the latest AI coding agent statistics
               </Link>
             </div>
           </div>

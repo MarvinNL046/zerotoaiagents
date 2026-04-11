@@ -175,6 +175,9 @@ export function ReviewsPageClient({ agents, locale }: ReviewsPageClientProps) {
               <Link href="/guides/how-to-choose-ai-coding-agent" className="block rounded-xl border p-4 transition-colors hover:border-orange-500">
                 Use our selection guide to choose faster
               </Link>
+              <Link href="/guides/ai-coding-agent-statistics" className="block rounded-xl border p-4 transition-colors hover:border-orange-500">
+                Review the latest adoption and market stats
+              </Link>
             </div>
           </div>
         </section>
@@ -235,6 +238,12 @@ export function ReviewsPageClient({ agents, locale }: ReviewsPageClientProps) {
                 description: "Use our framework to narrow down the best option for your workflow.",
                 href: "/guides/how-to-choose-ai-coding-agent",
                 icon: "trophy",
+              },
+              {
+                title: "AI Coding Agent Statistics 2026",
+                description: "See the public adoption, trust, and enterprise rollout numbers behind the category.",
+                href: "/guides/ai-coding-agent-statistics",
+                icon: "users",
               },
             ]}
           />

@@ -71,6 +71,7 @@ const COMPARISON_LINKS: Record<string, Array<{ title: string; href: string; desc
 const RELATED_GUIDES = [
   { title: "What Are AI Coding Agents?", href: "/guides/what-are-ai-coding-agents", description: "Complete beginner's guide" },
   { title: "How to Choose the Right Agent", href: "/guides/how-to-choose-ai-coding-agent", description: "Decision framework for developers" },
+  { title: "AI Coding Agent Statistics 2026", href: "/guides/ai-coding-agent-statistics", description: "Public adoption and market data" },
   { title: "Free vs Paid Agents", href: "/guides/free-vs-paid-ai-coding-agents", description: "What you actually get on each tier" },
 ];
 

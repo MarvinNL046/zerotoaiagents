@@ -484,6 +484,7 @@ export default async function BlogPage({ params }: Props) {
               title={t("relatedPages.title")}
               pages={[
                 { title: t("relatedPages.bestAgents"), description: t("relatedPages.bestAgentsDesc"), href: "/reviews", icon: "trophy" },
+                { title: "AI Coding Agent Statistics 2026", description: "See the latest public adoption, trust, and enterprise usage numbers.", href: "/guides/ai-coding-agent-statistics", icon: "users" },
                 { title: t("relatedPages.guides"), description: t("relatedPages.guidesDesc"), href: "/guides/what-are-ai-coding-agents", icon: "shield" },
                 { title: t("relatedPages.compare"), description: t("relatedPages.compareDesc"), href: "/compare", icon: "zap" },
                 { title: t("relatedPages.useCases"), description: t("relatedPages.useCasesDesc"), href: "/guides", icon: "tag" }
