@@ -251,3 +251,24 @@ test("statistics guide is linked from key SEO hubs", () => {
     "Expected blog hub to link to the statistics guide"
   );
 });
+
+test("claude code review links to relevant WordPress implementation guides", () => {
+  assert.match(
+    reviewPage,
+    /zerotowp\.com\/wordpress-claude-ai-mcp-connector/,
+    "Expected review detail page source to include a WordPress Claude MCP guide backlink"
+  );
+});
+
+test("statistics guide references practical WordPress implementation examples", () => {
+  assert.match(
+    statisticsGuidePage,
+    /zerotowp\.com\/wordpress-claude-ai-mcp-connector/,
+    "Expected statistics guide to reference the WordPress Claude MCP tutorial"
+  );
+  assert.match(
+    statisticsGuidePage,
+    /zerotowp\.com\/openclaw-wordpress/,
+    "Expected statistics guide to reference the OpenClaw WordPress tutorial"
+  );
+});

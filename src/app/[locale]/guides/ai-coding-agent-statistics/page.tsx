@@ -499,6 +499,39 @@ export default async function AiCodingAgentStatisticsPage({ params }: Props) {
                 </div>
               </div>
 
+              <div className="mt-8 rounded-2xl border bg-card p-6 review-content">
+                <h3 className="text-xl font-semibold mb-3">These workflows already show up in WordPress operations</h3>
+                <p>
+                  The category is not limited to software teams shipping product code. The same agent patterns now show up in publishing,
+                  reporting, CMS automation, and site operations. If you want concrete implementation examples instead of abstract market
+                  data, these two WordPress guides are useful reference points.
+                </p>
+                <ul>
+                  <li>
+                    <a
+                      href="https://zerotowp.com/wordpress-claude-ai-mcp-connector"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-600 hover:text-orange-700 underline"
+                    >
+                      How to Connect WordPress to Claude AI With the MCP Connector
+                    </a>
+                    {" "}shows how a Claude-connected workflow can support content, reporting, and site analysis inside WordPress.
+                  </li>
+                  <li>
+                    <a
+                      href="https://zerotowp.com/openclaw-wordpress"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-600 hover:text-orange-700 underline"
+                    >
+                      How to Use OpenClaw with WordPress
+                    </a>
+                    {" "}shows the more autonomous end of the spectrum, where an agent handles recurring operational tasks on a live site.
+                  </li>
+                </ul>
+              </div>
+
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg">
                   <Link href="/reviews">

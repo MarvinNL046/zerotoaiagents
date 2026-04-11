@@ -75,6 +75,16 @@ const RELATED_GUIDES = [
   { title: "Free vs Paid Agents", href: "/guides/free-vs-paid-ai-coding-agents", description: "What you actually get on each tier" },
 ];
 
+const PRACTICAL_IMPLEMENTATION_LINKS: Record<string, Array<{ title: string; href: string; description: string }>> = {
+  "claude-code": [
+    {
+      title: "How to Connect WordPress to Claude AI With the MCP Connector",
+      href: "https://zerotowp.com/wordpress-claude-ai-mcp-connector",
+      description: "A concrete WordPress workflow showing how Claude-style agents help with publishing, reporting, and site operations.",
+    },
+  ],
+};
+
 export async function generateStaticParams() {
   return aiAgentProviders.map((agent) => ({ slug: agent.slug }));
 }
@@ -181,6 +191,7 @@ export default async function ReviewPage({ params }: Props) {
     .slice(0, 3);
 
   const comparisonLinks = COMPARISON_LINKS[agent.slug] ?? [];
+  const implementationLinks = PRACTICAL_IMPLEMENTATION_LINKS[agent.slug] ?? [];
 
   const tocSections = reviewContent
     ? [
@@ -190,6 +201,7 @@ export default async function ReviewPage({ params }: Props) {
         { id: "ratings", label: "Our Ratings" },
         ...(comparisonLinks.length > 0 ? [{ id: "comparisons", label: "How It Compares" }] : []),
         { id: "verdict", label: "Verdict" },
+        ...(implementationLinks.length > 0 ? [{ id: "practical-implementations", label: "Practical Implementations" }] : []),
         { id: "faq", label: "FAQ" },
         { id: "related-guides", label: "Related Guides" },
         { id: "sources", label: "Sources & References" },
@@ -495,6 +507,44 @@ export default async function ReviewPage({ params }: Props) {
                     </Link>
                   </div>
                 </section>
+
+                {implementationLinks.length > 0 && (
+                  <section id="practical-implementations" className="mb-14 scroll-mt-24">
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 pb-2 border-b border-slate-200 dark:border-slate-700">
+                      Practical Implementations
+                    </h2>
+                    <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 p-6">
+                      <p className="text-sm text-slate-600 dark:text-slate-400 mb-5">
+                        Claude Code becomes more interesting when you look at real operator workflows, not just developer demos.
+                        This WordPress implementation guide shows how Claude-connected tooling can support site management,
+                        content work, and reporting in production.
+                      </p>
+                      <div className="grid gap-4">
+                        {implementationLinks.map((resource) => (
+                          <a
+                            key={resource.href}
+                            href={resource.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 hover:border-orange-300 dark:hover:border-orange-700 hover:shadow-lg transition-all group"
+                          >
+                            <span className="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-orange-200 dark:group-hover:bg-orange-950/60 transition-colors">
+                              <ExternalLink className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+                            </span>
+                            <div>
+                              <div className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                                {resource.title}
+                              </div>
+                              <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                {resource.description}
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+                )}
 
                 {/* Section: FAQ */}
                 <section id="faq" className="mb-14 scroll-mt-24">
