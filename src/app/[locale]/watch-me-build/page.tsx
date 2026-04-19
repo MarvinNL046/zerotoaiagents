@@ -106,9 +106,9 @@ const upcomingBuilds = [
     gradientFrom: "from-purple-500",
     gradientTo: "to-indigo-600",
     icon: Monitor,
-    href: "/watch-me-build/nextjs-saas-cursor-claude-opus",
-    label: "Build #02 · Preview",
-    labelVariant: "purple" as const,
+    href: null,
+    label: "Coming soon",
+    labelVariant: "secondary" as const,
   },
   {
     title: "Refactor marathon in Copilot CLI",
@@ -230,8 +230,8 @@ export default async function WatchMeBuildPage({ params }: Props) {
 
           <div className="max-w-4xl mx-auto mb-6 text-center space-y-2">
             <p className="text-sm text-muted-foreground">
-              Builds #01 and #02 are live in preview — full screencasts and
-              master prompts drop soon.
+              Build #01 is live in preview — full screencasts and master prompts
+              drop soon.
             </p>
             <p className="text-sm text-muted-foreground">
               <Link
@@ -239,13 +239,6 @@ export default async function WatchMeBuildPage({ params }: Props) {
                 className="text-primary hover:underline font-medium"
               >
                 Read Build #01 →
-              </Link>
-              <span className="mx-2 text-muted-foreground/50">·</span>
-              <Link
-                href="/watch-me-build/nextjs-saas-cursor-claude-opus"
-                className="text-primary hover:underline font-medium"
-              >
-                Read Build #02 →
               </Link>
             </p>
           </div>
