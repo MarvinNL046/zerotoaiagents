@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const CONVEX_SITE_URL = process.env.CONVEX_SITE_URL || "";
+// Shared wetry-sites-leads backend (Convex HTTP API); override via env if needed
+const CONVEX_SITE_URL =
+  process.env.CONVEX_SITE_URL || "https://beaming-ermine-172.convex.site";
 
 export async function POST(req: NextRequest) {
   const { email, site, locale } = await req.json();
